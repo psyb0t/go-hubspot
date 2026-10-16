@@ -1,0 +1,11 @@
+{
+  "name": "go-hubspot",
+  "version": "0.1.0",
+  "description": "Unofficial Go client for the HubSpot API, generated from HubSpot's unified OpenAPI spec: CRM objects, associations, properties, marketing, CMS, automation and more, with Bearer token auth.",
+  "author": { "name": "psyb0t", "url": "https://github.com/psyb0t" },
+  "homepage": "https://github.com/psyb0t/go-hubspot",
+  "repository": "https://github.com/psyb0t/go-hubspot",
+  "license": "MIT",
+  "keywords": ["hubspot", "crm", "api-client", "go-library", "openapi", "oapi-codegen"],
+  "skills": "./skills/"
+}
