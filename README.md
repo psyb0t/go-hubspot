@@ -83,6 +83,8 @@ make generate
 - oapi-codegen runs with `config.yaml` and writes `client.gen.go`. The config maps `number` to `float64`, because the spec gives many numbers no format and oapi-codegen would otherwise use `float32`.
 - `scripts/split-gen.sh` splits `client.gen.go` into `client_NNN.gen.go` files of about 20,000 lines each, at top-level declarations. One file of close to 300,000 lines makes golangci-lint very slow.
 
+`.github/workflows/regen.yml` does the same every day in CI. When the new spec changes the client, it runs `make lint`, `make test` and `make sec`. If a check fails, Claude edits the code and the checks run again, up to three times, and a review step reads the result. A passing change is committed with a CHANGELOG entry and tagged as the next release: a patch version for fixes and additions, a minor version for breaking changes.
+
 ## Agent integrations
 
 The [skill](.agents/skills/go-hubspot) teaches a coding agent how to use go-hubspot when it writes Go. It works in any agent that reads `.agents/skills/`, and installs natively in the clients below.

@@ -42,6 +42,7 @@ make sec       # gitleaks, govulncheck, semgrep
 - Method names embed the API version date from the path (`...202603...`). A new spec can rename every method, so check tests, the example, the README and the skill after `make generate`.
 - The generated code is close to 300,000 lines. `make lint` takes several minutes even split; do not merge the files back.
 - The spec URL is not stable. Never hardcode it; `fetch-spec.sh` must keep reading it from `.stats.yml`.
+- `.github/workflows/regen.yml` regenerates the client every day and releases the result. When the checks fail, Claude edits the repository to fix them, but a fix may not touch the paths listed under `fix_protected_paths` in that workflow: the workflows, the Makefile, `AGENTS.md`, `.agents/rules/`, the lint, security and spec download scripts and their configs. A problem that needs a change there fails the run and needs a manual fix.
 
 ## Rules
 
