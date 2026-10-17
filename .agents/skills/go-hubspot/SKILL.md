@@ -1,6 +1,7 @@
 ---
 name: go-hubspot
-description: Unofficial Go client for the HubSpot API. `hubspot.NewClientWithResponses("https://api.hubapi.com", ...)` from `github.com/psyb0t/go-hubspot` gives a typed method for every path in HubSpot's unified OpenAPI spec (721 paths), including CRM objects such as contacts, companies and deals, associations, properties, search, marketing, CMS, automation, conversations, files and webhooks. Auth is a Bearer private app or OAuth access token set through a request editor. Responses decode into typed `JSON200`/`JSON201` fields. Use when Go code needs to read or write HubSpot data, or already imports go-hubspot.
+description: Unofficial Go client for the HubSpot API. `hubspot.NewClientWithResponses("https://api.hubapi.com", ...)` from `github.com/psyb0t/go-hubspot` gives a typed method for every path in HubSpot's unified OpenAPI spec, including CRM objects such as contacts and companies, single-deal reads and updates, associations, properties, search, marketing, CMS, automation, conversations, files and webhooks. Auth is a Bearer private app or OAuth access token set through a request editor. Responses decode into typed `JSON200`/`JSON201` fields. Use when Go code needs to read or write HubSpot data, or already imports go-hubspot.
+license: MIT
 homepage: https://github.com/psyb0t/go-hubspot
 user-invocable: true
 metadata:
@@ -9,8 +10,6 @@ metadata:
     requires:
       bins:
         - go
-      env:
-        - HUBSPOT_ACCESS_TOKEN
 permissions:
   filesystem: "Guides edits to the Go source of the current project. The library reads and writes no files."
   shell: "The Go toolchain (`go get`, `go build`, `go test`) to add and compile the dependency."
@@ -40,6 +39,20 @@ For install details, naming, more operations and the developer API key scheme, s
 - The code is not Go. Use one of HubSpot's own SDKs.
 - You need an endpoint outside HubSpot's unified spec, such as a legacy v1 API. The client has no method for it.
 - You only need to receive HubSpot webhooks. The client sends requests; it does not run a webhook server.
+
+## Finding endpoints and types
+
+The examples below cover a few calls. Every operation in the spec has a generated method, and the spec's descriptions are on them as Go doc comments. Look names and fields up instead of guessing. After `go get github.com/psyb0t/go-hubspot`, from inside your module:
+
+```bash
+go doc github.com/psyb0t/go-hubspot ClientWithResponsesInterface                       # every endpoint method
+go doc github.com/psyb0t/go-hubspot Getcrmobjects202603contactsContactIdGetByIdParams  # one method, params type or model
+go doc -all github.com/psyb0t/go-hubspot                                               # the whole package
+```
+
+The same documentation is at https://pkg.go.dev/github.com/psyb0t/go-hubspot.
+
+Method names come from the spec's operation IDs. `<OperationId>WithResponse` takes the context, then the path parameters in order, then `*<OperationId>Params` when the operation has query or header parameters, then the request body when it has one. The `JSON200` field (or `JSON201` and so on, per declared status) holds the decoded body; it is nil for any other status. HubSpot's operation IDs join the HTTP method, the path with its API version date and an action, and each method's doc comment names its path, so filter the interface listing by path, for example `go doc github.com/psyb0t/go-hubspot ClientWithResponsesInterface | grep '/crm/objects/2026-03/companies'`.
 
 ## Usage
 

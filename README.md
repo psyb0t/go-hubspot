@@ -57,6 +57,8 @@ The same code is in `example_test.go`, where it runs against a local test server
 
 Method names come from the spec's operation IDs, which embed the HTTP method, the path and the API version date, so they are long (`Getcrmobjects202603contactsContactIdGetById` is `GET /crm/objects/2026-03/contacts/{contactId}`). Search the generated files for the path you want.
 
+The full API, with the spec's descriptions as doc comments, is in the [Go reference](https://pkg.go.dev/github.com/psyb0t/go-hubspot) and in `go doc github.com/psyb0t/go-hubspot`.
+
 ## Auth
 
 HubSpot takes a Bearer access token in the `Authorization` header. That is either a private app access token or an OAuth access token; both go in the request editor shown above.

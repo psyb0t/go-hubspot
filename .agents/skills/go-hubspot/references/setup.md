@@ -55,7 +55,7 @@ Names come from the spec's operation IDs. They join the HTTP method, the path wi
 | `Postcrmobjects202603contactssearchDoSearchWithResponse` | `POST /crm/objects/2026-03/contacts/search` |
 | `Postcrmobjects202603contactsbatchreadReadWithResponse` | `POST /crm/objects/2026-03/contacts/batch/read` |
 
-To find the method for another path, search the `client_NNN.gen.go` files for the path, for example `grep -n '/crm/objects/2026-03/deals' client_*.gen.go`. The doc comment above each method names its path and operation ID. Never guess a name: the version date in the path changes between spec releases.
+To find the method for another path, filter the method listing by the path, for example `go doc github.com/psyb0t/go-hubspot ClientWithResponsesInterface | grep '/crm/objects/2026-03/companies'`. The doc comment above each method names its path and operation ID. Never guess a name: the version date in the path changes between spec releases.
 
 Each operation with a JSON body has two forms: `XWithResponse(ctx, ..., body)` takes the typed body, `XWithBodyWithResponse(ctx, ..., contentType, io.Reader)` takes raw bytes.
 
