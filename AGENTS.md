@@ -13,7 +13,7 @@ The code is almost all generated. `gen.go` drives it with `go generate`:
 
 ## Stack
 
-- Go 1.26.9, one package `hubspot` at the module root.
+- Go 1.26.10, one package `hubspot` at the module root.
 - oapi-codegen v2 and golangci-lint as `go tool` dependencies; `github.com/oapi-codegen/runtime` at runtime.
 
 ## Layout

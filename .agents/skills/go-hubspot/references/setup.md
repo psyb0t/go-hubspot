@@ -2,7 +2,7 @@
 
 ## Requirements
 
-- Go 1.26.9 or newer, per the module's `go.mod`.
+- Go 1.26.10 or newer, per the module's `go.mod`.
 - Runtime dependency: `github.com/oapi-codegen/runtime`.
 - A HubSpot private app access token or OAuth access token with the scopes the endpoints you call need.
 
