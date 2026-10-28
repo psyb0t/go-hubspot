@@ -7,6 +7,1595 @@ import (
 	"net/http"
 )
 
+type Getcmspages202603landingPagesfoldersObjectIdrevisionsGetFolderPreviousVersionsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *CollectionResponseWithTotalContentFolderVersion
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Getcmspages202603landingPagesfoldersObjectIdrevisionsGetFolderPreviousVersionsResponse) GetJSON200() *CollectionResponseWithTotalContentFolderVersion {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Getcmspages202603landingPagesfoldersObjectIdrevisionsGetFolderPreviousVersionsResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Getcmspages202603landingPagesfoldersObjectIdrevisionsGetFolderPreviousVersionsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Getcmspages202603landingPagesfoldersObjectIdrevisionsGetFolderPreviousVersionsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Getcmspages202603landingPagesfoldersObjectIdrevisionsGetFolderPreviousVersionsResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Getcmspages202603landingPagesfoldersObjectIdrevisionsRevisionIdGetFolderPreviousVersionResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *ContentFolderVersion
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Getcmspages202603landingPagesfoldersObjectIdrevisionsRevisionIdGetFolderPreviousVersionResponse) GetJSON200() *ContentFolderVersion {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Getcmspages202603landingPagesfoldersObjectIdrevisionsRevisionIdGetFolderPreviousVersionResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Getcmspages202603landingPagesfoldersObjectIdrevisionsRevisionIdGetFolderPreviousVersionResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Getcmspages202603landingPagesfoldersObjectIdrevisionsRevisionIdGetFolderPreviousVersionResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Getcmspages202603landingPagesfoldersObjectIdrevisionsRevisionIdGetFolderPreviousVersionResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmspages202603landingPagesfoldersObjectIdrevisionsRevisionIdrestoreRestoreFolderPreviousVersionResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *ContentFolder
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Postcmspages202603landingPagesfoldersObjectIdrevisionsRevisionIdrestoreRestoreFolderPreviousVersionResponse) GetJSON200() *ContentFolder {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmspages202603landingPagesfoldersObjectIdrevisionsRevisionIdrestoreRestoreFolderPreviousVersionResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmspages202603landingPagesfoldersObjectIdrevisionsRevisionIdrestoreRestoreFolderPreviousVersionResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmspages202603landingPagesfoldersObjectIdrevisionsRevisionIdrestoreRestoreFolderPreviousVersionResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmspages202603landingPagesfoldersObjectIdrevisionsRevisionIdrestoreRestoreFolderPreviousVersionResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmspages202603landingPagesmultiLanguageattachToLangGroupAttachToLangGroupResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmspages202603landingPagesmultiLanguageattachToLangGroupAttachToLangGroupResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmspages202603landingPagesmultiLanguageattachToLangGroupAttachToLangGroupResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmspages202603landingPagesmultiLanguageattachToLangGroupAttachToLangGroupResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmspages202603landingPagesmultiLanguageattachToLangGroupAttachToLangGroupResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmspages202603landingPagesmultiLanguagecreateLanguageVariationCreateLangVariationResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *Page
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Postcmspages202603landingPagesmultiLanguagecreateLanguageVariationCreateLangVariationResponse) GetJSON200() *Page {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmspages202603landingPagesmultiLanguagecreateLanguageVariationCreateLangVariationResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmspages202603landingPagesmultiLanguagecreateLanguageVariationCreateLangVariationResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmspages202603landingPagesmultiLanguagecreateLanguageVariationCreateLangVariationResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmspages202603landingPagesmultiLanguagecreateLanguageVariationCreateLangVariationResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmspages202603landingPagesmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmspages202603landingPagesmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmspages202603landingPagesmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmspages202603landingPagesmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmspages202603landingPagesmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Putcmspages202603landingPagesmultiLanguagesetNewLangPrimarySetLangPrimaryResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+}
+
+// GetBody returns the raw response body bytes
+func (r Putcmspages202603landingPagesmultiLanguagesetNewLangPrimarySetLangPrimaryResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Putcmspages202603landingPagesmultiLanguagesetNewLangPrimarySetLangPrimaryResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Putcmspages202603landingPagesmultiLanguagesetNewLangPrimarySetLangPrimaryResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Putcmspages202603landingPagesmultiLanguagesetNewLangPrimarySetLangPrimaryResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmspages202603landingPagesmultiLanguageupdateLanguagesUpdateLangsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmspages202603landingPagesmultiLanguageupdateLanguagesUpdateLangsResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmspages202603landingPagesmultiLanguageupdateLanguagesUpdateLangsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmspages202603landingPagesmultiLanguageupdateLanguagesUpdateLangsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmspages202603landingPagesmultiLanguageupdateLanguagesUpdateLangsResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmspages202603landingPagesscheduleScheduleResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmspages202603landingPagesscheduleScheduleResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmspages202603landingPagesscheduleScheduleResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmspages202603landingPagesscheduleScheduleResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmspages202603landingPagesscheduleScheduleResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Deletecmspages202603landingPagesObjectIdArchiveResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+}
+
+// GetBody returns the raw response body bytes
+func (r Deletecmspages202603landingPagesObjectIdArchiveResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Deletecmspages202603landingPagesObjectIdArchiveResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Deletecmspages202603landingPagesObjectIdArchiveResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Deletecmspages202603landingPagesObjectIdArchiveResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Getcmspages202603landingPagesObjectIdGetByIdResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *Page
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Getcmspages202603landingPagesObjectIdGetByIdResponse) GetJSON200() *Page {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Getcmspages202603landingPagesObjectIdGetByIdResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Getcmspages202603landingPagesObjectIdGetByIdResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Getcmspages202603landingPagesObjectIdGetByIdResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Getcmspages202603landingPagesObjectIdGetByIdResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Patchcmspages202603landingPagesObjectIdUpdateResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *Page
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Patchcmspages202603landingPagesObjectIdUpdateResponse) GetJSON200() *Page {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Patchcmspages202603landingPagesObjectIdUpdateResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Patchcmspages202603landingPagesObjectIdUpdateResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Patchcmspages202603landingPagesObjectIdUpdateResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Patchcmspages202603landingPagesObjectIdUpdateResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Getcmspages202603landingPagesObjectIddraftGetDraftByIdResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *Page
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Getcmspages202603landingPagesObjectIddraftGetDraftByIdResponse) GetJSON200() *Page {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Getcmspages202603landingPagesObjectIddraftGetDraftByIdResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Getcmspages202603landingPagesObjectIddraftGetDraftByIdResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Getcmspages202603landingPagesObjectIddraftGetDraftByIdResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Getcmspages202603landingPagesObjectIddraftGetDraftByIdResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Patchcmspages202603landingPagesObjectIddraftUpdateDraftResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *Page
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Patchcmspages202603landingPagesObjectIddraftUpdateDraftResponse) GetJSON200() *Page {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Patchcmspages202603landingPagesObjectIddraftUpdateDraftResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Patchcmspages202603landingPagesObjectIddraftUpdateDraftResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Patchcmspages202603landingPagesObjectIddraftUpdateDraftResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Patchcmspages202603landingPagesObjectIddraftUpdateDraftResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmspages202603landingPagesObjectIddraftpushLivePushLiveResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmspages202603landingPagesObjectIddraftpushLivePushLiveResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmspages202603landingPagesObjectIddraftpushLivePushLiveResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmspages202603landingPagesObjectIddraftpushLivePushLiveResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmspages202603landingPagesObjectIddraftpushLivePushLiveResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmspages202603landingPagesObjectIddraftresetResetDraftResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmspages202603landingPagesObjectIddraftresetResetDraftResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmspages202603landingPagesObjectIddraftresetResetDraftResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmspages202603landingPagesObjectIddraftresetResetDraftResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmspages202603landingPagesObjectIddraftresetResetDraftResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Getcmspages202603landingPagesObjectIdrevisionsGetPreviousVersionsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *CollectionResponseWithTotalPageVersion
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Getcmspages202603landingPagesObjectIdrevisionsGetPreviousVersionsResponse) GetJSON200() *CollectionResponseWithTotalPageVersion {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Getcmspages202603landingPagesObjectIdrevisionsGetPreviousVersionsResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Getcmspages202603landingPagesObjectIdrevisionsGetPreviousVersionsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Getcmspages202603landingPagesObjectIdrevisionsGetPreviousVersionsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Getcmspages202603landingPagesObjectIdrevisionsGetPreviousVersionsResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Getcmspages202603landingPagesObjectIdrevisionsRevisionIdGetPreviousVersionResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *PageVersion
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Getcmspages202603landingPagesObjectIdrevisionsRevisionIdGetPreviousVersionResponse) GetJSON200() *PageVersion {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Getcmspages202603landingPagesObjectIdrevisionsRevisionIdGetPreviousVersionResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Getcmspages202603landingPagesObjectIdrevisionsRevisionIdGetPreviousVersionResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Getcmspages202603landingPagesObjectIdrevisionsRevisionIdGetPreviousVersionResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Getcmspages202603landingPagesObjectIdrevisionsRevisionIdGetPreviousVersionResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmspages202603landingPagesObjectIdrevisionsRevisionIdrestoreRestorePreviousVersionResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *Page
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Postcmspages202603landingPagesObjectIdrevisionsRevisionIdrestoreRestorePreviousVersionResponse) GetJSON200() *Page {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmspages202603landingPagesObjectIdrevisionsRevisionIdrestoreRestorePreviousVersionResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmspages202603landingPagesObjectIdrevisionsRevisionIdrestoreRestorePreviousVersionResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmspages202603landingPagesObjectIdrevisionsRevisionIdrestoreRestorePreviousVersionResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmspages202603landingPagesObjectIdrevisionsRevisionIdrestoreRestorePreviousVersionResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmspages202603landingPagesObjectIdrevisionsRevisionIdrestoreToDraftRestorePreviousVersionToDraftResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *Page
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Postcmspages202603landingPagesObjectIdrevisionsRevisionIdrestoreToDraftRestorePreviousVersionToDraftResponse) GetJSON200() *Page {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmspages202603landingPagesObjectIdrevisionsRevisionIdrestoreToDraftRestorePreviousVersionToDraftResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmspages202603landingPagesObjectIdrevisionsRevisionIdrestoreToDraftRestorePreviousVersionToDraftResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmspages202603landingPagesObjectIdrevisionsRevisionIdrestoreToDraftRestorePreviousVersionToDraftResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmspages202603landingPagesObjectIdrevisionsRevisionIdrestoreToDraftRestorePreviousVersionToDraftResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Getcmspages202603sitePagesGetPageResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *CollectionResponseWithTotalPageForwardPaging
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Getcmspages202603sitePagesGetPageResponse) GetJSON200() *CollectionResponseWithTotalPageForwardPaging {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Getcmspages202603sitePagesGetPageResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Getcmspages202603sitePagesGetPageResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Getcmspages202603sitePagesGetPageResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Getcmspages202603sitePagesGetPageResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+// Postcmspages202603sitePagesCreateResponse201Headers the declared response headers of an HTTP 201 response for Postcmspages202603sitePagesCreate
+type Postcmspages202603sitePagesCreateResponse201Headers struct {
+	Location *string
+}
+
+type Postcmspages202603sitePagesCreateResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON201 the response for an HTTP 201 `application/json` response
+	JSON201 *Page
+	// Headers201 the parsed response headers for an HTTP 201 response
+	Headers201 *Postcmspages202603sitePagesCreateResponse201Headers
+}
+
+// GetJSON201 returns the response for an HTTP 201 `application/json` response
+func (r Postcmspages202603sitePagesCreateResponse) GetJSON201() *Page {
+	return r.JSON201
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmspages202603sitePagesCreateResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmspages202603sitePagesCreateResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmspages202603sitePagesCreateResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmspages202603sitePagesCreateResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+// Postcmspages202603sitePagesabTestcreateVariationCreateABTestVariationResponse201Headers the declared response headers of an HTTP 201 response for Postcmspages202603sitePagesabTestcreateVariationCreateABTestVariation
+type Postcmspages202603sitePagesabTestcreateVariationCreateABTestVariationResponse201Headers struct {
+	Location *string
+}
+
+type Postcmspages202603sitePagesabTestcreateVariationCreateABTestVariationResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON201 the response for an HTTP 201 `application/json` response
+	JSON201 *Page
+	// Headers201 the parsed response headers for an HTTP 201 response
+	Headers201 *Postcmspages202603sitePagesabTestcreateVariationCreateABTestVariationResponse201Headers
+}
+
+// GetJSON201 returns the response for an HTTP 201 `application/json` response
+func (r Postcmspages202603sitePagesabTestcreateVariationCreateABTestVariationResponse) GetJSON201() *Page {
+	return r.JSON201
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmspages202603sitePagesabTestcreateVariationCreateABTestVariationResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmspages202603sitePagesabTestcreateVariationCreateABTestVariationResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmspages202603sitePagesabTestcreateVariationCreateABTestVariationResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmspages202603sitePagesabTestcreateVariationCreateABTestVariationResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmspages202603sitePagesabTestendEndActiveABTestResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmspages202603sitePagesabTestendEndActiveABTestResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmspages202603sitePagesabTestendEndActiveABTestResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmspages202603sitePagesabTestendEndActiveABTestResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmspages202603sitePagesabTestendEndActiveABTestResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmspages202603sitePagesabTestrerunRerunPreviousABTestResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmspages202603sitePagesabTestrerunRerunPreviousABTestResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmspages202603sitePagesabTestrerunRerunPreviousABTestResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmspages202603sitePagesabTestrerunRerunPreviousABTestResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmspages202603sitePagesabTestrerunRerunPreviousABTestResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmspages202603sitePagesbatcharchiveArchiveBatchResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmspages202603sitePagesbatcharchiveArchiveBatchResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmspages202603sitePagesbatcharchiveArchiveBatchResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmspages202603sitePagesbatcharchiveArchiveBatchResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmspages202603sitePagesbatcharchiveArchiveBatchResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmspages202603sitePagesbatchcreateCreateBatchResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON201 the response for an HTTP 201 `application/json` response
+	JSON201 *BatchResponsePage
+	// JSON207 the response for an HTTP 207 `application/json` response
+	JSON207 *BatchResponsePageWithErrors
+}
+
+// GetJSON201 returns the response for an HTTP 201 `application/json` response
+func (r Postcmspages202603sitePagesbatchcreateCreateBatchResponse) GetJSON201() *BatchResponsePage {
+	return r.JSON201
+}
+
+// GetJSON207 returns the response for an HTTP 207 `application/json` response
+func (r Postcmspages202603sitePagesbatchcreateCreateBatchResponse) GetJSON207() *BatchResponsePageWithErrors {
+	return r.JSON207
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmspages202603sitePagesbatchcreateCreateBatchResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmspages202603sitePagesbatchcreateCreateBatchResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmspages202603sitePagesbatchcreateCreateBatchResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmspages202603sitePagesbatchcreateCreateBatchResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmspages202603sitePagesbatchreadReadBatchResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *BatchResponsePage
+	// JSON207 the response for an HTTP 207 `application/json` response
+	JSON207 *BatchResponsePageWithErrors
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Postcmspages202603sitePagesbatchreadReadBatchResponse) GetJSON200() *BatchResponsePage {
+	return r.JSON200
+}
+
+// GetJSON207 returns the response for an HTTP 207 `application/json` response
+func (r Postcmspages202603sitePagesbatchreadReadBatchResponse) GetJSON207() *BatchResponsePageWithErrors {
+	return r.JSON207
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmspages202603sitePagesbatchreadReadBatchResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmspages202603sitePagesbatchreadReadBatchResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmspages202603sitePagesbatchreadReadBatchResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmspages202603sitePagesbatchreadReadBatchResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmspages202603sitePagesbatchupdateUpdateBatchResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *BatchResponsePage
+	// JSON207 the response for an HTTP 207 `application/json` response
+	JSON207 *BatchResponsePageWithErrors
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Postcmspages202603sitePagesbatchupdateUpdateBatchResponse) GetJSON200() *BatchResponsePage {
+	return r.JSON200
+}
+
+// GetJSON207 returns the response for an HTTP 207 `application/json` response
+func (r Postcmspages202603sitePagesbatchupdateUpdateBatchResponse) GetJSON207() *BatchResponsePageWithErrors {
+	return r.JSON207
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmspages202603sitePagesbatchupdateUpdateBatchResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmspages202603sitePagesbatchupdateUpdateBatchResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmspages202603sitePagesbatchupdateUpdateBatchResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmspages202603sitePagesbatchupdateUpdateBatchResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmspages202603sitePagescloneCloneResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *Page
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Postcmspages202603sitePagescloneCloneResponse) GetJSON200() *Page {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmspages202603sitePagescloneCloneResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmspages202603sitePagescloneCloneResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmspages202603sitePagescloneCloneResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmspages202603sitePagescloneCloneResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmspages202603sitePagesmultiLanguageattachToLangGroupAttachToLangGroupResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmspages202603sitePagesmultiLanguageattachToLangGroupAttachToLangGroupResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmspages202603sitePagesmultiLanguageattachToLangGroupAttachToLangGroupResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmspages202603sitePagesmultiLanguageattachToLangGroupAttachToLangGroupResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmspages202603sitePagesmultiLanguageattachToLangGroupAttachToLangGroupResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmspages202603sitePagesmultiLanguagecreateLanguageVariationCreateLangVariationResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *Page
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Postcmspages202603sitePagesmultiLanguagecreateLanguageVariationCreateLangVariationResponse) GetJSON200() *Page {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmspages202603sitePagesmultiLanguagecreateLanguageVariationCreateLangVariationResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmspages202603sitePagesmultiLanguagecreateLanguageVariationCreateLangVariationResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmspages202603sitePagesmultiLanguagecreateLanguageVariationCreateLangVariationResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmspages202603sitePagesmultiLanguagecreateLanguageVariationCreateLangVariationResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmspages202603sitePagesmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmspages202603sitePagesmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmspages202603sitePagesmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmspages202603sitePagesmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmspages202603sitePagesmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Putcmspages202603sitePagesmultiLanguagesetNewLangPrimarySetLangPrimaryResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+}
+
+// GetBody returns the raw response body bytes
+func (r Putcmspages202603sitePagesmultiLanguagesetNewLangPrimarySetLangPrimaryResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Putcmspages202603sitePagesmultiLanguagesetNewLangPrimarySetLangPrimaryResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Putcmspages202603sitePagesmultiLanguagesetNewLangPrimarySetLangPrimaryResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Putcmspages202603sitePagesmultiLanguagesetNewLangPrimarySetLangPrimaryResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmspages202603sitePagesmultiLanguageupdateLanguagesUpdateLangsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmspages202603sitePagesmultiLanguageupdateLanguagesUpdateLangsResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmspages202603sitePagesmultiLanguageupdateLanguagesUpdateLangsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmspages202603sitePagesmultiLanguageupdateLanguagesUpdateLangsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmspages202603sitePagesmultiLanguageupdateLanguagesUpdateLangsResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmspages202603sitePagesscheduleScheduleResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmspages202603sitePagesscheduleScheduleResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmspages202603sitePagesscheduleScheduleResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmspages202603sitePagesscheduleScheduleResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmspages202603sitePagesscheduleScheduleResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Deletecmspages202603sitePagesObjectIdArchiveResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+}
+
+// GetBody returns the raw response body bytes
+func (r Deletecmspages202603sitePagesObjectIdArchiveResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Deletecmspages202603sitePagesObjectIdArchiveResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Deletecmspages202603sitePagesObjectIdArchiveResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Deletecmspages202603sitePagesObjectIdArchiveResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Getcmspages202603sitePagesObjectIdGetByIdResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *Page
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Getcmspages202603sitePagesObjectIdGetByIdResponse) GetJSON200() *Page {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Getcmspages202603sitePagesObjectIdGetByIdResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Getcmspages202603sitePagesObjectIdGetByIdResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Getcmspages202603sitePagesObjectIdGetByIdResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Getcmspages202603sitePagesObjectIdGetByIdResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Patchcmspages202603sitePagesObjectIdUpdateResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *Page
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Patchcmspages202603sitePagesObjectIdUpdateResponse) GetJSON200() *Page {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Patchcmspages202603sitePagesObjectIdUpdateResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Patchcmspages202603sitePagesObjectIdUpdateResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Patchcmspages202603sitePagesObjectIdUpdateResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Patchcmspages202603sitePagesObjectIdUpdateResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Getcmspages202603sitePagesObjectIddraftGetDraftByIdResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *Page
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Getcmspages202603sitePagesObjectIddraftGetDraftByIdResponse) GetJSON200() *Page {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Getcmspages202603sitePagesObjectIddraftGetDraftByIdResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Getcmspages202603sitePagesObjectIddraftGetDraftByIdResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Getcmspages202603sitePagesObjectIddraftGetDraftByIdResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Getcmspages202603sitePagesObjectIddraftGetDraftByIdResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Patchcmspages202603sitePagesObjectIddraftUpdateDraftResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *Page
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Patchcmspages202603sitePagesObjectIddraftUpdateDraftResponse) GetJSON200() *Page {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Patchcmspages202603sitePagesObjectIddraftUpdateDraftResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Patchcmspages202603sitePagesObjectIddraftUpdateDraftResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Patchcmspages202603sitePagesObjectIddraftUpdateDraftResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 // ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
 func (r Patchcmspages202603sitePagesObjectIddraftUpdateDraftResponse) ContentType() string {
 	if r.HTTPResponse != nil {
@@ -87,11 +1676,11 @@ type Getcmspages202603sitePagesObjectIdrevisionsGetPreviousVersionsResponse stru
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsPagesCollectionResponseWithTotalPageVersion
+	JSON200 *CollectionResponseWithTotalPageVersion
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcmspages202603sitePagesObjectIdrevisionsGetPreviousVersionsResponse) GetJSON200() *CmsPagesCollectionResponseWithTotalPageVersion {
+func (r Getcmspages202603sitePagesObjectIdrevisionsGetPreviousVersionsResponse) GetJSON200() *CollectionResponseWithTotalPageVersion {
 	return r.JSON200
 }
 
@@ -128,11 +1717,11 @@ type Getcmspages202603sitePagesObjectIdrevisionsRevisionIdGetPreviousVersionResp
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsPagesPageVersion
+	JSON200 *PageVersion
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcmspages202603sitePagesObjectIdrevisionsRevisionIdGetPreviousVersionResponse) GetJSON200() *CmsPagesPageVersion {
+func (r Getcmspages202603sitePagesObjectIdrevisionsRevisionIdGetPreviousVersionResponse) GetJSON200() *PageVersion {
 	return r.JSON200
 }
 
@@ -169,11 +1758,11 @@ type Postcmspages202603sitePagesObjectIdrevisionsRevisionIdrestoreRestorePreviou
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsPagesPage
+	JSON200 *Page
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcmspages202603sitePagesObjectIdrevisionsRevisionIdrestoreRestorePreviousVersionResponse) GetJSON200() *CmsPagesPage {
+func (r Postcmspages202603sitePagesObjectIdrevisionsRevisionIdrestoreRestorePreviousVersionResponse) GetJSON200() *Page {
 	return r.JSON200
 }
 
@@ -210,11 +1799,11 @@ type Postcmspages202603sitePagesObjectIdrevisionsRevisionIdrestoreToDraftRestore
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsPagesPage
+	JSON200 *Page
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcmspages202603sitePagesObjectIdrevisionsRevisionIdrestoreToDraftRestorePreviousVersionToDraftResponse) GetJSON200() *CmsPagesPage {
+func (r Postcmspages202603sitePagesObjectIdrevisionsRevisionIdrestoreToDraftRestorePreviousVersionToDraftResponse) GetJSON200() *Page {
 	return r.JSON200
 }
 
@@ -251,11 +1840,11 @@ type GetcmssiteSearch202603indexedDataContentIdGetByIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsSiteSearchIndexedData
+	JSON200 *IndexedData
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r GetcmssiteSearch202603indexedDataContentIdGetByIdResponse) GetJSON200() *CmsSiteSearchIndexedData {
+func (r GetcmssiteSearch202603indexedDataContentIdGetByIdResponse) GetJSON200() *IndexedData {
 	return r.JSON200
 }
 
@@ -282,6 +1871,47 @@ func (r GetcmssiteSearch202603indexedDataContentIdGetByIdResponse) StatusCode() 
 
 // ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
 func (r GetcmssiteSearch202603indexedDataContentIdGetByIdResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type GetcmssiteSearch202603searchcmssiteSearch202603searchResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *PublicSearchResults
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r GetcmssiteSearch202603searchcmssiteSearch202603searchResponse) GetJSON200() *PublicSearchResults {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r GetcmssiteSearch202603searchcmssiteSearch202603searchResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r GetcmssiteSearch202603searchcmssiteSearch202603searchResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r GetcmssiteSearch202603searchcmssiteSearch202603searchResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r GetcmssiteSearch202603searchcmssiteSearch202603searchResponse) ContentType() string {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.Header.Get("Content-Type")
 	}
@@ -442,11 +2072,11 @@ type PostcmssourceCode202603EnvironmentcontentPathCreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsSourceCodeAssetFileMetadata
+	JSON200 *AssetFileMetadata
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r PostcmssourceCode202603EnvironmentcontentPathCreateResponse) GetJSON200() *CmsSourceCodeAssetFileMetadata {
+func (r PostcmssourceCode202603EnvironmentcontentPathCreateResponse) GetJSON200() *AssetFileMetadata {
 	return r.JSON200
 }
 
@@ -483,11 +2113,11 @@ type PutcmssourceCode202603EnvironmentcontentPathCreateOrUpdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsSourceCodeAssetFileMetadata
+	JSON200 *AssetFileMetadata
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r PutcmssourceCode202603EnvironmentcontentPathCreateOrUpdateResponse) GetJSON200() *CmsSourceCodeAssetFileMetadata {
+func (r PutcmssourceCode202603EnvironmentcontentPathCreateOrUpdateResponse) GetJSON200() *AssetFileMetadata {
 	return r.JSON200
 }
 
@@ -524,11 +2154,11 @@ type GetcmssourceCode202603EnvironmentmetadataPathGetResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsSourceCodeAssetFileMetadata
+	JSON200 *AssetFileMetadata
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r GetcmssourceCode202603EnvironmentmetadataPathGetResponse) GetJSON200() *CmsSourceCodeAssetFileMetadata {
+func (r GetcmssourceCode202603EnvironmentmetadataPathGetResponse) GetJSON200() *AssetFileMetadata {
 	return r.JSON200
 }
 
@@ -599,11 +2229,11 @@ type GetcmsurlRedirects202603cmsurlRedirectsv3Response struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsUrlRedirectsCollectionResponseWithTotalUrlMappingForwardPaging
+	JSON200 *CollectionResponseWithTotalUrlMappingForwardPaging
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r GetcmsurlRedirects202603cmsurlRedirectsv3Response) GetJSON200() *CmsUrlRedirectsCollectionResponseWithTotalUrlMappingForwardPaging {
+func (r GetcmsurlRedirects202603cmsurlRedirectsv3Response) GetJSON200() *CollectionResponseWithTotalUrlMappingForwardPaging {
 	return r.JSON200
 }
 
@@ -640,11 +2270,11 @@ type PostcmsurlRedirects202603cmsurlRedirectsv3Response struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CmsUrlRedirectsUrlMapping
+	JSON201 *UrlRedirectsUrlMapping
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r PostcmsurlRedirects202603cmsurlRedirectsv3Response) GetJSON201() *CmsUrlRedirectsUrlMapping {
+func (r PostcmsurlRedirects202603cmsurlRedirectsv3Response) GetJSON201() *UrlRedirectsUrlMapping {
 	return r.JSON201
 }
 
@@ -677,18 +2307,18 @@ func (r PostcmsurlRedirects202603cmsurlRedirectsv3Response) ContentType() string
 	return ""
 }
 
-type GetcmsurlRedirects202603urlMappingsResponse struct {
+type GetcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappingsResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 }
 
 // GetBody returns the raw response body bytes
-func (r GetcmsurlRedirects202603urlMappingsResponse) GetBody() []byte {
+func (r GetcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappingsResponse) GetBody() []byte {
 	return r.Body
 }
 
 // Status returns HTTPResponse.Status
-func (r GetcmsurlRedirects202603urlMappingsResponse) Status() string {
+func (r GetcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappingsResponse) Status() string {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.Status
 	}
@@ -696,7 +2326,7 @@ func (r GetcmsurlRedirects202603urlMappingsResponse) Status() string {
 }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r GetcmsurlRedirects202603urlMappingsResponse) StatusCode() int {
+func (r GetcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappingsResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
@@ -704,25 +2334,25 @@ func (r GetcmsurlRedirects202603urlMappingsResponse) StatusCode() int {
 }
 
 // ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r GetcmsurlRedirects202603urlMappingsResponse) ContentType() string {
+func (r GetcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappingsResponse) ContentType() string {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.Header.Get("Content-Type")
 	}
 	return ""
 }
 
-type PostcmsurlRedirects202603urlMappingsResponse struct {
+type PostcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappingsResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 }
 
 // GetBody returns the raw response body bytes
-func (r PostcmsurlRedirects202603urlMappingsResponse) GetBody() []byte {
+func (r PostcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappingsResponse) GetBody() []byte {
 	return r.Body
 }
 
 // Status returns HTTPResponse.Status
-func (r PostcmsurlRedirects202603urlMappingsResponse) Status() string {
+func (r PostcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappingsResponse) Status() string {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.Status
 	}
@@ -730,7 +2360,7 @@ func (r PostcmsurlRedirects202603urlMappingsResponse) Status() string {
 }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r PostcmsurlRedirects202603urlMappingsResponse) StatusCode() int {
+func (r PostcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappingsResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
@@ -738,25 +2368,25 @@ func (r PostcmsurlRedirects202603urlMappingsResponse) StatusCode() int {
 }
 
 // ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r PostcmsurlRedirects202603urlMappingsResponse) ContentType() string {
+func (r PostcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappingsResponse) ContentType() string {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.Header.Get("Content-Type")
 	}
 	return ""
 }
 
-type DeletecmsurlRedirects202603urlMappingsIdResponse struct {
+type DeletecmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 }
 
 // GetBody returns the raw response body bytes
-func (r DeletecmsurlRedirects202603urlMappingsIdResponse) GetBody() []byte {
+func (r DeletecmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsIdResponse) GetBody() []byte {
 	return r.Body
 }
 
 // Status returns HTTPResponse.Status
-func (r DeletecmsurlRedirects202603urlMappingsIdResponse) Status() string {
+func (r DeletecmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsIdResponse) Status() string {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.Status
 	}
@@ -764,7 +2394,7 @@ func (r DeletecmsurlRedirects202603urlMappingsIdResponse) Status() string {
 }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r DeletecmsurlRedirects202603urlMappingsIdResponse) StatusCode() int {
+func (r DeletecmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsIdResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
@@ -772,25 +2402,25 @@ func (r DeletecmsurlRedirects202603urlMappingsIdResponse) StatusCode() int {
 }
 
 // ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r DeletecmsurlRedirects202603urlMappingsIdResponse) ContentType() string {
+func (r DeletecmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsIdResponse) ContentType() string {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.Header.Get("Content-Type")
 	}
 	return ""
 }
 
-type GetcmsurlRedirects202603urlMappingsIdResponse struct {
+type GetcmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 }
 
 // GetBody returns the raw response body bytes
-func (r GetcmsurlRedirects202603urlMappingsIdResponse) GetBody() []byte {
+func (r GetcmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsIdResponse) GetBody() []byte {
 	return r.Body
 }
 
 // Status returns HTTPResponse.Status
-func (r GetcmsurlRedirects202603urlMappingsIdResponse) Status() string {
+func (r GetcmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsIdResponse) Status() string {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.Status
 	}
@@ -798,7 +2428,7 @@ func (r GetcmsurlRedirects202603urlMappingsIdResponse) Status() string {
 }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r GetcmsurlRedirects202603urlMappingsIdResponse) StatusCode() int {
+func (r GetcmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsIdResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
@@ -806,7 +2436,7 @@ func (r GetcmsurlRedirects202603urlMappingsIdResponse) StatusCode() int {
 }
 
 // ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r GetcmsurlRedirects202603urlMappingsIdResponse) ContentType() string {
+func (r GetcmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsIdResponse) ContentType() string {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.Header.Get("Content-Type")
 	}
@@ -851,11 +2481,11 @@ type GetcmsurlRedirects202603UrlRedirectIdGetByIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsUrlRedirectsUrlMapping
+	JSON200 *UrlRedirectsUrlMapping
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r GetcmsurlRedirects202603UrlRedirectIdGetByIdResponse) GetJSON200() *CmsUrlRedirectsUrlMapping {
+func (r GetcmsurlRedirects202603UrlRedirectIdGetByIdResponse) GetJSON200() *UrlRedirectsUrlMapping {
 	return r.JSON200
 }
 
@@ -892,11 +2522,11 @@ type PatchcmsurlRedirects202603UrlRedirectIdUpdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsUrlRedirectsUrlMapping
+	JSON200 *UrlRedirectsUrlMapping
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r PatchcmsurlRedirects202603UrlRedirectIdUpdateResponse) GetJSON200() *CmsUrlRedirectsUrlMapping {
+func (r PatchcmsurlRedirects202603UrlRedirectIdUpdateResponse) GetJSON200() *UrlRedirectsUrlMapping {
 	return r.JSON200
 }
 
@@ -933,11 +2563,11 @@ type GetcommunicationPreferences202603definitionsResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CommunicationPreferencesActionResponseWithResultsSubscriptionDefinition
+	JSON200 *ActionResponseWithResultsSubscriptionDefinition
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r GetcommunicationPreferences202603definitionsResponse) GetJSON200() *CommunicationPreferencesActionResponseWithResultsSubscriptionDefinition {
+func (r GetcommunicationPreferences202603definitionsResponse) GetJSON200() *ActionResponseWithResultsSubscriptionDefinition {
 	return r.JSON200
 }
 
@@ -974,11 +2604,11 @@ type PostcommunicationPreferences202603linksgeneratecommunicationPreferencesv4li
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CommunicationPreferencesLinkGenerationResponse
+	JSON200 *LinkGenerationResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r PostcommunicationPreferences202603linksgeneratecommunicationPreferencesv4linksgenerateResponse) GetJSON200() *CommunicationPreferencesLinkGenerationResponse {
+func (r PostcommunicationPreferences202603linksgeneratecommunicationPreferencesv4linksgenerateResponse) GetJSON200() *LinkGenerationResponse {
 	return r.JSON200
 }
 
@@ -1015,18 +2645,18 @@ type PostcommunicationPreferences202603statusesbatchreadResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CommunicationPreferencesBatchResponsePublicStatusBulkResponse
+	JSON200 *BatchResponsePublicStatusBulkResponse
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CommunicationPreferencesBatchResponsePublicStatusBulkResponseWithErrors
+	JSON207 *BatchResponsePublicStatusBulkResponseWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r PostcommunicationPreferences202603statusesbatchreadResponse) GetJSON200() *CommunicationPreferencesBatchResponsePublicStatusBulkResponse {
+func (r PostcommunicationPreferences202603statusesbatchreadResponse) GetJSON200() *BatchResponsePublicStatusBulkResponse {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r PostcommunicationPreferences202603statusesbatchreadResponse) GetJSON207() *CommunicationPreferencesBatchResponsePublicStatusBulkResponseWithErrors {
+func (r PostcommunicationPreferences202603statusesbatchreadResponse) GetJSON207() *BatchResponsePublicStatusBulkResponseWithErrors {
 	return r.JSON207
 }
 
@@ -1063,11 +2693,11 @@ type PostcommunicationPreferences202603statusesbatchunsubscribeAllResponse struc
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CommunicationPreferencesBatchResponsePublicBulkOptOutFromAllResponse
+	JSON200 *BatchResponsePublicBulkOptOutFromAllResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r PostcommunicationPreferences202603statusesbatchunsubscribeAllResponse) GetJSON200() *CommunicationPreferencesBatchResponsePublicBulkOptOutFromAllResponse {
+func (r PostcommunicationPreferences202603statusesbatchunsubscribeAllResponse) GetJSON200() *BatchResponsePublicBulkOptOutFromAllResponse {
 	return r.JSON200
 }
 
@@ -1104,18 +2734,18 @@ type PostcommunicationPreferences202603statusesbatchunsubscribeAllreadResponse s
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CommunicationPreferencesBatchResponsePublicWideStatusBulkResponse
+	JSON200 *BatchResponsePublicWideStatusBulkResponse
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CommunicationPreferencesBatchResponsePublicWideStatusBulkResponseWithErrors
+	JSON207 *BatchResponsePublicWideStatusBulkResponseWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r PostcommunicationPreferences202603statusesbatchunsubscribeAllreadResponse) GetJSON200() *CommunicationPreferencesBatchResponsePublicWideStatusBulkResponse {
+func (r PostcommunicationPreferences202603statusesbatchunsubscribeAllreadResponse) GetJSON200() *BatchResponsePublicWideStatusBulkResponse {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r PostcommunicationPreferences202603statusesbatchunsubscribeAllreadResponse) GetJSON207() *CommunicationPreferencesBatchResponsePublicWideStatusBulkResponseWithErrors {
+func (r PostcommunicationPreferences202603statusesbatchunsubscribeAllreadResponse) GetJSON207() *BatchResponsePublicWideStatusBulkResponseWithErrors {
 	return r.JSON207
 }
 
@@ -1152,11 +2782,11 @@ type PostcommunicationPreferences202603statusesbatchwriteResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CommunicationPreferencesBatchResponsePublicStatus
+	JSON200 *BatchResponsePublicStatus
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r PostcommunicationPreferences202603statusesbatchwriteResponse) GetJSON200() *CommunicationPreferencesBatchResponsePublicStatus {
+func (r PostcommunicationPreferences202603statusesbatchwriteResponse) GetJSON200() *BatchResponsePublicStatus {
 	return r.JSON200
 }
 
@@ -1193,11 +2823,11 @@ type GetcommunicationPreferences202603statusesSubscriberIdStringResponse struct 
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CommunicationPreferencesActionResponseWithResultsPublicStatus
+	JSON200 *ActionResponseWithResultsPublicStatus
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r GetcommunicationPreferences202603statusesSubscriberIdStringResponse) GetJSON200() *CommunicationPreferencesActionResponseWithResultsPublicStatus {
+func (r GetcommunicationPreferences202603statusesSubscriberIdStringResponse) GetJSON200() *ActionResponseWithResultsPublicStatus {
 	return r.JSON200
 }
 
@@ -1234,11 +2864,11 @@ type PostcommunicationPreferences202603statusesSubscriberIdStringResponse struct
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CommunicationPreferencesActionResponseWithResultsPublicStatus
+	JSON200 *ActionResponseWithResultsPublicStatus
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r PostcommunicationPreferences202603statusesSubscriberIdStringResponse) GetJSON200() *CommunicationPreferencesActionResponseWithResultsPublicStatus {
+func (r PostcommunicationPreferences202603statusesSubscriberIdStringResponse) GetJSON200() *ActionResponseWithResultsPublicStatus {
 	return r.JSON200
 }
 
@@ -1275,11 +2905,11 @@ type GetcommunicationPreferences202603statusesSubscriberIdStringunsubscribeAllRe
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CommunicationPreferencesActionResponseWithResultsPublicWideStatus
+	JSON200 *ActionResponseWithResultsPublicWideStatus
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r GetcommunicationPreferences202603statusesSubscriberIdStringunsubscribeAllResponse) GetJSON200() *CommunicationPreferencesActionResponseWithResultsPublicWideStatus {
+func (r GetcommunicationPreferences202603statusesSubscriberIdStringunsubscribeAllResponse) GetJSON200() *ActionResponseWithResultsPublicWideStatus {
 	return r.JSON200
 }
 
@@ -1316,11 +2946,11 @@ type PostcommunicationPreferences202603statusesSubscriberIdStringunsubscribeAllR
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CommunicationPreferencesActionResponseWithResultsPublicStatus
+	JSON200 *ActionResponseWithResultsPublicStatus
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r PostcommunicationPreferences202603statusesSubscriberIdStringunsubscribeAllResponse) GetJSON200() *CommunicationPreferencesActionResponseWithResultsPublicStatus {
+func (r PostcommunicationPreferences202603statusesSubscriberIdStringunsubscribeAllResponse) GetJSON200() *ActionResponseWithResultsPublicStatus {
 	return r.JSON200
 }
 
@@ -1357,11 +2987,11 @@ type GetconversationscustomChannels202603conversationscustomChannelsv3Response s
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *ConversationsCustomChannelsCollectionResponseWithTotalPublicChannelIntegrationChannel
+	JSON200 *CollectionResponseWithTotalPublicChannelIntegrationChannel
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r GetconversationscustomChannels202603conversationscustomChannelsv3Response) GetJSON200() *ConversationsCustomChannelsCollectionResponseWithTotalPublicChannelIntegrationChannel {
+func (r GetconversationscustomChannels202603conversationscustomChannelsv3Response) GetJSON200() *CollectionResponseWithTotalPublicChannelIntegrationChannel {
 	return r.JSON200
 }
 
@@ -1394,15 +3024,22 @@ func (r GetconversationscustomChannels202603conversationscustomChannelsv3Respons
 	return ""
 }
 
+// PostconversationscustomChannels202603conversationscustomChannelsv3Response201Headers the declared response headers of an HTTP 201 response for PostconversationscustomChannels202603conversationscustomChannelsv3
+type PostconversationscustomChannels202603conversationscustomChannelsv3Response201Headers struct {
+	Location *string
+}
+
 type PostconversationscustomChannels202603conversationscustomChannelsv3Response struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *ConversationsCustomChannelsPublicChannelIntegrationChannel
+	JSON201 *PublicChannelIntegrationChannel
+	// Headers201 the parsed response headers for an HTTP 201 response
+	Headers201 *PostconversationscustomChannels202603conversationscustomChannelsv3Response201Headers
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r PostconversationscustomChannels202603conversationscustomChannelsv3Response) GetJSON201() *ConversationsCustomChannelsPublicChannelIntegrationChannel {
+func (r PostconversationscustomChannels202603conversationscustomChannelsv3Response) GetJSON201() *PublicChannelIntegrationChannel {
 	return r.JSON201
 }
 
@@ -1473,11 +3110,11 @@ type GetconversationscustomChannels202603ChannelIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *ConversationsCustomChannelsPublicChannelIntegrationChannel
+	JSON200 *PublicChannelIntegrationChannel
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r GetconversationscustomChannels202603ChannelIdResponse) GetJSON200() *ConversationsCustomChannelsPublicChannelIntegrationChannel {
+func (r GetconversationscustomChannels202603ChannelIdResponse) GetJSON200() *PublicChannelIntegrationChannel {
 	return r.JSON200
 }
 
@@ -1514,11 +3151,11 @@ type PatchconversationscustomChannels202603ChannelIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *ConversationsCustomChannelsPublicChannelIntegrationChannel
+	JSON200 *PublicChannelIntegrationChannel
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r PatchconversationscustomChannels202603ChannelIdResponse) GetJSON200() *ConversationsCustomChannelsPublicChannelIntegrationChannel {
+func (r PatchconversationscustomChannels202603ChannelIdResponse) GetJSON200() *PublicChannelIntegrationChannel {
 	return r.JSON200
 }
 
@@ -1555,11 +3192,11 @@ type PatchconversationscustomChannels202603ChannelIdchannelAccountStagingTokensA
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *ConversationsCustomChannelsPublicChannelAccountStagingToken
+	JSON200 *PublicChannelAccountStagingToken
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r PatchconversationscustomChannels202603ChannelIdchannelAccountStagingTokensAccountTokenResponse) GetJSON200() *ConversationsCustomChannelsPublicChannelAccountStagingToken {
+func (r PatchconversationscustomChannels202603ChannelIdchannelAccountStagingTokensAccountTokenResponse) GetJSON200() *PublicChannelAccountStagingToken {
 	return r.JSON200
 }
 
@@ -1596,11 +3233,11 @@ type GetconversationscustomChannels202603ChannelIdchannelAccountsResponse struct
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *ConversationsCustomChannelsCollectionResponseWithTotalPublicChannelAccount
+	JSON200 *CollectionResponseWithTotalPublicChannelAccount
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r GetconversationscustomChannels202603ChannelIdchannelAccountsResponse) GetJSON200() *ConversationsCustomChannelsCollectionResponseWithTotalPublicChannelAccount {
+func (r GetconversationscustomChannels202603ChannelIdchannelAccountsResponse) GetJSON200() *CollectionResponseWithTotalPublicChannelAccount {
 	return r.JSON200
 }
 
@@ -1633,15 +3270,22 @@ func (r GetconversationscustomChannels202603ChannelIdchannelAccountsResponse) Co
 	return ""
 }
 
+// PostconversationscustomChannels202603ChannelIdchannelAccountsResponse201Headers the declared response headers of an HTTP 201 response for PostconversationscustomChannels202603ChannelIdchannelAccounts
+type PostconversationscustomChannels202603ChannelIdchannelAccountsResponse201Headers struct {
+	Location *string
+}
+
 type PostconversationscustomChannels202603ChannelIdchannelAccountsResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *ConversationsCustomChannelsPublicChannelAccount
+	JSON201 *PublicChannelAccount
+	// Headers201 the parsed response headers for an HTTP 201 response
+	Headers201 *PostconversationscustomChannels202603ChannelIdchannelAccountsResponse201Headers
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r PostconversationscustomChannels202603ChannelIdchannelAccountsResponse) GetJSON201() *ConversationsCustomChannelsPublicChannelAccount {
+func (r PostconversationscustomChannels202603ChannelIdchannelAccountsResponse) GetJSON201() *PublicChannelAccount {
 	return r.JSON201
 }
 
@@ -1678,11 +3322,11 @@ type GetconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountI
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *ConversationsCustomChannelsPublicChannelAccount
+	JSON200 *PublicChannelAccount
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r GetconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountIdResponse) GetJSON200() *ConversationsCustomChannelsPublicChannelAccount {
+func (r GetconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountIdResponse) GetJSON200() *PublicChannelAccount {
 	return r.JSON200
 }
 
@@ -1719,11 +3363,11 @@ type PatchconversationscustomChannels202603ChannelIdchannelAccountsChannelAccoun
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *ConversationsCustomChannelsPublicChannelAccount
+	JSON200 *PublicChannelAccount
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r PatchconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountIdResponse) GetJSON200() *ConversationsCustomChannelsPublicChannelAccount {
+func (r PatchconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountIdResponse) GetJSON200() *PublicChannelAccount {
 	return r.JSON200
 }
 
@@ -1756,15 +3400,22 @@ func (r PatchconversationscustomChannels202603ChannelIdchannelAccountsChannelAcc
 	return ""
 }
 
+// PostconversationscustomChannels202603ChannelIdmessagesResponse201Headers the declared response headers of an HTTP 201 response for PostconversationscustomChannels202603ChannelIdmessages
+type PostconversationscustomChannels202603ChannelIdmessagesResponse201Headers struct {
+	Location *string
+}
+
 type PostconversationscustomChannels202603ChannelIdmessagesResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *ConversationsCustomChannelsPublicConversationsMessage
+	JSON201 *PublicConversationsMessage
+	// Headers201 the parsed response headers for an HTTP 201 response
+	Headers201 *PostconversationscustomChannels202603ChannelIdmessagesResponse201Headers
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r PostconversationscustomChannels202603ChannelIdmessagesResponse) GetJSON201() *ConversationsCustomChannelsPublicConversationsMessage {
+func (r PostconversationscustomChannels202603ChannelIdmessagesResponse) GetJSON201() *PublicConversationsMessage {
 	return r.JSON201
 }
 
@@ -1801,11 +3452,11 @@ type GetconversationscustomChannels202603ChannelIdmessagesMessageIdResponse stru
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *ConversationsCustomChannelsPublicConversationsMessage
+	JSON200 *PublicConversationsMessage
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r GetconversationscustomChannels202603ChannelIdmessagesMessageIdResponse) GetJSON200() *ConversationsCustomChannelsPublicConversationsMessage {
+func (r GetconversationscustomChannels202603ChannelIdmessagesMessageIdResponse) GetJSON200() *PublicConversationsMessage {
 	return r.JSON200
 }
 
@@ -1842,11 +3493,11 @@ type PatchconversationscustomChannels202603ChannelIdmessagesMessageIdResponse st
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *ConversationsCustomChannelsPublicConversationsMessage
+	JSON200 *PublicConversationsMessage
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r PatchconversationscustomChannels202603ChannelIdmessagesMessageIdResponse) GetJSON200() *ConversationsCustomChannelsPublicConversationsMessage {
+func (r PatchconversationscustomChannels202603ChannelIdmessagesMessageIdResponse) GetJSON200() *PublicConversationsMessage {
 	return r.JSON200
 }
 
@@ -1883,11 +3534,11 @@ type GetcrmObjectSchemas202603schemasGetAllResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectSchemasCollectionResponseObjectSchemaNoPaging
+	JSON200 *CollectionResponseObjectSchemaNoPaging
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r GetcrmObjectSchemas202603schemasGetAllResponse) GetJSON200() *CrmObjectSchemasCollectionResponseObjectSchemaNoPaging {
+func (r GetcrmObjectSchemas202603schemasGetAllResponse) GetJSON200() *CollectionResponseObjectSchemaNoPaging {
 	return r.JSON200
 }
 
@@ -1920,15 +3571,22 @@ func (r GetcrmObjectSchemas202603schemasGetAllResponse) ContentType() string {
 	return ""
 }
 
+// PostcrmObjectSchemas202603schemasCreateResponse201Headers the declared response headers of an HTTP 201 response for PostcrmObjectSchemas202603schemasCreate
+type PostcrmObjectSchemas202603schemasCreateResponse201Headers struct {
+	Location *string
+}
+
 type PostcrmObjectSchemas202603schemasCreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmObjectSchemasObjectSchema
+	JSON201 *ObjectSchema
+	// Headers201 the parsed response headers for an HTTP 201 response
+	Headers201 *PostcrmObjectSchemas202603schemasCreateResponse201Headers
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r PostcrmObjectSchemas202603schemasCreateResponse) GetJSON201() *CrmObjectSchemasObjectSchema {
+func (r PostcrmObjectSchemas202603schemasCreateResponse) GetJSON201() *ObjectSchema {
 	return r.JSON201
 }
 
@@ -1965,11 +3623,11 @@ type PostcrmObjectSchemas202603schemasbatchreadcrmObjectSchemasv3schemasbatchrea
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectSchemasCollectionResponseObjectSchemaNoPaging
+	JSON200 *CollectionResponseObjectSchemaNoPaging
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r PostcrmObjectSchemas202603schemasbatchreadcrmObjectSchemasv3schemasbatchreadResponse) GetJSON200() *CrmObjectSchemasCollectionResponseObjectSchemaNoPaging {
+func (r PostcrmObjectSchemas202603schemasbatchreadcrmObjectSchemasv3schemasbatchreadResponse) GetJSON200() *CollectionResponseObjectSchemaNoPaging {
 	return r.JSON200
 }
 
@@ -2040,11 +3698,11 @@ type GetcrmObjectSchemas202603schemasObjectTypeGetByIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectSchemasObjectSchema
+	JSON200 *ObjectSchema
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r GetcrmObjectSchemas202603schemasObjectTypeGetByIdResponse) GetJSON200() *CrmObjectSchemasObjectSchema {
+func (r GetcrmObjectSchemas202603schemasObjectTypeGetByIdResponse) GetJSON200() *ObjectSchema {
 	return r.JSON200
 }
 
@@ -2118,11 +3776,18 @@ func (r PatchcrmObjectSchemas202603schemasObjectTypeUpdateResponse) ContentType(
 	return ""
 }
 
+// PostcrmObjectSchemas202603schemasObjectTypeassociationsCreateAssociationResponse201Headers the declared response headers of an HTTP 201 response for PostcrmObjectSchemas202603schemasObjectTypeassociationsCreateAssociation
+type PostcrmObjectSchemas202603schemasObjectTypeassociationsCreateAssociationResponse201Headers struct {
+	Location *string
+}
+
 type PostcrmObjectSchemas202603schemasObjectTypeassociationsCreateAssociationResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
 	JSON201 *AssociationDefinition
+	// Headers201 the parsed response headers for an HTTP 201 response
+	Headers201 *PostcrmObjectSchemas202603schemasObjectTypeassociationsCreateAssociationResponse201Headers
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
@@ -2197,11 +3862,11 @@ type Getcrmassociations202603definitionsconfigurationsallGetPageResponse struct 
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmAssociationsSchemaCollectionResponsePublicAssociationDefinitionUserConfigurationNoPaging
+	JSON200 *CollectionResponsePublicAssociationDefinitionUserConfigurationNoPaging
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmassociations202603definitionsconfigurationsallGetPageResponse) GetJSON200() *CrmAssociationsSchemaCollectionResponsePublicAssociationDefinitionUserConfigurationNoPaging {
+func (r Getcrmassociations202603definitionsconfigurationsallGetPageResponse) GetJSON200() *CollectionResponsePublicAssociationDefinitionUserConfigurationNoPaging {
 	return r.JSON200
 }
 
@@ -2238,11 +3903,11 @@ type Getcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectType
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmAssociationsSchemaCollectionResponsePublicAssociationDefinitionUserConfigurationNoPaging
+	JSON200 *CollectionResponsePublicAssociationDefinitionUserConfigurationNoPaging
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypeGetPageBetweenTwoObjectTypesResponse) GetJSON200() *CrmAssociationsSchemaCollectionResponsePublicAssociationDefinitionUserConfigurationNoPaging {
+func (r Getcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypeGetPageBetweenTwoObjectTypesResponse) GetJSON200() *CollectionResponsePublicAssociationDefinitionUserConfigurationNoPaging {
 	return r.JSON200
 }
 
@@ -2279,18 +3944,18 @@ type Postcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTyp
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmAssociationsSchemaBatchResponsePublicAssociationDefinitionUserConfiguration
+	JSON201 *BatchResponsePublicAssociationDefinitionUserConfiguration
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmAssociationsSchemaBatchResponsePublicAssociationDefinitionUserConfigurationWithErrors
+	JSON207 *BatchResponsePublicAssociationDefinitionUserConfigurationWithErrors
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchcreateBatchCreateResponse) GetJSON201() *CrmAssociationsSchemaBatchResponsePublicAssociationDefinitionUserConfiguration {
+func (r Postcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchcreateBatchCreateResponse) GetJSON201() *BatchResponsePublicAssociationDefinitionUserConfiguration {
 	return r.JSON201
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchcreateBatchCreateResponse) GetJSON207() *CrmAssociationsSchemaBatchResponsePublicAssociationDefinitionUserConfigurationWithErrors {
+func (r Postcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchcreateBatchCreateResponse) GetJSON207() *BatchResponsePublicAssociationDefinitionUserConfigurationWithErrors {
 	return r.JSON207
 }
 
@@ -2326,6 +3991,13 @@ func (r Postcrmassociations202603definitionsconfigurationsFromObjectTypeToObject
 type Postcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchpurgeBatchRemoveResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *BatchResponse
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Postcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchpurgeBatchRemoveResponse) GetJSON200() *BatchResponse {
+	return r.JSON200
 }
 
 // GetBody returns the raw response body bytes
@@ -2361,18 +4033,18 @@ type Postcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTyp
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmAssociationsSchemaBatchResponsePublicAssociationDefinitionConfigurationUpdateResult
+	JSON200 *BatchResponsePublicAssociationDefinitionConfigurationUpdateResult
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmAssociationsSchemaBatchResponsePublicAssociationDefinitionConfigurationUpdateResultWithErrors
+	JSON207 *BatchResponsePublicAssociationDefinitionConfigurationUpdateResultWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchupdateBatchUpdateResponse) GetJSON200() *CrmAssociationsSchemaBatchResponsePublicAssociationDefinitionConfigurationUpdateResult {
+func (r Postcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchupdateBatchUpdateResponse) GetJSON200() *BatchResponsePublicAssociationDefinitionConfigurationUpdateResult {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchupdateBatchUpdateResponse) GetJSON207() *CrmAssociationsSchemaBatchResponsePublicAssociationDefinitionConfigurationUpdateResultWithErrors {
+func (r Postcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchupdateBatchUpdateResponse) GetJSON207() *BatchResponsePublicAssociationDefinitionConfigurationUpdateResultWithErrors {
 	return r.JSON207
 }
 
@@ -2409,11 +4081,11 @@ type Postcrmassociations202603usagehighUsageReportUserIdcrmassociations202509usa
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmReportCreationResponse
+	JSON200 *ReportCreationResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmassociations202603usagehighUsageReportUserIdcrmassociations202509usagehighUsageReportUserIdResponse) GetJSON200() *CrmReportCreationResponse {
+func (r Postcrmassociations202603usagehighUsageReportUserIdcrmassociations202509usagehighUsageReportUserIdResponse) GetJSON200() *ReportCreationResponse {
 	return r.JSON200
 }
 
@@ -2449,6 +4121,13 @@ func (r Postcrmassociations202603usagehighUsageReportUserIdcrmassociations202509
 type Postcrmassociations202603FromObjectTypeToObjectTypebatcharchivecrmassociations202509FromObjectTypeToObjectTypebatcharchiveResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *BatchResponse
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Postcrmassociations202603FromObjectTypeToObjectTypebatcharchivecrmassociations202509FromObjectTypeToObjectTypebatcharchiveResponse) GetJSON200() *BatchResponse {
+	return r.JSON200
 }
 
 // GetBody returns the raw response body bytes
@@ -2484,11 +4163,11 @@ type Postcrmassociations202603FromObjectTypeToObjectTypebatchassociatedefaultcrm
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmBatchResponsePublicDefaultAssociation
+	JSON200 *BatchResponsePublicDefaultAssociation
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmassociations202603FromObjectTypeToObjectTypebatchassociatedefaultcrmassociations202509FromObjectTypeToObjectTypebatchassociatedefaultResponse) GetJSON200() *CrmBatchResponsePublicDefaultAssociation {
+func (r Postcrmassociations202603FromObjectTypeToObjectTypebatchassociatedefaultcrmassociations202509FromObjectTypeToObjectTypebatchassociatedefaultResponse) GetJSON200() *BatchResponsePublicDefaultAssociation {
 	return r.JSON200
 }
 
@@ -2525,18 +4204,18 @@ type Postcrmassociations202603FromObjectTypeToObjectTypebatchcreatecrmassociatio
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmBatchResponseLabelsBetweenObjectPair
+	JSON201 *BatchResponseLabelsBetweenObjectPair
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmBatchResponseLabelsBetweenObjectPairWithErrors
+	JSON207 *BatchResponseLabelsBetweenObjectPairWithErrors
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmassociations202603FromObjectTypeToObjectTypebatchcreatecrmassociations202509FromObjectTypeToObjectTypebatchcreateResponse) GetJSON201() *CrmBatchResponseLabelsBetweenObjectPair {
+func (r Postcrmassociations202603FromObjectTypeToObjectTypebatchcreatecrmassociations202509FromObjectTypeToObjectTypebatchcreateResponse) GetJSON201() *BatchResponseLabelsBetweenObjectPair {
 	return r.JSON201
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmassociations202603FromObjectTypeToObjectTypebatchcreatecrmassociations202509FromObjectTypeToObjectTypebatchcreateResponse) GetJSON207() *CrmBatchResponseLabelsBetweenObjectPairWithErrors {
+func (r Postcrmassociations202603FromObjectTypeToObjectTypebatchcreatecrmassociations202509FromObjectTypeToObjectTypebatchcreateResponse) GetJSON207() *BatchResponseLabelsBetweenObjectPairWithErrors {
 	return r.JSON207
 }
 
@@ -2572,6 +4251,13 @@ func (r Postcrmassociations202603FromObjectTypeToObjectTypebatchcreatecrmassocia
 type Postcrmassociations202603FromObjectTypeToObjectTypebatchlabelsarchivecrmassociations202509FromObjectTypeToObjectTypebatchlabelsarchiveResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *BatchResponse
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Postcrmassociations202603FromObjectTypeToObjectTypebatchlabelsarchivecrmassociations202509FromObjectTypeToObjectTypebatchlabelsarchiveResponse) GetJSON200() *BatchResponse {
+	return r.JSON200
 }
 
 // GetBody returns the raw response body bytes
@@ -2607,18 +4293,18 @@ type Postcrmassociations202603FromObjectTypeToObjectTypebatchreadcrmassociations
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmBatchResponsePublicAssociationMultiWithLabel
+	JSON200 *BatchResponsePublicAssociationMultiWithLabel
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmBatchResponsePublicAssociationMultiWithLabelWithErrors
+	JSON207 *BatchResponsePublicAssociationMultiWithLabelWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmassociations202603FromObjectTypeToObjectTypebatchreadcrmassociations202509FromObjectTypeToObjectTypebatchreadResponse) GetJSON200() *CrmBatchResponsePublicAssociationMultiWithLabel {
+func (r Postcrmassociations202603FromObjectTypeToObjectTypebatchreadcrmassociations202509FromObjectTypeToObjectTypebatchreadResponse) GetJSON200() *BatchResponsePublicAssociationMultiWithLabel {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmassociations202603FromObjectTypeToObjectTypebatchreadcrmassociations202509FromObjectTypeToObjectTypebatchreadResponse) GetJSON207() *CrmBatchResponsePublicAssociationMultiWithLabelWithErrors {
+func (r Postcrmassociations202603FromObjectTypeToObjectTypebatchreadcrmassociations202509FromObjectTypeToObjectTypebatchreadResponse) GetJSON207() *BatchResponsePublicAssociationMultiWithLabelWithErrors {
 	return r.JSON207
 }
 
@@ -2655,11 +4341,11 @@ type Getcrmassociations202603FromObjectTypeToObjectTypelabelsGetPageResponse str
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmAssociationsSchemaCollectionResponseAssociationSpecWithLabelNoPaging
+	JSON200 *CollectionResponseAssociationSpecWithLabelNoPaging
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmassociations202603FromObjectTypeToObjectTypelabelsGetPageResponse) GetJSON200() *CrmAssociationsSchemaCollectionResponseAssociationSpecWithLabelNoPaging {
+func (r Getcrmassociations202603FromObjectTypeToObjectTypelabelsGetPageResponse) GetJSON200() *CollectionResponseAssociationSpecWithLabelNoPaging {
 	return r.JSON200
 }
 
@@ -2696,11 +4382,11 @@ type Postcrmassociations202603FromObjectTypeToObjectTypelabelsCreateResponse str
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmAssociationsSchemaCollectionResponseAssociationSpecWithLabelNoPaging
+	JSON200 *CollectionResponseAssociationSpecWithLabelNoPaging
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmassociations202603FromObjectTypeToObjectTypelabelsCreateResponse) GetJSON200() *CrmAssociationsSchemaCollectionResponseAssociationSpecWithLabelNoPaging {
+func (r Postcrmassociations202603FromObjectTypeToObjectTypelabelsCreateResponse) GetJSON200() *CollectionResponseAssociationSpecWithLabelNoPaging {
 	return r.JSON200
 }
 
@@ -2846,11 +4532,11 @@ type Getcrmexports202603exportasynctasksTaskIdstatusGetStatusResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmExportsActionResponseWithSingleResultURI
+	JSON200 *ActionResponseWithSingleResultURI
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmexports202603exportasynctasksTaskIdstatusGetStatusResponse) GetJSON200() *CrmExportsActionResponseWithSingleResultURI {
+func (r Getcrmexports202603exportasynctasksTaskIdstatusGetStatusResponse) GetJSON200() *ActionResponseWithSingleResultURI {
 	return r.JSON200
 }
 
@@ -2887,11 +4573,11 @@ type Getcrmexports202603exportExportIdGetByIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmExportsPublicExportResponse
+	JSON200 *PublicExportResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmexports202603exportExportIdGetByIdResponse) GetJSON200() *CrmExportsPublicExportResponse {
+func (r Getcrmexports202603exportExportIdGetByIdResponse) GetJSON200() *PublicExportResponse {
 	return r.JSON200
 }
 
@@ -2928,11 +4614,11 @@ type Postcrmextensionscalling202603inboundCallcrmv3extensionscallinginboundCallR
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmExtensionsCallingCompletedThirdPartyCallResponse
+	JSON200 *CompletedThirdPartyCallResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmextensionscalling202603inboundCallcrmv3extensionscallinginboundCallResponse) GetJSON200() *CrmExtensionsCallingCompletedThirdPartyCallResponse {
+func (r Postcrmextensionscalling202603inboundCallcrmv3extensionscallinginboundCallResponse) GetJSON200() *CompletedThirdPartyCallResponse {
 	return r.JSON200
 }
 
@@ -3003,11 +4689,11 @@ type Postcrmextensionscalling202603transcriptscrmextensionscalling202603transcri
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmExtensionsCallingTranscriptsTranscriptCreateResponse
+	JSON200 *TranscriptCreateResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmextensionscalling202603transcriptscrmextensionscalling202603transcriptsResponse) GetJSON200() *CrmExtensionsCallingTranscriptsTranscriptCreateResponse {
+func (r Postcrmextensionscalling202603transcriptscrmextensionscalling202603transcriptsResponse) GetJSON200() *TranscriptCreateResponse {
 	return r.JSON200
 }
 
@@ -3078,11 +4764,11 @@ type Getcrmextensionscalling202603transcriptsTranscriptIdcrmextensionscalling202
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmExtensionsCallingTranscriptsTranscriptResponse
+	JSON200 *TranscriptResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmextensionscalling202603transcriptsTranscriptIdcrmextensionscalling202603transcriptsTranscriptIdResponse) GetJSON200() *CrmExtensionsCallingTranscriptsTranscriptResponse {
+func (r Getcrmextensionscalling202603transcriptsTranscriptIdcrmextensionscalling202603transcriptsTranscriptIdResponse) GetJSON200() *TranscriptResponse {
 	return r.JSON200
 }
 
@@ -3153,11 +4839,11 @@ type Getcrmextensionscalling202603AppIdsettingsGetResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmExtensionsCallingSettingsResponse
+	JSON200 *SettingsResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmextensionscalling202603AppIdsettingsGetResponse) GetJSON200() *CrmExtensionsCallingSettingsResponse {
+func (r Getcrmextensionscalling202603AppIdsettingsGetResponse) GetJSON200() *SettingsResponse {
 	return r.JSON200
 }
 
@@ -3194,11 +4880,11 @@ type Patchcrmextensionscalling202603AppIdsettingsUpdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmExtensionsCallingSettingsResponse
+	JSON200 *SettingsResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Patchcrmextensionscalling202603AppIdsettingsUpdateResponse) GetJSON200() *CrmExtensionsCallingSettingsResponse {
+func (r Patchcrmextensionscalling202603AppIdsettingsUpdateResponse) GetJSON200() *SettingsResponse {
 	return r.JSON200
 }
 
@@ -3235,11 +4921,11 @@ type Postcrmextensionscalling202603AppIdsettingsCreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmExtensionsCallingSettingsResponse
+	JSON200 *SettingsResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmextensionscalling202603AppIdsettingsCreateResponse) GetJSON200() *CrmExtensionsCallingSettingsResponse {
+func (r Postcrmextensionscalling202603AppIdsettingsCreateResponse) GetJSON200() *SettingsResponse {
 	return r.JSON200
 }
 
@@ -3310,11 +4996,11 @@ type Getcrmextensionscalling202603AppIdsettingschannelConnectionGetResponse stru
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmExtensionsCallingChannelConnectionSettingsResponse
+	JSON200 *ChannelConnectionSettingsResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmextensionscalling202603AppIdsettingschannelConnectionGetResponse) GetJSON200() *CrmExtensionsCallingChannelConnectionSettingsResponse {
+func (r Getcrmextensionscalling202603AppIdsettingschannelConnectionGetResponse) GetJSON200() *ChannelConnectionSettingsResponse {
 	return r.JSON200
 }
 
@@ -3351,11 +5037,11 @@ type Patchcrmextensionscalling202603AppIdsettingschannelConnectionUpdateResponse
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmExtensionsCallingChannelConnectionSettingsResponse
+	JSON200 *ChannelConnectionSettingsResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Patchcrmextensionscalling202603AppIdsettingschannelConnectionUpdateResponse) GetJSON200() *CrmExtensionsCallingChannelConnectionSettingsResponse {
+func (r Patchcrmextensionscalling202603AppIdsettingschannelConnectionUpdateResponse) GetJSON200() *ChannelConnectionSettingsResponse {
 	return r.JSON200
 }
 
@@ -3392,11 +5078,11 @@ type Postcrmextensionscalling202603AppIdsettingschannelConnectionCreateResponse 
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmExtensionsCallingChannelConnectionSettingsResponse
+	JSON200 *ChannelConnectionSettingsResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmextensionscalling202603AppIdsettingschannelConnectionCreateResponse) GetJSON200() *CrmExtensionsCallingChannelConnectionSettingsResponse {
+func (r Postcrmextensionscalling202603AppIdsettingschannelConnectionCreateResponse) GetJSON200() *ChannelConnectionSettingsResponse {
 	return r.JSON200
 }
 
@@ -3433,11 +5119,11 @@ type Getcrmextensionscalling202603AppIdsettingsrecordingGetResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmExtensionsCallingRecordingSettingsResponse
+	JSON200 *RecordingSettingsResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmextensionscalling202603AppIdsettingsrecordingGetResponse) GetJSON200() *CrmExtensionsCallingRecordingSettingsResponse {
+func (r Getcrmextensionscalling202603AppIdsettingsrecordingGetResponse) GetJSON200() *RecordingSettingsResponse {
 	return r.JSON200
 }
 
@@ -3474,11 +5160,11 @@ type Patchcrmextensionscalling202603AppIdsettingsrecordingUpdateResponse struct 
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmExtensionsCallingRecordingSettingsResponse
+	JSON200 *RecordingSettingsResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Patchcrmextensionscalling202603AppIdsettingsrecordingUpdateResponse) GetJSON200() *CrmExtensionsCallingRecordingSettingsResponse {
+func (r Patchcrmextensionscalling202603AppIdsettingsrecordingUpdateResponse) GetJSON200() *RecordingSettingsResponse {
 	return r.JSON200
 }
 
@@ -3515,11 +5201,11 @@ type Postcrmextensionscalling202603AppIdsettingsrecordingCreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmExtensionsCallingRecordingSettingsResponse
+	JSON200 *RecordingSettingsResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmextensionscalling202603AppIdsettingsrecordingCreateResponse) GetJSON200() *CrmExtensionsCallingRecordingSettingsResponse {
+func (r Postcrmextensionscalling202603AppIdsettingsrecordingCreateResponse) GetJSON200() *RecordingSettingsResponse {
 	return r.JSON200
 }
 
@@ -3556,11 +5242,11 @@ type GetcrmextensionscardsDev202603sampleResponseGetCardsSampleResponseResponse 
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmExtensionsCardsDevIntegratorCardPayloadResponse
+	JSON200 *IntegratorCardPayloadResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r GetcrmextensionscardsDev202603sampleResponseGetCardsSampleResponseResponse) GetJSON200() *CrmExtensionsCardsDevIntegratorCardPayloadResponse {
+func (r GetcrmextensionscardsDev202603sampleResponseGetCardsSampleResponseResponse) GetJSON200() *IntegratorCardPayloadResponse {
 	return r.JSON200
 }
 
@@ -3597,11 +5283,11 @@ type GetcrmextensionscardsDev202603AppIdGetAllResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmExtensionsCardsDevPublicCardListResponse
+	JSON200 *PublicCardListResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r GetcrmextensionscardsDev202603AppIdGetAllResponse) GetJSON200() *CrmExtensionsCardsDevPublicCardListResponse {
+func (r GetcrmextensionscardsDev202603AppIdGetAllResponse) GetJSON200() *PublicCardListResponse {
 	return r.JSON200
 }
 
@@ -3634,15 +5320,22 @@ func (r GetcrmextensionscardsDev202603AppIdGetAllResponse) ContentType() string 
 	return ""
 }
 
+// PostcrmextensionscardsDev202603AppIdCreateResponse201Headers the declared response headers of an HTTP 201 response for PostcrmextensionscardsDev202603AppIdCreate
+type PostcrmextensionscardsDev202603AppIdCreateResponse201Headers struct {
+	Location *string
+}
+
 type PostcrmextensionscardsDev202603AppIdCreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmExtensionsCardsDevPublicCardResponse
+	JSON201 *PublicCardResponse
+	// Headers201 the parsed response headers for an HTTP 201 response
+	Headers201 *PostcrmextensionscardsDev202603AppIdCreateResponse201Headers
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r PostcrmextensionscardsDev202603AppIdCreateResponse) GetJSON201() *CrmExtensionsCardsDevPublicCardResponse {
+func (r PostcrmextensionscardsDev202603AppIdCreateResponse) GetJSON201() *PublicCardResponse {
 	return r.JSON201
 }
 
@@ -3679,11 +5372,11 @@ type PostcrmextensionscardsDev202603AppIdviewsmigratecrmv3extensionscardsDevAppI
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmExtensionsCardsDevCardMigrateViewsResponse
+	JSON200 *CardMigrateViewsResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r PostcrmextensionscardsDev202603AppIdviewsmigratecrmv3extensionscardsDevAppIdviewsmigrateResponse) GetJSON200() *CrmExtensionsCardsDevCardMigrateViewsResponse {
+func (r PostcrmextensionscardsDev202603AppIdviewsmigratecrmv3extensionscardsDevAppIdviewsmigrateResponse) GetJSON200() *CardMigrateViewsResponse {
 	return r.JSON200
 }
 
@@ -3754,11 +5447,11 @@ type GetcrmextensionscardsDev202603AppIdCardIdGetByIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmExtensionsCardsDevPublicCardResponse
+	JSON200 *PublicCardResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r GetcrmextensionscardsDev202603AppIdCardIdGetByIdResponse) GetJSON200() *CrmExtensionsCardsDevPublicCardResponse {
+func (r GetcrmextensionscardsDev202603AppIdCardIdGetByIdResponse) GetJSON200() *PublicCardResponse {
 	return r.JSON200
 }
 
@@ -3795,11 +5488,11 @@ type PatchcrmextensionscardsDev202603AppIdCardIdUpdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmExtensionsCardsDevPublicCardResponse
+	JSON200 *PublicCardResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r PatchcrmextensionscardsDev202603AppIdCardIdUpdateResponse) GetJSON200() *CrmExtensionsCardsDevPublicCardResponse {
+func (r PatchcrmextensionscardsDev202603AppIdCardIdUpdateResponse) GetJSON200() *PublicCardResponse {
 	return r.JSON200
 }
 
@@ -3870,11 +5563,11 @@ type Getcrmextensionsvideoconferencing202603settingsAppIdGetByIdResponse struct 
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmExtensionsVideoConferencingExternalSettings
+	JSON200 *ExternalSettings
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmextensionsvideoconferencing202603settingsAppIdGetByIdResponse) GetJSON200() *CrmExtensionsVideoConferencingExternalSettings {
+func (r Getcrmextensionsvideoconferencing202603settingsAppIdGetByIdResponse) GetJSON200() *ExternalSettings {
 	return r.JSON200
 }
 
@@ -3911,11 +5604,11 @@ type Putcrmextensionsvideoconferencing202603settingsAppIdReplaceResponse struct 
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmExtensionsVideoConferencingExternalSettings
+	JSON200 *ExternalSettings
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Putcrmextensionsvideoconferencing202603settingsAppIdReplaceResponse) GetJSON200() *CrmExtensionsVideoConferencingExternalSettings {
+func (r Putcrmextensionsvideoconferencing202603settingsAppIdReplaceResponse) GetJSON200() *ExternalSettings {
 	return r.JSON200
 }
 
@@ -3952,11 +5645,11 @@ type Getcrmimports202603crmimportsv3Response struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmImportsCollectionResponsePublicImportResponseForwardPaging
+	JSON200 *CollectionResponsePublicImportResponseForwardPaging
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmimports202603crmimportsv3Response) GetJSON200() *CrmImportsCollectionResponsePublicImportResponseForwardPaging {
+func (r Getcrmimports202603crmimportsv3Response) GetJSON200() *CollectionResponsePublicImportResponseForwardPaging {
 	return r.JSON200
 }
 
@@ -3993,11 +5686,11 @@ type Postcrmimports202603crmimportsv3Response struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmImportsPublicImportResponse
+	JSON200 *PublicImportResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmimports202603crmimportsv3Response) GetJSON200() *CrmImportsPublicImportResponse {
+func (r Postcrmimports202603crmimportsv3Response) GetJSON200() *PublicImportResponse {
 	return r.JSON200
 }
 
@@ -4034,11 +5727,11 @@ type Getcrmimports202603ImportIdcrmimportsv3ImportIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmImportsPublicImportResponse
+	JSON200 *PublicImportResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmimports202603ImportIdcrmimportsv3ImportIdResponse) GetJSON200() *CrmImportsPublicImportResponse {
+func (r Getcrmimports202603ImportIdcrmimportsv3ImportIdResponse) GetJSON200() *PublicImportResponse {
 	return r.JSON200
 }
 
@@ -4116,11 +5809,11 @@ type Getcrmimports202603ImportIderrorscrmimportsv3ImportIderrorsResponse struct 
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmImportsCollectionResponsePublicImportErrorForwardPaging
+	JSON200 *CollectionResponsePublicImportErrorForwardPaging
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmimports202603ImportIderrorscrmimportsv3ImportIderrorsResponse) GetJSON200() *CrmImportsCollectionResponsePublicImportErrorForwardPaging {
+func (r Getcrmimports202603ImportIderrorscrmimportsv3ImportIderrorsResponse) GetJSON200() *CollectionResponsePublicImportErrorForwardPaging {
 	return r.JSON200
 }
 
@@ -4157,11 +5850,11 @@ type Getcrmlimits202603associationslabelsResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmLimitsCollectionResponseAssociationLabelLimitResponseNoPaging
+	JSON200 *CollectionResponseAssociationLabelLimitResponseNoPaging
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmlimits202603associationslabelsResponse) GetJSON200() *CrmLimitsCollectionResponseAssociationLabelLimitResponseNoPaging {
+func (r Getcrmlimits202603associationslabelsResponse) GetJSON200() *CollectionResponseAssociationLabelLimitResponseNoPaging {
 	return r.JSON200
 }
 
@@ -4198,11 +5891,11 @@ type Getcrmlimits202603associationsrecordsfromResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmLimitsCollectionResponseObjectTypeNearOrAtAssociationLimitNoPaging
+	JSON200 *CollectionResponseObjectTypeNearOrAtAssociationLimitNoPaging
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmlimits202603associationsrecordsfromResponse) GetJSON200() *CrmLimitsCollectionResponseObjectTypeNearOrAtAssociationLimitNoPaging {
+func (r Getcrmlimits202603associationsrecordsfromResponse) GetJSON200() *CollectionResponseObjectTypeNearOrAtAssociationLimitNoPaging {
 	return r.JSON200
 }
 
@@ -4239,11 +5932,11 @@ type Getcrmlimits202603associationsrecordsFromObjectTypeIdtoResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmLimitsCollectionResponseObjectTypeNearOrAtAssociationLimitNoPaging
+	JSON200 *CollectionResponseObjectTypeNearOrAtAssociationLimitNoPaging
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmlimits202603associationsrecordsFromObjectTypeIdtoResponse) GetJSON200() *CrmLimitsCollectionResponseObjectTypeNearOrAtAssociationLimitNoPaging {
+func (r Getcrmlimits202603associationsrecordsFromObjectTypeIdtoResponse) GetJSON200() *CollectionResponseObjectTypeNearOrAtAssociationLimitNoPaging {
 	return r.JSON200
 }
 
@@ -4280,11 +5973,11 @@ type Getcrmlimits202603associationsrecordsFromObjectTypeIdToObjectTypeIdResponse
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmLimitsAssociationRecordLimitResponse
+	JSON200 *AssociationRecordLimitResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmlimits202603associationsrecordsFromObjectTypeIdToObjectTypeIdResponse) GetJSON200() *CrmLimitsAssociationRecordLimitResponse {
+func (r Getcrmlimits202603associationsrecordsFromObjectTypeIdToObjectTypeIdResponse) GetJSON200() *AssociationRecordLimitResponse {
 	return r.JSON200
 }
 
@@ -4321,11 +6014,11 @@ type Getcrmlimits202603calculatedPropertiesResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmLimitsCalculatedPropertyLimitResponse
+	JSON200 *CalculatedPropertyLimitResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmlimits202603calculatedPropertiesResponse) GetJSON200() *CrmLimitsCalculatedPropertyLimitResponse {
+func (r Getcrmlimits202603calculatedPropertiesResponse) GetJSON200() *CalculatedPropertyLimitResponse {
 	return r.JSON200
 }
 
@@ -4362,11 +6055,11 @@ type Getcrmlimits202603customObjectTypesResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmLimitsCustomObjectLimitResponse
+	JSON200 *CustomObjectLimitResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmlimits202603customObjectTypesResponse) GetJSON200() *CrmLimitsCustomObjectLimitResponse {
+func (r Getcrmlimits202603customObjectTypesResponse) GetJSON200() *CustomObjectLimitResponse {
 	return r.JSON200
 }
 
@@ -4403,11 +6096,11 @@ type Getcrmlimits202603customPropertiesResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmLimitsCustomPropertyLimitResponse
+	JSON200 *CustomPropertyLimitResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmlimits202603customPropertiesResponse) GetJSON200() *CrmLimitsCustomPropertyLimitResponse {
+func (r Getcrmlimits202603customPropertiesResponse) GetJSON200() *CustomPropertyLimitResponse {
 	return r.JSON200
 }
 
@@ -4444,11 +6137,11 @@ type Getcrmlimits202603pipelinesResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmLimitsPipelineLimitResponse
+	JSON200 *PipelineLimitResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmlimits202603pipelinesResponse) GetJSON200() *CrmLimitsPipelineLimitResponse {
+func (r Getcrmlimits202603pipelinesResponse) GetJSON200() *PipelineLimitResponse {
 	return r.JSON200
 }
 
@@ -4485,11 +6178,11 @@ type Getcrmlimits202603recordsResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmLimitsRecordLimitResponse
+	JSON200 *RecordLimitResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmlimits202603recordsResponse) GetJSON200() *CrmLimitsRecordLimitResponse {
+func (r Getcrmlimits202603recordsResponse) GetJSON200() *RecordLimitResponse {
 	return r.JSON200
 }
 
@@ -4526,11 +6219,11 @@ type Getcrmlists202603crmlistsv3Response struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmListsListsByIdResponse
+	JSON200 *ListsByIdResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmlists202603crmlistsv3Response) GetJSON200() *CrmListsListsByIdResponse {
+func (r Getcrmlists202603crmlistsv3Response) GetJSON200() *ListsByIdResponse {
 	return r.JSON200
 }
 
@@ -4567,11 +6260,11 @@ type Postcrmlists202603crmlistsv3Response struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmListsListCreateResponse
+	JSON200 *ListCreateResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmlists202603crmlistsv3Response) GetJSON200() *CrmListsListCreateResponse {
+func (r Postcrmlists202603crmlistsv3Response) GetJSON200() *ListCreateResponse {
 	return r.JSON200
 }
 
@@ -4608,11 +6301,11 @@ type Getcrmlists202603folderscrmlistsv3foldersResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmListsListFolderFetchResponse
+	JSON200 *ListFolderFetchResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmlists202603folderscrmlistsv3foldersResponse) GetJSON200() *CrmListsListFolderFetchResponse {
+func (r Getcrmlists202603folderscrmlistsv3foldersResponse) GetJSON200() *ListFolderFetchResponse {
 	return r.JSON200
 }
 
@@ -4649,11 +6342,11 @@ type Postcrmlists202603folderscrmlistsv3foldersResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmListsListFolderCreateResponse
+	JSON200 *ListFolderCreateResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmlists202603folderscrmlistsv3foldersResponse) GetJSON200() *CrmListsListFolderCreateResponse {
+func (r Postcrmlists202603folderscrmlistsv3foldersResponse) GetJSON200() *ListFolderCreateResponse {
 	return r.JSON200
 }
 
@@ -4758,11 +6451,11 @@ type Putcrmlists202603foldersFolderIdmoveNewParentFolderIdcrmlistsv3foldersFolde
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmListsListFolderFetchResponse
+	JSON200 *ListFolderFetchResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Putcrmlists202603foldersFolderIdmoveNewParentFolderIdcrmlistsv3foldersFolderIdmoveNewParentFolderIdResponse) GetJSON200() *CrmListsListFolderFetchResponse {
+func (r Putcrmlists202603foldersFolderIdmoveNewParentFolderIdcrmlistsv3foldersFolderIdmoveNewParentFolderIdResponse) GetJSON200() *ListFolderFetchResponse {
 	return r.JSON200
 }
 
@@ -4799,11 +6492,11 @@ type Putcrmlists202603foldersFolderIdrenamecrmlistsv3foldersFolderIdrenameRespon
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmListsListFolderFetchResponse
+	JSON200 *ListFolderFetchResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Putcrmlists202603foldersFolderIdrenamecrmlistsv3foldersFolderIdrenameResponse) GetJSON200() *CrmListsListFolderFetchResponse {
+func (r Putcrmlists202603foldersFolderIdrenamecrmlistsv3foldersFolderIdrenameResponse) GetJSON200() *ListFolderFetchResponse {
 	return r.JSON200
 }
 
@@ -4840,11 +6533,11 @@ type Getcrmlists202603idmappingcrmlistsv3idmappingResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmListsPublicMigrationMapping
+	JSON200 *PublicMigrationMapping
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmlists202603idmappingcrmlistsv3idmappingResponse) GetJSON200() *CrmListsPublicMigrationMapping {
+func (r Getcrmlists202603idmappingcrmlistsv3idmappingResponse) GetJSON200() *PublicMigrationMapping {
 	return r.JSON200
 }
 
@@ -4881,11 +6574,11 @@ type Postcrmlists202603idmappingcrmlistsv3idmappingResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmListsPublicBatchMigrationMapping
+	JSON200 *PublicBatchMigrationMapping
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmlists202603idmappingcrmlistsv3idmappingResponse) GetJSON200() *CrmListsPublicBatchMigrationMapping {
+func (r Postcrmlists202603idmappingcrmlistsv3idmappingResponse) GetJSON200() *PublicBatchMigrationMapping {
 	return r.JSON200
 }
 
@@ -4922,11 +6615,11 @@ type Getcrmlists202603objectTypeIdObjectTypeIdnameListNamecrmlistsv3objectTypeId
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmListsListFetchResponse
+	JSON200 *ListFetchResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmlists202603objectTypeIdObjectTypeIdnameListNamecrmlistsv3objectTypeIdObjectTypeIdnameListNameResponse) GetJSON200() *CrmListsListFetchResponse {
+func (r Getcrmlists202603objectTypeIdObjectTypeIdnameListNamecrmlistsv3objectTypeIdObjectTypeIdnameListNameResponse) GetJSON200() *ListFetchResponse {
 	return r.JSON200
 }
 
@@ -4963,18 +6656,18 @@ type Postcrmlists202603recordsmembershipsbatchreadcrmlistsv3recordsmembershipsba
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmListsBatchResponseRecordIdWithMemberships
+	JSON200 *BatchResponseRecordIdWithMemberships
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmListsBatchResponseRecordIdWithMembershipsWithErrors
+	JSON207 *BatchResponseRecordIdWithMembershipsWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmlists202603recordsmembershipsbatchreadcrmlistsv3recordsmembershipsbatchreadResponse) GetJSON200() *CrmListsBatchResponseRecordIdWithMemberships {
+func (r Postcrmlists202603recordsmembershipsbatchreadcrmlistsv3recordsmembershipsbatchreadResponse) GetJSON200() *BatchResponseRecordIdWithMemberships {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmlists202603recordsmembershipsbatchreadcrmlistsv3recordsmembershipsbatchreadResponse) GetJSON207() *CrmListsBatchResponseRecordIdWithMembershipsWithErrors {
+func (r Postcrmlists202603recordsmembershipsbatchreadcrmlistsv3recordsmembershipsbatchreadResponse) GetJSON207() *BatchResponseRecordIdWithMembershipsWithErrors {
 	return r.JSON207
 }
 
@@ -5011,11 +6704,11 @@ type Getcrmlists202603recordsObjectTypeIdRecordIdmembershipscrmlistsv3recordsObj
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmListsApiCollectionResponseRecordListMembership
+	JSON200 *ApiCollectionResponseRecordListMembership
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmlists202603recordsObjectTypeIdRecordIdmembershipscrmlistsv3recordsObjectTypeIdRecordIdmembershipsResponse) GetJSON200() *CrmListsApiCollectionResponseRecordListMembership {
+func (r Getcrmlists202603recordsObjectTypeIdRecordIdmembershipscrmlistsv3recordsObjectTypeIdRecordIdmembershipsResponse) GetJSON200() *ApiCollectionResponseRecordListMembership {
 	return r.JSON200
 }
 
@@ -5052,11 +6745,11 @@ type Postcrmlists202603searchcrmlistsv3searchResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmListsListSearchResponse
+	JSON200 *ListSearchResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmlists202603searchcrmlistsv3searchResponse) GetJSON200() *CrmListsListSearchResponse {
+func (r Postcrmlists202603searchcrmlistsv3searchResponse) GetJSON200() *ListSearchResponse {
 	return r.JSON200
 }
 
@@ -5127,11 +6820,11 @@ type Getcrmlists202603ListIdcrmlistsv3ListIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmListsListFetchResponse
+	JSON200 *ListFetchResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmlists202603ListIdcrmlistsv3ListIdResponse) GetJSON200() *CrmListsListFetchResponse {
+func (r Getcrmlists202603ListIdcrmlistsv3ListIdResponse) GetJSON200() *ListFetchResponse {
 	return r.JSON200
 }
 
@@ -5202,11 +6895,11 @@ type Getcrmlists202603ListIdmembershipscrmlistsv3ListIdmembershipsResponse struc
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmListsApiCollectionResponseJoinTimeAndRecordId
+	JSON200 *ApiCollectionResponseJoinTimeAndRecordId
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmlists202603ListIdmembershipscrmlistsv3ListIdmembershipsResponse) GetJSON200() *CrmListsApiCollectionResponseJoinTimeAndRecordId {
+func (r Getcrmlists202603ListIdmembershipscrmlistsv3ListIdmembershipsResponse) GetJSON200() *ApiCollectionResponseJoinTimeAndRecordId {
 	return r.JSON200
 }
 
@@ -5243,11 +6936,11 @@ type Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsaddResponse
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmListsMembershipsUpdateResponse
+	JSON200 *MembershipsUpdateResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsaddResponse) GetJSON200() *CrmListsMembershipsUpdateResponse {
+func (r Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsaddResponse) GetJSON200() *MembershipsUpdateResponse {
 	return r.JSON200
 }
 
@@ -5284,11 +6977,11 @@ type Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsad
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmListsMembershipsUpdateResponse
+	JSON200 *MembershipsUpdateResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemoveResponse) GetJSON200() *CrmListsMembershipsUpdateResponse {
+func (r Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemoveResponse) GetJSON200() *MembershipsUpdateResponse {
 	return r.JSON200
 }
 
@@ -5359,11 +7052,11 @@ type Getcrmlists202603ListIdmembershipsjoinOrdercrmlistsv3ListIdmembershipsjoinO
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmListsApiCollectionResponseJoinTimeAndRecordId
+	JSON200 *ApiCollectionResponseJoinTimeAndRecordId
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmlists202603ListIdmembershipsjoinOrdercrmlistsv3ListIdmembershipsjoinOrderResponse) GetJSON200() *CrmListsApiCollectionResponseJoinTimeAndRecordId {
+func (r Getcrmlists202603ListIdmembershipsjoinOrdercrmlistsv3ListIdmembershipsjoinOrderResponse) GetJSON200() *ApiCollectionResponseJoinTimeAndRecordId {
 	return r.JSON200
 }
 
@@ -5400,11 +7093,11 @@ type Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremoveRe
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmListsMembershipsUpdateResponse
+	JSON200 *MembershipsUpdateResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremoveResponse) GetJSON200() *CrmListsMembershipsUpdateResponse {
+func (r Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremoveResponse) GetJSON200() *MembershipsUpdateResponse {
 	return r.JSON200
 }
 
@@ -5509,11 +7202,11 @@ type Getcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversion
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmListsPublicListConversionResponse
+	JSON200 *PublicListConversionResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionResponse) GetJSON200() *CrmListsPublicListConversionResponse {
+func (r Getcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionResponse) GetJSON200() *PublicListConversionResponse {
 	return r.JSON200
 }
 
@@ -5550,11 +7243,11 @@ type Putcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversion
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmListsPublicListConversionResponse
+	JSON200 *PublicListConversionResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Putcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionResponse) GetJSON200() *CrmListsPublicListConversionResponse {
+func (r Putcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionResponse) GetJSON200() *PublicListConversionResponse {
 	return r.JSON200
 }
 
@@ -5591,11 +7284,11 @@ type Getcrmlists202603ListIdsizeAndEditsHistorybetweencrmlists202603ListIdsizeAn
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmListsListSizeAndEditHistoryResponse
+	JSON200 *ListSizeAndEditHistoryResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmlists202603ListIdsizeAndEditsHistorybetweencrmlists202603ListIdsizeAndEditsHistorybetweenResponse) GetJSON200() *CrmListsListSizeAndEditHistoryResponse {
+func (r Getcrmlists202603ListIdsizeAndEditsHistorybetweencrmlists202603ListIdsizeAndEditsHistorybetweenResponse) GetJSON200() *ListSizeAndEditHistoryResponse {
 	return r.JSON200
 }
 
@@ -5632,11 +7325,11 @@ type Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersRe
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmListsListUpdateResponse
+	JSON200 *ListUpdateResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersResponse) GetJSON200() *CrmListsListUpdateResponse {
+func (r Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersResponse) GetJSON200() *ListUpdateResponse {
 	return r.JSON200
 }
 
@@ -5673,11 +7366,11 @@ type Putcrmlists202603ListIdupdateListNamecrmlistsv3ListIdupdateListNameResponse
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmListsListUpdateResponse
+	JSON200 *ListUpdateResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Putcrmlists202603ListIdupdateListNamecrmlistsv3ListIdupdateListNameResponse) GetJSON200() *CrmListsListUpdateResponse {
+func (r Putcrmlists202603ListIdupdateListNamecrmlistsv3ListIdupdateListNameResponse) GetJSON200() *ListUpdateResponse {
 	return r.JSON200
 }
 
@@ -5714,11 +7407,11 @@ type GetcrmobjectLibrary202603enablementcrmobjectLibrary202603enablementResponse
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectLibraryEnablementPortalObjectTypeEnablementPublicResponse
+	JSON200 *PortalObjectTypeEnablementPublicResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r GetcrmobjectLibrary202603enablementcrmobjectLibrary202603enablementResponse) GetJSON200() *CrmObjectLibraryEnablementPortalObjectTypeEnablementPublicResponse {
+func (r GetcrmobjectLibrary202603enablementcrmobjectLibrary202603enablementResponse) GetJSON200() *PortalObjectTypeEnablementPublicResponse {
 	return r.JSON200
 }
 
@@ -5755,11 +7448,11 @@ type GetcrmobjectLibrary202603enablementObjectTypeIdcrmobjectLibrary202603enable
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectLibraryEnablementObjectTypeEnablementPublicResponse
+	JSON200 *ObjectTypeEnablementPublicResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r GetcrmobjectLibrary202603enablementObjectTypeIdcrmobjectLibrary202603enablementObjectTypeIdResponse) GetJSON200() *CrmObjectLibraryEnablementObjectTypeEnablementPublicResponse {
+func (r GetcrmobjectLibrary202603enablementObjectTypeIdcrmobjectLibrary202603enablementObjectTypeIdResponse) GetJSON200() *ObjectTypeEnablementPublicResponse {
 	return r.JSON200
 }
 
@@ -5796,11 +7489,11 @@ type Getcrmobjects2026030162Response struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+	JSON200 *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects2026030162Response) GetJSON200() *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
+func (r Getcrmobjects2026030162Response) GetJSON200() *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
 	return r.JSON200
 }
 
@@ -5833,15 +7526,22 @@ func (r Getcrmobjects2026030162Response) ContentType() string {
 	return ""
 }
 
+// Postcrmobjects2026030162Response201Headers the declared response headers of an HTTP 201 response for Postcrmobjects2026030162
+type Postcrmobjects2026030162Response201Headers struct {
+	Location *string
+}
+
 type Postcrmobjects2026030162Response struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmSimplePublicObject
+	JSON201 *SimplePublicObject
+	// Headers201 the parsed response headers for an HTTP 201 response
+	Headers201 *Postcrmobjects2026030162Response201Headers
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects2026030162Response) GetJSON201() *CrmSimplePublicObject {
+func (r Postcrmobjects2026030162Response) GetJSON201() *SimplePublicObject {
 	return r.JSON201
 }
 
@@ -5912,18 +7612,18 @@ type Postcrmobjects2026030162batchcreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmObjectsBatchResponseSimplePublicObject
+	JSON201 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects2026030162batchcreateResponse) GetJSON201() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects2026030162batchcreateResponse) GetJSON201() *BatchResponseSimplePublicObject {
 	return r.JSON201
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects2026030162batchcreateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects2026030162batchcreateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -5960,18 +7660,18 @@ type Postcrmobjects2026030162batchreadResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects2026030162batchreadResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects2026030162batchreadResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects2026030162batchreadResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects2026030162batchreadResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -6008,18 +7708,18 @@ type Postcrmobjects2026030162batchupdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects2026030162batchupdateResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects2026030162batchupdateResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects2026030162batchupdateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects2026030162batchupdateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -6056,18 +7756,18 @@ type Postcrmobjects2026030162batchupsertResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicUpsertObject
+	JSON200 *BatchResponseSimplePublicUpsertObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+	JSON207 *BatchResponseSimplePublicUpsertObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects2026030162batchupsertResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicUpsertObject {
+func (r Postcrmobjects2026030162batchupsertResponse) GetJSON200() *BatchResponseSimplePublicUpsertObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects2026030162batchupsertResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors {
+func (r Postcrmobjects2026030162batchupsertResponse) GetJSON207() *BatchResponseSimplePublicUpsertObjectWithErrors {
 	return r.JSON207
 }
 
@@ -6104,11 +7804,11 @@ type Postcrmobjects2026030162searchResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmCollectionResponseWithTotalSimplePublicObject
+	JSON200 *CollectionResponseWithTotalSimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects2026030162searchResponse) GetJSON200() *CrmCollectionResponseWithTotalSimplePublicObject {
+func (r Postcrmobjects2026030162searchResponse) GetJSON200() *CollectionResponseWithTotalSimplePublicObject {
 	return r.JSON200
 }
 
@@ -6179,11 +7879,11 @@ type Getcrmobjects2026030162ServiceIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsSimplePublicObjectWithAssociations
+	JSON200 *SimplePublicObjectWithAssociations
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects2026030162ServiceIdResponse) GetJSON200() *CrmObjectsSimplePublicObjectWithAssociations {
+func (r Getcrmobjects2026030162ServiceIdResponse) GetJSON200() *SimplePublicObjectWithAssociations {
 	return r.JSON200
 }
 
@@ -6220,11 +7920,11 @@ type Patchcrmobjects2026030162ServiceIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmSimplePublicObject
+	JSON200 *SimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Patchcrmobjects2026030162ServiceIdResponse) GetJSON200() *CrmSimplePublicObject {
+func (r Patchcrmobjects2026030162ServiceIdResponse) GetJSON200() *SimplePublicObject {
 	return r.JSON200
 }
 
@@ -6261,11 +7961,11 @@ type Getcrmobjects20260303GetPageResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+	JSON200 *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects20260303GetPageResponse) GetJSON200() *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
+func (r Getcrmobjects20260303GetPageResponse) GetJSON200() *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
 	return r.JSON200
 }
 
@@ -6298,15 +7998,22 @@ func (r Getcrmobjects20260303GetPageResponse) ContentType() string {
 	return ""
 }
 
+// Postcrmobjects20260303CreateResponse201Headers the declared response headers of an HTTP 201 response for Postcrmobjects20260303Create
+type Postcrmobjects20260303CreateResponse201Headers struct {
+	Location *string
+}
+
 type Postcrmobjects20260303CreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmSimplePublicObject
+	JSON201 *SimplePublicObject
+	// Headers201 the parsed response headers for an HTTP 201 response
+	Headers201 *Postcrmobjects20260303CreateResponse201Headers
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects20260303CreateResponse) GetJSON201() *CrmSimplePublicObject {
+func (r Postcrmobjects20260303CreateResponse) GetJSON201() *SimplePublicObject {
 	return r.JSON201
 }
 
@@ -6377,18 +8084,18 @@ type Postcrmobjects20260303batchcreateCreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmObjectsBatchResponseSimplePublicObject
+	JSON201 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects20260303batchcreateCreateResponse) GetJSON201() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects20260303batchcreateCreateResponse) GetJSON201() *BatchResponseSimplePublicObject {
 	return r.JSON201
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects20260303batchcreateCreateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects20260303batchcreateCreateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -6425,18 +8132,18 @@ type Postcrmobjects20260303batchreadReadResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects20260303batchreadReadResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects20260303batchreadReadResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects20260303batchreadReadResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects20260303batchreadReadResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -6473,18 +8180,18 @@ type Postcrmobjects20260303batchupdateUpdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects20260303batchupdateUpdateResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects20260303batchupdateUpdateResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects20260303batchupdateUpdateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects20260303batchupdateUpdateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -6521,18 +8228,18 @@ type Postcrmobjects20260303batchupsertUpsertResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicUpsertObject
+	JSON200 *BatchResponseSimplePublicUpsertObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+	JSON207 *BatchResponseSimplePublicUpsertObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects20260303batchupsertUpsertResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicUpsertObject {
+func (r Postcrmobjects20260303batchupsertUpsertResponse) GetJSON200() *BatchResponseSimplePublicUpsertObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects20260303batchupsertUpsertResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors {
+func (r Postcrmobjects20260303batchupsertUpsertResponse) GetJSON207() *BatchResponseSimplePublicUpsertObjectWithErrors {
 	return r.JSON207
 }
 
@@ -6569,11 +8276,11 @@ type Postcrmobjects20260303mergeMergeResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmSimplePublicObject
+	JSON200 *SimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects20260303mergeMergeResponse) GetJSON200() *CrmSimplePublicObject {
+func (r Postcrmobjects20260303mergeMergeResponse) GetJSON200() *SimplePublicObject {
 	return r.JSON200
 }
 
@@ -6610,11 +8317,11 @@ type Postcrmobjects20260303searchDoSearchResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmCollectionResponseWithTotalSimplePublicObject
+	JSON200 *CollectionResponseWithTotalSimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects20260303searchDoSearchResponse) GetJSON200() *CrmCollectionResponseWithTotalSimplePublicObject {
+func (r Postcrmobjects20260303searchDoSearchResponse) GetJSON200() *CollectionResponseWithTotalSimplePublicObject {
 	return r.JSON200
 }
 
@@ -6685,11 +8392,11 @@ type Getcrmobjects20260303DealIdGetByIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsSimplePublicObjectWithAssociations
+	JSON200 *SimplePublicObjectWithAssociations
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects20260303DealIdGetByIdResponse) GetJSON200() *CrmObjectsSimplePublicObjectWithAssociations {
+func (r Getcrmobjects20260303DealIdGetByIdResponse) GetJSON200() *SimplePublicObjectWithAssociations {
 	return r.JSON200
 }
 
@@ -6726,11 +8433,11 @@ type Patchcrmobjects20260303DealIdUpdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmSimplePublicObject
+	JSON200 *SimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Patchcrmobjects20260303DealIdUpdateResponse) GetJSON200() *CrmSimplePublicObject {
+func (r Patchcrmobjects20260303DealIdUpdateResponse) GetJSON200() *SimplePublicObject {
 	return r.JSON200
 }
 
@@ -6767,11 +8474,11 @@ type Getcrmobjects2026030410Response struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+	JSON200 *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects2026030410Response) GetJSON200() *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
+func (r Getcrmobjects2026030410Response) GetJSON200() *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
 	return r.JSON200
 }
 
@@ -6804,15 +8511,22 @@ func (r Getcrmobjects2026030410Response) ContentType() string {
 	return ""
 }
 
+// Postcrmobjects2026030410Response201Headers the declared response headers of an HTTP 201 response for Postcrmobjects2026030410
+type Postcrmobjects2026030410Response201Headers struct {
+	Location *string
+}
+
 type Postcrmobjects2026030410Response struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmSimplePublicObject
+	JSON201 *SimplePublicObject
+	// Headers201 the parsed response headers for an HTTP 201 response
+	Headers201 *Postcrmobjects2026030410Response201Headers
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects2026030410Response) GetJSON201() *CrmSimplePublicObject {
+func (r Postcrmobjects2026030410Response) GetJSON201() *SimplePublicObject {
 	return r.JSON201
 }
 
@@ -6883,18 +8597,18 @@ type Postcrmobjects2026030410batchcreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmObjectsBatchResponseSimplePublicObject
+	JSON201 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects2026030410batchcreateResponse) GetJSON201() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects2026030410batchcreateResponse) GetJSON201() *BatchResponseSimplePublicObject {
 	return r.JSON201
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects2026030410batchcreateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects2026030410batchcreateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -6931,18 +8645,18 @@ type Postcrmobjects2026030410batchreadResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects2026030410batchreadResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects2026030410batchreadResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects2026030410batchreadResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects2026030410batchreadResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -6979,18 +8693,18 @@ type Postcrmobjects2026030410batchupdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects2026030410batchupdateResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects2026030410batchupdateResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects2026030410batchupdateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects2026030410batchupdateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -7027,18 +8741,18 @@ type Postcrmobjects2026030410batchupsertResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicUpsertObject
+	JSON200 *BatchResponseSimplePublicUpsertObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+	JSON207 *BatchResponseSimplePublicUpsertObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects2026030410batchupsertResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicUpsertObject {
+func (r Postcrmobjects2026030410batchupsertResponse) GetJSON200() *BatchResponseSimplePublicUpsertObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects2026030410batchupsertResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors {
+func (r Postcrmobjects2026030410batchupsertResponse) GetJSON207() *BatchResponseSimplePublicUpsertObjectWithErrors {
 	return r.JSON207
 }
 
@@ -7075,11 +8789,11 @@ type Postcrmobjects2026030410searchResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmCollectionResponseWithTotalSimplePublicObject
+	JSON200 *CollectionResponseWithTotalSimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects2026030410searchResponse) GetJSON200() *CrmCollectionResponseWithTotalSimplePublicObject {
+func (r Postcrmobjects2026030410searchResponse) GetJSON200() *CollectionResponseWithTotalSimplePublicObject {
 	return r.JSON200
 }
 
@@ -7150,11 +8864,11 @@ type Getcrmobjects2026030410CourseIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsSimplePublicObjectWithAssociations
+	JSON200 *SimplePublicObjectWithAssociations
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects2026030410CourseIdResponse) GetJSON200() *CrmObjectsSimplePublicObjectWithAssociations {
+func (r Getcrmobjects2026030410CourseIdResponse) GetJSON200() *SimplePublicObjectWithAssociations {
 	return r.JSON200
 }
 
@@ -7191,11 +8905,11 @@ type Patchcrmobjects2026030410CourseIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmSimplePublicObject
+	JSON200 *SimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Patchcrmobjects2026030410CourseIdResponse) GetJSON200() *CrmSimplePublicObject {
+func (r Patchcrmobjects2026030410CourseIdResponse) GetJSON200() *SimplePublicObject {
 	return r.JSON200
 }
 
@@ -7232,11 +8946,11 @@ type Getcrmobjects2026030420Response struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+	JSON200 *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects2026030420Response) GetJSON200() *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
+func (r Getcrmobjects2026030420Response) GetJSON200() *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
 	return r.JSON200
 }
 
@@ -7269,15 +8983,22 @@ func (r Getcrmobjects2026030420Response) ContentType() string {
 	return ""
 }
 
+// Postcrmobjects2026030420Response201Headers the declared response headers of an HTTP 201 response for Postcrmobjects2026030420
+type Postcrmobjects2026030420Response201Headers struct {
+	Location *string
+}
+
 type Postcrmobjects2026030420Response struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmSimplePublicObject
+	JSON201 *SimplePublicObject
+	// Headers201 the parsed response headers for an HTTP 201 response
+	Headers201 *Postcrmobjects2026030420Response201Headers
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects2026030420Response) GetJSON201() *CrmSimplePublicObject {
+func (r Postcrmobjects2026030420Response) GetJSON201() *SimplePublicObject {
 	return r.JSON201
 }
 
@@ -7348,18 +9069,18 @@ type Postcrmobjects2026030420batchcreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmObjectsBatchResponseSimplePublicObject
+	JSON201 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects2026030420batchcreateResponse) GetJSON201() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects2026030420batchcreateResponse) GetJSON201() *BatchResponseSimplePublicObject {
 	return r.JSON201
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects2026030420batchcreateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects2026030420batchcreateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -7396,18 +9117,18 @@ type Postcrmobjects2026030420batchreadResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects2026030420batchreadResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects2026030420batchreadResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects2026030420batchreadResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects2026030420batchreadResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -7444,18 +9165,18 @@ type Postcrmobjects2026030420batchupdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects2026030420batchupdateResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects2026030420batchupdateResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects2026030420batchupdateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects2026030420batchupdateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -7492,18 +9213,18 @@ type Postcrmobjects2026030420batchupsertResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicUpsertObject
+	JSON200 *BatchResponseSimplePublicUpsertObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+	JSON207 *BatchResponseSimplePublicUpsertObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects2026030420batchupsertResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicUpsertObject {
+func (r Postcrmobjects2026030420batchupsertResponse) GetJSON200() *BatchResponseSimplePublicUpsertObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects2026030420batchupsertResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors {
+func (r Postcrmobjects2026030420batchupsertResponse) GetJSON207() *BatchResponseSimplePublicUpsertObjectWithErrors {
 	return r.JSON207
 }
 
@@ -7540,11 +9261,11 @@ type Postcrmobjects2026030420searchResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmCollectionResponseWithTotalSimplePublicObject
+	JSON200 *CollectionResponseWithTotalSimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects2026030420searchResponse) GetJSON200() *CrmCollectionResponseWithTotalSimplePublicObject {
+func (r Postcrmobjects2026030420searchResponse) GetJSON200() *CollectionResponseWithTotalSimplePublicObject {
 	return r.JSON200
 }
 
@@ -7615,11 +9336,11 @@ type Getcrmobjects2026030420ListingIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsSimplePublicObjectWithAssociations
+	JSON200 *SimplePublicObjectWithAssociations
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects2026030420ListingIdResponse) GetJSON200() *CrmObjectsSimplePublicObjectWithAssociations {
+func (r Getcrmobjects2026030420ListingIdResponse) GetJSON200() *SimplePublicObjectWithAssociations {
 	return r.JSON200
 }
 
@@ -7656,11 +9377,11 @@ type Patchcrmobjects2026030420ListingIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmSimplePublicObject
+	JSON200 *SimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Patchcrmobjects2026030420ListingIdResponse) GetJSON200() *CrmSimplePublicObject {
+func (r Patchcrmobjects2026030420ListingIdResponse) GetJSON200() *SimplePublicObject {
 	return r.JSON200
 }
 
@@ -7697,11 +9418,11 @@ type Getcrmobjects202603callsGetPageResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+	JSON200 *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603callsGetPageResponse) GetJSON200() *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
+func (r Getcrmobjects202603callsGetPageResponse) GetJSON200() *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
 	return r.JSON200
 }
 
@@ -7734,15 +9455,22 @@ func (r Getcrmobjects202603callsGetPageResponse) ContentType() string {
 	return ""
 }
 
+// Postcrmobjects202603callsCreateResponse201Headers the declared response headers of an HTTP 201 response for Postcrmobjects202603callsCreate
+type Postcrmobjects202603callsCreateResponse201Headers struct {
+	Location *string
+}
+
 type Postcrmobjects202603callsCreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmSimplePublicObject
+	JSON201 *SimplePublicObject
+	// Headers201 the parsed response headers for an HTTP 201 response
+	Headers201 *Postcrmobjects202603callsCreateResponse201Headers
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603callsCreateResponse) GetJSON201() *CrmSimplePublicObject {
+func (r Postcrmobjects202603callsCreateResponse) GetJSON201() *SimplePublicObject {
 	return r.JSON201
 }
 
@@ -7813,18 +9541,18 @@ type Postcrmobjects202603callsbatchcreateCreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmObjectsBatchResponseSimplePublicObject
+	JSON201 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603callsbatchcreateCreateResponse) GetJSON201() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603callsbatchcreateCreateResponse) GetJSON201() *BatchResponseSimplePublicObject {
 	return r.JSON201
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603callsbatchcreateCreateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603callsbatchcreateCreateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -7861,18 +9589,18 @@ type Postcrmobjects202603callsbatchreadReadResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603callsbatchreadReadResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603callsbatchreadReadResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603callsbatchreadReadResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603callsbatchreadReadResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -7909,18 +9637,18 @@ type Postcrmobjects202603callsbatchupdateUpdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603callsbatchupdateUpdateResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603callsbatchupdateUpdateResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603callsbatchupdateUpdateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603callsbatchupdateUpdateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -7957,18 +9685,18 @@ type Postcrmobjects202603callsbatchupsertUpsertResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicUpsertObject
+	JSON200 *BatchResponseSimplePublicUpsertObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+	JSON207 *BatchResponseSimplePublicUpsertObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603callsbatchupsertUpsertResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicUpsertObject {
+func (r Postcrmobjects202603callsbatchupsertUpsertResponse) GetJSON200() *BatchResponseSimplePublicUpsertObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603callsbatchupsertUpsertResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors {
+func (r Postcrmobjects202603callsbatchupsertUpsertResponse) GetJSON207() *BatchResponseSimplePublicUpsertObjectWithErrors {
 	return r.JSON207
 }
 
@@ -8005,11 +9733,11 @@ type Postcrmobjects202603callssearchDoSearchResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmCollectionResponseWithTotalSimplePublicObject
+	JSON200 *CollectionResponseWithTotalSimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603callssearchDoSearchResponse) GetJSON200() *CrmCollectionResponseWithTotalSimplePublicObject {
+func (r Postcrmobjects202603callssearchDoSearchResponse) GetJSON200() *CollectionResponseWithTotalSimplePublicObject {
 	return r.JSON200
 }
 
@@ -8080,11 +9808,11 @@ type Getcrmobjects202603callsCallIdGetByIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsSimplePublicObjectWithAssociations
+	JSON200 *SimplePublicObjectWithAssociations
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603callsCallIdGetByIdResponse) GetJSON200() *CrmObjectsSimplePublicObjectWithAssociations {
+func (r Getcrmobjects202603callsCallIdGetByIdResponse) GetJSON200() *SimplePublicObjectWithAssociations {
 	return r.JSON200
 }
 
@@ -8121,11 +9849,11 @@ type Patchcrmobjects202603callsCallIdUpdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmSimplePublicObject
+	JSON200 *SimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Patchcrmobjects202603callsCallIdUpdateResponse) GetJSON200() *CrmSimplePublicObject {
+func (r Patchcrmobjects202603callsCallIdUpdateResponse) GetJSON200() *SimplePublicObject {
 	return r.JSON200
 }
 
@@ -8162,11 +9890,11 @@ type Getcrmobjects202603cartsResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+	JSON200 *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603cartsResponse) GetJSON200() *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
+func (r Getcrmobjects202603cartsResponse) GetJSON200() *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
 	return r.JSON200
 }
 
@@ -8199,15 +9927,22 @@ func (r Getcrmobjects202603cartsResponse) ContentType() string {
 	return ""
 }
 
+// Postcrmobjects202603cartsResponse201Headers the declared response headers of an HTTP 201 response for Postcrmobjects202603carts
+type Postcrmobjects202603cartsResponse201Headers struct {
+	Location *string
+}
+
 type Postcrmobjects202603cartsResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmSimplePublicObject
+	JSON201 *SimplePublicObject
+	// Headers201 the parsed response headers for an HTTP 201 response
+	Headers201 *Postcrmobjects202603cartsResponse201Headers
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603cartsResponse) GetJSON201() *CrmSimplePublicObject {
+func (r Postcrmobjects202603cartsResponse) GetJSON201() *SimplePublicObject {
 	return r.JSON201
 }
 
@@ -8278,18 +10013,18 @@ type Postcrmobjects202603cartsbatchcreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmObjectsBatchResponseSimplePublicObject
+	JSON201 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603cartsbatchcreateResponse) GetJSON201() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603cartsbatchcreateResponse) GetJSON201() *BatchResponseSimplePublicObject {
 	return r.JSON201
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603cartsbatchcreateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603cartsbatchcreateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -8326,18 +10061,18 @@ type Postcrmobjects202603cartsbatchreadResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603cartsbatchreadResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603cartsbatchreadResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603cartsbatchreadResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603cartsbatchreadResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -8374,18 +10109,18 @@ type Postcrmobjects202603cartsbatchupdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603cartsbatchupdateResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603cartsbatchupdateResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603cartsbatchupdateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603cartsbatchupdateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -8422,18 +10157,18 @@ type Postcrmobjects202603cartsbatchupsertResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicUpsertObject
+	JSON200 *BatchResponseSimplePublicUpsertObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+	JSON207 *BatchResponseSimplePublicUpsertObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603cartsbatchupsertResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicUpsertObject {
+func (r Postcrmobjects202603cartsbatchupsertResponse) GetJSON200() *BatchResponseSimplePublicUpsertObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603cartsbatchupsertResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors {
+func (r Postcrmobjects202603cartsbatchupsertResponse) GetJSON207() *BatchResponseSimplePublicUpsertObjectWithErrors {
 	return r.JSON207
 }
 
@@ -8470,11 +10205,11 @@ type Postcrmobjects202603cartssearchResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmCollectionResponseWithTotalSimplePublicObject
+	JSON200 *CollectionResponseWithTotalSimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603cartssearchResponse) GetJSON200() *CrmCollectionResponseWithTotalSimplePublicObject {
+func (r Postcrmobjects202603cartssearchResponse) GetJSON200() *CollectionResponseWithTotalSimplePublicObject {
 	return r.JSON200
 }
 
@@ -8545,11 +10280,11 @@ type Getcrmobjects202603cartsCartIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsSimplePublicObjectWithAssociations
+	JSON200 *SimplePublicObjectWithAssociations
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603cartsCartIdResponse) GetJSON200() *CrmObjectsSimplePublicObjectWithAssociations {
+func (r Getcrmobjects202603cartsCartIdResponse) GetJSON200() *SimplePublicObjectWithAssociations {
 	return r.JSON200
 }
 
@@ -8586,11 +10321,11 @@ type Patchcrmobjects202603cartsCartIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmSimplePublicObject
+	JSON200 *SimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Patchcrmobjects202603cartsCartIdResponse) GetJSON200() *CrmSimplePublicObject {
+func (r Patchcrmobjects202603cartsCartIdResponse) GetJSON200() *SimplePublicObject {
 	return r.JSON200
 }
 
@@ -8627,11 +10362,11 @@ type Getcrmobjects202603commercePaymentsResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+	JSON200 *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603commercePaymentsResponse) GetJSON200() *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
+func (r Getcrmobjects202603commercePaymentsResponse) GetJSON200() *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
 	return r.JSON200
 }
 
@@ -8664,15 +10399,22 @@ func (r Getcrmobjects202603commercePaymentsResponse) ContentType() string {
 	return ""
 }
 
+// Postcrmobjects202603commercePaymentsResponse201Headers the declared response headers of an HTTP 201 response for Postcrmobjects202603commercePayments
+type Postcrmobjects202603commercePaymentsResponse201Headers struct {
+	Location *string
+}
+
 type Postcrmobjects202603commercePaymentsResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmSimplePublicObject
+	JSON201 *SimplePublicObject
+	// Headers201 the parsed response headers for an HTTP 201 response
+	Headers201 *Postcrmobjects202603commercePaymentsResponse201Headers
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603commercePaymentsResponse) GetJSON201() *CrmSimplePublicObject {
+func (r Postcrmobjects202603commercePaymentsResponse) GetJSON201() *SimplePublicObject {
 	return r.JSON201
 }
 
@@ -8743,18 +10485,18 @@ type Postcrmobjects202603commercePaymentsbatchcreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmObjectsBatchResponseSimplePublicObject
+	JSON201 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603commercePaymentsbatchcreateResponse) GetJSON201() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603commercePaymentsbatchcreateResponse) GetJSON201() *BatchResponseSimplePublicObject {
 	return r.JSON201
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603commercePaymentsbatchcreateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603commercePaymentsbatchcreateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -8791,18 +10533,18 @@ type Postcrmobjects202603commercePaymentsbatchreadResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603commercePaymentsbatchreadResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603commercePaymentsbatchreadResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603commercePaymentsbatchreadResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603commercePaymentsbatchreadResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -8839,18 +10581,18 @@ type Postcrmobjects202603commercePaymentsbatchupdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603commercePaymentsbatchupdateResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603commercePaymentsbatchupdateResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603commercePaymentsbatchupdateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603commercePaymentsbatchupdateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -8887,18 +10629,18 @@ type Postcrmobjects202603commercePaymentsbatchupsertResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicUpsertObject
+	JSON200 *BatchResponseSimplePublicUpsertObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+	JSON207 *BatchResponseSimplePublicUpsertObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603commercePaymentsbatchupsertResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicUpsertObject {
+func (r Postcrmobjects202603commercePaymentsbatchupsertResponse) GetJSON200() *BatchResponseSimplePublicUpsertObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603commercePaymentsbatchupsertResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors {
+func (r Postcrmobjects202603commercePaymentsbatchupsertResponse) GetJSON207() *BatchResponseSimplePublicUpsertObjectWithErrors {
 	return r.JSON207
 }
 
@@ -8935,11 +10677,11 @@ type Postcrmobjects202603commercePaymentssearchResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmCollectionResponseWithTotalSimplePublicObject
+	JSON200 *CollectionResponseWithTotalSimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603commercePaymentssearchResponse) GetJSON200() *CrmCollectionResponseWithTotalSimplePublicObject {
+func (r Postcrmobjects202603commercePaymentssearchResponse) GetJSON200() *CollectionResponseWithTotalSimplePublicObject {
 	return r.JSON200
 }
 
@@ -9010,11 +10752,11 @@ type Getcrmobjects202603commercePaymentsCommercePaymentIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsSimplePublicObjectWithAssociations
+	JSON200 *SimplePublicObjectWithAssociations
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603commercePaymentsCommercePaymentIdResponse) GetJSON200() *CrmObjectsSimplePublicObjectWithAssociations {
+func (r Getcrmobjects202603commercePaymentsCommercePaymentIdResponse) GetJSON200() *SimplePublicObjectWithAssociations {
 	return r.JSON200
 }
 
@@ -9051,11 +10793,11 @@ type Patchcrmobjects202603commercePaymentsCommercePaymentIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmSimplePublicObject
+	JSON200 *SimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Patchcrmobjects202603commercePaymentsCommercePaymentIdResponse) GetJSON200() *CrmSimplePublicObject {
+func (r Patchcrmobjects202603commercePaymentsCommercePaymentIdResponse) GetJSON200() *SimplePublicObject {
 	return r.JSON200
 }
 
@@ -9092,11 +10834,11 @@ type Getcrmobjects202603communicationsGetPageResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+	JSON200 *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603communicationsGetPageResponse) GetJSON200() *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
+func (r Getcrmobjects202603communicationsGetPageResponse) GetJSON200() *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
 	return r.JSON200
 }
 
@@ -9129,15 +10871,22 @@ func (r Getcrmobjects202603communicationsGetPageResponse) ContentType() string {
 	return ""
 }
 
+// Postcrmobjects202603communicationsCreateResponse201Headers the declared response headers of an HTTP 201 response for Postcrmobjects202603communicationsCreate
+type Postcrmobjects202603communicationsCreateResponse201Headers struct {
+	Location *string
+}
+
 type Postcrmobjects202603communicationsCreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmSimplePublicObject
+	JSON201 *SimplePublicObject
+	// Headers201 the parsed response headers for an HTTP 201 response
+	Headers201 *Postcrmobjects202603communicationsCreateResponse201Headers
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603communicationsCreateResponse) GetJSON201() *CrmSimplePublicObject {
+func (r Postcrmobjects202603communicationsCreateResponse) GetJSON201() *SimplePublicObject {
 	return r.JSON201
 }
 
@@ -9208,18 +10957,18 @@ type Postcrmobjects202603communicationsbatchcreateCreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmObjectsBatchResponseSimplePublicObject
+	JSON201 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603communicationsbatchcreateCreateResponse) GetJSON201() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603communicationsbatchcreateCreateResponse) GetJSON201() *BatchResponseSimplePublicObject {
 	return r.JSON201
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603communicationsbatchcreateCreateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603communicationsbatchcreateCreateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -9256,18 +11005,18 @@ type Postcrmobjects202603communicationsbatchreadReadResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603communicationsbatchreadReadResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603communicationsbatchreadReadResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603communicationsbatchreadReadResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603communicationsbatchreadReadResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -9304,18 +11053,18 @@ type Postcrmobjects202603communicationsbatchupdateUpdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603communicationsbatchupdateUpdateResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603communicationsbatchupdateUpdateResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603communicationsbatchupdateUpdateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603communicationsbatchupdateUpdateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -9352,18 +11101,18 @@ type Postcrmobjects202603communicationsbatchupsertUpsertResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicUpsertObject
+	JSON200 *BatchResponseSimplePublicUpsertObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+	JSON207 *BatchResponseSimplePublicUpsertObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603communicationsbatchupsertUpsertResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicUpsertObject {
+func (r Postcrmobjects202603communicationsbatchupsertUpsertResponse) GetJSON200() *BatchResponseSimplePublicUpsertObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603communicationsbatchupsertUpsertResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors {
+func (r Postcrmobjects202603communicationsbatchupsertUpsertResponse) GetJSON207() *BatchResponseSimplePublicUpsertObjectWithErrors {
 	return r.JSON207
 }
 
@@ -9400,11 +11149,11 @@ type Postcrmobjects202603communicationssearchDoSearchResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmCollectionResponseWithTotalSimplePublicObject
+	JSON200 *CollectionResponseWithTotalSimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603communicationssearchDoSearchResponse) GetJSON200() *CrmCollectionResponseWithTotalSimplePublicObject {
+func (r Postcrmobjects202603communicationssearchDoSearchResponse) GetJSON200() *CollectionResponseWithTotalSimplePublicObject {
 	return r.JSON200
 }
 
@@ -9475,11 +11224,11 @@ type Getcrmobjects202603communicationsCommunicationIdGetByIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsSimplePublicObjectWithAssociations
+	JSON200 *SimplePublicObjectWithAssociations
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603communicationsCommunicationIdGetByIdResponse) GetJSON200() *CrmObjectsSimplePublicObjectWithAssociations {
+func (r Getcrmobjects202603communicationsCommunicationIdGetByIdResponse) GetJSON200() *SimplePublicObjectWithAssociations {
 	return r.JSON200
 }
 
@@ -9516,11 +11265,11 @@ type Patchcrmobjects202603communicationsCommunicationIdUpdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmSimplePublicObject
+	JSON200 *SimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Patchcrmobjects202603communicationsCommunicationIdUpdateResponse) GetJSON200() *CrmSimplePublicObject {
+func (r Patchcrmobjects202603communicationsCommunicationIdUpdateResponse) GetJSON200() *SimplePublicObject {
 	return r.JSON200
 }
 
@@ -9557,11 +11306,11 @@ type Getcrmobjects202603companiesGetPageResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+	JSON200 *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603companiesGetPageResponse) GetJSON200() *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
+func (r Getcrmobjects202603companiesGetPageResponse) GetJSON200() *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
 	return r.JSON200
 }
 
@@ -9594,15 +11343,22 @@ func (r Getcrmobjects202603companiesGetPageResponse) ContentType() string {
 	return ""
 }
 
+// Postcrmobjects202603companiesCreateResponse201Headers the declared response headers of an HTTP 201 response for Postcrmobjects202603companiesCreate
+type Postcrmobjects202603companiesCreateResponse201Headers struct {
+	Location *string
+}
+
 type Postcrmobjects202603companiesCreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmSimplePublicObject
+	JSON201 *SimplePublicObject
+	// Headers201 the parsed response headers for an HTTP 201 response
+	Headers201 *Postcrmobjects202603companiesCreateResponse201Headers
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603companiesCreateResponse) GetJSON201() *CrmSimplePublicObject {
+func (r Postcrmobjects202603companiesCreateResponse) GetJSON201() *SimplePublicObject {
 	return r.JSON201
 }
 
@@ -9673,18 +11429,18 @@ type Postcrmobjects202603companiesbatchcreateCreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmObjectsBatchResponseSimplePublicObject
+	JSON201 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603companiesbatchcreateCreateResponse) GetJSON201() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603companiesbatchcreateCreateResponse) GetJSON201() *BatchResponseSimplePublicObject {
 	return r.JSON201
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603companiesbatchcreateCreateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603companiesbatchcreateCreateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -9721,18 +11477,18 @@ type Postcrmobjects202603companiesbatchreadReadResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603companiesbatchreadReadResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603companiesbatchreadReadResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603companiesbatchreadReadResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603companiesbatchreadReadResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -9769,18 +11525,18 @@ type Postcrmobjects202603companiesbatchupdateUpdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603companiesbatchupdateUpdateResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603companiesbatchupdateUpdateResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603companiesbatchupdateUpdateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603companiesbatchupdateUpdateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -9817,18 +11573,18 @@ type Postcrmobjects202603companiesbatchupsertUpsertResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicUpsertObject
+	JSON200 *BatchResponseSimplePublicUpsertObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+	JSON207 *BatchResponseSimplePublicUpsertObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603companiesbatchupsertUpsertResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicUpsertObject {
+func (r Postcrmobjects202603companiesbatchupsertUpsertResponse) GetJSON200() *BatchResponseSimplePublicUpsertObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603companiesbatchupsertUpsertResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors {
+func (r Postcrmobjects202603companiesbatchupsertUpsertResponse) GetJSON207() *BatchResponseSimplePublicUpsertObjectWithErrors {
 	return r.JSON207
 }
 
@@ -9865,11 +11621,11 @@ type Postcrmobjects202603companiesmergeMergeResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmSimplePublicObject
+	JSON200 *SimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603companiesmergeMergeResponse) GetJSON200() *CrmSimplePublicObject {
+func (r Postcrmobjects202603companiesmergeMergeResponse) GetJSON200() *SimplePublicObject {
 	return r.JSON200
 }
 
@@ -9906,11 +11662,11 @@ type Postcrmobjects202603companiessearchDoSearchResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmCollectionResponseWithTotalSimplePublicObject
+	JSON200 *CollectionResponseWithTotalSimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603companiessearchDoSearchResponse) GetJSON200() *CrmCollectionResponseWithTotalSimplePublicObject {
+func (r Postcrmobjects202603companiessearchDoSearchResponse) GetJSON200() *CollectionResponseWithTotalSimplePublicObject {
 	return r.JSON200
 }
 
@@ -9981,11 +11737,11 @@ type Getcrmobjects202603companiesCompanyIdGetByIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsSimplePublicObjectWithAssociations
+	JSON200 *SimplePublicObjectWithAssociations
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603companiesCompanyIdGetByIdResponse) GetJSON200() *CrmObjectsSimplePublicObjectWithAssociations {
+func (r Getcrmobjects202603companiesCompanyIdGetByIdResponse) GetJSON200() *SimplePublicObjectWithAssociations {
 	return r.JSON200
 }
 
@@ -10022,11 +11778,11 @@ type Patchcrmobjects202603companiesCompanyIdUpdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmSimplePublicObject
+	JSON200 *SimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Patchcrmobjects202603companiesCompanyIdUpdateResponse) GetJSON200() *CrmSimplePublicObject {
+func (r Patchcrmobjects202603companiesCompanyIdUpdateResponse) GetJSON200() *SimplePublicObject {
 	return r.JSON200
 }
 
@@ -10063,11 +11819,11 @@ type Getcrmobjects202603contactsGetPageResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+	JSON200 *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603contactsGetPageResponse) GetJSON200() *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
+func (r Getcrmobjects202603contactsGetPageResponse) GetJSON200() *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
 	return r.JSON200
 }
 
@@ -10100,15 +11856,22 @@ func (r Getcrmobjects202603contactsGetPageResponse) ContentType() string {
 	return ""
 }
 
+// Postcrmobjects202603contactsCreateResponse201Headers the declared response headers of an HTTP 201 response for Postcrmobjects202603contactsCreate
+type Postcrmobjects202603contactsCreateResponse201Headers struct {
+	Location *string
+}
+
 type Postcrmobjects202603contactsCreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmSimplePublicObject
+	JSON201 *SimplePublicObject
+	// Headers201 the parsed response headers for an HTTP 201 response
+	Headers201 *Postcrmobjects202603contactsCreateResponse201Headers
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603contactsCreateResponse) GetJSON201() *CrmSimplePublicObject {
+func (r Postcrmobjects202603contactsCreateResponse) GetJSON201() *SimplePublicObject {
 	return r.JSON201
 }
 
@@ -10179,18 +11942,18 @@ type Postcrmobjects202603contactsbatchcreateCreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmObjectsBatchResponseSimplePublicObject
+	JSON201 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603contactsbatchcreateCreateResponse) GetJSON201() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603contactsbatchcreateCreateResponse) GetJSON201() *BatchResponseSimplePublicObject {
 	return r.JSON201
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603contactsbatchcreateCreateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603contactsbatchcreateCreateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -10227,18 +11990,18 @@ type Postcrmobjects202603contactsbatchreadReadResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603contactsbatchreadReadResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603contactsbatchreadReadResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603contactsbatchreadReadResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603contactsbatchreadReadResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -10275,18 +12038,18 @@ type Postcrmobjects202603contactsbatchupdateUpdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603contactsbatchupdateUpdateResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603contactsbatchupdateUpdateResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603contactsbatchupdateUpdateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603contactsbatchupdateUpdateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -10323,18 +12086,18 @@ type Postcrmobjects202603contactsbatchupsertUpsertResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicUpsertObject
+	JSON200 *BatchResponseSimplePublicUpsertObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+	JSON207 *BatchResponseSimplePublicUpsertObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603contactsbatchupsertUpsertResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicUpsertObject {
+func (r Postcrmobjects202603contactsbatchupsertUpsertResponse) GetJSON200() *BatchResponseSimplePublicUpsertObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603contactsbatchupsertUpsertResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors {
+func (r Postcrmobjects202603contactsbatchupsertUpsertResponse) GetJSON207() *BatchResponseSimplePublicUpsertObjectWithErrors {
 	return r.JSON207
 }
 
@@ -10405,11 +12168,11 @@ type Postcrmobjects202603contactsmergeMergeResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmSimplePublicObject
+	JSON200 *SimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603contactsmergeMergeResponse) GetJSON200() *CrmSimplePublicObject {
+func (r Postcrmobjects202603contactsmergeMergeResponse) GetJSON200() *SimplePublicObject {
 	return r.JSON200
 }
 
@@ -10446,11 +12209,11 @@ type Postcrmobjects202603contactssearchDoSearchResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmCollectionResponseWithTotalSimplePublicObject
+	JSON200 *CollectionResponseWithTotalSimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603contactssearchDoSearchResponse) GetJSON200() *CrmCollectionResponseWithTotalSimplePublicObject {
+func (r Postcrmobjects202603contactssearchDoSearchResponse) GetJSON200() *CollectionResponseWithTotalSimplePublicObject {
 	return r.JSON200
 }
 
@@ -10521,11 +12284,11 @@ type Getcrmobjects202603contactsContactIdGetByIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsSimplePublicObjectWithAssociations
+	JSON200 *SimplePublicObjectWithAssociations
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603contactsContactIdGetByIdResponse) GetJSON200() *CrmObjectsSimplePublicObjectWithAssociations {
+func (r Getcrmobjects202603contactsContactIdGetByIdResponse) GetJSON200() *SimplePublicObjectWithAssociations {
 	return r.JSON200
 }
 
@@ -10562,11 +12325,11 @@ type Patchcrmobjects202603contactsContactIdUpdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmSimplePublicObject
+	JSON200 *SimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Patchcrmobjects202603contactsContactIdUpdateResponse) GetJSON200() *CrmSimplePublicObject {
+func (r Patchcrmobjects202603contactsContactIdUpdateResponse) GetJSON200() *SimplePublicObject {
 	return r.JSON200
 }
 
@@ -10603,11 +12366,11 @@ type Getcrmobjects202603contractsResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+	JSON200 *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603contractsResponse) GetJSON200() *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
+func (r Getcrmobjects202603contractsResponse) GetJSON200() *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
 	return r.JSON200
 }
 
@@ -10644,18 +12407,18 @@ type Postcrmobjects202603contractsbatchreadReadResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603contractsbatchreadReadResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603contractsbatchreadReadResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603contractsbatchreadReadResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603contractsbatchreadReadResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -10692,11 +12455,11 @@ type Getcrmobjects202603contractsContractIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsSimplePublicObjectWithAssociations
+	JSON200 *SimplePublicObjectWithAssociations
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603contractsContractIdResponse) GetJSON200() *CrmObjectsSimplePublicObjectWithAssociations {
+func (r Getcrmobjects202603contractsContractIdResponse) GetJSON200() *SimplePublicObjectWithAssociations {
 	return r.JSON200
 }
 
@@ -10729,15 +12492,56 @@ func (r Getcrmobjects202603contractsContractIdResponse) ContentType() string {
 	return ""
 }
 
+type Postcrmobjects202603coursesmergeResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *SimplePublicObject
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Postcrmobjects202603coursesmergeResponse) GetJSON200() *SimplePublicObject {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcrmobjects202603coursesmergeResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcrmobjects202603coursesmergeResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcrmobjects202603coursesmergeResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcrmobjects202603coursesmergeResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
 type Getcrmobjects202603discountsResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+	JSON200 *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603discountsResponse) GetJSON200() *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
+func (r Getcrmobjects202603discountsResponse) GetJSON200() *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
 	return r.JSON200
 }
 
@@ -10770,15 +12574,22 @@ func (r Getcrmobjects202603discountsResponse) ContentType() string {
 	return ""
 }
 
+// Postcrmobjects202603discountsResponse201Headers the declared response headers of an HTTP 201 response for Postcrmobjects202603discounts
+type Postcrmobjects202603discountsResponse201Headers struct {
+	Location *string
+}
+
 type Postcrmobjects202603discountsResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmSimplePublicObject
+	JSON201 *SimplePublicObject
+	// Headers201 the parsed response headers for an HTTP 201 response
+	Headers201 *Postcrmobjects202603discountsResponse201Headers
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603discountsResponse) GetJSON201() *CrmSimplePublicObject {
+func (r Postcrmobjects202603discountsResponse) GetJSON201() *SimplePublicObject {
 	return r.JSON201
 }
 
@@ -10849,18 +12660,18 @@ type Postcrmobjects202603discountsbatchcreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmObjectsBatchResponseSimplePublicObject
+	JSON201 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603discountsbatchcreateResponse) GetJSON201() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603discountsbatchcreateResponse) GetJSON201() *BatchResponseSimplePublicObject {
 	return r.JSON201
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603discountsbatchcreateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603discountsbatchcreateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -10897,18 +12708,18 @@ type Postcrmobjects202603discountsbatchreadResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603discountsbatchreadResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603discountsbatchreadResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603discountsbatchreadResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603discountsbatchreadResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -10945,18 +12756,18 @@ type Postcrmobjects202603discountsbatchupdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603discountsbatchupdateResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603discountsbatchupdateResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603discountsbatchupdateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603discountsbatchupdateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -10993,18 +12804,18 @@ type Postcrmobjects202603discountsbatchupsertResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicUpsertObject
+	JSON200 *BatchResponseSimplePublicUpsertObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+	JSON207 *BatchResponseSimplePublicUpsertObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603discountsbatchupsertResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicUpsertObject {
+func (r Postcrmobjects202603discountsbatchupsertResponse) GetJSON200() *BatchResponseSimplePublicUpsertObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603discountsbatchupsertResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors {
+func (r Postcrmobjects202603discountsbatchupsertResponse) GetJSON207() *BatchResponseSimplePublicUpsertObjectWithErrors {
 	return r.JSON207
 }
 
@@ -11041,11 +12852,11 @@ type Postcrmobjects202603discountssearchResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmCollectionResponseWithTotalSimplePublicObject
+	JSON200 *CollectionResponseWithTotalSimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603discountssearchResponse) GetJSON200() *CrmCollectionResponseWithTotalSimplePublicObject {
+func (r Postcrmobjects202603discountssearchResponse) GetJSON200() *CollectionResponseWithTotalSimplePublicObject {
 	return r.JSON200
 }
 
@@ -11116,11 +12927,11 @@ type Getcrmobjects202603discountsDiscountIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsSimplePublicObjectWithAssociations
+	JSON200 *SimplePublicObjectWithAssociations
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603discountsDiscountIdResponse) GetJSON200() *CrmObjectsSimplePublicObjectWithAssociations {
+func (r Getcrmobjects202603discountsDiscountIdResponse) GetJSON200() *SimplePublicObjectWithAssociations {
 	return r.JSON200
 }
 
@@ -11157,11 +12968,11 @@ type Patchcrmobjects202603discountsDiscountIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmSimplePublicObject
+	JSON200 *SimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Patchcrmobjects202603discountsDiscountIdResponse) GetJSON200() *CrmSimplePublicObject {
+func (r Patchcrmobjects202603discountsDiscountIdResponse) GetJSON200() *SimplePublicObject {
 	return r.JSON200
 }
 
@@ -11198,11 +13009,11 @@ type Getcrmobjects202603emailsGetPageResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+	JSON200 *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603emailsGetPageResponse) GetJSON200() *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
+func (r Getcrmobjects202603emailsGetPageResponse) GetJSON200() *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
 	return r.JSON200
 }
 
@@ -11235,15 +13046,22 @@ func (r Getcrmobjects202603emailsGetPageResponse) ContentType() string {
 	return ""
 }
 
+// Postcrmobjects202603emailsCreateResponse201Headers the declared response headers of an HTTP 201 response for Postcrmobjects202603emailsCreate
+type Postcrmobjects202603emailsCreateResponse201Headers struct {
+	Location *string
+}
+
 type Postcrmobjects202603emailsCreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmSimplePublicObject
+	JSON201 *SimplePublicObject
+	// Headers201 the parsed response headers for an HTTP 201 response
+	Headers201 *Postcrmobjects202603emailsCreateResponse201Headers
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603emailsCreateResponse) GetJSON201() *CrmSimplePublicObject {
+func (r Postcrmobjects202603emailsCreateResponse) GetJSON201() *SimplePublicObject {
 	return r.JSON201
 }
 
@@ -11314,18 +13132,18 @@ type Postcrmobjects202603emailsbatchcreateCreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmObjectsBatchResponseSimplePublicObject
+	JSON201 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603emailsbatchcreateCreateResponse) GetJSON201() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603emailsbatchcreateCreateResponse) GetJSON201() *BatchResponseSimplePublicObject {
 	return r.JSON201
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603emailsbatchcreateCreateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603emailsbatchcreateCreateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -11362,18 +13180,18 @@ type Postcrmobjects202603emailsbatchreadReadResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603emailsbatchreadReadResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603emailsbatchreadReadResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603emailsbatchreadReadResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603emailsbatchreadReadResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -11410,18 +13228,18 @@ type Postcrmobjects202603emailsbatchupdateUpdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603emailsbatchupdateUpdateResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603emailsbatchupdateUpdateResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603emailsbatchupdateUpdateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603emailsbatchupdateUpdateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -11458,18 +13276,18 @@ type Postcrmobjects202603emailsbatchupsertUpsertResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicUpsertObject
+	JSON200 *BatchResponseSimplePublicUpsertObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+	JSON207 *BatchResponseSimplePublicUpsertObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603emailsbatchupsertUpsertResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicUpsertObject {
+func (r Postcrmobjects202603emailsbatchupsertUpsertResponse) GetJSON200() *BatchResponseSimplePublicUpsertObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603emailsbatchupsertUpsertResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors {
+func (r Postcrmobjects202603emailsbatchupsertUpsertResponse) GetJSON207() *BatchResponseSimplePublicUpsertObjectWithErrors {
 	return r.JSON207
 }
 
@@ -11506,11 +13324,11 @@ type Postcrmobjects202603emailssearchDoSearchResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmCollectionResponseWithTotalSimplePublicObject
+	JSON200 *CollectionResponseWithTotalSimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603emailssearchDoSearchResponse) GetJSON200() *CrmCollectionResponseWithTotalSimplePublicObject {
+func (r Postcrmobjects202603emailssearchDoSearchResponse) GetJSON200() *CollectionResponseWithTotalSimplePublicObject {
 	return r.JSON200
 }
 
@@ -11581,11 +13399,11 @@ type Getcrmobjects202603emailsEmailIdGetByIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsSimplePublicObjectWithAssociations
+	JSON200 *SimplePublicObjectWithAssociations
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603emailsEmailIdGetByIdResponse) GetJSON200() *CrmObjectsSimplePublicObjectWithAssociations {
+func (r Getcrmobjects202603emailsEmailIdGetByIdResponse) GetJSON200() *SimplePublicObjectWithAssociations {
 	return r.JSON200
 }
 
@@ -11622,11 +13440,11 @@ type Patchcrmobjects202603emailsEmailIdUpdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmSimplePublicObject
+	JSON200 *SimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Patchcrmobjects202603emailsEmailIdUpdateResponse) GetJSON200() *CrmSimplePublicObject {
+func (r Patchcrmobjects202603emailsEmailIdUpdateResponse) GetJSON200() *SimplePublicObject {
 	return r.JSON200
 }
 
@@ -11663,11 +13481,11 @@ type Getcrmobjects202603feedbackSubmissionsGetPageResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+	JSON200 *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603feedbackSubmissionsGetPageResponse) GetJSON200() *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
+func (r Getcrmobjects202603feedbackSubmissionsGetPageResponse) GetJSON200() *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
 	return r.JSON200
 }
 
@@ -11704,18 +13522,18 @@ type Postcrmobjects202603feedbackSubmissionsbatchreadReadResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603feedbackSubmissionsbatchreadReadResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603feedbackSubmissionsbatchreadReadResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603feedbackSubmissionsbatchreadReadResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603feedbackSubmissionsbatchreadReadResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -11752,11 +13570,11 @@ type Postcrmobjects202603feedbackSubmissionssearchDoSearchResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmCollectionResponseWithTotalSimplePublicObject
+	JSON200 *CollectionResponseWithTotalSimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603feedbackSubmissionssearchDoSearchResponse) GetJSON200() *CrmCollectionResponseWithTotalSimplePublicObject {
+func (r Postcrmobjects202603feedbackSubmissionssearchDoSearchResponse) GetJSON200() *CollectionResponseWithTotalSimplePublicObject {
 	return r.JSON200
 }
 
@@ -11793,11 +13611,11 @@ type Getcrmobjects202603feedbackSubmissionsFeedbackSubmissionIdGetByIdResponse s
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsSimplePublicObjectWithAssociations
+	JSON200 *SimplePublicObjectWithAssociations
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603feedbackSubmissionsFeedbackSubmissionIdGetByIdResponse) GetJSON200() *CrmObjectsSimplePublicObjectWithAssociations {
+func (r Getcrmobjects202603feedbackSubmissionsFeedbackSubmissionIdGetByIdResponse) GetJSON200() *SimplePublicObjectWithAssociations {
 	return r.JSON200
 }
 
@@ -11834,11 +13652,11 @@ type Getcrmobjects202603feesResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+	JSON200 *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603feesResponse) GetJSON200() *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
+func (r Getcrmobjects202603feesResponse) GetJSON200() *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
 	return r.JSON200
 }
 
@@ -11871,15 +13689,22 @@ func (r Getcrmobjects202603feesResponse) ContentType() string {
 	return ""
 }
 
+// Postcrmobjects202603feesResponse201Headers the declared response headers of an HTTP 201 response for Postcrmobjects202603fees
+type Postcrmobjects202603feesResponse201Headers struct {
+	Location *string
+}
+
 type Postcrmobjects202603feesResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmSimplePublicObject
+	JSON201 *SimplePublicObject
+	// Headers201 the parsed response headers for an HTTP 201 response
+	Headers201 *Postcrmobjects202603feesResponse201Headers
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603feesResponse) GetJSON201() *CrmSimplePublicObject {
+func (r Postcrmobjects202603feesResponse) GetJSON201() *SimplePublicObject {
 	return r.JSON201
 }
 
@@ -11950,18 +13775,18 @@ type Postcrmobjects202603feesbatchcreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmObjectsBatchResponseSimplePublicObject
+	JSON201 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603feesbatchcreateResponse) GetJSON201() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603feesbatchcreateResponse) GetJSON201() *BatchResponseSimplePublicObject {
 	return r.JSON201
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603feesbatchcreateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603feesbatchcreateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -11998,18 +13823,18 @@ type Postcrmobjects202603feesbatchreadResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603feesbatchreadResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603feesbatchreadResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603feesbatchreadResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603feesbatchreadResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -12046,18 +13871,18 @@ type Postcrmobjects202603feesbatchupdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603feesbatchupdateResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603feesbatchupdateResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603feesbatchupdateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603feesbatchupdateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -12094,18 +13919,18 @@ type Postcrmobjects202603feesbatchupsertResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicUpsertObject
+	JSON200 *BatchResponseSimplePublicUpsertObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+	JSON207 *BatchResponseSimplePublicUpsertObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603feesbatchupsertResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicUpsertObject {
+func (r Postcrmobjects202603feesbatchupsertResponse) GetJSON200() *BatchResponseSimplePublicUpsertObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603feesbatchupsertResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors {
+func (r Postcrmobjects202603feesbatchupsertResponse) GetJSON207() *BatchResponseSimplePublicUpsertObjectWithErrors {
 	return r.JSON207
 }
 
@@ -12142,11 +13967,11 @@ type Postcrmobjects202603feessearchResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmCollectionResponseWithTotalSimplePublicObject
+	JSON200 *CollectionResponseWithTotalSimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603feessearchResponse) GetJSON200() *CrmCollectionResponseWithTotalSimplePublicObject {
+func (r Postcrmobjects202603feessearchResponse) GetJSON200() *CollectionResponseWithTotalSimplePublicObject {
 	return r.JSON200
 }
 
@@ -12217,11 +14042,11 @@ type Getcrmobjects202603feesFeeIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsSimplePublicObjectWithAssociations
+	JSON200 *SimplePublicObjectWithAssociations
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603feesFeeIdResponse) GetJSON200() *CrmObjectsSimplePublicObjectWithAssociations {
+func (r Getcrmobjects202603feesFeeIdResponse) GetJSON200() *SimplePublicObjectWithAssociations {
 	return r.JSON200
 }
 
@@ -12258,11 +14083,11 @@ type Patchcrmobjects202603feesFeeIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmSimplePublicObject
+	JSON200 *SimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Patchcrmobjects202603feesFeeIdResponse) GetJSON200() *CrmSimplePublicObject {
+func (r Patchcrmobjects202603feesFeeIdResponse) GetJSON200() *SimplePublicObject {
 	return r.JSON200
 }
 
@@ -12299,11 +14124,11 @@ type Getcrmobjects202603goalTargetsGetPageResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+	JSON200 *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603goalTargetsGetPageResponse) GetJSON200() *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
+func (r Getcrmobjects202603goalTargetsGetPageResponse) GetJSON200() *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
 	return r.JSON200
 }
 
@@ -12336,15 +14161,22 @@ func (r Getcrmobjects202603goalTargetsGetPageResponse) ContentType() string {
 	return ""
 }
 
+// Postcrmobjects202603goalTargetsCreateResponse201Headers the declared response headers of an HTTP 201 response for Postcrmobjects202603goalTargetsCreate
+type Postcrmobjects202603goalTargetsCreateResponse201Headers struct {
+	Location *string
+}
+
 type Postcrmobjects202603goalTargetsCreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmSimplePublicObject
+	JSON201 *SimplePublicObject
+	// Headers201 the parsed response headers for an HTTP 201 response
+	Headers201 *Postcrmobjects202603goalTargetsCreateResponse201Headers
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603goalTargetsCreateResponse) GetJSON201() *CrmSimplePublicObject {
+func (r Postcrmobjects202603goalTargetsCreateResponse) GetJSON201() *SimplePublicObject {
 	return r.JSON201
 }
 
@@ -12415,18 +14247,18 @@ type Postcrmobjects202603goalTargetsbatchcreateCreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmObjectsBatchResponseSimplePublicObject
+	JSON201 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603goalTargetsbatchcreateCreateResponse) GetJSON201() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603goalTargetsbatchcreateCreateResponse) GetJSON201() *BatchResponseSimplePublicObject {
 	return r.JSON201
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603goalTargetsbatchcreateCreateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603goalTargetsbatchcreateCreateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -12463,18 +14295,18 @@ type Postcrmobjects202603goalTargetsbatchreadReadResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603goalTargetsbatchreadReadResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603goalTargetsbatchreadReadResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603goalTargetsbatchreadReadResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603goalTargetsbatchreadReadResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -12511,18 +14343,18 @@ type Postcrmobjects202603goalTargetsbatchupdateUpdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603goalTargetsbatchupdateUpdateResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603goalTargetsbatchupdateUpdateResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603goalTargetsbatchupdateUpdateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603goalTargetsbatchupdateUpdateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -12559,18 +14391,18 @@ type Postcrmobjects202603goalTargetsbatchupsertUpsertResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicUpsertObject
+	JSON200 *BatchResponseSimplePublicUpsertObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+	JSON207 *BatchResponseSimplePublicUpsertObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603goalTargetsbatchupsertUpsertResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicUpsertObject {
+func (r Postcrmobjects202603goalTargetsbatchupsertUpsertResponse) GetJSON200() *BatchResponseSimplePublicUpsertObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603goalTargetsbatchupsertUpsertResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors {
+func (r Postcrmobjects202603goalTargetsbatchupsertUpsertResponse) GetJSON207() *BatchResponseSimplePublicUpsertObjectWithErrors {
 	return r.JSON207
 }
 
@@ -12607,11 +14439,11 @@ type Postcrmobjects202603goalTargetssearchDoSearchResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmCollectionResponseWithTotalSimplePublicObject
+	JSON200 *CollectionResponseWithTotalSimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603goalTargetssearchDoSearchResponse) GetJSON200() *CrmCollectionResponseWithTotalSimplePublicObject {
+func (r Postcrmobjects202603goalTargetssearchDoSearchResponse) GetJSON200() *CollectionResponseWithTotalSimplePublicObject {
 	return r.JSON200
 }
 
@@ -12682,11 +14514,11 @@ type Getcrmobjects202603goalTargetsGoalTargetIdGetByIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsSimplePublicObjectWithAssociations
+	JSON200 *SimplePublicObjectWithAssociations
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603goalTargetsGoalTargetIdGetByIdResponse) GetJSON200() *CrmObjectsSimplePublicObjectWithAssociations {
+func (r Getcrmobjects202603goalTargetsGoalTargetIdGetByIdResponse) GetJSON200() *SimplePublicObjectWithAssociations {
 	return r.JSON200
 }
 
@@ -12723,11 +14555,11 @@ type Patchcrmobjects202603goalTargetsGoalTargetIdUpdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmSimplePublicObject
+	JSON200 *SimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Patchcrmobjects202603goalTargetsGoalTargetIdUpdateResponse) GetJSON200() *CrmSimplePublicObject {
+func (r Patchcrmobjects202603goalTargetsGoalTargetIdUpdateResponse) GetJSON200() *SimplePublicObject {
 	return r.JSON200
 }
 
@@ -12764,11 +14596,11 @@ type Getcrmobjects202603invoicesGetPageResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+	JSON200 *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603invoicesGetPageResponse) GetJSON200() *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
+func (r Getcrmobjects202603invoicesGetPageResponse) GetJSON200() *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
 	return r.JSON200
 }
 
@@ -12801,15 +14633,22 @@ func (r Getcrmobjects202603invoicesGetPageResponse) ContentType() string {
 	return ""
 }
 
+// Postcrmobjects202603invoicesCreateResponse201Headers the declared response headers of an HTTP 201 response for Postcrmobjects202603invoicesCreate
+type Postcrmobjects202603invoicesCreateResponse201Headers struct {
+	Location *string
+}
+
 type Postcrmobjects202603invoicesCreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmSimplePublicObject
+	JSON201 *SimplePublicObject
+	// Headers201 the parsed response headers for an HTTP 201 response
+	Headers201 *Postcrmobjects202603invoicesCreateResponse201Headers
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603invoicesCreateResponse) GetJSON201() *CrmSimplePublicObject {
+func (r Postcrmobjects202603invoicesCreateResponse) GetJSON201() *SimplePublicObject {
 	return r.JSON201
 }
 
@@ -12880,18 +14719,18 @@ type Postcrmobjects202603invoicesbatchcreateCreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmObjectsBatchResponseSimplePublicObject
+	JSON201 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603invoicesbatchcreateCreateResponse) GetJSON201() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603invoicesbatchcreateCreateResponse) GetJSON201() *BatchResponseSimplePublicObject {
 	return r.JSON201
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603invoicesbatchcreateCreateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603invoicesbatchcreateCreateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -12928,18 +14767,18 @@ type Postcrmobjects202603invoicesbatchreadReadResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603invoicesbatchreadReadResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603invoicesbatchreadReadResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603invoicesbatchreadReadResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603invoicesbatchreadReadResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -12976,18 +14815,18 @@ type Postcrmobjects202603invoicesbatchupdateUpdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603invoicesbatchupdateUpdateResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603invoicesbatchupdateUpdateResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603invoicesbatchupdateUpdateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603invoicesbatchupdateUpdateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -13024,18 +14863,18 @@ type Postcrmobjects202603invoicesbatchupsertUpsertResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicUpsertObject
+	JSON200 *BatchResponseSimplePublicUpsertObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+	JSON207 *BatchResponseSimplePublicUpsertObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603invoicesbatchupsertUpsertResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicUpsertObject {
+func (r Postcrmobjects202603invoicesbatchupsertUpsertResponse) GetJSON200() *BatchResponseSimplePublicUpsertObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603invoicesbatchupsertUpsertResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors {
+func (r Postcrmobjects202603invoicesbatchupsertUpsertResponse) GetJSON207() *BatchResponseSimplePublicUpsertObjectWithErrors {
 	return r.JSON207
 }
 
@@ -13072,11 +14911,11 @@ type Postcrmobjects202603invoicessearchDoSearchResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmCollectionResponseWithTotalSimplePublicObject
+	JSON200 *CollectionResponseWithTotalSimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603invoicessearchDoSearchResponse) GetJSON200() *CrmCollectionResponseWithTotalSimplePublicObject {
+func (r Postcrmobjects202603invoicessearchDoSearchResponse) GetJSON200() *CollectionResponseWithTotalSimplePublicObject {
 	return r.JSON200
 }
 
@@ -13147,11 +14986,11 @@ type Getcrmobjects202603invoicesInvoiceIdGetByIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsSimplePublicObjectWithAssociations
+	JSON200 *SimplePublicObjectWithAssociations
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603invoicesInvoiceIdGetByIdResponse) GetJSON200() *CrmObjectsSimplePublicObjectWithAssociations {
+func (r Getcrmobjects202603invoicesInvoiceIdGetByIdResponse) GetJSON200() *SimplePublicObjectWithAssociations {
 	return r.JSON200
 }
 
@@ -13188,11 +15027,11 @@ type Patchcrmobjects202603invoicesInvoiceIdUpdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmSimplePublicObject
+	JSON200 *SimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Patchcrmobjects202603invoicesInvoiceIdUpdateResponse) GetJSON200() *CrmSimplePublicObject {
+func (r Patchcrmobjects202603invoicesInvoiceIdUpdateResponse) GetJSON200() *SimplePublicObject {
 	return r.JSON200
 }
 
@@ -13229,11 +15068,11 @@ type Getcrmobjects202603leadsGetPageResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+	JSON200 *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603leadsGetPageResponse) GetJSON200() *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
+func (r Getcrmobjects202603leadsGetPageResponse) GetJSON200() *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
 	return r.JSON200
 }
 
@@ -13266,15 +15105,22 @@ func (r Getcrmobjects202603leadsGetPageResponse) ContentType() string {
 	return ""
 }
 
+// Postcrmobjects202603leadsCreateResponse201Headers the declared response headers of an HTTP 201 response for Postcrmobjects202603leadsCreate
+type Postcrmobjects202603leadsCreateResponse201Headers struct {
+	Location *string
+}
+
 type Postcrmobjects202603leadsCreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmSimplePublicObject
+	JSON201 *SimplePublicObject
+	// Headers201 the parsed response headers for an HTTP 201 response
+	Headers201 *Postcrmobjects202603leadsCreateResponse201Headers
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603leadsCreateResponse) GetJSON201() *CrmSimplePublicObject {
+func (r Postcrmobjects202603leadsCreateResponse) GetJSON201() *SimplePublicObject {
 	return r.JSON201
 }
 
@@ -13345,18 +15191,18 @@ type Postcrmobjects202603leadsbatchcreateCreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmObjectsBatchResponseSimplePublicObject
+	JSON201 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603leadsbatchcreateCreateResponse) GetJSON201() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603leadsbatchcreateCreateResponse) GetJSON201() *BatchResponseSimplePublicObject {
 	return r.JSON201
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603leadsbatchcreateCreateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603leadsbatchcreateCreateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -13393,18 +15239,18 @@ type Postcrmobjects202603leadsbatchreadReadResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603leadsbatchreadReadResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603leadsbatchreadReadResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603leadsbatchreadReadResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603leadsbatchreadReadResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -13441,18 +15287,18 @@ type Postcrmobjects202603leadsbatchupdateUpdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603leadsbatchupdateUpdateResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603leadsbatchupdateUpdateResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603leadsbatchupdateUpdateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603leadsbatchupdateUpdateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -13489,18 +15335,18 @@ type Postcrmobjects202603leadsbatchupsertUpsertResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicUpsertObject
+	JSON200 *BatchResponseSimplePublicUpsertObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+	JSON207 *BatchResponseSimplePublicUpsertObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603leadsbatchupsertUpsertResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicUpsertObject {
+func (r Postcrmobjects202603leadsbatchupsertUpsertResponse) GetJSON200() *BatchResponseSimplePublicUpsertObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603leadsbatchupsertUpsertResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors {
+func (r Postcrmobjects202603leadsbatchupsertUpsertResponse) GetJSON207() *BatchResponseSimplePublicUpsertObjectWithErrors {
 	return r.JSON207
 }
 
@@ -13537,11 +15383,11 @@ type Postcrmobjects202603leadssearchDoSearchResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmCollectionResponseWithTotalSimplePublicObject
+	JSON200 *CollectionResponseWithTotalSimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603leadssearchDoSearchResponse) GetJSON200() *CrmCollectionResponseWithTotalSimplePublicObject {
+func (r Postcrmobjects202603leadssearchDoSearchResponse) GetJSON200() *CollectionResponseWithTotalSimplePublicObject {
 	return r.JSON200
 }
 
@@ -13612,11 +15458,11 @@ type Getcrmobjects202603leadsLeadsIdGetByIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsSimplePublicObjectWithAssociations
+	JSON200 *SimplePublicObjectWithAssociations
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603leadsLeadsIdGetByIdResponse) GetJSON200() *CrmObjectsSimplePublicObjectWithAssociations {
+func (r Getcrmobjects202603leadsLeadsIdGetByIdResponse) GetJSON200() *SimplePublicObjectWithAssociations {
 	return r.JSON200
 }
 
@@ -13653,11 +15499,11 @@ type Patchcrmobjects202603leadsLeadsIdUpdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmSimplePublicObject
+	JSON200 *SimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Patchcrmobjects202603leadsLeadsIdUpdateResponse) GetJSON200() *CrmSimplePublicObject {
+func (r Patchcrmobjects202603leadsLeadsIdUpdateResponse) GetJSON200() *SimplePublicObject {
 	return r.JSON200
 }
 
@@ -13694,11 +15540,11 @@ type Getcrmobjects202603lineItemsGetPageResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+	JSON200 *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603lineItemsGetPageResponse) GetJSON200() *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
+func (r Getcrmobjects202603lineItemsGetPageResponse) GetJSON200() *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
 	return r.JSON200
 }
 
@@ -13731,15 +15577,22 @@ func (r Getcrmobjects202603lineItemsGetPageResponse) ContentType() string {
 	return ""
 }
 
+// Postcrmobjects202603lineItemsCreateResponse201Headers the declared response headers of an HTTP 201 response for Postcrmobjects202603lineItemsCreate
+type Postcrmobjects202603lineItemsCreateResponse201Headers struct {
+	Location *string
+}
+
 type Postcrmobjects202603lineItemsCreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmSimplePublicObject
+	JSON201 *SimplePublicObject
+	// Headers201 the parsed response headers for an HTTP 201 response
+	Headers201 *Postcrmobjects202603lineItemsCreateResponse201Headers
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603lineItemsCreateResponse) GetJSON201() *CrmSimplePublicObject {
+func (r Postcrmobjects202603lineItemsCreateResponse) GetJSON201() *SimplePublicObject {
 	return r.JSON201
 }
 
@@ -13810,18 +15663,18 @@ type Postcrmobjects202603lineItemsbatchcreateCreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmObjectsBatchResponseSimplePublicObject
+	JSON201 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603lineItemsbatchcreateCreateResponse) GetJSON201() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603lineItemsbatchcreateCreateResponse) GetJSON201() *BatchResponseSimplePublicObject {
 	return r.JSON201
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603lineItemsbatchcreateCreateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603lineItemsbatchcreateCreateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -13858,18 +15711,18 @@ type Postcrmobjects202603lineItemsbatchreadReadResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603lineItemsbatchreadReadResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603lineItemsbatchreadReadResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603lineItemsbatchreadReadResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603lineItemsbatchreadReadResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -13906,18 +15759,18 @@ type Postcrmobjects202603lineItemsbatchupdateUpdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603lineItemsbatchupdateUpdateResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603lineItemsbatchupdateUpdateResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603lineItemsbatchupdateUpdateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603lineItemsbatchupdateUpdateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -13954,18 +15807,18 @@ type Postcrmobjects202603lineItemsbatchupsertUpsertResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicUpsertObject
+	JSON200 *BatchResponseSimplePublicUpsertObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+	JSON207 *BatchResponseSimplePublicUpsertObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603lineItemsbatchupsertUpsertResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicUpsertObject {
+func (r Postcrmobjects202603lineItemsbatchupsertUpsertResponse) GetJSON200() *BatchResponseSimplePublicUpsertObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603lineItemsbatchupsertUpsertResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors {
+func (r Postcrmobjects202603lineItemsbatchupsertUpsertResponse) GetJSON207() *BatchResponseSimplePublicUpsertObjectWithErrors {
 	return r.JSON207
 }
 
@@ -14002,11 +15855,11 @@ type Postcrmobjects202603lineItemssearchDoSearchResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmCollectionResponseWithTotalSimplePublicObject
+	JSON200 *CollectionResponseWithTotalSimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603lineItemssearchDoSearchResponse) GetJSON200() *CrmCollectionResponseWithTotalSimplePublicObject {
+func (r Postcrmobjects202603lineItemssearchDoSearchResponse) GetJSON200() *CollectionResponseWithTotalSimplePublicObject {
 	return r.JSON200
 }
 
@@ -14077,11 +15930,11 @@ type Getcrmobjects202603lineItemsLineItemIdGetByIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsSimplePublicObjectWithAssociations
+	JSON200 *SimplePublicObjectWithAssociations
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603lineItemsLineItemIdGetByIdResponse) GetJSON200() *CrmObjectsSimplePublicObjectWithAssociations {
+func (r Getcrmobjects202603lineItemsLineItemIdGetByIdResponse) GetJSON200() *SimplePublicObjectWithAssociations {
 	return r.JSON200
 }
 
@@ -14118,11 +15971,11 @@ type Patchcrmobjects202603lineItemsLineItemIdUpdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmSimplePublicObject
+	JSON200 *SimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Patchcrmobjects202603lineItemsLineItemIdUpdateResponse) GetJSON200() *CrmSimplePublicObject {
+func (r Patchcrmobjects202603lineItemsLineItemIdUpdateResponse) GetJSON200() *SimplePublicObject {
 	return r.JSON200
 }
 
@@ -14159,11 +16012,11 @@ type Getcrmobjects202603meetingsGetPageResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+	JSON200 *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603meetingsGetPageResponse) GetJSON200() *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
+func (r Getcrmobjects202603meetingsGetPageResponse) GetJSON200() *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
 	return r.JSON200
 }
 
@@ -14196,15 +16049,22 @@ func (r Getcrmobjects202603meetingsGetPageResponse) ContentType() string {
 	return ""
 }
 
+// Postcrmobjects202603meetingsCreateResponse201Headers the declared response headers of an HTTP 201 response for Postcrmobjects202603meetingsCreate
+type Postcrmobjects202603meetingsCreateResponse201Headers struct {
+	Location *string
+}
+
 type Postcrmobjects202603meetingsCreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmSimplePublicObject
+	JSON201 *SimplePublicObject
+	// Headers201 the parsed response headers for an HTTP 201 response
+	Headers201 *Postcrmobjects202603meetingsCreateResponse201Headers
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603meetingsCreateResponse) GetJSON201() *CrmSimplePublicObject {
+func (r Postcrmobjects202603meetingsCreateResponse) GetJSON201() *SimplePublicObject {
 	return r.JSON201
 }
 
@@ -14275,18 +16135,18 @@ type Postcrmobjects202603meetingsbatchcreateCreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmObjectsBatchResponseSimplePublicObject
+	JSON201 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603meetingsbatchcreateCreateResponse) GetJSON201() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603meetingsbatchcreateCreateResponse) GetJSON201() *BatchResponseSimplePublicObject {
 	return r.JSON201
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603meetingsbatchcreateCreateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603meetingsbatchcreateCreateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -14323,18 +16183,18 @@ type Postcrmobjects202603meetingsbatchreadReadResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603meetingsbatchreadReadResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603meetingsbatchreadReadResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603meetingsbatchreadReadResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603meetingsbatchreadReadResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -14371,18 +16231,18 @@ type Postcrmobjects202603meetingsbatchupdateUpdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603meetingsbatchupdateUpdateResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603meetingsbatchupdateUpdateResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603meetingsbatchupdateUpdateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603meetingsbatchupdateUpdateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -14419,18 +16279,18 @@ type Postcrmobjects202603meetingsbatchupsertUpsertResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicUpsertObject
+	JSON200 *BatchResponseSimplePublicUpsertObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+	JSON207 *BatchResponseSimplePublicUpsertObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603meetingsbatchupsertUpsertResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicUpsertObject {
+func (r Postcrmobjects202603meetingsbatchupsertUpsertResponse) GetJSON200() *BatchResponseSimplePublicUpsertObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603meetingsbatchupsertUpsertResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors {
+func (r Postcrmobjects202603meetingsbatchupsertUpsertResponse) GetJSON207() *BatchResponseSimplePublicUpsertObjectWithErrors {
 	return r.JSON207
 }
 
@@ -14467,11 +16327,11 @@ type Postcrmobjects202603meetingssearchDoSearchResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmCollectionResponseWithTotalSimplePublicObject
+	JSON200 *CollectionResponseWithTotalSimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603meetingssearchDoSearchResponse) GetJSON200() *CrmCollectionResponseWithTotalSimplePublicObject {
+func (r Postcrmobjects202603meetingssearchDoSearchResponse) GetJSON200() *CollectionResponseWithTotalSimplePublicObject {
 	return r.JSON200
 }
 
@@ -14542,11 +16402,11 @@ type Getcrmobjects202603meetingsMeetingIdGetByIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsSimplePublicObjectWithAssociations
+	JSON200 *SimplePublicObjectWithAssociations
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603meetingsMeetingIdGetByIdResponse) GetJSON200() *CrmObjectsSimplePublicObjectWithAssociations {
+func (r Getcrmobjects202603meetingsMeetingIdGetByIdResponse) GetJSON200() *SimplePublicObjectWithAssociations {
 	return r.JSON200
 }
 
@@ -14583,11 +16443,11 @@ type Patchcrmobjects202603meetingsMeetingIdUpdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmSimplePublicObject
+	JSON200 *SimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Patchcrmobjects202603meetingsMeetingIdUpdateResponse) GetJSON200() *CrmSimplePublicObject {
+func (r Patchcrmobjects202603meetingsMeetingIdUpdateResponse) GetJSON200() *SimplePublicObject {
 	return r.JSON200
 }
 
@@ -14624,11 +16484,11 @@ type Getcrmobjects202603notesGetPageResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+	JSON200 *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603notesGetPageResponse) GetJSON200() *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
+func (r Getcrmobjects202603notesGetPageResponse) GetJSON200() *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
 	return r.JSON200
 }
 
@@ -14661,15 +16521,22 @@ func (r Getcrmobjects202603notesGetPageResponse) ContentType() string {
 	return ""
 }
 
+// Postcrmobjects202603notesCreateResponse201Headers the declared response headers of an HTTP 201 response for Postcrmobjects202603notesCreate
+type Postcrmobjects202603notesCreateResponse201Headers struct {
+	Location *string
+}
+
 type Postcrmobjects202603notesCreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmSimplePublicObject
+	JSON201 *SimplePublicObject
+	// Headers201 the parsed response headers for an HTTP 201 response
+	Headers201 *Postcrmobjects202603notesCreateResponse201Headers
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603notesCreateResponse) GetJSON201() *CrmSimplePublicObject {
+func (r Postcrmobjects202603notesCreateResponse) GetJSON201() *SimplePublicObject {
 	return r.JSON201
 }
 
@@ -14740,18 +16607,18 @@ type Postcrmobjects202603notesbatchcreateCreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmObjectsBatchResponseSimplePublicObject
+	JSON201 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603notesbatchcreateCreateResponse) GetJSON201() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603notesbatchcreateCreateResponse) GetJSON201() *BatchResponseSimplePublicObject {
 	return r.JSON201
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603notesbatchcreateCreateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603notesbatchcreateCreateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -14788,18 +16655,18 @@ type Postcrmobjects202603notesbatchreadReadResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603notesbatchreadReadResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603notesbatchreadReadResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603notesbatchreadReadResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603notesbatchreadReadResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -14836,18 +16703,18 @@ type Postcrmobjects202603notesbatchupdateUpdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603notesbatchupdateUpdateResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603notesbatchupdateUpdateResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603notesbatchupdateUpdateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603notesbatchupdateUpdateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -14884,18 +16751,18 @@ type Postcrmobjects202603notesbatchupsertUpsertResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicUpsertObject
+	JSON200 *BatchResponseSimplePublicUpsertObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+	JSON207 *BatchResponseSimplePublicUpsertObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603notesbatchupsertUpsertResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicUpsertObject {
+func (r Postcrmobjects202603notesbatchupsertUpsertResponse) GetJSON200() *BatchResponseSimplePublicUpsertObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603notesbatchupsertUpsertResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors {
+func (r Postcrmobjects202603notesbatchupsertUpsertResponse) GetJSON207() *BatchResponseSimplePublicUpsertObjectWithErrors {
 	return r.JSON207
 }
 
@@ -14932,11 +16799,11 @@ type Postcrmobjects202603notessearchDoSearchResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmCollectionResponseWithTotalSimplePublicObject
+	JSON200 *CollectionResponseWithTotalSimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603notessearchDoSearchResponse) GetJSON200() *CrmCollectionResponseWithTotalSimplePublicObject {
+func (r Postcrmobjects202603notessearchDoSearchResponse) GetJSON200() *CollectionResponseWithTotalSimplePublicObject {
 	return r.JSON200
 }
 
@@ -15007,11 +16874,11 @@ type Getcrmobjects202603notesNoteIdGetByIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsSimplePublicObjectWithAssociations
+	JSON200 *SimplePublicObjectWithAssociations
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603notesNoteIdGetByIdResponse) GetJSON200() *CrmObjectsSimplePublicObjectWithAssociations {
+func (r Getcrmobjects202603notesNoteIdGetByIdResponse) GetJSON200() *SimplePublicObjectWithAssociations {
 	return r.JSON200
 }
 
@@ -15048,11 +16915,11 @@ type Patchcrmobjects202603notesNoteIdUpdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmSimplePublicObject
+	JSON200 *SimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Patchcrmobjects202603notesNoteIdUpdateResponse) GetJSON200() *CrmSimplePublicObject {
+func (r Patchcrmobjects202603notesNoteIdUpdateResponse) GetJSON200() *SimplePublicObject {
 	return r.JSON200
 }
 
@@ -15089,11 +16956,11 @@ type Getcrmobjects202603ordersResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+	JSON200 *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603ordersResponse) GetJSON200() *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
+func (r Getcrmobjects202603ordersResponse) GetJSON200() *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
 	return r.JSON200
 }
 
@@ -15126,15 +16993,22 @@ func (r Getcrmobjects202603ordersResponse) ContentType() string {
 	return ""
 }
 
+// Postcrmobjects202603ordersResponse201Headers the declared response headers of an HTTP 201 response for Postcrmobjects202603orders
+type Postcrmobjects202603ordersResponse201Headers struct {
+	Location *string
+}
+
 type Postcrmobjects202603ordersResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmSimplePublicObject
+	JSON201 *SimplePublicObject
+	// Headers201 the parsed response headers for an HTTP 201 response
+	Headers201 *Postcrmobjects202603ordersResponse201Headers
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603ordersResponse) GetJSON201() *CrmSimplePublicObject {
+func (r Postcrmobjects202603ordersResponse) GetJSON201() *SimplePublicObject {
 	return r.JSON201
 }
 
@@ -15205,18 +17079,18 @@ type Postcrmobjects202603ordersbatchcreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmObjectsBatchResponseSimplePublicObject
+	JSON201 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603ordersbatchcreateResponse) GetJSON201() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603ordersbatchcreateResponse) GetJSON201() *BatchResponseSimplePublicObject {
 	return r.JSON201
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603ordersbatchcreateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603ordersbatchcreateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -15253,18 +17127,18 @@ type Postcrmobjects202603ordersbatchreadResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603ordersbatchreadResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603ordersbatchreadResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603ordersbatchreadResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603ordersbatchreadResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -15301,18 +17175,18 @@ type Postcrmobjects202603ordersbatchupdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603ordersbatchupdateResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603ordersbatchupdateResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603ordersbatchupdateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603ordersbatchupdateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -15349,18 +17223,18 @@ type Postcrmobjects202603ordersbatchupsertResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicUpsertObject
+	JSON200 *BatchResponseSimplePublicUpsertObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+	JSON207 *BatchResponseSimplePublicUpsertObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603ordersbatchupsertResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicUpsertObject {
+func (r Postcrmobjects202603ordersbatchupsertResponse) GetJSON200() *BatchResponseSimplePublicUpsertObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603ordersbatchupsertResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors {
+func (r Postcrmobjects202603ordersbatchupsertResponse) GetJSON207() *BatchResponseSimplePublicUpsertObjectWithErrors {
 	return r.JSON207
 }
 
@@ -15393,15 +17267,56 @@ func (r Postcrmobjects202603ordersbatchupsertResponse) ContentType() string {
 	return ""
 }
 
+type Postcrmobjects202603ordersmergeResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *SimplePublicObject
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Postcrmobjects202603ordersmergeResponse) GetJSON200() *SimplePublicObject {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcrmobjects202603ordersmergeResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcrmobjects202603ordersmergeResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcrmobjects202603ordersmergeResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcrmobjects202603ordersmergeResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
 type Postcrmobjects202603orderssearchResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmCollectionResponseWithTotalSimplePublicObject
+	JSON200 *CollectionResponseWithTotalSimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603orderssearchResponse) GetJSON200() *CrmCollectionResponseWithTotalSimplePublicObject {
+func (r Postcrmobjects202603orderssearchResponse) GetJSON200() *CollectionResponseWithTotalSimplePublicObject {
 	return r.JSON200
 }
 
@@ -15472,11 +17387,11 @@ type Getcrmobjects202603ordersOrderIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsSimplePublicObjectWithAssociations
+	JSON200 *SimplePublicObjectWithAssociations
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603ordersOrderIdResponse) GetJSON200() *CrmObjectsSimplePublicObjectWithAssociations {
+func (r Getcrmobjects202603ordersOrderIdResponse) GetJSON200() *SimplePublicObjectWithAssociations {
 	return r.JSON200
 }
 
@@ -15513,11 +17428,11 @@ type Patchcrmobjects202603ordersOrderIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmSimplePublicObject
+	JSON200 *SimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Patchcrmobjects202603ordersOrderIdResponse) GetJSON200() *CrmSimplePublicObject {
+func (r Patchcrmobjects202603ordersOrderIdResponse) GetJSON200() *SimplePublicObject {
 	return r.JSON200
 }
 
@@ -15554,11 +17469,11 @@ type Getcrmobjects202603partnerClientsResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+	JSON200 *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603partnerClientsResponse) GetJSON200() *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
+func (r Getcrmobjects202603partnerClientsResponse) GetJSON200() *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
 	return r.JSON200
 }
 
@@ -15595,18 +17510,18 @@ type Postcrmobjects202603partnerClientsbatchreadResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603partnerClientsbatchreadResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603partnerClientsbatchreadResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603partnerClientsbatchreadResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603partnerClientsbatchreadResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -15643,18 +17558,18 @@ type Postcrmobjects202603partnerClientsbatchupdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603partnerClientsbatchupdateResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603partnerClientsbatchupdateResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603partnerClientsbatchupdateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603partnerClientsbatchupdateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -15691,11 +17606,11 @@ type Postcrmobjects202603partnerClientssearchResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmCollectionResponseWithTotalSimplePublicObject
+	JSON200 *CollectionResponseWithTotalSimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603partnerClientssearchResponse) GetJSON200() *CrmCollectionResponseWithTotalSimplePublicObject {
+func (r Postcrmobjects202603partnerClientssearchResponse) GetJSON200() *CollectionResponseWithTotalSimplePublicObject {
 	return r.JSON200
 }
 
@@ -15732,11 +17647,11 @@ type Getcrmobjects202603partnerClientsPartnerClientIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsSimplePublicObjectWithAssociations
+	JSON200 *SimplePublicObjectWithAssociations
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603partnerClientsPartnerClientIdResponse) GetJSON200() *CrmObjectsSimplePublicObjectWithAssociations {
+func (r Getcrmobjects202603partnerClientsPartnerClientIdResponse) GetJSON200() *SimplePublicObjectWithAssociations {
 	return r.JSON200
 }
 
@@ -15773,11 +17688,11 @@ type Patchcrmobjects202603partnerClientsPartnerClientIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmSimplePublicObject
+	JSON200 *SimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Patchcrmobjects202603partnerClientsPartnerClientIdResponse) GetJSON200() *CrmSimplePublicObject {
+func (r Patchcrmobjects202603partnerClientsPartnerClientIdResponse) GetJSON200() *SimplePublicObject {
 	return r.JSON200
 }
 
@@ -15814,11 +17729,11 @@ type Getcrmobjects202603partnerClientsPartnerClientIdassociationsToObjectTypeRes
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmCollectionResponseMultiAssociatedObjectWithLabelForwardPaging
+	JSON200 *CollectionResponseMultiAssociatedObjectWithLabelForwardPaging
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603partnerClientsPartnerClientIdassociationsToObjectTypeResponse) GetJSON200() *CrmCollectionResponseMultiAssociatedObjectWithLabelForwardPaging {
+func (r Getcrmobjects202603partnerClientsPartnerClientIdassociationsToObjectTypeResponse) GetJSON200() *CollectionResponseMultiAssociatedObjectWithLabelForwardPaging {
 	return r.JSON200
 }
 
@@ -15855,11 +17770,11 @@ type Getcrmobjects202603partnerServicesResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+	JSON200 *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603partnerServicesResponse) GetJSON200() *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
+func (r Getcrmobjects202603partnerServicesResponse) GetJSON200() *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
 	return r.JSON200
 }
 
@@ -15896,18 +17811,18 @@ type Postcrmobjects202603partnerServicesbatchreadResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603partnerServicesbatchreadResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603partnerServicesbatchreadResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603partnerServicesbatchreadResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603partnerServicesbatchreadResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -15944,18 +17859,18 @@ type Postcrmobjects202603partnerServicesbatchupdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603partnerServicesbatchupdateResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603partnerServicesbatchupdateResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603partnerServicesbatchupdateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603partnerServicesbatchupdateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -15992,11 +17907,11 @@ type Postcrmobjects202603partnerServicessearchResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmCollectionResponseWithTotalSimplePublicObject
+	JSON200 *CollectionResponseWithTotalSimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603partnerServicessearchResponse) GetJSON200() *CrmCollectionResponseWithTotalSimplePublicObject {
+func (r Postcrmobjects202603partnerServicessearchResponse) GetJSON200() *CollectionResponseWithTotalSimplePublicObject {
 	return r.JSON200
 }
 
@@ -16033,11 +17948,11 @@ type Getcrmobjects202603partnerServicesPartnerServiceIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsSimplePublicObjectWithAssociations
+	JSON200 *SimplePublicObjectWithAssociations
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603partnerServicesPartnerServiceIdResponse) GetJSON200() *CrmObjectsSimplePublicObjectWithAssociations {
+func (r Getcrmobjects202603partnerServicesPartnerServiceIdResponse) GetJSON200() *SimplePublicObjectWithAssociations {
 	return r.JSON200
 }
 
@@ -16074,11 +17989,11 @@ type Patchcrmobjects202603partnerServicesPartnerServiceIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmSimplePublicObject
+	JSON200 *SimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Patchcrmobjects202603partnerServicesPartnerServiceIdResponse) GetJSON200() *CrmSimplePublicObject {
+func (r Patchcrmobjects202603partnerServicesPartnerServiceIdResponse) GetJSON200() *SimplePublicObject {
 	return r.JSON200
 }
 
@@ -16111,56 +18026,15 @@ func (r Patchcrmobjects202603partnerServicesPartnerServiceIdResponse) ContentTyp
 	return ""
 }
 
-type Getcrmobjects202603partnerServicesPartnerServiceIdassociationsToObjectTypeResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmCollectionResponseMultiAssociatedObjectWithLabelForwardPaging
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603partnerServicesPartnerServiceIdassociationsToObjectTypeResponse) GetJSON200() *CrmCollectionResponseMultiAssociatedObjectWithLabelForwardPaging {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcrmobjects202603partnerServicesPartnerServiceIdassociationsToObjectTypeResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcrmobjects202603partnerServicesPartnerServiceIdassociationsToObjectTypeResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcrmobjects202603partnerServicesPartnerServiceIdassociationsToObjectTypeResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcrmobjects202603partnerServicesPartnerServiceIdassociationsToObjectTypeResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
 type Getcrmobjects202603postalMailGetPageResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+	JSON200 *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603postalMailGetPageResponse) GetJSON200() *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
+func (r Getcrmobjects202603postalMailGetPageResponse) GetJSON200() *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
 	return r.JSON200
 }
 
@@ -16193,15 +18067,22 @@ func (r Getcrmobjects202603postalMailGetPageResponse) ContentType() string {
 	return ""
 }
 
+// Postcrmobjects202603postalMailCreateResponse201Headers the declared response headers of an HTTP 201 response for Postcrmobjects202603postalMailCreate
+type Postcrmobjects202603postalMailCreateResponse201Headers struct {
+	Location *string
+}
+
 type Postcrmobjects202603postalMailCreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmSimplePublicObject
+	JSON201 *SimplePublicObject
+	// Headers201 the parsed response headers for an HTTP 201 response
+	Headers201 *Postcrmobjects202603postalMailCreateResponse201Headers
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603postalMailCreateResponse) GetJSON201() *CrmSimplePublicObject {
+func (r Postcrmobjects202603postalMailCreateResponse) GetJSON201() *SimplePublicObject {
 	return r.JSON201
 }
 
@@ -16272,18 +18153,18 @@ type Postcrmobjects202603postalMailbatchcreateCreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmObjectsBatchResponseSimplePublicObject
+	JSON201 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603postalMailbatchcreateCreateResponse) GetJSON201() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603postalMailbatchcreateCreateResponse) GetJSON201() *BatchResponseSimplePublicObject {
 	return r.JSON201
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603postalMailbatchcreateCreateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603postalMailbatchcreateCreateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -16320,18 +18201,18 @@ type Postcrmobjects202603postalMailbatchreadReadResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603postalMailbatchreadReadResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603postalMailbatchreadReadResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603postalMailbatchreadReadResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603postalMailbatchreadReadResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -16368,18 +18249,18 @@ type Postcrmobjects202603postalMailbatchupdateUpdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603postalMailbatchupdateUpdateResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603postalMailbatchupdateUpdateResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603postalMailbatchupdateUpdateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603postalMailbatchupdateUpdateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -16416,18 +18297,18 @@ type Postcrmobjects202603postalMailbatchupsertUpsertResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicUpsertObject
+	JSON200 *BatchResponseSimplePublicUpsertObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+	JSON207 *BatchResponseSimplePublicUpsertObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603postalMailbatchupsertUpsertResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicUpsertObject {
+func (r Postcrmobjects202603postalMailbatchupsertUpsertResponse) GetJSON200() *BatchResponseSimplePublicUpsertObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603postalMailbatchupsertUpsertResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors {
+func (r Postcrmobjects202603postalMailbatchupsertUpsertResponse) GetJSON207() *BatchResponseSimplePublicUpsertObjectWithErrors {
 	return r.JSON207
 }
 
@@ -16464,11 +18345,11 @@ type Postcrmobjects202603postalMailsearchDoSearchResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmCollectionResponseWithTotalSimplePublicObject
+	JSON200 *CollectionResponseWithTotalSimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603postalMailsearchDoSearchResponse) GetJSON200() *CrmCollectionResponseWithTotalSimplePublicObject {
+func (r Postcrmobjects202603postalMailsearchDoSearchResponse) GetJSON200() *CollectionResponseWithTotalSimplePublicObject {
 	return r.JSON200
 }
 
@@ -16539,11 +18420,11 @@ type Getcrmobjects202603postalMailPostalMailIdGetByIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsSimplePublicObjectWithAssociations
+	JSON200 *SimplePublicObjectWithAssociations
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603postalMailPostalMailIdGetByIdResponse) GetJSON200() *CrmObjectsSimplePublicObjectWithAssociations {
+func (r Getcrmobjects202603postalMailPostalMailIdGetByIdResponse) GetJSON200() *SimplePublicObjectWithAssociations {
 	return r.JSON200
 }
 
@@ -16580,11 +18461,11 @@ type Patchcrmobjects202603postalMailPostalMailIdUpdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmSimplePublicObject
+	JSON200 *SimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Patchcrmobjects202603postalMailPostalMailIdUpdateResponse) GetJSON200() *CrmSimplePublicObject {
+func (r Patchcrmobjects202603postalMailPostalMailIdUpdateResponse) GetJSON200() *SimplePublicObject {
 	return r.JSON200
 }
 
@@ -16621,11 +18502,11 @@ type Getcrmobjects202603productsGetPageResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+	JSON200 *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603productsGetPageResponse) GetJSON200() *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
+func (r Getcrmobjects202603productsGetPageResponse) GetJSON200() *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
 	return r.JSON200
 }
 
@@ -16658,15 +18539,22 @@ func (r Getcrmobjects202603productsGetPageResponse) ContentType() string {
 	return ""
 }
 
+// Postcrmobjects202603productsCreateResponse201Headers the declared response headers of an HTTP 201 response for Postcrmobjects202603productsCreate
+type Postcrmobjects202603productsCreateResponse201Headers struct {
+	Location *string
+}
+
 type Postcrmobjects202603productsCreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmSimplePublicObject
+	JSON201 *SimplePublicObject
+	// Headers201 the parsed response headers for an HTTP 201 response
+	Headers201 *Postcrmobjects202603productsCreateResponse201Headers
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603productsCreateResponse) GetJSON201() *CrmSimplePublicObject {
+func (r Postcrmobjects202603productsCreateResponse) GetJSON201() *SimplePublicObject {
 	return r.JSON201
 }
 
@@ -16737,18 +18625,18 @@ type Postcrmobjects202603productsbatchcreateCreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmObjectsBatchResponseSimplePublicObject
+	JSON201 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603productsbatchcreateCreateResponse) GetJSON201() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603productsbatchcreateCreateResponse) GetJSON201() *BatchResponseSimplePublicObject {
 	return r.JSON201
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603productsbatchcreateCreateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603productsbatchcreateCreateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -16785,18 +18673,18 @@ type Postcrmobjects202603productsbatchreadReadResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603productsbatchreadReadResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603productsbatchreadReadResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603productsbatchreadReadResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603productsbatchreadReadResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -16833,18 +18721,18 @@ type Postcrmobjects202603productsbatchupdateUpdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603productsbatchupdateUpdateResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603productsbatchupdateUpdateResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603productsbatchupdateUpdateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603productsbatchupdateUpdateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -16881,18 +18769,18 @@ type Postcrmobjects202603productsbatchupsertUpsertResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicUpsertObject
+	JSON200 *BatchResponseSimplePublicUpsertObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+	JSON207 *BatchResponseSimplePublicUpsertObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603productsbatchupsertUpsertResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicUpsertObject {
+func (r Postcrmobjects202603productsbatchupsertUpsertResponse) GetJSON200() *BatchResponseSimplePublicUpsertObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603productsbatchupsertUpsertResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors {
+func (r Postcrmobjects202603productsbatchupsertUpsertResponse) GetJSON207() *BatchResponseSimplePublicUpsertObjectWithErrors {
 	return r.JSON207
 }
 
@@ -16929,11 +18817,11 @@ type Postcrmobjects202603productssearchDoSearchResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmCollectionResponseWithTotalSimplePublicObject
+	JSON200 *CollectionResponseWithTotalSimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603productssearchDoSearchResponse) GetJSON200() *CrmCollectionResponseWithTotalSimplePublicObject {
+func (r Postcrmobjects202603productssearchDoSearchResponse) GetJSON200() *CollectionResponseWithTotalSimplePublicObject {
 	return r.JSON200
 }
 
@@ -17004,11 +18892,11 @@ type Getcrmobjects202603productsProductIdGetByIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsSimplePublicObjectWithAssociations
+	JSON200 *SimplePublicObjectWithAssociations
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603productsProductIdGetByIdResponse) GetJSON200() *CrmObjectsSimplePublicObjectWithAssociations {
+func (r Getcrmobjects202603productsProductIdGetByIdResponse) GetJSON200() *SimplePublicObjectWithAssociations {
 	return r.JSON200
 }
 
@@ -17045,11 +18933,11 @@ type Patchcrmobjects202603productsProductIdUpdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmSimplePublicObject
+	JSON200 *SimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Patchcrmobjects202603productsProductIdUpdateResponse) GetJSON200() *CrmSimplePublicObject {
+func (r Patchcrmobjects202603productsProductIdUpdateResponse) GetJSON200() *SimplePublicObject {
 	return r.JSON200
 }
 
@@ -17086,11 +18974,11 @@ type Getcrmobjects202603projectsResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+	JSON200 *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603projectsResponse) GetJSON200() *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
+func (r Getcrmobjects202603projectsResponse) GetJSON200() *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
 	return r.JSON200
 }
 
@@ -17123,15 +19011,22 @@ func (r Getcrmobjects202603projectsResponse) ContentType() string {
 	return ""
 }
 
+// Postcrmobjects202603projectsResponse201Headers the declared response headers of an HTTP 201 response for Postcrmobjects202603projects
+type Postcrmobjects202603projectsResponse201Headers struct {
+	Location *string
+}
+
 type Postcrmobjects202603projectsResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmSimplePublicObject
+	JSON201 *SimplePublicObject
+	// Headers201 the parsed response headers for an HTTP 201 response
+	Headers201 *Postcrmobjects202603projectsResponse201Headers
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603projectsResponse) GetJSON201() *CrmSimplePublicObject {
+func (r Postcrmobjects202603projectsResponse) GetJSON201() *SimplePublicObject {
 	return r.JSON201
 }
 
@@ -17202,18 +19097,18 @@ type Postcrmobjects202603projectsbatchcreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmObjectsBatchResponseSimplePublicObject
+	JSON201 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603projectsbatchcreateResponse) GetJSON201() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603projectsbatchcreateResponse) GetJSON201() *BatchResponseSimplePublicObject {
 	return r.JSON201
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603projectsbatchcreateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603projectsbatchcreateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -17250,18 +19145,18 @@ type Postcrmobjects202603projectsbatchreadResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603projectsbatchreadResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603projectsbatchreadResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603projectsbatchreadResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603projectsbatchreadResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -17298,18 +19193,18 @@ type Postcrmobjects202603projectsbatchupdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603projectsbatchupdateResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603projectsbatchupdateResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603projectsbatchupdateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603projectsbatchupdateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -17346,18 +19241,18 @@ type Postcrmobjects202603projectsbatchupsertResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicUpsertObject
+	JSON200 *BatchResponseSimplePublicUpsertObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+	JSON207 *BatchResponseSimplePublicUpsertObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603projectsbatchupsertResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicUpsertObject {
+func (r Postcrmobjects202603projectsbatchupsertResponse) GetJSON200() *BatchResponseSimplePublicUpsertObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603projectsbatchupsertResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors {
+func (r Postcrmobjects202603projectsbatchupsertResponse) GetJSON207() *BatchResponseSimplePublicUpsertObjectWithErrors {
 	return r.JSON207
 }
 
@@ -17394,11 +19289,11 @@ type Postcrmobjects202603projectsmergeResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmSimplePublicObject
+	JSON200 *SimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603projectsmergeResponse) GetJSON200() *CrmSimplePublicObject {
+func (r Postcrmobjects202603projectsmergeResponse) GetJSON200() *SimplePublicObject {
 	return r.JSON200
 }
 
@@ -17435,11 +19330,11 @@ type Postcrmobjects202603projectssearchResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmCollectionResponseWithTotalSimplePublicObject
+	JSON200 *CollectionResponseWithTotalSimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603projectssearchResponse) GetJSON200() *CrmCollectionResponseWithTotalSimplePublicObject {
+func (r Postcrmobjects202603projectssearchResponse) GetJSON200() *CollectionResponseWithTotalSimplePublicObject {
 	return r.JSON200
 }
 
@@ -17510,11 +19405,11 @@ type Getcrmobjects202603projectsProjectIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsSimplePublicObjectWithAssociations
+	JSON200 *SimplePublicObjectWithAssociations
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603projectsProjectIdResponse) GetJSON200() *CrmObjectsSimplePublicObjectWithAssociations {
+func (r Getcrmobjects202603projectsProjectIdResponse) GetJSON200() *SimplePublicObjectWithAssociations {
 	return r.JSON200
 }
 
@@ -17551,11 +19446,11 @@ type Patchcrmobjects202603projectsProjectIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmSimplePublicObject
+	JSON200 *SimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Patchcrmobjects202603projectsProjectIdResponse) GetJSON200() *CrmSimplePublicObject {
+func (r Patchcrmobjects202603projectsProjectIdResponse) GetJSON200() *SimplePublicObject {
 	return r.JSON200
 }
 
@@ -17592,11 +19487,11 @@ type Getcrmobjects202603quotesGetPageResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+	JSON200 *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603quotesGetPageResponse) GetJSON200() *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
+func (r Getcrmobjects202603quotesGetPageResponse) GetJSON200() *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
 	return r.JSON200
 }
 
@@ -17629,15 +19524,22 @@ func (r Getcrmobjects202603quotesGetPageResponse) ContentType() string {
 	return ""
 }
 
+// Postcrmobjects202603quotesCreateResponse201Headers the declared response headers of an HTTP 201 response for Postcrmobjects202603quotesCreate
+type Postcrmobjects202603quotesCreateResponse201Headers struct {
+	Location *string
+}
+
 type Postcrmobjects202603quotesCreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmSimplePublicObject
+	JSON201 *SimplePublicObject
+	// Headers201 the parsed response headers for an HTTP 201 response
+	Headers201 *Postcrmobjects202603quotesCreateResponse201Headers
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603quotesCreateResponse) GetJSON201() *CrmSimplePublicObject {
+func (r Postcrmobjects202603quotesCreateResponse) GetJSON201() *SimplePublicObject {
 	return r.JSON201
 }
 
@@ -17708,18 +19610,18 @@ type Postcrmobjects202603quotesbatchcreateCreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmObjectsBatchResponseSimplePublicObject
+	JSON201 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603quotesbatchcreateCreateResponse) GetJSON201() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603quotesbatchcreateCreateResponse) GetJSON201() *BatchResponseSimplePublicObject {
 	return r.JSON201
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603quotesbatchcreateCreateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603quotesbatchcreateCreateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -17756,18 +19658,18 @@ type Postcrmobjects202603quotesbatchreadReadResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603quotesbatchreadReadResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603quotesbatchreadReadResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603quotesbatchreadReadResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603quotesbatchreadReadResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -17804,18 +19706,18 @@ type Postcrmobjects202603quotesbatchupdateUpdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
+	JSON200 *BatchResponseSimplePublicObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603quotesbatchupdateUpdateResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
+func (r Postcrmobjects202603quotesbatchupdateUpdateResponse) GetJSON200() *BatchResponseSimplePublicObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603quotesbatchupdateUpdateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
+func (r Postcrmobjects202603quotesbatchupdateUpdateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
 	return r.JSON207
 }
 
@@ -17852,18 +19754,18 @@ type Postcrmobjects202603quotesbatchupsertUpsertResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicUpsertObject
+	JSON200 *BatchResponseSimplePublicUpsertObject
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+	JSON207 *BatchResponseSimplePublicUpsertObjectWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603quotesbatchupsertUpsertResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicUpsertObject {
+func (r Postcrmobjects202603quotesbatchupsertUpsertResponse) GetJSON200() *BatchResponseSimplePublicUpsertObject {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603quotesbatchupsertUpsertResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors {
+func (r Postcrmobjects202603quotesbatchupsertUpsertResponse) GetJSON207() *BatchResponseSimplePublicUpsertObjectWithErrors {
 	return r.JSON207
 }
 
@@ -17900,11 +19802,11 @@ type Postcrmobjects202603quotessearchDoSearchResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmCollectionResponseWithTotalSimplePublicObject
+	JSON200 *CollectionResponseWithTotalSimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603quotessearchDoSearchResponse) GetJSON200() *CrmCollectionResponseWithTotalSimplePublicObject {
+func (r Postcrmobjects202603quotessearchDoSearchResponse) GetJSON200() *CollectionResponseWithTotalSimplePublicObject {
 	return r.JSON200
 }
 
@@ -17975,11 +19877,11 @@ type Getcrmobjects202603quotesQuoteIdGetByIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsSimplePublicObjectWithAssociations
+	JSON200 *SimplePublicObjectWithAssociations
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603quotesQuoteIdGetByIdResponse) GetJSON200() *CrmObjectsSimplePublicObjectWithAssociations {
+func (r Getcrmobjects202603quotesQuoteIdGetByIdResponse) GetJSON200() *SimplePublicObjectWithAssociations {
 	return r.JSON200
 }
 
@@ -18016,11 +19918,11 @@ type Patchcrmobjects202603quotesQuoteIdUpdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmSimplePublicObject
+	JSON200 *SimplePublicObject
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Patchcrmobjects202603quotesQuoteIdUpdateResponse) GetJSON200() *CrmSimplePublicObject {
+func (r Patchcrmobjects202603quotesQuoteIdUpdateResponse) GetJSON200() *SimplePublicObject {
 	return r.JSON200
 }
 
@@ -18053,1956 +19955,55 @@ func (r Patchcrmobjects202603quotesQuoteIdUpdateResponse) ContentType() string {
 	return ""
 }
 
+type Postcrmobjects202603servicesmergeResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *SimplePublicObject
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Postcrmobjects202603servicesmergeResponse) GetJSON200() *SimplePublicObject {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcrmobjects202603servicesmergeResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcrmobjects202603servicesmergeResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcrmobjects202603servicesmergeResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcrmobjects202603servicesmergeResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
 type Getcrmobjects202603subscriptionsResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+	JSON200 *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603subscriptionsResponse) GetJSON200() *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
+func (r Getcrmobjects202603subscriptionsResponse) GetJSON200() *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
 	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcrmobjects202603subscriptionsResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcrmobjects202603subscriptionsResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcrmobjects202603subscriptionsResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcrmobjects202603subscriptionsResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603subscriptionsResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmSimplePublicObject
-}
-
-// GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603subscriptionsResponse) GetJSON201() *CrmSimplePublicObject {
-	return r.JSON201
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603subscriptionsResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603subscriptionsResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603subscriptionsResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603subscriptionsResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603subscriptionsbatcharchiveResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603subscriptionsbatcharchiveResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603subscriptionsbatcharchiveResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603subscriptionsbatcharchiveResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603subscriptionsbatcharchiveResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603subscriptionsbatchcreateResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmObjectsBatchResponseSimplePublicObject
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
-}
-
-// GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603subscriptionsbatchcreateResponse) GetJSON201() *CrmObjectsBatchResponseSimplePublicObject {
-	return r.JSON201
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603subscriptionsbatchcreateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603subscriptionsbatchcreateResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603subscriptionsbatchcreateResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603subscriptionsbatchcreateResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603subscriptionsbatchcreateResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603subscriptionsbatchreadResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603subscriptionsbatchreadResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
-	return r.JSON200
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603subscriptionsbatchreadResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603subscriptionsbatchreadResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603subscriptionsbatchreadResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603subscriptionsbatchreadResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603subscriptionsbatchreadResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603subscriptionsbatchupdateResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603subscriptionsbatchupdateResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
-	return r.JSON200
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603subscriptionsbatchupdateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603subscriptionsbatchupdateResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603subscriptionsbatchupdateResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603subscriptionsbatchupdateResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603subscriptionsbatchupdateResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603subscriptionsbatchupsertResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicUpsertObject
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603subscriptionsbatchupsertResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicUpsertObject {
-	return r.JSON200
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603subscriptionsbatchupsertResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603subscriptionsbatchupsertResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603subscriptionsbatchupsertResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603subscriptionsbatchupsertResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603subscriptionsbatchupsertResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603subscriptionssearchResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmCollectionResponseWithTotalSimplePublicObject
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603subscriptionssearchResponse) GetJSON200() *CrmCollectionResponseWithTotalSimplePublicObject {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603subscriptionssearchResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603subscriptionssearchResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603subscriptionssearchResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603subscriptionssearchResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Deletecrmobjects202603subscriptionsSubscriptionIdResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Deletecrmobjects202603subscriptionsSubscriptionIdResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Deletecrmobjects202603subscriptionsSubscriptionIdResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Deletecrmobjects202603subscriptionsSubscriptionIdResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Deletecrmobjects202603subscriptionsSubscriptionIdResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcrmobjects202603subscriptionsSubscriptionIdResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsSimplePublicObjectWithAssociations
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603subscriptionsSubscriptionIdResponse) GetJSON200() *CrmObjectsSimplePublicObjectWithAssociations {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcrmobjects202603subscriptionsSubscriptionIdResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcrmobjects202603subscriptionsSubscriptionIdResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcrmobjects202603subscriptionsSubscriptionIdResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcrmobjects202603subscriptionsSubscriptionIdResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Patchcrmobjects202603subscriptionsSubscriptionIdResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmSimplePublicObject
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Patchcrmobjects202603subscriptionsSubscriptionIdResponse) GetJSON200() *CrmSimplePublicObject {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Patchcrmobjects202603subscriptionsSubscriptionIdResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Patchcrmobjects202603subscriptionsSubscriptionIdResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Patchcrmobjects202603subscriptionsSubscriptionIdResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Patchcrmobjects202603subscriptionsSubscriptionIdResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcrmobjects202603tasksGetPageResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603tasksGetPageResponse) GetJSON200() *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcrmobjects202603tasksGetPageResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcrmobjects202603tasksGetPageResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcrmobjects202603tasksGetPageResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcrmobjects202603tasksGetPageResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603tasksCreateResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmSimplePublicObject
-}
-
-// GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603tasksCreateResponse) GetJSON201() *CrmSimplePublicObject {
-	return r.JSON201
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603tasksCreateResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603tasksCreateResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603tasksCreateResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603tasksCreateResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603tasksbatcharchiveArchiveResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603tasksbatcharchiveArchiveResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603tasksbatcharchiveArchiveResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603tasksbatcharchiveArchiveResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603tasksbatcharchiveArchiveResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603tasksbatchcreateCreateResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmObjectsBatchResponseSimplePublicObject
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
-}
-
-// GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603tasksbatchcreateCreateResponse) GetJSON201() *CrmObjectsBatchResponseSimplePublicObject {
-	return r.JSON201
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603tasksbatchcreateCreateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603tasksbatchcreateCreateResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603tasksbatchcreateCreateResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603tasksbatchcreateCreateResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603tasksbatchcreateCreateResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603tasksbatchreadReadResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603tasksbatchreadReadResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
-	return r.JSON200
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603tasksbatchreadReadResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603tasksbatchreadReadResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603tasksbatchreadReadResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603tasksbatchreadReadResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603tasksbatchreadReadResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603tasksbatchupdateUpdateResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603tasksbatchupdateUpdateResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
-	return r.JSON200
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603tasksbatchupdateUpdateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603tasksbatchupdateUpdateResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603tasksbatchupdateUpdateResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603tasksbatchupdateUpdateResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603tasksbatchupdateUpdateResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603tasksbatchupsertUpsertResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicUpsertObject
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603tasksbatchupsertUpsertResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicUpsertObject {
-	return r.JSON200
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603tasksbatchupsertUpsertResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603tasksbatchupsertUpsertResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603tasksbatchupsertUpsertResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603tasksbatchupsertUpsertResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603tasksbatchupsertUpsertResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603taskssearchDoSearchResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmCollectionResponseWithTotalSimplePublicObject
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603taskssearchDoSearchResponse) GetJSON200() *CrmCollectionResponseWithTotalSimplePublicObject {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603taskssearchDoSearchResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603taskssearchDoSearchResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603taskssearchDoSearchResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603taskssearchDoSearchResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Deletecrmobjects202603tasksTaskIdArchiveResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Deletecrmobjects202603tasksTaskIdArchiveResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Deletecrmobjects202603tasksTaskIdArchiveResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Deletecrmobjects202603tasksTaskIdArchiveResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Deletecrmobjects202603tasksTaskIdArchiveResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcrmobjects202603tasksTaskIdGetByIdResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsSimplePublicObjectWithAssociations
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603tasksTaskIdGetByIdResponse) GetJSON200() *CrmObjectsSimplePublicObjectWithAssociations {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcrmobjects202603tasksTaskIdGetByIdResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcrmobjects202603tasksTaskIdGetByIdResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcrmobjects202603tasksTaskIdGetByIdResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcrmobjects202603tasksTaskIdGetByIdResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Patchcrmobjects202603tasksTaskIdUpdateResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmSimplePublicObject
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Patchcrmobjects202603tasksTaskIdUpdateResponse) GetJSON200() *CrmSimplePublicObject {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Patchcrmobjects202603tasksTaskIdUpdateResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Patchcrmobjects202603tasksTaskIdUpdateResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Patchcrmobjects202603tasksTaskIdUpdateResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Patchcrmobjects202603tasksTaskIdUpdateResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcrmobjects202603taxesGetPageResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603taxesGetPageResponse) GetJSON200() *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcrmobjects202603taxesGetPageResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcrmobjects202603taxesGetPageResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcrmobjects202603taxesGetPageResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcrmobjects202603taxesGetPageResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603taxesCreateResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmSimplePublicObject
-}
-
-// GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603taxesCreateResponse) GetJSON201() *CrmSimplePublicObject {
-	return r.JSON201
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603taxesCreateResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603taxesCreateResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603taxesCreateResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603taxesCreateResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603taxesbatcharchiveArchiveResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603taxesbatcharchiveArchiveResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603taxesbatcharchiveArchiveResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603taxesbatcharchiveArchiveResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603taxesbatcharchiveArchiveResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603taxesbatchcreateCreateResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmObjectsBatchResponseSimplePublicObject
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
-}
-
-// GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603taxesbatchcreateCreateResponse) GetJSON201() *CrmObjectsBatchResponseSimplePublicObject {
-	return r.JSON201
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603taxesbatchcreateCreateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603taxesbatchcreateCreateResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603taxesbatchcreateCreateResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603taxesbatchcreateCreateResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603taxesbatchcreateCreateResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603taxesbatchreadReadResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603taxesbatchreadReadResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
-	return r.JSON200
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603taxesbatchreadReadResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603taxesbatchreadReadResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603taxesbatchreadReadResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603taxesbatchreadReadResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603taxesbatchreadReadResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603taxesbatchupdateUpdateResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603taxesbatchupdateUpdateResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
-	return r.JSON200
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603taxesbatchupdateUpdateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603taxesbatchupdateUpdateResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603taxesbatchupdateUpdateResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603taxesbatchupdateUpdateResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603taxesbatchupdateUpdateResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603taxesbatchupsertUpsertResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicUpsertObject
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603taxesbatchupsertUpsertResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicUpsertObject {
-	return r.JSON200
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603taxesbatchupsertUpsertResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603taxesbatchupsertUpsertResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603taxesbatchupsertUpsertResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603taxesbatchupsertUpsertResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603taxesbatchupsertUpsertResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603taxessearchDoSearchResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmCollectionResponseWithTotalSimplePublicObject
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603taxessearchDoSearchResponse) GetJSON200() *CrmCollectionResponseWithTotalSimplePublicObject {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603taxessearchDoSearchResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603taxessearchDoSearchResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603taxessearchDoSearchResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603taxessearchDoSearchResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Deletecrmobjects202603taxesTaxIdArchiveResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Deletecrmobjects202603taxesTaxIdArchiveResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Deletecrmobjects202603taxesTaxIdArchiveResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Deletecrmobjects202603taxesTaxIdArchiveResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Deletecrmobjects202603taxesTaxIdArchiveResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcrmobjects202603taxesTaxIdGetByIdResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsSimplePublicObjectWithAssociations
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603taxesTaxIdGetByIdResponse) GetJSON200() *CrmObjectsSimplePublicObjectWithAssociations {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcrmobjects202603taxesTaxIdGetByIdResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcrmobjects202603taxesTaxIdGetByIdResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcrmobjects202603taxesTaxIdGetByIdResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcrmobjects202603taxesTaxIdGetByIdResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Patchcrmobjects202603taxesTaxIdUpdateResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmSimplePublicObject
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Patchcrmobjects202603taxesTaxIdUpdateResponse) GetJSON200() *CrmSimplePublicObject {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Patchcrmobjects202603taxesTaxIdUpdateResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Patchcrmobjects202603taxesTaxIdUpdateResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Patchcrmobjects202603taxesTaxIdUpdateResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Patchcrmobjects202603taxesTaxIdUpdateResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcrmobjects202603ticketsGetPageResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603ticketsGetPageResponse) GetJSON200() *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcrmobjects202603ticketsGetPageResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcrmobjects202603ticketsGetPageResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcrmobjects202603ticketsGetPageResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcrmobjects202603ticketsGetPageResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603ticketsCreateResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmSimplePublicObject
-}
-
-// GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603ticketsCreateResponse) GetJSON201() *CrmSimplePublicObject {
-	return r.JSON201
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603ticketsCreateResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603ticketsCreateResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603ticketsCreateResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603ticketsCreateResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603ticketsbatcharchiveArchiveResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603ticketsbatcharchiveArchiveResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603ticketsbatcharchiveArchiveResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603ticketsbatcharchiveArchiveResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603ticketsbatcharchiveArchiveResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603ticketsbatchcreateCreateResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmObjectsBatchResponseSimplePublicObject
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
-}
-
-// GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603ticketsbatchcreateCreateResponse) GetJSON201() *CrmObjectsBatchResponseSimplePublicObject {
-	return r.JSON201
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603ticketsbatchcreateCreateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603ticketsbatchcreateCreateResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603ticketsbatchcreateCreateResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603ticketsbatchcreateCreateResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603ticketsbatchcreateCreateResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603ticketsbatchreadReadResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603ticketsbatchreadReadResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
-	return r.JSON200
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603ticketsbatchreadReadResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603ticketsbatchreadReadResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603ticketsbatchreadReadResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603ticketsbatchreadReadResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603ticketsbatchreadReadResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603ticketsbatchupdateUpdateResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicObject
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicObjectWithErrors
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603ticketsbatchupdateUpdateResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicObject {
-	return r.JSON200
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603ticketsbatchupdateUpdateResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicObjectWithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603ticketsbatchupdateUpdateResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603ticketsbatchupdateUpdateResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603ticketsbatchupdateUpdateResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603ticketsbatchupdateUpdateResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603ticketsbatchupsertUpsertResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsBatchResponseSimplePublicUpsertObject
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603ticketsbatchupsertUpsertResponse) GetJSON200() *CrmObjectsBatchResponseSimplePublicUpsertObject {
-	return r.JSON200
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603ticketsbatchupsertUpsertResponse) GetJSON207() *CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603ticketsbatchupsertUpsertResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603ticketsbatchupsertUpsertResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603ticketsbatchupsertUpsertResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603ticketsbatchupsertUpsertResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603ticketsmergeMergeResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmSimplePublicObject
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603ticketsmergeMergeResponse) GetJSON200() *CrmSimplePublicObject {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603ticketsmergeMergeResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603ticketsmergeMergeResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603ticketsmergeMergeResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603ticketsmergeMergeResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603ticketssearchDoSearchResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmCollectionResponseWithTotalSimplePublicObject
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603ticketssearchDoSearchResponse) GetJSON200() *CrmCollectionResponseWithTotalSimplePublicObject {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603ticketssearchDoSearchResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603ticketssearchDoSearchResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603ticketssearchDoSearchResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603ticketssearchDoSearchResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Deletecrmobjects202603ticketsTicketIdArchiveResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Deletecrmobjects202603ticketsTicketIdArchiveResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Deletecrmobjects202603ticketsTicketIdArchiveResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Deletecrmobjects202603ticketsTicketIdArchiveResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Deletecrmobjects202603ticketsTicketIdArchiveResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcrmobjects202603ticketsTicketIdGetByIdResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsSimplePublicObjectWithAssociations
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603ticketsTicketIdGetByIdResponse) GetJSON200() *CrmObjectsSimplePublicObjectWithAssociations {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcrmobjects202603ticketsTicketIdGetByIdResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcrmobjects202603ticketsTicketIdGetByIdResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcrmobjects202603ticketsTicketIdGetByIdResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcrmobjects202603ticketsTicketIdGetByIdResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Patchcrmobjects202603ticketsTicketIdUpdateResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmSimplePublicObject
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Patchcrmobjects202603ticketsTicketIdUpdateResponse) GetJSON200() *CrmSimplePublicObject {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Patchcrmobjects202603ticketsTicketIdUpdateResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Patchcrmobjects202603ticketsTicketIdUpdateResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Patchcrmobjects202603ticketsTicketIdUpdateResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Patchcrmobjects202603ticketsTicketIdUpdateResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcrmobjects202603usersResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603usersResponse) GetJSON200() *CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcrmobjects202603usersResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcrmobjects202603usersResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcrmobjects202603usersResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcrmobjects202603usersResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603usersResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CrmSimplePublicObject
-}
-
-// GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603usersResponse) GetJSON201() *CrmSimplePublicObject {
-	return r.JSON201
 }

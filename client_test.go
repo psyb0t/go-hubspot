@@ -89,7 +89,7 @@ func TestCreateContact(t *testing.T) {
 		assert.Equal(t, "application/json", r.Header.Get("Content-Type"))
 		assertBearer(t, r)
 
-		var body hubspot.CrmObjectsSimplePublicObjectInputForCreate
+		var body hubspot.SimplePublicObjectInputForCreate
 
 		assert.NoError(t, json.NewDecoder(r.Body).Decode(&body))
 		assert.Equal(t, "user@example.com", body.Properties["email"])
@@ -106,8 +106,8 @@ func TestCreateContact(t *testing.T) {
 
 	res, err := client.Postcrmobjects202603contactsCreateWithResponse(
 		context.Background(),
-		hubspot.CrmObjectsSimplePublicObjectInputForCreate{
-			Associations: []hubspot.CrmObjectsPublicAssociationsForObject{},
+		hubspot.SimplePublicObjectInputForCreate{
+			Associations: []hubspot.PublicAssociationsForObject{},
 			Properties:   map[string]string{"email": "user@example.com"},
 		},
 	)

@@ -17,6 +17,603 @@ import (
 	openapi_types "github.com/oapi-codegen/runtime/types"
 )
 
+// Patchcrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyName Update a property
+//
+// Perform a partial update of a property identified by { propertyName }. Provided fields will be overwritten.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with PATCH /crm/properties/2026-03/{objectType}/{propertyName} (the `Patchcrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyName` operationId).
+func (c *Client) Patchcrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyName(ctx context.Context, objectType string, propertyName string, body Patchcrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyNameJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPatchcrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyNameRequest(c.Server, objectType, propertyName, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// GetcrmpropertyValidations202603ObjectTypeIdcrmv3propertyValidationsObjectTypeId Read all property validation rules for an object
+//
+// Read all properties with validation rules for a given object.
+//
+// Corresponds with GET /crm/property-validations/2026-03/{objectTypeId} (the `GetcrmpropertyValidations202603ObjectTypeIdcrmv3propertyValidationsObjectTypeId` operationId).
+func (c *Client) GetcrmpropertyValidations202603ObjectTypeIdcrmv3propertyValidationsObjectTypeId(ctx context.Context, objectTypeId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetcrmpropertyValidations202603ObjectTypeIdcrmv3propertyValidationsObjectTypeIdRequest(c.Server, objectTypeId)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// GetcrmpropertyValidations202603ObjectTypeIdPropertyNamecrmv3propertyValidationsObjectTypeIdPropertyName Read validation rules for a property
+//
+// Read a property's validation rules identified by {propertyName}.
+//
+// Corresponds with GET /crm/property-validations/2026-03/{objectTypeId}/{propertyName} (the `GetcrmpropertyValidations202603ObjectTypeIdPropertyNamecrmv3propertyValidationsObjectTypeIdPropertyName` operationId).
+func (c *Client) GetcrmpropertyValidations202603ObjectTypeIdPropertyNamecrmv3propertyValidationsObjectTypeIdPropertyName(ctx context.Context, objectTypeId string, propertyName string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetcrmpropertyValidations202603ObjectTypeIdPropertyNamecrmv3propertyValidationsObjectTypeIdPropertyNameRequest(c.Server, objectTypeId, propertyName)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// GetcrmpropertyValidations202603ObjectTypeIdPropertyNameruleTypeRuleTypecrmv3propertyValidationsObjectTypeIdPropertyNameruleTypeRuleType Retrieve a validation rule for a specific property and rule type, providing details on how property values should be formatted.
+//
+// Retrieve a specific validation rule for a property identified by its name and rule type.
+//
+// Corresponds with GET /crm/property-validations/2026-03/{objectTypeId}/{propertyName}/rule-type/{ruleType} (the `GetcrmpropertyValidations202603ObjectTypeIdPropertyNameruleTypeRuleTypecrmv3propertyValidationsObjectTypeIdPropertyNameruleTypeRuleType` operationId).
+func (c *Client) GetcrmpropertyValidations202603ObjectTypeIdPropertyNameruleTypeRuleTypecrmv3propertyValidationsObjectTypeIdPropertyNameruleTypeRuleType(ctx context.Context, objectTypeId string, propertyName string, ruleType GetcrmpropertyValidations202603ObjectTypeIdPropertyNameruleTypeRuleTypecrmv3propertyValidationsObjectTypeIdPropertyNameruleTypeRuleTypeParamsRuleType, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetcrmpropertyValidations202603ObjectTypeIdPropertyNameruleTypeRuleTypecrmv3propertyValidationsObjectTypeIdPropertyNameruleTypeRuleTypeRequest(c.Server, objectTypeId, propertyName, ruleType)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// PutcrmpropertyValidations202603ObjectTypeIdPropertyNameruleTypeRuleTypecrmv3propertyValidationsObjectTypeIdPropertyNameruleTypeRuleTypeWithBody Update a validation rule for a specific property and rule type, allowing customization of property value constraints.
+//
+// Update a specific validation rule for a property identified by its name and rule type.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with PUT /crm/property-validations/2026-03/{objectTypeId}/{propertyName}/rule-type/{ruleType} (the `PutcrmpropertyValidations202603ObjectTypeIdPropertyNameruleTypeRuleTypecrmv3propertyValidationsObjectTypeIdPropertyNameruleTypeRuleType` operationId).
+func (c *Client) PutcrmpropertyValidations202603ObjectTypeIdPropertyNameruleTypeRuleTypecrmv3propertyValidationsObjectTypeIdPropertyNameruleTypeRuleTypeWithBody(ctx context.Context, objectTypeId string, propertyName string, ruleType PutcrmpropertyValidations202603ObjectTypeIdPropertyNameruleTypeRuleTypecrmv3propertyValidationsObjectTypeIdPropertyNameruleTypeRuleTypeParamsRuleType, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPutcrmpropertyValidations202603ObjectTypeIdPropertyNameruleTypeRuleTypecrmv3propertyValidationsObjectTypeIdPropertyNameruleTypeRuleTypeRequestWithBody(c.Server, objectTypeId, propertyName, ruleType, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// PutcrmpropertyValidations202603ObjectTypeIdPropertyNameruleTypeRuleTypecrmv3propertyValidationsObjectTypeIdPropertyNameruleTypeRuleType Update a validation rule for a specific property and rule type, allowing customization of property value constraints.
+//
+// Update a specific validation rule for a property identified by its name and rule type.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with PUT /crm/property-validations/2026-03/{objectTypeId}/{propertyName}/rule-type/{ruleType} (the `PutcrmpropertyValidations202603ObjectTypeIdPropertyNameruleTypeRuleTypecrmv3propertyValidationsObjectTypeIdPropertyNameruleTypeRuleType` operationId).
+func (c *Client) PutcrmpropertyValidations202603ObjectTypeIdPropertyNameruleTypeRuleTypecrmv3propertyValidationsObjectTypeIdPropertyNameruleTypeRuleType(ctx context.Context, objectTypeId string, propertyName string, ruleType PutcrmpropertyValidations202603ObjectTypeIdPropertyNameruleTypeRuleTypecrmv3propertyValidationsObjectTypeIdPropertyNameruleTypeRuleTypeParamsRuleType, body PutcrmpropertyValidations202603ObjectTypeIdPropertyNameruleTypeRuleTypecrmv3propertyValidationsObjectTypeIdPropertyNameruleTypeRuleTypeJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPutcrmpropertyValidations202603ObjectTypeIdPropertyNameruleTypeRuleTypecrmv3propertyValidationsObjectTypeIdPropertyNameruleTypeRuleTypeRequest(c.Server, objectTypeId, propertyName, ruleType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// PostdealSplits202603batchreadcrmobjectsv3dealssplitsbatchreadWithBody Read a batch of deal split objects by their associated deal object internal ID
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /deal-splits/2026-03/batch/read (the `PostdealSplits202603batchreadcrmobjectsv3dealssplitsbatchread` operationId).
+func (c *Client) PostdealSplits202603batchreadcrmobjectsv3dealssplitsbatchreadWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostdealSplits202603batchreadcrmobjectsv3dealssplitsbatchreadRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// PostdealSplits202603batchreadcrmobjectsv3dealssplitsbatchread Read a batch of deal split objects by their associated deal object internal ID
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /deal-splits/2026-03/batch/read (the `PostdealSplits202603batchreadcrmobjectsv3dealssplitsbatchread` operationId).
+func (c *Client) PostdealSplits202603batchreadcrmobjectsv3dealssplitsbatchread(ctx context.Context, body PostdealSplits202603batchreadcrmobjectsv3dealssplitsbatchreadJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostdealSplits202603batchreadcrmobjectsv3dealssplitsbatchreadRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// PostdealSplits202603batchupsertcrmobjectsv3dealssplitsbatchupsertWithBody Create or replace deal splits for deals with the provided IDs. Deal split percentages for each deal must sum up to 1.0 (100%) and may have up to 8 decimal places
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /deal-splits/2026-03/batch/upsert (the `PostdealSplits202603batchupsertcrmobjectsv3dealssplitsbatchupsert` operationId).
+func (c *Client) PostdealSplits202603batchupsertcrmobjectsv3dealssplitsbatchupsertWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostdealSplits202603batchupsertcrmobjectsv3dealssplitsbatchupsertRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// PostdealSplits202603batchupsertcrmobjectsv3dealssplitsbatchupsert Create or replace deal splits for deals with the provided IDs. Deal split percentages for each deal must sum up to 1.0 (100%) and may have up to 8 decimal places
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /deal-splits/2026-03/batch/upsert (the `PostdealSplits202603batchupsertcrmobjectsv3dealssplitsbatchupsert` operationId).
+func (c *Client) PostdealSplits202603batchupsertcrmobjectsv3dealssplitsbatchupsert(ctx context.Context, body PostdealSplits202603batchupsertcrmobjectsv3dealssplitsbatchupsertJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostdealSplits202603batchupsertcrmobjectsv3dealssplitsbatchupsertRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Getevents202603eventDefinitions Retrieve event definitions
+//
+// Retrieve existing custom event definitions.
+//
+// Corresponds with GET /events/2026-03/event-definitions (the `Getevents202603eventDefinitions` operationId).
+func (c *Client) Getevents202603eventDefinitions(ctx context.Context, params *Getevents202603eventDefinitionsParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetevents202603eventDefinitionsRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postevents202603eventDefinitionsWithBody Create custom event definition
+//
+// Create a custom event definition.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /events/2026-03/event-definitions (the `Postevents202603eventDefinitions` operationId).
+func (c *Client) Postevents202603eventDefinitionsWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostevents202603eventDefinitionsRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postevents202603eventDefinitions Create custom event definition
+//
+// Create a custom event definition.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /events/2026-03/event-definitions (the `Postevents202603eventDefinitions` operationId).
+func (c *Client) Postevents202603eventDefinitions(ctx context.Context, body Postevents202603eventDefinitionsJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostevents202603eventDefinitionsRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Deleteevents202603eventDefinitionsEventName Delete an event definition
+//
+// Delete a custom event definition by name.
+//
+// Corresponds with DELETE /events/2026-03/event-definitions/{eventName} (the `Deleteevents202603eventDefinitionsEventName` operationId).
+func (c *Client) Deleteevents202603eventDefinitionsEventName(ctx context.Context, eventName string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDeleteevents202603eventDefinitionsEventNameRequest(c.Server, eventName)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Getevents202603eventDefinitionsEventName Retrieve a custom event definition
+//
+// Fetch a single custom event definition by name.
+//
+// Corresponds with GET /events/2026-03/event-definitions/{eventName} (the `Getevents202603eventDefinitionsEventName` operationId).
+func (c *Client) Getevents202603eventDefinitionsEventName(ctx context.Context, eventName string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetevents202603eventDefinitionsEventNameRequest(c.Server, eventName)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Patchevents202603eventDefinitionsEventNameWithBody Update a custom event definition
+//
+// Update a specific custom event definition by name.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with PATCH /events/2026-03/event-definitions/{eventName} (the `Patchevents202603eventDefinitionsEventName` operationId).
+func (c *Client) Patchevents202603eventDefinitionsEventNameWithBody(ctx context.Context, eventName string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPatchevents202603eventDefinitionsEventNameRequestWithBody(c.Server, eventName, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Patchevents202603eventDefinitionsEventName Update a custom event definition
+//
+// Update a specific custom event definition by name.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with PATCH /events/2026-03/event-definitions/{eventName} (the `Patchevents202603eventDefinitionsEventName` operationId).
+func (c *Client) Patchevents202603eventDefinitionsEventName(ctx context.Context, eventName string, body Patchevents202603eventDefinitionsEventNameJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPatchevents202603eventDefinitionsEventNameRequest(c.Server, eventName, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postevents202603eventDefinitionsEventNamepropertyWithBody Create a property for an event definition
+//
+// Create a new property for an existing event definition.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /events/2026-03/event-definitions/{eventName}/property (the `Postevents202603eventDefinitionsEventNameproperty` operationId).
+func (c *Client) Postevents202603eventDefinitionsEventNamepropertyWithBody(ctx context.Context, eventName string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostevents202603eventDefinitionsEventNamepropertyRequestWithBody(c.Server, eventName, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postevents202603eventDefinitionsEventNameproperty Create a property for an event definition
+//
+// Create a new property for an existing event definition.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /events/2026-03/event-definitions/{eventName}/property (the `Postevents202603eventDefinitionsEventNameproperty` operationId).
+func (c *Client) Postevents202603eventDefinitionsEventNameproperty(ctx context.Context, eventName string, body Postevents202603eventDefinitionsEventNamepropertyJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostevents202603eventDefinitionsEventNamepropertyRequest(c.Server, eventName, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Deleteevents202603eventDefinitionsEventNamepropertyPropertyName Delete a property from a custom event definition
+//
+// Delete an existing property from a custom event definition.
+//
+// Corresponds with DELETE /events/2026-03/event-definitions/{eventName}/property/{propertyName} (the `Deleteevents202603eventDefinitionsEventNamepropertyPropertyName` operationId).
+func (c *Client) Deleteevents202603eventDefinitionsEventNamepropertyPropertyName(ctx context.Context, eventName string, propertyName string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDeleteevents202603eventDefinitionsEventNamepropertyPropertyNameRequest(c.Server, eventName, propertyName)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Patchevents202603eventDefinitionsEventNamepropertyPropertyNameWithBody Update an existing custom event property
+//
+// Update an existing property in a custom event definition.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with PATCH /events/2026-03/event-definitions/{eventName}/property/{propertyName} (the `Patchevents202603eventDefinitionsEventNamepropertyPropertyName` operationId).
+func (c *Client) Patchevents202603eventDefinitionsEventNamepropertyPropertyNameWithBody(ctx context.Context, eventName string, propertyName string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPatchevents202603eventDefinitionsEventNamepropertyPropertyNameRequestWithBody(c.Server, eventName, propertyName, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Patchevents202603eventDefinitionsEventNamepropertyPropertyName Update an existing custom event property
+//
+// Update an existing property in a custom event definition.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with PATCH /events/2026-03/event-definitions/{eventName}/property/{propertyName} (the `Patchevents202603eventDefinitionsEventNamepropertyPropertyName` operationId).
+func (c *Client) Patchevents202603eventDefinitionsEventNamepropertyPropertyName(ctx context.Context, eventName string, propertyName string, body Patchevents202603eventDefinitionsEventNamepropertyPropertyNameJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPatchevents202603eventDefinitionsEventNamepropertyPropertyNameRequest(c.Server, eventName, propertyName, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postevents202603sendSendWithBody Send a custom event occurrence
+//
+// Send data for a single custom event occurrence.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /events/2026-03/send (the `Postevents202603sendSend` operationId).
+func (c *Client) Postevents202603sendSendWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostevents202603sendSendRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postevents202603sendSend Send a custom event occurrence
+//
+// Send data for a single custom event occurrence.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /events/2026-03/send (the `Postevents202603sendSend` operationId).
+func (c *Client) Postevents202603sendSend(ctx context.Context, body Postevents202603sendSendJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostevents202603sendSendRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postevents202603sendbatchSendWithBody Send a batch of event occurrences
+//
+// Send multiple event occurrences at once.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /events/2026-03/send/batch (the `Postevents202603sendbatchSend` operationId).
+func (c *Client) Postevents202603sendbatchSendWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostevents202603sendbatchSendRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postevents202603sendbatchSend Send a batch of event occurrences
+//
+// Send multiple event occurrences at once.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /events/2026-03/send/batch (the `Postevents202603sendbatchSend` operationId).
+func (c *Client) Postevents202603sendbatchSend(ctx context.Context, body Postevents202603sendbatchSendJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostevents202603sendbatchSendRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// GeteventseventOccurrences202603eventseventOccurrences202603 Retrieve events
+//
+// Retrieve event occurrences for a specified date in September 2026. This endpoint allows you to filter and sort events based on various criteria, such as event type, object type, and occurrence dates. It supports pagination and can return specific properties of events if requested.
+//
+// Corresponds with GET /events/event-occurrences/2026-03 (the `GeteventseventOccurrences202603eventseventOccurrences202603` operationId).
+func (c *Client) GeteventseventOccurrences202603eventseventOccurrences202603(ctx context.Context, params *GeteventseventOccurrences202603eventseventOccurrences202603Params, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGeteventseventOccurrences202603eventseventOccurrences202603Request(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// GeteventseventOccurrences202603eventTypeseventseventOccurrences202603eventTypes Retrieve event types
+//
+// Retrieve a list of event type names. You may use these event types to query the API for event occurrences of a desired type.
+//
+// Note: the `get_types` method is only supported in the Python SDK version `12.0.0-beta.1` or later.
+//
+// Corresponds with GET /events/event-occurrences/2026-03/event-types (the `GeteventseventOccurrences202603eventTypeseventseventOccurrences202603eventTypes` operationId).
+func (c *Client) GeteventseventOccurrences202603eventTypeseventseventOccurrences202603eventTypes(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGeteventseventOccurrences202603eventTypeseventseventOccurrences202603eventTypesRequest(c.Server)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// GetfeatureFlags202603AppIdflagsallfeatureFlagsv3AppIdflagsall List Flags
+//
+// Retrieve all feature flags associated with a specific application in your HubSpot account. This endpoint is useful for developers who need to manage or audit feature flags for their applications. It requires the application ID to identify which application's flags to list.
+//
+// Corresponds with GET /feature-flags/2026-03/{appId}/flags/all (the `GetfeatureFlags202603AppIdflagsallfeatureFlagsv3AppIdflagsall` operationId).
+func (c *Client) GetfeatureFlags202603AppIdflagsallfeatureFlagsv3AppIdflagsall(ctx context.Context, appId int32, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetfeatureFlags202603AppIdflagsallfeatureFlagsv3AppIdflagsallRequest(c.Server, appId)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// DeletefeatureFlags202603AppIdflagsFlagName Delete an app's feature flag
+//
+// Delete a feature flag in an app.  For example, delete the `hs-release-app-cards` flag after all accounts have been migrated.
+//
+// Corresponds with DELETE /feature-flags/2026-03/{appId}/flags/{flagName} (the `DeletefeatureFlags202603AppIdflagsFlagName` operationId).
+func (c *Client) DeletefeatureFlags202603AppIdflagsFlagName(ctx context.Context, appId int32, flagName string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDeletefeatureFlags202603AppIdflagsFlagNameRequest(c.Server, appId, flagName)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// GetfeatureFlags202603AppIdflagsFlagName Retrieve an app's feature flags
+//
+// Retrieve the current status of the app's feature flags. No request body is included.
+//
+// Corresponds with GET /feature-flags/2026-03/{appId}/flags/{flagName} (the `GetfeatureFlags202603AppIdflagsFlagName` operationId).
+func (c *Client) GetfeatureFlags202603AppIdflagsFlagName(ctx context.Context, appId int32, flagName string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetfeatureFlags202603AppIdflagsFlagNameRequest(c.Server, appId, flagName)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// PutfeatureFlags202603AppIdflagsFlagNameWithBody Set an app's feature flag
+//
+// Set a feature flag for an app. For example, update the `hs-hide-crm-cards` flag's `defaultState` to `ON` to hide classic CRM cards from new installs.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with PUT /feature-flags/2026-03/{appId}/flags/{flagName} (the `PutfeatureFlags202603AppIdflagsFlagName` operationId).
+func (c *Client) PutfeatureFlags202603AppIdflagsFlagNameWithBody(ctx context.Context, appId int32, flagName string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPutfeatureFlags202603AppIdflagsFlagNameRequestWithBody(c.Server, appId, flagName, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// PutfeatureFlags202603AppIdflagsFlagName Set an app's feature flag
+//
+// Set a feature flag for an app. For example, update the `hs-hide-crm-cards` flag's `defaultState` to `ON` to hide classic CRM cards from new installs.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with PUT /feature-flags/2026-03/{appId}/flags/{flagName} (the `PutfeatureFlags202603AppIdflagsFlagName` operationId).
+func (c *Client) PutfeatureFlags202603AppIdflagsFlagName(ctx context.Context, appId int32, flagName string, body PutfeatureFlags202603AppIdflagsFlagNameJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPutfeatureFlags202603AppIdflagsFlagNameRequest(c.Server, appId, flagName, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // GetfeatureFlags202603AppIdflagsFlagNameportals Retrieve accounts with a set flag state
 //
 // Retrieve a list of HubSpot accounts with an account-level flag setting for the specified app. No request body is included.
@@ -669,8 +1266,13 @@ func (c *Client) Postintegratorstimeline202603eventsCreate(ctx context.Context, 
 	return c.Client.Do(req)
 }
 
-// Postintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatchWithBody performs a POST /integrators/timeline/2026-03/events/batch (the `Postintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatch` operationId) request,
-// with any type of body and a specified content type.
+// Postintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatchWithBody Batch insert events
+//
+// Insert a batch of new App Event occurrences into the timeline. Each occurrence in the batch is immutable, and if an occurrence with the same ID already exists, the entire batch will be rejected. The batch can include occurrences from multiple event types, but all must belong to a single portal.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /integrators/timeline/2026-03/events/batch (the `Postintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatch` operationId).
 func (c *Client) Postintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatchWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatchRequestWithBody(c.Server, contentType, body)
 	if err != nil {
@@ -683,8 +1285,13 @@ func (c *Client) Postintegratorstimeline202603eventsbatchintegratorstimeline2026
 	return c.Client.Do(req)
 }
 
-// Postintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatch performs a POST /integrators/timeline/2026-03/events/batch (the `Postintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatch` operationId) request.
+// Postintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatch Batch insert events
+//
+// Insert a batch of new App Event occurrences into the timeline. Each occurrence in the batch is immutable, and if an occurrence with the same ID already exists, the entire batch will be rejected. The batch can include occurrences from multiple event types, but all must belong to a single portal.
+//
 // Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /integrators/timeline/2026-03/events/batch (the `Postintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatch` operationId).
 func (c *Client) Postintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatch(ctx context.Context, body Postintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatchJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatchRequest(c.Server, body)
 	if err != nil {
@@ -697,8 +1304,13 @@ func (c *Client) Postintegratorstimeline202603eventsbatchintegratorstimeline2026
 	return c.Client.Do(req)
 }
 
-// Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojectsWithBody performs a POST /integrators/timeline/2026-03/types/projects (the `Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojects` operationId) request,
-// with any type of body and a specified content type.
+// Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojectsWithBody Resolve Event Type
+//
+// Resolve the fully qualified name (FQN) of an App Event Type using its developer coordinates, which include the project name and developer symbol. This endpoint is used for event types managed through Projects and does not support legacy or non-migrated event types.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /integrators/timeline/2026-03/types/projects (the `Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojects` operationId).
 func (c *Client) Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojectsWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojectsRequestWithBody(c.Server, contentType, body)
 	if err != nil {
@@ -711,8 +1323,13 @@ func (c *Client) Postintegratorstimeline202603typesprojectsintegratorstimeline20
 	return c.Client.Do(req)
 }
 
-// Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojects performs a POST /integrators/timeline/2026-03/types/projects (the `Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojects` operationId) request.
+// Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojects Resolve Event Type
+//
+// Resolve the fully qualified name (FQN) of an App Event Type using its developer coordinates, which include the project name and developer symbol. This endpoint is used for event types managed through Projects and does not support legacy or non-migrated event types.
+//
 // Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /integrators/timeline/2026-03/types/projects (the `Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojects` operationId).
 func (c *Client) Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojects(ctx context.Context, body Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojectsJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojectsRequest(c.Server, body)
 	if err != nil {
@@ -725,11 +1342,7 @@ func (c *Client) Postintegratorstimeline202603typesprojectsintegratorstimeline20
 	return c.Client.Do(req)
 }
 
-// Getmarketingcampaigns202603marketingcampaignsv3 Retrieve campaigns
-//
-// Retrieve a paginated list of campaigns from your HubSpot account. This endpoint allows you to specify sorting, pagination, and filtering options to tailor the results to your needs.
-//
-// Corresponds with GET /marketing/campaigns/2026-03 (the `Getmarketingcampaigns202603marketingcampaignsv3` operationId).
+// Getmarketingcampaigns202603marketingcampaignsv3 performs a GET /marketing/campaigns/2026-03 (the `Getmarketingcampaigns202603marketingcampaignsv3` operationId) request.
 func (c *Client) Getmarketingcampaigns202603marketingcampaignsv3(ctx context.Context, params *Getmarketingcampaigns202603marketingcampaignsv3Params, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewGetmarketingcampaigns202603marketingcampaignsv3Request(c.Server, params)
 	if err != nil {
@@ -742,13 +1355,8 @@ func (c *Client) Getmarketingcampaigns202603marketingcampaignsv3(ctx context.Con
 	return c.Client.Do(req)
 }
 
-// Postmarketingcampaigns202603marketingcampaignsv3WithBody Create a campaign
-//
-// Create a campaign with the specified properties and receive a copy of the campaign object, including its ID. Note that the 'hs_goal' property is deprecated and will be ignored if provided.
-//
-// Takes any type of body and a specified content type.
-//
-// Corresponds with POST /marketing/campaigns/2026-03 (the `Postmarketingcampaigns202603marketingcampaignsv3` operationId).
+// Postmarketingcampaigns202603marketingcampaignsv3WithBody performs a POST /marketing/campaigns/2026-03 (the `Postmarketingcampaigns202603marketingcampaignsv3` operationId) request,
+// with any type of body and a specified content type.
 func (c *Client) Postmarketingcampaigns202603marketingcampaignsv3WithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostmarketingcampaigns202603marketingcampaignsv3RequestWithBody(c.Server, contentType, body)
 	if err != nil {
@@ -761,13 +1369,8 @@ func (c *Client) Postmarketingcampaigns202603marketingcampaignsv3WithBody(ctx co
 	return c.Client.Do(req)
 }
 
-// Postmarketingcampaigns202603marketingcampaignsv3 Create a campaign
-//
-// Create a campaign with the specified properties and receive a copy of the campaign object, including its ID. Note that the 'hs_goal' property is deprecated and will be ignored if provided.
-//
+// Postmarketingcampaigns202603marketingcampaignsv3 performs a POST /marketing/campaigns/2026-03 (the `Postmarketingcampaigns202603marketingcampaignsv3` operationId) request.
 // Takes a body of the `application/json` content type.
-//
-// Corresponds with POST /marketing/campaigns/2026-03 (the `Postmarketingcampaigns202603marketingcampaignsv3` operationId).
 func (c *Client) Postmarketingcampaigns202603marketingcampaignsv3(ctx context.Context, body Postmarketingcampaigns202603marketingcampaignsv3JSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostmarketingcampaigns202603marketingcampaignsv3Request(c.Server, body)
 	if err != nil {
@@ -1406,7 +2009,11 @@ func (c *Client) PostmarketingemailCampaigns202603singleSendmarketingv4emailsing
 	return c.Client.Do(req)
 }
 
-// Getmarketingemails202603marketingemailsv3 performs a GET /marketing/emails/2026-03 (the `Getmarketingemails202603marketingemailsv3` operationId) request.
+// Getmarketingemails202603marketingemailsv3 List Emails
+//
+// Retrieve a list of marketing emails from your HubSpot account. This endpoint allows you to filter emails based on various criteria such as publication date, creation date, update date, and more. You can also control the number of results per page and include additional statistics or properties in the response.
+//
+// Corresponds with GET /marketing/emails/2026-03 (the `Getmarketingemails202603marketingemailsv3` operationId).
 func (c *Client) Getmarketingemails202603marketingemailsv3(ctx context.Context, params *Getmarketingemails202603marketingemailsv3Params, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewGetmarketingemails202603marketingemailsv3Request(c.Server, params)
 	if err != nil {
@@ -1419,8 +2026,13 @@ func (c *Client) Getmarketingemails202603marketingemailsv3(ctx context.Context, 
 	return c.Client.Do(req)
 }
 
-// Postmarketingemails202603marketingemailsv3WithBody performs a POST /marketing/emails/2026-03 (the `Postmarketingemails202603marketingemailsv3` operationId) request,
-// with any type of body and a specified content type.
+// Postmarketingemails202603marketingemailsv3WithBody Create Email
+//
+// Create a new marketing email in your HubSpot account using the specified parameters. This endpoint allows you to define the content, settings, and other details of the email. Upon successful creation, the URL of the newly created email resource is returned.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /marketing/emails/2026-03 (the `Postmarketingemails202603marketingemailsv3` operationId).
 func (c *Client) Postmarketingemails202603marketingemailsv3WithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostmarketingemails202603marketingemailsv3RequestWithBody(c.Server, contentType, body)
 	if err != nil {
@@ -1433,8 +2045,13 @@ func (c *Client) Postmarketingemails202603marketingemailsv3WithBody(ctx context.
 	return c.Client.Do(req)
 }
 
-// Postmarketingemails202603marketingemailsv3 performs a POST /marketing/emails/2026-03 (the `Postmarketingemails202603marketingemailsv3` operationId) request.
+// Postmarketingemails202603marketingemailsv3 Create Email
+//
+// Create a new marketing email in your HubSpot account using the specified parameters. This endpoint allows you to define the content, settings, and other details of the email. Upon successful creation, the URL of the newly created email resource is returned.
+//
 // Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /marketing/emails/2026-03 (the `Postmarketingemails202603marketingemailsv3` operationId).
 func (c *Client) Postmarketingemails202603marketingemailsv3(ctx context.Context, body Postmarketingemails202603marketingemailsv3JSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostmarketingemails202603marketingemailsv3Request(c.Server, body)
 	if err != nil {
@@ -1720,7 +2337,7 @@ func (c *Client) Postmarketingemails202603EmailIddraftresetResetDraft(ctx contex
 
 // Postmarketingemails202603EmailIdpublishPublishOrSend Publish or send a marketing email
 //
-// If you have a Marketing Hub Enterprise account or the transactional email add-on, you can use this endpoint to publish an automated email or send/schedule a regular email.
+// If you have a Marketing Hub Enterprise account or the Transactional Email Add-On, you can use this endpoint to publish an automated email or send/schedule a regular email.
 //
 // Corresponds with POST /marketing/emails/2026-03/{emailId}/publish (the `Postmarketingemails202603EmailIdpublishPublishOrSend` operationId).
 func (c *Client) Postmarketingemails202603EmailIdpublishPublishOrSend(ctx context.Context, emailId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
@@ -1805,7 +2422,7 @@ func (c *Client) Postmarketingemails202603EmailIdrevisionsRevisionIdrestoreToDra
 
 // Postmarketingemails202603EmailIdunpublishUnpublishOrCancel Unpublish or cancel a marketing email
 //
-// If you have a Marketing Hub Enterprise account or the transactional email add-on, you can use this endpoint to unpublish an automated email or cancel a regular email. If the email is already in the process of being sent, canceling might not be possible.
+// If you have a Marketing Hub Enterprise account or the Transactional Email Add-On, you can use this endpoint to unpublish an automated email or cancel a regular email. If the email is already in the process of being sent, canceling might not be possible.
 //
 // Corresponds with POST /marketing/emails/2026-03/{emailId}/unpublish (the `Postmarketingemails202603EmailIdunpublishUnpublishOrCancel` operationId).
 func (c *Client) Postmarketingemails202603EmailIdunpublishUnpublishOrCancel(ctx context.Context, emailId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
@@ -1820,7 +2437,11 @@ func (c *Client) Postmarketingemails202603EmailIdunpublishUnpublishOrCancel(ctx 
 	return c.Client.Do(req)
 }
 
-// GetmarketingmarketingEvents202603marketingmarketingEventsv3 performs a GET /marketing/marketing-events/2026-03 (the `GetmarketingmarketingEvents202603marketingmarketingEventsv3` operationId) request.
+// GetmarketingmarketingEvents202603marketingmarketingEventsv3 List
+//
+// Retrieve a list of marketing events for the specified API version. This endpoint supports pagination to navigate through large sets of data. Use this to access marketing event details in a paginated format.
+//
+// Corresponds with GET /marketing/marketing-events/2026-03 (the `GetmarketingmarketingEvents202603marketingmarketingEventsv3` operationId).
 func (c *Client) GetmarketingmarketingEvents202603marketingmarketingEventsv3(ctx context.Context, params *GetmarketingmarketingEvents202603marketingmarketingEventsv3Params, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewGetmarketingmarketingEvents202603marketingmarketingEventsv3Request(c.Server, params)
 	if err != nil {
@@ -3000,9 +3621,9 @@ func (c *Client) Postmarketingtransactional202603smtpTokensTokenIdpasswordResetR
 	return c.Client.Do(req)
 }
 
-// PostmediaBridge202603eventsattentionSpanWithBody Create an attention span event
+// PostmediaBridge202603eventsattentionSpanWithBody Create Event
 //
-// Create an event containing the viewers attention span details for the media.
+// Create a new attention span event in the MediaBridgeService. This endpoint is used to record attention span events, which can be useful for tracking user engagement with media content. The request must include a valid JSON body conforming to the AttentionSpanEventRequest schema.
 //
 // Takes any type of body and a specified content type.
 //
@@ -3019,9 +3640,9 @@ func (c *Client) PostmediaBridge202603eventsattentionSpanWithBody(ctx context.Co
 	return c.Client.Do(req)
 }
 
-// PostmediaBridge202603eventsattentionSpan Create an attention span event
+// PostmediaBridge202603eventsattentionSpan Create Event
 //
-// Create an event containing the viewers attention span details for the media.
+// Create a new attention span event in the MediaBridgeService. This endpoint is used to record attention span events, which can be useful for tracking user engagement with media content. The request must include a valid JSON body conforming to the AttentionSpanEventRequest schema.
 //
 // Takes a body of the `application/json` content type.
 //
@@ -3038,9 +3659,9 @@ func (c *Client) PostmediaBridge202603eventsattentionSpan(ctx context.Context, b
 	return c.Client.Do(req)
 }
 
-// PostmediaBridge202603eventsmediaPlayedWithBody Create a played event
+// PostmediaBridge202603eventsmediaPlayedWithBody Create
 //
-// Create an event for when a user begins playing a piece of media.
+// Create a media played event in the HubSpot account. This endpoint is used to log when media content has been played, which can be useful for tracking user engagement with media resources.
 //
 // Takes any type of body and a specified content type.
 //
@@ -3057,9 +3678,9 @@ func (c *Client) PostmediaBridge202603eventsmediaPlayedWithBody(ctx context.Cont
 	return c.Client.Do(req)
 }
 
-// PostmediaBridge202603eventsmediaPlayed Create a played event
+// PostmediaBridge202603eventsmediaPlayed Create
 //
-// Create an event for when a user begins playing a piece of media.
+// Create a media played event in the HubSpot account. This endpoint is used to log when media content has been played, which can be useful for tracking user engagement with media resources.
 //
 // Takes a body of the `application/json` content type.
 //
@@ -3076,9 +3697,9 @@ func (c *Client) PostmediaBridge202603eventsmediaPlayed(ctx context.Context, bod
 	return c.Client.Do(req)
 }
 
-// PostmediaBridge202603eventsmediaPlayedPercentWithBody Create a quartile event
+// PostmediaBridge202603eventsmediaPlayedPercentWithBody Record Media Played Percentage
 //
-// Create an event representing a user reaching quarterly milestones in a piece of media they're viewing.
+// This endpoint allows you to record the percentage of media that has been played. It is useful for tracking user engagement with media content, such as videos or audio files, by capturing the extent to which the media has been consumed. This data can be used for analytics and improving content delivery strategies.
 //
 // Takes any type of body and a specified content type.
 //
@@ -3095,9 +3716,9 @@ func (c *Client) PostmediaBridge202603eventsmediaPlayedPercentWithBody(ctx conte
 	return c.Client.Do(req)
 }
 
-// PostmediaBridge202603eventsmediaPlayedPercent Create a quartile event
+// PostmediaBridge202603eventsmediaPlayedPercent Record Media Played Percentage
 //
-// Create an event representing a user reaching quarterly milestones in a piece of media they're viewing.
+// This endpoint allows you to record the percentage of media that has been played. It is useful for tracking user engagement with media content, such as videos or audio files, by capturing the extent to which the media has been consumed. This data can be used for analytics and improving content delivery strategies.
 //
 // Takes a body of the `application/json` content type.
 //
@@ -3114,9 +3735,9 @@ func (c *Client) PostmediaBridge202603eventsmediaPlayedPercent(ctx context.Conte
 	return c.Client.Do(req)
 }
 
-// GetmediaBridge202603AppIdpropertiesObjectType Get the properties for an object type.
+// GetmediaBridge202603AppIdpropertiesObjectType Retrieve properties
 //
-// Get the existing properties defined for a media object type.
+// Retrieve properties for a specified object type within a given app. This endpoint allows you to filter properties based on whether they are archived and to specify which properties to include in the response. It is useful for accessing and managing the properties associated with different object types in your application.
 //
 // Corresponds with GET /media-bridge/2026-03/{appId}/properties/{objectType} (the `GetmediaBridge202603AppIdpropertiesObjectType` operationId).
 func (c *Client) GetmediaBridge202603AppIdpropertiesObjectType(ctx context.Context, appId int32, objectType string, params *GetmediaBridge202603AppIdpropertiesObjectTypeParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
@@ -3131,9 +3752,9 @@ func (c *Client) GetmediaBridge202603AppIdpropertiesObjectType(ctx context.Conte
 	return c.Client.Do(req)
 }
 
-// PostmediaBridge202603AppIdpropertiesObjectTypeWithBody Create a new property
+// PostmediaBridge202603AppIdpropertiesObjectTypeWithBody Create property
 //
-// Create a new property for the specified media type.
+// Create a new property for a specified object type within a given app in the MediaBridge service. This endpoint allows you to define new properties that can be used to store additional information related to the object type. The request must include the necessary property details in the request body.
 //
 // Takes any type of body and a specified content type.
 //
@@ -3150,9 +3771,9 @@ func (c *Client) PostmediaBridge202603AppIdpropertiesObjectTypeWithBody(ctx cont
 	return c.Client.Do(req)
 }
 
-// PostmediaBridge202603AppIdpropertiesObjectType Create a new property
+// PostmediaBridge202603AppIdpropertiesObjectType Create property
 //
-// Create a new property for the specified media type.
+// Create a new property for a specified object type within a given app in the MediaBridge service. This endpoint allows you to define new properties that can be used to store additional information related to the object type. The request must include the necessary property details in the request body.
 //
 // Takes a body of the `application/json` content type.
 //
@@ -3169,9 +3790,9 @@ func (c *Client) PostmediaBridge202603AppIdpropertiesObjectType(ctx context.Cont
 	return c.Client.Do(req)
 }
 
-// PostmediaBridge202603AppIdpropertiesObjectTypebatcharchiveWithBody Archive multiple properties
+// PostmediaBridge202603AppIdpropertiesObjectTypebatcharchiveWithBody Batch archive properties
 //
-// Archive a batch of existing properties for the specified types.
+// Archive multiple properties for a specified object type within a given app. This endpoint is useful for managing large sets of properties that are no longer needed or should be hidden from active use. It requires specifying the app ID and object type in the path parameters.
 //
 // Takes any type of body and a specified content type.
 //
@@ -3188,9 +3809,9 @@ func (c *Client) PostmediaBridge202603AppIdpropertiesObjectTypebatcharchiveWithB
 	return c.Client.Do(req)
 }
 
-// PostmediaBridge202603AppIdpropertiesObjectTypebatcharchive Archive multiple properties
+// PostmediaBridge202603AppIdpropertiesObjectTypebatcharchive Batch archive properties
 //
-// Archive a batch of existing properties for the specified types.
+// Archive multiple properties for a specified object type within a given app. This endpoint is useful for managing large sets of properties that are no longer needed or should be hidden from active use. It requires specifying the app ID and object type in the path parameters.
 //
 // Takes a body of the `application/json` content type.
 //
@@ -3207,9 +3828,9 @@ func (c *Client) PostmediaBridge202603AppIdpropertiesObjectTypebatcharchive(ctx 
 	return c.Client.Do(req)
 }
 
-// PostmediaBridge202603AppIdpropertiesObjectTypebatchcreateWithBody Create multiple properties
+// PostmediaBridge202603AppIdpropertiesObjectTypebatchcreateWithBody Batch create properties
 //
-// Create a batch of properties of the specified object type.
+// Create multiple properties in a batch for a specified object type within a given app. This endpoint is useful for efficiently setting up multiple properties at once, reducing the need for multiple individual API calls.
 //
 // Takes any type of body and a specified content type.
 //
@@ -3226,9 +3847,9 @@ func (c *Client) PostmediaBridge202603AppIdpropertiesObjectTypebatchcreateWithBo
 	return c.Client.Do(req)
 }
 
-// PostmediaBridge202603AppIdpropertiesObjectTypebatchcreate Create multiple properties
+// PostmediaBridge202603AppIdpropertiesObjectTypebatchcreate Batch create properties
 //
-// Create a batch of properties of the specified object type.
+// Create multiple properties in a batch for a specified object type within a given app. This endpoint is useful for efficiently setting up multiple properties at once, reducing the need for multiple individual API calls.
 //
 // Takes a body of the `application/json` content type.
 //
@@ -3245,9 +3866,9 @@ func (c *Client) PostmediaBridge202603AppIdpropertiesObjectTypebatchcreate(ctx c
 	return c.Client.Do(req)
 }
 
-// PostmediaBridge202603AppIdpropertiesObjectTypebatchreadWithBody Get the details for multiple properties
+// PostmediaBridge202603AppIdpropertiesObjectTypebatchreadWithBody Batch read properties
 //
-// Get the details for a batch of properties for a specified object type.
+// Retrieve a batch of properties for a specified object type within a given app. This endpoint is useful for fetching multiple properties efficiently in a single request, especially when dealing with large datasets or when specific properties are needed for processing.
 //
 // Takes any type of body and a specified content type.
 //
@@ -3264,9 +3885,9 @@ func (c *Client) PostmediaBridge202603AppIdpropertiesObjectTypebatchreadWithBody
 	return c.Client.Do(req)
 }
 
-// PostmediaBridge202603AppIdpropertiesObjectTypebatchread Get the details for multiple properties
+// PostmediaBridge202603AppIdpropertiesObjectTypebatchread Batch read properties
 //
-// Get the details for a batch of properties for a specified object type.
+// Retrieve a batch of properties for a specified object type within a given app. This endpoint is useful for fetching multiple properties efficiently in a single request, especially when dealing with large datasets or when specific properties are needed for processing.
 //
 // Takes a body of the `application/json` content type.
 //
@@ -3283,9 +3904,9 @@ func (c *Client) PostmediaBridge202603AppIdpropertiesObjectTypebatchread(ctx con
 	return c.Client.Do(req)
 }
 
-// GetmediaBridge202603AppIdpropertiesObjectTypegroups Get property groups
+// GetmediaBridge202603AppIdpropertiesObjectTypegroups List groups
 //
-// Get the property groups for a specified object type.
+// Retrieve a list of property groups for a specified object type within a given app. This endpoint is useful for obtaining organizational information about properties associated with different object types in your application.
 //
 // Corresponds with GET /media-bridge/2026-03/{appId}/properties/{objectType}/groups (the `GetmediaBridge202603AppIdpropertiesObjectTypegroups` operationId).
 func (c *Client) GetmediaBridge202603AppIdpropertiesObjectTypegroups(ctx context.Context, appId int32, objectType string, reqEditors ...RequestEditorFn) (*http.Response, error) {
@@ -3300,9 +3921,9 @@ func (c *Client) GetmediaBridge202603AppIdpropertiesObjectTypegroups(ctx context
 	return c.Client.Do(req)
 }
 
-// PostmediaBridge202603AppIdpropertiesObjectTypegroupsWithBody Create a new property group
+// PostmediaBridge202603AppIdpropertiesObjectTypegroupsWithBody Create Group
 //
-// Create a new property group for the specified object type.
+// Create a new property group for a specified object type within a given app. This endpoint allows you to organize properties into groups, making it easier to manage and categorize them within your application.
 //
 // Takes any type of body and a specified content type.
 //
@@ -3319,9 +3940,9 @@ func (c *Client) PostmediaBridge202603AppIdpropertiesObjectTypegroupsWithBody(ct
 	return c.Client.Do(req)
 }
 
-// PostmediaBridge202603AppIdpropertiesObjectTypegroups Create a new property group
+// PostmediaBridge202603AppIdpropertiesObjectTypegroups Create Group
 //
-// Create a new property group for the specified object type.
+// Create a new property group for a specified object type within a given app. This endpoint allows you to organize properties into groups, making it easier to manage and categorize them within your application.
 //
 // Takes a body of the `application/json` content type.
 //
@@ -3338,9 +3959,9 @@ func (c *Client) PostmediaBridge202603AppIdpropertiesObjectTypegroups(ctx contex
 	return c.Client.Do(req)
 }
 
-// DeletemediaBridge202603AppIdpropertiesObjectTypegroupsGroupName Delete a property group
+// DeletemediaBridge202603AppIdpropertiesObjectTypegroupsGroupName Delete group
 //
-// Delete an existing property group by name.
+// Delete a specific property group for a given object type within an app. This operation is useful for removing unnecessary or obsolete property groups, helping to maintain a clean and organized structure within your app's properties.
 //
 // Corresponds with DELETE /media-bridge/2026-03/{appId}/properties/{objectType}/groups/{groupName} (the `DeletemediaBridge202603AppIdpropertiesObjectTypegroupsGroupName` operationId).
 func (c *Client) DeletemediaBridge202603AppIdpropertiesObjectTypegroupsGroupName(ctx context.Context, appId int32, objectType string, groupName string, reqEditors ...RequestEditorFn) (*http.Response, error) {
@@ -3355,9 +3976,9 @@ func (c *Client) DeletemediaBridge202603AppIdpropertiesObjectTypegroupsGroupName
 	return c.Client.Do(req)
 }
 
-// GetmediaBridge202603AppIdpropertiesObjectTypegroupsGroupName Get a specific property group
+// GetmediaBridge202603AppIdpropertiesObjectTypegroupsGroupName Retrieve group
 //
-// Get the details of an existing property group by name.
+// Retrieve a specific property group for a given object type within an app. This endpoint is useful for accessing detailed information about how properties are grouped under a specific group name for a particular object type in your application.
 //
 // Corresponds with GET /media-bridge/2026-03/{appId}/properties/{objectType}/groups/{groupName} (the `GetmediaBridge202603AppIdpropertiesObjectTypegroupsGroupName` operationId).
 func (c *Client) GetmediaBridge202603AppIdpropertiesObjectTypegroupsGroupName(ctx context.Context, appId int32, objectType string, groupName string, reqEditors ...RequestEditorFn) (*http.Response, error) {
@@ -3372,9 +3993,9 @@ func (c *Client) GetmediaBridge202603AppIdpropertiesObjectTypegroupsGroupName(ct
 	return c.Client.Do(req)
 }
 
-// PatchmediaBridge202603AppIdpropertiesObjectTypegroupsGroupNameWithBody Update a property group
+// PatchmediaBridge202603AppIdpropertiesObjectTypegroupsGroupNameWithBody Update group
 //
-// Update an existing property group by name.
+// Update the properties of a specific group within a specified object type for a given app. This operation allows you to modify the details of a property group, such as its label or display order, within the context of the MediaBridge service.
 //
 // Takes any type of body and a specified content type.
 //
@@ -3391,9 +4012,9 @@ func (c *Client) PatchmediaBridge202603AppIdpropertiesObjectTypegroupsGroupNameW
 	return c.Client.Do(req)
 }
 
-// PatchmediaBridge202603AppIdpropertiesObjectTypegroupsGroupName Update a property group
+// PatchmediaBridge202603AppIdpropertiesObjectTypegroupsGroupName Update group
 //
-// Update an existing property group by name.
+// Update the properties of a specific group within a specified object type for a given app. This operation allows you to modify the details of a property group, such as its label or display order, within the context of the MediaBridge service.
 //
 // Takes a body of the `application/json` content type.
 //
@@ -3410,9 +4031,9 @@ func (c *Client) PatchmediaBridge202603AppIdpropertiesObjectTypegroupsGroupName(
 	return c.Client.Do(req)
 }
 
-// DeletemediaBridge202603AppIdpropertiesObjectTypePropertyName Delete a property
+// DeletemediaBridge202603AppIdpropertiesObjectTypePropertyName Delete property
 //
-// Delete an existing property for an object type.
+// Delete a specific property from a given object type within an app. This operation is useful for removing properties that are no longer needed or were created in error. The endpoint requires specifying the app ID, object type, and property name to identify the property to be deleted.
 //
 // Corresponds with DELETE /media-bridge/2026-03/{appId}/properties/{objectType}/{propertyName} (the `DeletemediaBridge202603AppIdpropertiesObjectTypePropertyName` operationId).
 func (c *Client) DeletemediaBridge202603AppIdpropertiesObjectTypePropertyName(ctx context.Context, appId int32, objectType string, propertyName string, reqEditors ...RequestEditorFn) (*http.Response, error) {
@@ -3427,9 +4048,9 @@ func (c *Client) DeletemediaBridge202603AppIdpropertiesObjectTypePropertyName(ct
 	return c.Client.Do(req)
 }
 
-// GetmediaBridge202603AppIdpropertiesObjectTypePropertyName Get the details for a property
+// GetmediaBridge202603AppIdpropertiesObjectTypePropertyName Retrieve property
 //
-// Get the details for an existing property by name.
+// Retrieve a specific property for a given object type within a specified app. This endpoint allows you to access details about a property, including its configuration and settings, for a particular object type identified by the property name. This can be useful for understanding property configurations or for integration purposes.
 //
 // Corresponds with GET /media-bridge/2026-03/{appId}/properties/{objectType}/{propertyName} (the `GetmediaBridge202603AppIdpropertiesObjectTypePropertyName` operationId).
 func (c *Client) GetmediaBridge202603AppIdpropertiesObjectTypePropertyName(ctx context.Context, appId int32, objectType string, propertyName string, params *GetmediaBridge202603AppIdpropertiesObjectTypePropertyNameParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
@@ -3444,9 +4065,9 @@ func (c *Client) GetmediaBridge202603AppIdpropertiesObjectTypePropertyName(ctx c
 	return c.Client.Do(req)
 }
 
-// PatchmediaBridge202603AppIdpropertiesObjectTypePropertyNameWithBody Update a property
+// PatchmediaBridge202603AppIdpropertiesObjectTypePropertyNameWithBody Update property
 //
-// Update an existing property for an object type.
+// Update an existing property for a specified object type within a given app. This operation allows you to modify the details of a property, such as its label, type, or description, to better fit your application's requirements.
 //
 // Takes any type of body and a specified content type.
 //
@@ -3463,9 +4084,9 @@ func (c *Client) PatchmediaBridge202603AppIdpropertiesObjectTypePropertyNameWith
 	return c.Client.Do(req)
 }
 
-// PatchmediaBridge202603AppIdpropertiesObjectTypePropertyName Update a property
+// PatchmediaBridge202603AppIdpropertiesObjectTypePropertyName Update property
 //
-// Update an existing property for an object type.
+// Update an existing property for a specified object type within a given app. This operation allows you to modify the details of a property, such as its label, type, or description, to better fit your application's requirements.
 //
 // Takes a body of the `application/json` content type.
 //
@@ -3482,9 +4103,9 @@ func (c *Client) PatchmediaBridge202603AppIdpropertiesObjectTypePropertyName(ctx
 	return c.Client.Do(req)
 }
 
-// GetmediaBridge202603AppIdschemas Get all schemas
+// GetmediaBridge202603AppIdschemas Retrieve schemas
 //
-// Get the schemas for all object types.
+// Retrieve the schemas associated with a specific app in the HubSpot account. This endpoint allows you to fetch schema details, which can be useful for understanding the data structure and properties associated with the app. You can optionally filter the results to include only archived schemas.
 //
 // Corresponds with GET /media-bridge/2026-03/{appId}/schemas (the `GetmediaBridge202603AppIdschemas` operationId).
 func (c *Client) GetmediaBridge202603AppIdschemas(ctx context.Context, appId int32, params *GetmediaBridge202603AppIdschemasParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
@@ -3499,9 +4120,9 @@ func (c *Client) GetmediaBridge202603AppIdschemas(ctx context.Context, appId int
 	return c.Client.Do(req)
 }
 
-// GetmediaBridge202603AppIdschemasObjectType Get the schema for an object type
+// GetmediaBridge202603AppIdschemasObjectType Retrieve schema
 //
-// Get the schema for a specified object type.
+// Retrieve the schema for a specific object type within a given app in your HubSpot account. This endpoint is useful for understanding the structure and properties of a particular object type, which can assist in data integration and management tasks.
 //
 // Corresponds with GET /media-bridge/2026-03/{appId}/schemas/{objectType} (the `GetmediaBridge202603AppIdschemasObjectType` operationId).
 func (c *Client) GetmediaBridge202603AppIdschemasObjectType(ctx context.Context, appId int32, objectType string, reqEditors ...RequestEditorFn) (*http.Response, error) {
@@ -3516,9 +4137,9 @@ func (c *Client) GetmediaBridge202603AppIdschemasObjectType(ctx context.Context,
 	return c.Client.Do(req)
 }
 
-// PatchmediaBridge202603AppIdschemasObjectTypeWithBody Update the schema for an object type
+// PatchmediaBridge202603AppIdschemasObjectTypeWithBody Update schema
 //
-// Update the schema for an existing object type.
+// Update the schema for a specific object type within a given app. This operation allows you to modify the existing schema details, which can be useful for adapting to changes in data structure requirements or business logic.
 //
 // Takes any type of body and a specified content type.
 //
@@ -3535,9 +4156,9 @@ func (c *Client) PatchmediaBridge202603AppIdschemasObjectTypeWithBody(ctx contex
 	return c.Client.Do(req)
 }
 
-// PatchmediaBridge202603AppIdschemasObjectType Update the schema for an object type
+// PatchmediaBridge202603AppIdschemasObjectType Update schema
 //
-// Update the schema for an existing object type.
+// Update the schema for a specific object type within a given app. This operation allows you to modify the existing schema details, which can be useful for adapting to changes in data structure requirements or business logic.
 //
 // Takes a body of the `application/json` content type.
 //
@@ -3554,9 +4175,9 @@ func (c *Client) PatchmediaBridge202603AppIdschemasObjectType(ctx context.Contex
 	return c.Client.Do(req)
 }
 
-// PostmediaBridge202603AppIdschemasObjectTypeassociationsWithBody Create association definition
+// PostmediaBridge202603AppIdschemasObjectTypeassociationsWithBody Create associations
 //
-// Create a new association definition for the specified object type.
+// Create new associations for a specified object type within a given app. This endpoint allows you to define relationships between different object types, enhancing data connectivity and integration within your HubSpot account.
 //
 // Takes any type of body and a specified content type.
 //
@@ -3573,9 +4194,9 @@ func (c *Client) PostmediaBridge202603AppIdschemasObjectTypeassociationsWithBody
 	return c.Client.Do(req)
 }
 
-// PostmediaBridge202603AppIdschemasObjectTypeassociations Create association definition
+// PostmediaBridge202603AppIdschemasObjectTypeassociations Create associations
 //
-// Create a new association definition for the specified object type.
+// Create new associations for a specified object type within a given app. This endpoint allows you to define relationships between different object types, enhancing data connectivity and integration within your HubSpot account.
 //
 // Takes a body of the `application/json` content type.
 //
@@ -3592,9 +4213,9 @@ func (c *Client) PostmediaBridge202603AppIdschemasObjectTypeassociations(ctx con
 	return c.Client.Do(req)
 }
 
-// DeletemediaBridge202603AppIdschemasObjectTypeassociationsAssociationId Delete an association definition
+// DeletemediaBridge202603AppIdschemasObjectTypeassociationsAssociationId Delete association
 //
-// Delete an existing association definition for an object type.
+// Remove an existing association between schemas for a specified app in the MediaBridge service. This operation is useful when you need to disassociate entities that are no longer related or to clean up outdated associations.
 //
 // Corresponds with DELETE /media-bridge/2026-03/{appId}/schemas/{objectType}/associations/{associationId} (the `DeletemediaBridge202603AppIdschemasObjectTypeassociationsAssociationId` operationId).
 func (c *Client) DeletemediaBridge202603AppIdschemasObjectTypeassociationsAssociationId(ctx context.Context, appId int32, objectType string, associationId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
@@ -3609,9 +4230,9 @@ func (c *Client) DeletemediaBridge202603AppIdschemasObjectTypeassociationsAssoci
 	return c.Client.Do(req)
 }
 
-// PutmediaBridge202603AppIdsettingsWithBody Update the media bridge app name
+// PutmediaBridge202603AppIdsettingsWithBody Update settings
 //
-// Update the name that your app will display when a user is selecting media bridge items.
+// Update the settings for a specific app in the MediaBridgeService. This endpoint allows you to modify the configuration settings associated with the specified appId. It is useful for updating app-specific settings to ensure they align with your current requirements.
 //
 // Takes any type of body and a specified content type.
 //
@@ -3628,9 +4249,9 @@ func (c *Client) PutmediaBridge202603AppIdsettingsWithBody(ctx context.Context, 
 	return c.Client.Do(req)
 }
 
-// PutmediaBridge202603AppIdsettings Update the media bridge app name
+// PutmediaBridge202603AppIdsettings Update settings
 //
-// Update the name that your app will display when a user is selecting media bridge items.
+// Update the settings for a specific app in the MediaBridgeService. This endpoint allows you to modify the configuration settings associated with the specified appId. It is useful for updating app-specific settings to ensure they align with your current requirements.
 //
 // Takes a body of the `application/json` content type.
 //
@@ -3647,9 +4268,9 @@ func (c *Client) PutmediaBridge202603AppIdsettings(ctx context.Context, appId in
 	return c.Client.Do(req)
 }
 
-// GetmediaBridge202603AppIdsettingseventVisibility View event visibility settings
+// GetmediaBridge202603AppIdsettingseventVisibility Retrieve settings
 //
-// Get the visibility settings for media bridge events for your apps.
+// Retrieve the event visibility settings for a specific app in the MediaBridge service. This endpoint provides information on how events are visible within the specified application context.
 //
 // Corresponds with GET /media-bridge/2026-03/{appId}/settings/event-visibility (the `GetmediaBridge202603AppIdsettingseventVisibility` operationId).
 func (c *Client) GetmediaBridge202603AppIdsettingseventVisibility(ctx context.Context, appId int32, reqEditors ...RequestEditorFn) (*http.Response, error) {
@@ -3664,9 +4285,9 @@ func (c *Client) GetmediaBridge202603AppIdsettingseventVisibility(ctx context.Co
 	return c.Client.Do(req)
 }
 
-// PatchmediaBridge202603AppIdsettingseventVisibilityWithBody Create or update event visibility settings
+// PatchmediaBridge202603AppIdsettingseventVisibilityWithBody Update settings
 //
-// Set the visibility settings for media bridge events created by your app.
+// Update the event visibility settings for a specific app in the MediaBridgeService. This operation allows you to modify how events are displayed or managed for the specified app. It is useful for configuring event visibility preferences based on your application's requirements.
 //
 // Takes any type of body and a specified content type.
 //
@@ -3683,9 +4304,9 @@ func (c *Client) PatchmediaBridge202603AppIdsettingseventVisibilityWithBody(ctx 
 	return c.Client.Do(req)
 }
 
-// PatchmediaBridge202603AppIdsettingseventVisibility Create or update event visibility settings
+// PatchmediaBridge202603AppIdsettingseventVisibility Update settings
 //
-// Set the visibility settings for media bridge events created by your app.
+// Update the event visibility settings for a specific app in the MediaBridgeService. This operation allows you to modify how events are displayed or managed for the specified app. It is useful for configuring event visibility preferences based on your application's requirements.
 //
 // Takes a body of the `application/json` content type.
 //
@@ -3702,9 +4323,9 @@ func (c *Client) PatchmediaBridge202603AppIdsettingseventVisibility(ctx context.
 	return c.Client.Do(req)
 }
 
-// PostmediaBridge202603AppIdsettingsobjectDefinitionsWithBody Create a new object type
+// PostmediaBridge202603AppIdsettingsobjectDefinitionsWithBody Create Object Definitions
 //
-// Create a new media object type.
+// Create new object definitions for a specific app in the HubSpot Media Bridge. This endpoint is used to define new objects that can be utilized within the app, allowing for customization and integration of media-related functionalities.
 //
 // Takes any type of body and a specified content type.
 //
@@ -3721,9 +4342,9 @@ func (c *Client) PostmediaBridge202603AppIdsettingsobjectDefinitionsWithBody(ctx
 	return c.Client.Do(req)
 }
 
-// PostmediaBridge202603AppIdsettingsobjectDefinitions Create a new object type
+// PostmediaBridge202603AppIdsettingsobjectDefinitions Create Object Definitions
 //
-// Create a new media object type.
+// Create new object definitions for a specific app in the HubSpot Media Bridge. This endpoint is used to define new objects that can be utilized within the app, allowing for customization and integration of media-related functionalities.
 //
 // Takes a body of the `application/json` content type.
 //
@@ -3740,9 +4361,9 @@ func (c *Client) PostmediaBridge202603AppIdsettingsobjectDefinitions(ctx context
 	return c.Client.Do(req)
 }
 
-// GetmediaBridge202603AppIdsettingsobjectDefinitionsMediaType Get object types for a supported media
+// GetmediaBridge202603AppIdsettingsobjectDefinitionsMediaType Retrieve object definitions
 //
-// Get the existing objects types that belong to the specified media type.
+// Retrieve the object definitions for a specified media type within an app. This endpoint allows you to access the settings related to the object definitions of various media types such as VIDEO, AUDIO, DOCUMENT, OTHER, and IMAGE. It is useful for understanding the structure and properties associated with different media types in your application.
 //
 // Corresponds with GET /media-bridge/2026-03/{appId}/settings/object-definitions/{mediaType} (the `GetmediaBridge202603AppIdsettingsobjectDefinitionsMediaType` operationId).
 func (c *Client) GetmediaBridge202603AppIdsettingsobjectDefinitionsMediaType(ctx context.Context, appId int32, mediaType GetmediaBridge202603AppIdsettingsobjectDefinitionsMediaTypeParamsMediaType, params *GetmediaBridge202603AppIdsettingsobjectDefinitionsMediaTypeParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
@@ -3757,9 +4378,9 @@ func (c *Client) GetmediaBridge202603AppIdsettingsobjectDefinitionsMediaType(ctx
 	return c.Client.Do(req)
 }
 
-// DeletemediaBridge202603AppIdsettingsoembedDomains Delete an oEmbed domain
+// DeletemediaBridge202603AppIdsettingsoembedDomains Delete domains
 //
-// Delete an existing oEmbed domain.
+// Delete oEmbed domains associated with a specific app in HubSpot. This operation allows you to manage and remove domains that are no longer needed for embedding media content within the app's settings.
 //
 // Corresponds with DELETE /media-bridge/2026-03/{appId}/settings/oembed-domains (the `DeletemediaBridge202603AppIdsettingsoembedDomains` operationId).
 func (c *Client) DeletemediaBridge202603AppIdsettingsoembedDomains(ctx context.Context, appId int32, params *DeletemediaBridge202603AppIdsettingsoembedDomainsParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
@@ -3774,9 +4395,9 @@ func (c *Client) DeletemediaBridge202603AppIdsettingsoembedDomains(ctx context.C
 	return c.Client.Do(req)
 }
 
-// GetmediaBridge202603AppIdsettingsoembedDomains Get oEmbed domains
+// GetmediaBridge202603AppIdsettingsoembedDomains List OEmbed Domains
 //
-// Get the details for existing oEmbed domains for your app.
+// Retrieve the list of OEmbed domains associated with a specific app in your HubSpot account. This endpoint is useful for managing and verifying the domains that are allowed to embed media content. It provides a way to ensure that only trusted domains are used for embedding media.
 //
 // Corresponds with GET /media-bridge/2026-03/{appId}/settings/oembed-domains (the `GetmediaBridge202603AppIdsettingsoembedDomains` operationId).
 func (c *Client) GetmediaBridge202603AppIdsettingsoembedDomains(ctx context.Context, appId int32, params *GetmediaBridge202603AppIdsettingsoembedDomainsParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
@@ -3791,9 +4412,9 @@ func (c *Client) GetmediaBridge202603AppIdsettingsoembedDomains(ctx context.Cont
 	return c.Client.Do(req)
 }
 
-// PostmediaBridge202603AppIdsettingsoembedDomainsWithBody Set up a new oEmbed domain
+// PostmediaBridge202603AppIdsettingsoembedDomainsWithBody Create
 //
-// Set up a new oEmbed domain for your media bridge app.
+// Create a new oEmbed domain setting for a specific app in your HubSpot account. This endpoint allows you to define domains that can be used for oEmbed purposes, facilitating the integration of media content from external sources.
 //
 // Takes any type of body and a specified content type.
 //
@@ -3810,9 +4431,9 @@ func (c *Client) PostmediaBridge202603AppIdsettingsoembedDomainsWithBody(ctx con
 	return c.Client.Do(req)
 }
 
-// PostmediaBridge202603AppIdsettingsoembedDomains Set up a new oEmbed domain
+// PostmediaBridge202603AppIdsettingsoembedDomains Create
 //
-// Set up a new oEmbed domain for your media bridge app.
+// Create a new oEmbed domain setting for a specific app in your HubSpot account. This endpoint allows you to define domains that can be used for oEmbed purposes, facilitating the integration of media content from external sources.
 //
 // Takes a body of the `application/json` content type.
 //
@@ -3829,9 +4450,9 @@ func (c *Client) PostmediaBridge202603AppIdsettingsoembedDomains(ctx context.Con
 	return c.Client.Do(req)
 }
 
-// GetmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainId Get an oEmbed domain
+// GetmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainId Retrieve domain
 //
-// Get the details for an existing oEmbed domain.
+// Retrieve details of a specific oEmbed domain for a given app. This endpoint is useful for fetching configuration or settings related to oEmbed domains associated with a particular application.
 //
 // Corresponds with GET /media-bridge/2026-03/{appId}/settings/oembed-domains/{oEmbedDomainId} (the `GetmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainId` operationId).
 func (c *Client) GetmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainId(ctx context.Context, appId int32, oEmbedDomainId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
@@ -3846,9 +4467,9 @@ func (c *Client) GetmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainId(ct
 	return c.Client.Do(req)
 }
 
-// PatchmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainIdWithBody Update an oEmbed domain
+// PatchmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainIdWithBody Update oEmbed domain
 //
-// Update an existing oEmbed domain.
+// Update the settings for a specific oEmbed domain associated with a given app. This endpoint allows you to modify the configuration of an oEmbed domain, which can be useful for managing how media content is embedded across different domains.
 //
 // Takes any type of body and a specified content type.
 //
@@ -3865,9 +4486,9 @@ func (c *Client) PatchmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainIdW
 	return c.Client.Do(req)
 }
 
-// PatchmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainId Update an oEmbed domain
+// PatchmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainId Update oEmbed domain
 //
-// Update an existing oEmbed domain.
+// Update the settings for a specific oEmbed domain associated with a given app. This endpoint allows you to modify the configuration of an oEmbed domain, which can be useful for managing how media content is embedded across different domains.
 //
 // Takes a body of the `application/json` content type.
 //
@@ -3884,9 +4505,9 @@ func (c *Client) PatchmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainId(
 	return c.Client.Do(req)
 }
 
-// PostmediaBridge202603AppIdsettingsregisterWithBody Register the media bridge app name
+// PostmediaBridge202603AppIdsettingsregisterWithBody Register Settings
 //
-// Register the name that your app will display when a user is selecting media bridge items.
+// Register settings for a specific app in the MediaBridge service. This endpoint is deprecated and should be used with caution. It allows for the registration of settings associated with the specified app ID.
 //
 // Takes any type of body and a specified content type.
 //
@@ -3904,9 +4525,9 @@ func (c *Client) PostmediaBridge202603AppIdsettingsregisterWithBody(ctx context.
 	return c.Client.Do(req)
 }
 
-// PostmediaBridge202603AppIdsettingsregister Register the media bridge app name
+// PostmediaBridge202603AppIdsettingsregister Register Settings
 //
-// Register the name that your app will display when a user is selecting media bridge items.
+// Register settings for a specific app in the MediaBridge service. This endpoint is deprecated and should be used with caution. It allows for the registration of settings associated with the specified app ID.
 //
 // Takes a body of the `application/json` content type.
 //
@@ -3924,7 +4545,11 @@ func (c *Client) PostmediaBridge202603AppIdsettingsregister(ctx context.Context,
 	return c.Client.Do(req)
 }
 
-// PostmediaBridge202603AppIdsettingsvideoAssociationDefinitionmediaBridgev1AppIdsettingsvideoAssociationDefinition performs a POST /media-bridge/2026-03/{appId}/settings/video-association-definition (the `PostmediaBridge202603AppIdsettingsvideoAssociationDefinitionmediaBridgev1AppIdsettingsvideoAssociationDefinition` operationId) request.
+// PostmediaBridge202603AppIdsettingsvideoAssociationDefinitionmediaBridgev1AppIdsettingsvideoAssociationDefinition Define Video Association
+//
+// Create a video association definition for a specific application in the HubSpot Media Bridge. This endpoint is used to define how videos are associated with other objects within the specified app. It is particularly useful for applications that need to manage video content and its relationships programmatically.
+//
+// Corresponds with POST /media-bridge/2026-03/{appId}/settings/video-association-definition (the `PostmediaBridge202603AppIdsettingsvideoAssociationDefinitionmediaBridgev1AppIdsettingsvideoAssociationDefinition` operationId).
 func (c *Client) PostmediaBridge202603AppIdsettingsvideoAssociationDefinitionmediaBridgev1AppIdsettingsvideoAssociationDefinition(ctx context.Context, appId int32, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostmediaBridge202603AppIdsettingsvideoAssociationDefinitionmediaBridgev1AppIdsettingsvideoAssociationDefinitionRequest(c.Server, appId)
 	if err != nil {
@@ -4085,9 +4710,9 @@ func (c *Client) Postoauth202603tokenrevokeoauthv3tokenrevokeWithFormdataBody(ct
 	return c.Client.Do(req)
 }
 
-// Postscheduler202603meetingscalendarWithBody Create a new calendar meeting event.
+// Postscheduler202603meetingscalendarWithBody Create meeting
 //
-// Create a new calendar event and meeting object by providing the necessary details such as associations, email reminders, meeting object properties, and timezone.
+// Create a new calendar meeting event in your HubSpot account. This endpoint allows you to specify details such as the meeting title, start and end times, and associated users. The organizerUserId is required to identify the meeting organizer.
 //
 // Takes any type of body and a specified content type.
 //
@@ -4104,9 +4729,9 @@ func (c *Client) Postscheduler202603meetingscalendarWithBody(ctx context.Context
 	return c.Client.Do(req)
 }
 
-// Postscheduler202603meetingscalendar Create a new calendar meeting event.
+// Postscheduler202603meetingscalendar Create meeting
 //
-// Create a new calendar event and meeting object by providing the necessary details such as associations, email reminders, meeting object properties, and timezone.
+// Create a new calendar meeting event in your HubSpot account. This endpoint allows you to specify details such as the meeting title, start and end times, and associated users. The organizerUserId is required to identify the meeting organizer.
 //
 // Takes a body of the `application/json` content type.
 //
@@ -4123,9 +4748,9 @@ func (c *Client) Postscheduler202603meetingscalendar(ctx context.Context, params
 	return c.Client.Do(req)
 }
 
-// Getscheduler202603meetingsmeetingLinks Get meeting scheduling pages
+// Getscheduler202603meetingsmeetingLinks List Meeting Links
 //
-// Get a paged list meeting scheduling pages.
+// Retrieve a list of meeting links available in the HubSpot account. This endpoint allows filtering by various criteria such as meeting name, organizer user ID, and meeting type. It supports pagination to navigate through large sets of results.
 //
 // Corresponds with GET /scheduler/2026-03/meetings/meeting-links (the `Getscheduler202603meetingsmeetingLinks` operationId).
 func (c *Client) Getscheduler202603meetingsmeetingLinks(ctx context.Context, params *Getscheduler202603meetingsmeetingLinksParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
@@ -4140,9 +4765,9 @@ func (c *Client) Getscheduler202603meetingsmeetingLinks(ctx context.Context, par
 	return c.Client.Do(req)
 }
 
-// Postscheduler202603meetingsmeetingLinksbookWithBody Book a meeting
+// Postscheduler202603meetingsmeetingLinksbookWithBody Book Meeting
 //
-// Book a meeting for a specified meeting page.
+// Book a meeting using a specified meeting link. This endpoint allows you to create a meeting by providing necessary details such as duration, email, and start time. It is useful for scheduling meetings programmatically through HubSpot's API.
 //
 // Takes any type of body and a specified content type.
 //
@@ -4159,9 +4784,9 @@ func (c *Client) Postscheduler202603meetingsmeetingLinksbookWithBody(ctx context
 	return c.Client.Do(req)
 }
 
-// Postscheduler202603meetingsmeetingLinksbook Book a meeting
+// Postscheduler202603meetingsmeetingLinksbook Book Meeting
 //
-// Book a meeting for a specified meeting page.
+// Book a meeting using a specified meeting link. This endpoint allows you to create a meeting by providing necessary details such as duration, email, and start time. It is useful for scheduling meetings programmatically through HubSpot's API.
 //
 // Takes a body of the `application/json` content type.
 //
@@ -4178,9 +4803,9 @@ func (c *Client) Postscheduler202603meetingsmeetingLinksbook(ctx context.Context
 	return c.Client.Do(req)
 }
 
-// Getscheduler202603meetingsmeetingLinksbookavailabilityPageSlug Get the availability for a meeting
+// Getscheduler202603meetingsmeetingLinksbookavailabilityPageSlug Retrieve availability
 //
-// Get the next availability times for a meeting page.
+// Retrieve the availability and busy times for a specific meeting link. This endpoint is useful for checking available slots for booking meetings based on the provided slug. It requires specifying the timezone and optionally allows adjusting the month view with an offset.
 //
 // Corresponds with GET /scheduler/2026-03/meetings/meeting-links/book/availability-page/{slug} (the `Getscheduler202603meetingsmeetingLinksbookavailabilityPageSlug` operationId).
 func (c *Client) Getscheduler202603meetingsmeetingLinksbookavailabilityPageSlug(ctx context.Context, slug string, params *Getscheduler202603meetingsmeetingLinksbookavailabilityPageSlugParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
@@ -4195,9 +4820,9 @@ func (c *Client) Getscheduler202603meetingsmeetingLinksbookavailabilityPageSlug(
 	return c.Client.Do(req)
 }
 
-// Getscheduler202603meetingsmeetingLinksbookSlug List booking information
+// Getscheduler202603meetingsmeetingLinksbookSlug Retrieve booking info
 //
-// Get details about the initial information necessary for a meeting scheduler.
+// Retrieve detailed booking information for a specific meeting link using its slug. This endpoint provides insights into the availability and settings associated with the meeting link. It is useful for understanding the booking context and ensuring that the correct timezone is applied.
 //
 // Corresponds with GET /scheduler/2026-03/meetings/meeting-links/book/{slug} (the `Getscheduler202603meetingsmeetingLinksbookSlug` operationId).
 func (c *Client) Getscheduler202603meetingsmeetingLinksbookSlug(ctx context.Context, slug string, params *Getscheduler202603meetingsmeetingLinksbookSlugParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
@@ -5274,9 +5899,9 @@ func (c *Client) PostwebhooksJournalsnapshots202603crm(ctx context.Context, body
 	return c.Client.Do(req)
 }
 
-// GetwebhooksJournalsubscriptions202603 List Subscriptions
+// GetwebhooksJournalsubscriptions202603 List subscriptions
 //
-// Retrieve a list of webhook journal subscriptions for the specified version. This endpoint allows you to view all active subscriptions without pagination. It is useful for monitoring and managing webhook subscriptions in your HubSpot account.
+// Retrieve a list of webhook journal subscriptions. This endpoint provides access to subscription details without pagination, allowing you to view all current subscriptions in a single request. It is useful for managing and reviewing webhook subscriptions for your app.
 //
 // Corresponds with GET /webhooks-journal/subscriptions/2026-03 (the `GetwebhooksJournalsubscriptions202603` operationId).
 func (c *Client) GetwebhooksJournalsubscriptions202603(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
@@ -5291,9 +5916,9 @@ func (c *Client) GetwebhooksJournalsubscriptions202603(ctx context.Context, reqE
 	return c.Client.Do(req)
 }
 
-// PostwebhooksJournalsubscriptions202603WithBody Create Subscription
+// PostwebhooksJournalsubscriptions202603WithBody Upsert subscription
 //
-// Create a new subscription in the Webhooks Journal for the specified version. This endpoint allows you to define the subscription details by providing the necessary information in the request body. It supports various types of subscriptions, including object, association, event, app lifecycle event, list membership, and GDPR privacy deletion. Ensure that all required fields are included in the request to successfully create a subscription.
+// Create a new webhook journal subscription for the specified portal. This endpoint allows you to define the actions and object types that the subscription will monitor. It requires a request body with the subscription details.
 //
 // Takes any type of body and a specified content type.
 //
@@ -5310,9 +5935,9 @@ func (c *Client) PostwebhooksJournalsubscriptions202603WithBody(ctx context.Cont
 	return c.Client.Do(req)
 }
 
-// PostwebhooksJournalsubscriptions202603 Create Subscription
+// PostwebhooksJournalsubscriptions202603 Upsert subscription
 //
-// Create a new subscription in the Webhooks Journal for the specified version. This endpoint allows you to define the subscription details by providing the necessary information in the request body. It supports various types of subscriptions, including object, association, event, app lifecycle event, list membership, and GDPR privacy deletion. Ensure that all required fields are included in the request to successfully create a subscription.
+// Create a new webhook journal subscription for the specified portal. This endpoint allows you to define the actions and object types that the subscription will monitor. It requires a request body with the subscription details.
 //
 // Takes a body of the `application/json` content type.
 //
@@ -17200,6 +17825,276 @@ func NewGetcmssiteSearch202603indexedDataContentIdGetByIdRequest(server string, 
 	return req, nil
 }
 
+// NewGetcmssiteSearch202603searchcmssiteSearch202603searchRequest constructs an http.Request for the GetcmssiteSearch202603searchcmssiteSearch202603search method
+func NewGetcmssiteSearch202603searchcmssiteSearch202603searchRequest(server string, params *GetcmssiteSearch202603searchcmssiteSearch202603searchParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/cms/site-search/2026-03/search")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.Analytics != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "analytics", *params.Analytics, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "boolean", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Autocomplete != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "autocomplete", *params.Autocomplete, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "boolean", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.BoostLimit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "boostLimit", *params.BoostLimit, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "number", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.BoostRecent != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "boostRecent", *params.BoostRecent, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Domain != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "domain", *params.Domain, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.GroupId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "groupId", *params.GroupId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.HubdbQuery != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "hubdbQuery", *params.HubdbQuery, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Language != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "language", *params.Language, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Length != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "length", *params.Length, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "limit", *params.Limit, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: "int32"}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.MatchPrefix != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "matchPrefix", *params.MatchPrefix, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "boolean", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Offset != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "offset", *params.Offset, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: "int32"}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.PathPrefix != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "pathPrefix", *params.PathPrefix, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.PopularityBoost != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "popularityBoost", *params.PopularityBoost, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "number", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Property != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "property", *params.Property, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Q != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "q", *params.Q, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.TableId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "tableId", *params.TableId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: "int64"}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Type != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "type", *params.Type, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Types != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "types", *params.Types, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
 // NewPostcmssourceCode202603extractasyncDoAsyncRequest calls the generic PostcmssourceCode202603extractasyncDoAsync builder with application/json body
 func NewPostcmssourceCode202603extractasyncDoAsyncRequest(server string, body PostcmssourceCode202603extractasyncDoAsyncJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
@@ -17755,8 +18650,8 @@ func NewPostcmsurlRedirects202603cmsurlRedirectsv3RequestWithBody(server string,
 	return req, nil
 }
 
-// NewGetcmsurlRedirects202603urlMappingsRequest constructs an http.Request for the GetcmsurlRedirects202603urlMappings method
-func NewGetcmsurlRedirects202603urlMappingsRequest(server string) (*http.Request, error) {
+// NewGetcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappingsRequest constructs an http.Request for the GetcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappings method
+func NewGetcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappingsRequest(server string) (*http.Request, error) {
 	var err error
 
 	serverURL, err := url.Parse(server)
@@ -17782,8 +18677,8 @@ func NewGetcmsurlRedirects202603urlMappingsRequest(server string) (*http.Request
 	return req, nil
 }
 
-// NewPostcmsurlRedirects202603urlMappingsRequestWithBody constructs an http.Request for the PostcmsurlRedirects202603urlMappings method, with any body, and a specified content type
-func NewPostcmsurlRedirects202603urlMappingsRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+// NewPostcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappingsRequestWithBody constructs an http.Request for the PostcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappings method, with any body, and a specified content type
+func NewPostcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappingsRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
 
 	serverURL, err := url.Parse(server)
@@ -17811,8 +18706,8 @@ func NewPostcmsurlRedirects202603urlMappingsRequestWithBody(server string, conte
 	return req, nil
 }
 
-// NewDeletecmsurlRedirects202603urlMappingsIdRequest constructs an http.Request for the DeletecmsurlRedirects202603urlMappingsId method
-func NewDeletecmsurlRedirects202603urlMappingsIdRequest(server string, id int64) (*http.Request, error) {
+// NewDeletecmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsIdRequest constructs an http.Request for the DeletecmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsId method
+func NewDeletecmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsIdRequest(server string, id int64) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -17845,8 +18740,8 @@ func NewDeletecmsurlRedirects202603urlMappingsIdRequest(server string, id int64)
 	return req, nil
 }
 
-// NewGetcmsurlRedirects202603urlMappingsIdRequest constructs an http.Request for the GetcmsurlRedirects202603urlMappingsId method
-func NewGetcmsurlRedirects202603urlMappingsIdRequest(server string, id int64) (*http.Request, error) {
+// NewGetcmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsIdRequest constructs an http.Request for the GetcmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsId method
+func NewGetcmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsIdRequest(server string, id int64) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -19120,899 +20015,4 @@ func NewGetconversationscustomChannels202603ChannelIdchannelAccountsRequest(serv
 	}
 
 	return req, nil
-}
-
-// NewPostconversationscustomChannels202603ChannelIdchannelAccountsRequest calls the generic PostconversationscustomChannels202603ChannelIdchannelAccounts builder with application/json body
-func NewPostconversationscustomChannels202603ChannelIdchannelAccountsRequest(server string, channelId int32, body PostconversationscustomChannels202603ChannelIdchannelAccountsJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewPostconversationscustomChannels202603ChannelIdchannelAccountsRequestWithBody(server, channelId, "application/json", bodyReader)
-}
-
-// NewPostconversationscustomChannels202603ChannelIdchannelAccountsRequestWithBody constructs an http.Request for the PostconversationscustomChannels202603ChannelIdchannelAccounts method, with any body, and a specified content type
-func NewPostconversationscustomChannels202603ChannelIdchannelAccountsRequestWithBody(server string, channelId int32, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "channelId", channelId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: "int32"})
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/conversations/custom-channels/2026-03/%s/channel-accounts", pathParam0)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
-}
-
-// NewGetconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountIdRequest constructs an http.Request for the GetconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountId method
-func NewGetconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountIdRequest(server string, channelId int32, channelAccountId int64, params *GetconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountIdParams) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "channelId", channelId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: "int32"})
-	if err != nil {
-		return nil, err
-	}
-
-	var pathParam1 string
-
-	pathParam1, err = runtime.StyleParamWithOptions("simple", false, "channelAccountId", channelAccountId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: "int64"})
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/conversations/custom-channels/2026-03/%s/channel-accounts/%s", pathParam0, pathParam1)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	if params != nil {
-		// queryValues collects non-styled parameters (passthrough, JSON)
-		// that are safe to round-trip through url.Values.Encode().
-		queryValues := queryURL.Query()
-		// rawQueryFragments collects pre-encoded query fragments from
-		// styled parameters, preserving literal commas as delimiters
-		// per the OpenAPI spec (e.g. "color=blue,black,brown").
-		var rawQueryFragments []string
-
-		if params.Archived != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "archived", *params.Archived, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "boolean", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if encoded := queryValues.Encode(); encoded != "" {
-			rawQueryFragments = append(rawQueryFragments, encoded)
-		}
-		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
-	}
-
-	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
-}
-
-// NewPatchconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountIdRequest calls the generic PatchconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountId builder with application/json body
-func NewPatchconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountIdRequest(server string, channelId int32, channelAccountId int64, body PatchconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountIdJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewPatchconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountIdRequestWithBody(server, channelId, channelAccountId, "application/json", bodyReader)
-}
-
-// NewPatchconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountIdRequestWithBody constructs an http.Request for the PatchconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountId method, with any body, and a specified content type
-func NewPatchconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountIdRequestWithBody(server string, channelId int32, channelAccountId int64, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "channelId", channelId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: "int32"})
-	if err != nil {
-		return nil, err
-	}
-
-	var pathParam1 string
-
-	pathParam1, err = runtime.StyleParamWithOptions("simple", false, "channelAccountId", channelAccountId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: "int64"})
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/conversations/custom-channels/2026-03/%s/channel-accounts/%s", pathParam0, pathParam1)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodPatch, queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
-}
-
-// NewPostconversationscustomChannels202603ChannelIdmessagesRequest calls the generic PostconversationscustomChannels202603ChannelIdmessages builder with application/json body
-func NewPostconversationscustomChannels202603ChannelIdmessagesRequest(server string, channelId int32, body PostconversationscustomChannels202603ChannelIdmessagesJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewPostconversationscustomChannels202603ChannelIdmessagesRequestWithBody(server, channelId, "application/json", bodyReader)
-}
-
-// NewPostconversationscustomChannels202603ChannelIdmessagesRequestWithBody constructs an http.Request for the PostconversationscustomChannels202603ChannelIdmessages method, with any body, and a specified content type
-func NewPostconversationscustomChannels202603ChannelIdmessagesRequestWithBody(server string, channelId int32, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "channelId", channelId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: "int32"})
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/conversations/custom-channels/2026-03/%s/messages", pathParam0)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
-}
-
-// NewGetconversationscustomChannels202603ChannelIdmessagesMessageIdRequest constructs an http.Request for the GetconversationscustomChannels202603ChannelIdmessagesMessageId method
-func NewGetconversationscustomChannels202603ChannelIdmessagesMessageIdRequest(server string, channelId int32, messageId string) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "channelId", channelId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: "int32"})
-	if err != nil {
-		return nil, err
-	}
-
-	var pathParam1 string
-
-	pathParam1, err = runtime.StyleParamWithOptions("simple", false, "messageId", messageId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/conversations/custom-channels/2026-03/%s/messages/%s", pathParam0, pathParam1)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
-}
-
-// NewPatchconversationscustomChannels202603ChannelIdmessagesMessageIdRequest calls the generic PatchconversationscustomChannels202603ChannelIdmessagesMessageId builder with application/json body
-func NewPatchconversationscustomChannels202603ChannelIdmessagesMessageIdRequest(server string, channelId int32, messageId string, body PatchconversationscustomChannels202603ChannelIdmessagesMessageIdJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewPatchconversationscustomChannels202603ChannelIdmessagesMessageIdRequestWithBody(server, channelId, messageId, "application/json", bodyReader)
-}
-
-// NewPatchconversationscustomChannels202603ChannelIdmessagesMessageIdRequestWithBody constructs an http.Request for the PatchconversationscustomChannels202603ChannelIdmessagesMessageId method, with any body, and a specified content type
-func NewPatchconversationscustomChannels202603ChannelIdmessagesMessageIdRequestWithBody(server string, channelId int32, messageId string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "channelId", channelId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: "int32"})
-	if err != nil {
-		return nil, err
-	}
-
-	var pathParam1 string
-
-	pathParam1, err = runtime.StyleParamWithOptions("simple", false, "messageId", messageId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/conversations/custom-channels/2026-03/%s/messages/%s", pathParam0, pathParam1)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodPatch, queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
-}
-
-// NewGetcrmObjectSchemas202603schemasGetAllRequest constructs an http.Request for the GetcrmObjectSchemas202603schemasGetAll method
-func NewGetcrmObjectSchemas202603schemasGetAllRequest(server string, params *GetcrmObjectSchemas202603schemasGetAllParams) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/crm-object-schemas/2026-03/schemas")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	if params != nil {
-		// queryValues collects non-styled parameters (passthrough, JSON)
-		// that are safe to round-trip through url.Values.Encode().
-		queryValues := queryURL.Query()
-		// rawQueryFragments collects pre-encoded query fragments from
-		// styled parameters, preserving literal commas as delimiters
-		// per the OpenAPI spec (e.g. "color=blue,black,brown").
-		var rawQueryFragments []string
-
-		if params.Archived != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "archived", *params.Archived, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "boolean", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.IncludeAssociationDefinitions != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "includeAssociationDefinitions", *params.IncludeAssociationDefinitions, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "boolean", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.IncludeAuditMetadata != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "includeAuditMetadata", *params.IncludeAuditMetadata, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "boolean", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.IncludePropertyDefinitions != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "includePropertyDefinitions", *params.IncludePropertyDefinitions, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "boolean", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if encoded := queryValues.Encode(); encoded != "" {
-			rawQueryFragments = append(rawQueryFragments, encoded)
-		}
-		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
-	}
-
-	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
-}
-
-// NewPostcrmObjectSchemas202603schemasCreateRequest calls the generic PostcrmObjectSchemas202603schemasCreate builder with application/json body
-func NewPostcrmObjectSchemas202603schemasCreateRequest(server string, body PostcrmObjectSchemas202603schemasCreateJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewPostcrmObjectSchemas202603schemasCreateRequestWithBody(server, "application/json", bodyReader)
-}
-
-// NewPostcrmObjectSchemas202603schemasCreateRequestWithBody constructs an http.Request for the PostcrmObjectSchemas202603schemasCreate method, with any body, and a specified content type
-func NewPostcrmObjectSchemas202603schemasCreateRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/crm-object-schemas/2026-03/schemas")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
-}
-
-// NewPostcrmObjectSchemas202603schemasbatchreadcrmObjectSchemasv3schemasbatchreadRequest calls the generic PostcrmObjectSchemas202603schemasbatchreadcrmObjectSchemasv3schemasbatchread builder with application/json body
-func NewPostcrmObjectSchemas202603schemasbatchreadcrmObjectSchemasv3schemasbatchreadRequest(server string, body PostcrmObjectSchemas202603schemasbatchreadcrmObjectSchemasv3schemasbatchreadJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewPostcrmObjectSchemas202603schemasbatchreadcrmObjectSchemasv3schemasbatchreadRequestWithBody(server, "application/json", bodyReader)
-}
-
-// NewPostcrmObjectSchemas202603schemasbatchreadcrmObjectSchemasv3schemasbatchreadRequestWithBody constructs an http.Request for the PostcrmObjectSchemas202603schemasbatchreadcrmObjectSchemasv3schemasbatchread method, with any body, and a specified content type
-func NewPostcrmObjectSchemas202603schemasbatchreadcrmObjectSchemasv3schemasbatchreadRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/crm-object-schemas/2026-03/schemas/batch/read")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
-}
-
-// NewDeletecrmObjectSchemas202603schemasObjectTypeArchiveRequest constructs an http.Request for the DeletecrmObjectSchemas202603schemasObjectTypeArchive method
-func NewDeletecrmObjectSchemas202603schemasObjectTypeArchiveRequest(server string, objectType string, params *DeletecrmObjectSchemas202603schemasObjectTypeArchiveParams) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "objectType", objectType, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/crm-object-schemas/2026-03/schemas/%s", pathParam0)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	if params != nil {
-		// queryValues collects non-styled parameters (passthrough, JSON)
-		// that are safe to round-trip through url.Values.Encode().
-		queryValues := queryURL.Query()
-		// rawQueryFragments collects pre-encoded query fragments from
-		// styled parameters, preserving literal commas as delimiters
-		// per the OpenAPI spec (e.g. "color=blue,black,brown").
-		var rawQueryFragments []string
-
-		if params.Archived != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "archived", *params.Archived, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "boolean", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if encoded := queryValues.Encode(); encoded != "" {
-			rawQueryFragments = append(rawQueryFragments, encoded)
-		}
-		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
-	}
-
-	req, err := http.NewRequest(http.MethodDelete, queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
-}
-
-// NewGetcrmObjectSchemas202603schemasObjectTypeGetByIdRequest constructs an http.Request for the GetcrmObjectSchemas202603schemasObjectTypeGetById method
-func NewGetcrmObjectSchemas202603schemasObjectTypeGetByIdRequest(server string, objectType string, params *GetcrmObjectSchemas202603schemasObjectTypeGetByIdParams) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "objectType", objectType, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/crm-object-schemas/2026-03/schemas/%s", pathParam0)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	if params != nil {
-		// queryValues collects non-styled parameters (passthrough, JSON)
-		// that are safe to round-trip through url.Values.Encode().
-		queryValues := queryURL.Query()
-		// rawQueryFragments collects pre-encoded query fragments from
-		// styled parameters, preserving literal commas as delimiters
-		// per the OpenAPI spec (e.g. "color=blue,black,brown").
-		var rawQueryFragments []string
-
-		if params.IncludeAssociationDefinitions != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "includeAssociationDefinitions", *params.IncludeAssociationDefinitions, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "boolean", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.IncludeAuditMetadata != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "includeAuditMetadata", *params.IncludeAuditMetadata, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "boolean", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.IncludePropertyDefinitions != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "includePropertyDefinitions", *params.IncludePropertyDefinitions, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "boolean", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if encoded := queryValues.Encode(); encoded != "" {
-			rawQueryFragments = append(rawQueryFragments, encoded)
-		}
-		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
-	}
-
-	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
-}
-
-// NewPatchcrmObjectSchemas202603schemasObjectTypeUpdateRequest calls the generic PatchcrmObjectSchemas202603schemasObjectTypeUpdate builder with application/json body
-func NewPatchcrmObjectSchemas202603schemasObjectTypeUpdateRequest(server string, objectType string, body PatchcrmObjectSchemas202603schemasObjectTypeUpdateJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewPatchcrmObjectSchemas202603schemasObjectTypeUpdateRequestWithBody(server, objectType, "application/json", bodyReader)
-}
-
-// NewPatchcrmObjectSchemas202603schemasObjectTypeUpdateRequestWithBody constructs an http.Request for the PatchcrmObjectSchemas202603schemasObjectTypeUpdate method, with any body, and a specified content type
-func NewPatchcrmObjectSchemas202603schemasObjectTypeUpdateRequestWithBody(server string, objectType string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "objectType", objectType, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/crm-object-schemas/2026-03/schemas/%s", pathParam0)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodPatch, queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
-}
-
-// NewPostcrmObjectSchemas202603schemasObjectTypeassociationsCreateAssociationRequest calls the generic PostcrmObjectSchemas202603schemasObjectTypeassociationsCreateAssociation builder with application/json body
-func NewPostcrmObjectSchemas202603schemasObjectTypeassociationsCreateAssociationRequest(server string, objectType string, body PostcrmObjectSchemas202603schemasObjectTypeassociationsCreateAssociationJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewPostcrmObjectSchemas202603schemasObjectTypeassociationsCreateAssociationRequestWithBody(server, objectType, "application/json", bodyReader)
-}
-
-// NewPostcrmObjectSchemas202603schemasObjectTypeassociationsCreateAssociationRequestWithBody constructs an http.Request for the PostcrmObjectSchemas202603schemasObjectTypeassociationsCreateAssociation method, with any body, and a specified content type
-func NewPostcrmObjectSchemas202603schemasObjectTypeassociationsCreateAssociationRequestWithBody(server string, objectType string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "objectType", objectType, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/crm-object-schemas/2026-03/schemas/%s/associations", pathParam0)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
-}
-
-// NewDeletecrmObjectSchemas202603schemasObjectTypeassociationsAssociationIdentifierArchiveAssociationRequest constructs an http.Request for the DeletecrmObjectSchemas202603schemasObjectTypeassociationsAssociationIdentifierArchiveAssociation method
-func NewDeletecrmObjectSchemas202603schemasObjectTypeassociationsAssociationIdentifierArchiveAssociationRequest(server string, objectType string, associationIdentifier string) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "objectType", objectType, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
-	if err != nil {
-		return nil, err
-	}
-
-	var pathParam1 string
-
-	pathParam1, err = runtime.StyleParamWithOptions("simple", false, "associationIdentifier", associationIdentifier, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/crm-object-schemas/2026-03/schemas/%s/associations/%s", pathParam0, pathParam1)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodDelete, queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
-}
-
-// NewGetcrmassociations202603definitionsconfigurationsallGetPageRequest constructs an http.Request for the Getcrmassociations202603definitionsconfigurationsallGetPage method
-func NewGetcrmassociations202603definitionsconfigurationsallGetPageRequest(server string) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/crm/associations/2026-03/definitions/configurations/all")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
-}
-
-// NewGetcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypeGetPageBetweenTwoObjectTypesRequest constructs an http.Request for the Getcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypeGetPageBetweenTwoObjectTypes method
-func NewGetcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypeGetPageBetweenTwoObjectTypesRequest(server string, fromObjectType string, toObjectType string) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "fromObjectType", fromObjectType, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
-	if err != nil {
-		return nil, err
-	}
-
-	var pathParam1 string
-
-	pathParam1, err = runtime.StyleParamWithOptions("simple", false, "toObjectType", toObjectType, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/crm/associations/2026-03/definitions/configurations/%s/%s", pathParam0, pathParam1)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
-}
-
-// NewPostcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchcreateBatchCreateRequest calls the generic Postcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchcreateBatchCreate builder with application/json body
-func NewPostcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchcreateBatchCreateRequest(server string, fromObjectType string, toObjectType string, body Postcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchcreateBatchCreateJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewPostcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchcreateBatchCreateRequestWithBody(server, fromObjectType, toObjectType, "application/json", bodyReader)
-}
-
-// NewPostcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchcreateBatchCreateRequestWithBody constructs an http.Request for the Postcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchcreateBatchCreate method, with any body, and a specified content type
-func NewPostcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchcreateBatchCreateRequestWithBody(server string, fromObjectType string, toObjectType string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "fromObjectType", fromObjectType, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
-	if err != nil {
-		return nil, err
-	}
-
-	var pathParam1 string
-
-	pathParam1, err = runtime.StyleParamWithOptions("simple", false, "toObjectType", toObjectType, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/crm/associations/2026-03/definitions/configurations/%s/%s/batch/create", pathParam0, pathParam1)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
-}
-
-// NewPostcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchpurgeBatchRemoveRequest calls the generic Postcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchpurgeBatchRemove builder with application/json body
-func NewPostcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchpurgeBatchRemoveRequest(server string, fromObjectType string, toObjectType string, body Postcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchpurgeBatchRemoveJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewPostcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchpurgeBatchRemoveRequestWithBody(server, fromObjectType, toObjectType, "application/json", bodyReader)
 }

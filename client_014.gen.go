@@ -8,7 +8,2994 @@ import (
 	"io"
 	"net/http"
 	"strings"
+
+	"github.com/oapi-codegen/runtime"
 )
+
+// ParsePostcmssourceCode202603extractasyncDoAsyncResponse parses an HTTP response from a PostcmssourceCode202603extractasyncDoAsyncWithResponse call
+func ParsePostcmssourceCode202603extractasyncDoAsyncResponse(rsp *http.Response) (*PostcmssourceCode202603extractasyncDoAsyncResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &PostcmssourceCode202603extractasyncDoAsyncResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 202:
+		var dest TaskLocator
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON202 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcmssourceCode202603extractasynctasksTaskIdstatusGetAsyncStatusResponse parses an HTTP response from a GetcmssourceCode202603extractasynctasksTaskIdstatusGetAsyncStatusWithResponse call
+func ParseGetcmssourceCode202603extractasynctasksTaskIdstatusGetAsyncStatusResponse(rsp *http.Response) (*GetcmssourceCode202603extractasynctasksTaskIdstatusGetAsyncStatusResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetcmssourceCode202603extractasynctasksTaskIdstatusGetAsyncStatusResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest ActionResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseDeletecmssourceCode202603EnvironmentcontentPathArchiveResponse parses an HTTP response from a DeletecmssourceCode202603EnvironmentcontentPathArchiveWithResponse call
+func ParseDeletecmssourceCode202603EnvironmentcontentPathArchiveResponse(rsp *http.Response) (*DeletecmssourceCode202603EnvironmentcontentPathArchiveResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &DeletecmssourceCode202603EnvironmentcontentPathArchiveResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParseGetcmssourceCode202603EnvironmentcontentPathDownloadResponse parses an HTTP response from a GetcmssourceCode202603EnvironmentcontentPathDownloadWithResponse call
+func ParseGetcmssourceCode202603EnvironmentcontentPathDownloadResponse(rsp *http.Response) (*GetcmssourceCode202603EnvironmentcontentPathDownloadResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetcmssourceCode202603EnvironmentcontentPathDownloadResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParsePostcmssourceCode202603EnvironmentcontentPathCreateResponse parses an HTTP response from a PostcmssourceCode202603EnvironmentcontentPathCreateWithResponse call
+func ParsePostcmssourceCode202603EnvironmentcontentPathCreateResponse(rsp *http.Response) (*PostcmssourceCode202603EnvironmentcontentPathCreateResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &PostcmssourceCode202603EnvironmentcontentPathCreateResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest AssetFileMetadata
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePutcmssourceCode202603EnvironmentcontentPathCreateOrUpdateResponse parses an HTTP response from a PutcmssourceCode202603EnvironmentcontentPathCreateOrUpdateWithResponse call
+func ParsePutcmssourceCode202603EnvironmentcontentPathCreateOrUpdateResponse(rsp *http.Response) (*PutcmssourceCode202603EnvironmentcontentPathCreateOrUpdateResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &PutcmssourceCode202603EnvironmentcontentPathCreateOrUpdateResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest AssetFileMetadata
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcmssourceCode202603EnvironmentmetadataPathGetResponse parses an HTTP response from a GetcmssourceCode202603EnvironmentmetadataPathGetWithResponse call
+func ParseGetcmssourceCode202603EnvironmentmetadataPathGetResponse(rsp *http.Response) (*GetcmssourceCode202603EnvironmentmetadataPathGetResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetcmssourceCode202603EnvironmentmetadataPathGetResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest AssetFileMetadata
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmssourceCode202603EnvironmentvalidatePathDoValidateResponse parses an HTTP response from a PostcmssourceCode202603EnvironmentvalidatePathDoValidateWithResponse call
+func ParsePostcmssourceCode202603EnvironmentvalidatePathDoValidateResponse(rsp *http.Response) (*PostcmssourceCode202603EnvironmentvalidatePathDoValidateResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &PostcmssourceCode202603EnvironmentvalidatePathDoValidateResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParseGetcmsurlRedirects202603cmsurlRedirectsv3Response parses an HTTP response from a GetcmsurlRedirects202603cmsurlRedirectsv3WithResponse call
+func ParseGetcmsurlRedirects202603cmsurlRedirectsv3Response(rsp *http.Response) (*GetcmsurlRedirects202603cmsurlRedirectsv3Response, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetcmsurlRedirects202603cmsurlRedirectsv3Response{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CollectionResponseWithTotalUrlMappingForwardPaging
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmsurlRedirects202603cmsurlRedirectsv3Response parses an HTTP response from a PostcmsurlRedirects202603cmsurlRedirectsv3WithResponse call
+func ParsePostcmsurlRedirects202603cmsurlRedirectsv3Response(rsp *http.Response) (*PostcmsurlRedirects202603cmsurlRedirectsv3Response, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &PostcmsurlRedirects202603cmsurlRedirectsv3Response{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
+		var dest UrlRedirectsUrlMapping
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON201 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappingsResponse parses an HTTP response from a GetcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappingsWithResponse call
+func ParseGetcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappingsResponse(rsp *http.Response) (*GetcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappingsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappingsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParsePostcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappingsResponse parses an HTTP response from a PostcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappingsWithResponse call
+func ParsePostcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappingsResponse(rsp *http.Response) (*PostcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappingsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &PostcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappingsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParseDeletecmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsIdResponse parses an HTTP response from a DeletecmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsIdWithResponse call
+func ParseDeletecmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsIdResponse(rsp *http.Response) (*DeletecmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsIdResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &DeletecmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsIdResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParseGetcmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsIdResponse parses an HTTP response from a GetcmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsIdWithResponse call
+func ParseGetcmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsIdResponse(rsp *http.Response) (*GetcmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsIdResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetcmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsIdResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParseDeletecmsurlRedirects202603UrlRedirectIdArchiveResponse parses an HTTP response from a DeletecmsurlRedirects202603UrlRedirectIdArchiveWithResponse call
+func ParseDeletecmsurlRedirects202603UrlRedirectIdArchiveResponse(rsp *http.Response) (*DeletecmsurlRedirects202603UrlRedirectIdArchiveResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &DeletecmsurlRedirects202603UrlRedirectIdArchiveResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParseGetcmsurlRedirects202603UrlRedirectIdGetByIdResponse parses an HTTP response from a GetcmsurlRedirects202603UrlRedirectIdGetByIdWithResponse call
+func ParseGetcmsurlRedirects202603UrlRedirectIdGetByIdResponse(rsp *http.Response) (*GetcmsurlRedirects202603UrlRedirectIdGetByIdResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetcmsurlRedirects202603UrlRedirectIdGetByIdResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest UrlRedirectsUrlMapping
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePatchcmsurlRedirects202603UrlRedirectIdUpdateResponse parses an HTTP response from a PatchcmsurlRedirects202603UrlRedirectIdUpdateWithResponse call
+func ParsePatchcmsurlRedirects202603UrlRedirectIdUpdateResponse(rsp *http.Response) (*PatchcmsurlRedirects202603UrlRedirectIdUpdateResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &PatchcmsurlRedirects202603UrlRedirectIdUpdateResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest UrlRedirectsUrlMapping
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcommunicationPreferences202603definitionsResponse parses an HTTP response from a GetcommunicationPreferences202603definitionsWithResponse call
+func ParseGetcommunicationPreferences202603definitionsResponse(rsp *http.Response) (*GetcommunicationPreferences202603definitionsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetcommunicationPreferences202603definitionsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest ActionResponseWithResultsSubscriptionDefinition
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcommunicationPreferences202603linksgeneratecommunicationPreferencesv4linksgenerateResponse parses an HTTP response from a PostcommunicationPreferences202603linksgeneratecommunicationPreferencesv4linksgenerateWithResponse call
+func ParsePostcommunicationPreferences202603linksgeneratecommunicationPreferencesv4linksgenerateResponse(rsp *http.Response) (*PostcommunicationPreferences202603linksgeneratecommunicationPreferencesv4linksgenerateResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &PostcommunicationPreferences202603linksgeneratecommunicationPreferencesv4linksgenerateResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest LinkGenerationResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcommunicationPreferences202603statusesbatchreadResponse parses an HTTP response from a PostcommunicationPreferences202603statusesbatchreadWithResponse call
+func ParsePostcommunicationPreferences202603statusesbatchreadResponse(rsp *http.Response) (*PostcommunicationPreferences202603statusesbatchreadResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &PostcommunicationPreferences202603statusesbatchreadResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BatchResponsePublicStatusBulkResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
+		var dest BatchResponsePublicStatusBulkResponseWithErrors
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON207 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcommunicationPreferences202603statusesbatchunsubscribeAllResponse parses an HTTP response from a PostcommunicationPreferences202603statusesbatchunsubscribeAllWithResponse call
+func ParsePostcommunicationPreferences202603statusesbatchunsubscribeAllResponse(rsp *http.Response) (*PostcommunicationPreferences202603statusesbatchunsubscribeAllResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &PostcommunicationPreferences202603statusesbatchunsubscribeAllResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BatchResponsePublicBulkOptOutFromAllResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcommunicationPreferences202603statusesbatchunsubscribeAllreadResponse parses an HTTP response from a PostcommunicationPreferences202603statusesbatchunsubscribeAllreadWithResponse call
+func ParsePostcommunicationPreferences202603statusesbatchunsubscribeAllreadResponse(rsp *http.Response) (*PostcommunicationPreferences202603statusesbatchunsubscribeAllreadResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &PostcommunicationPreferences202603statusesbatchunsubscribeAllreadResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BatchResponsePublicWideStatusBulkResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
+		var dest BatchResponsePublicWideStatusBulkResponseWithErrors
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON207 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcommunicationPreferences202603statusesbatchwriteResponse parses an HTTP response from a PostcommunicationPreferences202603statusesbatchwriteWithResponse call
+func ParsePostcommunicationPreferences202603statusesbatchwriteResponse(rsp *http.Response) (*PostcommunicationPreferences202603statusesbatchwriteResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &PostcommunicationPreferences202603statusesbatchwriteResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BatchResponsePublicStatus
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcommunicationPreferences202603statusesSubscriberIdStringResponse parses an HTTP response from a GetcommunicationPreferences202603statusesSubscriberIdStringWithResponse call
+func ParseGetcommunicationPreferences202603statusesSubscriberIdStringResponse(rsp *http.Response) (*GetcommunicationPreferences202603statusesSubscriberIdStringResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetcommunicationPreferences202603statusesSubscriberIdStringResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest ActionResponseWithResultsPublicStatus
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcommunicationPreferences202603statusesSubscriberIdStringResponse parses an HTTP response from a PostcommunicationPreferences202603statusesSubscriberIdStringWithResponse call
+func ParsePostcommunicationPreferences202603statusesSubscriberIdStringResponse(rsp *http.Response) (*PostcommunicationPreferences202603statusesSubscriberIdStringResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &PostcommunicationPreferences202603statusesSubscriberIdStringResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest ActionResponseWithResultsPublicStatus
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcommunicationPreferences202603statusesSubscriberIdStringunsubscribeAllResponse parses an HTTP response from a GetcommunicationPreferences202603statusesSubscriberIdStringunsubscribeAllWithResponse call
+func ParseGetcommunicationPreferences202603statusesSubscriberIdStringunsubscribeAllResponse(rsp *http.Response) (*GetcommunicationPreferences202603statusesSubscriberIdStringunsubscribeAllResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetcommunicationPreferences202603statusesSubscriberIdStringunsubscribeAllResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest ActionResponseWithResultsPublicWideStatus
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcommunicationPreferences202603statusesSubscriberIdStringunsubscribeAllResponse parses an HTTP response from a PostcommunicationPreferences202603statusesSubscriberIdStringunsubscribeAllWithResponse call
+func ParsePostcommunicationPreferences202603statusesSubscriberIdStringunsubscribeAllResponse(rsp *http.Response) (*PostcommunicationPreferences202603statusesSubscriberIdStringunsubscribeAllResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &PostcommunicationPreferences202603statusesSubscriberIdStringunsubscribeAllResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest ActionResponseWithResultsPublicStatus
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetconversationscustomChannels202603conversationscustomChannelsv3Response parses an HTTP response from a GetconversationscustomChannels202603conversationscustomChannelsv3WithResponse call
+func ParseGetconversationscustomChannels202603conversationscustomChannelsv3Response(rsp *http.Response) (*GetconversationscustomChannels202603conversationscustomChannelsv3Response, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetconversationscustomChannels202603conversationscustomChannelsv3Response{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CollectionResponseWithTotalPublicChannelIntegrationChannel
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostconversationscustomChannels202603conversationscustomChannelsv3Response parses an HTTP response from a PostconversationscustomChannels202603conversationscustomChannelsv3WithResponse call
+func ParsePostconversationscustomChannels202603conversationscustomChannelsv3Response(rsp *http.Response) (*PostconversationscustomChannels202603conversationscustomChannelsv3Response, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &PostconversationscustomChannels202603conversationscustomChannelsv3Response{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
+		var dest PublicChannelIntegrationChannel
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON201 = &dest
+
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers PostconversationscustomChannels202603conversationscustomChannelsv3Response201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
+	}
+
+	return response, nil
+}
+
+// ParseDeleteconversationscustomChannels202603ChannelIdResponse parses an HTTP response from a DeleteconversationscustomChannels202603ChannelIdWithResponse call
+func ParseDeleteconversationscustomChannels202603ChannelIdResponse(rsp *http.Response) (*DeleteconversationscustomChannels202603ChannelIdResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &DeleteconversationscustomChannels202603ChannelIdResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParseGetconversationscustomChannels202603ChannelIdResponse parses an HTTP response from a GetconversationscustomChannels202603ChannelIdWithResponse call
+func ParseGetconversationscustomChannels202603ChannelIdResponse(rsp *http.Response) (*GetconversationscustomChannels202603ChannelIdResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetconversationscustomChannels202603ChannelIdResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest PublicChannelIntegrationChannel
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePatchconversationscustomChannels202603ChannelIdResponse parses an HTTP response from a PatchconversationscustomChannels202603ChannelIdWithResponse call
+func ParsePatchconversationscustomChannels202603ChannelIdResponse(rsp *http.Response) (*PatchconversationscustomChannels202603ChannelIdResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &PatchconversationscustomChannels202603ChannelIdResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest PublicChannelIntegrationChannel
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePatchconversationscustomChannels202603ChannelIdchannelAccountStagingTokensAccountTokenResponse parses an HTTP response from a PatchconversationscustomChannels202603ChannelIdchannelAccountStagingTokensAccountTokenWithResponse call
+func ParsePatchconversationscustomChannels202603ChannelIdchannelAccountStagingTokensAccountTokenResponse(rsp *http.Response) (*PatchconversationscustomChannels202603ChannelIdchannelAccountStagingTokensAccountTokenResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &PatchconversationscustomChannels202603ChannelIdchannelAccountStagingTokensAccountTokenResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest PublicChannelAccountStagingToken
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetconversationscustomChannels202603ChannelIdchannelAccountsResponse parses an HTTP response from a GetconversationscustomChannels202603ChannelIdchannelAccountsWithResponse call
+func ParseGetconversationscustomChannels202603ChannelIdchannelAccountsResponse(rsp *http.Response) (*GetconversationscustomChannels202603ChannelIdchannelAccountsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetconversationscustomChannels202603ChannelIdchannelAccountsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CollectionResponseWithTotalPublicChannelAccount
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostconversationscustomChannels202603ChannelIdchannelAccountsResponse parses an HTTP response from a PostconversationscustomChannels202603ChannelIdchannelAccountsWithResponse call
+func ParsePostconversationscustomChannels202603ChannelIdchannelAccountsResponse(rsp *http.Response) (*PostconversationscustomChannels202603ChannelIdchannelAccountsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &PostconversationscustomChannels202603ChannelIdchannelAccountsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
+		var dest PublicChannelAccount
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON201 = &dest
+
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers PostconversationscustomChannels202603ChannelIdchannelAccountsResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
+	}
+
+	return response, nil
+}
+
+// ParseGetconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountIdResponse parses an HTTP response from a GetconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountIdWithResponse call
+func ParseGetconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountIdResponse(rsp *http.Response) (*GetconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountIdResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountIdResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest PublicChannelAccount
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePatchconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountIdResponse parses an HTTP response from a PatchconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountIdWithResponse call
+func ParsePatchconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountIdResponse(rsp *http.Response) (*PatchconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountIdResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &PatchconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountIdResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest PublicChannelAccount
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostconversationscustomChannels202603ChannelIdmessagesResponse parses an HTTP response from a PostconversationscustomChannels202603ChannelIdmessagesWithResponse call
+func ParsePostconversationscustomChannels202603ChannelIdmessagesResponse(rsp *http.Response) (*PostconversationscustomChannels202603ChannelIdmessagesResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &PostconversationscustomChannels202603ChannelIdmessagesResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
+		var dest PublicConversationsMessage
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON201 = &dest
+
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers PostconversationscustomChannels202603ChannelIdmessagesResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
+	}
+
+	return response, nil
+}
+
+// ParseGetconversationscustomChannels202603ChannelIdmessagesMessageIdResponse parses an HTTP response from a GetconversationscustomChannels202603ChannelIdmessagesMessageIdWithResponse call
+func ParseGetconversationscustomChannels202603ChannelIdmessagesMessageIdResponse(rsp *http.Response) (*GetconversationscustomChannels202603ChannelIdmessagesMessageIdResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetconversationscustomChannels202603ChannelIdmessagesMessageIdResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest PublicConversationsMessage
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePatchconversationscustomChannels202603ChannelIdmessagesMessageIdResponse parses an HTTP response from a PatchconversationscustomChannels202603ChannelIdmessagesMessageIdWithResponse call
+func ParsePatchconversationscustomChannels202603ChannelIdmessagesMessageIdResponse(rsp *http.Response) (*PatchconversationscustomChannels202603ChannelIdmessagesMessageIdResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &PatchconversationscustomChannels202603ChannelIdmessagesMessageIdResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest PublicConversationsMessage
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcrmObjectSchemas202603schemasGetAllResponse parses an HTTP response from a GetcrmObjectSchemas202603schemasGetAllWithResponse call
+func ParseGetcrmObjectSchemas202603schemasGetAllResponse(rsp *http.Response) (*GetcrmObjectSchemas202603schemasGetAllResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetcrmObjectSchemas202603schemasGetAllResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CollectionResponseObjectSchemaNoPaging
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcrmObjectSchemas202603schemasCreateResponse parses an HTTP response from a PostcrmObjectSchemas202603schemasCreateWithResponse call
+func ParsePostcrmObjectSchemas202603schemasCreateResponse(rsp *http.Response) (*PostcrmObjectSchemas202603schemasCreateResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &PostcrmObjectSchemas202603schemasCreateResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
+		var dest ObjectSchema
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON201 = &dest
+
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers PostcrmObjectSchemas202603schemasCreateResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
+	}
+
+	return response, nil
+}
+
+// ParsePostcrmObjectSchemas202603schemasbatchreadcrmObjectSchemasv3schemasbatchreadResponse parses an HTTP response from a PostcrmObjectSchemas202603schemasbatchreadcrmObjectSchemasv3schemasbatchreadWithResponse call
+func ParsePostcrmObjectSchemas202603schemasbatchreadcrmObjectSchemasv3schemasbatchreadResponse(rsp *http.Response) (*PostcrmObjectSchemas202603schemasbatchreadcrmObjectSchemasv3schemasbatchreadResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &PostcrmObjectSchemas202603schemasbatchreadcrmObjectSchemasv3schemasbatchreadResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CollectionResponseObjectSchemaNoPaging
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseDeletecrmObjectSchemas202603schemasObjectTypeArchiveResponse parses an HTTP response from a DeletecrmObjectSchemas202603schemasObjectTypeArchiveWithResponse call
+func ParseDeletecrmObjectSchemas202603schemasObjectTypeArchiveResponse(rsp *http.Response) (*DeletecrmObjectSchemas202603schemasObjectTypeArchiveResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &DeletecrmObjectSchemas202603schemasObjectTypeArchiveResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParseGetcrmObjectSchemas202603schemasObjectTypeGetByIdResponse parses an HTTP response from a GetcrmObjectSchemas202603schemasObjectTypeGetByIdWithResponse call
+func ParseGetcrmObjectSchemas202603schemasObjectTypeGetByIdResponse(rsp *http.Response) (*GetcrmObjectSchemas202603schemasObjectTypeGetByIdResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetcrmObjectSchemas202603schemasObjectTypeGetByIdResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest ObjectSchema
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePatchcrmObjectSchemas202603schemasObjectTypeUpdateResponse parses an HTTP response from a PatchcrmObjectSchemas202603schemasObjectTypeUpdateWithResponse call
+func ParsePatchcrmObjectSchemas202603schemasObjectTypeUpdateResponse(rsp *http.Response) (*PatchcrmObjectSchemas202603schemasObjectTypeUpdateResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &PatchcrmObjectSchemas202603schemasObjectTypeUpdateResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest ObjectTypeDefinition
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcrmObjectSchemas202603schemasObjectTypeassociationsCreateAssociationResponse parses an HTTP response from a PostcrmObjectSchemas202603schemasObjectTypeassociationsCreateAssociationWithResponse call
+func ParsePostcrmObjectSchemas202603schemasObjectTypeassociationsCreateAssociationResponse(rsp *http.Response) (*PostcrmObjectSchemas202603schemasObjectTypeassociationsCreateAssociationResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &PostcrmObjectSchemas202603schemasObjectTypeassociationsCreateAssociationResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
+		var dest AssociationDefinition
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON201 = &dest
+
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers PostcrmObjectSchemas202603schemasObjectTypeassociationsCreateAssociationResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
+	}
+
+	return response, nil
+}
+
+// ParseDeletecrmObjectSchemas202603schemasObjectTypeassociationsAssociationIdentifierArchiveAssociationResponse parses an HTTP response from a DeletecrmObjectSchemas202603schemasObjectTypeassociationsAssociationIdentifierArchiveAssociationWithResponse call
+func ParseDeletecrmObjectSchemas202603schemasObjectTypeassociationsAssociationIdentifierArchiveAssociationResponse(rsp *http.Response) (*DeletecrmObjectSchemas202603schemasObjectTypeassociationsAssociationIdentifierArchiveAssociationResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &DeletecrmObjectSchemas202603schemasObjectTypeassociationsAssociationIdentifierArchiveAssociationResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParseGetcrmassociations202603definitionsconfigurationsallGetPageResponse parses an HTTP response from a Getcrmassociations202603definitionsconfigurationsallGetPageWithResponse call
+func ParseGetcrmassociations202603definitionsconfigurationsallGetPageResponse(rsp *http.Response) (*Getcrmassociations202603definitionsconfigurationsallGetPageResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcrmassociations202603definitionsconfigurationsallGetPageResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CollectionResponsePublicAssociationDefinitionUserConfigurationNoPaging
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypeGetPageBetweenTwoObjectTypesResponse parses an HTTP response from a Getcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypeGetPageBetweenTwoObjectTypesWithResponse call
+func ParseGetcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypeGetPageBetweenTwoObjectTypesResponse(rsp *http.Response) (*Getcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypeGetPageBetweenTwoObjectTypesResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypeGetPageBetweenTwoObjectTypesResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CollectionResponsePublicAssociationDefinitionUserConfigurationNoPaging
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchcreateBatchCreateResponse parses an HTTP response from a Postcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchcreateBatchCreateWithResponse call
+func ParsePostcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchcreateBatchCreateResponse(rsp *http.Response) (*Postcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchcreateBatchCreateResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchcreateBatchCreateResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
+		var dest BatchResponsePublicAssociationDefinitionUserConfiguration
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON201 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
+		var dest BatchResponsePublicAssociationDefinitionUserConfigurationWithErrors
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON207 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchpurgeBatchRemoveResponse parses an HTTP response from a Postcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchpurgeBatchRemoveWithResponse call
+func ParsePostcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchpurgeBatchRemoveResponse(rsp *http.Response) (*Postcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchpurgeBatchRemoveResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchpurgeBatchRemoveResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BatchResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchupdateBatchUpdateResponse parses an HTTP response from a Postcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchupdateBatchUpdateWithResponse call
+func ParsePostcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchupdateBatchUpdateResponse(rsp *http.Response) (*Postcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchupdateBatchUpdateResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchupdateBatchUpdateResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BatchResponsePublicAssociationDefinitionConfigurationUpdateResult
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
+		var dest BatchResponsePublicAssociationDefinitionConfigurationUpdateResultWithErrors
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON207 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcrmassociations202603usagehighUsageReportUserIdcrmassociations202509usagehighUsageReportUserIdResponse parses an HTTP response from a Postcrmassociations202603usagehighUsageReportUserIdcrmassociations202509usagehighUsageReportUserIdWithResponse call
+func ParsePostcrmassociations202603usagehighUsageReportUserIdcrmassociations202509usagehighUsageReportUserIdResponse(rsp *http.Response) (*Postcrmassociations202603usagehighUsageReportUserIdcrmassociations202509usagehighUsageReportUserIdResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcrmassociations202603usagehighUsageReportUserIdcrmassociations202509usagehighUsageReportUserIdResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest ReportCreationResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcrmassociations202603FromObjectTypeToObjectTypebatcharchivecrmassociations202509FromObjectTypeToObjectTypebatcharchiveResponse parses an HTTP response from a Postcrmassociations202603FromObjectTypeToObjectTypebatcharchivecrmassociations202509FromObjectTypeToObjectTypebatcharchiveWithResponse call
+func ParsePostcrmassociations202603FromObjectTypeToObjectTypebatcharchivecrmassociations202509FromObjectTypeToObjectTypebatcharchiveResponse(rsp *http.Response) (*Postcrmassociations202603FromObjectTypeToObjectTypebatcharchivecrmassociations202509FromObjectTypeToObjectTypebatcharchiveResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcrmassociations202603FromObjectTypeToObjectTypebatcharchivecrmassociations202509FromObjectTypeToObjectTypebatcharchiveResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BatchResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcrmassociations202603FromObjectTypeToObjectTypebatchassociatedefaultcrmassociations202509FromObjectTypeToObjectTypebatchassociatedefaultResponse parses an HTTP response from a Postcrmassociations202603FromObjectTypeToObjectTypebatchassociatedefaultcrmassociations202509FromObjectTypeToObjectTypebatchassociatedefaultWithResponse call
+func ParsePostcrmassociations202603FromObjectTypeToObjectTypebatchassociatedefaultcrmassociations202509FromObjectTypeToObjectTypebatchassociatedefaultResponse(rsp *http.Response) (*Postcrmassociations202603FromObjectTypeToObjectTypebatchassociatedefaultcrmassociations202509FromObjectTypeToObjectTypebatchassociatedefaultResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcrmassociations202603FromObjectTypeToObjectTypebatchassociatedefaultcrmassociations202509FromObjectTypeToObjectTypebatchassociatedefaultResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BatchResponsePublicDefaultAssociation
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcrmassociations202603FromObjectTypeToObjectTypebatchcreatecrmassociations202509FromObjectTypeToObjectTypebatchcreateResponse parses an HTTP response from a Postcrmassociations202603FromObjectTypeToObjectTypebatchcreatecrmassociations202509FromObjectTypeToObjectTypebatchcreateWithResponse call
+func ParsePostcrmassociations202603FromObjectTypeToObjectTypebatchcreatecrmassociations202509FromObjectTypeToObjectTypebatchcreateResponse(rsp *http.Response) (*Postcrmassociations202603FromObjectTypeToObjectTypebatchcreatecrmassociations202509FromObjectTypeToObjectTypebatchcreateResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcrmassociations202603FromObjectTypeToObjectTypebatchcreatecrmassociations202509FromObjectTypeToObjectTypebatchcreateResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
+		var dest BatchResponseLabelsBetweenObjectPair
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON201 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
+		var dest BatchResponseLabelsBetweenObjectPairWithErrors
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON207 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcrmassociations202603FromObjectTypeToObjectTypebatchlabelsarchivecrmassociations202509FromObjectTypeToObjectTypebatchlabelsarchiveResponse parses an HTTP response from a Postcrmassociations202603FromObjectTypeToObjectTypebatchlabelsarchivecrmassociations202509FromObjectTypeToObjectTypebatchlabelsarchiveWithResponse call
+func ParsePostcrmassociations202603FromObjectTypeToObjectTypebatchlabelsarchivecrmassociations202509FromObjectTypeToObjectTypebatchlabelsarchiveResponse(rsp *http.Response) (*Postcrmassociations202603FromObjectTypeToObjectTypebatchlabelsarchivecrmassociations202509FromObjectTypeToObjectTypebatchlabelsarchiveResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcrmassociations202603FromObjectTypeToObjectTypebatchlabelsarchivecrmassociations202509FromObjectTypeToObjectTypebatchlabelsarchiveResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BatchResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcrmassociations202603FromObjectTypeToObjectTypebatchreadcrmassociations202509FromObjectTypeToObjectTypebatchreadResponse parses an HTTP response from a Postcrmassociations202603FromObjectTypeToObjectTypebatchreadcrmassociations202509FromObjectTypeToObjectTypebatchreadWithResponse call
+func ParsePostcrmassociations202603FromObjectTypeToObjectTypebatchreadcrmassociations202509FromObjectTypeToObjectTypebatchreadResponse(rsp *http.Response) (*Postcrmassociations202603FromObjectTypeToObjectTypebatchreadcrmassociations202509FromObjectTypeToObjectTypebatchreadResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcrmassociations202603FromObjectTypeToObjectTypebatchreadcrmassociations202509FromObjectTypeToObjectTypebatchreadResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BatchResponsePublicAssociationMultiWithLabel
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
+		var dest BatchResponsePublicAssociationMultiWithLabelWithErrors
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON207 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcrmassociations202603FromObjectTypeToObjectTypelabelsGetPageResponse parses an HTTP response from a Getcrmassociations202603FromObjectTypeToObjectTypelabelsGetPageWithResponse call
+func ParseGetcrmassociations202603FromObjectTypeToObjectTypelabelsGetPageResponse(rsp *http.Response) (*Getcrmassociations202603FromObjectTypeToObjectTypelabelsGetPageResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcrmassociations202603FromObjectTypeToObjectTypelabelsGetPageResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CollectionResponseAssociationSpecWithLabelNoPaging
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcrmassociations202603FromObjectTypeToObjectTypelabelsCreateResponse parses an HTTP response from a Postcrmassociations202603FromObjectTypeToObjectTypelabelsCreateWithResponse call
+func ParsePostcrmassociations202603FromObjectTypeToObjectTypelabelsCreateResponse(rsp *http.Response) (*Postcrmassociations202603FromObjectTypeToObjectTypelabelsCreateResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcrmassociations202603FromObjectTypeToObjectTypelabelsCreateResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CollectionResponseAssociationSpecWithLabelNoPaging
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePutcrmassociations202603FromObjectTypeToObjectTypelabelsUpdateResponse parses an HTTP response from a Putcrmassociations202603FromObjectTypeToObjectTypelabelsUpdateWithResponse call
+func ParsePutcrmassociations202603FromObjectTypeToObjectTypelabelsUpdateResponse(rsp *http.Response) (*Putcrmassociations202603FromObjectTypeToObjectTypelabelsUpdateResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Putcrmassociations202603FromObjectTypeToObjectTypelabelsUpdateResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParseDeletecrmassociations202603FromObjectTypeToObjectTypelabelsAssociationTypeIdRemoveResponse parses an HTTP response from a Deletecrmassociations202603FromObjectTypeToObjectTypelabelsAssociationTypeIdRemoveWithResponse call
+func ParseDeletecrmassociations202603FromObjectTypeToObjectTypelabelsAssociationTypeIdRemoveResponse(rsp *http.Response) (*Deletecrmassociations202603FromObjectTypeToObjectTypelabelsAssociationTypeIdRemoveResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Deletecrmassociations202603FromObjectTypeToObjectTypelabelsAssociationTypeIdRemoveResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParsePostcrmexports202603exportasyncStartResponse parses an HTTP response from a Postcrmexports202603exportasyncStartWithResponse call
+func ParsePostcrmexports202603exportasyncStartResponse(rsp *http.Response) (*Postcrmexports202603exportasyncStartResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcrmexports202603exportasyncStartResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 202:
+		var dest TaskLocator
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON202 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcrmexports202603exportasynctasksTaskIdstatusGetStatusResponse parses an HTTP response from a Getcrmexports202603exportasynctasksTaskIdstatusGetStatusWithResponse call
+func ParseGetcrmexports202603exportasynctasksTaskIdstatusGetStatusResponse(rsp *http.Response) (*Getcrmexports202603exportasynctasksTaskIdstatusGetStatusResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcrmexports202603exportasynctasksTaskIdstatusGetStatusResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest ActionResponseWithSingleResultURI
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcrmexports202603exportExportIdGetByIdResponse parses an HTTP response from a Getcrmexports202603exportExportIdGetByIdWithResponse call
+func ParseGetcrmexports202603exportExportIdGetByIdResponse(rsp *http.Response) (*Getcrmexports202603exportExportIdGetByIdResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcrmexports202603exportExportIdGetByIdResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest PublicExportResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcrmextensionscalling202603inboundCallcrmv3extensionscallinginboundCallResponse parses an HTTP response from a Postcrmextensionscalling202603inboundCallcrmv3extensionscallinginboundCallWithResponse call
+func ParsePostcrmextensionscalling202603inboundCallcrmv3extensionscallinginboundCallResponse(rsp *http.Response) (*Postcrmextensionscalling202603inboundCallcrmv3extensionscallinginboundCallResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcrmextensionscalling202603inboundCallcrmv3extensionscallinginboundCallResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CompletedThirdPartyCallResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcrmextensionscalling202603recordingsreadyMarkAsReadyResponse parses an HTTP response from a Postcrmextensionscalling202603recordingsreadyMarkAsReadyWithResponse call
+func ParsePostcrmextensionscalling202603recordingsreadyMarkAsReadyResponse(rsp *http.Response) (*Postcrmextensionscalling202603recordingsreadyMarkAsReadyResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcrmextensionscalling202603recordingsreadyMarkAsReadyResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParsePostcrmextensionscalling202603transcriptscrmextensionscalling202603transcriptsResponse parses an HTTP response from a Postcrmextensionscalling202603transcriptscrmextensionscalling202603transcriptsWithResponse call
+func ParsePostcrmextensionscalling202603transcriptscrmextensionscalling202603transcriptsResponse(rsp *http.Response) (*Postcrmextensionscalling202603transcriptscrmextensionscalling202603transcriptsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcrmextensionscalling202603transcriptscrmextensionscalling202603transcriptsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest TranscriptCreateResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseDeletecrmextensionscalling202603transcriptsTranscriptIdcrmextensionscalling202603transcriptsTranscriptIdResponse parses an HTTP response from a Deletecrmextensionscalling202603transcriptsTranscriptIdcrmextensionscalling202603transcriptsTranscriptIdWithResponse call
+func ParseDeletecrmextensionscalling202603transcriptsTranscriptIdcrmextensionscalling202603transcriptsTranscriptIdResponse(rsp *http.Response) (*Deletecrmextensionscalling202603transcriptsTranscriptIdcrmextensionscalling202603transcriptsTranscriptIdResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Deletecrmextensionscalling202603transcriptsTranscriptIdcrmextensionscalling202603transcriptsTranscriptIdResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParseGetcrmextensionscalling202603transcriptsTranscriptIdcrmextensionscalling202603transcriptsTranscriptIdResponse parses an HTTP response from a Getcrmextensionscalling202603transcriptsTranscriptIdcrmextensionscalling202603transcriptsTranscriptIdWithResponse call
+func ParseGetcrmextensionscalling202603transcriptsTranscriptIdcrmextensionscalling202603transcriptsTranscriptIdResponse(rsp *http.Response) (*Getcrmextensionscalling202603transcriptsTranscriptIdcrmextensionscalling202603transcriptsTranscriptIdResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcrmextensionscalling202603transcriptsTranscriptIdcrmextensionscalling202603transcriptsTranscriptIdResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest TranscriptResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseDeletecrmextensionscalling202603AppIdsettingsRemoveResponse parses an HTTP response from a Deletecrmextensionscalling202603AppIdsettingsRemoveWithResponse call
+func ParseDeletecrmextensionscalling202603AppIdsettingsRemoveResponse(rsp *http.Response) (*Deletecrmextensionscalling202603AppIdsettingsRemoveResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Deletecrmextensionscalling202603AppIdsettingsRemoveResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParseGetcrmextensionscalling202603AppIdsettingsGetResponse parses an HTTP response from a Getcrmextensionscalling202603AppIdsettingsGetWithResponse call
+func ParseGetcrmextensionscalling202603AppIdsettingsGetResponse(rsp *http.Response) (*Getcrmextensionscalling202603AppIdsettingsGetResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcrmextensionscalling202603AppIdsettingsGetResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest SettingsResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePatchcrmextensionscalling202603AppIdsettingsUpdateResponse parses an HTTP response from a Patchcrmextensionscalling202603AppIdsettingsUpdateWithResponse call
+func ParsePatchcrmextensionscalling202603AppIdsettingsUpdateResponse(rsp *http.Response) (*Patchcrmextensionscalling202603AppIdsettingsUpdateResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Patchcrmextensionscalling202603AppIdsettingsUpdateResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest SettingsResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcrmextensionscalling202603AppIdsettingsCreateResponse parses an HTTP response from a Postcrmextensionscalling202603AppIdsettingsCreateWithResponse call
+func ParsePostcrmextensionscalling202603AppIdsettingsCreateResponse(rsp *http.Response) (*Postcrmextensionscalling202603AppIdsettingsCreateResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcrmextensionscalling202603AppIdsettingsCreateResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest SettingsResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseDeletecrmextensionscalling202603AppIdsettingschannelConnectionRemoveResponse parses an HTTP response from a Deletecrmextensionscalling202603AppIdsettingschannelConnectionRemoveWithResponse call
+func ParseDeletecrmextensionscalling202603AppIdsettingschannelConnectionRemoveResponse(rsp *http.Response) (*Deletecrmextensionscalling202603AppIdsettingschannelConnectionRemoveResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Deletecrmextensionscalling202603AppIdsettingschannelConnectionRemoveResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParseGetcrmextensionscalling202603AppIdsettingschannelConnectionGetResponse parses an HTTP response from a Getcrmextensionscalling202603AppIdsettingschannelConnectionGetWithResponse call
+func ParseGetcrmextensionscalling202603AppIdsettingschannelConnectionGetResponse(rsp *http.Response) (*Getcrmextensionscalling202603AppIdsettingschannelConnectionGetResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcrmextensionscalling202603AppIdsettingschannelConnectionGetResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest ChannelConnectionSettingsResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePatchcrmextensionscalling202603AppIdsettingschannelConnectionUpdateResponse parses an HTTP response from a Patchcrmextensionscalling202603AppIdsettingschannelConnectionUpdateWithResponse call
+func ParsePatchcrmextensionscalling202603AppIdsettingschannelConnectionUpdateResponse(rsp *http.Response) (*Patchcrmextensionscalling202603AppIdsettingschannelConnectionUpdateResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Patchcrmextensionscalling202603AppIdsettingschannelConnectionUpdateResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest ChannelConnectionSettingsResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcrmextensionscalling202603AppIdsettingschannelConnectionCreateResponse parses an HTTP response from a Postcrmextensionscalling202603AppIdsettingschannelConnectionCreateWithResponse call
+func ParsePostcrmextensionscalling202603AppIdsettingschannelConnectionCreateResponse(rsp *http.Response) (*Postcrmextensionscalling202603AppIdsettingschannelConnectionCreateResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcrmextensionscalling202603AppIdsettingschannelConnectionCreateResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest ChannelConnectionSettingsResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcrmextensionscalling202603AppIdsettingsrecordingGetResponse parses an HTTP response from a Getcrmextensionscalling202603AppIdsettingsrecordingGetWithResponse call
+func ParseGetcrmextensionscalling202603AppIdsettingsrecordingGetResponse(rsp *http.Response) (*Getcrmextensionscalling202603AppIdsettingsrecordingGetResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcrmextensionscalling202603AppIdsettingsrecordingGetResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest RecordingSettingsResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePatchcrmextensionscalling202603AppIdsettingsrecordingUpdateResponse parses an HTTP response from a Patchcrmextensionscalling202603AppIdsettingsrecordingUpdateWithResponse call
+func ParsePatchcrmextensionscalling202603AppIdsettingsrecordingUpdateResponse(rsp *http.Response) (*Patchcrmextensionscalling202603AppIdsettingsrecordingUpdateResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Patchcrmextensionscalling202603AppIdsettingsrecordingUpdateResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest RecordingSettingsResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcrmextensionscalling202603AppIdsettingsrecordingCreateResponse parses an HTTP response from a Postcrmextensionscalling202603AppIdsettingsrecordingCreateWithResponse call
+func ParsePostcrmextensionscalling202603AppIdsettingsrecordingCreateResponse(rsp *http.Response) (*Postcrmextensionscalling202603AppIdsettingsrecordingCreateResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcrmextensionscalling202603AppIdsettingsrecordingCreateResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest RecordingSettingsResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcrmextensionscardsDev202603sampleResponseGetCardsSampleResponseResponse parses an HTTP response from a GetcrmextensionscardsDev202603sampleResponseGetCardsSampleResponseWithResponse call
+func ParseGetcrmextensionscardsDev202603sampleResponseGetCardsSampleResponseResponse(rsp *http.Response) (*GetcrmextensionscardsDev202603sampleResponseGetCardsSampleResponseResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetcrmextensionscardsDev202603sampleResponseGetCardsSampleResponseResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest IntegratorCardPayloadResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcrmextensionscardsDev202603AppIdGetAllResponse parses an HTTP response from a GetcrmextensionscardsDev202603AppIdGetAllWithResponse call
+func ParseGetcrmextensionscardsDev202603AppIdGetAllResponse(rsp *http.Response) (*GetcrmextensionscardsDev202603AppIdGetAllResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetcrmextensionscardsDev202603AppIdGetAllResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest PublicCardListResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcrmextensionscardsDev202603AppIdCreateResponse parses an HTTP response from a PostcrmextensionscardsDev202603AppIdCreateWithResponse call
+func ParsePostcrmextensionscardsDev202603AppIdCreateResponse(rsp *http.Response) (*PostcrmextensionscardsDev202603AppIdCreateResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &PostcrmextensionscardsDev202603AppIdCreateResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
+		var dest PublicCardResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON201 = &dest
+
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers PostcrmextensionscardsDev202603AppIdCreateResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
+	}
+
+	return response, nil
+}
+
+// ParsePostcrmextensionscardsDev202603AppIdviewsmigratecrmv3extensionscardsDevAppIdviewsmigrateResponse parses an HTTP response from a PostcrmextensionscardsDev202603AppIdviewsmigratecrmv3extensionscardsDevAppIdviewsmigrateWithResponse call
+func ParsePostcrmextensionscardsDev202603AppIdviewsmigratecrmv3extensionscardsDevAppIdviewsmigrateResponse(rsp *http.Response) (*PostcrmextensionscardsDev202603AppIdviewsmigratecrmv3extensionscardsDevAppIdviewsmigrateResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &PostcrmextensionscardsDev202603AppIdviewsmigratecrmv3extensionscardsDevAppIdviewsmigrateResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CardMigrateViewsResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseDeletecrmextensionscardsDev202603AppIdCardIdArchiveResponse parses an HTTP response from a DeletecrmextensionscardsDev202603AppIdCardIdArchiveWithResponse call
+func ParseDeletecrmextensionscardsDev202603AppIdCardIdArchiveResponse(rsp *http.Response) (*DeletecrmextensionscardsDev202603AppIdCardIdArchiveResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &DeletecrmextensionscardsDev202603AppIdCardIdArchiveResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParseGetcrmextensionscardsDev202603AppIdCardIdGetByIdResponse parses an HTTP response from a GetcrmextensionscardsDev202603AppIdCardIdGetByIdWithResponse call
+func ParseGetcrmextensionscardsDev202603AppIdCardIdGetByIdResponse(rsp *http.Response) (*GetcrmextensionscardsDev202603AppIdCardIdGetByIdResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetcrmextensionscardsDev202603AppIdCardIdGetByIdResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest PublicCardResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePatchcrmextensionscardsDev202603AppIdCardIdUpdateResponse parses an HTTP response from a PatchcrmextensionscardsDev202603AppIdCardIdUpdateWithResponse call
+func ParsePatchcrmextensionscardsDev202603AppIdCardIdUpdateResponse(rsp *http.Response) (*PatchcrmextensionscardsDev202603AppIdCardIdUpdateResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &PatchcrmextensionscardsDev202603AppIdCardIdUpdateResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest PublicCardResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseDeletecrmextensionsvideoconferencing202603settingsAppIdArchiveResponse parses an HTTP response from a Deletecrmextensionsvideoconferencing202603settingsAppIdArchiveWithResponse call
+func ParseDeletecrmextensionsvideoconferencing202603settingsAppIdArchiveResponse(rsp *http.Response) (*Deletecrmextensionsvideoconferencing202603settingsAppIdArchiveResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Deletecrmextensionsvideoconferencing202603settingsAppIdArchiveResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParseGetcrmextensionsvideoconferencing202603settingsAppIdGetByIdResponse parses an HTTP response from a Getcrmextensionsvideoconferencing202603settingsAppIdGetByIdWithResponse call
+func ParseGetcrmextensionsvideoconferencing202603settingsAppIdGetByIdResponse(rsp *http.Response) (*Getcrmextensionsvideoconferencing202603settingsAppIdGetByIdResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcrmextensionsvideoconferencing202603settingsAppIdGetByIdResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest ExternalSettings
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePutcrmextensionsvideoconferencing202603settingsAppIdReplaceResponse parses an HTTP response from a Putcrmextensionsvideoconferencing202603settingsAppIdReplaceWithResponse call
+func ParsePutcrmextensionsvideoconferencing202603settingsAppIdReplaceResponse(rsp *http.Response) (*Putcrmextensionsvideoconferencing202603settingsAppIdReplaceResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Putcrmextensionsvideoconferencing202603settingsAppIdReplaceResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest ExternalSettings
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcrmimports202603crmimportsv3Response parses an HTTP response from a Getcrmimports202603crmimportsv3WithResponse call
+func ParseGetcrmimports202603crmimportsv3Response(rsp *http.Response) (*Getcrmimports202603crmimportsv3Response, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcrmimports202603crmimportsv3Response{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CollectionResponsePublicImportResponseForwardPaging
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcrmimports202603crmimportsv3Response parses an HTTP response from a Postcrmimports202603crmimportsv3WithResponse call
+func ParsePostcrmimports202603crmimportsv3Response(rsp *http.Response) (*Postcrmimports202603crmimportsv3Response, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcrmimports202603crmimportsv3Response{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest PublicImportResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcrmimports202603ImportIdcrmimportsv3ImportIdResponse parses an HTTP response from a Getcrmimports202603ImportIdcrmimportsv3ImportIdWithResponse call
+func ParseGetcrmimports202603ImportIdcrmimportsv3ImportIdResponse(rsp *http.Response) (*Getcrmimports202603ImportIdcrmimportsv3ImportIdResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcrmimports202603ImportIdcrmimportsv3ImportIdResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest PublicImportResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcrmimports202603ImportIdcancelcrmimportsv3ImportIdcancelResponse parses an HTTP response from a Postcrmimports202603ImportIdcancelcrmimportsv3ImportIdcancelWithResponse call
+func ParsePostcrmimports202603ImportIdcancelcrmimportsv3ImportIdcancelResponse(rsp *http.Response) (*Postcrmimports202603ImportIdcancelcrmimportsv3ImportIdcancelResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcrmimports202603ImportIdcancelcrmimportsv3ImportIdcancelResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest ActionResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcrmimports202603ImportIderrorscrmimportsv3ImportIderrorsResponse parses an HTTP response from a Getcrmimports202603ImportIderrorscrmimportsv3ImportIderrorsWithResponse call
+func ParseGetcrmimports202603ImportIderrorscrmimportsv3ImportIderrorsResponse(rsp *http.Response) (*Getcrmimports202603ImportIderrorscrmimportsv3ImportIderrorsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcrmimports202603ImportIderrorscrmimportsv3ImportIderrorsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CollectionResponsePublicImportErrorForwardPaging
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcrmlimits202603associationslabelsResponse parses an HTTP response from a Getcrmlimits202603associationslabelsWithResponse call
+func ParseGetcrmlimits202603associationslabelsResponse(rsp *http.Response) (*Getcrmlimits202603associationslabelsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcrmlimits202603associationslabelsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CollectionResponseAssociationLabelLimitResponseNoPaging
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcrmlimits202603associationsrecordsfromResponse parses an HTTP response from a Getcrmlimits202603associationsrecordsfromWithResponse call
+func ParseGetcrmlimits202603associationsrecordsfromResponse(rsp *http.Response) (*Getcrmlimits202603associationsrecordsfromResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcrmlimits202603associationsrecordsfromResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CollectionResponseObjectTypeNearOrAtAssociationLimitNoPaging
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcrmlimits202603associationsrecordsFromObjectTypeIdtoResponse parses an HTTP response from a Getcrmlimits202603associationsrecordsFromObjectTypeIdtoWithResponse call
+func ParseGetcrmlimits202603associationsrecordsFromObjectTypeIdtoResponse(rsp *http.Response) (*Getcrmlimits202603associationsrecordsFromObjectTypeIdtoResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcrmlimits202603associationsrecordsFromObjectTypeIdtoResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CollectionResponseObjectTypeNearOrAtAssociationLimitNoPaging
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcrmlimits202603associationsrecordsFromObjectTypeIdToObjectTypeIdResponse parses an HTTP response from a Getcrmlimits202603associationsrecordsFromObjectTypeIdToObjectTypeIdWithResponse call
+func ParseGetcrmlimits202603associationsrecordsFromObjectTypeIdToObjectTypeIdResponse(rsp *http.Response) (*Getcrmlimits202603associationsrecordsFromObjectTypeIdToObjectTypeIdResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcrmlimits202603associationsrecordsFromObjectTypeIdToObjectTypeIdResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest AssociationRecordLimitResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcrmlimits202603calculatedPropertiesResponse parses an HTTP response from a Getcrmlimits202603calculatedPropertiesWithResponse call
+func ParseGetcrmlimits202603calculatedPropertiesResponse(rsp *http.Response) (*Getcrmlimits202603calculatedPropertiesResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcrmlimits202603calculatedPropertiesResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CalculatedPropertyLimitResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcrmlimits202603customObjectTypesResponse parses an HTTP response from a Getcrmlimits202603customObjectTypesWithResponse call
+func ParseGetcrmlimits202603customObjectTypesResponse(rsp *http.Response) (*Getcrmlimits202603customObjectTypesResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcrmlimits202603customObjectTypesResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CustomObjectLimitResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcrmlimits202603customPropertiesResponse parses an HTTP response from a Getcrmlimits202603customPropertiesWithResponse call
+func ParseGetcrmlimits202603customPropertiesResponse(rsp *http.Response) (*Getcrmlimits202603customPropertiesResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcrmlimits202603customPropertiesResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CustomPropertyLimitResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcrmlimits202603pipelinesResponse parses an HTTP response from a Getcrmlimits202603pipelinesWithResponse call
+func ParseGetcrmlimits202603pipelinesResponse(rsp *http.Response) (*Getcrmlimits202603pipelinesResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcrmlimits202603pipelinesResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest PipelineLimitResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcrmlimits202603recordsResponse parses an HTTP response from a Getcrmlimits202603recordsWithResponse call
+func ParseGetcrmlimits202603recordsResponse(rsp *http.Response) (*Getcrmlimits202603recordsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcrmlimits202603recordsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest RecordLimitResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcrmlists202603crmlistsv3Response parses an HTTP response from a Getcrmlists202603crmlistsv3WithResponse call
+func ParseGetcrmlists202603crmlistsv3Response(rsp *http.Response) (*Getcrmlists202603crmlistsv3Response, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcrmlists202603crmlistsv3Response{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest ListsByIdResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcrmlists202603crmlistsv3Response parses an HTTP response from a Postcrmlists202603crmlistsv3WithResponse call
+func ParsePostcrmlists202603crmlistsv3Response(rsp *http.Response) (*Postcrmlists202603crmlistsv3Response, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcrmlists202603crmlistsv3Response{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest ListCreateResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcrmlists202603folderscrmlistsv3foldersResponse parses an HTTP response from a Getcrmlists202603folderscrmlistsv3foldersWithResponse call
+func ParseGetcrmlists202603folderscrmlistsv3foldersResponse(rsp *http.Response) (*Getcrmlists202603folderscrmlistsv3foldersResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcrmlists202603folderscrmlistsv3foldersResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest ListFolderFetchResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcrmlists202603folderscrmlistsv3foldersResponse parses an HTTP response from a Postcrmlists202603folderscrmlistsv3foldersWithResponse call
+func ParsePostcrmlists202603folderscrmlistsv3foldersResponse(rsp *http.Response) (*Postcrmlists202603folderscrmlistsv3foldersResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcrmlists202603folderscrmlistsv3foldersResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest ListFolderCreateResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePutcrmlists202603foldersmoveListcrmlistsv3foldersmoveListResponse parses an HTTP response from a Putcrmlists202603foldersmoveListcrmlistsv3foldersmoveListWithResponse call
+func ParsePutcrmlists202603foldersmoveListcrmlistsv3foldersmoveListResponse(rsp *http.Response) (*Putcrmlists202603foldersmoveListcrmlistsv3foldersmoveListResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Putcrmlists202603foldersmoveListcrmlistsv3foldersmoveListResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParseDeletecrmlists202603foldersFolderIdcrmlistsv3foldersFolderIdResponse parses an HTTP response from a Deletecrmlists202603foldersFolderIdcrmlistsv3foldersFolderIdWithResponse call
+func ParseDeletecrmlists202603foldersFolderIdcrmlistsv3foldersFolderIdResponse(rsp *http.Response) (*Deletecrmlists202603foldersFolderIdcrmlistsv3foldersFolderIdResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Deletecrmlists202603foldersFolderIdcrmlistsv3foldersFolderIdResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParsePutcrmlists202603foldersFolderIdmoveNewParentFolderIdcrmlistsv3foldersFolderIdmoveNewParentFolderIdResponse parses an HTTP response from a Putcrmlists202603foldersFolderIdmoveNewParentFolderIdcrmlistsv3foldersFolderIdmoveNewParentFolderIdWithResponse call
+func ParsePutcrmlists202603foldersFolderIdmoveNewParentFolderIdcrmlistsv3foldersFolderIdmoveNewParentFolderIdResponse(rsp *http.Response) (*Putcrmlists202603foldersFolderIdmoveNewParentFolderIdcrmlistsv3foldersFolderIdmoveNewParentFolderIdResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Putcrmlists202603foldersFolderIdmoveNewParentFolderIdcrmlistsv3foldersFolderIdmoveNewParentFolderIdResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest ListFolderFetchResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePutcrmlists202603foldersFolderIdrenamecrmlistsv3foldersFolderIdrenameResponse parses an HTTP response from a Putcrmlists202603foldersFolderIdrenamecrmlistsv3foldersFolderIdrenameWithResponse call
+func ParsePutcrmlists202603foldersFolderIdrenamecrmlistsv3foldersFolderIdrenameResponse(rsp *http.Response) (*Putcrmlists202603foldersFolderIdrenamecrmlistsv3foldersFolderIdrenameResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Putcrmlists202603foldersFolderIdrenamecrmlistsv3foldersFolderIdrenameResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest ListFolderFetchResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcrmlists202603idmappingcrmlistsv3idmappingResponse parses an HTTP response from a Getcrmlists202603idmappingcrmlistsv3idmappingWithResponse call
+func ParseGetcrmlists202603idmappingcrmlistsv3idmappingResponse(rsp *http.Response) (*Getcrmlists202603idmappingcrmlistsv3idmappingResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcrmlists202603idmappingcrmlistsv3idmappingResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest PublicMigrationMapping
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcrmlists202603idmappingcrmlistsv3idmappingResponse parses an HTTP response from a Postcrmlists202603idmappingcrmlistsv3idmappingWithResponse call
+func ParsePostcrmlists202603idmappingcrmlistsv3idmappingResponse(rsp *http.Response) (*Postcrmlists202603idmappingcrmlistsv3idmappingResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcrmlists202603idmappingcrmlistsv3idmappingResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest PublicBatchMigrationMapping
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcrmlists202603objectTypeIdObjectTypeIdnameListNamecrmlistsv3objectTypeIdObjectTypeIdnameListNameResponse parses an HTTP response from a Getcrmlists202603objectTypeIdObjectTypeIdnameListNamecrmlistsv3objectTypeIdObjectTypeIdnameListNameWithResponse call
+func ParseGetcrmlists202603objectTypeIdObjectTypeIdnameListNamecrmlistsv3objectTypeIdObjectTypeIdnameListNameResponse(rsp *http.Response) (*Getcrmlists202603objectTypeIdObjectTypeIdnameListNamecrmlistsv3objectTypeIdObjectTypeIdnameListNameResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcrmlists202603objectTypeIdObjectTypeIdnameListNamecrmlistsv3objectTypeIdObjectTypeIdnameListNameResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest ListFetchResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcrmlists202603recordsmembershipsbatchreadcrmlistsv3recordsmembershipsbatchreadResponse parses an HTTP response from a Postcrmlists202603recordsmembershipsbatchreadcrmlistsv3recordsmembershipsbatchreadWithResponse call
+func ParsePostcrmlists202603recordsmembershipsbatchreadcrmlistsv3recordsmembershipsbatchreadResponse(rsp *http.Response) (*Postcrmlists202603recordsmembershipsbatchreadcrmlistsv3recordsmembershipsbatchreadResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcrmlists202603recordsmembershipsbatchreadcrmlistsv3recordsmembershipsbatchreadResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BatchResponseRecordIdWithMemberships
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
+		var dest BatchResponseRecordIdWithMembershipsWithErrors
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON207 = &dest
+
+	}
+
+	return response, nil
+}
 
 // ParseGetcrmlists202603recordsObjectTypeIdRecordIdmembershipscrmlistsv3recordsObjectTypeIdRecordIdmembershipsResponse parses an HTTP response from a Getcrmlists202603recordsObjectTypeIdRecordIdmembershipscrmlistsv3recordsObjectTypeIdRecordIdmembershipsWithResponse call
 func ParseGetcrmlists202603recordsObjectTypeIdRecordIdmembershipscrmlistsv3recordsObjectTypeIdRecordIdmembershipsResponse(rsp *http.Response) (*Getcrmlists202603recordsObjectTypeIdRecordIdmembershipscrmlistsv3recordsObjectTypeIdRecordIdmembershipsResponse, error) {
@@ -25,7 +3012,7 @@ func ParseGetcrmlists202603recordsObjectTypeIdRecordIdmembershipscrmlistsv3recor
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmListsApiCollectionResponseRecordListMembership
+		var dest ApiCollectionResponseRecordListMembership
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -51,7 +3038,7 @@ func ParsePostcrmlists202603searchcrmlistsv3searchResponse(rsp *http.Response) (
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmListsListSearchResponse
+		var dest ListSearchResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -93,7 +3080,7 @@ func ParseGetcrmlists202603ListIdcrmlistsv3ListIdResponse(rsp *http.Response) (*
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmListsListFetchResponse
+		var dest ListFetchResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -135,7 +3122,7 @@ func ParseGetcrmlists202603ListIdmembershipscrmlistsv3ListIdmembershipsResponse(
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmListsApiCollectionResponseJoinTimeAndRecordId
+		var dest ApiCollectionResponseJoinTimeAndRecordId
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -161,7 +3148,7 @@ func ParsePutcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsaddRes
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmListsMembershipsUpdateResponse
+		var dest MembershipsUpdateResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -187,7 +3174,7 @@ func ParsePutcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembersh
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmListsMembershipsUpdateResponse
+		var dest MembershipsUpdateResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -229,7 +3216,7 @@ func ParseGetcrmlists202603ListIdmembershipsjoinOrdercrmlistsv3ListIdmemberships
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmListsApiCollectionResponseJoinTimeAndRecordId
+		var dest ApiCollectionResponseJoinTimeAndRecordId
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -255,7 +3242,7 @@ func ParsePutcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsrem
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmListsMembershipsUpdateResponse
+		var dest MembershipsUpdateResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -313,7 +3300,7 @@ func ParseGetcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConve
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmListsPublicListConversionResponse
+		var dest PublicListConversionResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -339,7 +3326,7 @@ func ParsePutcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConve
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmListsPublicListConversionResponse
+		var dest PublicListConversionResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -365,7 +3352,7 @@ func ParseGetcrmlists202603ListIdsizeAndEditsHistorybetweencrmlists202603ListIds
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmListsListSizeAndEditHistoryResponse
+		var dest ListSizeAndEditHistoryResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -391,7 +3378,7 @@ func ParsePutcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFilt
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmListsListUpdateResponse
+		var dest ListUpdateResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -417,7 +3404,7 @@ func ParsePutcrmlists202603ListIdupdateListNamecrmlistsv3ListIdupdateListNameRes
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmListsListUpdateResponse
+		var dest ListUpdateResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -443,7 +3430,7 @@ func ParseGetcrmobjectLibrary202603enablementcrmobjectLibrary202603enablementRes
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectLibraryEnablementPortalObjectTypeEnablementPublicResponse
+		var dest PortalObjectTypeEnablementPublicResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -469,7 +3456,7 @@ func ParseGetcrmobjectLibrary202603enablementObjectTypeIdcrmobjectLibrary202603e
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectLibraryEnablementObjectTypeEnablementPublicResponse
+		var dest ObjectTypeEnablementPublicResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -495,7 +3482,7 @@ func ParseGetcrmobjects2026030162Response(rsp *http.Response) (*Getcrmobjects202
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+		var dest CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -521,12 +3508,25 @@ func ParsePostcrmobjects2026030162Response(rsp *http.Response) (*Postcrmobjects2
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcrmobjects2026030162Response201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -563,14 +3563,14 @@ func ParsePostcrmobjects2026030162batchcreateResponse(rsp *http.Response) (*Post
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -596,14 +3596,14 @@ func ParsePostcrmobjects2026030162batchreadResponse(rsp *http.Response) (*Postcr
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -629,14 +3629,14 @@ func ParsePostcrmobjects2026030162batchupdateResponse(rsp *http.Response) (*Post
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -662,14 +3662,14 @@ func ParsePostcrmobjects2026030162batchupsertResponse(rsp *http.Response) (*Post
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObject
+		var dest BatchResponseSimplePublicUpsertObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+		var dest BatchResponseSimplePublicUpsertObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -695,7 +3695,7 @@ func ParsePostcrmobjects2026030162searchResponse(rsp *http.Response) (*Postcrmob
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmCollectionResponseWithTotalSimplePublicObject
+		var dest CollectionResponseWithTotalSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -737,7 +3737,7 @@ func ParseGetcrmobjects2026030162ServiceIdResponse(rsp *http.Response) (*Getcrmo
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsSimplePublicObjectWithAssociations
+		var dest SimplePublicObjectWithAssociations
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -763,7 +3763,7 @@ func ParsePatchcrmobjects2026030162ServiceIdResponse(rsp *http.Response) (*Patch
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -789,7 +3789,7 @@ func ParseGetcrmobjects20260303GetPageResponse(rsp *http.Response) (*Getcrmobjec
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+		var dest CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -815,12 +3815,25 @@ func ParsePostcrmobjects20260303CreateResponse(rsp *http.Response) (*Postcrmobje
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcrmobjects20260303CreateResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -857,14 +3870,14 @@ func ParsePostcrmobjects20260303batchcreateCreateResponse(rsp *http.Response) (*
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -890,14 +3903,14 @@ func ParsePostcrmobjects20260303batchreadReadResponse(rsp *http.Response) (*Post
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -923,14 +3936,14 @@ func ParsePostcrmobjects20260303batchupdateUpdateResponse(rsp *http.Response) (*
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -956,14 +3969,14 @@ func ParsePostcrmobjects20260303batchupsertUpsertResponse(rsp *http.Response) (*
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObject
+		var dest BatchResponseSimplePublicUpsertObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+		var dest BatchResponseSimplePublicUpsertObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -989,7 +4002,7 @@ func ParsePostcrmobjects20260303mergeMergeResponse(rsp *http.Response) (*Postcrm
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -1015,7 +4028,7 @@ func ParsePostcrmobjects20260303searchDoSearchResponse(rsp *http.Response) (*Pos
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmCollectionResponseWithTotalSimplePublicObject
+		var dest CollectionResponseWithTotalSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -1057,7 +4070,7 @@ func ParseGetcrmobjects20260303DealIdGetByIdResponse(rsp *http.Response) (*Getcr
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsSimplePublicObjectWithAssociations
+		var dest SimplePublicObjectWithAssociations
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -1083,7 +4096,7 @@ func ParsePatchcrmobjects20260303DealIdUpdateResponse(rsp *http.Response) (*Patc
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -1109,7 +4122,7 @@ func ParseGetcrmobjects2026030410Response(rsp *http.Response) (*Getcrmobjects202
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+		var dest CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -1135,12 +4148,25 @@ func ParsePostcrmobjects2026030410Response(rsp *http.Response) (*Postcrmobjects2
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcrmobjects2026030410Response201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -1177,14 +4203,14 @@ func ParsePostcrmobjects2026030410batchcreateResponse(rsp *http.Response) (*Post
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -1210,14 +4236,14 @@ func ParsePostcrmobjects2026030410batchreadResponse(rsp *http.Response) (*Postcr
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -1243,14 +4269,14 @@ func ParsePostcrmobjects2026030410batchupdateResponse(rsp *http.Response) (*Post
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -1276,14 +4302,14 @@ func ParsePostcrmobjects2026030410batchupsertResponse(rsp *http.Response) (*Post
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObject
+		var dest BatchResponseSimplePublicUpsertObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+		var dest BatchResponseSimplePublicUpsertObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -1309,7 +4335,7 @@ func ParsePostcrmobjects2026030410searchResponse(rsp *http.Response) (*Postcrmob
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmCollectionResponseWithTotalSimplePublicObject
+		var dest CollectionResponseWithTotalSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -1351,7 +4377,7 @@ func ParseGetcrmobjects2026030410CourseIdResponse(rsp *http.Response) (*Getcrmob
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsSimplePublicObjectWithAssociations
+		var dest SimplePublicObjectWithAssociations
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -1377,7 +4403,7 @@ func ParsePatchcrmobjects2026030410CourseIdResponse(rsp *http.Response) (*Patchc
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -1403,7 +4429,7 @@ func ParseGetcrmobjects2026030420Response(rsp *http.Response) (*Getcrmobjects202
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+		var dest CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -1429,12 +4455,25 @@ func ParsePostcrmobjects2026030420Response(rsp *http.Response) (*Postcrmobjects2
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcrmobjects2026030420Response201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -1471,14 +4510,14 @@ func ParsePostcrmobjects2026030420batchcreateResponse(rsp *http.Response) (*Post
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -1504,14 +4543,14 @@ func ParsePostcrmobjects2026030420batchreadResponse(rsp *http.Response) (*Postcr
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -1537,14 +4576,14 @@ func ParsePostcrmobjects2026030420batchupdateResponse(rsp *http.Response) (*Post
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -1570,14 +4609,14 @@ func ParsePostcrmobjects2026030420batchupsertResponse(rsp *http.Response) (*Post
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObject
+		var dest BatchResponseSimplePublicUpsertObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+		var dest BatchResponseSimplePublicUpsertObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -1603,7 +4642,7 @@ func ParsePostcrmobjects2026030420searchResponse(rsp *http.Response) (*Postcrmob
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmCollectionResponseWithTotalSimplePublicObject
+		var dest CollectionResponseWithTotalSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -1645,7 +4684,7 @@ func ParseGetcrmobjects2026030420ListingIdResponse(rsp *http.Response) (*Getcrmo
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsSimplePublicObjectWithAssociations
+		var dest SimplePublicObjectWithAssociations
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -1671,7 +4710,7 @@ func ParsePatchcrmobjects2026030420ListingIdResponse(rsp *http.Response) (*Patch
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -1697,7 +4736,7 @@ func ParseGetcrmobjects202603callsGetPageResponse(rsp *http.Response) (*Getcrmob
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+		var dest CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -1723,12 +4762,25 @@ func ParsePostcrmobjects202603callsCreateResponse(rsp *http.Response) (*Postcrmo
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcrmobjects202603callsCreateResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -1765,14 +4817,14 @@ func ParsePostcrmobjects202603callsbatchcreateCreateResponse(rsp *http.Response)
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -1798,14 +4850,14 @@ func ParsePostcrmobjects202603callsbatchreadReadResponse(rsp *http.Response) (*P
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -1831,14 +4883,14 @@ func ParsePostcrmobjects202603callsbatchupdateUpdateResponse(rsp *http.Response)
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -1864,14 +4916,14 @@ func ParsePostcrmobjects202603callsbatchupsertUpsertResponse(rsp *http.Response)
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObject
+		var dest BatchResponseSimplePublicUpsertObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+		var dest BatchResponseSimplePublicUpsertObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -1897,7 +4949,7 @@ func ParsePostcrmobjects202603callssearchDoSearchResponse(rsp *http.Response) (*
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmCollectionResponseWithTotalSimplePublicObject
+		var dest CollectionResponseWithTotalSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -1939,7 +4991,7 @@ func ParseGetcrmobjects202603callsCallIdGetByIdResponse(rsp *http.Response) (*Ge
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsSimplePublicObjectWithAssociations
+		var dest SimplePublicObjectWithAssociations
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -1965,7 +5017,7 @@ func ParsePatchcrmobjects202603callsCallIdUpdateResponse(rsp *http.Response) (*P
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -1991,7 +5043,7 @@ func ParseGetcrmobjects202603cartsResponse(rsp *http.Response) (*Getcrmobjects20
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+		var dest CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -2017,12 +5069,25 @@ func ParsePostcrmobjects202603cartsResponse(rsp *http.Response) (*Postcrmobjects
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcrmobjects202603cartsResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -2059,14 +5124,14 @@ func ParsePostcrmobjects202603cartsbatchcreateResponse(rsp *http.Response) (*Pos
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -2092,14 +5157,14 @@ func ParsePostcrmobjects202603cartsbatchreadResponse(rsp *http.Response) (*Postc
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -2125,14 +5190,14 @@ func ParsePostcrmobjects202603cartsbatchupdateResponse(rsp *http.Response) (*Pos
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -2158,14 +5223,14 @@ func ParsePostcrmobjects202603cartsbatchupsertResponse(rsp *http.Response) (*Pos
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObject
+		var dest BatchResponseSimplePublicUpsertObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+		var dest BatchResponseSimplePublicUpsertObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -2191,7 +5256,7 @@ func ParsePostcrmobjects202603cartssearchResponse(rsp *http.Response) (*Postcrmo
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmCollectionResponseWithTotalSimplePublicObject
+		var dest CollectionResponseWithTotalSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -2233,7 +5298,7 @@ func ParseGetcrmobjects202603cartsCartIdResponse(rsp *http.Response) (*Getcrmobj
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsSimplePublicObjectWithAssociations
+		var dest SimplePublicObjectWithAssociations
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -2259,7 +5324,7 @@ func ParsePatchcrmobjects202603cartsCartIdResponse(rsp *http.Response) (*Patchcr
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -2285,7 +5350,7 @@ func ParseGetcrmobjects202603commercePaymentsResponse(rsp *http.Response) (*Getc
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+		var dest CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -2311,12 +5376,25 @@ func ParsePostcrmobjects202603commercePaymentsResponse(rsp *http.Response) (*Pos
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcrmobjects202603commercePaymentsResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -2353,14 +5431,14 @@ func ParsePostcrmobjects202603commercePaymentsbatchcreateResponse(rsp *http.Resp
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -2386,14 +5464,14 @@ func ParsePostcrmobjects202603commercePaymentsbatchreadResponse(rsp *http.Respon
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -2419,14 +5497,14 @@ func ParsePostcrmobjects202603commercePaymentsbatchupdateResponse(rsp *http.Resp
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -2452,14 +5530,14 @@ func ParsePostcrmobjects202603commercePaymentsbatchupsertResponse(rsp *http.Resp
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObject
+		var dest BatchResponseSimplePublicUpsertObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+		var dest BatchResponseSimplePublicUpsertObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -2485,7 +5563,7 @@ func ParsePostcrmobjects202603commercePaymentssearchResponse(rsp *http.Response)
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmCollectionResponseWithTotalSimplePublicObject
+		var dest CollectionResponseWithTotalSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -2527,7 +5605,7 @@ func ParseGetcrmobjects202603commercePaymentsCommercePaymentIdResponse(rsp *http
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsSimplePublicObjectWithAssociations
+		var dest SimplePublicObjectWithAssociations
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -2553,7 +5631,7 @@ func ParsePatchcrmobjects202603commercePaymentsCommercePaymentIdResponse(rsp *ht
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -2579,7 +5657,7 @@ func ParseGetcrmobjects202603communicationsGetPageResponse(rsp *http.Response) (
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+		var dest CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -2605,12 +5683,25 @@ func ParsePostcrmobjects202603communicationsCreateResponse(rsp *http.Response) (
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcrmobjects202603communicationsCreateResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -2647,14 +5738,14 @@ func ParsePostcrmobjects202603communicationsbatchcreateCreateResponse(rsp *http.
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -2680,14 +5771,14 @@ func ParsePostcrmobjects202603communicationsbatchreadReadResponse(rsp *http.Resp
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -2713,14 +5804,14 @@ func ParsePostcrmobjects202603communicationsbatchupdateUpdateResponse(rsp *http.
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -2746,14 +5837,14 @@ func ParsePostcrmobjects202603communicationsbatchupsertUpsertResponse(rsp *http.
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObject
+		var dest BatchResponseSimplePublicUpsertObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+		var dest BatchResponseSimplePublicUpsertObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -2779,7 +5870,7 @@ func ParsePostcrmobjects202603communicationssearchDoSearchResponse(rsp *http.Res
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmCollectionResponseWithTotalSimplePublicObject
+		var dest CollectionResponseWithTotalSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -2821,7 +5912,7 @@ func ParseGetcrmobjects202603communicationsCommunicationIdGetByIdResponse(rsp *h
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsSimplePublicObjectWithAssociations
+		var dest SimplePublicObjectWithAssociations
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -2847,7 +5938,7 @@ func ParsePatchcrmobjects202603communicationsCommunicationIdUpdateResponse(rsp *
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -2873,7 +5964,7 @@ func ParseGetcrmobjects202603companiesGetPageResponse(rsp *http.Response) (*Getc
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+		var dest CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -2899,12 +5990,25 @@ func ParsePostcrmobjects202603companiesCreateResponse(rsp *http.Response) (*Post
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcrmobjects202603companiesCreateResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -2941,14 +6045,14 @@ func ParsePostcrmobjects202603companiesbatchcreateCreateResponse(rsp *http.Respo
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -2974,14 +6078,14 @@ func ParsePostcrmobjects202603companiesbatchreadReadResponse(rsp *http.Response)
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -3007,14 +6111,14 @@ func ParsePostcrmobjects202603companiesbatchupdateUpdateResponse(rsp *http.Respo
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -3040,14 +6144,14 @@ func ParsePostcrmobjects202603companiesbatchupsertUpsertResponse(rsp *http.Respo
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObject
+		var dest BatchResponseSimplePublicUpsertObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+		var dest BatchResponseSimplePublicUpsertObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -3073,7 +6177,7 @@ func ParsePostcrmobjects202603companiesmergeMergeResponse(rsp *http.Response) (*
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -3099,7 +6203,7 @@ func ParsePostcrmobjects202603companiessearchDoSearchResponse(rsp *http.Response
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmCollectionResponseWithTotalSimplePublicObject
+		var dest CollectionResponseWithTotalSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -3141,7 +6245,7 @@ func ParseGetcrmobjects202603companiesCompanyIdGetByIdResponse(rsp *http.Respons
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsSimplePublicObjectWithAssociations
+		var dest SimplePublicObjectWithAssociations
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -3167,7 +6271,7 @@ func ParsePatchcrmobjects202603companiesCompanyIdUpdateResponse(rsp *http.Respon
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -3193,7 +6297,7 @@ func ParseGetcrmobjects202603contactsGetPageResponse(rsp *http.Response) (*Getcr
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+		var dest CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -3219,12 +6323,25 @@ func ParsePostcrmobjects202603contactsCreateResponse(rsp *http.Response) (*Postc
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcrmobjects202603contactsCreateResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -3261,14 +6378,14 @@ func ParsePostcrmobjects202603contactsbatchcreateCreateResponse(rsp *http.Respon
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -3294,14 +6411,14 @@ func ParsePostcrmobjects202603contactsbatchreadReadResponse(rsp *http.Response) 
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -3327,14 +6444,14 @@ func ParsePostcrmobjects202603contactsbatchupdateUpdateResponse(rsp *http.Respon
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -3360,14 +6477,14 @@ func ParsePostcrmobjects202603contactsbatchupsertUpsertResponse(rsp *http.Respon
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObject
+		var dest BatchResponseSimplePublicUpsertObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+		var dest BatchResponseSimplePublicUpsertObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -3409,7 +6526,7 @@ func ParsePostcrmobjects202603contactsmergeMergeResponse(rsp *http.Response) (*P
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -3435,7 +6552,7 @@ func ParsePostcrmobjects202603contactssearchDoSearchResponse(rsp *http.Response)
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmCollectionResponseWithTotalSimplePublicObject
+		var dest CollectionResponseWithTotalSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -3477,7 +6594,7 @@ func ParseGetcrmobjects202603contactsContactIdGetByIdResponse(rsp *http.Response
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsSimplePublicObjectWithAssociations
+		var dest SimplePublicObjectWithAssociations
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -3503,7 +6620,7 @@ func ParsePatchcrmobjects202603contactsContactIdUpdateResponse(rsp *http.Respons
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -3529,7 +6646,7 @@ func ParseGetcrmobjects202603contractsResponse(rsp *http.Response) (*Getcrmobjec
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+		var dest CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -3555,14 +6672,14 @@ func ParsePostcrmobjects202603contractsbatchreadReadResponse(rsp *http.Response)
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -3588,7 +6705,33 @@ func ParseGetcrmobjects202603contractsContractIdResponse(rsp *http.Response) (*G
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsSimplePublicObjectWithAssociations
+		var dest SimplePublicObjectWithAssociations
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcrmobjects202603coursesmergeResponse parses an HTTP response from a Postcrmobjects202603coursesmergeWithResponse call
+func ParsePostcrmobjects202603coursesmergeResponse(rsp *http.Response) (*Postcrmobjects202603coursesmergeResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcrmobjects202603coursesmergeResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -3614,7 +6757,7 @@ func ParseGetcrmobjects202603discountsResponse(rsp *http.Response) (*Getcrmobjec
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+		var dest CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -3640,12 +6783,25 @@ func ParsePostcrmobjects202603discountsResponse(rsp *http.Response) (*Postcrmobj
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcrmobjects202603discountsResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -3682,14 +6838,14 @@ func ParsePostcrmobjects202603discountsbatchcreateResponse(rsp *http.Response) (
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -3715,14 +6871,14 @@ func ParsePostcrmobjects202603discountsbatchreadResponse(rsp *http.Response) (*P
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -3748,14 +6904,14 @@ func ParsePostcrmobjects202603discountsbatchupdateResponse(rsp *http.Response) (
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -3781,14 +6937,14 @@ func ParsePostcrmobjects202603discountsbatchupsertResponse(rsp *http.Response) (
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObject
+		var dest BatchResponseSimplePublicUpsertObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+		var dest BatchResponseSimplePublicUpsertObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -3814,7 +6970,7 @@ func ParsePostcrmobjects202603discountssearchResponse(rsp *http.Response) (*Post
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmCollectionResponseWithTotalSimplePublicObject
+		var dest CollectionResponseWithTotalSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -3856,7 +7012,7 @@ func ParseGetcrmobjects202603discountsDiscountIdResponse(rsp *http.Response) (*G
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsSimplePublicObjectWithAssociations
+		var dest SimplePublicObjectWithAssociations
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -3882,7 +7038,7 @@ func ParsePatchcrmobjects202603discountsDiscountIdResponse(rsp *http.Response) (
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -3908,7 +7064,7 @@ func ParseGetcrmobjects202603emailsGetPageResponse(rsp *http.Response) (*Getcrmo
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+		var dest CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -3934,12 +7090,25 @@ func ParsePostcrmobjects202603emailsCreateResponse(rsp *http.Response) (*Postcrm
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcrmobjects202603emailsCreateResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -3976,14 +7145,14 @@ func ParsePostcrmobjects202603emailsbatchcreateCreateResponse(rsp *http.Response
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -4009,14 +7178,14 @@ func ParsePostcrmobjects202603emailsbatchreadReadResponse(rsp *http.Response) (*
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -4042,14 +7211,14 @@ func ParsePostcrmobjects202603emailsbatchupdateUpdateResponse(rsp *http.Response
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -4075,14 +7244,14 @@ func ParsePostcrmobjects202603emailsbatchupsertUpsertResponse(rsp *http.Response
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObject
+		var dest BatchResponseSimplePublicUpsertObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+		var dest BatchResponseSimplePublicUpsertObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -4108,7 +7277,7 @@ func ParsePostcrmobjects202603emailssearchDoSearchResponse(rsp *http.Response) (
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmCollectionResponseWithTotalSimplePublicObject
+		var dest CollectionResponseWithTotalSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -4150,7 +7319,7 @@ func ParseGetcrmobjects202603emailsEmailIdGetByIdResponse(rsp *http.Response) (*
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsSimplePublicObjectWithAssociations
+		var dest SimplePublicObjectWithAssociations
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -4176,7 +7345,7 @@ func ParsePatchcrmobjects202603emailsEmailIdUpdateResponse(rsp *http.Response) (
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -4202,7 +7371,7 @@ func ParseGetcrmobjects202603feedbackSubmissionsGetPageResponse(rsp *http.Respon
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+		var dest CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -4228,14 +7397,14 @@ func ParsePostcrmobjects202603feedbackSubmissionsbatchreadReadResponse(rsp *http
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -4261,7 +7430,7 @@ func ParsePostcrmobjects202603feedbackSubmissionssearchDoSearchResponse(rsp *htt
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmCollectionResponseWithTotalSimplePublicObject
+		var dest CollectionResponseWithTotalSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -4287,7 +7456,7 @@ func ParseGetcrmobjects202603feedbackSubmissionsFeedbackSubmissionIdGetByIdRespo
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsSimplePublicObjectWithAssociations
+		var dest SimplePublicObjectWithAssociations
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -4313,7 +7482,7 @@ func ParseGetcrmobjects202603feesResponse(rsp *http.Response) (*Getcrmobjects202
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+		var dest CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -4339,12 +7508,25 @@ func ParsePostcrmobjects202603feesResponse(rsp *http.Response) (*Postcrmobjects2
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcrmobjects202603feesResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -4381,14 +7563,14 @@ func ParsePostcrmobjects202603feesbatchcreateResponse(rsp *http.Response) (*Post
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -4414,14 +7596,14 @@ func ParsePostcrmobjects202603feesbatchreadResponse(rsp *http.Response) (*Postcr
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -4447,14 +7629,14 @@ func ParsePostcrmobjects202603feesbatchupdateResponse(rsp *http.Response) (*Post
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -4480,14 +7662,14 @@ func ParsePostcrmobjects202603feesbatchupsertResponse(rsp *http.Response) (*Post
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObject
+		var dest BatchResponseSimplePublicUpsertObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+		var dest BatchResponseSimplePublicUpsertObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -4513,7 +7695,7 @@ func ParsePostcrmobjects202603feessearchResponse(rsp *http.Response) (*Postcrmob
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmCollectionResponseWithTotalSimplePublicObject
+		var dest CollectionResponseWithTotalSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -4555,7 +7737,7 @@ func ParseGetcrmobjects202603feesFeeIdResponse(rsp *http.Response) (*Getcrmobjec
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsSimplePublicObjectWithAssociations
+		var dest SimplePublicObjectWithAssociations
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -4581,7 +7763,7 @@ func ParsePatchcrmobjects202603feesFeeIdResponse(rsp *http.Response) (*Patchcrmo
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -4607,7 +7789,7 @@ func ParseGetcrmobjects202603goalTargetsGetPageResponse(rsp *http.Response) (*Ge
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+		var dest CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -4633,12 +7815,25 @@ func ParsePostcrmobjects202603goalTargetsCreateResponse(rsp *http.Response) (*Po
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcrmobjects202603goalTargetsCreateResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -4675,14 +7870,14 @@ func ParsePostcrmobjects202603goalTargetsbatchcreateCreateResponse(rsp *http.Res
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -4708,14 +7903,14 @@ func ParsePostcrmobjects202603goalTargetsbatchreadReadResponse(rsp *http.Respons
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -4741,14 +7936,14 @@ func ParsePostcrmobjects202603goalTargetsbatchupdateUpdateResponse(rsp *http.Res
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -4774,14 +7969,14 @@ func ParsePostcrmobjects202603goalTargetsbatchupsertUpsertResponse(rsp *http.Res
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObject
+		var dest BatchResponseSimplePublicUpsertObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+		var dest BatchResponseSimplePublicUpsertObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -4807,7 +8002,7 @@ func ParsePostcrmobjects202603goalTargetssearchDoSearchResponse(rsp *http.Respon
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmCollectionResponseWithTotalSimplePublicObject
+		var dest CollectionResponseWithTotalSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -4849,7 +8044,7 @@ func ParseGetcrmobjects202603goalTargetsGoalTargetIdGetByIdResponse(rsp *http.Re
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsSimplePublicObjectWithAssociations
+		var dest SimplePublicObjectWithAssociations
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -4875,7 +8070,7 @@ func ParsePatchcrmobjects202603goalTargetsGoalTargetIdUpdateResponse(rsp *http.R
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -4901,7 +8096,7 @@ func ParseGetcrmobjects202603invoicesGetPageResponse(rsp *http.Response) (*Getcr
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+		var dest CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -4927,12 +8122,25 @@ func ParsePostcrmobjects202603invoicesCreateResponse(rsp *http.Response) (*Postc
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcrmobjects202603invoicesCreateResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -4969,14 +8177,14 @@ func ParsePostcrmobjects202603invoicesbatchcreateCreateResponse(rsp *http.Respon
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -5002,14 +8210,14 @@ func ParsePostcrmobjects202603invoicesbatchreadReadResponse(rsp *http.Response) 
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -5035,14 +8243,14 @@ func ParsePostcrmobjects202603invoicesbatchupdateUpdateResponse(rsp *http.Respon
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -5068,14 +8276,14 @@ func ParsePostcrmobjects202603invoicesbatchupsertUpsertResponse(rsp *http.Respon
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObject
+		var dest BatchResponseSimplePublicUpsertObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+		var dest BatchResponseSimplePublicUpsertObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -5101,7 +8309,7 @@ func ParsePostcrmobjects202603invoicessearchDoSearchResponse(rsp *http.Response)
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmCollectionResponseWithTotalSimplePublicObject
+		var dest CollectionResponseWithTotalSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -5143,7 +8351,7 @@ func ParseGetcrmobjects202603invoicesInvoiceIdGetByIdResponse(rsp *http.Response
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsSimplePublicObjectWithAssociations
+		var dest SimplePublicObjectWithAssociations
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -5169,7 +8377,7 @@ func ParsePatchcrmobjects202603invoicesInvoiceIdUpdateResponse(rsp *http.Respons
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -5195,7 +8403,7 @@ func ParseGetcrmobjects202603leadsGetPageResponse(rsp *http.Response) (*Getcrmob
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+		var dest CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -5221,12 +8429,25 @@ func ParsePostcrmobjects202603leadsCreateResponse(rsp *http.Response) (*Postcrmo
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcrmobjects202603leadsCreateResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -5263,14 +8484,14 @@ func ParsePostcrmobjects202603leadsbatchcreateCreateResponse(rsp *http.Response)
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -5296,14 +8517,14 @@ func ParsePostcrmobjects202603leadsbatchreadReadResponse(rsp *http.Response) (*P
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -5329,14 +8550,14 @@ func ParsePostcrmobjects202603leadsbatchupdateUpdateResponse(rsp *http.Response)
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -5362,14 +8583,14 @@ func ParsePostcrmobjects202603leadsbatchupsertUpsertResponse(rsp *http.Response)
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObject
+		var dest BatchResponseSimplePublicUpsertObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+		var dest BatchResponseSimplePublicUpsertObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -5395,7 +8616,7 @@ func ParsePostcrmobjects202603leadssearchDoSearchResponse(rsp *http.Response) (*
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmCollectionResponseWithTotalSimplePublicObject
+		var dest CollectionResponseWithTotalSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -5437,7 +8658,7 @@ func ParseGetcrmobjects202603leadsLeadsIdGetByIdResponse(rsp *http.Response) (*G
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsSimplePublicObjectWithAssociations
+		var dest SimplePublicObjectWithAssociations
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -5463,7 +8684,7 @@ func ParsePatchcrmobjects202603leadsLeadsIdUpdateResponse(rsp *http.Response) (*
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -5489,7 +8710,7 @@ func ParseGetcrmobjects202603lineItemsGetPageResponse(rsp *http.Response) (*Getc
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+		var dest CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -5515,12 +8736,25 @@ func ParsePostcrmobjects202603lineItemsCreateResponse(rsp *http.Response) (*Post
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcrmobjects202603lineItemsCreateResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -5557,14 +8791,14 @@ func ParsePostcrmobjects202603lineItemsbatchcreateCreateResponse(rsp *http.Respo
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -5590,14 +8824,14 @@ func ParsePostcrmobjects202603lineItemsbatchreadReadResponse(rsp *http.Response)
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -5623,14 +8857,14 @@ func ParsePostcrmobjects202603lineItemsbatchupdateUpdateResponse(rsp *http.Respo
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -5656,14 +8890,14 @@ func ParsePostcrmobjects202603lineItemsbatchupsertUpsertResponse(rsp *http.Respo
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObject
+		var dest BatchResponseSimplePublicUpsertObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+		var dest BatchResponseSimplePublicUpsertObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -5689,7 +8923,7 @@ func ParsePostcrmobjects202603lineItemssearchDoSearchResponse(rsp *http.Response
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmCollectionResponseWithTotalSimplePublicObject
+		var dest CollectionResponseWithTotalSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -5731,7 +8965,7 @@ func ParseGetcrmobjects202603lineItemsLineItemIdGetByIdResponse(rsp *http.Respon
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsSimplePublicObjectWithAssociations
+		var dest SimplePublicObjectWithAssociations
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -5757,7 +8991,7 @@ func ParsePatchcrmobjects202603lineItemsLineItemIdUpdateResponse(rsp *http.Respo
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -5783,7 +9017,7 @@ func ParseGetcrmobjects202603meetingsGetPageResponse(rsp *http.Response) (*Getcr
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+		var dest CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -5809,12 +9043,25 @@ func ParsePostcrmobjects202603meetingsCreateResponse(rsp *http.Response) (*Postc
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcrmobjects202603meetingsCreateResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -5851,14 +9098,14 @@ func ParsePostcrmobjects202603meetingsbatchcreateCreateResponse(rsp *http.Respon
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -5884,14 +9131,14 @@ func ParsePostcrmobjects202603meetingsbatchreadReadResponse(rsp *http.Response) 
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -5917,14 +9164,14 @@ func ParsePostcrmobjects202603meetingsbatchupdateUpdateResponse(rsp *http.Respon
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -5950,14 +9197,14 @@ func ParsePostcrmobjects202603meetingsbatchupsertUpsertResponse(rsp *http.Respon
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObject
+		var dest BatchResponseSimplePublicUpsertObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+		var dest BatchResponseSimplePublicUpsertObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -5983,7 +9230,7 @@ func ParsePostcrmobjects202603meetingssearchDoSearchResponse(rsp *http.Response)
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmCollectionResponseWithTotalSimplePublicObject
+		var dest CollectionResponseWithTotalSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -6025,7 +9272,7 @@ func ParseGetcrmobjects202603meetingsMeetingIdGetByIdResponse(rsp *http.Response
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsSimplePublicObjectWithAssociations
+		var dest SimplePublicObjectWithAssociations
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -6051,7 +9298,7 @@ func ParsePatchcrmobjects202603meetingsMeetingIdUpdateResponse(rsp *http.Respons
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -6077,7 +9324,7 @@ func ParseGetcrmobjects202603notesGetPageResponse(rsp *http.Response) (*Getcrmob
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+		var dest CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -6103,12 +9350,25 @@ func ParsePostcrmobjects202603notesCreateResponse(rsp *http.Response) (*Postcrmo
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcrmobjects202603notesCreateResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -6145,14 +9405,14 @@ func ParsePostcrmobjects202603notesbatchcreateCreateResponse(rsp *http.Response)
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -6178,14 +9438,14 @@ func ParsePostcrmobjects202603notesbatchreadReadResponse(rsp *http.Response) (*P
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -6211,14 +9471,14 @@ func ParsePostcrmobjects202603notesbatchupdateUpdateResponse(rsp *http.Response)
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -6244,14 +9504,14 @@ func ParsePostcrmobjects202603notesbatchupsertUpsertResponse(rsp *http.Response)
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObject
+		var dest BatchResponseSimplePublicUpsertObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+		var dest BatchResponseSimplePublicUpsertObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -6277,7 +9537,7 @@ func ParsePostcrmobjects202603notessearchDoSearchResponse(rsp *http.Response) (*
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmCollectionResponseWithTotalSimplePublicObject
+		var dest CollectionResponseWithTotalSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -6319,7 +9579,7 @@ func ParseGetcrmobjects202603notesNoteIdGetByIdResponse(rsp *http.Response) (*Ge
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsSimplePublicObjectWithAssociations
+		var dest SimplePublicObjectWithAssociations
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -6345,7 +9605,7 @@ func ParsePatchcrmobjects202603notesNoteIdUpdateResponse(rsp *http.Response) (*P
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -6371,7 +9631,7 @@ func ParseGetcrmobjects202603ordersResponse(rsp *http.Response) (*Getcrmobjects2
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+		var dest CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -6397,12 +9657,25 @@ func ParsePostcrmobjects202603ordersResponse(rsp *http.Response) (*Postcrmobject
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcrmobjects202603ordersResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -6439,14 +9712,14 @@ func ParsePostcrmobjects202603ordersbatchcreateResponse(rsp *http.Response) (*Po
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -6472,14 +9745,14 @@ func ParsePostcrmobjects202603ordersbatchreadResponse(rsp *http.Response) (*Post
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -6505,14 +9778,14 @@ func ParsePostcrmobjects202603ordersbatchupdateResponse(rsp *http.Response) (*Po
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -6538,18 +9811,44 @@ func ParsePostcrmobjects202603ordersbatchupsertResponse(rsp *http.Response) (*Po
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObject
+		var dest BatchResponseSimplePublicUpsertObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+		var dest BatchResponseSimplePublicUpsertObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON207 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcrmobjects202603ordersmergeResponse parses an HTTP response from a Postcrmobjects202603ordersmergeWithResponse call
+func ParsePostcrmobjects202603ordersmergeResponse(rsp *http.Response) (*Postcrmobjects202603ordersmergeResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcrmobjects202603ordersmergeResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest SimplePublicObject
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
 
 	}
 
@@ -6571,7 +9870,7 @@ func ParsePostcrmobjects202603orderssearchResponse(rsp *http.Response) (*Postcrm
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmCollectionResponseWithTotalSimplePublicObject
+		var dest CollectionResponseWithTotalSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -6613,7 +9912,7 @@ func ParseGetcrmobjects202603ordersOrderIdResponse(rsp *http.Response) (*Getcrmo
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsSimplePublicObjectWithAssociations
+		var dest SimplePublicObjectWithAssociations
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -6639,7 +9938,7 @@ func ParsePatchcrmobjects202603ordersOrderIdResponse(rsp *http.Response) (*Patch
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -6665,7 +9964,7 @@ func ParseGetcrmobjects202603partnerClientsResponse(rsp *http.Response) (*Getcrm
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+		var dest CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -6691,14 +9990,14 @@ func ParsePostcrmobjects202603partnerClientsbatchreadResponse(rsp *http.Response
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -6724,14 +10023,14 @@ func ParsePostcrmobjects202603partnerClientsbatchupdateResponse(rsp *http.Respon
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -6757,7 +10056,7 @@ func ParsePostcrmobjects202603partnerClientssearchResponse(rsp *http.Response) (
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmCollectionResponseWithTotalSimplePublicObject
+		var dest CollectionResponseWithTotalSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -6783,7 +10082,7 @@ func ParseGetcrmobjects202603partnerClientsPartnerClientIdResponse(rsp *http.Res
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsSimplePublicObjectWithAssociations
+		var dest SimplePublicObjectWithAssociations
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -6809,7 +10108,7 @@ func ParsePatchcrmobjects202603partnerClientsPartnerClientIdResponse(rsp *http.R
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -6835,7 +10134,7 @@ func ParseGetcrmobjects202603partnerClientsPartnerClientIdassociationsToObjectTy
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmCollectionResponseMultiAssociatedObjectWithLabelForwardPaging
+		var dest CollectionResponseMultiAssociatedObjectWithLabelForwardPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -6861,7 +10160,7 @@ func ParseGetcrmobjects202603partnerServicesResponse(rsp *http.Response) (*Getcr
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+		var dest CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -6887,14 +10186,14 @@ func ParsePostcrmobjects202603partnerServicesbatchreadResponse(rsp *http.Respons
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -6920,14 +10219,14 @@ func ParsePostcrmobjects202603partnerServicesbatchupdateResponse(rsp *http.Respo
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -6953,7 +10252,7 @@ func ParsePostcrmobjects202603partnerServicessearchResponse(rsp *http.Response) 
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmCollectionResponseWithTotalSimplePublicObject
+		var dest CollectionResponseWithTotalSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -6979,7 +10278,7 @@ func ParseGetcrmobjects202603partnerServicesPartnerServiceIdResponse(rsp *http.R
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsSimplePublicObjectWithAssociations
+		var dest SimplePublicObjectWithAssociations
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -7005,33 +10304,7 @@ func ParsePatchcrmobjects202603partnerServicesPartnerServiceIdResponse(rsp *http
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmSimplePublicObject
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetcrmobjects202603partnerServicesPartnerServiceIdassociationsToObjectTypeResponse parses an HTTP response from a Getcrmobjects202603partnerServicesPartnerServiceIdassociationsToObjectTypeWithResponse call
-func ParseGetcrmobjects202603partnerServicesPartnerServiceIdassociationsToObjectTypeResponse(rsp *http.Response) (*Getcrmobjects202603partnerServicesPartnerServiceIdassociationsToObjectTypeResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getcrmobjects202603partnerServicesPartnerServiceIdassociationsToObjectTypeResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmCollectionResponseMultiAssociatedObjectWithLabelForwardPaging
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -7057,7 +10330,7 @@ func ParseGetcrmobjects202603postalMailGetPageResponse(rsp *http.Response) (*Get
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+		var dest CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -7083,12 +10356,25 @@ func ParsePostcrmobjects202603postalMailCreateResponse(rsp *http.Response) (*Pos
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcrmobjects202603postalMailCreateResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -7125,14 +10411,14 @@ func ParsePostcrmobjects202603postalMailbatchcreateCreateResponse(rsp *http.Resp
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -7158,14 +10444,14 @@ func ParsePostcrmobjects202603postalMailbatchreadReadResponse(rsp *http.Response
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -7191,14 +10477,14 @@ func ParsePostcrmobjects202603postalMailbatchupdateUpdateResponse(rsp *http.Resp
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -7224,14 +10510,14 @@ func ParsePostcrmobjects202603postalMailbatchupsertUpsertResponse(rsp *http.Resp
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObject
+		var dest BatchResponseSimplePublicUpsertObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+		var dest BatchResponseSimplePublicUpsertObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -7257,7 +10543,7 @@ func ParsePostcrmobjects202603postalMailsearchDoSearchResponse(rsp *http.Respons
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmCollectionResponseWithTotalSimplePublicObject
+		var dest CollectionResponseWithTotalSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -7299,7 +10585,7 @@ func ParseGetcrmobjects202603postalMailPostalMailIdGetByIdResponse(rsp *http.Res
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsSimplePublicObjectWithAssociations
+		var dest SimplePublicObjectWithAssociations
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -7325,7 +10611,7 @@ func ParsePatchcrmobjects202603postalMailPostalMailIdUpdateResponse(rsp *http.Re
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -7351,7 +10637,7 @@ func ParseGetcrmobjects202603productsGetPageResponse(rsp *http.Response) (*Getcr
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+		var dest CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -7377,12 +10663,25 @@ func ParsePostcrmobjects202603productsCreateResponse(rsp *http.Response) (*Postc
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcrmobjects202603productsCreateResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -7419,14 +10718,14 @@ func ParsePostcrmobjects202603productsbatchcreateCreateResponse(rsp *http.Respon
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -7452,14 +10751,14 @@ func ParsePostcrmobjects202603productsbatchreadReadResponse(rsp *http.Response) 
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -7485,14 +10784,14 @@ func ParsePostcrmobjects202603productsbatchupdateUpdateResponse(rsp *http.Respon
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -7518,14 +10817,14 @@ func ParsePostcrmobjects202603productsbatchupsertUpsertResponse(rsp *http.Respon
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObject
+		var dest BatchResponseSimplePublicUpsertObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+		var dest BatchResponseSimplePublicUpsertObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -7551,7 +10850,7 @@ func ParsePostcrmobjects202603productssearchDoSearchResponse(rsp *http.Response)
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmCollectionResponseWithTotalSimplePublicObject
+		var dest CollectionResponseWithTotalSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -7593,7 +10892,7 @@ func ParseGetcrmobjects202603productsProductIdGetByIdResponse(rsp *http.Response
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsSimplePublicObjectWithAssociations
+		var dest SimplePublicObjectWithAssociations
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -7619,7 +10918,7 @@ func ParsePatchcrmobjects202603productsProductIdUpdateResponse(rsp *http.Respons
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -7645,7 +10944,7 @@ func ParseGetcrmobjects202603projectsResponse(rsp *http.Response) (*Getcrmobject
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+		var dest CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -7671,12 +10970,25 @@ func ParsePostcrmobjects202603projectsResponse(rsp *http.Response) (*Postcrmobje
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcrmobjects202603projectsResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -7713,14 +11025,14 @@ func ParsePostcrmobjects202603projectsbatchcreateResponse(rsp *http.Response) (*
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -7746,14 +11058,14 @@ func ParsePostcrmobjects202603projectsbatchreadResponse(rsp *http.Response) (*Po
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -7779,14 +11091,14 @@ func ParsePostcrmobjects202603projectsbatchupdateResponse(rsp *http.Response) (*
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -7812,14 +11124,14 @@ func ParsePostcrmobjects202603projectsbatchupsertResponse(rsp *http.Response) (*
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObject
+		var dest BatchResponseSimplePublicUpsertObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+		var dest BatchResponseSimplePublicUpsertObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -7845,7 +11157,7 @@ func ParsePostcrmobjects202603projectsmergeResponse(rsp *http.Response) (*Postcr
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -7871,7 +11183,7 @@ func ParsePostcrmobjects202603projectssearchResponse(rsp *http.Response) (*Postc
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmCollectionResponseWithTotalSimplePublicObject
+		var dest CollectionResponseWithTotalSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -7913,7 +11225,7 @@ func ParseGetcrmobjects202603projectsProjectIdResponse(rsp *http.Response) (*Get
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsSimplePublicObjectWithAssociations
+		var dest SimplePublicObjectWithAssociations
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -7939,7 +11251,7 @@ func ParsePatchcrmobjects202603projectsProjectIdResponse(rsp *http.Response) (*P
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -7965,7 +11277,7 @@ func ParseGetcrmobjects202603quotesGetPageResponse(rsp *http.Response) (*Getcrmo
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+		var dest CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -7991,12 +11303,25 @@ func ParsePostcrmobjects202603quotesCreateResponse(rsp *http.Response) (*Postcrm
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcrmobjects202603quotesCreateResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -8033,14 +11358,14 @@ func ParsePostcrmobjects202603quotesbatchcreateCreateResponse(rsp *http.Response
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -8066,14 +11391,14 @@ func ParsePostcrmobjects202603quotesbatchreadReadResponse(rsp *http.Response) (*
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -8099,14 +11424,14 @@ func ParsePostcrmobjects202603quotesbatchupdateUpdateResponse(rsp *http.Response
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -8132,14 +11457,14 @@ func ParsePostcrmobjects202603quotesbatchupsertUpsertResponse(rsp *http.Response
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObject
+		var dest BatchResponseSimplePublicUpsertObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+		var dest BatchResponseSimplePublicUpsertObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -8165,7 +11490,7 @@ func ParsePostcrmobjects202603quotessearchDoSearchResponse(rsp *http.Response) (
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmCollectionResponseWithTotalSimplePublicObject
+		var dest CollectionResponseWithTotalSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -8207,7 +11532,7 @@ func ParseGetcrmobjects202603quotesQuoteIdGetByIdResponse(rsp *http.Response) (*
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsSimplePublicObjectWithAssociations
+		var dest SimplePublicObjectWithAssociations
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -8233,7 +11558,33 @@ func ParsePatchcrmobjects202603quotesQuoteIdUpdateResponse(rsp *http.Response) (
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcrmobjects202603servicesmergeResponse parses an HTTP response from a Postcrmobjects202603servicesmergeWithResponse call
+func ParsePostcrmobjects202603servicesmergeResponse(rsp *http.Response) (*Postcrmobjects202603servicesmergeResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcrmobjects202603servicesmergeResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -8259,7 +11610,7 @@ func ParseGetcrmobjects202603subscriptionsResponse(rsp *http.Response) (*Getcrmo
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+		var dest CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -8285,12 +11636,25 @@ func ParsePostcrmobjects202603subscriptionsResponse(rsp *http.Response) (*Postcr
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcrmobjects202603subscriptionsResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -8327,14 +11691,14 @@ func ParsePostcrmobjects202603subscriptionsbatchcreateResponse(rsp *http.Respons
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -8360,14 +11724,14 @@ func ParsePostcrmobjects202603subscriptionsbatchreadResponse(rsp *http.Response)
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -8393,14 +11757,14 @@ func ParsePostcrmobjects202603subscriptionsbatchupdateResponse(rsp *http.Respons
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -8426,14 +11790,14 @@ func ParsePostcrmobjects202603subscriptionsbatchupsertResponse(rsp *http.Respons
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObject
+		var dest BatchResponseSimplePublicUpsertObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+		var dest BatchResponseSimplePublicUpsertObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -8459,7 +11823,7 @@ func ParsePostcrmobjects202603subscriptionssearchResponse(rsp *http.Response) (*
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmCollectionResponseWithTotalSimplePublicObject
+		var dest CollectionResponseWithTotalSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -8501,7 +11865,7 @@ func ParseGetcrmobjects202603subscriptionsSubscriptionIdResponse(rsp *http.Respo
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsSimplePublicObjectWithAssociations
+		var dest SimplePublicObjectWithAssociations
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -8527,7 +11891,7 @@ func ParsePatchcrmobjects202603subscriptionsSubscriptionIdResponse(rsp *http.Res
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -8553,7 +11917,7 @@ func ParseGetcrmobjects202603tasksGetPageResponse(rsp *http.Response) (*Getcrmob
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+		var dest CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -8579,12 +11943,25 @@ func ParsePostcrmobjects202603tasksCreateResponse(rsp *http.Response) (*Postcrmo
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcrmobjects202603tasksCreateResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -8621,14 +11998,14 @@ func ParsePostcrmobjects202603tasksbatchcreateCreateResponse(rsp *http.Response)
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -8654,14 +12031,14 @@ func ParsePostcrmobjects202603tasksbatchreadReadResponse(rsp *http.Response) (*P
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -8687,14 +12064,14 @@ func ParsePostcrmobjects202603tasksbatchupdateUpdateResponse(rsp *http.Response)
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -8720,14 +12097,14 @@ func ParsePostcrmobjects202603tasksbatchupsertUpsertResponse(rsp *http.Response)
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObject
+		var dest BatchResponseSimplePublicUpsertObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+		var dest BatchResponseSimplePublicUpsertObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -8753,7 +12130,7 @@ func ParsePostcrmobjects202603taskssearchDoSearchResponse(rsp *http.Response) (*
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmCollectionResponseWithTotalSimplePublicObject
+		var dest CollectionResponseWithTotalSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -8795,7 +12172,7 @@ func ParseGetcrmobjects202603tasksTaskIdGetByIdResponse(rsp *http.Response) (*Ge
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsSimplePublicObjectWithAssociations
+		var dest SimplePublicObjectWithAssociations
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -8821,7 +12198,7 @@ func ParsePatchcrmobjects202603tasksTaskIdUpdateResponse(rsp *http.Response) (*P
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -8847,7 +12224,7 @@ func ParseGetcrmobjects202603taxesGetPageResponse(rsp *http.Response) (*Getcrmob
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+		var dest CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -8873,12 +12250,25 @@ func ParsePostcrmobjects202603taxesCreateResponse(rsp *http.Response) (*Postcrmo
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcrmobjects202603taxesCreateResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -8915,14 +12305,14 @@ func ParsePostcrmobjects202603taxesbatchcreateCreateResponse(rsp *http.Response)
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -8948,14 +12338,14 @@ func ParsePostcrmobjects202603taxesbatchreadReadResponse(rsp *http.Response) (*P
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -8981,14 +12371,14 @@ func ParsePostcrmobjects202603taxesbatchupdateUpdateResponse(rsp *http.Response)
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -9014,14 +12404,14 @@ func ParsePostcrmobjects202603taxesbatchupsertUpsertResponse(rsp *http.Response)
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObject
+		var dest BatchResponseSimplePublicUpsertObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+		var dest BatchResponseSimplePublicUpsertObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -9047,7 +12437,7 @@ func ParsePostcrmobjects202603taxessearchDoSearchResponse(rsp *http.Response) (*
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmCollectionResponseWithTotalSimplePublicObject
+		var dest CollectionResponseWithTotalSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -9089,7 +12479,7 @@ func ParseGetcrmobjects202603taxesTaxIdGetByIdResponse(rsp *http.Response) (*Get
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsSimplePublicObjectWithAssociations
+		var dest SimplePublicObjectWithAssociations
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -9115,7 +12505,7 @@ func ParsePatchcrmobjects202603taxesTaxIdUpdateResponse(rsp *http.Response) (*Pa
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -9141,7 +12531,7 @@ func ParseGetcrmobjects202603ticketsGetPageResponse(rsp *http.Response) (*Getcrm
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+		var dest CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -9167,12 +12557,25 @@ func ParsePostcrmobjects202603ticketsCreateResponse(rsp *http.Response) (*Postcr
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcrmobjects202603ticketsCreateResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -9209,14 +12612,14 @@ func ParsePostcrmobjects202603ticketsbatchcreateCreateResponse(rsp *http.Respons
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -9242,14 +12645,14 @@ func ParsePostcrmobjects202603ticketsbatchreadReadResponse(rsp *http.Response) (
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -9275,14 +12678,14 @@ func ParsePostcrmobjects202603ticketsbatchupdateUpdateResponse(rsp *http.Respons
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -9308,14 +12711,14 @@ func ParsePostcrmobjects202603ticketsbatchupsertUpsertResponse(rsp *http.Respons
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObject
+		var dest BatchResponseSimplePublicUpsertObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+		var dest BatchResponseSimplePublicUpsertObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -9341,7 +12744,7 @@ func ParsePostcrmobjects202603ticketsmergeMergeResponse(rsp *http.Response) (*Po
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -9367,7 +12770,7 @@ func ParsePostcrmobjects202603ticketssearchDoSearchResponse(rsp *http.Response) 
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmCollectionResponseWithTotalSimplePublicObject
+		var dest CollectionResponseWithTotalSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -9409,7 +12812,7 @@ func ParseGetcrmobjects202603ticketsTicketIdGetByIdResponse(rsp *http.Response) 
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsSimplePublicObjectWithAssociations
+		var dest SimplePublicObjectWithAssociations
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -9435,7 +12838,7 @@ func ParsePatchcrmobjects202603ticketsTicketIdUpdateResponse(rsp *http.Response)
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -9461,7 +12864,7 @@ func ParseGetcrmobjects202603usersResponse(rsp *http.Response) (*Getcrmobjects20
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+		var dest CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -9487,12 +12890,25 @@ func ParsePostcrmobjects202603usersResponse(rsp *http.Response) (*Postcrmobjects
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcrmobjects202603usersResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -9529,14 +12945,14 @@ func ParsePostcrmobjects202603usersbatchcreateResponse(rsp *http.Response) (*Pos
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -9562,14 +12978,14 @@ func ParsePostcrmobjects202603usersbatchreadResponse(rsp *http.Response) (*Postc
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -9595,14 +13011,14 @@ func ParsePostcrmobjects202603usersbatchupdateResponse(rsp *http.Response) (*Pos
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -9628,14 +13044,14 @@ func ParsePostcrmobjects202603usersbatchupsertResponse(rsp *http.Response) (*Pos
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObject
+		var dest BatchResponseSimplePublicUpsertObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+		var dest BatchResponseSimplePublicUpsertObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -9661,7 +13077,7 @@ func ParsePostcrmobjects202603userssearchResponse(rsp *http.Response) (*Postcrmo
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmCollectionResponseWithTotalSimplePublicObject
+		var dest CollectionResponseWithTotalSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -9703,7 +13119,7 @@ func ParseGetcrmobjects202603usersUserIdResponse(rsp *http.Response) (*Getcrmobj
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsSimplePublicObjectWithAssociations
+		var dest SimplePublicObjectWithAssociations
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -9729,7 +13145,7 @@ func ParsePatchcrmobjects202603usersUserIdResponse(rsp *http.Response) (*Patchcr
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -9740,22 +13156,22 @@ func ParsePatchcrmobjects202603usersUserIdResponse(rsp *http.Response) (*Patchcr
 	return response, nil
 }
 
-// ParsePutcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdcrmobjects202509FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdResponse parses an HTTP response from a Putcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdcrmobjects202509FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdWithResponse call
-func ParsePutcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdcrmobjects202509FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdResponse(rsp *http.Response) (*Putcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdcrmobjects202509FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdResponse, error) {
+// ParsePutcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdResponse parses an HTTP response from a Putcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdWithResponse call
+func ParsePutcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdResponse(rsp *http.Response) (*Putcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &Putcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdcrmobjects202509FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdResponse{
+	response := &Putcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmBatchResponsePublicDefaultAssociation
+		var dest BatchResponsePublicDefaultAssociation
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -9766,22 +13182,22 @@ func ParsePutcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObje
 	return response, nil
 }
 
-// ParseGetcrmobjects202603ObjectTypecrmobjects202509ObjectTypeResponse parses an HTTP response from a Getcrmobjects202603ObjectTypecrmobjects202509ObjectTypeWithResponse call
-func ParseGetcrmobjects202603ObjectTypecrmobjects202509ObjectTypeResponse(rsp *http.Response) (*Getcrmobjects202603ObjectTypecrmobjects202509ObjectTypeResponse, error) {
+// ParseGetcrmobjects202603ObjectTypeResponse parses an HTTP response from a Getcrmobjects202603ObjectTypeWithResponse call
+func ParseGetcrmobjects202603ObjectTypeResponse(rsp *http.Response) (*Getcrmobjects202603ObjectTypeResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &Getcrmobjects202603ObjectTypecrmobjects202509ObjectTypeResponse{
+	response := &Getcrmobjects202603ObjectTypeResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsCollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+		var dest CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -9792,22 +13208,22 @@ func ParseGetcrmobjects202603ObjectTypecrmobjects202509ObjectTypeResponse(rsp *h
 	return response, nil
 }
 
-// ParsePostcrmobjects202603ObjectTypecrmobjects202509ObjectTypeResponse parses an HTTP response from a Postcrmobjects202603ObjectTypecrmobjects202509ObjectTypeWithResponse call
-func ParsePostcrmobjects202603ObjectTypecrmobjects202509ObjectTypeResponse(rsp *http.Response) (*Postcrmobjects202603ObjectTypecrmobjects202509ObjectTypeResponse, error) {
+// ParsePostcrmobjects202603ObjectTypeResponse parses an HTTP response from a Postcrmobjects202603ObjectTypeWithResponse call
+func ParsePostcrmobjects202603ObjectTypeResponse(rsp *http.Response) (*Postcrmobjects202603ObjectTypeResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &Postcrmobjects202603ObjectTypecrmobjects202509ObjectTypeResponse{
+	response := &Postcrmobjects202603ObjectTypeResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -9815,18 +13231,31 @@ func ParsePostcrmobjects202603ObjectTypecrmobjects202509ObjectTypeResponse(rsp *
 
 	}
 
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcrmobjects202603ObjectTypeResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
+	}
+
 	return response, nil
 }
 
-// ParsePostcrmobjects202603ObjectTypebatcharchivecrmobjects202509ObjectTypebatcharchiveResponse parses an HTTP response from a Postcrmobjects202603ObjectTypebatcharchivecrmobjects202509ObjectTypebatcharchiveWithResponse call
-func ParsePostcrmobjects202603ObjectTypebatcharchivecrmobjects202509ObjectTypebatcharchiveResponse(rsp *http.Response) (*Postcrmobjects202603ObjectTypebatcharchivecrmobjects202509ObjectTypebatcharchiveResponse, error) {
+// ParsePostcrmobjects202603ObjectTypebatcharchiveResponse parses an HTTP response from a Postcrmobjects202603ObjectTypebatcharchiveWithResponse call
+func ParsePostcrmobjects202603ObjectTypebatcharchiveResponse(rsp *http.Response) (*Postcrmobjects202603ObjectTypebatcharchiveResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &Postcrmobjects202603ObjectTypebatcharchivecrmobjects202509ObjectTypebatcharchiveResponse{
+	response := &Postcrmobjects202603ObjectTypebatcharchiveResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -9834,29 +13263,29 @@ func ParsePostcrmobjects202603ObjectTypebatcharchivecrmobjects202509ObjectTypeba
 	return response, nil
 }
 
-// ParsePostcrmobjects202603ObjectTypebatchcreatecrmobjects202509ObjectTypebatchcreateResponse parses an HTTP response from a Postcrmobjects202603ObjectTypebatchcreatecrmobjects202509ObjectTypebatchcreateWithResponse call
-func ParsePostcrmobjects202603ObjectTypebatchcreatecrmobjects202509ObjectTypebatchcreateResponse(rsp *http.Response) (*Postcrmobjects202603ObjectTypebatchcreatecrmobjects202509ObjectTypebatchcreateResponse, error) {
+// ParsePostcrmobjects202603ObjectTypebatchcreateResponse parses an HTTP response from a Postcrmobjects202603ObjectTypebatchcreateWithResponse call
+func ParsePostcrmobjects202603ObjectTypebatchcreateResponse(rsp *http.Response) (*Postcrmobjects202603ObjectTypebatchcreateResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &Postcrmobjects202603ObjectTypebatchcreatecrmobjects202509ObjectTypebatchcreateResponse{
+	response := &Postcrmobjects202603ObjectTypebatchcreateResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -9867,29 +13296,29 @@ func ParsePostcrmobjects202603ObjectTypebatchcreatecrmobjects202509ObjectTypebat
 	return response, nil
 }
 
-// ParsePostcrmobjects202603ObjectTypebatchreadcrmobjects202509ObjectTypebatchreadResponse parses an HTTP response from a Postcrmobjects202603ObjectTypebatchreadcrmobjects202509ObjectTypebatchreadWithResponse call
-func ParsePostcrmobjects202603ObjectTypebatchreadcrmobjects202509ObjectTypebatchreadResponse(rsp *http.Response) (*Postcrmobjects202603ObjectTypebatchreadcrmobjects202509ObjectTypebatchreadResponse, error) {
+// ParsePostcrmobjects202603ObjectTypebatchreadResponse parses an HTTP response from a Postcrmobjects202603ObjectTypebatchreadWithResponse call
+func ParsePostcrmobjects202603ObjectTypebatchreadResponse(rsp *http.Response) (*Postcrmobjects202603ObjectTypebatchreadResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &Postcrmobjects202603ObjectTypebatchreadcrmobjects202509ObjectTypebatchreadResponse{
+	response := &Postcrmobjects202603ObjectTypebatchreadResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -9900,29 +13329,29 @@ func ParsePostcrmobjects202603ObjectTypebatchreadcrmobjects202509ObjectTypebatch
 	return response, nil
 }
 
-// ParsePostcrmobjects202603ObjectTypebatchupdatecrmobjects202509ObjectTypebatchupdateResponse parses an HTTP response from a Postcrmobjects202603ObjectTypebatchupdatecrmobjects202509ObjectTypebatchupdateWithResponse call
-func ParsePostcrmobjects202603ObjectTypebatchupdatecrmobjects202509ObjectTypebatchupdateResponse(rsp *http.Response) (*Postcrmobjects202603ObjectTypebatchupdatecrmobjects202509ObjectTypebatchupdateResponse, error) {
+// ParsePostcrmobjects202603ObjectTypebatchupdateResponse parses an HTTP response from a Postcrmobjects202603ObjectTypebatchupdateWithResponse call
+func ParsePostcrmobjects202603ObjectTypebatchupdateResponse(rsp *http.Response) (*Postcrmobjects202603ObjectTypebatchupdateResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &Postcrmobjects202603ObjectTypebatchupdatecrmobjects202509ObjectTypebatchupdateResponse{
+	response := &Postcrmobjects202603ObjectTypebatchupdateResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicObject
+		var dest BatchResponseSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicObjectWithErrors
+		var dest BatchResponseSimplePublicObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -9933,29 +13362,29 @@ func ParsePostcrmobjects202603ObjectTypebatchupdatecrmobjects202509ObjectTypebat
 	return response, nil
 }
 
-// ParsePostcrmobjects202603ObjectTypebatchupsertcrmobjects202509ObjectTypebatchupsertResponse parses an HTTP response from a Postcrmobjects202603ObjectTypebatchupsertcrmobjects202509ObjectTypebatchupsertWithResponse call
-func ParsePostcrmobjects202603ObjectTypebatchupsertcrmobjects202509ObjectTypebatchupsertResponse(rsp *http.Response) (*Postcrmobjects202603ObjectTypebatchupsertcrmobjects202509ObjectTypebatchupsertResponse, error) {
+// ParsePostcrmobjects202603ObjectTypebatchupsertResponse parses an HTTP response from a Postcrmobjects202603ObjectTypebatchupsertWithResponse call
+func ParsePostcrmobjects202603ObjectTypebatchupsertResponse(rsp *http.Response) (*Postcrmobjects202603ObjectTypebatchupsertResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &Postcrmobjects202603ObjectTypebatchupsertcrmobjects202509ObjectTypebatchupsertResponse{
+	response := &Postcrmobjects202603ObjectTypebatchupsertResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObject
+		var dest BatchResponseSimplePublicUpsertObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmObjectsBatchResponseSimplePublicUpsertObjectWithErrors
+		var dest BatchResponseSimplePublicUpsertObjectWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -9966,22 +13395,38 @@ func ParsePostcrmobjects202603ObjectTypebatchupsertcrmobjects202509ObjectTypebat
 	return response, nil
 }
 
-// ParsePostcrmobjects202603ObjectTypemergeMergeResponse parses an HTTP response from a Postcrmobjects202603ObjectTypemergeMergeWithResponse call
-func ParsePostcrmobjects202603ObjectTypemergeMergeResponse(rsp *http.Response) (*Postcrmobjects202603ObjectTypemergeMergeResponse, error) {
+// ParsePostcrmobjects202603ObjectTypegdprDeleteResponse parses an HTTP response from a Postcrmobjects202603ObjectTypegdprDeleteWithResponse call
+func ParsePostcrmobjects202603ObjectTypegdprDeleteResponse(rsp *http.Response) (*Postcrmobjects202603ObjectTypegdprDeleteResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &Postcrmobjects202603ObjectTypemergeMergeResponse{
+	response := &Postcrmobjects202603ObjectTypegdprDeleteResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParsePostcrmobjects202603ObjectTypemergeResponse parses an HTTP response from a Postcrmobjects202603ObjectTypemergeWithResponse call
+func ParsePostcrmobjects202603ObjectTypemergeResponse(rsp *http.Response) (*Postcrmobjects202603ObjectTypemergeResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcrmobjects202603ObjectTypemergeResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -9992,22 +13437,22 @@ func ParsePostcrmobjects202603ObjectTypemergeMergeResponse(rsp *http.Response) (
 	return response, nil
 }
 
-// ParsePostcrmobjects202603ObjectTypesearchcrmobjects202509ObjectTypesearchResponse parses an HTTP response from a Postcrmobjects202603ObjectTypesearchcrmobjects202509ObjectTypesearchWithResponse call
-func ParsePostcrmobjects202603ObjectTypesearchcrmobjects202509ObjectTypesearchResponse(rsp *http.Response) (*Postcrmobjects202603ObjectTypesearchcrmobjects202509ObjectTypesearchResponse, error) {
+// ParsePostcrmobjects202603ObjectTypesearchResponse parses an HTTP response from a Postcrmobjects202603ObjectTypesearchWithResponse call
+func ParsePostcrmobjects202603ObjectTypesearchResponse(rsp *http.Response) (*Postcrmobjects202603ObjectTypesearchResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &Postcrmobjects202603ObjectTypesearchcrmobjects202509ObjectTypesearchResponse{
+	response := &Postcrmobjects202603ObjectTypesearchResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmCollectionResponseWithTotalSimplePublicObject
+		var dest CollectionResponseWithTotalSimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -10018,15 +13463,15 @@ func ParsePostcrmobjects202603ObjectTypesearchcrmobjects202509ObjectTypesearchRe
 	return response, nil
 }
 
-// ParseDeletecrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdResponse parses an HTTP response from a Deletecrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdWithResponse call
-func ParseDeletecrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdResponse(rsp *http.Response) (*Deletecrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdResponse, error) {
+// ParseDeletecrmobjects202603ObjectTypeObjectIdResponse parses an HTTP response from a Deletecrmobjects202603ObjectTypeObjectIdWithResponse call
+func ParseDeletecrmobjects202603ObjectTypeObjectIdResponse(rsp *http.Response) (*Deletecrmobjects202603ObjectTypeObjectIdResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &Deletecrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdResponse{
+	response := &Deletecrmobjects202603ObjectTypeObjectIdResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -10034,22 +13479,22 @@ func ParseDeletecrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObje
 	return response, nil
 }
 
-// ParseGetcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdResponse parses an HTTP response from a Getcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdWithResponse call
-func ParseGetcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdResponse(rsp *http.Response) (*Getcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdResponse, error) {
+// ParseGetcrmobjects202603ObjectTypeObjectIdResponse parses an HTTP response from a Getcrmobjects202603ObjectTypeObjectIdWithResponse call
+func ParseGetcrmobjects202603ObjectTypeObjectIdResponse(rsp *http.Response) (*Getcrmobjects202603ObjectTypeObjectIdResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &Getcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdResponse{
+	response := &Getcrmobjects202603ObjectTypeObjectIdResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectsSimplePublicObjectWithAssociations
+		var dest SimplePublicObjectWithAssociations
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -10060,22 +13505,22 @@ func ParseGetcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectI
 	return response, nil
 }
 
-// ParsePatchcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdResponse parses an HTTP response from a Patchcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdWithResponse call
-func ParsePatchcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdResponse(rsp *http.Response) (*Patchcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdResponse, error) {
+// ParsePatchcrmobjects202603ObjectTypeObjectIdResponse parses an HTTP response from a Patchcrmobjects202603ObjectTypeObjectIdWithResponse call
+func ParsePatchcrmobjects202603ObjectTypeObjectIdResponse(rsp *http.Response) (*Patchcrmobjects202603ObjectTypeObjectIdResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &Patchcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdResponse{
+	response := &Patchcrmobjects202603ObjectTypeObjectIdResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmSimplePublicObject
+		var dest SimplePublicObject
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -10086,22 +13531,22 @@ func ParsePatchcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjec
 	return response, nil
 }
 
-// ParseGetcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypecrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeResponse parses an HTTP response from a Getcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypecrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeWithResponse call
-func ParseGetcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypecrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeResponse(rsp *http.Response) (*Getcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypecrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeResponse, error) {
+// ParseGetcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeResponse parses an HTTP response from a Getcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeWithResponse call
+func ParseGetcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeResponse(rsp *http.Response) (*Getcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &Getcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypecrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeResponse{
+	response := &Getcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmCollectionResponseMultiAssociatedObjectWithLabelForwardPaging
+		var dest CollectionResponseMultiAssociatedObjectWithLabelForwardPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -10112,15 +13557,15 @@ func ParseGetcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypecrmobject
 	return response, nil
 }
 
-// ParseDeletecrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectIdResponse parses an HTTP response from a Deletecrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectIdWithResponse call
-func ParseDeletecrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectIdResponse(rsp *http.Response) (*Deletecrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectIdResponse, error) {
+// ParseDeletecrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdResponse parses an HTTP response from a Deletecrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdWithResponse call
+func ParseDeletecrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdResponse(rsp *http.Response) (*Deletecrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &Deletecrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectIdResponse{
+	response := &Deletecrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -10128,27 +13573,40 @@ func ParseDeletecrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObje
 	return response, nil
 }
 
-// ParsePutcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectIdResponse parses an HTTP response from a Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectIdWithResponse call
-func ParsePutcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectIdResponse(rsp *http.Response) (*Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectIdResponse, error) {
+// ParsePutcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdResponse parses an HTTP response from a Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdWithResponse call
+func ParsePutcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdResponse(rsp *http.Response) (*Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectIdResponse{
+	response := &Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmLabelsBetweenObjectPair
+		var dest LabelsBetweenObjectPair
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -10169,7 +13627,7 @@ func ParseGetcrmowners202603crmownersv3Response(rsp *http.Response) (*Getcrmowne
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmOwnersCollectionResponsePublicOwnerForwardPaging
+		var dest CollectionResponsePublicOwnerForwardPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -10195,7 +13653,7 @@ func ParseGetcrmowners202603OwnerIdGetByIdResponse(rsp *http.Response) (*Getcrmo
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmOwnersPublicOwner
+		var dest PublicOwner
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -10221,7 +13679,7 @@ func ParseGetcrmpipelines202603ObjectTypeGetAllResponse(rsp *http.Response) (*Ge
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmPipelinesCollectionResponsePipelineNoPaging
+		var dest CollectionResponsePipelineNoPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -10247,12 +13705,25 @@ func ParsePostcrmpipelines202603ObjectTypeCreateResponse(rsp *http.Response) (*P
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmPipelinesPipeline
+		var dest Pipeline
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcrmpipelines202603ObjectTypeCreateResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -10289,7 +13760,7 @@ func ParseGetcrmpipelines202603ObjectTypePipelineIdGetByIdResponse(rsp *http.Res
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmPipelinesPipeline
+		var dest Pipeline
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -10315,7 +13786,7 @@ func ParsePatchcrmpipelines202603ObjectTypePipelineIdUpdateResponse(rsp *http.Re
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmPipelinesPipeline
+		var dest Pipeline
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -10341,7 +13812,7 @@ func ParsePutcrmpipelines202603ObjectTypePipelineIdReplaceResponse(rsp *http.Res
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmPipelinesPipeline
+		var dest Pipeline
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -10367,7 +13838,7 @@ func ParseGetcrmpipelines202603ObjectTypePipelineIdauditGetAuditResponse(rsp *ht
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmPipelinesCollectionResponsePublicAuditInfoNoPaging
+		var dest CollectionResponsePublicAuditInfoNoPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -10393,7 +13864,7 @@ func ParseGetcrmpipelines202603ObjectTypePipelineIdstagesGetAllResponse(rsp *htt
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmPipelinesCollectionResponsePipelineStageNoPaging
+		var dest CollectionResponsePipelineStageNoPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -10419,12 +13890,25 @@ func ParsePostcrmpipelines202603ObjectTypePipelineIdstagesCreateResponse(rsp *ht
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmPipelinesPipelineStage
+		var dest PipelineStage
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcrmpipelines202603ObjectTypePipelineIdstagesCreateResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -10461,7 +13945,7 @@ func ParseGetcrmpipelines202603ObjectTypePipelineIdstagesStageIdGetByIdResponse(
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmPipelinesPipelineStage
+		var dest PipelineStage
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -10487,7 +13971,7 @@ func ParsePatchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdateResponse
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmPipelinesPipelineStage
+		var dest PipelineStage
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -10513,7 +13997,7 @@ func ParsePutcrmpipelines202603ObjectTypePipelineIdstagesStageIdReplaceResponse(
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmPipelinesPipelineStage
+		var dest PipelineStage
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -10539,7 +14023,7 @@ func ParseGetcrmpipelines202603ObjectTypePipelineIdstagesStageIdauditGetAuditRes
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmPipelinesCollectionResponsePublicAuditInfoNoPaging
+		var dest CollectionResponsePublicAuditInfoNoPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -10565,7 +14049,7 @@ func ParseGetcrmproperties202603ObjectTypecrmproperties202509ObjectTypeResponse(
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmPropertiesCollectionResponsePropertyNoPaging
+		var dest CollectionResponsePropertyNoPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -10597,6 +14081,19 @@ func ParsePostcrmproperties202603ObjectTypecrmproperties202509ObjectTypeResponse
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcrmproperties202603ObjectTypecrmproperties202509ObjectTypeResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -10633,14 +14130,14 @@ func ParsePostcrmproperties202603ObjectTypebatchcreatecrmproperties202509ObjectT
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmPropertiesBatchResponseProperty
+		var dest PropertiesBatchResponseProperty
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmPropertiesBatchResponsePropertyWithErrors
+		var dest PropertiesBatchResponsePropertyWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -10666,14 +14163,14 @@ func ParsePostcrmproperties202603ObjectTypebatchreadcrmproperties202509ObjectTyp
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmPropertiesBatchResponseProperty
+		var dest PropertiesBatchResponseProperty
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmPropertiesBatchResponsePropertyWithErrors
+		var dest PropertiesBatchResponsePropertyWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -10731,6 +14228,19 @@ func ParsePostcrmproperties202603ObjectTypegroupscrmproperties202509ObjectTypegr
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcrmproperties202603ObjectTypegroupscrmproperties202509ObjectTypegroupsResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -10887,7 +14397,7 @@ func ParseGetcrmpropertyValidations202603ObjectTypeIdcrmv3propertyValidationsObj
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmPropertiesValidationsCollectionResponsePublicPropertyValidationRuleMapNoPaging
+		var dest CollectionResponsePublicPropertyValidationRuleMapNoPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -10913,7 +14423,7 @@ func ParseGetcrmpropertyValidations202603ObjectTypeIdPropertyNamecrmv3propertyVa
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmPropertiesValidationsCollectionResponsePublicPropertyValidationRuleNoPaging
+		var dest CollectionResponsePublicPropertyValidationRuleNoPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -10939,7 +14449,7 @@ func ParseGetcrmpropertyValidations202603ObjectTypeIdPropertyNameruleTypeRuleTyp
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmPropertiesValidationsPublicPropertyValidationRule
+		var dest PublicPropertyValidationRule
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -10981,14 +14491,14 @@ func ParsePostdealSplits202603batchreadcrmobjectsv3dealssplitsbatchreadResponse(
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmDealSplitsBatchResponseDealToDealSplits
+		var dest BatchResponseDealToDealSplits
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmDealSplitsBatchResponseDealToDealSplitsWithErrors
+		var dest BatchResponseDealToDealSplitsWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -11014,14 +14524,14 @@ func ParsePostdealSplits202603batchupsertcrmobjectsv3dealssplitsbatchupsertRespo
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmDealSplitsBatchResponseDealToDealSplits
+		var dest BatchResponseDealToDealSplits
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmDealSplitsBatchResponseDealToDealSplitsWithErrors
+		var dest BatchResponseDealToDealSplitsWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -11047,7 +14557,7 @@ func ParseGetevents202603eventDefinitionsResponse(rsp *http.Response) (*Getevent
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest EventsDefinitionsCollectionResponseWithTotalExternalBehavioralEventTypeDefinition
+		var dest CollectionResponseWithTotalExternalBehavioralEventTypeDefinition
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -11073,12 +14583,25 @@ func ParsePostevents202603eventDefinitionsResponse(rsp *http.Response) (*Posteve
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest EventsDefinitionsExternalBehavioralEventTypeDefinition
+		var dest ExternalBehavioralEventTypeDefinition
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postevents202603eventDefinitionsResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -11115,7 +14638,7 @@ func ParseGetevents202603eventDefinitionsEventNameResponse(rsp *http.Response) (
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest EventsDefinitionsExternalBehavioralEventTypeDefinition
+		var dest ExternalBehavioralEventTypeDefinition
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -11141,12 +14664,25 @@ func ParsePatchevents202603eventDefinitionsEventNameResponse(rsp *http.Response)
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest EventsDefinitionsExternalBehavioralEventTypeDefinition
+		var dest ExternalBehavioralEventTypeDefinition
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Patchevents202603eventDefinitionsEventNameResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -11173,6 +14709,19 @@ func ParsePostevents202603eventDefinitionsEventNamepropertyResponse(rsp *http.Re
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postevents202603eventDefinitionsEventNamepropertyResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -11215,6 +14764,19 @@ func ParsePatchevents202603eventDefinitionsEventNamepropertyPropertyNameResponse
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Patchevents202603eventDefinitionsEventNamepropertyPropertyNameResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -11267,7 +14829,7 @@ func ParseGeteventseventOccurrences202603eventseventOccurrences202603Response(rs
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest EventsOccurrencesCollectionResponseExternalUnifiedEvent
+		var dest CollectionResponseExternalUnifiedEvent
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -11293,7 +14855,7 @@ func ParseGeteventseventOccurrences202603eventTypeseventseventOccurrences202603e
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest EventsOccurrencesVisibleExternalEventTypeNames
+		var dest VisibleExternalEventTypeNames
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -11319,7 +14881,7 @@ func ParseGetfeatureFlags202603AppIdflagsallfeatureFlagsv3AppIdflagsallResponse(
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmFeatureFlagsFlagsForAppResponse
+		var dest FlagsForAppResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -11345,7 +14907,7 @@ func ParseDeletefeatureFlags202603AppIdflagsFlagNameResponse(rsp *http.Response)
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmFeatureFlagsFlagResponse
+		var dest FlagResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -11371,7 +14933,7 @@ func ParseGetfeatureFlags202603AppIdflagsFlagNameResponse(rsp *http.Response) (*
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmFeatureFlagsFlagResponse
+		var dest FlagResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -11397,7 +14959,7 @@ func ParsePutfeatureFlags202603AppIdflagsFlagNameResponse(rsp *http.Response) (*
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmFeatureFlagsFlagResponse
+		var dest FlagResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -11423,7 +14985,7 @@ func ParseGetfeatureFlags202603AppIdflagsFlagNameportalsResponse(rsp *http.Respo
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmFeatureFlagsPortalFlagStateBatchResponse
+		var dest PortalFlagStateBatchResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -11449,7 +15011,7 @@ func ParsePostfeatureFlags202603AppIdflagsFlagNameportalsbatchdeleteResponse(rsp
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmFeatureFlagsPortalFlagStateBatchResponse
+		var dest PortalFlagStateBatchResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -11475,7 +15037,7 @@ func ParsePostfeatureFlags202603AppIdflagsFlagNameportalsbatchupsertResponse(rsp
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmFeatureFlagsPortalFlagStateBatchResponse
+		var dest PortalFlagStateBatchResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -11501,7 +15063,7 @@ func ParseDeletefeatureFlags202603AppIdflagsFlagNameportalsPortalIdResponse(rsp 
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmFeatureFlagsPortalFlagStateResponse
+		var dest PortalFlagStateResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -11527,7 +15089,7 @@ func ParseGetfeatureFlags202603AppIdflagsFlagNameportalsPortalIdResponse(rsp *ht
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmFeatureFlagsPortalFlagStateResponse
+		var dest PortalFlagStateResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -11553,7 +15115,7 @@ func ParsePutfeatureFlags202603AppIdflagsFlagNameportalsPortalIdResponse(rsp *ht
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmFeatureFlagsPortalFlagStateResponse
+		var dest PortalFlagStateResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -11579,12 +15141,25 @@ func ParsePostfiles202603filesUploadResponse(rsp *http.Response) (*Postfiles2026
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest FilesFile
+		var dest File
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postfiles202603filesUploadResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -11605,7 +15180,7 @@ func ParsePostfiles202603filesimportFromUrlasyncImportFromUrlResponse(rsp *http.
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 202:
-		var dest FilesImportFromUrlTaskLocator
+		var dest ImportFromUrlTaskLocator
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -11631,7 +15206,7 @@ func ParseGetfiles202603filesimportFromUrlasynctasksTaskIdstatusCheckImportRespo
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest FilesFileActionResponse
+		var dest FileActionResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -11657,7 +15232,7 @@ func ParseGetfiles202603filessearchDoSearchResponse(rsp *http.Response) (*Getfil
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest FilesCollectionResponseFile
+		var dest CollectionResponseFile
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -11683,7 +15258,7 @@ func ParseGetfiles202603filesstatPathGetMetadataResponse(rsp *http.Response) (*G
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest FilesFileStat
+		var dest FileStat
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -11725,7 +15300,7 @@ func ParseGetfiles202603filesFileIdGetByIdResponse(rsp *http.Response) (*Getfile
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest FilesFile
+		var dest File
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -11751,7 +15326,7 @@ func ParsePatchfiles202603filesFileIdUpdatePropertiesResponse(rsp *http.Response
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest FilesFile
+		var dest File
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -11777,7 +15352,7 @@ func ParsePutfiles202603filesFileIdReplaceResponse(rsp *http.Response) (*Putfile
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest FilesFile
+		var dest File
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -11819,7 +15394,7 @@ func ParseGetfiles202603filesFileIdsignedUrlGetSignedUrlResponse(rsp *http.Respo
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest FilesSignedUrl
+		var dest SignedUrl
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -11845,12 +15420,25 @@ func ParsePostfiles202603foldersCreateResponse(rsp *http.Response) (*Postfiles20
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest FilesFolder
+		var dest Folder
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postfiles202603foldersCreateResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -11871,7 +15459,7 @@ func ParseGetfiles202603folderssearchDoSearchResponse(rsp *http.Response) (*Getf
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest FilesCollectionResponseFolder
+		var dest CollectionResponseFolder
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -11897,7 +15485,7 @@ func ParsePostfiles202603foldersupdateasyncUpdatePropertiesRecursivelyResponse(r
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 202:
-		var dest FilesFolderUpdateTaskLocator
+		var dest FolderUpdateTaskLocator
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -11923,7 +15511,7 @@ func ParseGetfiles202603foldersupdateasynctasksTaskIdstatusCheckUpdateStatusResp
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest FilesFolderActionResponse
+		var dest FolderActionResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -11965,7 +15553,7 @@ func ParseGetfiles202603foldersFolderIdGetByIdResponse(rsp *http.Response) (*Get
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest FilesFolder
+		var dest Folder
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -11991,7 +15579,7 @@ func ParsePatchfiles202603foldersFolderIdUpdatePropertiesResponse(rsp *http.Resp
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest FilesFolder
+		var dest Folder
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -12033,7 +15621,7 @@ func ParseGetfiles202603foldersFolderPathGetByPathResponse(rsp *http.Response) (
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest FilesFolder
+		var dest Folder
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -12062,7 +15650,7 @@ func ParsePostintegratorstimeline202603eventsCreateResponse(rsp *http.Response) 
 		break // No content-type
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmTimelineAppEventOccurrence
+		var dest AppEventOccurrence
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -12074,6 +15662,19 @@ func ParsePostintegratorstimeline202603eventsCreateResponse(rsp *http.Response) 
 	case rsp.StatusCode == 409:
 		break // No content-type
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postintegratorstimeline202603eventsCreateResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -12094,7 +15695,7 @@ func ParsePostintegratorstimeline202603eventsbatchintegratorstimeline202603event
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmTimelineBatchResponseAppEventOccurrence
+		var dest BatchResponseAppEventOccurrence
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -12126,7 +15727,7 @@ func ParsePostintegratorstimeline202603typesprojectsintegratorstimeline202603typ
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmTimelineAppEventResolutionResponse
+		var dest AppEventResolutionResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -12155,7 +15756,7 @@ func ParseGetmarketingcampaigns202603marketingcampaignsv3Response(rsp *http.Resp
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingCampaignsCollectionResponseWithTotalPublicCampaign
+		var dest CollectionResponseWithTotalPublicCampaign
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -12181,12 +15782,25 @@ func ParsePostmarketingcampaigns202603marketingcampaignsv3Response(rsp *http.Res
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest MarketingCampaignsPublicCampaign
+		var dest PublicCampaign
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postmarketingcampaigns202603marketingcampaignsv3Response201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -12223,14 +15837,14 @@ func ParsePostmarketingcampaigns202603batchcreateResponse(rsp *http.Response) (*
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest MarketingCampaignsBatchResponsePublicCampaign
+		var dest BatchResponsePublicCampaign
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest MarketingCampaignsBatchResponsePublicCampaignWithErrors
+		var dest BatchResponsePublicCampaignWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -12256,14 +15870,14 @@ func ParsePostmarketingcampaigns202603batchreadResponse(rsp *http.Response) (*Po
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingCampaignsBatchResponsePublicCampaignWithAssets
+		var dest BatchResponsePublicCampaignWithAssets
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest MarketingCampaignsBatchResponsePublicCampaignWithAssetsWithErrors
+		var dest BatchResponsePublicCampaignWithAssetsWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -12289,14 +15903,14 @@ func ParsePostmarketingcampaigns202603batchupdateResponse(rsp *http.Response) (*
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingCampaignsBatchResponsePublicCampaign
+		var dest BatchResponsePublicCampaign
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest MarketingCampaignsBatchResponsePublicCampaignWithErrors
+		var dest BatchResponsePublicCampaignWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -12338,7 +15952,7 @@ func ParseGetmarketingcampaigns202603CampaignGuidResponse(rsp *http.Response) (*
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingCampaignsPublicCampaignWithAssets
+		var dest PublicCampaignWithAssets
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -12364,7 +15978,7 @@ func ParsePatchmarketingcampaigns202603CampaignGuidResponse(rsp *http.Response) 
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingCampaignsPublicCampaign
+		var dest PublicCampaign
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -12390,7 +16004,7 @@ func ParseGetmarketingcampaigns202603CampaignGuidassetsAssetTypeResponse(rsp *ht
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingCampaignsCollectionResponsePublicCampaignAssetForwardPaging
+		var dest CollectionResponsePublicCampaignAssetForwardPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -12448,12 +16062,25 @@ func ParsePostmarketingcampaigns202603CampaignGuidbudgetResponse(rsp *http.Respo
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest MarketingCampaignsPublicBudgetItem
+		var dest PublicBudgetItem
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postmarketingcampaigns202603CampaignGuidbudgetResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -12474,7 +16101,7 @@ func ParseGetmarketingcampaigns202603CampaignGuidbudgettotalsResponse(rsp *http.
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingCampaignsPublicBudgetTotals
+		var dest PublicBudgetTotals
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -12516,7 +16143,7 @@ func ParseGetmarketingcampaigns202603CampaignGuidbudgetBudgetIdResponse(rsp *htt
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingCampaignsPublicBudgetItem
+		var dest PublicBudgetItem
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -12542,7 +16169,7 @@ func ParsePutmarketingcampaigns202603CampaignGuidbudgetBudgetIdResponse(rsp *htt
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingCampaignsPublicBudgetItem
+		var dest PublicBudgetItem
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -12568,7 +16195,7 @@ func ParseGetmarketingcampaigns202603CampaignGuidreportscontactsContactTypeRespo
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingCampaignsCollectionResponseContactReferenceForwardPaging
+		var dest CollectionResponseContactReferenceForwardPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -12594,7 +16221,7 @@ func ParseGetmarketingcampaigns202603CampaignGuidreportsmetricsResponse(rsp *htt
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingCampaignsMetricsCounters
+		var dest MetricsCounters
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -12620,7 +16247,7 @@ func ParseGetmarketingcampaigns202603CampaignGuidreportsrevenueResponse(rsp *htt
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingCampaignsRevenueAttributionAggregate
+		var dest RevenueAttributionAggregate
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -12646,12 +16273,25 @@ func ParsePostmarketingcampaigns202603CampaignGuidspendResponse(rsp *http.Respon
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest MarketingCampaignsPublicSpendItem
+		var dest PublicSpendItem
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postmarketingcampaigns202603CampaignGuidspendResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -12688,7 +16328,7 @@ func ParseGetmarketingcampaigns202603CampaignGuidspendSpendIdResponse(rsp *http.
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingCampaignsPublicSpendItem
+		var dest PublicSpendItem
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -12714,7 +16354,7 @@ func ParsePutmarketingcampaigns202603CampaignGuidspendSpendIdResponse(rsp *http.
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingCampaignsPublicSpendItem
+		var dest PublicSpendItem
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -12740,7 +16380,7 @@ func ParsePostmarketingemailCampaigns202603singleSendmarketingv4emailsingleSendR
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingEmailSendStatusView
+		var dest EmailSendStatusView
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -12766,7 +16406,7 @@ func ParseGetmarketingemails202603marketingemailsv3Response(rsp *http.Response) 
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingEmailsCollectionResponseWithTotalPublicEmail
+		var dest CollectionResponseWithTotalPublicEmail
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -12792,12 +16432,25 @@ func ParsePostmarketingemails202603marketingemailsv3Response(rsp *http.Response)
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest MarketingEmailsPublicEmail
+		var dest PublicEmail
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postmarketingemails202603marketingemailsv3Response201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -12818,12 +16471,25 @@ func ParsePostmarketingemails202603abTestcreateVariationCreateAbTestVariationRes
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest MarketingEmailsPublicEmail
+		var dest PublicEmail
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postmarketingemails202603abTestcreateVariationCreateAbTestVariationResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -12844,7 +16510,7 @@ func ParsePostmarketingemails202603cloneCloneResponse(rsp *http.Response) (*Post
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingEmailsPublicEmail
+		var dest PublicEmail
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -12870,7 +16536,7 @@ func ParseGetmarketingemails202603statisticshistogramGetHistogramResponse(rsp *h
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingEmailsCollectionResponseWithTotalEmailStatisticInterval
+		var dest CollectionResponseWithTotalEmailStatisticInterval
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -12896,7 +16562,7 @@ func ParseGetmarketingemails202603statisticslistGetEmailsListResponse(rsp *http.
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingEmailsAggregateEmailStatistics
+		var dest AggregateEmailStatistics
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -12938,7 +16604,7 @@ func ParseGetmarketingemails202603EmailIdGetByIdResponse(rsp *http.Response) (*G
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingEmailsPublicEmail
+		var dest PublicEmail
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -12964,7 +16630,7 @@ func ParsePatchmarketingemails202603EmailIdUpdateResponse(rsp *http.Response) (*
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingEmailsPublicEmail
+		var dest PublicEmail
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -12990,7 +16656,7 @@ func ParseGetmarketingemails202603EmailIdabTestgetVariationGetAbTestVariationRes
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingEmailsPublicEmail
+		var dest PublicEmail
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13016,7 +16682,7 @@ func ParseGetmarketingemails202603EmailIddraftGetDraftResponse(rsp *http.Respons
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingEmailsPublicEmail
+		var dest PublicEmail
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13042,7 +16708,7 @@ func ParsePatchmarketingemails202603EmailIddraftUpsertDraftResponse(rsp *http.Re
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingEmailsPublicEmail
+		var dest PublicEmail
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13100,7 +16766,7 @@ func ParseGetmarketingemails202603EmailIdrevisionsGetRevisionsResponse(rsp *http
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingEmailsCollectionResponseWithTotalPublicEmailVersion
+		var dest CollectionResponseWithTotalPublicEmailVersion
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13126,7 +16792,7 @@ func ParseGetmarketingemails202603EmailIdrevisionsRevisionIdGetRevisionByIdRespo
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingEmailsPublicEmailVersion
+		var dest PublicEmailVersion
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13168,7 +16834,7 @@ func ParsePostmarketingemails202603EmailIdrevisionsRevisionIdrestoreToDraftResto
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingEmailsPublicEmail
+		var dest PublicEmail
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13210,7 +16876,7 @@ func ParseGetmarketingmarketingEvents202603marketingmarketingEventsv3Response(rs
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingMarketingEventsCollectionResponseMarketingEventPublicReadResponseV2ForwardPaging
+		var dest CollectionResponseMarketingEventPublicReadResponseV2ForwardPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13236,7 +16902,7 @@ func ParseGetmarketingmarketingEvents202603associationsExternalAccountIdExternal
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingMarketingEventsCollectionResponseWithTotalPublicList
+		var dest CollectionResponseWithTotalPublicList
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13294,7 +16960,7 @@ func ParseGetmarketingmarketingEvents202603associationsMarketingEventIdlistsGetA
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingMarketingEventsCollectionResponseWithTotalPublicList
+		var dest CollectionResponseWithTotalPublicList
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13352,7 +17018,7 @@ func ParsePostmarketingmarketingEvents202603attendanceExternalEventIdSubscriberS
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingMarketingEventsBatchResponseSubscriberVidResponse
+		var dest BatchResponseSubscriberVidResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13378,7 +17044,7 @@ func ParsePostmarketingmarketingEvents202603attendanceExternalEventIdSubscriberS
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingMarketingEventsBatchResponseSubscriberEmailResponse
+		var dest BatchResponseSubscriberEmailResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13420,14 +17086,14 @@ func ParsePostmarketingmarketingEvents202603batchupdateUpdateByObjectIdResponse(
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingMarketingEventsBatchResponseMarketingEventPublicDefaultResponseV2
+		var dest BatchResponseMarketingEventPublicDefaultResponseV2
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest MarketingMarketingEventsBatchResponseMarketingEventPublicDefaultResponseV2WithErrors
+		var dest BatchResponseMarketingEventPublicDefaultResponseV2WithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13453,7 +17119,7 @@ func ParsePostmarketingmarketingEvents202603eventsCreateResponse(rsp *http.Respo
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingMarketingEventsMarketingEventDefaultResponse
+		var dest MarketingEventDefaultResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13495,7 +17161,7 @@ func ParseGetmarketingmarketingEvents202603eventssearchDoSearchResponse(rsp *htt
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingMarketingEventsCollectionResponseSearchPublicResponseWrapperNoPaging
+		var dest CollectionResponseSearchPublicResponseWrapperNoPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13521,7 +17187,7 @@ func ParsePostmarketingmarketingEvents202603eventsupsertUpsertResponse(rsp *http
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingMarketingEventsBatchResponseMarketingEventPublicDefaultResponse
+		var dest BatchResponseMarketingEventPublicDefaultResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13563,7 +17229,7 @@ func ParseGetmarketingmarketingEvents202603eventsExternalEventIdGetDetailsRespon
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingMarketingEventsMarketingEventPublicReadResponse
+		var dest MarketingEventPublicReadResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13589,7 +17255,7 @@ func ParsePatchmarketingmarketingEvents202603eventsExternalEventIdUpdateResponse
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingMarketingEventsMarketingEventPublicDefaultResponse
+		var dest MarketingEventPublicDefaultResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13615,7 +17281,7 @@ func ParsePutmarketingmarketingEvents202603eventsExternalEventIdUpsertResponse(r
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingMarketingEventsMarketingEventPublicDefaultResponse
+		var dest MarketingEventPublicDefaultResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13641,7 +17307,7 @@ func ParsePostmarketingmarketingEvents202603eventsExternalEventIdcancelCancelRes
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingMarketingEventsMarketingEventDefaultResponse
+		var dest MarketingEventDefaultResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13667,7 +17333,7 @@ func ParsePostmarketingmarketingEvents202603eventsExternalEventIdcompleteComplet
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingMarketingEventsMarketingEventDefaultResponse
+		var dest MarketingEventDefaultResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13725,7 +17391,7 @@ func ParseGetmarketingmarketingEvents202603participationscontactsContactIdentifi
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingMarketingEventsCollectionResponseWithTotalParticipationBreakdown
+		var dest CollectionResponseWithTotalParticipationBreakdown
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13751,7 +17417,7 @@ func ParseGetmarketingmarketingEvents202603participationsExternalAccountIdExtern
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingMarketingEventsAttendanceCounters
+		var dest AttendanceCounters
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13777,7 +17443,7 @@ func ParseGetmarketingmarketingEvents202603participationsExternalAccountIdExtern
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingMarketingEventsCollectionResponseWithTotalParticipationBreakdown
+		var dest CollectionResponseWithTotalParticipationBreakdown
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13803,7 +17469,7 @@ func ParseGetmarketingmarketingEvents202603participationsMarketingEventIdGetPart
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingMarketingEventsAttendanceCounters
+		var dest AttendanceCounters
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13829,7 +17495,7 @@ func ParseGetmarketingmarketingEvents202603participationsMarketingEventIdbreakdo
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingMarketingEventsCollectionResponseWithTotalParticipationBreakdown
+		var dest CollectionResponseWithTotalParticipationBreakdown
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13855,7 +17521,7 @@ func ParseGetmarketingmarketingEvents202603AppIdsettingsGetAllResponse(rsp *http
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingMarketingEventsEventDetailSettings
+		var dest EventDetailSettings
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13881,7 +17547,7 @@ func ParsePostmarketingmarketingEvents202603AppIdsettingsUpdateResponse(rsp *htt
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingMarketingEventsEventDetailSettings
+		var dest EventDetailSettings
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13907,7 +17573,7 @@ func ParseGetmarketingmarketingEvents202603ExternalEventIdidentifiersSearchPorta
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingMarketingEventsCollectionResponseWithTotalMarketingEventIdentifiersResponse
+		var dest CollectionResponseWithTotalMarketingEventIdentifiersResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13949,7 +17615,7 @@ func ParseGetmarketingmarketingEvents202603ObjectIdGetByObjectIdResponse(rsp *ht
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingMarketingEventsMarketingEventPublicReadResponseV2
+		var dest MarketingEventPublicReadResponseV2
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13975,7 +17641,7 @@ func ParsePatchmarketingmarketingEvents202603ObjectIdUpdateByObjectIdResponse(rs
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingMarketingEventsMarketingEventPublicDefaultResponseV2
+		var dest MarketingEventPublicDefaultResponseV2
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -14001,7 +17667,7 @@ func ParsePostmarketingmarketingEvents202603ObjectIdattendanceSubscriberStatecre
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingMarketingEventsBatchResponseSubscriberVidResponse
+		var dest BatchResponseSubscriberVidResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -14027,7 +17693,7 @@ func ParsePostmarketingmarketingEvents202603ObjectIdattendanceSubscriberStateema
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingMarketingEventsBatchResponseSubscriberEmailResponse
+		var dest BatchResponseSubscriberEmailResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -14053,7 +17719,7 @@ func ParsePostmarketingtransactional202603singleEmailsendSendEmailResponse(rsp *
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingEmailSendStatusView
+		var dest EmailSendStatusView
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -14079,7 +17745,7 @@ func ParseGetmarketingtransactional202603smtpTokensGetTokensPageResponse(rsp *ht
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingTransactionalCollectionResponseSmtpApiTokenViewForwardPaging
+		var dest CollectionResponseSmtpApiTokenViewForwardPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -14105,12 +17771,25 @@ func ParsePostmarketingtransactional202603smtpTokensCreateTokenResponse(rsp *htt
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest MarketingTransactionalSmtpApiTokenView
+		var dest SmtpApiTokenView
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postmarketingtransactional202603smtpTokensCreateTokenResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -14147,7 +17826,7 @@ func ParseGetmarketingtransactional202603smtpTokensTokenIdGetTokenByIdResponse(r
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingTransactionalSmtpApiTokenView
+		var dest SmtpApiTokenView
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -14173,7 +17852,7 @@ func ParsePostmarketingtransactional202603smtpTokensTokenIdpasswordResetResetPas
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingTransactionalSmtpApiTokenView
+		var dest SmtpApiTokenView
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -14199,7 +17878,7 @@ func ParsePostmediaBridge202603eventsattentionSpanResponse(rsp *http.Response) (
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsMediaBridgeAttentionSpanEvent
+		var dest AttentionSpanEvent
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -14225,7 +17904,7 @@ func ParsePostmediaBridge202603eventsmediaPlayedResponse(rsp *http.Response) (*P
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsMediaBridgeMediaPlayedEvent
+		var dest MediaPlayedEvent
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -14251,7 +17930,7 @@ func ParsePostmediaBridge202603eventsmediaPlayedPercentResponse(rsp *http.Respon
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsMediaBridgeMediaPlayedPercentageEvent
+		var dest MediaPlayedPercentageEvent
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -14277,7 +17956,7 @@ func ParseGetmediaBridge202603AppIdpropertiesObjectTypeResponse(rsp *http.Respon
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsMediaBridgeCollectionResponsePropertyNoPaging
+		var dest CollectionResponsePropertyNoPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -14303,12 +17982,25 @@ func ParsePostmediaBridge202603AppIdpropertiesObjectTypeResponse(rsp *http.Respo
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CmsMediaBridgeProperty
+		var dest CMSMediaBridgeProperty
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers PostmediaBridge202603AppIdpropertiesObjectTypeResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -14345,14 +18037,14 @@ func ParsePostmediaBridge202603AppIdpropertiesObjectTypebatchcreateResponse(rsp 
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CmsMediaBridgeBatchResponseProperty
+		var dest BatchResponseProperty
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CmsMediaBridgeBatchResponsePropertyWithErrors
+		var dest BatchResponsePropertyWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -14378,14 +18070,14 @@ func ParsePostmediaBridge202603AppIdpropertiesObjectTypebatchreadResponse(rsp *h
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsMediaBridgeBatchResponseProperty
+		var dest BatchResponseProperty
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CmsMediaBridgeBatchResponsePropertyWithErrors
+		var dest BatchResponsePropertyWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -14443,6 +18135,19 @@ func ParsePostmediaBridge202603AppIdpropertiesObjectTypegroupsResponse(rsp *http
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers PostmediaBridge202603AppIdpropertiesObjectTypegroupsResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -14547,7 +18252,7 @@ func ParseGetmediaBridge202603AppIdpropertiesObjectTypePropertyNameResponse(rsp 
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsMediaBridgeProperty
+		var dest CMSMediaBridgeProperty
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -14573,7 +18278,7 @@ func ParsePatchmediaBridge202603AppIdpropertiesObjectTypePropertyNameResponse(rs
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsMediaBridgeProperty
+		var dest CMSMediaBridgeProperty
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -14599,7 +18304,7 @@ func ParseGetmediaBridge202603AppIdschemasResponse(rsp *http.Response) (*Getmedi
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsMediaBridgeCollectionResponseObjectSchemaNoPaging
+		var dest CollectionResponseObjectSchemaNoPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -14625,7 +18330,7 @@ func ParseGetmediaBridge202603AppIdschemasObjectTypeResponse(rsp *http.Response)
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsMediaBridgeObjectSchema
+		var dest ObjectSchema
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -14685,6 +18390,19 @@ func ParsePostmediaBridge202603AppIdschemasObjectTypeassociationsResponse(rsp *h
 
 	}
 
+	switch {
+	case rsp.StatusCode == 201:
+		var headers PostmediaBridge202603AppIdschemasObjectTypeassociationsResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
+	}
+
 	return response, nil
 }
 
@@ -14719,7 +18437,7 @@ func ParsePutmediaBridge202603AppIdsettingsResponse(rsp *http.Response) (*Putmed
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsMediaBridgeMediaBridgeProviderRegistrationResponse
+		var dest MediaBridgeProviderRegistrationResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -14745,7 +18463,7 @@ func ParseGetmediaBridge202603AppIdsettingseventVisibilityResponse(rsp *http.Res
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsMediaBridgeEventVisibilityResponse
+		var dest EventVisibilityResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -14771,7 +18489,7 @@ func ParsePatchmediaBridge202603AppIdsettingseventVisibilityResponse(rsp *http.R
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsMediaBridgeEventVisibilityChange
+		var dest EventVisibilityChange
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -14797,7 +18515,7 @@ func ParsePostmediaBridge202603AppIdsettingsobjectDefinitionsResponse(rsp *http.
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsMediaBridgeBulkIntegratorObjectCreationResponse
+		var dest BulkIntegratorObjectCreationResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -14823,7 +18541,7 @@ func ParseGetmediaBridge202603AppIdsettingsobjectDefinitionsMediaTypeResponse(rs
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsMediaBridgeObjectDefinitionResponse
+		var dest ObjectDefinitionResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -14865,7 +18583,7 @@ func ParseGetmediaBridge202603AppIdsettingsoembedDomainsResponse(rsp *http.Respo
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsMediaBridgeOEmbedDomainsCollectionResponse
+		var dest OEmbedDomainsCollectionResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -14891,7 +18609,7 @@ func ParsePostmediaBridge202603AppIdsettingsoembedDomainsResponse(rsp *http.Resp
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsMediaBridgeIntegratorOEmbedDomainModel
+		var dest IntegratorOEmbedDomainModel
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -14917,7 +18635,7 @@ func ParseGetmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainIdResponse(r
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsMediaBridgeIntegratorOEmbedDomainModel
+		var dest IntegratorOEmbedDomainModel
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -14943,7 +18661,7 @@ func ParsePatchmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainIdResponse
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsMediaBridgeIntegratorOEmbedDomainModel
+		var dest IntegratorOEmbedDomainModel
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -14969,7 +18687,7 @@ func ParsePostmediaBridge202603AppIdsettingsregisterResponse(rsp *http.Response)
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsMediaBridgeMediaBridgeProviderRegistrationResponse
+		var dest MediaBridgeProviderRegistrationResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15021,7 +18739,7 @@ func ParseGetmetanetworkOrigins202603ipRangesmetanetworkOrigins202509ipRangesRes
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MetaOriginsCollectionResponseIpRangeNoPaging
+		var dest CollectionResponseIpRangeNoPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15063,7 +18781,7 @@ func ParsePostoauth202603tokenoauthv3tokenResponse(rsp *http.Response) (*Postoau
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest AuthOauthTokenResponseIF
+		var dest TokenResponseIF
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15089,7 +18807,7 @@ func ParsePostoauth202603tokenintrospectoauthv3tokenintrospectResponse(rsp *http
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest AuthOauthTokenInfoResponseBaseIF
+		var dest TokenInfoResponseBaseIF
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15131,7 +18849,7 @@ func ParsePostscheduler202603meetingscalendarResponse(rsp *http.Response) (*Post
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest SchedulerMeetingsExternalCalenderMeetingEventResponse
+		var dest ExternalCalenderMeetingEventResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15157,7 +18875,7 @@ func ParseGetscheduler202603meetingsmeetingLinksResponse(rsp *http.Response) (*G
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest SchedulerMeetingsCollectionResponseWithTotalExternalLinkMetadata
+		var dest CollectionResponseWithTotalExternalLinkMetadata
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15183,7 +18901,7 @@ func ParsePostscheduler202603meetingsmeetingLinksbookResponse(rsp *http.Response
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest SchedulerMeetingsExternalMeetingBookingResponse
+		var dest ExternalMeetingBookingResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15209,7 +18927,7 @@ func ParseGetscheduler202603meetingsmeetingLinksbookavailabilityPageSlugResponse
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest SchedulerMeetingsExternalLinkAvailabilityAndBusyTimes
+		var dest ExternalLinkAvailabilityAndBusyTimes
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15235,7 +18953,7 @@ func ParseGetscheduler202603meetingsmeetingLinksbookSlugResponse(rsp *http.Respo
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest SchedulerMeetingsExternalBookingInfo
+		var dest ExternalBookingInfo
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15261,7 +18979,7 @@ func ParsePostsettingscurrencies202603centralFxRatesaddCurrencysettingsv3currenc
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest SettingsCurrenciesExchangeRate
+		var dest ExchangeRate
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15287,7 +19005,7 @@ func ParseGetsettingscurrencies202603centralFxRatesinformationsettingsv3currenci
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest SettingsCurrenciesCentralExchangeRatesInformation
+		var dest CentralExchangeRatesInformation
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15313,7 +19031,7 @@ func ParseGetsettingscurrencies202603centralFxRatesunsupportedCurrenciessettings
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest SettingsCurrenciesCollectionResponseCurrencyCodeInfoNoPaging
+		var dest CollectionResponseCurrencyCodeInfoNoPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15339,7 +19057,7 @@ func ParseGetsettingscurrencies202603codesResponse(rsp *http.Response) (*Getsett
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest SettingsCurrenciesCollectionResponseCurrencyCodeInfoNoPaging
+		var dest CollectionResponseCurrencyCodeInfoNoPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15365,7 +19083,7 @@ func ParseGetsettingscurrencies202603companyCurrencyResponse(rsp *http.Response)
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest SettingsCurrenciesCompanyCurrency
+		var dest CompanyCurrency
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15391,7 +19109,7 @@ func ParsePutsettingscurrencies202603companyCurrencyResponse(rsp *http.Response)
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest SettingsCurrenciesCompanyCurrency
+		var dest CompanyCurrency
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15417,7 +19135,7 @@ func ParseGetsettingscurrencies202603exchangeRatesResponse(rsp *http.Response) (
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest SettingsCurrenciesCollectionResponseExchangeRateForwardPaging
+		var dest CollectionResponseExchangeRateForwardPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15443,7 +19161,7 @@ func ParsePostsettingscurrencies202603exchangeRatesResponse(rsp *http.Response) 
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest SettingsCurrenciesExchangeRate
+		var dest ExchangeRate
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15469,14 +19187,14 @@ func ParsePostsettingscurrencies202603exchangeRatesbatchcreateResponse(rsp *http
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest SettingsCurrenciesBatchResponseExchangeRate
+		var dest BatchResponseExchangeRate
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest SettingsCurrenciesBatchResponseExchangeRateWithErrors
+		var dest BatchResponseExchangeRateWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15502,14 +19220,14 @@ func ParsePostsettingscurrencies202603exchangeRatesbatchreadResponse(rsp *http.R
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest SettingsCurrenciesBatchResponseExchangeRate
+		var dest BatchResponseExchangeRate
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest SettingsCurrenciesBatchResponseExchangeRateWithErrors
+		var dest BatchResponseExchangeRateWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15535,14 +19253,14 @@ func ParsePostsettingscurrencies202603exchangeRatesbatchupdateResponse(rsp *http
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest SettingsCurrenciesBatchResponseExchangeRate
+		var dest BatchResponseExchangeRate
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest SettingsCurrenciesBatchResponseExchangeRateWithErrors
+		var dest BatchResponseExchangeRateWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15568,7 +19286,7 @@ func ParseGetsettingscurrencies202603exchangeRatescurrentResponse(rsp *http.Resp
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest SettingsCurrenciesCollectionResponseExchangeRateNoPaging
+		var dest CollectionResponseExchangeRateNoPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15610,7 +19328,7 @@ func ParseGetsettingscurrencies202603exchangeRatesExchangeRateIdResponse(rsp *ht
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest SettingsCurrenciesExchangeRate
+		var dest ExchangeRate
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15636,7 +19354,7 @@ func ParsePatchsettingscurrencies202603exchangeRatesExchangeRateIdResponse(rsp *
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest SettingsCurrenciesExchangeRate
+		var dest ExchangeRate
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15662,7 +19380,7 @@ func ParseGetsettingsusers202603settingsusersv3Response(rsp *http.Response) (*Ge
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest SettingsUsersCollectionResponsePublicUserForwardPaging
+		var dest CollectionResponsePublicUserForwardPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15688,12 +19406,25 @@ func ParsePostsettingsusers202603settingsusersv3Response(rsp *http.Response) (*P
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest SettingsUsersPublicUser
+		var dest PublicUser
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postsettingsusers202603settingsusersv3Response201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -15714,7 +19445,7 @@ func ParseGetsettingsusers202603rolesGetAllResponse(rsp *http.Response) (*Getset
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest SettingsUsersCollectionResponsePublicPermissionSetNoPaging
+		var dest CollectionResponsePublicPermissionSetNoPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15740,7 +19471,7 @@ func ParseGetsettingsusers202603teamsGetAllResponse(rsp *http.Response) (*Getset
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest SettingsUsersCollectionResponsePublicTeamNoPaging
+		var dest CollectionResponsePublicTeamNoPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15782,7 +19513,7 @@ func ParseGetsettingsusers202603UserIdGetByIdResponse(rsp *http.Response) (*Gets
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest SettingsUsersPublicUser
+		var dest PublicUserMarch2026
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15808,7 +19539,7 @@ func ParsePutsettingsusers202603UserIdUpdateResponse(rsp *http.Response) (*Putse
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest SettingsUsersPublicUser
+		var dest PublicUserMarch2026
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15834,7 +19565,7 @@ func ParseGettaxRates202603taxRatesResponse(rsp *http.Response) (*GettaxRates202
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest SettingsTaxRatesCollectionResponsePublicTaxRateGroupForwardPaging
+		var dest CollectionResponsePublicTaxRateGroupForwardPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15860,7 +19591,7 @@ func ParseGettaxRates202603taxRatesTaxRateGroupIdResponse(rsp *http.Response) (*
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest SettingsTaxRatesPublicTaxRateGroup
+		var dest PublicTaxRateGroup
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15950,7 +19681,7 @@ func ParsePostvisitorIdentification202603tokenscreateGenerateTokenResponse(rsp *
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest ConversationsVisitorIdentificationIdentificationTokenResponse
+		var dest IdentificationTokenResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -16284,499 +20015,6 @@ func ParseGetwebhooksJournaljournal202603latestResponse(rsp *http.Response) (*Ge
 	response := &GetwebhooksJournaljournal202603latestResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParseGetwebhooksJournaljournal202603offsetOffsetnextResponse parses an HTTP response from a GetwebhooksJournaljournal202603offsetOffsetnextWithResponse call
-func ParseGetwebhooksJournaljournal202603offsetOffsetnextResponse(rsp *http.Response) (*GetwebhooksJournaljournal202603offsetOffsetnextResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetwebhooksJournaljournal202603offsetOffsetnextResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParseGetwebhooksJournaljournal202603statusStatusIdResponse parses an HTTP response from a GetwebhooksJournaljournal202603statusStatusIdWithResponse call
-func ParseGetwebhooksJournaljournal202603statusStatusIdResponse(rsp *http.Response) (*GetwebhooksJournaljournal202603statusStatusIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetwebhooksJournaljournal202603statusStatusIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest SnapshotStatusResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostwebhooksJournalsnapshots202603crmResponse parses an HTTP response from a PostwebhooksJournalsnapshots202603crmWithResponse call
-func ParsePostwebhooksJournalsnapshots202603crmResponse(rsp *http.Response) (*PostwebhooksJournalsnapshots202603crmResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostwebhooksJournalsnapshots202603crmResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectSnapshotBatchResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetwebhooksJournalsubscriptions202603Response parses an HTTP response from a GetwebhooksJournalsubscriptions202603WithResponse call
-func ParseGetwebhooksJournalsubscriptions202603Response(rsp *http.Response) (*GetwebhooksJournalsubscriptions202603Response, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetwebhooksJournalsubscriptions202603Response{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest WebhooksJournalCollectionResponseSubscriptionResponseNoPaging
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostwebhooksJournalsubscriptions202603Response parses an HTTP response from a PostwebhooksJournalsubscriptions202603WithResponse call
-func ParsePostwebhooksJournalsubscriptions202603Response(rsp *http.Response) (*PostwebhooksJournalsubscriptions202603Response, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostwebhooksJournalsubscriptions202603Response{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest WebhooksJournalSubscriptionResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostwebhooksJournalsubscriptions202603filtersResponse parses an HTTP response from a PostwebhooksJournalsubscriptions202603filtersWithResponse call
-func ParsePostwebhooksJournalsubscriptions202603filtersResponse(rsp *http.Response) (*PostwebhooksJournalsubscriptions202603filtersResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostwebhooksJournalsubscriptions202603filtersResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest FilterCreateResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetwebhooksJournalsubscriptions202603filterssubscriptionSubscriptionIdResponse parses an HTTP response from a GetwebhooksJournalsubscriptions202603filterssubscriptionSubscriptionIdWithResponse call
-func ParseGetwebhooksJournalsubscriptions202603filterssubscriptionSubscriptionIdResponse(rsp *http.Response) (*GetwebhooksJournalsubscriptions202603filterssubscriptionSubscriptionIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetwebhooksJournalsubscriptions202603filterssubscriptionSubscriptionIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest []FilterResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseDeletewebhooksJournalsubscriptions202603filtersFilterIdResponse parses an HTTP response from a DeletewebhooksJournalsubscriptions202603filtersFilterIdWithResponse call
-func ParseDeletewebhooksJournalsubscriptions202603filtersFilterIdResponse(rsp *http.Response) (*DeletewebhooksJournalsubscriptions202603filtersFilterIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &DeletewebhooksJournalsubscriptions202603filtersFilterIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParseGetwebhooksJournalsubscriptions202603filtersFilterIdResponse parses an HTTP response from a GetwebhooksJournalsubscriptions202603filtersFilterIdWithResponse call
-func ParseGetwebhooksJournalsubscriptions202603filtersFilterIdResponse(rsp *http.Response) (*GetwebhooksJournalsubscriptions202603filtersFilterIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetwebhooksJournalsubscriptions202603filtersFilterIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest FilterResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseDeletewebhooksJournalsubscriptions202603portalsPortalIdResponse parses an HTTP response from a DeletewebhooksJournalsubscriptions202603portalsPortalIdWithResponse call
-func ParseDeletewebhooksJournalsubscriptions202603portalsPortalIdResponse(rsp *http.Response) (*DeletewebhooksJournalsubscriptions202603portalsPortalIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &DeletewebhooksJournalsubscriptions202603portalsPortalIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParseDeletewebhooksJournalsubscriptions202603SubscriptionIdResponse parses an HTTP response from a DeletewebhooksJournalsubscriptions202603SubscriptionIdWithResponse call
-func ParseDeletewebhooksJournalsubscriptions202603SubscriptionIdResponse(rsp *http.Response) (*DeletewebhooksJournalsubscriptions202603SubscriptionIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &DeletewebhooksJournalsubscriptions202603SubscriptionIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParseGetwebhooksJournalsubscriptions202603SubscriptionIdResponse parses an HTTP response from a GetwebhooksJournalsubscriptions202603SubscriptionIdWithResponse call
-func ParseGetwebhooksJournalsubscriptions202603SubscriptionIdResponse(rsp *http.Response) (*GetwebhooksJournalsubscriptions202603SubscriptionIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetwebhooksJournalsubscriptions202603SubscriptionIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest WebhooksJournalSubscriptionResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseDeletewebhooks202603AppIdsettingsClearResponse parses an HTTP response from a Deletewebhooks202603AppIdsettingsClearWithResponse call
-func ParseDeletewebhooks202603AppIdsettingsClearResponse(rsp *http.Response) (*Deletewebhooks202603AppIdsettingsClearResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Deletewebhooks202603AppIdsettingsClearResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParseGetwebhooks202603AppIdsettingsGetAllResponse parses an HTTP response from a Getwebhooks202603AppIdsettingsGetAllWithResponse call
-func ParseGetwebhooks202603AppIdsettingsGetAllResponse(rsp *http.Response) (*Getwebhooks202603AppIdsettingsGetAllResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getwebhooks202603AppIdsettingsGetAllResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest WebhooksSettingsResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePutwebhooks202603AppIdsettingsConfigureResponse parses an HTTP response from a Putwebhooks202603AppIdsettingsConfigureWithResponse call
-func ParsePutwebhooks202603AppIdsettingsConfigureResponse(rsp *http.Response) (*Putwebhooks202603AppIdsettingsConfigureResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Putwebhooks202603AppIdsettingsConfigureResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest WebhooksSettingsResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetwebhooks202603AppIdsubscriptionsGetAllResponse parses an HTTP response from a Getwebhooks202603AppIdsubscriptionsGetAllWithResponse call
-func ParseGetwebhooks202603AppIdsubscriptionsGetAllResponse(rsp *http.Response) (*Getwebhooks202603AppIdsubscriptionsGetAllResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getwebhooks202603AppIdsubscriptionsGetAllResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest WebhooksSubscriptionListResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostwebhooks202603AppIdsubscriptionsCreateResponse parses an HTTP response from a Postwebhooks202603AppIdsubscriptionsCreateWithResponse call
-func ParsePostwebhooks202603AppIdsubscriptionsCreateResponse(rsp *http.Response) (*Postwebhooks202603AppIdsubscriptionsCreateResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postwebhooks202603AppIdsubscriptionsCreateResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest WebhooksSubscriptionResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON201 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostwebhooks202603AppIdsubscriptionsbatchupdateUpdateBatchResponse parses an HTTP response from a Postwebhooks202603AppIdsubscriptionsbatchupdateUpdateBatchWithResponse call
-func ParsePostwebhooks202603AppIdsubscriptionsbatchupdateUpdateBatchResponse(rsp *http.Response) (*Postwebhooks202603AppIdsubscriptionsbatchupdateUpdateBatchResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postwebhooks202603AppIdsubscriptionsbatchupdateUpdateBatchResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest WebhooksBatchResponseSubscriptionResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest WebhooksBatchResponseSubscriptionResponseWithErrors
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON207 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseDeletewebhooks202603AppIdsubscriptionsSubscriptionIdArchiveResponse parses an HTTP response from a Deletewebhooks202603AppIdsubscriptionsSubscriptionIdArchiveWithResponse call
-func ParseDeletewebhooks202603AppIdsubscriptionsSubscriptionIdArchiveResponse(rsp *http.Response) (*Deletewebhooks202603AppIdsubscriptionsSubscriptionIdArchiveResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Deletewebhooks202603AppIdsubscriptionsSubscriptionIdArchiveResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParseGetwebhooks202603AppIdsubscriptionsSubscriptionIdGetByIdResponse parses an HTTP response from a Getwebhooks202603AppIdsubscriptionsSubscriptionIdGetByIdWithResponse call
-func ParseGetwebhooks202603AppIdsubscriptionsSubscriptionIdGetByIdResponse(rsp *http.Response) (*Getwebhooks202603AppIdsubscriptionsSubscriptionIdGetByIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getwebhooks202603AppIdsubscriptionsSubscriptionIdGetByIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest WebhooksSubscriptionResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePatchwebhooks202603AppIdsubscriptionsSubscriptionIdUpdateResponse parses an HTTP response from a Patchwebhooks202603AppIdsubscriptionsSubscriptionIdUpdateWithResponse call
-func ParsePatchwebhooks202603AppIdsubscriptionsSubscriptionIdUpdateResponse(rsp *http.Response) (*Patchwebhooks202603AppIdsubscriptionsSubscriptionIdUpdateResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Patchwebhooks202603AppIdsubscriptionsSubscriptionIdUpdateResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest WebhooksSubscriptionResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
 	}
 
 	return response, nil

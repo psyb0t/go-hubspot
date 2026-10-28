@@ -15,6 +15,901 @@ import (
 	"github.com/oapi-codegen/runtime"
 )
 
+// NewPostconversationscustomChannels202603ChannelIdchannelAccountsRequest calls the generic PostconversationscustomChannels202603ChannelIdchannelAccounts builder with application/json body
+func NewPostconversationscustomChannels202603ChannelIdchannelAccountsRequest(server string, channelId int32, body PostconversationscustomChannels202603ChannelIdchannelAccountsJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostconversationscustomChannels202603ChannelIdchannelAccountsRequestWithBody(server, channelId, "application/json", bodyReader)
+}
+
+// NewPostconversationscustomChannels202603ChannelIdchannelAccountsRequestWithBody constructs an http.Request for the PostconversationscustomChannels202603ChannelIdchannelAccounts method, with any body, and a specified content type
+func NewPostconversationscustomChannels202603ChannelIdchannelAccountsRequestWithBody(server string, channelId int32, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "channelId", channelId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: "int32"})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/conversations/custom-channels/2026-03/%s/channel-accounts", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewGetconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountIdRequest constructs an http.Request for the GetconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountId method
+func NewGetconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountIdRequest(server string, channelId int32, channelAccountId int64, params *GetconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountIdParams) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "channelId", channelId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: "int32"})
+	if err != nil {
+		return nil, err
+	}
+
+	var pathParam1 string
+
+	pathParam1, err = runtime.StyleParamWithOptions("simple", false, "channelAccountId", channelAccountId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: "int64"})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/conversations/custom-channels/2026-03/%s/channel-accounts/%s", pathParam0, pathParam1)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.Archived != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "archived", *params.Archived, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "boolean", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewPatchconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountIdRequest calls the generic PatchconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountId builder with application/json body
+func NewPatchconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountIdRequest(server string, channelId int32, channelAccountId int64, body PatchconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountIdJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPatchconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountIdRequestWithBody(server, channelId, channelAccountId, "application/json", bodyReader)
+}
+
+// NewPatchconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountIdRequestWithBody constructs an http.Request for the PatchconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountId method, with any body, and a specified content type
+func NewPatchconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountIdRequestWithBody(server string, channelId int32, channelAccountId int64, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "channelId", channelId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: "int32"})
+	if err != nil {
+		return nil, err
+	}
+
+	var pathParam1 string
+
+	pathParam1, err = runtime.StyleParamWithOptions("simple", false, "channelAccountId", channelAccountId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: "int64"})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/conversations/custom-channels/2026-03/%s/channel-accounts/%s", pathParam0, pathParam1)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPatch, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewPostconversationscustomChannels202603ChannelIdmessagesRequest calls the generic PostconversationscustomChannels202603ChannelIdmessages builder with application/json body
+func NewPostconversationscustomChannels202603ChannelIdmessagesRequest(server string, channelId int32, body PostconversationscustomChannels202603ChannelIdmessagesJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostconversationscustomChannels202603ChannelIdmessagesRequestWithBody(server, channelId, "application/json", bodyReader)
+}
+
+// NewPostconversationscustomChannels202603ChannelIdmessagesRequestWithBody constructs an http.Request for the PostconversationscustomChannels202603ChannelIdmessages method, with any body, and a specified content type
+func NewPostconversationscustomChannels202603ChannelIdmessagesRequestWithBody(server string, channelId int32, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "channelId", channelId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: "int32"})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/conversations/custom-channels/2026-03/%s/messages", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewGetconversationscustomChannels202603ChannelIdmessagesMessageIdRequest constructs an http.Request for the GetconversationscustomChannels202603ChannelIdmessagesMessageId method
+func NewGetconversationscustomChannels202603ChannelIdmessagesMessageIdRequest(server string, channelId int32, messageId string) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "channelId", channelId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: "int32"})
+	if err != nil {
+		return nil, err
+	}
+
+	var pathParam1 string
+
+	pathParam1, err = runtime.StyleParamWithOptions("simple", false, "messageId", messageId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/conversations/custom-channels/2026-03/%s/messages/%s", pathParam0, pathParam1)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewPatchconversationscustomChannels202603ChannelIdmessagesMessageIdRequest calls the generic PatchconversationscustomChannels202603ChannelIdmessagesMessageId builder with application/json body
+func NewPatchconversationscustomChannels202603ChannelIdmessagesMessageIdRequest(server string, channelId int32, messageId string, body PatchconversationscustomChannels202603ChannelIdmessagesMessageIdJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPatchconversationscustomChannels202603ChannelIdmessagesMessageIdRequestWithBody(server, channelId, messageId, "application/json", bodyReader)
+}
+
+// NewPatchconversationscustomChannels202603ChannelIdmessagesMessageIdRequestWithBody constructs an http.Request for the PatchconversationscustomChannels202603ChannelIdmessagesMessageId method, with any body, and a specified content type
+func NewPatchconversationscustomChannels202603ChannelIdmessagesMessageIdRequestWithBody(server string, channelId int32, messageId string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "channelId", channelId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: "int32"})
+	if err != nil {
+		return nil, err
+	}
+
+	var pathParam1 string
+
+	pathParam1, err = runtime.StyleParamWithOptions("simple", false, "messageId", messageId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/conversations/custom-channels/2026-03/%s/messages/%s", pathParam0, pathParam1)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPatch, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewGetcrmObjectSchemas202603schemasGetAllRequest constructs an http.Request for the GetcrmObjectSchemas202603schemasGetAll method
+func NewGetcrmObjectSchemas202603schemasGetAllRequest(server string, params *GetcrmObjectSchemas202603schemasGetAllParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/crm-object-schemas/2026-03/schemas")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.Archived != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "archived", *params.Archived, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "boolean", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.IncludeAssociationDefinitions != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "includeAssociationDefinitions", *params.IncludeAssociationDefinitions, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "boolean", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.IncludeAuditMetadata != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "includeAuditMetadata", *params.IncludeAuditMetadata, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "boolean", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.IncludePropertyDefinitions != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "includePropertyDefinitions", *params.IncludePropertyDefinitions, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "boolean", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewPostcrmObjectSchemas202603schemasCreateRequest calls the generic PostcrmObjectSchemas202603schemasCreate builder with application/json body
+func NewPostcrmObjectSchemas202603schemasCreateRequest(server string, body PostcrmObjectSchemas202603schemasCreateJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcrmObjectSchemas202603schemasCreateRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewPostcrmObjectSchemas202603schemasCreateRequestWithBody constructs an http.Request for the PostcrmObjectSchemas202603schemasCreate method, with any body, and a specified content type
+func NewPostcrmObjectSchemas202603schemasCreateRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/crm-object-schemas/2026-03/schemas")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewPostcrmObjectSchemas202603schemasbatchreadcrmObjectSchemasv3schemasbatchreadRequest calls the generic PostcrmObjectSchemas202603schemasbatchreadcrmObjectSchemasv3schemasbatchread builder with application/json body
+func NewPostcrmObjectSchemas202603schemasbatchreadcrmObjectSchemasv3schemasbatchreadRequest(server string, body PostcrmObjectSchemas202603schemasbatchreadcrmObjectSchemasv3schemasbatchreadJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcrmObjectSchemas202603schemasbatchreadcrmObjectSchemasv3schemasbatchreadRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewPostcrmObjectSchemas202603schemasbatchreadcrmObjectSchemasv3schemasbatchreadRequestWithBody constructs an http.Request for the PostcrmObjectSchemas202603schemasbatchreadcrmObjectSchemasv3schemasbatchread method, with any body, and a specified content type
+func NewPostcrmObjectSchemas202603schemasbatchreadcrmObjectSchemasv3schemasbatchreadRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/crm-object-schemas/2026-03/schemas/batch/read")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewDeletecrmObjectSchemas202603schemasObjectTypeArchiveRequest constructs an http.Request for the DeletecrmObjectSchemas202603schemasObjectTypeArchive method
+func NewDeletecrmObjectSchemas202603schemasObjectTypeArchiveRequest(server string, objectType string, params *DeletecrmObjectSchemas202603schemasObjectTypeArchiveParams) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "objectType", objectType, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/crm-object-schemas/2026-03/schemas/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.Archived != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "archived", *params.Archived, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "boolean", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodDelete, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGetcrmObjectSchemas202603schemasObjectTypeGetByIdRequest constructs an http.Request for the GetcrmObjectSchemas202603schemasObjectTypeGetById method
+func NewGetcrmObjectSchemas202603schemasObjectTypeGetByIdRequest(server string, objectType string, params *GetcrmObjectSchemas202603schemasObjectTypeGetByIdParams) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "objectType", objectType, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/crm-object-schemas/2026-03/schemas/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.IncludeAssociationDefinitions != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "includeAssociationDefinitions", *params.IncludeAssociationDefinitions, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "boolean", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.IncludeAuditMetadata != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "includeAuditMetadata", *params.IncludeAuditMetadata, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "boolean", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.IncludePropertyDefinitions != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "includePropertyDefinitions", *params.IncludePropertyDefinitions, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "boolean", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewPatchcrmObjectSchemas202603schemasObjectTypeUpdateRequest calls the generic PatchcrmObjectSchemas202603schemasObjectTypeUpdate builder with application/json body
+func NewPatchcrmObjectSchemas202603schemasObjectTypeUpdateRequest(server string, objectType string, body PatchcrmObjectSchemas202603schemasObjectTypeUpdateJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPatchcrmObjectSchemas202603schemasObjectTypeUpdateRequestWithBody(server, objectType, "application/json", bodyReader)
+}
+
+// NewPatchcrmObjectSchemas202603schemasObjectTypeUpdateRequestWithBody constructs an http.Request for the PatchcrmObjectSchemas202603schemasObjectTypeUpdate method, with any body, and a specified content type
+func NewPatchcrmObjectSchemas202603schemasObjectTypeUpdateRequestWithBody(server string, objectType string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "objectType", objectType, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/crm-object-schemas/2026-03/schemas/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPatch, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewPostcrmObjectSchemas202603schemasObjectTypeassociationsCreateAssociationRequest calls the generic PostcrmObjectSchemas202603schemasObjectTypeassociationsCreateAssociation builder with application/json body
+func NewPostcrmObjectSchemas202603schemasObjectTypeassociationsCreateAssociationRequest(server string, objectType string, body PostcrmObjectSchemas202603schemasObjectTypeassociationsCreateAssociationJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcrmObjectSchemas202603schemasObjectTypeassociationsCreateAssociationRequestWithBody(server, objectType, "application/json", bodyReader)
+}
+
+// NewPostcrmObjectSchemas202603schemasObjectTypeassociationsCreateAssociationRequestWithBody constructs an http.Request for the PostcrmObjectSchemas202603schemasObjectTypeassociationsCreateAssociation method, with any body, and a specified content type
+func NewPostcrmObjectSchemas202603schemasObjectTypeassociationsCreateAssociationRequestWithBody(server string, objectType string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "objectType", objectType, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/crm-object-schemas/2026-03/schemas/%s/associations", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewDeletecrmObjectSchemas202603schemasObjectTypeassociationsAssociationIdentifierArchiveAssociationRequest constructs an http.Request for the DeletecrmObjectSchemas202603schemasObjectTypeassociationsAssociationIdentifierArchiveAssociation method
+func NewDeletecrmObjectSchemas202603schemasObjectTypeassociationsAssociationIdentifierArchiveAssociationRequest(server string, objectType string, associationIdentifier string) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "objectType", objectType, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	var pathParam1 string
+
+	pathParam1, err = runtime.StyleParamWithOptions("simple", false, "associationIdentifier", associationIdentifier, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/crm-object-schemas/2026-03/schemas/%s/associations/%s", pathParam0, pathParam1)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodDelete, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGetcrmassociations202603definitionsconfigurationsallGetPageRequest constructs an http.Request for the Getcrmassociations202603definitionsconfigurationsallGetPage method
+func NewGetcrmassociations202603definitionsconfigurationsallGetPageRequest(server string) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/crm/associations/2026-03/definitions/configurations/all")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGetcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypeGetPageBetweenTwoObjectTypesRequest constructs an http.Request for the Getcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypeGetPageBetweenTwoObjectTypes method
+func NewGetcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypeGetPageBetweenTwoObjectTypesRequest(server string, fromObjectType string, toObjectType string) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "fromObjectType", fromObjectType, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	var pathParam1 string
+
+	pathParam1, err = runtime.StyleParamWithOptions("simple", false, "toObjectType", toObjectType, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/crm/associations/2026-03/definitions/configurations/%s/%s", pathParam0, pathParam1)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewPostcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchcreateBatchCreateRequest calls the generic Postcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchcreateBatchCreate builder with application/json body
+func NewPostcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchcreateBatchCreateRequest(server string, fromObjectType string, toObjectType string, body Postcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchcreateBatchCreateJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchcreateBatchCreateRequestWithBody(server, fromObjectType, toObjectType, "application/json", bodyReader)
+}
+
+// NewPostcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchcreateBatchCreateRequestWithBody constructs an http.Request for the Postcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchcreateBatchCreate method, with any body, and a specified content type
+func NewPostcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchcreateBatchCreateRequestWithBody(server string, fromObjectType string, toObjectType string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "fromObjectType", fromObjectType, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	var pathParam1 string
+
+	pathParam1, err = runtime.StyleParamWithOptions("simple", false, "toObjectType", toObjectType, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/crm/associations/2026-03/definitions/configurations/%s/%s/batch/create", pathParam0, pathParam1)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewPostcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchpurgeBatchRemoveRequest calls the generic Postcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchpurgeBatchRemove builder with application/json body
+func NewPostcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchpurgeBatchRemoveRequest(server string, fromObjectType string, toObjectType string, body Postcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchpurgeBatchRemoveJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchpurgeBatchRemoveRequestWithBody(server, fromObjectType, toObjectType, "application/json", bodyReader)
+}
+
 // NewPostcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchpurgeBatchRemoveRequestWithBody constructs an http.Request for the Postcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchpurgeBatchRemove method, with any body, and a specified content type
 func NewPostcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchpurgeBatchRemoveRequestWithBody(server string, fromObjectType string, toObjectType string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
@@ -10730,6 +11625,46 @@ func NewGetcrmobjects202603contractsContractIdRequest(server string, contractId 
 	return req, nil
 }
 
+// NewPostcrmobjects202603coursesmergeRequest calls the generic Postcrmobjects202603coursesmerge builder with application/json body
+func NewPostcrmobjects202603coursesmergeRequest(server string, body Postcrmobjects202603coursesmergeJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcrmobjects202603coursesmergeRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewPostcrmobjects202603coursesmergeRequestWithBody constructs an http.Request for the Postcrmobjects202603coursesmerge method, with any body, and a specified content type
+func NewPostcrmobjects202603coursesmergeRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/crm/objects/2026-03/courses/merge")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
 // NewGetcrmobjects202603discountsRequest constructs an http.Request for the Getcrmobjects202603discounts method
 func NewGetcrmobjects202603discountsRequest(server string, params *Getcrmobjects202603discountsParams) (*http.Request, error) {
 	var err error
@@ -17183,6 +18118,46 @@ func NewPostcrmobjects202603ordersbatchupsertRequestWithBody(server string, cont
 	return req, nil
 }
 
+// NewPostcrmobjects202603ordersmergeRequest calls the generic Postcrmobjects202603ordersmerge builder with application/json body
+func NewPostcrmobjects202603ordersmergeRequest(server string, body Postcrmobjects202603ordersmergeJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcrmobjects202603ordersmergeRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewPostcrmobjects202603ordersmergeRequestWithBody constructs an http.Request for the Postcrmobjects202603ordersmerge method, with any body, and a specified content type
+func NewPostcrmobjects202603ordersmergeRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/crm/objects/2026-03/orders/merge")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
 // NewPostcrmobjects202603orderssearchRequest calls the generic Postcrmobjects202603orderssearch builder with application/json body
 func NewPostcrmobjects202603orderssearchRequest(server string, body Postcrmobjects202603orderssearchJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
@@ -18408,86 +19383,6 @@ func NewPatchcrmobjects202603partnerServicesPartnerServiceIdRequestWithBody(serv
 	return req, nil
 }
 
-// NewGetcrmobjects202603partnerServicesPartnerServiceIdassociationsToObjectTypeRequest constructs an http.Request for the Getcrmobjects202603partnerServicesPartnerServiceIdassociationsToObjectType method
-func NewGetcrmobjects202603partnerServicesPartnerServiceIdassociationsToObjectTypeRequest(server string, partnerServiceId string, toObjectType string, params *Getcrmobjects202603partnerServicesPartnerServiceIdassociationsToObjectTypeParams) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "partnerServiceId", partnerServiceId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
-	if err != nil {
-		return nil, err
-	}
-
-	var pathParam1 string
-
-	pathParam1, err = runtime.StyleParamWithOptions("simple", false, "toObjectType", toObjectType, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/crm/objects/2026-03/partner_services/%s/associations/%s", pathParam0, pathParam1)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	if params != nil {
-		// queryValues collects non-styled parameters (passthrough, JSON)
-		// that are safe to round-trip through url.Values.Encode().
-		queryValues := queryURL.Query()
-		// rawQueryFragments collects pre-encoded query fragments from
-		// styled parameters, preserving literal commas as delimiters
-		// per the OpenAPI spec (e.g. "color=blue,black,brown").
-		var rawQueryFragments []string
-
-		if params.After != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "after", *params.After, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.Limit != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "limit", *params.Limit, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: "int32"}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if encoded := queryValues.Encode(); encoded != "" {
-			rawQueryFragments = append(rawQueryFragments, encoded)
-		}
-		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
-	}
-
-	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
-}
-
 // NewGetcrmobjects202603postalMailGetPageRequest constructs an http.Request for the Getcrmobjects202603postalMailGetPage method
 func NewGetcrmobjects202603postalMailGetPageRequest(server string, params *Getcrmobjects202603postalMailGetPageParams) (*http.Request, error) {
 	var err error
@@ -19117,945 +20012,6 @@ func NewPatchcrmobjects202603postalMailPostalMailIdUpdateRequestWithBody(server 
 	}
 
 	req, err := http.NewRequest(http.MethodPatch, queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
-}
-
-// NewGetcrmobjects202603productsGetPageRequest constructs an http.Request for the Getcrmobjects202603productsGetPage method
-func NewGetcrmobjects202603productsGetPageRequest(server string, params *Getcrmobjects202603productsGetPageParams) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/crm/objects/2026-03/products")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	if params != nil {
-		// queryValues collects non-styled parameters (passthrough, JSON)
-		// that are safe to round-trip through url.Values.Encode().
-		queryValues := queryURL.Query()
-		// rawQueryFragments collects pre-encoded query fragments from
-		// styled parameters, preserving literal commas as delimiters
-		// per the OpenAPI spec (e.g. "color=blue,black,brown").
-		var rawQueryFragments []string
-
-		if params.After != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "after", *params.After, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.Archived != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "archived", *params.Archived, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "boolean", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.Associations != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "associations", *params.Associations, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.Limit != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "limit", *params.Limit, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: "int32"}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.Properties != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "properties", *params.Properties, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.PropertiesWithHistory != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "propertiesWithHistory", *params.PropertiesWithHistory, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if encoded := queryValues.Encode(); encoded != "" {
-			rawQueryFragments = append(rawQueryFragments, encoded)
-		}
-		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
-	}
-
-	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
-}
-
-// NewPostcrmobjects202603productsCreateRequest calls the generic Postcrmobjects202603productsCreate builder with application/json body
-func NewPostcrmobjects202603productsCreateRequest(server string, body Postcrmobjects202603productsCreateJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewPostcrmobjects202603productsCreateRequestWithBody(server, "application/json", bodyReader)
-}
-
-// NewPostcrmobjects202603productsCreateRequestWithBody constructs an http.Request for the Postcrmobjects202603productsCreate method, with any body, and a specified content type
-func NewPostcrmobjects202603productsCreateRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/crm/objects/2026-03/products")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
-}
-
-// NewPostcrmobjects202603productsbatcharchiveArchiveRequest calls the generic Postcrmobjects202603productsbatcharchiveArchive builder with application/json body
-func NewPostcrmobjects202603productsbatcharchiveArchiveRequest(server string, body Postcrmobjects202603productsbatcharchiveArchiveJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewPostcrmobjects202603productsbatcharchiveArchiveRequestWithBody(server, "application/json", bodyReader)
-}
-
-// NewPostcrmobjects202603productsbatcharchiveArchiveRequestWithBody constructs an http.Request for the Postcrmobjects202603productsbatcharchiveArchive method, with any body, and a specified content type
-func NewPostcrmobjects202603productsbatcharchiveArchiveRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/crm/objects/2026-03/products/batch/archive")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
-}
-
-// NewPostcrmobjects202603productsbatchcreateCreateRequest calls the generic Postcrmobjects202603productsbatchcreateCreate builder with application/json body
-func NewPostcrmobjects202603productsbatchcreateCreateRequest(server string, body Postcrmobjects202603productsbatchcreateCreateJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewPostcrmobjects202603productsbatchcreateCreateRequestWithBody(server, "application/json", bodyReader)
-}
-
-// NewPostcrmobjects202603productsbatchcreateCreateRequestWithBody constructs an http.Request for the Postcrmobjects202603productsbatchcreateCreate method, with any body, and a specified content type
-func NewPostcrmobjects202603productsbatchcreateCreateRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/crm/objects/2026-03/products/batch/create")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
-}
-
-// NewPostcrmobjects202603productsbatchreadReadRequest calls the generic Postcrmobjects202603productsbatchreadRead builder with application/json body
-func NewPostcrmobjects202603productsbatchreadReadRequest(server string, params *Postcrmobjects202603productsbatchreadReadParams, body Postcrmobjects202603productsbatchreadReadJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewPostcrmobjects202603productsbatchreadReadRequestWithBody(server, params, "application/json", bodyReader)
-}
-
-// NewPostcrmobjects202603productsbatchreadReadRequestWithBody constructs an http.Request for the Postcrmobjects202603productsbatchreadRead method, with any body, and a specified content type
-func NewPostcrmobjects202603productsbatchreadReadRequestWithBody(server string, params *Postcrmobjects202603productsbatchreadReadParams, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/crm/objects/2026-03/products/batch/read")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	if params != nil {
-		// queryValues collects non-styled parameters (passthrough, JSON)
-		// that are safe to round-trip through url.Values.Encode().
-		queryValues := queryURL.Query()
-		// rawQueryFragments collects pre-encoded query fragments from
-		// styled parameters, preserving literal commas as delimiters
-		// per the OpenAPI spec (e.g. "color=blue,black,brown").
-		var rawQueryFragments []string
-
-		if params.Archived != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "archived", *params.Archived, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "boolean", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if encoded := queryValues.Encode(); encoded != "" {
-			rawQueryFragments = append(rawQueryFragments, encoded)
-		}
-		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
-	}
-
-	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
-}
-
-// NewPostcrmobjects202603productsbatchupdateUpdateRequest calls the generic Postcrmobjects202603productsbatchupdateUpdate builder with application/json body
-func NewPostcrmobjects202603productsbatchupdateUpdateRequest(server string, body Postcrmobjects202603productsbatchupdateUpdateJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewPostcrmobjects202603productsbatchupdateUpdateRequestWithBody(server, "application/json", bodyReader)
-}
-
-// NewPostcrmobjects202603productsbatchupdateUpdateRequestWithBody constructs an http.Request for the Postcrmobjects202603productsbatchupdateUpdate method, with any body, and a specified content type
-func NewPostcrmobjects202603productsbatchupdateUpdateRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/crm/objects/2026-03/products/batch/update")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
-}
-
-// NewPostcrmobjects202603productsbatchupsertUpsertRequest calls the generic Postcrmobjects202603productsbatchupsertUpsert builder with application/json body
-func NewPostcrmobjects202603productsbatchupsertUpsertRequest(server string, body Postcrmobjects202603productsbatchupsertUpsertJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewPostcrmobjects202603productsbatchupsertUpsertRequestWithBody(server, "application/json", bodyReader)
-}
-
-// NewPostcrmobjects202603productsbatchupsertUpsertRequestWithBody constructs an http.Request for the Postcrmobjects202603productsbatchupsertUpsert method, with any body, and a specified content type
-func NewPostcrmobjects202603productsbatchupsertUpsertRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/crm/objects/2026-03/products/batch/upsert")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
-}
-
-// NewPostcrmobjects202603productssearchDoSearchRequest calls the generic Postcrmobjects202603productssearchDoSearch builder with application/json body
-func NewPostcrmobjects202603productssearchDoSearchRequest(server string, body Postcrmobjects202603productssearchDoSearchJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewPostcrmobjects202603productssearchDoSearchRequestWithBody(server, "application/json", bodyReader)
-}
-
-// NewPostcrmobjects202603productssearchDoSearchRequestWithBody constructs an http.Request for the Postcrmobjects202603productssearchDoSearch method, with any body, and a specified content type
-func NewPostcrmobjects202603productssearchDoSearchRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/crm/objects/2026-03/products/search")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
-}
-
-// NewDeletecrmobjects202603productsProductIdArchiveRequest constructs an http.Request for the Deletecrmobjects202603productsProductIdArchive method
-func NewDeletecrmobjects202603productsProductIdArchiveRequest(server string, productId string) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "productId", productId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/crm/objects/2026-03/products/%s", pathParam0)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodDelete, queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
-}
-
-// NewGetcrmobjects202603productsProductIdGetByIdRequest constructs an http.Request for the Getcrmobjects202603productsProductIdGetById method
-func NewGetcrmobjects202603productsProductIdGetByIdRequest(server string, productId string, params *Getcrmobjects202603productsProductIdGetByIdParams) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "productId", productId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/crm/objects/2026-03/products/%s", pathParam0)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	if params != nil {
-		// queryValues collects non-styled parameters (passthrough, JSON)
-		// that are safe to round-trip through url.Values.Encode().
-		queryValues := queryURL.Query()
-		// rawQueryFragments collects pre-encoded query fragments from
-		// styled parameters, preserving literal commas as delimiters
-		// per the OpenAPI spec (e.g. "color=blue,black,brown").
-		var rawQueryFragments []string
-
-		if params.Archived != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "archived", *params.Archived, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "boolean", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.Associations != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "associations", *params.Associations, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.IdProperty != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "idProperty", *params.IdProperty, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.Properties != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "properties", *params.Properties, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.PropertiesWithHistory != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "propertiesWithHistory", *params.PropertiesWithHistory, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if encoded := queryValues.Encode(); encoded != "" {
-			rawQueryFragments = append(rawQueryFragments, encoded)
-		}
-		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
-	}
-
-	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
-}
-
-// NewPatchcrmobjects202603productsProductIdUpdateRequest calls the generic Patchcrmobjects202603productsProductIdUpdate builder with application/json body
-func NewPatchcrmobjects202603productsProductIdUpdateRequest(server string, productId string, params *Patchcrmobjects202603productsProductIdUpdateParams, body Patchcrmobjects202603productsProductIdUpdateJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewPatchcrmobjects202603productsProductIdUpdateRequestWithBody(server, productId, params, "application/json", bodyReader)
-}
-
-// NewPatchcrmobjects202603productsProductIdUpdateRequestWithBody constructs an http.Request for the Patchcrmobjects202603productsProductIdUpdate method, with any body, and a specified content type
-func NewPatchcrmobjects202603productsProductIdUpdateRequestWithBody(server string, productId string, params *Patchcrmobjects202603productsProductIdUpdateParams, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "productId", productId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/crm/objects/2026-03/products/%s", pathParam0)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	if params != nil {
-		// queryValues collects non-styled parameters (passthrough, JSON)
-		// that are safe to round-trip through url.Values.Encode().
-		queryValues := queryURL.Query()
-		// rawQueryFragments collects pre-encoded query fragments from
-		// styled parameters, preserving literal commas as delimiters
-		// per the OpenAPI spec (e.g. "color=blue,black,brown").
-		var rawQueryFragments []string
-
-		if params.IdProperty != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "idProperty", *params.IdProperty, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if encoded := queryValues.Encode(); encoded != "" {
-			rawQueryFragments = append(rawQueryFragments, encoded)
-		}
-		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
-	}
-
-	req, err := http.NewRequest(http.MethodPatch, queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
-}
-
-// NewGetcrmobjects202603projectsRequest constructs an http.Request for the Getcrmobjects202603projects method
-func NewGetcrmobjects202603projectsRequest(server string, params *Getcrmobjects202603projectsParams) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/crm/objects/2026-03/projects")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	if params != nil {
-		// queryValues collects non-styled parameters (passthrough, JSON)
-		// that are safe to round-trip through url.Values.Encode().
-		queryValues := queryURL.Query()
-		// rawQueryFragments collects pre-encoded query fragments from
-		// styled parameters, preserving literal commas as delimiters
-		// per the OpenAPI spec (e.g. "color=blue,black,brown").
-		var rawQueryFragments []string
-
-		if params.After != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "after", *params.After, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.Archived != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "archived", *params.Archived, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "boolean", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.Associations != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "associations", *params.Associations, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.Limit != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "limit", *params.Limit, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: "int32"}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.Properties != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "properties", *params.Properties, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.PropertiesWithHistory != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "propertiesWithHistory", *params.PropertiesWithHistory, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if encoded := queryValues.Encode(); encoded != "" {
-			rawQueryFragments = append(rawQueryFragments, encoded)
-		}
-		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
-	}
-
-	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
-}
-
-// NewPostcrmobjects202603projectsRequest calls the generic Postcrmobjects202603projects builder with application/json body
-func NewPostcrmobjects202603projectsRequest(server string, body Postcrmobjects202603projectsJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewPostcrmobjects202603projectsRequestWithBody(server, "application/json", bodyReader)
-}
-
-// NewPostcrmobjects202603projectsRequestWithBody constructs an http.Request for the Postcrmobjects202603projects method, with any body, and a specified content type
-func NewPostcrmobjects202603projectsRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/crm/objects/2026-03/projects")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
-}
-
-// NewPostcrmobjects202603projectsbatcharchiveRequest calls the generic Postcrmobjects202603projectsbatcharchive builder with application/json body
-func NewPostcrmobjects202603projectsbatcharchiveRequest(server string, body Postcrmobjects202603projectsbatcharchiveJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewPostcrmobjects202603projectsbatcharchiveRequestWithBody(server, "application/json", bodyReader)
-}
-
-// NewPostcrmobjects202603projectsbatcharchiveRequestWithBody constructs an http.Request for the Postcrmobjects202603projectsbatcharchive method, with any body, and a specified content type
-func NewPostcrmobjects202603projectsbatcharchiveRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/crm/objects/2026-03/projects/batch/archive")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
-}
-
-// NewPostcrmobjects202603projectsbatchcreateRequest calls the generic Postcrmobjects202603projectsbatchcreate builder with application/json body
-func NewPostcrmobjects202603projectsbatchcreateRequest(server string, body Postcrmobjects202603projectsbatchcreateJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewPostcrmobjects202603projectsbatchcreateRequestWithBody(server, "application/json", bodyReader)
-}
-
-// NewPostcrmobjects202603projectsbatchcreateRequestWithBody constructs an http.Request for the Postcrmobjects202603projectsbatchcreate method, with any body, and a specified content type
-func NewPostcrmobjects202603projectsbatchcreateRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/crm/objects/2026-03/projects/batch/create")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
-}
-
-// NewPostcrmobjects202603projectsbatchreadRequest calls the generic Postcrmobjects202603projectsbatchread builder with application/json body
-func NewPostcrmobjects202603projectsbatchreadRequest(server string, params *Postcrmobjects202603projectsbatchreadParams, body Postcrmobjects202603projectsbatchreadJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewPostcrmobjects202603projectsbatchreadRequestWithBody(server, params, "application/json", bodyReader)
-}
-
-// NewPostcrmobjects202603projectsbatchreadRequestWithBody constructs an http.Request for the Postcrmobjects202603projectsbatchread method, with any body, and a specified content type
-func NewPostcrmobjects202603projectsbatchreadRequestWithBody(server string, params *Postcrmobjects202603projectsbatchreadParams, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/crm/objects/2026-03/projects/batch/read")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	if params != nil {
-		// queryValues collects non-styled parameters (passthrough, JSON)
-		// that are safe to round-trip through url.Values.Encode().
-		queryValues := queryURL.Query()
-		// rawQueryFragments collects pre-encoded query fragments from
-		// styled parameters, preserving literal commas as delimiters
-		// per the OpenAPI spec (e.g. "color=blue,black,brown").
-		var rawQueryFragments []string
-
-		if params.Archived != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "archived", *params.Archived, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "boolean", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if encoded := queryValues.Encode(); encoded != "" {
-			rawQueryFragments = append(rawQueryFragments, encoded)
-		}
-		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
-	}
-
-	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
 	if err != nil {
 		return nil, err
 	}

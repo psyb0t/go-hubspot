@@ -10,8 +10,2485 @@ import (
 	"net/http"
 	"strings"
 
+	"github.com/oapi-codegen/runtime"
 	openapi_types "github.com/oapi-codegen/runtime/types"
 )
+
+// Postcrmlists202603recordsmembershipsbatchreadcrmlistsv3recordsmembershipsbatchreadWithBodyWithResponse performs a POST /crm/lists/2026-03/records/memberships/batch/read (the `Postcrmlists202603recordsmembershipsbatchreadcrmlistsv3recordsmembershipsbatchread` operationId) request,
+// with any type of body and a specified content type.
+//
+// Returns a wrapper object for the known response body format(s).
+func (c *ClientWithResponses) Postcrmlists202603recordsmembershipsbatchreadcrmlistsv3recordsmembershipsbatchreadWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmlists202603recordsmembershipsbatchreadcrmlistsv3recordsmembershipsbatchreadResponse, error) {
+	rsp, err := c.Postcrmlists202603recordsmembershipsbatchreadcrmlistsv3recordsmembershipsbatchreadWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmlists202603recordsmembershipsbatchreadcrmlistsv3recordsmembershipsbatchreadResponse(rsp)
+}
+
+// Postcrmlists202603recordsmembershipsbatchreadcrmlistsv3recordsmembershipsbatchreadWithResponse performs a POST /crm/lists/2026-03/records/memberships/batch/read (the `Postcrmlists202603recordsmembershipsbatchreadcrmlistsv3recordsmembershipsbatchread` operationId) request.
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+func (c *ClientWithResponses) Postcrmlists202603recordsmembershipsbatchreadcrmlistsv3recordsmembershipsbatchreadWithResponse(ctx context.Context, body Postcrmlists202603recordsmembershipsbatchreadcrmlistsv3recordsmembershipsbatchreadJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmlists202603recordsmembershipsbatchreadcrmlistsv3recordsmembershipsbatchreadResponse, error) {
+	rsp, err := c.Postcrmlists202603recordsmembershipsbatchreadcrmlistsv3recordsmembershipsbatchread(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmlists202603recordsmembershipsbatchreadcrmlistsv3recordsmembershipsbatchreadResponse(rsp)
+}
+
+// Getcrmlists202603recordsObjectTypeIdRecordIdmembershipscrmlistsv3recordsObjectTypeIdRecordIdmembershipsWithResponse Get lists record is member of
+//
+// For given record provide lists this record is member of.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /crm/lists/2026-03/records/{objectTypeId}/{recordId}/memberships (the `Getcrmlists202603recordsObjectTypeIdRecordIdmembershipscrmlistsv3recordsObjectTypeIdRecordIdmemberships` operationId).
+func (c *ClientWithResponses) Getcrmlists202603recordsObjectTypeIdRecordIdmembershipscrmlistsv3recordsObjectTypeIdRecordIdmembershipsWithResponse(ctx context.Context, objectTypeId string, recordId string, reqEditors ...RequestEditorFn) (*Getcrmlists202603recordsObjectTypeIdRecordIdmembershipscrmlistsv3recordsObjectTypeIdRecordIdmembershipsResponse, error) {
+	rsp, err := c.Getcrmlists202603recordsObjectTypeIdRecordIdmembershipscrmlistsv3recordsObjectTypeIdRecordIdmemberships(ctx, objectTypeId, recordId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetcrmlists202603recordsObjectTypeIdRecordIdmembershipscrmlistsv3recordsObjectTypeIdRecordIdmembershipsResponse(rsp)
+}
+
+// Postcrmlists202603searchcrmlistsv3searchWithBodyWithResponse Search Lists
+//
+// Search lists by list name or page through all lists by providing an empty `query` value.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/lists/2026-03/search (the `Postcrmlists202603searchcrmlistsv3search` operationId).
+func (c *ClientWithResponses) Postcrmlists202603searchcrmlistsv3searchWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmlists202603searchcrmlistsv3searchResponse, error) {
+	rsp, err := c.Postcrmlists202603searchcrmlistsv3searchWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmlists202603searchcrmlistsv3searchResponse(rsp)
+}
+
+// Postcrmlists202603searchcrmlistsv3searchWithResponse Search Lists
+//
+// Search lists by list name or page through all lists by providing an empty `query` value.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/lists/2026-03/search (the `Postcrmlists202603searchcrmlistsv3search` operationId).
+func (c *ClientWithResponses) Postcrmlists202603searchcrmlistsv3searchWithResponse(ctx context.Context, body Postcrmlists202603searchcrmlistsv3searchJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmlists202603searchcrmlistsv3searchResponse, error) {
+	rsp, err := c.Postcrmlists202603searchcrmlistsv3search(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmlists202603searchcrmlistsv3searchResponse(rsp)
+}
+
+// Deletecrmlists202603ListIdcrmlistsv3ListIdWithResponse Delete a List
+//
+// Delete a list by **ILS list ID**. Lists deleted through this endpoint can be restored up to 90-days following the delete. After 90-days, the list is purged and can no longer be restored.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with DELETE /crm/lists/2026-03/{listId} (the `Deletecrmlists202603ListIdcrmlistsv3ListId` operationId).
+func (c *ClientWithResponses) Deletecrmlists202603ListIdcrmlistsv3ListIdWithResponse(ctx context.Context, listId string, reqEditors ...RequestEditorFn) (*Deletecrmlists202603ListIdcrmlistsv3ListIdResponse, error) {
+	rsp, err := c.Deletecrmlists202603ListIdcrmlistsv3ListId(ctx, listId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDeletecrmlists202603ListIdcrmlistsv3ListIdResponse(rsp)
+}
+
+// Getcrmlists202603ListIdcrmlistsv3ListIdWithResponse Fetch List by ID
+//
+// Fetch a single list by **ILS list ID**.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /crm/lists/2026-03/{listId} (the `Getcrmlists202603ListIdcrmlistsv3ListId` operationId).
+func (c *ClientWithResponses) Getcrmlists202603ListIdcrmlistsv3ListIdWithResponse(ctx context.Context, listId string, params *Getcrmlists202603ListIdcrmlistsv3ListIdParams, reqEditors ...RequestEditorFn) (*Getcrmlists202603ListIdcrmlistsv3ListIdResponse, error) {
+	rsp, err := c.Getcrmlists202603ListIdcrmlistsv3ListId(ctx, listId, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetcrmlists202603ListIdcrmlistsv3ListIdResponse(rsp)
+}
+
+// Deletecrmlists202603ListIdmembershipscrmlistsv3ListIdmembershipsWithResponse Delete All Records from a List
+//
+// Remove **all** of the records from a list. ***Note:*** *The list is not deleted.*
+//
+// This endpoint only works for lists that have a `processingType` of `MANUAL` or `SNAPSHOT`.
+//
+// This endpoint only supports lists that have less than 100,000 memberships.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with DELETE /crm/lists/2026-03/{listId}/memberships (the `Deletecrmlists202603ListIdmembershipscrmlistsv3ListIdmemberships` operationId).
+func (c *ClientWithResponses) Deletecrmlists202603ListIdmembershipscrmlistsv3ListIdmembershipsWithResponse(ctx context.Context, listId string, reqEditors ...RequestEditorFn) (*Deletecrmlists202603ListIdmembershipscrmlistsv3ListIdmembershipsResponse, error) {
+	rsp, err := c.Deletecrmlists202603ListIdmembershipscrmlistsv3ListIdmemberships(ctx, listId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDeletecrmlists202603ListIdmembershipscrmlistsv3ListIdmembershipsResponse(rsp)
+}
+
+// Getcrmlists202603ListIdmembershipscrmlistsv3ListIdmembershipsWithResponse Fetch List Memberships Ordered by ID
+//
+// Fetch the memberships of a list in order sorted by the `recordId` of the records in the list.
+//
+// The `recordId`s are sorted in *ascending* order if an `after` offset or no offset is provided. If only a `before` offset is provided, then the records are sorted in *descending* order.
+//
+// The `after` offset parameter will take precedence over the `before` offset in a case where both are provided.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /crm/lists/2026-03/{listId}/memberships (the `Getcrmlists202603ListIdmembershipscrmlistsv3ListIdmemberships` operationId).
+func (c *ClientWithResponses) Getcrmlists202603ListIdmembershipscrmlistsv3ListIdmembershipsWithResponse(ctx context.Context, listId string, params *Getcrmlists202603ListIdmembershipscrmlistsv3ListIdmembershipsParams, reqEditors ...RequestEditorFn) (*Getcrmlists202603ListIdmembershipscrmlistsv3ListIdmembershipsResponse, error) {
+	rsp, err := c.Getcrmlists202603ListIdmembershipscrmlistsv3ListIdmemberships(ctx, listId, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetcrmlists202603ListIdmembershipscrmlistsv3ListIdmembershipsResponse(rsp)
+}
+
+// Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsaddWithBodyWithResponse Add Records to a List
+//
+// Add the records provided to the list. Records that do not exist or that are already members of the list are ignored.
+//
+// This endpoint only works for lists that have a `processingType` of `MANUAL` or `SNAPSHOT`.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PUT /crm/lists/2026-03/{listId}/memberships/add (the `Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsadd` operationId).
+func (c *ClientWithResponses) Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsaddWithBodyWithResponse(ctx context.Context, listId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsaddResponse, error) {
+	rsp, err := c.Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsaddWithBody(ctx, listId, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePutcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsaddResponse(rsp)
+}
+
+// Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsaddWithResponse Add Records to a List
+//
+// Add the records provided to the list. Records that do not exist or that are already members of the list are ignored.
+//
+// This endpoint only works for lists that have a `processingType` of `MANUAL` or `SNAPSHOT`.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PUT /crm/lists/2026-03/{listId}/memberships/add (the `Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsadd` operationId).
+func (c *ClientWithResponses) Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsaddWithResponse(ctx context.Context, listId string, body Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsaddJSONRequestBody, reqEditors ...RequestEditorFn) (*Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsaddResponse, error) {
+	rsp, err := c.Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsadd(ctx, listId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePutcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsaddResponse(rsp)
+}
+
+// Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemoveWithBodyWithResponse Add and/or Remove Records from a List
+//
+// Add and/or remove records that have already been created in the system to and/or from a list.
+//
+// This endpoint only works for lists that have a `processingType` of `MANUAL` or `SNAPSHOT`.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PUT /crm/lists/2026-03/{listId}/memberships/add-and-remove (the `Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemove` operationId).
+func (c *ClientWithResponses) Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemoveWithBodyWithResponse(ctx context.Context, listId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemoveResponse, error) {
+	rsp, err := c.Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemoveWithBody(ctx, listId, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePutcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemoveResponse(rsp)
+}
+
+// Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemoveWithResponse Add and/or Remove Records from a List
+//
+// Add and/or remove records that have already been created in the system to and/or from a list.
+//
+// This endpoint only works for lists that have a `processingType` of `MANUAL` or `SNAPSHOT`.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PUT /crm/lists/2026-03/{listId}/memberships/add-and-remove (the `Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemove` operationId).
+func (c *ClientWithResponses) Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemoveWithResponse(ctx context.Context, listId string, body Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemoveJSONRequestBody, reqEditors ...RequestEditorFn) (*Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemoveResponse, error) {
+	rsp, err := c.Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemove(ctx, listId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePutcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemoveResponse(rsp)
+}
+
+// Putcrmlists202603ListIdmembershipsaddFromSourceListIdcrmlistsv3ListIdmembershipsaddFromSourceListIdWithResponse Add All Records from a Source List to a Destination List
+//
+// Add all of the records from a *source list* (specified by the `sourceListId`) to a *destination list* (specified by the `listId`). Records that are already members of the *destination list* will be ignored. The *destination* and *source list* IDs must be different. The *destination* and *source lists* must contain records of the same type (e.g. contacts, companies, etc.).
+//
+// This endpoint only works for *destination lists* that have a `processingType` of `MANUAL` or `SNAPSHOT`. The *source list* can have any `processingType`.
+//
+// This endpoint only supports a `sourceListId` for lists with less than 100,000 memberships.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PUT /crm/lists/2026-03/{listId}/memberships/add-from/{sourceListId} (the `Putcrmlists202603ListIdmembershipsaddFromSourceListIdcrmlistsv3ListIdmembershipsaddFromSourceListId` operationId).
+func (c *ClientWithResponses) Putcrmlists202603ListIdmembershipsaddFromSourceListIdcrmlistsv3ListIdmembershipsaddFromSourceListIdWithResponse(ctx context.Context, listId string, sourceListId string, reqEditors ...RequestEditorFn) (*Putcrmlists202603ListIdmembershipsaddFromSourceListIdcrmlistsv3ListIdmembershipsaddFromSourceListIdResponse, error) {
+	rsp, err := c.Putcrmlists202603ListIdmembershipsaddFromSourceListIdcrmlistsv3ListIdmembershipsaddFromSourceListId(ctx, listId, sourceListId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePutcrmlists202603ListIdmembershipsaddFromSourceListIdcrmlistsv3ListIdmembershipsaddFromSourceListIdResponse(rsp)
+}
+
+// Getcrmlists202603ListIdmembershipsjoinOrdercrmlistsv3ListIdmembershipsjoinOrderWithResponse Fetch List Memberships Ordered by Added to List Date
+//
+// Fetch the memberships of a list in order sorted by the time the records were added to the list.
+//
+// The `recordId`s are sorted in *ascending* order if an `after` offset or no offset is provided. If only a `before` offset is provided, then the records are sorted in *descending* order.
+//
+// The `after` offset parameter will take precedence over the `before` offset in a case where both are provided.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /crm/lists/2026-03/{listId}/memberships/join-order (the `Getcrmlists202603ListIdmembershipsjoinOrdercrmlistsv3ListIdmembershipsjoinOrder` operationId).
+func (c *ClientWithResponses) Getcrmlists202603ListIdmembershipsjoinOrdercrmlistsv3ListIdmembershipsjoinOrderWithResponse(ctx context.Context, listId string, params *Getcrmlists202603ListIdmembershipsjoinOrdercrmlistsv3ListIdmembershipsjoinOrderParams, reqEditors ...RequestEditorFn) (*Getcrmlists202603ListIdmembershipsjoinOrdercrmlistsv3ListIdmembershipsjoinOrderResponse, error) {
+	rsp, err := c.Getcrmlists202603ListIdmembershipsjoinOrdercrmlistsv3ListIdmembershipsjoinOrder(ctx, listId, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetcrmlists202603ListIdmembershipsjoinOrdercrmlistsv3ListIdmembershipsjoinOrderResponse(rsp)
+}
+
+// Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremoveWithBodyWithResponse Remove Records from a List
+//
+// Remove the records provided from the list. Records that do not exist or that are not members of the list are ignored.
+//
+// This endpoint only works for lists that have a `processingType` of `MANUAL` or `SNAPSHOT`.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PUT /crm/lists/2026-03/{listId}/memberships/remove (the `Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremove` operationId).
+func (c *ClientWithResponses) Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremoveWithBodyWithResponse(ctx context.Context, listId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremoveResponse, error) {
+	rsp, err := c.Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremoveWithBody(ctx, listId, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePutcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremoveResponse(rsp)
+}
+
+// Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremoveWithResponse Remove Records from a List
+//
+// Remove the records provided from the list. Records that do not exist or that are not members of the list are ignored.
+//
+// This endpoint only works for lists that have a `processingType` of `MANUAL` or `SNAPSHOT`.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PUT /crm/lists/2026-03/{listId}/memberships/remove (the `Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremove` operationId).
+func (c *ClientWithResponses) Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremoveWithResponse(ctx context.Context, listId string, body Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremoveJSONRequestBody, reqEditors ...RequestEditorFn) (*Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremoveResponse, error) {
+	rsp, err := c.Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremove(ctx, listId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePutcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremoveResponse(rsp)
+}
+
+// Putcrmlists202603ListIdrestorecrmlistsv3ListIdrestoreWithResponse Restore a List
+//
+// Restore a previously deleted list by **ILS list ID**. Deleted lists are eligible to be restored up-to 90-days after the list has been deleted.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PUT /crm/lists/2026-03/{listId}/restore (the `Putcrmlists202603ListIdrestorecrmlistsv3ListIdrestore` operationId).
+func (c *ClientWithResponses) Putcrmlists202603ListIdrestorecrmlistsv3ListIdrestoreWithResponse(ctx context.Context, listId string, reqEditors ...RequestEditorFn) (*Putcrmlists202603ListIdrestorecrmlistsv3ListIdrestoreResponse, error) {
+	rsp, err := c.Putcrmlists202603ListIdrestorecrmlistsv3ListIdrestore(ctx, listId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePutcrmlists202603ListIdrestorecrmlistsv3ListIdrestoreResponse(rsp)
+}
+
+// Deletecrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionWithResponse Cancel the conversion of a list
+//
+// Delete an existing scheduled conversion for a list.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with DELETE /crm/lists/2026-03/{listId}/schedule-conversion (the `Deletecrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversion` operationId).
+func (c *ClientWithResponses) Deletecrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionWithResponse(ctx context.Context, listId string, reqEditors ...RequestEditorFn) (*Deletecrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionResponse, error) {
+	rsp, err := c.Deletecrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversion(ctx, listId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDeletecrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionResponse(rsp)
+}
+
+// Getcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionWithResponse Retrieve the conversion details for a list
+//
+// Retrieve the conversion details for a list. This can be used to check for an upcoming conversion, or to get the details of when a list was already converted.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /crm/lists/2026-03/{listId}/schedule-conversion (the `Getcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversion` operationId).
+func (c *ClientWithResponses) Getcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionWithResponse(ctx context.Context, listId string, reqEditors ...RequestEditorFn) (*Getcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionResponse, error) {
+	rsp, err := c.Getcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversion(ctx, listId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionResponse(rsp)
+}
+
+// Putcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionWithBodyWithResponse Schedule or update the conversion of a list to static
+//
+// Schedule the conversion of an active list into a static list, or update the already scheduled conversion. This can be scheduled for a specific date or based on activity.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PUT /crm/lists/2026-03/{listId}/schedule-conversion (the `Putcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversion` operationId).
+func (c *ClientWithResponses) Putcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionWithBodyWithResponse(ctx context.Context, listId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Putcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionResponse, error) {
+	rsp, err := c.Putcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionWithBody(ctx, listId, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePutcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionResponse(rsp)
+}
+
+// Putcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionWithResponse Schedule or update the conversion of a list to static
+//
+// Schedule the conversion of an active list into a static list, or update the already scheduled conversion. This can be scheduled for a specific date or based on activity.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PUT /crm/lists/2026-03/{listId}/schedule-conversion (the `Putcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversion` operationId).
+func (c *ClientWithResponses) Putcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionWithResponse(ctx context.Context, listId string, body Putcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionJSONRequestBody, reqEditors ...RequestEditorFn) (*Putcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionResponse, error) {
+	rsp, err := c.Putcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversion(ctx, listId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePutcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionResponse(rsp)
+}
+
+// Getcrmlists202603ListIdsizeAndEditsHistorybetweencrmlists202603ListIdsizeAndEditsHistorybetweenWithResponse performs a GET /crm/lists/2026-03/{listId}/size-and-edits-history/between (the `Getcrmlists202603ListIdsizeAndEditsHistorybetweencrmlists202603ListIdsizeAndEditsHistorybetween` operationId) request.
+//
+// Returns a wrapper object for the known response body format(s).
+func (c *ClientWithResponses) Getcrmlists202603ListIdsizeAndEditsHistorybetweencrmlists202603ListIdsizeAndEditsHistorybetweenWithResponse(ctx context.Context, listId string, params *Getcrmlists202603ListIdsizeAndEditsHistorybetweencrmlists202603ListIdsizeAndEditsHistorybetweenParams, reqEditors ...RequestEditorFn) (*Getcrmlists202603ListIdsizeAndEditsHistorybetweencrmlists202603ListIdsizeAndEditsHistorybetweenResponse, error) {
+	rsp, err := c.Getcrmlists202603ListIdsizeAndEditsHistorybetweencrmlists202603ListIdsizeAndEditsHistorybetween(ctx, listId, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetcrmlists202603ListIdsizeAndEditsHistorybetweencrmlists202603ListIdsizeAndEditsHistorybetweenResponse(rsp)
+}
+
+// Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersWithBodyWithResponse Update List Filter Definition
+//
+// Update the filter branch definition of a `DYNAMIC` list. Once updated, the list memberships will be re-evaluated and updated to match the new definition.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PUT /crm/lists/2026-03/{listId}/update-list-filters (the `Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFilters` operationId).
+func (c *ClientWithResponses) Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersWithBodyWithResponse(ctx context.Context, listId string, params *Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersResponse, error) {
+	rsp, err := c.Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersWithBody(ctx, listId, params, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePutcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersResponse(rsp)
+}
+
+// Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersWithResponse Update List Filter Definition
+//
+// Update the filter branch definition of a `DYNAMIC` list. Once updated, the list memberships will be re-evaluated and updated to match the new definition.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PUT /crm/lists/2026-03/{listId}/update-list-filters (the `Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFilters` operationId).
+func (c *ClientWithResponses) Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersWithResponse(ctx context.Context, listId string, params *Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersParams, body Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersJSONRequestBody, reqEditors ...RequestEditorFn) (*Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersResponse, error) {
+	rsp, err := c.Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFilters(ctx, listId, params, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePutcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersResponse(rsp)
+}
+
+// Putcrmlists202603ListIdupdateListNamecrmlistsv3ListIdupdateListNameWithResponse Update List Name
+//
+// Update the name of a list. The name must be globally unique relative to all other public lists in the portal.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PUT /crm/lists/2026-03/{listId}/update-list-name (the `Putcrmlists202603ListIdupdateListNamecrmlistsv3ListIdupdateListName` operationId).
+func (c *ClientWithResponses) Putcrmlists202603ListIdupdateListNamecrmlistsv3ListIdupdateListNameWithResponse(ctx context.Context, listId string, params *Putcrmlists202603ListIdupdateListNamecrmlistsv3ListIdupdateListNameParams, reqEditors ...RequestEditorFn) (*Putcrmlists202603ListIdupdateListNamecrmlistsv3ListIdupdateListNameResponse, error) {
+	rsp, err := c.Putcrmlists202603ListIdupdateListNamecrmlistsv3ListIdupdateListName(ctx, listId, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePutcrmlists202603ListIdupdateListNamecrmlistsv3ListIdupdateListNameResponse(rsp)
+}
+
+// GetcrmobjectLibrary202603enablementcrmobjectLibrary202603enablementWithResponse Get object activation statuses
+//
+// For all object types supporting enablement, returns whether they're enabled or disabled
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /crm/object-library/2026-03/enablement (the `GetcrmobjectLibrary202603enablementcrmobjectLibrary202603enablement` operationId).
+func (c *ClientWithResponses) GetcrmobjectLibrary202603enablementcrmobjectLibrary202603enablementWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*GetcrmobjectLibrary202603enablementcrmobjectLibrary202603enablementResponse, error) {
+	rsp, err := c.GetcrmobjectLibrary202603enablementcrmobjectLibrary202603enablement(ctx, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetcrmobjectLibrary202603enablementcrmobjectLibrary202603enablementResponse(rsp)
+}
+
+// GetcrmobjectLibrary202603enablementObjectTypeIdcrmobjectLibrary202603enablementObjectTypeIdWithResponse Get object activation status
+//
+// Fetch whether object type is enabled.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /crm/object-library/2026-03/enablement/{objectTypeId} (the `GetcrmobjectLibrary202603enablementObjectTypeIdcrmobjectLibrary202603enablementObjectTypeId` operationId).
+func (c *ClientWithResponses) GetcrmobjectLibrary202603enablementObjectTypeIdcrmobjectLibrary202603enablementObjectTypeIdWithResponse(ctx context.Context, objectTypeId string, reqEditors ...RequestEditorFn) (*GetcrmobjectLibrary202603enablementObjectTypeIdcrmobjectLibrary202603enablementObjectTypeIdResponse, error) {
+	rsp, err := c.GetcrmobjectLibrary202603enablementObjectTypeIdcrmobjectLibrary202603enablementObjectTypeId(ctx, objectTypeId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetcrmobjectLibrary202603enablementObjectTypeIdcrmobjectLibrary202603enablementObjectTypeIdResponse(rsp)
+}
+
+// Getcrmobjects2026030162WithResponse Retrieve services
+//
+// Read a page of services. Control what is returned via the `properties` query param.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /crm/objects/2026-03/0-162 (the `Getcrmobjects2026030162` operationId).
+func (c *ClientWithResponses) Getcrmobjects2026030162WithResponse(ctx context.Context, params *Getcrmobjects2026030162Params, reqEditors ...RequestEditorFn) (*Getcrmobjects2026030162Response, error) {
+	rsp, err := c.Getcrmobjects2026030162(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetcrmobjects2026030162Response(rsp)
+}
+
+// Postcrmobjects2026030162WithBodyWithResponse Create a service
+//
+// Create a service with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard services is provided.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-162 (the `Postcrmobjects2026030162` operationId).
+func (c *ClientWithResponses) Postcrmobjects2026030162WithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030162Response, error) {
+	rsp, err := c.Postcrmobjects2026030162WithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects2026030162Response(rsp)
+}
+
+// Postcrmobjects2026030162WithResponse Create a service
+//
+// Create a service with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard services is provided.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-162 (the `Postcrmobjects2026030162` operationId).
+func (c *ClientWithResponses) Postcrmobjects2026030162WithResponse(ctx context.Context, body Postcrmobjects2026030162JSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030162Response, error) {
+	rsp, err := c.Postcrmobjects2026030162(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects2026030162Response(rsp)
+}
+
+// Postcrmobjects2026030162batcharchiveWithBodyWithResponse Batch archive services
+//
+// Archive a batch of objects.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-162/batch/archive (the `Postcrmobjects2026030162batcharchive` operationId).
+func (c *ClientWithResponses) Postcrmobjects2026030162batcharchiveWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030162batcharchiveResponse, error) {
+	rsp, err := c.Postcrmobjects2026030162batcharchiveWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects2026030162batcharchiveResponse(rsp)
+}
+
+// Postcrmobjects2026030162batcharchiveWithResponse Batch archive services
+//
+// Archive a batch of objects.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-162/batch/archive (the `Postcrmobjects2026030162batcharchive` operationId).
+func (c *ClientWithResponses) Postcrmobjects2026030162batcharchiveWithResponse(ctx context.Context, body Postcrmobjects2026030162batcharchiveJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030162batcharchiveResponse, error) {
+	rsp, err := c.Postcrmobjects2026030162batcharchive(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects2026030162batcharchiveResponse(rsp)
+}
+
+// Postcrmobjects2026030162batchcreateWithBodyWithResponse Create a batch of services
+//
+// Create a batch of objects.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-162/batch/create (the `Postcrmobjects2026030162batchcreate` operationId).
+func (c *ClientWithResponses) Postcrmobjects2026030162batchcreateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030162batchcreateResponse, error) {
+	rsp, err := c.Postcrmobjects2026030162batchcreateWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects2026030162batchcreateResponse(rsp)
+}
+
+// Postcrmobjects2026030162batchcreateWithResponse Create a batch of services
+//
+// Create a batch of objects.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-162/batch/create (the `Postcrmobjects2026030162batchcreate` operationId).
+func (c *ClientWithResponses) Postcrmobjects2026030162batchcreateWithResponse(ctx context.Context, body Postcrmobjects2026030162batchcreateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030162batchcreateResponse, error) {
+	rsp, err := c.Postcrmobjects2026030162batchcreate(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects2026030162batchcreateResponse(rsp)
+}
+
+// Postcrmobjects2026030162batchreadWithBodyWithResponse Read a batch of services by internal ID, or unique property values
+//
+// Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-162/batch/read (the `Postcrmobjects2026030162batchread` operationId).
+func (c *ClientWithResponses) Postcrmobjects2026030162batchreadWithBodyWithResponse(ctx context.Context, params *Postcrmobjects2026030162batchreadParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030162batchreadResponse, error) {
+	rsp, err := c.Postcrmobjects2026030162batchreadWithBody(ctx, params, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects2026030162batchreadResponse(rsp)
+}
+
+// Postcrmobjects2026030162batchreadWithResponse Read a batch of services by internal ID, or unique property values
+//
+// Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-162/batch/read (the `Postcrmobjects2026030162batchread` operationId).
+func (c *ClientWithResponses) Postcrmobjects2026030162batchreadWithResponse(ctx context.Context, params *Postcrmobjects2026030162batchreadParams, body Postcrmobjects2026030162batchreadJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030162batchreadResponse, error) {
+	rsp, err := c.Postcrmobjects2026030162batchread(ctx, params, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects2026030162batchreadResponse(rsp)
+}
+
+// Postcrmobjects2026030162batchupdateWithBodyWithResponse Update a batch of services by internal ID, or unique property values
+//
+// Update a batch of objects.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-162/batch/update (the `Postcrmobjects2026030162batchupdate` operationId).
+func (c *ClientWithResponses) Postcrmobjects2026030162batchupdateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030162batchupdateResponse, error) {
+	rsp, err := c.Postcrmobjects2026030162batchupdateWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects2026030162batchupdateResponse(rsp)
+}
+
+// Postcrmobjects2026030162batchupdateWithResponse Update a batch of services by internal ID, or unique property values
+//
+// Update a batch of objects.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-162/batch/update (the `Postcrmobjects2026030162batchupdate` operationId).
+func (c *ClientWithResponses) Postcrmobjects2026030162batchupdateWithResponse(ctx context.Context, body Postcrmobjects2026030162batchupdateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030162batchupdateResponse, error) {
+	rsp, err := c.Postcrmobjects2026030162batchupdate(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects2026030162batchupdateResponse(rsp)
+}
+
+// Postcrmobjects2026030162batchupsertWithBodyWithResponse Upsert services
+//
+// Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-162/batch/upsert (the `Postcrmobjects2026030162batchupsert` operationId).
+func (c *ClientWithResponses) Postcrmobjects2026030162batchupsertWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030162batchupsertResponse, error) {
+	rsp, err := c.Postcrmobjects2026030162batchupsertWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects2026030162batchupsertResponse(rsp)
+}
+
+// Postcrmobjects2026030162batchupsertWithResponse Upsert services
+//
+// Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-162/batch/upsert (the `Postcrmobjects2026030162batchupsert` operationId).
+func (c *ClientWithResponses) Postcrmobjects2026030162batchupsertWithResponse(ctx context.Context, body Postcrmobjects2026030162batchupsertJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030162batchupsertResponse, error) {
+	rsp, err := c.Postcrmobjects2026030162batchupsert(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects2026030162batchupsertResponse(rsp)
+}
+
+// Postcrmobjects2026030162searchWithBodyWithResponse Search for services
+//
+// Fetch objects via a search query.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-162/search (the `Postcrmobjects2026030162search` operationId).
+func (c *ClientWithResponses) Postcrmobjects2026030162searchWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030162searchResponse, error) {
+	rsp, err := c.Postcrmobjects2026030162searchWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects2026030162searchResponse(rsp)
+}
+
+// Postcrmobjects2026030162searchWithResponse Search for services
+//
+// Fetch objects via a search query.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-162/search (the `Postcrmobjects2026030162search` operationId).
+func (c *ClientWithResponses) Postcrmobjects2026030162searchWithResponse(ctx context.Context, body Postcrmobjects2026030162searchJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030162searchResponse, error) {
+	rsp, err := c.Postcrmobjects2026030162search(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects2026030162searchResponse(rsp)
+}
+
+// Deletecrmobjects2026030162ServiceIdWithResponse Archive a service
+//
+// Move an Object identified by `{serviceId}` to the recycling bin.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with DELETE /crm/objects/2026-03/0-162/{serviceId} (the `Deletecrmobjects2026030162ServiceId` operationId).
+func (c *ClientWithResponses) Deletecrmobjects2026030162ServiceIdWithResponse(ctx context.Context, serviceId string, reqEditors ...RequestEditorFn) (*Deletecrmobjects2026030162ServiceIdResponse, error) {
+	rsp, err := c.Deletecrmobjects2026030162ServiceId(ctx, serviceId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDeletecrmobjects2026030162ServiceIdResponse(rsp)
+}
+
+// Getcrmobjects2026030162ServiceIdWithResponse Retrieve a service
+//
+// Read an Object identified by `{serviceId}`. `{serviceId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /crm/objects/2026-03/0-162/{serviceId} (the `Getcrmobjects2026030162ServiceId` operationId).
+func (c *ClientWithResponses) Getcrmobjects2026030162ServiceIdWithResponse(ctx context.Context, serviceId string, params *Getcrmobjects2026030162ServiceIdParams, reqEditors ...RequestEditorFn) (*Getcrmobjects2026030162ServiceIdResponse, error) {
+	rsp, err := c.Getcrmobjects2026030162ServiceId(ctx, serviceId, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetcrmobjects2026030162ServiceIdResponse(rsp)
+}
+
+// Patchcrmobjects2026030162ServiceIdWithBodyWithResponse Update  a service
+//
+// Perform a partial update of an Object identified by `{serviceId}`or optionally a unique property value as specified by the `idProperty` query param. `{serviceId}` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PATCH /crm/objects/2026-03/0-162/{serviceId} (the `Patchcrmobjects2026030162ServiceId` operationId).
+func (c *ClientWithResponses) Patchcrmobjects2026030162ServiceIdWithBodyWithResponse(ctx context.Context, serviceId string, params *Patchcrmobjects2026030162ServiceIdParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Patchcrmobjects2026030162ServiceIdResponse, error) {
+	rsp, err := c.Patchcrmobjects2026030162ServiceIdWithBody(ctx, serviceId, params, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePatchcrmobjects2026030162ServiceIdResponse(rsp)
+}
+
+// Patchcrmobjects2026030162ServiceIdWithResponse Update  a service
+//
+// Perform a partial update of an Object identified by `{serviceId}`or optionally a unique property value as specified by the `idProperty` query param. `{serviceId}` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PATCH /crm/objects/2026-03/0-162/{serviceId} (the `Patchcrmobjects2026030162ServiceId` operationId).
+func (c *ClientWithResponses) Patchcrmobjects2026030162ServiceIdWithResponse(ctx context.Context, serviceId string, params *Patchcrmobjects2026030162ServiceIdParams, body Patchcrmobjects2026030162ServiceIdJSONRequestBody, reqEditors ...RequestEditorFn) (*Patchcrmobjects2026030162ServiceIdResponse, error) {
+	rsp, err := c.Patchcrmobjects2026030162ServiceId(ctx, serviceId, params, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePatchcrmobjects2026030162ServiceIdResponse(rsp)
+}
+
+// Getcrmobjects20260303GetPageWithResponse List
+//
+// Read a page of deals. Control what is returned via the `properties` query param.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /crm/objects/2026-03/0-3 (the `Getcrmobjects20260303GetPage` operationId).
+func (c *ClientWithResponses) Getcrmobjects20260303GetPageWithResponse(ctx context.Context, params *Getcrmobjects20260303GetPageParams, reqEditors ...RequestEditorFn) (*Getcrmobjects20260303GetPageResponse, error) {
+	rsp, err := c.Getcrmobjects20260303GetPage(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetcrmobjects20260303GetPageResponse(rsp)
+}
+
+// Postcrmobjects20260303CreateWithBodyWithResponse Create
+//
+// Create a deal with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard deals is provided.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-3 (the `Postcrmobjects20260303Create` operationId).
+func (c *ClientWithResponses) Postcrmobjects20260303CreateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects20260303CreateResponse, error) {
+	rsp, err := c.Postcrmobjects20260303CreateWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects20260303CreateResponse(rsp)
+}
+
+// Postcrmobjects20260303CreateWithResponse Create
+//
+// Create a deal with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard deals is provided.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-3 (the `Postcrmobjects20260303Create` operationId).
+func (c *ClientWithResponses) Postcrmobjects20260303CreateWithResponse(ctx context.Context, body Postcrmobjects20260303CreateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects20260303CreateResponse, error) {
+	rsp, err := c.Postcrmobjects20260303Create(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects20260303CreateResponse(rsp)
+}
+
+// Postcrmobjects20260303batcharchiveArchiveWithBodyWithResponse Archive a batch of deals by ID
+//
+// Archive multiple deals using their IDs.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-3/batch/archive (the `Postcrmobjects20260303batcharchiveArchive` operationId).
+func (c *ClientWithResponses) Postcrmobjects20260303batcharchiveArchiveWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects20260303batcharchiveArchiveResponse, error) {
+	rsp, err := c.Postcrmobjects20260303batcharchiveArchiveWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects20260303batcharchiveArchiveResponse(rsp)
+}
+
+// Postcrmobjects20260303batcharchiveArchiveWithResponse Archive a batch of deals by ID
+//
+// Archive multiple deals using their IDs.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-3/batch/archive (the `Postcrmobjects20260303batcharchiveArchive` operationId).
+func (c *ClientWithResponses) Postcrmobjects20260303batcharchiveArchiveWithResponse(ctx context.Context, body Postcrmobjects20260303batcharchiveArchiveJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects20260303batcharchiveArchiveResponse, error) {
+	rsp, err := c.Postcrmobjects20260303batcharchiveArchive(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects20260303batcharchiveArchiveResponse(rsp)
+}
+
+// Postcrmobjects20260303batchcreateCreateWithBodyWithResponse Create a batch of deals
+//
+// Create multiple deals in a single request.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-3/batch/create (the `Postcrmobjects20260303batchcreateCreate` operationId).
+func (c *ClientWithResponses) Postcrmobjects20260303batchcreateCreateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects20260303batchcreateCreateResponse, error) {
+	rsp, err := c.Postcrmobjects20260303batchcreateCreateWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects20260303batchcreateCreateResponse(rsp)
+}
+
+// Postcrmobjects20260303batchcreateCreateWithResponse Create a batch of deals
+//
+// Create multiple deals in a single request.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-3/batch/create (the `Postcrmobjects20260303batchcreateCreate` operationId).
+func (c *ClientWithResponses) Postcrmobjects20260303batchcreateCreateWithResponse(ctx context.Context, body Postcrmobjects20260303batchcreateCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects20260303batchcreateCreateResponse, error) {
+	rsp, err := c.Postcrmobjects20260303batchcreateCreate(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects20260303batchcreateCreateResponse(rsp)
+}
+
+// Postcrmobjects20260303batchreadReadWithBodyWithResponse Read a batch of deals by internal ID, or unique property values
+//
+// Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-3/batch/read (the `Postcrmobjects20260303batchreadRead` operationId).
+func (c *ClientWithResponses) Postcrmobjects20260303batchreadReadWithBodyWithResponse(ctx context.Context, params *Postcrmobjects20260303batchreadReadParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects20260303batchreadReadResponse, error) {
+	rsp, err := c.Postcrmobjects20260303batchreadReadWithBody(ctx, params, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects20260303batchreadReadResponse(rsp)
+}
+
+// Postcrmobjects20260303batchreadReadWithResponse Read a batch of deals by internal ID, or unique property values
+//
+// Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-3/batch/read (the `Postcrmobjects20260303batchreadRead` operationId).
+func (c *ClientWithResponses) Postcrmobjects20260303batchreadReadWithResponse(ctx context.Context, params *Postcrmobjects20260303batchreadReadParams, body Postcrmobjects20260303batchreadReadJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects20260303batchreadReadResponse, error) {
+	rsp, err := c.Postcrmobjects20260303batchreadRead(ctx, params, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects20260303batchreadReadResponse(rsp)
+}
+
+// Postcrmobjects20260303batchupdateUpdateWithBodyWithResponse Update a batch of deals by internal ID, or unique property values
+//
+// Update multiple deals using their internal IDs or unique property values.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-3/batch/update (the `Postcrmobjects20260303batchupdateUpdate` operationId).
+func (c *ClientWithResponses) Postcrmobjects20260303batchupdateUpdateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects20260303batchupdateUpdateResponse, error) {
+	rsp, err := c.Postcrmobjects20260303batchupdateUpdateWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects20260303batchupdateUpdateResponse(rsp)
+}
+
+// Postcrmobjects20260303batchupdateUpdateWithResponse Update a batch of deals by internal ID, or unique property values
+//
+// Update multiple deals using their internal IDs or unique property values.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-3/batch/update (the `Postcrmobjects20260303batchupdateUpdate` operationId).
+func (c *ClientWithResponses) Postcrmobjects20260303batchupdateUpdateWithResponse(ctx context.Context, body Postcrmobjects20260303batchupdateUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects20260303batchupdateUpdateResponse, error) {
+	rsp, err := c.Postcrmobjects20260303batchupdateUpdate(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects20260303batchupdateUpdateResponse(rsp)
+}
+
+// Postcrmobjects20260303batchupsertUpsertWithBodyWithResponse Create or update a batch of deals by unique property values
+//
+// Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-3/batch/upsert (the `Postcrmobjects20260303batchupsertUpsert` operationId).
+func (c *ClientWithResponses) Postcrmobjects20260303batchupsertUpsertWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects20260303batchupsertUpsertResponse, error) {
+	rsp, err := c.Postcrmobjects20260303batchupsertUpsertWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects20260303batchupsertUpsertResponse(rsp)
+}
+
+// Postcrmobjects20260303batchupsertUpsertWithResponse Create or update a batch of deals by unique property values
+//
+// Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-3/batch/upsert (the `Postcrmobjects20260303batchupsertUpsert` operationId).
+func (c *ClientWithResponses) Postcrmobjects20260303batchupsertUpsertWithResponse(ctx context.Context, body Postcrmobjects20260303batchupsertUpsertJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects20260303batchupsertUpsertResponse, error) {
+	rsp, err := c.Postcrmobjects20260303batchupsertUpsert(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects20260303batchupsertUpsertResponse(rsp)
+}
+
+// Postcrmobjects20260303mergeMergeWithBodyWithResponse Merge two deals with same type
+//
+// Combine two deals of the same type into a single deal.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-3/merge (the `Postcrmobjects20260303mergeMerge` operationId).
+func (c *ClientWithResponses) Postcrmobjects20260303mergeMergeWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects20260303mergeMergeResponse, error) {
+	rsp, err := c.Postcrmobjects20260303mergeMergeWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects20260303mergeMergeResponse(rsp)
+}
+
+// Postcrmobjects20260303mergeMergeWithResponse Merge two deals with same type
+//
+// Combine two deals of the same type into a single deal.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-3/merge (the `Postcrmobjects20260303mergeMerge` operationId).
+func (c *ClientWithResponses) Postcrmobjects20260303mergeMergeWithResponse(ctx context.Context, body Postcrmobjects20260303mergeMergeJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects20260303mergeMergeResponse, error) {
+	rsp, err := c.Postcrmobjects20260303mergeMerge(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects20260303mergeMergeResponse(rsp)
+}
+
+// Postcrmobjects20260303searchDoSearchWithBodyWithResponse Search for deals using various filters and criteria to retrieve specific records.
+//
+// Search for deals using specified criteria and filters.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-3/search (the `Postcrmobjects20260303searchDoSearch` operationId).
+func (c *ClientWithResponses) Postcrmobjects20260303searchDoSearchWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects20260303searchDoSearchResponse, error) {
+	rsp, err := c.Postcrmobjects20260303searchDoSearchWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects20260303searchDoSearchResponse(rsp)
+}
+
+// Postcrmobjects20260303searchDoSearchWithResponse Search for deals using various filters and criteria to retrieve specific records.
+//
+// Search for deals using specified criteria and filters.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-3/search (the `Postcrmobjects20260303searchDoSearch` operationId).
+func (c *ClientWithResponses) Postcrmobjects20260303searchDoSearchWithResponse(ctx context.Context, body Postcrmobjects20260303searchDoSearchJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects20260303searchDoSearchResponse, error) {
+	rsp, err := c.Postcrmobjects20260303searchDoSearch(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects20260303searchDoSearchResponse(rsp)
+}
+
+// Deletecrmobjects20260303DealIdArchiveWithResponse Archive
+//
+// Move an Object identified by `{dealId}` to the recycling bin.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with DELETE /crm/objects/2026-03/0-3/{dealId} (the `Deletecrmobjects20260303DealIdArchive` operationId).
+func (c *ClientWithResponses) Deletecrmobjects20260303DealIdArchiveWithResponse(ctx context.Context, dealId string, reqEditors ...RequestEditorFn) (*Deletecrmobjects20260303DealIdArchiveResponse, error) {
+	rsp, err := c.Deletecrmobjects20260303DealIdArchive(ctx, dealId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDeletecrmobjects20260303DealIdArchiveResponse(rsp)
+}
+
+// Getcrmobjects20260303DealIdGetByIdWithResponse Read
+//
+// Read an Object identified by `{dealId}`. `{dealId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /crm/objects/2026-03/0-3/{dealId} (the `Getcrmobjects20260303DealIdGetById` operationId).
+func (c *ClientWithResponses) Getcrmobjects20260303DealIdGetByIdWithResponse(ctx context.Context, dealId string, params *Getcrmobjects20260303DealIdGetByIdParams, reqEditors ...RequestEditorFn) (*Getcrmobjects20260303DealIdGetByIdResponse, error) {
+	rsp, err := c.Getcrmobjects20260303DealIdGetById(ctx, dealId, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetcrmobjects20260303DealIdGetByIdResponse(rsp)
+}
+
+// Patchcrmobjects20260303DealIdUpdateWithBodyWithResponse Update
+//
+// Perform a partial update of an Object identified by `{dealId}`or optionally a unique property value as specified by the `idProperty` query param. `{dealId}` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PATCH /crm/objects/2026-03/0-3/{dealId} (the `Patchcrmobjects20260303DealIdUpdate` operationId).
+func (c *ClientWithResponses) Patchcrmobjects20260303DealIdUpdateWithBodyWithResponse(ctx context.Context, dealId string, params *Patchcrmobjects20260303DealIdUpdateParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Patchcrmobjects20260303DealIdUpdateResponse, error) {
+	rsp, err := c.Patchcrmobjects20260303DealIdUpdateWithBody(ctx, dealId, params, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePatchcrmobjects20260303DealIdUpdateResponse(rsp)
+}
+
+// Patchcrmobjects20260303DealIdUpdateWithResponse Update
+//
+// Perform a partial update of an Object identified by `{dealId}`or optionally a unique property value as specified by the `idProperty` query param. `{dealId}` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PATCH /crm/objects/2026-03/0-3/{dealId} (the `Patchcrmobjects20260303DealIdUpdate` operationId).
+func (c *ClientWithResponses) Patchcrmobjects20260303DealIdUpdateWithResponse(ctx context.Context, dealId string, params *Patchcrmobjects20260303DealIdUpdateParams, body Patchcrmobjects20260303DealIdUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*Patchcrmobjects20260303DealIdUpdateResponse, error) {
+	rsp, err := c.Patchcrmobjects20260303DealIdUpdate(ctx, dealId, params, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePatchcrmobjects20260303DealIdUpdateResponse(rsp)
+}
+
+// Getcrmobjects2026030410WithResponse Retrieve courses
+//
+// Read a page of courses. Control what is returned via the `properties` query param.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /crm/objects/2026-03/0-410 (the `Getcrmobjects2026030410` operationId).
+func (c *ClientWithResponses) Getcrmobjects2026030410WithResponse(ctx context.Context, params *Getcrmobjects2026030410Params, reqEditors ...RequestEditorFn) (*Getcrmobjects2026030410Response, error) {
+	rsp, err := c.Getcrmobjects2026030410(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetcrmobjects2026030410Response(rsp)
+}
+
+// Postcrmobjects2026030410WithBodyWithResponse Create a course
+//
+// Create a course with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard courses is provided.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-410 (the `Postcrmobjects2026030410` operationId).
+func (c *ClientWithResponses) Postcrmobjects2026030410WithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030410Response, error) {
+	rsp, err := c.Postcrmobjects2026030410WithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects2026030410Response(rsp)
+}
+
+// Postcrmobjects2026030410WithResponse Create a course
+//
+// Create a course with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard courses is provided.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-410 (the `Postcrmobjects2026030410` operationId).
+func (c *ClientWithResponses) Postcrmobjects2026030410WithResponse(ctx context.Context, body Postcrmobjects2026030410JSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030410Response, error) {
+	rsp, err := c.Postcrmobjects2026030410(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects2026030410Response(rsp)
+}
+
+// Postcrmobjects2026030410batcharchiveWithBodyWithResponse Batch archive courses
+//
+// Archive a batch of objects.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-410/batch/archive (the `Postcrmobjects2026030410batcharchive` operationId).
+func (c *ClientWithResponses) Postcrmobjects2026030410batcharchiveWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030410batcharchiveResponse, error) {
+	rsp, err := c.Postcrmobjects2026030410batcharchiveWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects2026030410batcharchiveResponse(rsp)
+}
+
+// Postcrmobjects2026030410batcharchiveWithResponse Batch archive courses
+//
+// Archive a batch of objects.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-410/batch/archive (the `Postcrmobjects2026030410batcharchive` operationId).
+func (c *ClientWithResponses) Postcrmobjects2026030410batcharchiveWithResponse(ctx context.Context, body Postcrmobjects2026030410batcharchiveJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030410batcharchiveResponse, error) {
+	rsp, err := c.Postcrmobjects2026030410batcharchive(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects2026030410batcharchiveResponse(rsp)
+}
+
+// Postcrmobjects2026030410batchcreateWithBodyWithResponse Batch create courses
+//
+// Create a batch of objects.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-410/batch/create (the `Postcrmobjects2026030410batchcreate` operationId).
+func (c *ClientWithResponses) Postcrmobjects2026030410batchcreateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030410batchcreateResponse, error) {
+	rsp, err := c.Postcrmobjects2026030410batchcreateWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects2026030410batchcreateResponse(rsp)
+}
+
+// Postcrmobjects2026030410batchcreateWithResponse Batch create courses
+//
+// Create a batch of objects.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-410/batch/create (the `Postcrmobjects2026030410batchcreate` operationId).
+func (c *ClientWithResponses) Postcrmobjects2026030410batchcreateWithResponse(ctx context.Context, body Postcrmobjects2026030410batchcreateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030410batchcreateResponse, error) {
+	rsp, err := c.Postcrmobjects2026030410batchcreate(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects2026030410batchcreateResponse(rsp)
+}
+
+// Postcrmobjects2026030410batchreadWithBodyWithResponse Batch retrieve courses
+//
+// Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-410/batch/read (the `Postcrmobjects2026030410batchread` operationId).
+func (c *ClientWithResponses) Postcrmobjects2026030410batchreadWithBodyWithResponse(ctx context.Context, params *Postcrmobjects2026030410batchreadParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030410batchreadResponse, error) {
+	rsp, err := c.Postcrmobjects2026030410batchreadWithBody(ctx, params, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects2026030410batchreadResponse(rsp)
+}
+
+// Postcrmobjects2026030410batchreadWithResponse Batch retrieve courses
+//
+// Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-410/batch/read (the `Postcrmobjects2026030410batchread` operationId).
+func (c *ClientWithResponses) Postcrmobjects2026030410batchreadWithResponse(ctx context.Context, params *Postcrmobjects2026030410batchreadParams, body Postcrmobjects2026030410batchreadJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030410batchreadResponse, error) {
+	rsp, err := c.Postcrmobjects2026030410batchread(ctx, params, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects2026030410batchreadResponse(rsp)
+}
+
+// Postcrmobjects2026030410batchupdateWithBodyWithResponse Batch update courses
+//
+// Update a batch of objects.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-410/batch/update (the `Postcrmobjects2026030410batchupdate` operationId).
+func (c *ClientWithResponses) Postcrmobjects2026030410batchupdateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030410batchupdateResponse, error) {
+	rsp, err := c.Postcrmobjects2026030410batchupdateWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects2026030410batchupdateResponse(rsp)
+}
+
+// Postcrmobjects2026030410batchupdateWithResponse Batch update courses
+//
+// Update a batch of objects.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-410/batch/update (the `Postcrmobjects2026030410batchupdate` operationId).
+func (c *ClientWithResponses) Postcrmobjects2026030410batchupdateWithResponse(ctx context.Context, body Postcrmobjects2026030410batchupdateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030410batchupdateResponse, error) {
+	rsp, err := c.Postcrmobjects2026030410batchupdate(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects2026030410batchupdateResponse(rsp)
+}
+
+// Postcrmobjects2026030410batchupsertWithBodyWithResponse Upsert courses
+//
+// Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-410/batch/upsert (the `Postcrmobjects2026030410batchupsert` operationId).
+func (c *ClientWithResponses) Postcrmobjects2026030410batchupsertWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030410batchupsertResponse, error) {
+	rsp, err := c.Postcrmobjects2026030410batchupsertWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects2026030410batchupsertResponse(rsp)
+}
+
+// Postcrmobjects2026030410batchupsertWithResponse Upsert courses
+//
+// Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-410/batch/upsert (the `Postcrmobjects2026030410batchupsert` operationId).
+func (c *ClientWithResponses) Postcrmobjects2026030410batchupsertWithResponse(ctx context.Context, body Postcrmobjects2026030410batchupsertJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030410batchupsertResponse, error) {
+	rsp, err := c.Postcrmobjects2026030410batchupsert(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects2026030410batchupsertResponse(rsp)
+}
+
+// Postcrmobjects2026030410searchWithBodyWithResponse Search for courses
+//
+// Fetch objects using a search query.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-410/search (the `Postcrmobjects2026030410search` operationId).
+func (c *ClientWithResponses) Postcrmobjects2026030410searchWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030410searchResponse, error) {
+	rsp, err := c.Postcrmobjects2026030410searchWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects2026030410searchResponse(rsp)
+}
+
+// Postcrmobjects2026030410searchWithResponse Search for courses
+//
+// Fetch objects using a search query.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-410/search (the `Postcrmobjects2026030410search` operationId).
+func (c *ClientWithResponses) Postcrmobjects2026030410searchWithResponse(ctx context.Context, body Postcrmobjects2026030410searchJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030410searchResponse, error) {
+	rsp, err := c.Postcrmobjects2026030410search(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects2026030410searchResponse(rsp)
+}
+
+// Deletecrmobjects2026030410CourseIdWithResponse Archive a course
+//
+// Move an Object identified by `{courseId}` to the recycling bin.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with DELETE /crm/objects/2026-03/0-410/{courseId} (the `Deletecrmobjects2026030410CourseId` operationId).
+func (c *ClientWithResponses) Deletecrmobjects2026030410CourseIdWithResponse(ctx context.Context, courseId string, reqEditors ...RequestEditorFn) (*Deletecrmobjects2026030410CourseIdResponse, error) {
+	rsp, err := c.Deletecrmobjects2026030410CourseId(ctx, courseId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDeletecrmobjects2026030410CourseIdResponse(rsp)
+}
+
+// Getcrmobjects2026030410CourseIdWithResponse Retrieve a course
+//
+// Read an Object identified by `{courseId}`. `{courseId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /crm/objects/2026-03/0-410/{courseId} (the `Getcrmobjects2026030410CourseId` operationId).
+func (c *ClientWithResponses) Getcrmobjects2026030410CourseIdWithResponse(ctx context.Context, courseId string, params *Getcrmobjects2026030410CourseIdParams, reqEditors ...RequestEditorFn) (*Getcrmobjects2026030410CourseIdResponse, error) {
+	rsp, err := c.Getcrmobjects2026030410CourseId(ctx, courseId, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetcrmobjects2026030410CourseIdResponse(rsp)
+}
+
+// Patchcrmobjects2026030410CourseIdWithBodyWithResponse Update a course
+//
+// Perform a partial update of an Object identified by `{courseId}`or optionally a unique property value as specified by the `idProperty` query param. `{courseId}` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PATCH /crm/objects/2026-03/0-410/{courseId} (the `Patchcrmobjects2026030410CourseId` operationId).
+func (c *ClientWithResponses) Patchcrmobjects2026030410CourseIdWithBodyWithResponse(ctx context.Context, courseId string, params *Patchcrmobjects2026030410CourseIdParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Patchcrmobjects2026030410CourseIdResponse, error) {
+	rsp, err := c.Patchcrmobjects2026030410CourseIdWithBody(ctx, courseId, params, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePatchcrmobjects2026030410CourseIdResponse(rsp)
+}
+
+// Patchcrmobjects2026030410CourseIdWithResponse Update a course
+//
+// Perform a partial update of an Object identified by `{courseId}`or optionally a unique property value as specified by the `idProperty` query param. `{courseId}` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PATCH /crm/objects/2026-03/0-410/{courseId} (the `Patchcrmobjects2026030410CourseId` operationId).
+func (c *ClientWithResponses) Patchcrmobjects2026030410CourseIdWithResponse(ctx context.Context, courseId string, params *Patchcrmobjects2026030410CourseIdParams, body Patchcrmobjects2026030410CourseIdJSONRequestBody, reqEditors ...RequestEditorFn) (*Patchcrmobjects2026030410CourseIdResponse, error) {
+	rsp, err := c.Patchcrmobjects2026030410CourseId(ctx, courseId, params, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePatchcrmobjects2026030410CourseIdResponse(rsp)
+}
+
+// Getcrmobjects2026030420WithResponse List
+//
+// Read a page of listings. Control what is returned via the `properties` query param.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /crm/objects/2026-03/0-420 (the `Getcrmobjects2026030420` operationId).
+func (c *ClientWithResponses) Getcrmobjects2026030420WithResponse(ctx context.Context, params *Getcrmobjects2026030420Params, reqEditors ...RequestEditorFn) (*Getcrmobjects2026030420Response, error) {
+	rsp, err := c.Getcrmobjects2026030420(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetcrmobjects2026030420Response(rsp)
+}
+
+// Postcrmobjects2026030420WithBodyWithResponse Create
+//
+// Create a listing with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard listings is provided.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-420 (the `Postcrmobjects2026030420` operationId).
+func (c *ClientWithResponses) Postcrmobjects2026030420WithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030420Response, error) {
+	rsp, err := c.Postcrmobjects2026030420WithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects2026030420Response(rsp)
+}
+
+// Postcrmobjects2026030420WithResponse Create
+//
+// Create a listing with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard listings is provided.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-420 (the `Postcrmobjects2026030420` operationId).
+func (c *ClientWithResponses) Postcrmobjects2026030420WithResponse(ctx context.Context, body Postcrmobjects2026030420JSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030420Response, error) {
+	rsp, err := c.Postcrmobjects2026030420(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects2026030420Response(rsp)
+}
+
+// Postcrmobjects2026030420batcharchiveWithBodyWithResponse Archive a batch of listings by ID
+//
+// Archive multiple listings by their IDs.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-420/batch/archive (the `Postcrmobjects2026030420batcharchive` operationId).
+func (c *ClientWithResponses) Postcrmobjects2026030420batcharchiveWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030420batcharchiveResponse, error) {
+	rsp, err := c.Postcrmobjects2026030420batcharchiveWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects2026030420batcharchiveResponse(rsp)
+}
+
+// Postcrmobjects2026030420batcharchiveWithResponse Archive a batch of listings by ID
+//
+// Archive multiple listings by their IDs.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-420/batch/archive (the `Postcrmobjects2026030420batcharchive` operationId).
+func (c *ClientWithResponses) Postcrmobjects2026030420batcharchiveWithResponse(ctx context.Context, body Postcrmobjects2026030420batcharchiveJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030420batcharchiveResponse, error) {
+	rsp, err := c.Postcrmobjects2026030420batcharchive(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects2026030420batcharchiveResponse(rsp)
+}
+
+// Postcrmobjects2026030420batchcreateWithBodyWithResponse Create a batch of listings
+//
+// Create multiple listings in a single request.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-420/batch/create (the `Postcrmobjects2026030420batchcreate` operationId).
+func (c *ClientWithResponses) Postcrmobjects2026030420batchcreateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030420batchcreateResponse, error) {
+	rsp, err := c.Postcrmobjects2026030420batchcreateWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects2026030420batchcreateResponse(rsp)
+}
+
+// Postcrmobjects2026030420batchcreateWithResponse Create a batch of listings
+//
+// Create multiple listings in a single request.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-420/batch/create (the `Postcrmobjects2026030420batchcreate` operationId).
+func (c *ClientWithResponses) Postcrmobjects2026030420batchcreateWithResponse(ctx context.Context, body Postcrmobjects2026030420batchcreateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030420batchcreateResponse, error) {
+	rsp, err := c.Postcrmobjects2026030420batchcreate(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects2026030420batchcreateResponse(rsp)
+}
+
+// Postcrmobjects2026030420batchreadWithBodyWithResponse Read a batch of listings by internal ID, or unique property values
+//
+// Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-420/batch/read (the `Postcrmobjects2026030420batchread` operationId).
+func (c *ClientWithResponses) Postcrmobjects2026030420batchreadWithBodyWithResponse(ctx context.Context, params *Postcrmobjects2026030420batchreadParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030420batchreadResponse, error) {
+	rsp, err := c.Postcrmobjects2026030420batchreadWithBody(ctx, params, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects2026030420batchreadResponse(rsp)
+}
+
+// Postcrmobjects2026030420batchreadWithResponse Read a batch of listings by internal ID, or unique property values
+//
+// Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-420/batch/read (the `Postcrmobjects2026030420batchread` operationId).
+func (c *ClientWithResponses) Postcrmobjects2026030420batchreadWithResponse(ctx context.Context, params *Postcrmobjects2026030420batchreadParams, body Postcrmobjects2026030420batchreadJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030420batchreadResponse, error) {
+	rsp, err := c.Postcrmobjects2026030420batchread(ctx, params, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects2026030420batchreadResponse(rsp)
+}
+
+// Postcrmobjects2026030420batchupdateWithBodyWithResponse Update a batch of listings by internal ID, or unique property values
+//
+// Update multiple listings using their internal IDs or unique property values.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-420/batch/update (the `Postcrmobjects2026030420batchupdate` operationId).
+func (c *ClientWithResponses) Postcrmobjects2026030420batchupdateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030420batchupdateResponse, error) {
+	rsp, err := c.Postcrmobjects2026030420batchupdateWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects2026030420batchupdateResponse(rsp)
+}
+
+// Postcrmobjects2026030420batchupdateWithResponse Update a batch of listings by internal ID, or unique property values
+//
+// Update multiple listings using their internal IDs or unique property values.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-420/batch/update (the `Postcrmobjects2026030420batchupdate` operationId).
+func (c *ClientWithResponses) Postcrmobjects2026030420batchupdateWithResponse(ctx context.Context, body Postcrmobjects2026030420batchupdateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030420batchupdateResponse, error) {
+	rsp, err := c.Postcrmobjects2026030420batchupdate(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects2026030420batchupdateResponse(rsp)
+}
+
+// Postcrmobjects2026030420batchupsertWithBodyWithResponse Create or update a batch of listings by unique property values
+//
+// Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-420/batch/upsert (the `Postcrmobjects2026030420batchupsert` operationId).
+func (c *ClientWithResponses) Postcrmobjects2026030420batchupsertWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030420batchupsertResponse, error) {
+	rsp, err := c.Postcrmobjects2026030420batchupsertWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects2026030420batchupsertResponse(rsp)
+}
+
+// Postcrmobjects2026030420batchupsertWithResponse Create or update a batch of listings by unique property values
+//
+// Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-420/batch/upsert (the `Postcrmobjects2026030420batchupsert` operationId).
+func (c *ClientWithResponses) Postcrmobjects2026030420batchupsertWithResponse(ctx context.Context, body Postcrmobjects2026030420batchupsertJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030420batchupsertResponse, error) {
+	rsp, err := c.Postcrmobjects2026030420batchupsert(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects2026030420batchupsertResponse(rsp)
+}
+
+// Postcrmobjects2026030420searchWithBodyWithResponse Search for listings using various criteria and filters.
+//
+// Execute a search query to find listings based on specified filters and properties.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-420/search (the `Postcrmobjects2026030420search` operationId).
+func (c *ClientWithResponses) Postcrmobjects2026030420searchWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030420searchResponse, error) {
+	rsp, err := c.Postcrmobjects2026030420searchWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects2026030420searchResponse(rsp)
+}
+
+// Postcrmobjects2026030420searchWithResponse Search for listings using various criteria and filters.
+//
+// Execute a search query to find listings based on specified filters and properties.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/0-420/search (the `Postcrmobjects2026030420search` operationId).
+func (c *ClientWithResponses) Postcrmobjects2026030420searchWithResponse(ctx context.Context, body Postcrmobjects2026030420searchJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030420searchResponse, error) {
+	rsp, err := c.Postcrmobjects2026030420search(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects2026030420searchResponse(rsp)
+}
+
+// Deletecrmobjects2026030420ListingIdWithResponse Archive
+//
+// Move an Object identified by `{listingId}` to the recycling bin.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with DELETE /crm/objects/2026-03/0-420/{listingId} (the `Deletecrmobjects2026030420ListingId` operationId).
+func (c *ClientWithResponses) Deletecrmobjects2026030420ListingIdWithResponse(ctx context.Context, listingId string, reqEditors ...RequestEditorFn) (*Deletecrmobjects2026030420ListingIdResponse, error) {
+	rsp, err := c.Deletecrmobjects2026030420ListingId(ctx, listingId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDeletecrmobjects2026030420ListingIdResponse(rsp)
+}
+
+// Getcrmobjects2026030420ListingIdWithResponse Read
+//
+// Read an Object identified by `{listingId}`. `{listingId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /crm/objects/2026-03/0-420/{listingId} (the `Getcrmobjects2026030420ListingId` operationId).
+func (c *ClientWithResponses) Getcrmobjects2026030420ListingIdWithResponse(ctx context.Context, listingId string, params *Getcrmobjects2026030420ListingIdParams, reqEditors ...RequestEditorFn) (*Getcrmobjects2026030420ListingIdResponse, error) {
+	rsp, err := c.Getcrmobjects2026030420ListingId(ctx, listingId, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetcrmobjects2026030420ListingIdResponse(rsp)
+}
+
+// Patchcrmobjects2026030420ListingIdWithBodyWithResponse Update
+//
+// Perform a partial update of an Object identified by `{listingId}`or optionally a unique property value as specified by the `idProperty` query param. `{listingId}` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PATCH /crm/objects/2026-03/0-420/{listingId} (the `Patchcrmobjects2026030420ListingId` operationId).
+func (c *ClientWithResponses) Patchcrmobjects2026030420ListingIdWithBodyWithResponse(ctx context.Context, listingId string, params *Patchcrmobjects2026030420ListingIdParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Patchcrmobjects2026030420ListingIdResponse, error) {
+	rsp, err := c.Patchcrmobjects2026030420ListingIdWithBody(ctx, listingId, params, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePatchcrmobjects2026030420ListingIdResponse(rsp)
+}
+
+// Patchcrmobjects2026030420ListingIdWithResponse Update
+//
+// Perform a partial update of an Object identified by `{listingId}`or optionally a unique property value as specified by the `idProperty` query param. `{listingId}` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PATCH /crm/objects/2026-03/0-420/{listingId} (the `Patchcrmobjects2026030420ListingId` operationId).
+func (c *ClientWithResponses) Patchcrmobjects2026030420ListingIdWithResponse(ctx context.Context, listingId string, params *Patchcrmobjects2026030420ListingIdParams, body Patchcrmobjects2026030420ListingIdJSONRequestBody, reqEditors ...RequestEditorFn) (*Patchcrmobjects2026030420ListingIdResponse, error) {
+	rsp, err := c.Patchcrmobjects2026030420ListingId(ctx, listingId, params, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePatchcrmobjects2026030420ListingIdResponse(rsp)
+}
+
+// Getcrmobjects202603callsGetPageWithResponse List
+//
+// Read a page of calls. Control what is returned via the `properties` query param.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /crm/objects/2026-03/calls (the `Getcrmobjects202603callsGetPage` operationId).
+func (c *ClientWithResponses) Getcrmobjects202603callsGetPageWithResponse(ctx context.Context, params *Getcrmobjects202603callsGetPageParams, reqEditors ...RequestEditorFn) (*Getcrmobjects202603callsGetPageResponse, error) {
+	rsp, err := c.Getcrmobjects202603callsGetPage(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetcrmobjects202603callsGetPageResponse(rsp)
+}
+
+// Postcrmobjects202603callsCreateWithBodyWithResponse Create
+//
+// Create a call with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard calls is provided.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/calls (the `Postcrmobjects202603callsCreate` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603callsCreateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603callsCreateResponse, error) {
+	rsp, err := c.Postcrmobjects202603callsCreateWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects202603callsCreateResponse(rsp)
+}
+
+// Postcrmobjects202603callsCreateWithResponse Create
+//
+// Create a call with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard calls is provided.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/calls (the `Postcrmobjects202603callsCreate` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603callsCreateWithResponse(ctx context.Context, body Postcrmobjects202603callsCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603callsCreateResponse, error) {
+	rsp, err := c.Postcrmobjects202603callsCreate(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects202603callsCreateResponse(rsp)
+}
+
+// Postcrmobjects202603callsbatcharchiveArchiveWithBodyWithResponse Archive a batch of calls by ID
+//
+// Archive a batch of calls by ID. Deleted calls can be restored within 90 days of being deleted, but call recordings recording will be permanently deleted. Learn more about [restoring activity records](https://knowledge.hubspot.com/records/restore-deleted-activity-in-a-record).
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/calls/batch/archive (the `Postcrmobjects202603callsbatcharchiveArchive` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603callsbatcharchiveArchiveWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603callsbatcharchiveArchiveResponse, error) {
+	rsp, err := c.Postcrmobjects202603callsbatcharchiveArchiveWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects202603callsbatcharchiveArchiveResponse(rsp)
+}
+
+// Postcrmobjects202603callsbatcharchiveArchiveWithResponse Archive a batch of calls by ID
+//
+// Archive a batch of calls by ID. Deleted calls can be restored within 90 days of being deleted, but call recordings recording will be permanently deleted. Learn more about [restoring activity records](https://knowledge.hubspot.com/records/restore-deleted-activity-in-a-record).
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/calls/batch/archive (the `Postcrmobjects202603callsbatcharchiveArchive` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603callsbatcharchiveArchiveWithResponse(ctx context.Context, body Postcrmobjects202603callsbatcharchiveArchiveJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603callsbatcharchiveArchiveResponse, error) {
+	rsp, err := c.Postcrmobjects202603callsbatcharchiveArchive(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects202603callsbatcharchiveArchiveResponse(rsp)
+}
+
+// Postcrmobjects202603callsbatchcreateCreateWithBodyWithResponse Create a batch of calls
+//
+// Create a batch of calls. The `inputs` array can contain a `properties` object to define property values for each record, along with an `associations` array to define [associations](https://developers.hubspot.com/docs/guides/api/crm/associations/associations-v4) with other CRM records.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/calls/batch/create (the `Postcrmobjects202603callsbatchcreateCreate` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603callsbatchcreateCreateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603callsbatchcreateCreateResponse, error) {
+	rsp, err := c.Postcrmobjects202603callsbatchcreateCreateWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects202603callsbatchcreateCreateResponse(rsp)
+}
+
+// Postcrmobjects202603callsbatchcreateCreateWithResponse Create a batch of calls
+//
+// Create a batch of calls. The `inputs` array can contain a `properties` object to define property values for each record, along with an `associations` array to define [associations](https://developers.hubspot.com/docs/guides/api/crm/associations/associations-v4) with other CRM records.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/calls/batch/create (the `Postcrmobjects202603callsbatchcreateCreate` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603callsbatchcreateCreateWithResponse(ctx context.Context, body Postcrmobjects202603callsbatchcreateCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603callsbatchcreateCreateResponse, error) {
+	rsp, err := c.Postcrmobjects202603callsbatchcreateCreate(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects202603callsbatchcreateCreateResponse(rsp)
+}
+
+// Postcrmobjects202603callsbatchreadReadWithBodyWithResponse Read a batch of calls by internal ID, or unique property values
+//
+// Retrieve a batch of calls by ID.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/calls/batch/read (the `Postcrmobjects202603callsbatchreadRead` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603callsbatchreadReadWithBodyWithResponse(ctx context.Context, params *Postcrmobjects202603callsbatchreadReadParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603callsbatchreadReadResponse, error) {
+	rsp, err := c.Postcrmobjects202603callsbatchreadReadWithBody(ctx, params, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects202603callsbatchreadReadResponse(rsp)
+}
+
+// Postcrmobjects202603callsbatchreadReadWithResponse Read a batch of calls by internal ID, or unique property values
+//
+// Retrieve a batch of calls by ID.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/calls/batch/read (the `Postcrmobjects202603callsbatchreadRead` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603callsbatchreadReadWithResponse(ctx context.Context, params *Postcrmobjects202603callsbatchreadReadParams, body Postcrmobjects202603callsbatchreadReadJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603callsbatchreadReadResponse, error) {
+	rsp, err := c.Postcrmobjects202603callsbatchreadRead(ctx, params, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects202603callsbatchreadReadResponse(rsp)
+}
+
+// Postcrmobjects202603callsbatchupdateUpdateWithBodyWithResponse Update a batch of calls by internal ID, or unique property values
+//
+// Update a batch of calls by ID.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/calls/batch/update (the `Postcrmobjects202603callsbatchupdateUpdate` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603callsbatchupdateUpdateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603callsbatchupdateUpdateResponse, error) {
+	rsp, err := c.Postcrmobjects202603callsbatchupdateUpdateWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects202603callsbatchupdateUpdateResponse(rsp)
+}
+
+// Postcrmobjects202603callsbatchupdateUpdateWithResponse Update a batch of calls by internal ID, or unique property values
+//
+// Update a batch of calls by ID.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/calls/batch/update (the `Postcrmobjects202603callsbatchupdateUpdate` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603callsbatchupdateUpdateWithResponse(ctx context.Context, body Postcrmobjects202603callsbatchupdateUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603callsbatchupdateUpdateResponse, error) {
+	rsp, err := c.Postcrmobjects202603callsbatchupdateUpdate(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects202603callsbatchupdateUpdateResponse(rsp)
+}
+
+// Postcrmobjects202603callsbatchupsertUpsertWithBodyWithResponse Create or update a batch of calls by unique property values
+//
+// Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/calls/batch/upsert (the `Postcrmobjects202603callsbatchupsertUpsert` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603callsbatchupsertUpsertWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603callsbatchupsertUpsertResponse, error) {
+	rsp, err := c.Postcrmobjects202603callsbatchupsertUpsertWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects202603callsbatchupsertUpsertResponse(rsp)
+}
+
+// Postcrmobjects202603callsbatchupsertUpsertWithResponse Create or update a batch of calls by unique property values
+//
+// Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/calls/batch/upsert (the `Postcrmobjects202603callsbatchupsertUpsert` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603callsbatchupsertUpsertWithResponse(ctx context.Context, body Postcrmobjects202603callsbatchupsertUpsertJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603callsbatchupsertUpsertResponse, error) {
+	rsp, err := c.Postcrmobjects202603callsbatchupsertUpsert(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects202603callsbatchupsertUpsertResponse(rsp)
+}
+
+// Postcrmobjects202603callssearchDoSearchWithBodyWithResponse Search for calls
+//
+// Search for calls by filtering on properties, searching through associations, and sorting results. Learn more about [CRM search](https://developers.hubspot.com/docs/guides/api/crm/search#make-a-search-request).
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/calls/search (the `Postcrmobjects202603callssearchDoSearch` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603callssearchDoSearchWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603callssearchDoSearchResponse, error) {
+	rsp, err := c.Postcrmobjects202603callssearchDoSearchWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects202603callssearchDoSearchResponse(rsp)
+}
+
+// Postcrmobjects202603callssearchDoSearchWithResponse Search for calls
+//
+// Search for calls by filtering on properties, searching through associations, and sorting results. Learn more about [CRM search](https://developers.hubspot.com/docs/guides/api/crm/search#make-a-search-request).
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/calls/search (the `Postcrmobjects202603callssearchDoSearch` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603callssearchDoSearchWithResponse(ctx context.Context, body Postcrmobjects202603callssearchDoSearchJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603callssearchDoSearchResponse, error) {
+	rsp, err := c.Postcrmobjects202603callssearchDoSearch(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects202603callssearchDoSearchResponse(rsp)
+}
+
+// Deletecrmobjects202603callsCallIdArchiveWithResponse Archive
+//
+// Move an Object identified by `{callId}` to the recycling bin.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with DELETE /crm/objects/2026-03/calls/{callId} (the `Deletecrmobjects202603callsCallIdArchive` operationId).
+func (c *ClientWithResponses) Deletecrmobjects202603callsCallIdArchiveWithResponse(ctx context.Context, callId string, reqEditors ...RequestEditorFn) (*Deletecrmobjects202603callsCallIdArchiveResponse, error) {
+	rsp, err := c.Deletecrmobjects202603callsCallIdArchive(ctx, callId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDeletecrmobjects202603callsCallIdArchiveResponse(rsp)
+}
+
+// Getcrmobjects202603callsCallIdGetByIdWithResponse Read
+//
+// Read an Object identified by `{callId}`. `{callId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /crm/objects/2026-03/calls/{callId} (the `Getcrmobjects202603callsCallIdGetById` operationId).
+func (c *ClientWithResponses) Getcrmobjects202603callsCallIdGetByIdWithResponse(ctx context.Context, callId string, params *Getcrmobjects202603callsCallIdGetByIdParams, reqEditors ...RequestEditorFn) (*Getcrmobjects202603callsCallIdGetByIdResponse, error) {
+	rsp, err := c.Getcrmobjects202603callsCallIdGetById(ctx, callId, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetcrmobjects202603callsCallIdGetByIdResponse(rsp)
+}
+
+// Patchcrmobjects202603callsCallIdUpdateWithBodyWithResponse Update
+//
+// Perform a partial update of an Object identified by `{callId}`or optionally a unique property value as specified by the `idProperty` query param. `{callId}` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PATCH /crm/objects/2026-03/calls/{callId} (the `Patchcrmobjects202603callsCallIdUpdate` operationId).
+func (c *ClientWithResponses) Patchcrmobjects202603callsCallIdUpdateWithBodyWithResponse(ctx context.Context, callId string, params *Patchcrmobjects202603callsCallIdUpdateParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Patchcrmobjects202603callsCallIdUpdateResponse, error) {
+	rsp, err := c.Patchcrmobjects202603callsCallIdUpdateWithBody(ctx, callId, params, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePatchcrmobjects202603callsCallIdUpdateResponse(rsp)
+}
+
+// Patchcrmobjects202603callsCallIdUpdateWithResponse Update
+//
+// Perform a partial update of an Object identified by `{callId}`or optionally a unique property value as specified by the `idProperty` query param. `{callId}` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PATCH /crm/objects/2026-03/calls/{callId} (the `Patchcrmobjects202603callsCallIdUpdate` operationId).
+func (c *ClientWithResponses) Patchcrmobjects202603callsCallIdUpdateWithResponse(ctx context.Context, callId string, params *Patchcrmobjects202603callsCallIdUpdateParams, body Patchcrmobjects202603callsCallIdUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*Patchcrmobjects202603callsCallIdUpdateResponse, error) {
+	rsp, err := c.Patchcrmobjects202603callsCallIdUpdate(ctx, callId, params, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePatchcrmobjects202603callsCallIdUpdateResponse(rsp)
+}
+
+// Getcrmobjects202603cartsWithResponse Retrieve carts
+//
+// Retrieve all carts. You can control what is returned via the `properties` query parameter.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /crm/objects/2026-03/carts (the `Getcrmobjects202603carts` operationId).
+func (c *ClientWithResponses) Getcrmobjects202603cartsWithResponse(ctx context.Context, params *Getcrmobjects202603cartsParams, reqEditors ...RequestEditorFn) (*Getcrmobjects202603cartsResponse, error) {
+	rsp, err := c.Getcrmobjects202603carts(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetcrmobjects202603cartsResponse(rsp)
+}
+
+// Postcrmobjects202603cartsWithBodyWithResponse Create a cart
+//
+// Create a cart with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard carts is provided.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/carts (the `Postcrmobjects202603carts` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603cartsWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603cartsResponse, error) {
+	rsp, err := c.Postcrmobjects202603cartsWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects202603cartsResponse(rsp)
+}
+
+// Postcrmobjects202603cartsWithResponse Create a cart
+//
+// Create a cart with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard carts is provided.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/carts (the `Postcrmobjects202603carts` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603cartsWithResponse(ctx context.Context, body Postcrmobjects202603cartsJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603cartsResponse, error) {
+	rsp, err := c.Postcrmobjects202603carts(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects202603cartsResponse(rsp)
+}
+
+// Postcrmobjects202603cartsbatcharchiveWithBodyWithResponse Archive a batch of carts by ID
+//
+// Archive a batch of carts identified by their IDs.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/carts/batch/archive (the `Postcrmobjects202603cartsbatcharchive` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603cartsbatcharchiveWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603cartsbatcharchiveResponse, error) {
+	rsp, err := c.Postcrmobjects202603cartsbatcharchiveWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects202603cartsbatcharchiveResponse(rsp)
+}
+
+// Postcrmobjects202603cartsbatcharchiveWithResponse Archive a batch of carts by ID
+//
+// Archive a batch of carts identified by their IDs.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/carts/batch/archive (the `Postcrmobjects202603cartsbatcharchive` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603cartsbatcharchiveWithResponse(ctx context.Context, body Postcrmobjects202603cartsbatcharchiveJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603cartsbatcharchiveResponse, error) {
+	rsp, err := c.Postcrmobjects202603cartsbatcharchive(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects202603cartsbatcharchiveResponse(rsp)
+}
+
+// Postcrmobjects202603cartsbatchcreateWithBodyWithResponse Create a batch of carts
+//
+// Create a batch of carts with specified properties and associations.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/carts/batch/create (the `Postcrmobjects202603cartsbatchcreate` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603cartsbatchcreateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603cartsbatchcreateResponse, error) {
+	rsp, err := c.Postcrmobjects202603cartsbatchcreateWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects202603cartsbatchcreateResponse(rsp)
+}
+
+// Postcrmobjects202603cartsbatchcreateWithResponse Create a batch of carts
+//
+// Create a batch of carts with specified properties and associations.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/carts/batch/create (the `Postcrmobjects202603cartsbatchcreate` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603cartsbatchcreateWithResponse(ctx context.Context, body Postcrmobjects202603cartsbatchcreateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603cartsbatchcreateResponse, error) {
+	rsp, err := c.Postcrmobjects202603cartsbatchcreate(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects202603cartsbatchcreateResponse(rsp)
+}
+
+// Postcrmobjects202603cartsbatchreadWithBodyWithResponse Read a batch of carts by internal ID, or unique property values
+//
+// Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/carts/batch/read (the `Postcrmobjects202603cartsbatchread` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603cartsbatchreadWithBodyWithResponse(ctx context.Context, params *Postcrmobjects202603cartsbatchreadParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603cartsbatchreadResponse, error) {
+	rsp, err := c.Postcrmobjects202603cartsbatchreadWithBody(ctx, params, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects202603cartsbatchreadResponse(rsp)
+}
+
+// Postcrmobjects202603cartsbatchreadWithResponse Read a batch of carts by internal ID, or unique property values
+//
+// Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/carts/batch/read (the `Postcrmobjects202603cartsbatchread` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603cartsbatchreadWithResponse(ctx context.Context, params *Postcrmobjects202603cartsbatchreadParams, body Postcrmobjects202603cartsbatchreadJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603cartsbatchreadResponse, error) {
+	rsp, err := c.Postcrmobjects202603cartsbatchread(ctx, params, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects202603cartsbatchreadResponse(rsp)
+}
+
+// Postcrmobjects202603cartsbatchupdateWithBodyWithResponse Update a batch of carts by internal ID, or unique property values
+//
+// Update a batch of carts using their internal IDs or unique property values.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/carts/batch/update (the `Postcrmobjects202603cartsbatchupdate` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603cartsbatchupdateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603cartsbatchupdateResponse, error) {
+	rsp, err := c.Postcrmobjects202603cartsbatchupdateWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects202603cartsbatchupdateResponse(rsp)
+}
+
+// Postcrmobjects202603cartsbatchupdateWithResponse Update a batch of carts by internal ID, or unique property values
+//
+// Update a batch of carts using their internal IDs or unique property values.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/carts/batch/update (the `Postcrmobjects202603cartsbatchupdate` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603cartsbatchupdateWithResponse(ctx context.Context, body Postcrmobjects202603cartsbatchupdateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603cartsbatchupdateResponse, error) {
+	rsp, err := c.Postcrmobjects202603cartsbatchupdate(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects202603cartsbatchupdateResponse(rsp)
+}
+
+// Postcrmobjects202603cartsbatchupsertWithBodyWithResponse Create or update a batch of carts by unique property values
+//
+// Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/carts/batch/upsert (the `Postcrmobjects202603cartsbatchupsert` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603cartsbatchupsertWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603cartsbatchupsertResponse, error) {
+	rsp, err := c.Postcrmobjects202603cartsbatchupsertWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects202603cartsbatchupsertResponse(rsp)
+}
+
+// Postcrmobjects202603cartsbatchupsertWithResponse Create or update a batch of carts by unique property values
+//
+// Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/carts/batch/upsert (the `Postcrmobjects202603cartsbatchupsert` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603cartsbatchupsertWithResponse(ctx context.Context, body Postcrmobjects202603cartsbatchupsertJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603cartsbatchupsertResponse, error) {
+	rsp, err := c.Postcrmobjects202603cartsbatchupsert(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects202603cartsbatchupsertResponse(rsp)
+}
+
+// Postcrmobjects202603cartssearchWithBodyWithResponse Search for carts
+//
+// Search for carts based on the specified search criteria, such as filters and properties, and retrieve the matching results.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/carts/search (the `Postcrmobjects202603cartssearch` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603cartssearchWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603cartssearchResponse, error) {
+	rsp, err := c.Postcrmobjects202603cartssearchWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects202603cartssearchResponse(rsp)
+}
+
+// Postcrmobjects202603cartssearchWithResponse Search for carts
+//
+// Search for carts based on the specified search criteria, such as filters and properties, and retrieve the matching results.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/carts/search (the `Postcrmobjects202603cartssearch` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603cartssearchWithResponse(ctx context.Context, body Postcrmobjects202603cartssearchJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603cartssearchResponse, error) {
+	rsp, err := c.Postcrmobjects202603cartssearch(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects202603cartssearchResponse(rsp)
+}
+
+// Deletecrmobjects202603cartsCartIdWithResponse Delete a cart
+//
+// Move an Object identified by `{cartId}` to the recycling bin.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with DELETE /crm/objects/2026-03/carts/{cartId} (the `Deletecrmobjects202603cartsCartId` operationId).
+func (c *ClientWithResponses) Deletecrmobjects202603cartsCartIdWithResponse(ctx context.Context, cartId string, reqEditors ...RequestEditorFn) (*Deletecrmobjects202603cartsCartIdResponse, error) {
+	rsp, err := c.Deletecrmobjects202603cartsCartId(ctx, cartId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDeletecrmobjects202603cartsCartIdResponse(rsp)
+}
+
+// Getcrmobjects202603cartsCartIdWithResponse Retrieve a cart
+//
+// Read an Object identified by `{cartId}`. `{cartId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /crm/objects/2026-03/carts/{cartId} (the `Getcrmobjects202603cartsCartId` operationId).
+func (c *ClientWithResponses) Getcrmobjects202603cartsCartIdWithResponse(ctx context.Context, cartId string, params *Getcrmobjects202603cartsCartIdParams, reqEditors ...RequestEditorFn) (*Getcrmobjects202603cartsCartIdResponse, error) {
+	rsp, err := c.Getcrmobjects202603cartsCartId(ctx, cartId, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetcrmobjects202603cartsCartIdResponse(rsp)
+}
+
+// Patchcrmobjects202603cartsCartIdWithBodyWithResponse Update a cart
+//
+// Perform a partial update of an Object identified by `{cartId}`or optionally a unique property value as specified by the `idProperty` query param. `{cartId}` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PATCH /crm/objects/2026-03/carts/{cartId} (the `Patchcrmobjects202603cartsCartId` operationId).
+func (c *ClientWithResponses) Patchcrmobjects202603cartsCartIdWithBodyWithResponse(ctx context.Context, cartId string, params *Patchcrmobjects202603cartsCartIdParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Patchcrmobjects202603cartsCartIdResponse, error) {
+	rsp, err := c.Patchcrmobjects202603cartsCartIdWithBody(ctx, cartId, params, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePatchcrmobjects202603cartsCartIdResponse(rsp)
+}
+
+// Patchcrmobjects202603cartsCartIdWithResponse Update a cart
+//
+// Perform a partial update of an Object identified by `{cartId}`or optionally a unique property value as specified by the `idProperty` query param. `{cartId}` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PATCH /crm/objects/2026-03/carts/{cartId} (the `Patchcrmobjects202603cartsCartId` operationId).
+func (c *ClientWithResponses) Patchcrmobjects202603cartsCartIdWithResponse(ctx context.Context, cartId string, params *Patchcrmobjects202603cartsCartIdParams, body Patchcrmobjects202603cartsCartIdJSONRequestBody, reqEditors ...RequestEditorFn) (*Patchcrmobjects202603cartsCartIdResponse, error) {
+	rsp, err := c.Patchcrmobjects202603cartsCartId(ctx, cartId, params, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePatchcrmobjects202603cartsCartIdResponse(rsp)
+}
+
+// Getcrmobjects202603commercePaymentsWithResponse List
+//
+// Read a page of commerce payments. Control what is returned via the `properties` query param.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /crm/objects/2026-03/commerce_payments (the `Getcrmobjects202603commercePayments` operationId).
+func (c *ClientWithResponses) Getcrmobjects202603commercePaymentsWithResponse(ctx context.Context, params *Getcrmobjects202603commercePaymentsParams, reqEditors ...RequestEditorFn) (*Getcrmobjects202603commercePaymentsResponse, error) {
+	rsp, err := c.Getcrmobjects202603commercePayments(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetcrmobjects202603commercePaymentsResponse(rsp)
+}
+
+// Postcrmobjects202603commercePaymentsWithBodyWithResponse Create
+//
+// Create a commerce payment with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard commerce payments is provided.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/commerce_payments (the `Postcrmobjects202603commercePayments` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603commercePaymentsWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603commercePaymentsResponse, error) {
+	rsp, err := c.Postcrmobjects202603commercePaymentsWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects202603commercePaymentsResponse(rsp)
+}
+
+// Postcrmobjects202603commercePaymentsWithResponse Create
+//
+// Create a commerce payment with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard commerce payments is provided.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/commerce_payments (the `Postcrmobjects202603commercePayments` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603commercePaymentsWithResponse(ctx context.Context, body Postcrmobjects202603commercePaymentsJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603commercePaymentsResponse, error) {
+	rsp, err := c.Postcrmobjects202603commercePayments(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects202603commercePaymentsResponse(rsp)
+}
+
+// Postcrmobjects202603commercePaymentsbatcharchiveWithBodyWithResponse Archive a batch of commerce payments by ID
+//
+// Archive a batch of commerce payments by their IDs. This operation moves the specified payments to the archive, making them inactive in the system.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/commerce_payments/batch/archive (the `Postcrmobjects202603commercePaymentsbatcharchive` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603commercePaymentsbatcharchiveWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603commercePaymentsbatcharchiveResponse, error) {
+	rsp, err := c.Postcrmobjects202603commercePaymentsbatcharchiveWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects202603commercePaymentsbatcharchiveResponse(rsp)
+}
+
+// Postcrmobjects202603commercePaymentsbatcharchiveWithResponse Archive a batch of commerce payments by ID
+//
+// Archive a batch of commerce payments by their IDs. This operation moves the specified payments to the archive, making them inactive in the system.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/commerce_payments/batch/archive (the `Postcrmobjects202603commercePaymentsbatcharchive` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603commercePaymentsbatcharchiveWithResponse(ctx context.Context, body Postcrmobjects202603commercePaymentsbatcharchiveJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603commercePaymentsbatcharchiveResponse, error) {
+	rsp, err := c.Postcrmobjects202603commercePaymentsbatcharchive(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects202603commercePaymentsbatcharchiveResponse(rsp)
+}
+
+// Postcrmobjects202603commercePaymentsbatchcreateWithBodyWithResponse Create a batch of commerce payments
+//
+// Create multiple commerce payment records in a single request, returning the details of each created payment, including their unique IDs.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/commerce_payments/batch/create (the `Postcrmobjects202603commercePaymentsbatchcreate` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603commercePaymentsbatchcreateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603commercePaymentsbatchcreateResponse, error) {
+	rsp, err := c.Postcrmobjects202603commercePaymentsbatchcreateWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects202603commercePaymentsbatchcreateResponse(rsp)
+}
+
+// Postcrmobjects202603commercePaymentsbatchcreateWithResponse Create a batch of commerce payments
+//
+// Create multiple commerce payment records in a single request, returning the details of each created payment, including their unique IDs.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/commerce_payments/batch/create (the `Postcrmobjects202603commercePaymentsbatchcreate` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603commercePaymentsbatchcreateWithResponse(ctx context.Context, body Postcrmobjects202603commercePaymentsbatchcreateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603commercePaymentsbatchcreateResponse, error) {
+	rsp, err := c.Postcrmobjects202603commercePaymentsbatchcreate(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects202603commercePaymentsbatchcreateResponse(rsp)
+}
+
+// Postcrmobjects202603commercePaymentsbatchreadWithBodyWithResponse Read a batch of commerce payments by internal ID, or unique property values
+//
+// Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/commerce_payments/batch/read (the `Postcrmobjects202603commercePaymentsbatchread` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603commercePaymentsbatchreadWithBodyWithResponse(ctx context.Context, params *Postcrmobjects202603commercePaymentsbatchreadParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603commercePaymentsbatchreadResponse, error) {
+	rsp, err := c.Postcrmobjects202603commercePaymentsbatchreadWithBody(ctx, params, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects202603commercePaymentsbatchreadResponse(rsp)
+}
+
+// Postcrmobjects202603commercePaymentsbatchreadWithResponse Read a batch of commerce payments by internal ID, or unique property values
+//
+// Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/commerce_payments/batch/read (the `Postcrmobjects202603commercePaymentsbatchread` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603commercePaymentsbatchreadWithResponse(ctx context.Context, params *Postcrmobjects202603commercePaymentsbatchreadParams, body Postcrmobjects202603commercePaymentsbatchreadJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603commercePaymentsbatchreadResponse, error) {
+	rsp, err := c.Postcrmobjects202603commercePaymentsbatchread(ctx, params, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects202603commercePaymentsbatchreadResponse(rsp)
+}
+
+// Postcrmobjects202603commercePaymentsbatchupdateWithBodyWithResponse Update a batch of commerce payments by internal ID, or unique property values
+//
+// Update multiple commerce payment records using their internal IDs or unique property values. This operation allows you to modify existing payment records in bulk by providing a list of records with their respective IDs and updated property values.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/commerce_payments/batch/update (the `Postcrmobjects202603commercePaymentsbatchupdate` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603commercePaymentsbatchupdateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603commercePaymentsbatchupdateResponse, error) {
+	rsp, err := c.Postcrmobjects202603commercePaymentsbatchupdateWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects202603commercePaymentsbatchupdateResponse(rsp)
+}
+
+// Postcrmobjects202603commercePaymentsbatchupdateWithResponse Update a batch of commerce payments by internal ID, or unique property values
+//
+// Update multiple commerce payment records using their internal IDs or unique property values. This operation allows you to modify existing payment records in bulk by providing a list of records with their respective IDs and updated property values.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/commerce_payments/batch/update (the `Postcrmobjects202603commercePaymentsbatchupdate` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603commercePaymentsbatchupdateWithResponse(ctx context.Context, body Postcrmobjects202603commercePaymentsbatchupdateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603commercePaymentsbatchupdateResponse, error) {
+	rsp, err := c.Postcrmobjects202603commercePaymentsbatchupdate(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects202603commercePaymentsbatchupdateResponse(rsp)
+}
+
+// Postcrmobjects202603commercePaymentsbatchupsertWithBodyWithResponse Create or update a batch of commerce payments by unique property values
+//
+// Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/commerce_payments/batch/upsert (the `Postcrmobjects202603commercePaymentsbatchupsert` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603commercePaymentsbatchupsertWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603commercePaymentsbatchupsertResponse, error) {
+	rsp, err := c.Postcrmobjects202603commercePaymentsbatchupsertWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects202603commercePaymentsbatchupsertResponse(rsp)
+}
+
+// Postcrmobjects202603commercePaymentsbatchupsertWithResponse Create or update a batch of commerce payments by unique property values
+//
+// Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/commerce_payments/batch/upsert (the `Postcrmobjects202603commercePaymentsbatchupsert` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603commercePaymentsbatchupsertWithResponse(ctx context.Context, body Postcrmobjects202603commercePaymentsbatchupsertJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603commercePaymentsbatchupsertResponse, error) {
+	rsp, err := c.Postcrmobjects202603commercePaymentsbatchupsert(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects202603commercePaymentsbatchupsertResponse(rsp)
+}
+
+// Postcrmobjects202603commercePaymentssearchWithBodyWithResponse Search for commerce payments using specified criteria.
+//
+// Execute a search for commerce payments based on the provided filter groups, properties, and sorting options. This endpoint allows for complex queries to retrieve specific payment records from the CRM.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/commerce_payments/search (the `Postcrmobjects202603commercePaymentssearch` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603commercePaymentssearchWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603commercePaymentssearchResponse, error) {
+	rsp, err := c.Postcrmobjects202603commercePaymentssearchWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects202603commercePaymentssearchResponse(rsp)
+}
+
+// Postcrmobjects202603commercePaymentssearchWithResponse Search for commerce payments using specified criteria.
+//
+// Execute a search for commerce payments based on the provided filter groups, properties, and sorting options. This endpoint allows for complex queries to retrieve specific payment records from the CRM.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/commerce_payments/search (the `Postcrmobjects202603commercePaymentssearch` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603commercePaymentssearchWithResponse(ctx context.Context, body Postcrmobjects202603commercePaymentssearchJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603commercePaymentssearchResponse, error) {
+	rsp, err := c.Postcrmobjects202603commercePaymentssearch(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects202603commercePaymentssearchResponse(rsp)
+}
+
+// Deletecrmobjects202603commercePaymentsCommercePaymentIdWithResponse Archive
+//
+// Move an Object identified by `{commercePaymentId}` to the recycling bin.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with DELETE /crm/objects/2026-03/commerce_payments/{commercePaymentId} (the `Deletecrmobjects202603commercePaymentsCommercePaymentId` operationId).
+func (c *ClientWithResponses) Deletecrmobjects202603commercePaymentsCommercePaymentIdWithResponse(ctx context.Context, commercePaymentId string, reqEditors ...RequestEditorFn) (*Deletecrmobjects202603commercePaymentsCommercePaymentIdResponse, error) {
+	rsp, err := c.Deletecrmobjects202603commercePaymentsCommercePaymentId(ctx, commercePaymentId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDeletecrmobjects202603commercePaymentsCommercePaymentIdResponse(rsp)
+}
+
+// Getcrmobjects202603commercePaymentsCommercePaymentIdWithResponse Read
+//
+// Read an Object identified by `{commercePaymentId}`. `{commercePaymentId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /crm/objects/2026-03/commerce_payments/{commercePaymentId} (the `Getcrmobjects202603commercePaymentsCommercePaymentId` operationId).
+func (c *ClientWithResponses) Getcrmobjects202603commercePaymentsCommercePaymentIdWithResponse(ctx context.Context, commercePaymentId string, params *Getcrmobjects202603commercePaymentsCommercePaymentIdParams, reqEditors ...RequestEditorFn) (*Getcrmobjects202603commercePaymentsCommercePaymentIdResponse, error) {
+	rsp, err := c.Getcrmobjects202603commercePaymentsCommercePaymentId(ctx, commercePaymentId, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetcrmobjects202603commercePaymentsCommercePaymentIdResponse(rsp)
+}
+
+// Patchcrmobjects202603commercePaymentsCommercePaymentIdWithBodyWithResponse Update
+//
+// Perform a partial update of an Object identified by `{commercePaymentId}`or optionally a unique property value as specified by the `idProperty` query param. `{commercePaymentId}` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PATCH /crm/objects/2026-03/commerce_payments/{commercePaymentId} (the `Patchcrmobjects202603commercePaymentsCommercePaymentId` operationId).
+func (c *ClientWithResponses) Patchcrmobjects202603commercePaymentsCommercePaymentIdWithBodyWithResponse(ctx context.Context, commercePaymentId string, params *Patchcrmobjects202603commercePaymentsCommercePaymentIdParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Patchcrmobjects202603commercePaymentsCommercePaymentIdResponse, error) {
+	rsp, err := c.Patchcrmobjects202603commercePaymentsCommercePaymentIdWithBody(ctx, commercePaymentId, params, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePatchcrmobjects202603commercePaymentsCommercePaymentIdResponse(rsp)
+}
+
+// Patchcrmobjects202603commercePaymentsCommercePaymentIdWithResponse Update
+//
+// Perform a partial update of an Object identified by `{commercePaymentId}`or optionally a unique property value as specified by the `idProperty` query param. `{commercePaymentId}` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PATCH /crm/objects/2026-03/commerce_payments/{commercePaymentId} (the `Patchcrmobjects202603commercePaymentsCommercePaymentId` operationId).
+func (c *ClientWithResponses) Patchcrmobjects202603commercePaymentsCommercePaymentIdWithResponse(ctx context.Context, commercePaymentId string, params *Patchcrmobjects202603commercePaymentsCommercePaymentIdParams, body Patchcrmobjects202603commercePaymentsCommercePaymentIdJSONRequestBody, reqEditors ...RequestEditorFn) (*Patchcrmobjects202603commercePaymentsCommercePaymentIdResponse, error) {
+	rsp, err := c.Patchcrmobjects202603commercePaymentsCommercePaymentId(ctx, commercePaymentId, params, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePatchcrmobjects202603commercePaymentsCommercePaymentIdResponse(rsp)
+}
+
+// Getcrmobjects202603communicationsGetPageWithResponse List
+//
+// Read a page of communications. Control what is returned via the `properties` query param.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /crm/objects/2026-03/communications (the `Getcrmobjects202603communicationsGetPage` operationId).
+func (c *ClientWithResponses) Getcrmobjects202603communicationsGetPageWithResponse(ctx context.Context, params *Getcrmobjects202603communicationsGetPageParams, reqEditors ...RequestEditorFn) (*Getcrmobjects202603communicationsGetPageResponse, error) {
+	rsp, err := c.Getcrmobjects202603communicationsGetPage(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetcrmobjects202603communicationsGetPageResponse(rsp)
+}
 
 // Postcrmobjects202603communicationsCreateWithBodyWithResponse Create
 //
@@ -598,9 +3075,13 @@ func (c *ClientWithResponses) Patchcrmobjects202603companiesCompanyIdUpdateWithR
 	return ParsePatchcrmobjects202603companiesCompanyIdUpdateResponse(rsp)
 }
 
-// Getcrmobjects202603contactsGetPageWithResponse performs a GET /crm/objects/2026-03/contacts (the `Getcrmobjects202603contactsGetPage` operationId) request.
+// Getcrmobjects202603contactsGetPageWithResponse Retrieve contacts
+//
+// Retrieve all contacts, using query parameters to specify the information that gets returned.
 //
 // Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /crm/objects/2026-03/contacts (the `Getcrmobjects202603contactsGetPage` operationId).
 func (c *ClientWithResponses) Getcrmobjects202603contactsGetPageWithResponse(ctx context.Context, params *Getcrmobjects202603contactsGetPageParams, reqEditors ...RequestEditorFn) (*Getcrmobjects202603contactsGetPageResponse, error) {
 	rsp, err := c.Getcrmobjects202603contactsGetPage(ctx, params, reqEditors...)
 	if err != nil {
@@ -610,6 +3091,8 @@ func (c *ClientWithResponses) Getcrmobjects202603contactsGetPageWithResponse(ctx
 }
 
 // Postcrmobjects202603contactsCreateWithBodyWithResponse Create a contact
+//
+// Create a single contact. Include a `properties` object to define [property values](https://developers.hubspot.com/docs/guides/api/crm/properties) for the contact, along with an `associations` array to define [associations](https://developers.hubspot.com/docs/guides/api/crm/associations/associations-v4) with other CRM records.
 //
 // Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 //
@@ -624,6 +3107,8 @@ func (c *ClientWithResponses) Postcrmobjects202603contactsCreateWithBodyWithResp
 
 // Postcrmobjects202603contactsCreateWithResponse Create a contact
 //
+// Create a single contact. Include a `properties` object to define [property values](https://developers.hubspot.com/docs/guides/api/crm/properties) for the contact, along with an `associations` array to define [associations](https://developers.hubspot.com/docs/guides/api/crm/associations/associations-v4) with other CRM records.
+//
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 //
 // Corresponds with POST /crm/objects/2026-03/contacts (the `Postcrmobjects202603contactsCreate` operationId).
@@ -636,6 +3121,8 @@ func (c *ClientWithResponses) Postcrmobjects202603contactsCreateWithResponse(ctx
 }
 
 // Postcrmobjects202603contactsbatcharchiveArchiveWithBodyWithResponse Archive a batch of contacts
+//
+// Archive a batch of contacts by ID. Archived contacts can be restored within 90 days of deletion. Learn more about the [data impacted by contact deletions](https://knowledge.hubspot.com/privacy-and-consent/understand-restorable-and-permanent-contact-deletions) and how to [restore archived records](https://knowledge.hubspot.com/records/restore-deleted-records).
 //
 // Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 //
@@ -650,6 +3137,8 @@ func (c *ClientWithResponses) Postcrmobjects202603contactsbatcharchiveArchiveWit
 
 // Postcrmobjects202603contactsbatcharchiveArchiveWithResponse Archive a batch of contacts
 //
+// Archive a batch of contacts by ID. Archived contacts can be restored within 90 days of deletion. Learn more about the [data impacted by contact deletions](https://knowledge.hubspot.com/privacy-and-consent/understand-restorable-and-permanent-contact-deletions) and how to [restore archived records](https://knowledge.hubspot.com/records/restore-deleted-records).
+//
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 //
 // Corresponds with POST /crm/objects/2026-03/contacts/batch/archive (the `Postcrmobjects202603contactsbatcharchiveArchive` operationId).
@@ -661,10 +3150,13 @@ func (c *ClientWithResponses) Postcrmobjects202603contactsbatcharchiveArchiveWit
 	return ParsePostcrmobjects202603contactsbatcharchiveArchiveResponse(rsp)
 }
 
-// Postcrmobjects202603contactsbatchcreateCreateWithBodyWithResponse performs a POST /crm/objects/2026-03/contacts/batch/create (the `Postcrmobjects202603contactsbatchcreateCreate` operationId) request,
-// with any type of body and a specified content type.
+// Postcrmobjects202603contactsbatchcreateCreateWithBodyWithResponse Create a batch of contacts
 //
-// Returns a wrapper object for the known response body format(s).
+// Create a batch of contacts. The `inputs` array can contain a `properties` object to define property values for each record, along with an `associations` array to define [associations](https://developers.hubspot.com/docs/guides/api/crm/associations/associations-v4) with other CRM records.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/contacts/batch/create (the `Postcrmobjects202603contactsbatchcreateCreate` operationId).
 func (c *ClientWithResponses) Postcrmobjects202603contactsbatchcreateCreateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603contactsbatchcreateCreateResponse, error) {
 	rsp, err := c.Postcrmobjects202603contactsbatchcreateCreateWithBody(ctx, contentType, body, reqEditors...)
 	if err != nil {
@@ -673,8 +3165,13 @@ func (c *ClientWithResponses) Postcrmobjects202603contactsbatchcreateCreateWithB
 	return ParsePostcrmobjects202603contactsbatchcreateCreateResponse(rsp)
 }
 
-// Postcrmobjects202603contactsbatchcreateCreateWithResponse performs a POST /crm/objects/2026-03/contacts/batch/create (the `Postcrmobjects202603contactsbatchcreateCreate` operationId) request.
+// Postcrmobjects202603contactsbatchcreateCreateWithResponse Create a batch of contacts
+//
+// Create a batch of contacts. The `inputs` array can contain a `properties` object to define property values for each record, along with an `associations` array to define [associations](https://developers.hubspot.com/docs/guides/api/crm/associations/associations-v4) with other CRM records.
+//
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/contacts/batch/create (the `Postcrmobjects202603contactsbatchcreateCreate` operationId).
 func (c *ClientWithResponses) Postcrmobjects202603contactsbatchcreateCreateWithResponse(ctx context.Context, body Postcrmobjects202603contactsbatchcreateCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603contactsbatchcreateCreateResponse, error) {
 	rsp, err := c.Postcrmobjects202603contactsbatchcreateCreate(ctx, body, reqEditors...)
 	if err != nil {
@@ -683,10 +3180,13 @@ func (c *ClientWithResponses) Postcrmobjects202603contactsbatchcreateCreateWithR
 	return ParsePostcrmobjects202603contactsbatchcreateCreateResponse(rsp)
 }
 
-// Postcrmobjects202603contactsbatchreadReadWithBodyWithResponse performs a POST /crm/objects/2026-03/contacts/batch/read (the `Postcrmobjects202603contactsbatchreadRead` operationId) request,
-// with any type of body and a specified content type.
+// Postcrmobjects202603contactsbatchreadReadWithBodyWithResponse Retrieve a batch of contacts
 //
-// Returns a wrapper object for the known response body format(s).
+// Retrieve a batch of contacts by ID (`contactId`) or unique property value (`idProperty`).
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/contacts/batch/read (the `Postcrmobjects202603contactsbatchreadRead` operationId).
 func (c *ClientWithResponses) Postcrmobjects202603contactsbatchreadReadWithBodyWithResponse(ctx context.Context, params *Postcrmobjects202603contactsbatchreadReadParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603contactsbatchreadReadResponse, error) {
 	rsp, err := c.Postcrmobjects202603contactsbatchreadReadWithBody(ctx, params, contentType, body, reqEditors...)
 	if err != nil {
@@ -695,8 +3195,13 @@ func (c *ClientWithResponses) Postcrmobjects202603contactsbatchreadReadWithBodyW
 	return ParsePostcrmobjects202603contactsbatchreadReadResponse(rsp)
 }
 
-// Postcrmobjects202603contactsbatchreadReadWithResponse performs a POST /crm/objects/2026-03/contacts/batch/read (the `Postcrmobjects202603contactsbatchreadRead` operationId) request.
+// Postcrmobjects202603contactsbatchreadReadWithResponse Retrieve a batch of contacts
+//
+// Retrieve a batch of contacts by ID (`contactId`) or unique property value (`idProperty`).
+//
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/contacts/batch/read (the `Postcrmobjects202603contactsbatchreadRead` operationId).
 func (c *ClientWithResponses) Postcrmobjects202603contactsbatchreadReadWithResponse(ctx context.Context, params *Postcrmobjects202603contactsbatchreadReadParams, body Postcrmobjects202603contactsbatchreadReadJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603contactsbatchreadReadResponse, error) {
 	rsp, err := c.Postcrmobjects202603contactsbatchreadRead(ctx, params, body, reqEditors...)
 	if err != nil {
@@ -705,10 +3210,13 @@ func (c *ClientWithResponses) Postcrmobjects202603contactsbatchreadReadWithRespo
 	return ParsePostcrmobjects202603contactsbatchreadReadResponse(rsp)
 }
 
-// Postcrmobjects202603contactsbatchupdateUpdateWithBodyWithResponse performs a POST /crm/objects/2026-03/contacts/batch/update (the `Postcrmobjects202603contactsbatchupdateUpdate` operationId) request,
-// with any type of body and a specified content type.
+// Postcrmobjects202603contactsbatchupdateUpdateWithBodyWithResponse Update a batch of contacts
 //
-// Returns a wrapper object for the known response body format(s).
+// Update a batch of contacts by ID (`contactId`) or unique property value (`idProperty`). Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/contacts/batch/update (the `Postcrmobjects202603contactsbatchupdateUpdate` operationId).
 func (c *ClientWithResponses) Postcrmobjects202603contactsbatchupdateUpdateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603contactsbatchupdateUpdateResponse, error) {
 	rsp, err := c.Postcrmobjects202603contactsbatchupdateUpdateWithBody(ctx, contentType, body, reqEditors...)
 	if err != nil {
@@ -717,8 +3225,13 @@ func (c *ClientWithResponses) Postcrmobjects202603contactsbatchupdateUpdateWithB
 	return ParsePostcrmobjects202603contactsbatchupdateUpdateResponse(rsp)
 }
 
-// Postcrmobjects202603contactsbatchupdateUpdateWithResponse performs a POST /crm/objects/2026-03/contacts/batch/update (the `Postcrmobjects202603contactsbatchupdateUpdate` operationId) request.
+// Postcrmobjects202603contactsbatchupdateUpdateWithResponse Update a batch of contacts
+//
+// Update a batch of contacts by ID (`contactId`) or unique property value (`idProperty`). Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
+//
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/contacts/batch/update (the `Postcrmobjects202603contactsbatchupdateUpdate` operationId).
 func (c *ClientWithResponses) Postcrmobjects202603contactsbatchupdateUpdateWithResponse(ctx context.Context, body Postcrmobjects202603contactsbatchupdateUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603contactsbatchupdateUpdateResponse, error) {
 	rsp, err := c.Postcrmobjects202603contactsbatchupdateUpdate(ctx, body, reqEditors...)
 	if err != nil {
@@ -727,10 +3240,13 @@ func (c *ClientWithResponses) Postcrmobjects202603contactsbatchupdateUpdateWithR
 	return ParsePostcrmobjects202603contactsbatchupdateUpdateResponse(rsp)
 }
 
-// Postcrmobjects202603contactsbatchupsertUpsertWithBodyWithResponse performs a POST /crm/objects/2026-03/contacts/batch/upsert (the `Postcrmobjects202603contactsbatchupsertUpsert` operationId) request,
-// with any type of body and a specified content type.
+// Postcrmobjects202603contactsbatchupsertUpsertWithBodyWithResponse Create or update a batch of contacts
 //
-// Returns a wrapper object for the known response body format(s).
+// Upsert a batch of contacts. The `inputs` array can contain a `properties` object to define property values for each record.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/contacts/batch/upsert (the `Postcrmobjects202603contactsbatchupsertUpsert` operationId).
 func (c *ClientWithResponses) Postcrmobjects202603contactsbatchupsertUpsertWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603contactsbatchupsertUpsertResponse, error) {
 	rsp, err := c.Postcrmobjects202603contactsbatchupsertUpsertWithBody(ctx, contentType, body, reqEditors...)
 	if err != nil {
@@ -739,8 +3255,13 @@ func (c *ClientWithResponses) Postcrmobjects202603contactsbatchupsertUpsertWithB
 	return ParsePostcrmobjects202603contactsbatchupsertUpsertResponse(rsp)
 }
 
-// Postcrmobjects202603contactsbatchupsertUpsertWithResponse performs a POST /crm/objects/2026-03/contacts/batch/upsert (the `Postcrmobjects202603contactsbatchupsertUpsert` operationId) request.
+// Postcrmobjects202603contactsbatchupsertUpsertWithResponse Create or update a batch of contacts
+//
+// Upsert a batch of contacts. The `inputs` array can contain a `properties` object to define property values for each record.
+//
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/contacts/batch/upsert (the `Postcrmobjects202603contactsbatchupsertUpsert` operationId).
 func (c *ClientWithResponses) Postcrmobjects202603contactsbatchupsertUpsertWithResponse(ctx context.Context, body Postcrmobjects202603contactsbatchupsertUpsertJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603contactsbatchupsertUpsertResponse, error) {
 	rsp, err := c.Postcrmobjects202603contactsbatchupsertUpsert(ctx, body, reqEditors...)
 	if err != nil {
@@ -749,10 +3270,13 @@ func (c *ClientWithResponses) Postcrmobjects202603contactsbatchupsertUpsertWithR
 	return ParsePostcrmobjects202603contactsbatchupsertUpsertResponse(rsp)
 }
 
-// Postcrmobjects202603contactsgdprDeletePurgeWithBodyWithResponse performs a POST /crm/objects/2026-03/contacts/gdpr-delete (the `Postcrmobjects202603contactsgdprDeletePurge` operationId) request,
-// with any type of body and a specified content type.
+// Postcrmobjects202603contactsgdprDeletePurgeWithBodyWithResponse Permanently delete a contact (GDPR-compliant)
 //
-// Returns a wrapper object for the known response body format(s).
+// Permanently delete a contact and all associated content to follow GDPR. Use optional property `idProperty` set to `email` to identify contact by email address. If email address is not found, the email address will be added to a blocklist and prevent it from being used in the future. Learn more about [permanently deleting contacts](https://knowledge.hubspot.com/privacy-and-consent/how-do-i-perform-a-gdpr-delete-in-hubspot).
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/contacts/gdpr-delete (the `Postcrmobjects202603contactsgdprDeletePurge` operationId).
 func (c *ClientWithResponses) Postcrmobjects202603contactsgdprDeletePurgeWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603contactsgdprDeletePurgeResponse, error) {
 	rsp, err := c.Postcrmobjects202603contactsgdprDeletePurgeWithBody(ctx, contentType, body, reqEditors...)
 	if err != nil {
@@ -761,8 +3285,13 @@ func (c *ClientWithResponses) Postcrmobjects202603contactsgdprDeletePurgeWithBod
 	return ParsePostcrmobjects202603contactsgdprDeletePurgeResponse(rsp)
 }
 
-// Postcrmobjects202603contactsgdprDeletePurgeWithResponse performs a POST /crm/objects/2026-03/contacts/gdpr-delete (the `Postcrmobjects202603contactsgdprDeletePurge` operationId) request.
+// Postcrmobjects202603contactsgdprDeletePurgeWithResponse Permanently delete a contact (GDPR-compliant)
+//
+// Permanently delete a contact and all associated content to follow GDPR. Use optional property `idProperty` set to `email` to identify contact by email address. If email address is not found, the email address will be added to a blocklist and prevent it from being used in the future. Learn more about [permanently deleting contacts](https://knowledge.hubspot.com/privacy-and-consent/how-do-i-perform-a-gdpr-delete-in-hubspot).
+//
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/contacts/gdpr-delete (the `Postcrmobjects202603contactsgdprDeletePurge` operationId).
 func (c *ClientWithResponses) Postcrmobjects202603contactsgdprDeletePurgeWithResponse(ctx context.Context, body Postcrmobjects202603contactsgdprDeletePurgeJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603contactsgdprDeletePurgeResponse, error) {
 	rsp, err := c.Postcrmobjects202603contactsgdprDeletePurge(ctx, body, reqEditors...)
 	if err != nil {
@@ -772,6 +3301,8 @@ func (c *ClientWithResponses) Postcrmobjects202603contactsgdprDeletePurgeWithRes
 }
 
 // Postcrmobjects202603contactsmergeMergeWithBodyWithResponse Merge two contacts
+//
+// Merge two contact records. Learn more about [merging records](https://knowledge.hubspot.com/records/merge-records).
 //
 // Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 //
@@ -785,6 +3316,8 @@ func (c *ClientWithResponses) Postcrmobjects202603contactsmergeMergeWithBodyWith
 }
 
 // Postcrmobjects202603contactsmergeMergeWithResponse Merge two contacts
+//
+// Merge two contact records. Learn more about [merging records](https://knowledge.hubspot.com/records/merge-records).
 //
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 //
@@ -827,11 +3360,13 @@ func (c *ClientWithResponses) Postcrmobjects202603contactssearchDoSearchWithResp
 	return ParsePostcrmobjects202603contactssearchDoSearchResponse(rsp)
 }
 
-// Deletecrmobjects202603contactsContactIdArchiveWithResponse performs a DELETE /crm/objects/2026-03/contacts/{contactId} (the `Deletecrmobjects202603contactsContactIdArchive` operationId) request.
+// Deletecrmobjects202603contactsContactIdArchiveWithResponse Archive a contact
 //
 // Delete a contact by ID. Deleted contacts can be restored within 90 days of deletion. Learn more about the [data impacted by contact deletions](https://knowledge.hubspot.com/privacy-and-consent/understand-restorable-and-permanent-contact-deletions) and how to [restore archived records](https://knowledge.hubspot.com/records/restore-deleted-records).
 //
 // Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with DELETE /crm/objects/2026-03/contacts/{contactId} (the `Deletecrmobjects202603contactsContactIdArchive` operationId).
 func (c *ClientWithResponses) Deletecrmobjects202603contactsContactIdArchiveWithResponse(ctx context.Context, contactId string, reqEditors ...RequestEditorFn) (*Deletecrmobjects202603contactsContactIdArchiveResponse, error) {
 	rsp, err := c.Deletecrmobjects202603contactsContactIdArchive(ctx, contactId, reqEditors...)
 	if err != nil {
@@ -840,9 +3375,13 @@ func (c *ClientWithResponses) Deletecrmobjects202603contactsContactIdArchiveWith
 	return ParseDeletecrmobjects202603contactsContactIdArchiveResponse(rsp)
 }
 
-// Getcrmobjects202603contactsContactIdGetByIdWithResponse performs a GET /crm/objects/2026-03/contacts/{contactId} (the `Getcrmobjects202603contactsContactIdGetById` operationId) request.
+// Getcrmobjects202603contactsContactIdGetByIdWithResponse Retrieve a contact
+//
+// Retrieve a contact by its ID (`contactId`) or by a unique property (`idProperty`). You can specify what is returned using the `properties` query parameter.
 //
 // Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /crm/objects/2026-03/contacts/{contactId} (the `Getcrmobjects202603contactsContactIdGetById` operationId).
 func (c *ClientWithResponses) Getcrmobjects202603contactsContactIdGetByIdWithResponse(ctx context.Context, contactId string, params *Getcrmobjects202603contactsContactIdGetByIdParams, reqEditors ...RequestEditorFn) (*Getcrmobjects202603contactsContactIdGetByIdResponse, error) {
 	rsp, err := c.Getcrmobjects202603contactsContactIdGetById(ctx, contactId, params, reqEditors...)
 	if err != nil {
@@ -851,12 +3390,13 @@ func (c *ClientWithResponses) Getcrmobjects202603contactsContactIdGetByIdWithRes
 	return ParseGetcrmobjects202603contactsContactIdGetByIdResponse(rsp)
 }
 
-// Patchcrmobjects202603contactsContactIdUpdateWithBodyWithResponse performs a PATCH /crm/objects/2026-03/contacts/{contactId} (the `Patchcrmobjects202603contactsContactIdUpdate` operationId) request,
-// with any type of body and a specified content type.
+// Patchcrmobjects202603contactsContactIdUpdateWithBodyWithResponse Update a contact
 //
 // Update an existing contact, identified by ID or email/unique property value. To identify a contact by ID, include the ID in the request URL path. To identify a contact by their email or other unique property, include the email/property value in the request URL path, and add the `idProperty` query parameter (`/crm/v3/objects/contacts/jon@website.com?idProperty=email`). Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
 //
-// Returns a wrapper object for the known response body format(s).
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PATCH /crm/objects/2026-03/contacts/{contactId} (the `Patchcrmobjects202603contactsContactIdUpdate` operationId).
 func (c *ClientWithResponses) Patchcrmobjects202603contactsContactIdUpdateWithBodyWithResponse(ctx context.Context, contactId string, params *Patchcrmobjects202603contactsContactIdUpdateParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Patchcrmobjects202603contactsContactIdUpdateResponse, error) {
 	rsp, err := c.Patchcrmobjects202603contactsContactIdUpdateWithBody(ctx, contactId, params, contentType, body, reqEditors...)
 	if err != nil {
@@ -865,10 +3405,13 @@ func (c *ClientWithResponses) Patchcrmobjects202603contactsContactIdUpdateWithBo
 	return ParsePatchcrmobjects202603contactsContactIdUpdateResponse(rsp)
 }
 
-// Patchcrmobjects202603contactsContactIdUpdateWithResponse performs a PATCH /crm/objects/2026-03/contacts/{contactId} (the `Patchcrmobjects202603contactsContactIdUpdate` operationId) request.
-// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+// Patchcrmobjects202603contactsContactIdUpdateWithResponse Update a contact
 //
 // Update an existing contact, identified by ID or email/unique property value. To identify a contact by ID, include the ID in the request URL path. To identify a contact by their email or other unique property, include the email/property value in the request URL path, and add the `idProperty` query parameter (`/crm/v3/objects/contacts/jon@website.com?idProperty=email`). Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PATCH /crm/objects/2026-03/contacts/{contactId} (the `Patchcrmobjects202603contactsContactIdUpdate` operationId).
 func (c *ClientWithResponses) Patchcrmobjects202603contactsContactIdUpdateWithResponse(ctx context.Context, contactId string, params *Patchcrmobjects202603contactsContactIdUpdateParams, body Patchcrmobjects202603contactsContactIdUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*Patchcrmobjects202603contactsContactIdUpdateResponse, error) {
 	rsp, err := c.Patchcrmobjects202603contactsContactIdUpdate(ctx, contactId, params, body, reqEditors...)
 	if err != nil {
@@ -937,7 +3480,39 @@ func (c *ClientWithResponses) Getcrmobjects202603contractsContractIdWithResponse
 	return ParseGetcrmobjects202603contractsContractIdResponse(rsp)
 }
 
+// Postcrmobjects202603coursesmergeWithBodyWithResponse Merge two courses
+//
+// Merge two courses.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/courses/merge (the `Postcrmobjects202603coursesmerge` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603coursesmergeWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603coursesmergeResponse, error) {
+	rsp, err := c.Postcrmobjects202603coursesmergeWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects202603coursesmergeResponse(rsp)
+}
+
+// Postcrmobjects202603coursesmergeWithResponse Merge two courses
+//
+// Merge two courses.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/courses/merge (the `Postcrmobjects202603coursesmerge` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603coursesmergeWithResponse(ctx context.Context, body Postcrmobjects202603coursesmergeJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603coursesmergeResponse, error) {
+	rsp, err := c.Postcrmobjects202603coursesmerge(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects202603coursesmergeResponse(rsp)
+}
+
 // Getcrmobjects202603discountsWithResponse List
+//
+// Read a page of discounts. Control what is returned via the `properties` query param.
 //
 // Returns a wrapper object for the known response body format(s).
 //
@@ -950,12 +3525,13 @@ func (c *ClientWithResponses) Getcrmobjects202603discountsWithResponse(ctx conte
 	return ParseGetcrmobjects202603discountsResponse(rsp)
 }
 
-// Postcrmobjects202603discountsWithBodyWithResponse performs a POST /crm/objects/2026-03/discounts (the `Postcrmobjects202603discounts` operationId) request,
-// with any type of body and a specified content type.
+// Postcrmobjects202603discountsWithBodyWithResponse Create
 //
 // Create a discount with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard discounts is provided.
 //
-// Returns a wrapper object for the known response body format(s).
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/discounts (the `Postcrmobjects202603discounts` operationId).
 func (c *ClientWithResponses) Postcrmobjects202603discountsWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603discountsResponse, error) {
 	rsp, err := c.Postcrmobjects202603discountsWithBody(ctx, contentType, body, reqEditors...)
 	if err != nil {
@@ -964,10 +3540,13 @@ func (c *ClientWithResponses) Postcrmobjects202603discountsWithBodyWithResponse(
 	return ParsePostcrmobjects202603discountsResponse(rsp)
 }
 
-// Postcrmobjects202603discountsWithResponse performs a POST /crm/objects/2026-03/discounts (the `Postcrmobjects202603discounts` operationId) request.
-// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+// Postcrmobjects202603discountsWithResponse Create
 //
 // Create a discount with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard discounts is provided.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/discounts (the `Postcrmobjects202603discounts` operationId).
 func (c *ClientWithResponses) Postcrmobjects202603discountsWithResponse(ctx context.Context, body Postcrmobjects202603discountsJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603discountsResponse, error) {
 	rsp, err := c.Postcrmobjects202603discounts(ctx, body, reqEditors...)
 	if err != nil {
@@ -976,10 +3555,11 @@ func (c *ClientWithResponses) Postcrmobjects202603discountsWithResponse(ctx cont
 	return ParsePostcrmobjects202603discountsResponse(rsp)
 }
 
-// Postcrmobjects202603discountsbatcharchiveWithBodyWithResponse performs a POST /crm/objects/2026-03/discounts/batch/archive (the `Postcrmobjects202603discountsbatcharchive` operationId) request,
-// with any type of body and a specified content type.
+// Postcrmobjects202603discountsbatcharchiveWithBodyWithResponse Archive a batch of discounts by ID
 //
-// Returns a wrapper object for the known response body format(s).
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/discounts/batch/archive (the `Postcrmobjects202603discountsbatcharchive` operationId).
 func (c *ClientWithResponses) Postcrmobjects202603discountsbatcharchiveWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603discountsbatcharchiveResponse, error) {
 	rsp, err := c.Postcrmobjects202603discountsbatcharchiveWithBody(ctx, contentType, body, reqEditors...)
 	if err != nil {
@@ -988,8 +3568,11 @@ func (c *ClientWithResponses) Postcrmobjects202603discountsbatcharchiveWithBodyW
 	return ParsePostcrmobjects202603discountsbatcharchiveResponse(rsp)
 }
 
-// Postcrmobjects202603discountsbatcharchiveWithResponse performs a POST /crm/objects/2026-03/discounts/batch/archive (the `Postcrmobjects202603discountsbatcharchive` operationId) request.
+// Postcrmobjects202603discountsbatcharchiveWithResponse Archive a batch of discounts by ID
+//
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/discounts/batch/archive (the `Postcrmobjects202603discountsbatcharchive` operationId).
 func (c *ClientWithResponses) Postcrmobjects202603discountsbatcharchiveWithResponse(ctx context.Context, body Postcrmobjects202603discountsbatcharchiveJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603discountsbatcharchiveResponse, error) {
 	rsp, err := c.Postcrmobjects202603discountsbatcharchive(ctx, body, reqEditors...)
 	if err != nil {
@@ -998,10 +3581,11 @@ func (c *ClientWithResponses) Postcrmobjects202603discountsbatcharchiveWithRespo
 	return ParsePostcrmobjects202603discountsbatcharchiveResponse(rsp)
 }
 
-// Postcrmobjects202603discountsbatchcreateWithBodyWithResponse performs a POST /crm/objects/2026-03/discounts/batch/create (the `Postcrmobjects202603discountsbatchcreate` operationId) request,
-// with any type of body and a specified content type.
+// Postcrmobjects202603discountsbatchcreateWithBodyWithResponse Create a batch of discounts
 //
-// Returns a wrapper object for the known response body format(s).
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/discounts/batch/create (the `Postcrmobjects202603discountsbatchcreate` operationId).
 func (c *ClientWithResponses) Postcrmobjects202603discountsbatchcreateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603discountsbatchcreateResponse, error) {
 	rsp, err := c.Postcrmobjects202603discountsbatchcreateWithBody(ctx, contentType, body, reqEditors...)
 	if err != nil {
@@ -1010,8 +3594,11 @@ func (c *ClientWithResponses) Postcrmobjects202603discountsbatchcreateWithBodyWi
 	return ParsePostcrmobjects202603discountsbatchcreateResponse(rsp)
 }
 
-// Postcrmobjects202603discountsbatchcreateWithResponse performs a POST /crm/objects/2026-03/discounts/batch/create (the `Postcrmobjects202603discountsbatchcreate` operationId) request.
+// Postcrmobjects202603discountsbatchcreateWithResponse Create a batch of discounts
+//
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/discounts/batch/create (the `Postcrmobjects202603discountsbatchcreate` operationId).
 func (c *ClientWithResponses) Postcrmobjects202603discountsbatchcreateWithResponse(ctx context.Context, body Postcrmobjects202603discountsbatchcreateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603discountsbatchcreateResponse, error) {
 	rsp, err := c.Postcrmobjects202603discountsbatchcreate(ctx, body, reqEditors...)
 	if err != nil {
@@ -1020,12 +3607,13 @@ func (c *ClientWithResponses) Postcrmobjects202603discountsbatchcreateWithRespon
 	return ParsePostcrmobjects202603discountsbatchcreateResponse(rsp)
 }
 
-// Postcrmobjects202603discountsbatchreadWithBodyWithResponse performs a POST /crm/objects/2026-03/discounts/batch/read (the `Postcrmobjects202603discountsbatchread` operationId) request,
-// with any type of body and a specified content type.
+// Postcrmobjects202603discountsbatchreadWithBodyWithResponse Read a batch of discounts by internal ID, or unique property values
 //
 // Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
 //
-// Returns a wrapper object for the known response body format(s).
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/discounts/batch/read (the `Postcrmobjects202603discountsbatchread` operationId).
 func (c *ClientWithResponses) Postcrmobjects202603discountsbatchreadWithBodyWithResponse(ctx context.Context, params *Postcrmobjects202603discountsbatchreadParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603discountsbatchreadResponse, error) {
 	rsp, err := c.Postcrmobjects202603discountsbatchreadWithBody(ctx, params, contentType, body, reqEditors...)
 	if err != nil {
@@ -1034,10 +3622,13 @@ func (c *ClientWithResponses) Postcrmobjects202603discountsbatchreadWithBodyWith
 	return ParsePostcrmobjects202603discountsbatchreadResponse(rsp)
 }
 
-// Postcrmobjects202603discountsbatchreadWithResponse performs a POST /crm/objects/2026-03/discounts/batch/read (the `Postcrmobjects202603discountsbatchread` operationId) request.
-// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+// Postcrmobjects202603discountsbatchreadWithResponse Read a batch of discounts by internal ID, or unique property values
 //
 // Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/discounts/batch/read (the `Postcrmobjects202603discountsbatchread` operationId).
 func (c *ClientWithResponses) Postcrmobjects202603discountsbatchreadWithResponse(ctx context.Context, params *Postcrmobjects202603discountsbatchreadParams, body Postcrmobjects202603discountsbatchreadJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603discountsbatchreadResponse, error) {
 	rsp, err := c.Postcrmobjects202603discountsbatchread(ctx, params, body, reqEditors...)
 	if err != nil {
@@ -1072,10 +3663,13 @@ func (c *ClientWithResponses) Postcrmobjects202603discountsbatchupdateWithRespon
 	return ParsePostcrmobjects202603discountsbatchupdateResponse(rsp)
 }
 
-// Postcrmobjects202603discountsbatchupsertWithBodyWithResponse performs a POST /crm/objects/2026-03/discounts/batch/upsert (the `Postcrmobjects202603discountsbatchupsert` operationId) request,
-// with any type of body and a specified content type.
+// Postcrmobjects202603discountsbatchupsertWithBodyWithResponse Create or update a batch of discounts by unique property values
 //
-// Returns a wrapper object for the known response body format(s).
+// Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/discounts/batch/upsert (the `Postcrmobjects202603discountsbatchupsert` operationId).
 func (c *ClientWithResponses) Postcrmobjects202603discountsbatchupsertWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603discountsbatchupsertResponse, error) {
 	rsp, err := c.Postcrmobjects202603discountsbatchupsertWithBody(ctx, contentType, body, reqEditors...)
 	if err != nil {
@@ -1084,8 +3678,13 @@ func (c *ClientWithResponses) Postcrmobjects202603discountsbatchupsertWithBodyWi
 	return ParsePostcrmobjects202603discountsbatchupsertResponse(rsp)
 }
 
-// Postcrmobjects202603discountsbatchupsertWithResponse performs a POST /crm/objects/2026-03/discounts/batch/upsert (the `Postcrmobjects202603discountsbatchupsert` operationId) request.
+// Postcrmobjects202603discountsbatchupsertWithResponse Create or update a batch of discounts by unique property values
+//
+// Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
+//
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/discounts/batch/upsert (the `Postcrmobjects202603discountsbatchupsert` operationId).
 func (c *ClientWithResponses) Postcrmobjects202603discountsbatchupsertWithResponse(ctx context.Context, body Postcrmobjects202603discountsbatchupsertJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603discountsbatchupsertResponse, error) {
 	rsp, err := c.Postcrmobjects202603discountsbatchupsert(ctx, body, reqEditors...)
 	if err != nil {
@@ -1118,6 +3717,8 @@ func (c *ClientWithResponses) Postcrmobjects202603discountssearchWithResponse(ct
 
 // Deletecrmobjects202603discountsDiscountIdWithResponse Archive
 //
+// Move an Object identified by `{discountId}` to the recycling bin.
+//
 // Returns a wrapper object for the known response body format(s).
 //
 // Corresponds with DELETE /crm/objects/2026-03/discounts/{discountId} (the `Deletecrmobjects202603discountsDiscountId` operationId).
@@ -1129,11 +3730,13 @@ func (c *ClientWithResponses) Deletecrmobjects202603discountsDiscountIdWithRespo
 	return ParseDeletecrmobjects202603discountsDiscountIdResponse(rsp)
 }
 
-// Getcrmobjects202603discountsDiscountIdWithResponse performs a GET /crm/objects/2026-03/discounts/{discountId} (the `Getcrmobjects202603discountsDiscountId` operationId) request.
+// Getcrmobjects202603discountsDiscountIdWithResponse Read
 //
 // Read an Object identified by `{discountId}`. `{discountId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param.
 //
 // Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /crm/objects/2026-03/discounts/{discountId} (the `Getcrmobjects202603discountsDiscountId` operationId).
 func (c *ClientWithResponses) Getcrmobjects202603discountsDiscountIdWithResponse(ctx context.Context, discountId string, params *Getcrmobjects202603discountsDiscountIdParams, reqEditors ...RequestEditorFn) (*Getcrmobjects202603discountsDiscountIdResponse, error) {
 	rsp, err := c.Getcrmobjects202603discountsDiscountId(ctx, discountId, params, reqEditors...)
 	if err != nil {
@@ -1457,7 +4060,7 @@ func (c *ClientWithResponses) Patchcrmobjects202603emailsEmailIdUpdateWithRespon
 	return ParsePatchcrmobjects202603emailsEmailIdUpdateResponse(rsp)
 }
 
-// Getcrmobjects202603feedbackSubmissionsGetPageWithResponse List
+// Getcrmobjects202603feedbackSubmissionsGetPageWithResponse Retrieve feedback submissions
 //
 // Read a page of feedback submissions. Control what is returned via the `properties` query param.
 //
@@ -1472,7 +4075,7 @@ func (c *ClientWithResponses) Getcrmobjects202603feedbackSubmissionsGetPageWithR
 	return ParseGetcrmobjects202603feedbackSubmissionsGetPageResponse(rsp)
 }
 
-// Postcrmobjects202603feedbackSubmissionsbatchreadReadWithBodyWithResponse Read a batch of feedback submissions by internal ID, or unique property values
+// Postcrmobjects202603feedbackSubmissionsbatchreadReadWithBodyWithResponse Batch retrieve feedback submissions
 //
 // Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
 //
@@ -1487,7 +4090,7 @@ func (c *ClientWithResponses) Postcrmobjects202603feedbackSubmissionsbatchreadRe
 	return ParsePostcrmobjects202603feedbackSubmissionsbatchreadReadResponse(rsp)
 }
 
-// Postcrmobjects202603feedbackSubmissionsbatchreadReadWithResponse Read a batch of feedback submissions by internal ID, or unique property values
+// Postcrmobjects202603feedbackSubmissionsbatchreadReadWithResponse Batch retrieve feedback submissions
 //
 // Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
 //
@@ -1502,7 +4105,7 @@ func (c *ClientWithResponses) Postcrmobjects202603feedbackSubmissionsbatchreadRe
 	return ParsePostcrmobjects202603feedbackSubmissionsbatchreadReadResponse(rsp)
 }
 
-// Postcrmobjects202603feedbackSubmissionssearchDoSearchWithBodyWithResponse Search for feedback submissions using specified criteria.
+// Postcrmobjects202603feedbackSubmissionssearchDoSearchWithBodyWithResponse Search for feedback submissions
 //
 // Execute a search to retrieve feedback submissions based on defined filters, properties, and sorting options.
 //
@@ -1517,7 +4120,7 @@ func (c *ClientWithResponses) Postcrmobjects202603feedbackSubmissionssearchDoSea
 	return ParsePostcrmobjects202603feedbackSubmissionssearchDoSearchResponse(rsp)
 }
 
-// Postcrmobjects202603feedbackSubmissionssearchDoSearchWithResponse Search for feedback submissions using specified criteria.
+// Postcrmobjects202603feedbackSubmissionssearchDoSearchWithResponse Search for feedback submissions
 //
 // Execute a search to retrieve feedback submissions based on defined filters, properties, and sorting options.
 //
@@ -1532,7 +4135,7 @@ func (c *ClientWithResponses) Postcrmobjects202603feedbackSubmissionssearchDoSea
 	return ParsePostcrmobjects202603feedbackSubmissionssearchDoSearchResponse(rsp)
 }
 
-// Getcrmobjects202603feedbackSubmissionsFeedbackSubmissionIdGetByIdWithResponse Read
+// Getcrmobjects202603feedbackSubmissionsFeedbackSubmissionIdGetByIdWithResponse Retrieve a feedback submission
 //
 // Read an Object identified by `{feedbackSubmissionId}`. `{feedbackSubmissionId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param.
 //
@@ -1877,7 +4480,7 @@ func (c *ClientWithResponses) Postcrmobjects202603goalTargetsCreateWithResponse(
 	return ParsePostcrmobjects202603goalTargetsCreateResponse(rsp)
 }
 
-// Postcrmobjects202603goalTargetsbatcharchiveArchiveWithBodyWithResponse Delete goal targets
+// Postcrmobjects202603goalTargetsbatcharchiveArchiveWithBodyWithResponse Archive a batch of goal targets by ID
 //
 // Archive multiple goal targets in a single batch operation using their IDs.
 //
@@ -1892,7 +4495,7 @@ func (c *ClientWithResponses) Postcrmobjects202603goalTargetsbatcharchiveArchive
 	return ParsePostcrmobjects202603goalTargetsbatcharchiveArchiveResponse(rsp)
 }
 
-// Postcrmobjects202603goalTargetsbatcharchiveArchiveWithResponse Delete goal targets
+// Postcrmobjects202603goalTargetsbatcharchiveArchiveWithResponse Archive a batch of goal targets by ID
 //
 // Archive multiple goal targets in a single batch operation using their IDs.
 //
@@ -1907,7 +4510,7 @@ func (c *ClientWithResponses) Postcrmobjects202603goalTargetsbatcharchiveArchive
 	return ParsePostcrmobjects202603goalTargetsbatcharchiveArchiveResponse(rsp)
 }
 
-// Postcrmobjects202603goalTargetsbatchcreateCreateWithBodyWithResponse Create goal targets
+// Postcrmobjects202603goalTargetsbatchcreateCreateWithBodyWithResponse Create a batch of goal targets
 //
 // Create multiple goal targets in a single batch operation.
 //
@@ -1922,7 +4525,7 @@ func (c *ClientWithResponses) Postcrmobjects202603goalTargetsbatchcreateCreateWi
 	return ParsePostcrmobjects202603goalTargetsbatchcreateCreateResponse(rsp)
 }
 
-// Postcrmobjects202603goalTargetsbatchcreateCreateWithResponse Create goal targets
+// Postcrmobjects202603goalTargetsbatchcreateCreateWithResponse Create a batch of goal targets
 //
 // Create multiple goal targets in a single batch operation.
 //
@@ -1937,7 +4540,7 @@ func (c *ClientWithResponses) Postcrmobjects202603goalTargetsbatchcreateCreateWi
 	return ParsePostcrmobjects202603goalTargetsbatchcreateCreateResponse(rsp)
 }
 
-// Postcrmobjects202603goalTargetsbatchreadReadWithBodyWithResponse Retrieve goal targets
+// Postcrmobjects202603goalTargetsbatchreadReadWithBodyWithResponse Read a batch of goal targets by internal ID, or unique property values
 //
 // Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
 //
@@ -1952,7 +4555,7 @@ func (c *ClientWithResponses) Postcrmobjects202603goalTargetsbatchreadReadWithBo
 	return ParsePostcrmobjects202603goalTargetsbatchreadReadResponse(rsp)
 }
 
-// Postcrmobjects202603goalTargetsbatchreadReadWithResponse Retrieve goal targets
+// Postcrmobjects202603goalTargetsbatchreadReadWithResponse Read a batch of goal targets by internal ID, or unique property values
 //
 // Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
 //
@@ -1967,7 +4570,7 @@ func (c *ClientWithResponses) Postcrmobjects202603goalTargetsbatchreadReadWithRe
 	return ParsePostcrmobjects202603goalTargetsbatchreadReadResponse(rsp)
 }
 
-// Postcrmobjects202603goalTargetsbatchupdateUpdateWithBodyWithResponse Update goal targets
+// Postcrmobjects202603goalTargetsbatchupdateUpdateWithBodyWithResponse Update a batch of goal targets by internal ID, or unique property values
 //
 // Update multiple goal targets in a single batch operation using their internal IDs or unique property values.
 //
@@ -1982,7 +4585,7 @@ func (c *ClientWithResponses) Postcrmobjects202603goalTargetsbatchupdateUpdateWi
 	return ParsePostcrmobjects202603goalTargetsbatchupdateUpdateResponse(rsp)
 }
 
-// Postcrmobjects202603goalTargetsbatchupdateUpdateWithResponse Update goal targets
+// Postcrmobjects202603goalTargetsbatchupdateUpdateWithResponse Update a batch of goal targets by internal ID, or unique property values
 //
 // Update multiple goal targets in a single batch operation using their internal IDs or unique property values.
 //
@@ -1997,9 +4600,9 @@ func (c *ClientWithResponses) Postcrmobjects202603goalTargetsbatchupdateUpdateWi
 	return ParsePostcrmobjects202603goalTargetsbatchupdateUpdateResponse(rsp)
 }
 
-// Postcrmobjects202603goalTargetsbatchupsertUpsertWithBodyWithResponse Upsert goal tagets
+// Postcrmobjects202603goalTargetsbatchupsertUpsertWithBodyWithResponse Create or update a batch of goal targets by unique property values
 //
-// Create and update a batch of goal targets by a unique property. Goal targets that don't exist will be created, while existing goal targets will be updated.
+// Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
 //
 // Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 //
@@ -2012,9 +4615,9 @@ func (c *ClientWithResponses) Postcrmobjects202603goalTargetsbatchupsertUpsertWi
 	return ParsePostcrmobjects202603goalTargetsbatchupsertUpsertResponse(rsp)
 }
 
-// Postcrmobjects202603goalTargetsbatchupsertUpsertWithResponse Upsert goal tagets
+// Postcrmobjects202603goalTargetsbatchupsertUpsertWithResponse Create or update a batch of goal targets by unique property values
 //
-// Create and update a batch of goal targets by a unique property. Goal targets that don't exist will be created, while existing goal targets will be updated.
+// Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
 //
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 //
@@ -2059,7 +4662,7 @@ func (c *ClientWithResponses) Postcrmobjects202603goalTargetssearchDoSearchWithR
 
 // Deletecrmobjects202603goalTargetsGoalTargetIdArchiveWithResponse Delete a goal target
 //
-// Delete a goal target by `{goalTargetId}` to the recycling bin.
+// Move an Object identified by `{goalTargetId}` to the recycling bin.
 //
 // Returns a wrapper object for the known response body format(s).
 //
@@ -2074,7 +4677,7 @@ func (c *ClientWithResponses) Deletecrmobjects202603goalTargetsGoalTargetIdArchi
 
 // Getcrmobjects202603goalTargetsGoalTargetIdGetByIdWithResponse Retrieve a goal target
 //
-// Retrieve a goal target by its ID. You can specify what is returned using the `properties` query parameter.
+// Read an Object identified by `{goalTargetId}`. `{goalTargetId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param.
 //
 // Returns a wrapper object for the known response body format(s).
 //
@@ -3542,7 +6145,7 @@ func (c *ClientWithResponses) Patchcrmobjects202603notesNoteIdUpdateWithResponse
 	return ParsePatchcrmobjects202603notesNoteIdUpdateResponse(rsp)
 }
 
-// Getcrmobjects202603ordersWithResponse List
+// Getcrmobjects202603ordersWithResponse Rertrieve orders
 //
 // Read a page of orders. Control what is returned via the `properties` query param.
 //
@@ -3557,7 +6160,7 @@ func (c *ClientWithResponses) Getcrmobjects202603ordersWithResponse(ctx context.
 	return ParseGetcrmobjects202603ordersResponse(rsp)
 }
 
-// Postcrmobjects202603ordersWithBodyWithResponse Create
+// Postcrmobjects202603ordersWithBodyWithResponse Create an order
 //
 // Create a order with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard orders is provided.
 //
@@ -3572,7 +6175,7 @@ func (c *ClientWithResponses) Postcrmobjects202603ordersWithBodyWithResponse(ctx
 	return ParsePostcrmobjects202603ordersResponse(rsp)
 }
 
-// Postcrmobjects202603ordersWithResponse Create
+// Postcrmobjects202603ordersWithResponse Create an order
 //
 // Create a order with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard orders is provided.
 //
@@ -3587,7 +6190,7 @@ func (c *ClientWithResponses) Postcrmobjects202603ordersWithResponse(ctx context
 	return ParsePostcrmobjects202603ordersResponse(rsp)
 }
 
-// Postcrmobjects202603ordersbatcharchiveWithBodyWithResponse Archive a batch of orders by ID
+// Postcrmobjects202603ordersbatcharchiveWithBodyWithResponse Batch archive orders
 //
 // Archive a batch of orders identified by their IDs.
 //
@@ -3602,7 +6205,7 @@ func (c *ClientWithResponses) Postcrmobjects202603ordersbatcharchiveWithBodyWith
 	return ParsePostcrmobjects202603ordersbatcharchiveResponse(rsp)
 }
 
-// Postcrmobjects202603ordersbatcharchiveWithResponse Archive a batch of orders by ID
+// Postcrmobjects202603ordersbatcharchiveWithResponse Batch archive orders
 //
 // Archive a batch of orders identified by their IDs.
 //
@@ -3617,7 +6220,7 @@ func (c *ClientWithResponses) Postcrmobjects202603ordersbatcharchiveWithResponse
 	return ParsePostcrmobjects202603ordersbatcharchiveResponse(rsp)
 }
 
-// Postcrmobjects202603ordersbatchcreateWithBodyWithResponse Create a batch of orders
+// Postcrmobjects202603ordersbatchcreateWithBodyWithResponse Batch create orders
 //
 // Create a batch of orders in the system.
 //
@@ -3632,7 +6235,7 @@ func (c *ClientWithResponses) Postcrmobjects202603ordersbatchcreateWithBodyWithR
 	return ParsePostcrmobjects202603ordersbatchcreateResponse(rsp)
 }
 
-// Postcrmobjects202603ordersbatchcreateWithResponse Create a batch of orders
+// Postcrmobjects202603ordersbatchcreateWithResponse Batch create orders
 //
 // Create a batch of orders in the system.
 //
@@ -3647,7 +6250,7 @@ func (c *ClientWithResponses) Postcrmobjects202603ordersbatchcreateWithResponse(
 	return ParsePostcrmobjects202603ordersbatchcreateResponse(rsp)
 }
 
-// Postcrmobjects202603ordersbatchreadWithBodyWithResponse Read a batch of orders by internal ID, or unique property values
+// Postcrmobjects202603ordersbatchreadWithBodyWithResponse Batch retrieve orders
 //
 // Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
 //
@@ -3662,7 +6265,7 @@ func (c *ClientWithResponses) Postcrmobjects202603ordersbatchreadWithBodyWithRes
 	return ParsePostcrmobjects202603ordersbatchreadResponse(rsp)
 }
 
-// Postcrmobjects202603ordersbatchreadWithResponse Read a batch of orders by internal ID, or unique property values
+// Postcrmobjects202603ordersbatchreadWithResponse Batch retrieve orders
 //
 // Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
 //
@@ -3677,7 +6280,7 @@ func (c *ClientWithResponses) Postcrmobjects202603ordersbatchreadWithResponse(ct
 	return ParsePostcrmobjects202603ordersbatchreadResponse(rsp)
 }
 
-// Postcrmobjects202603ordersbatchupdateWithBodyWithResponse Update a batch of orders by internal ID, or unique property values
+// Postcrmobjects202603ordersbatchupdateWithBodyWithResponse Batch update orders
 //
 // Update a batch of orders using their internal IDs or unique property values.
 //
@@ -3692,7 +6295,7 @@ func (c *ClientWithResponses) Postcrmobjects202603ordersbatchupdateWithBodyWithR
 	return ParsePostcrmobjects202603ordersbatchupdateResponse(rsp)
 }
 
-// Postcrmobjects202603ordersbatchupdateWithResponse Update a batch of orders by internal ID, or unique property values
+// Postcrmobjects202603ordersbatchupdateWithResponse Batch update orders
 //
 // Update a batch of orders using their internal IDs or unique property values.
 //
@@ -3707,7 +6310,7 @@ func (c *ClientWithResponses) Postcrmobjects202603ordersbatchupdateWithResponse(
 	return ParsePostcrmobjects202603ordersbatchupdateResponse(rsp)
 }
 
-// Postcrmobjects202603ordersbatchupsertWithBodyWithResponse Create or update a batch of orders by unique property values
+// Postcrmobjects202603ordersbatchupsertWithBodyWithResponse Upsert orders
 //
 // Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
 //
@@ -3722,7 +6325,7 @@ func (c *ClientWithResponses) Postcrmobjects202603ordersbatchupsertWithBodyWithR
 	return ParsePostcrmobjects202603ordersbatchupsertResponse(rsp)
 }
 
-// Postcrmobjects202603ordersbatchupsertWithResponse Create or update a batch of orders by unique property values
+// Postcrmobjects202603ordersbatchupsertWithResponse Upsert orders
 //
 // Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
 //
@@ -3737,7 +6340,37 @@ func (c *ClientWithResponses) Postcrmobjects202603ordersbatchupsertWithResponse(
 	return ParsePostcrmobjects202603ordersbatchupsertResponse(rsp)
 }
 
-// Postcrmobjects202603orderssearchWithBodyWithResponse Search for orders in the CRM using various filters and sorting options to retrieve specific order data.
+// Postcrmobjects202603ordersmergeWithBodyWithResponse Merge orders
+//
+// Merge two orders.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/orders/merge (the `Postcrmobjects202603ordersmerge` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603ordersmergeWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ordersmergeResponse, error) {
+	rsp, err := c.Postcrmobjects202603ordersmergeWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects202603ordersmergeResponse(rsp)
+}
+
+// Postcrmobjects202603ordersmergeWithResponse Merge orders
+//
+// Merge two orders.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/orders/merge (the `Postcrmobjects202603ordersmerge` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603ordersmergeWithResponse(ctx context.Context, body Postcrmobjects202603ordersmergeJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ordersmergeResponse, error) {
+	rsp, err := c.Postcrmobjects202603ordersmerge(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects202603ordersmergeResponse(rsp)
+}
+
+// Postcrmobjects202603orderssearchWithBodyWithResponse Search for orders
 //
 // Execute a search for orders using specified criteria and return matching results.
 //
@@ -3752,7 +6385,7 @@ func (c *ClientWithResponses) Postcrmobjects202603orderssearchWithBodyWithRespon
 	return ParsePostcrmobjects202603orderssearchResponse(rsp)
 }
 
-// Postcrmobjects202603orderssearchWithResponse Search for orders in the CRM using various filters and sorting options to retrieve specific order data.
+// Postcrmobjects202603orderssearchWithResponse Search for orders
 //
 // Execute a search for orders using specified criteria and return matching results.
 //
@@ -3767,7 +6400,7 @@ func (c *ClientWithResponses) Postcrmobjects202603orderssearchWithResponse(ctx c
 	return ParsePostcrmobjects202603orderssearchResponse(rsp)
 }
 
-// Deletecrmobjects202603ordersOrderIdWithResponse Archive
+// Deletecrmobjects202603ordersOrderIdWithResponse Archive an order
 //
 // Move an Object identified by `{orderId}` to the recycling bin.
 //
@@ -3782,7 +6415,7 @@ func (c *ClientWithResponses) Deletecrmobjects202603ordersOrderIdWithResponse(ct
 	return ParseDeletecrmobjects202603ordersOrderIdResponse(rsp)
 }
 
-// Getcrmobjects202603ordersOrderIdWithResponse Read
+// Getcrmobjects202603ordersOrderIdWithResponse Retrieve an order
 //
 // Read an Object identified by `{orderId}`. `{orderId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param.
 //
@@ -3797,7 +6430,7 @@ func (c *ClientWithResponses) Getcrmobjects202603ordersOrderIdWithResponse(ctx c
 	return ParseGetcrmobjects202603ordersOrderIdResponse(rsp)
 }
 
-// Patchcrmobjects202603ordersOrderIdWithBodyWithResponse Update
+// Patchcrmobjects202603ordersOrderIdWithBodyWithResponse Update an order
 //
 // Perform a partial update of an Object identified by `{orderId}`or optionally a unique property value as specified by the `idProperty` query param. `{orderId}` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
 //
@@ -3812,7 +6445,7 @@ func (c *ClientWithResponses) Patchcrmobjects202603ordersOrderIdWithBodyWithResp
 	return ParsePatchcrmobjects202603ordersOrderIdResponse(rsp)
 }
 
-// Patchcrmobjects202603ordersOrderIdWithResponse Update
+// Patchcrmobjects202603ordersOrderIdWithResponse Update an order
 //
 // Perform a partial update of an Object identified by `{orderId}`or optionally a unique property value as specified by the `idProperty` query param. `{orderId}` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
 //
@@ -3992,7 +6625,7 @@ func (c *ClientWithResponses) Getcrmobjects202603partnerClientsPartnerClientIdas
 	return ParseGetcrmobjects202603partnerClientsPartnerClientIdassociationsToObjectTypeResponse(rsp)
 }
 
-// Getcrmobjects202603partnerServicesWithResponse List
+// Getcrmobjects202603partnerServicesWithResponse Retrieve partner services
 //
 // Read a page of partner services. Control what is returned via the `properties` query param.
 //
@@ -4007,7 +6640,7 @@ func (c *ClientWithResponses) Getcrmobjects202603partnerServicesWithResponse(ctx
 	return ParseGetcrmobjects202603partnerServicesResponse(rsp)
 }
 
-// Postcrmobjects202603partnerServicesbatchreadWithBodyWithResponse Read a batch of partner services by internal ID, or unique property values
+// Postcrmobjects202603partnerServicesbatchreadWithBodyWithResponse Batch retrieve partner services
 //
 // Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
 //
@@ -4022,7 +6655,7 @@ func (c *ClientWithResponses) Postcrmobjects202603partnerServicesbatchreadWithBo
 	return ParsePostcrmobjects202603partnerServicesbatchreadResponse(rsp)
 }
 
-// Postcrmobjects202603partnerServicesbatchreadWithResponse Read a batch of partner services by internal ID, or unique property values
+// Postcrmobjects202603partnerServicesbatchreadWithResponse Batch retrieve partner services
 //
 // Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
 //
@@ -4037,7 +6670,7 @@ func (c *ClientWithResponses) Postcrmobjects202603partnerServicesbatchreadWithRe
 	return ParsePostcrmobjects202603partnerServicesbatchreadResponse(rsp)
 }
 
-// Postcrmobjects202603partnerServicesbatchupdateWithBodyWithResponse Update a batch of partner services by internal ID, or unique property values
+// Postcrmobjects202603partnerServicesbatchupdateWithBodyWithResponse Batch update partner services
 //
 // Update multiple partner services using their internal IDs or unique property values. This operation allows for batch processing of updates, ensuring efficient synchronization of service data between HubSpot and other systems.
 //
@@ -4052,7 +6685,7 @@ func (c *ClientWithResponses) Postcrmobjects202603partnerServicesbatchupdateWith
 	return ParsePostcrmobjects202603partnerServicesbatchupdateResponse(rsp)
 }
 
-// Postcrmobjects202603partnerServicesbatchupdateWithResponse Update a batch of partner services by internal ID, or unique property values
+// Postcrmobjects202603partnerServicesbatchupdateWithResponse Batch update partner services
 //
 // Update multiple partner services using their internal IDs or unique property values. This operation allows for batch processing of updates, ensuring efficient synchronization of service data between HubSpot and other systems.
 //
@@ -4067,7 +6700,7 @@ func (c *ClientWithResponses) Postcrmobjects202603partnerServicesbatchupdateWith
 	return ParsePostcrmobjects202603partnerServicesbatchupdateResponse(rsp)
 }
 
-// Postcrmobjects202603partnerServicessearchWithBodyWithResponse Search for partner services using specified criteria.
+// Postcrmobjects202603partnerServicessearchWithBodyWithResponse Search for partner services
 //
 // Execute a search query to find partner services based on defined filters, properties, and sorting options. This endpoint allows you to retrieve a collection of partner services that match the specified search criteria.
 //
@@ -4082,7 +6715,7 @@ func (c *ClientWithResponses) Postcrmobjects202603partnerServicessearchWithBodyW
 	return ParsePostcrmobjects202603partnerServicessearchResponse(rsp)
 }
 
-// Postcrmobjects202603partnerServicessearchWithResponse Search for partner services using specified criteria.
+// Postcrmobjects202603partnerServicessearchWithResponse Search for partner services
 //
 // Execute a search query to find partner services based on defined filters, properties, and sorting options. This endpoint allows you to retrieve a collection of partner services that match the specified search criteria.
 //
@@ -4097,7 +6730,7 @@ func (c *ClientWithResponses) Postcrmobjects202603partnerServicessearchWithRespo
 	return ParsePostcrmobjects202603partnerServicessearchResponse(rsp)
 }
 
-// Getcrmobjects202603partnerServicesPartnerServiceIdWithResponse Read
+// Getcrmobjects202603partnerServicesPartnerServiceIdWithResponse Retrieve a partner service
 //
 // Read an Object identified by `{partnerServiceId}`. `{partnerServiceId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param.
 //
@@ -4112,7 +6745,7 @@ func (c *ClientWithResponses) Getcrmobjects202603partnerServicesPartnerServiceId
 	return ParseGetcrmobjects202603partnerServicesPartnerServiceIdResponse(rsp)
 }
 
-// Patchcrmobjects202603partnerServicesPartnerServiceIdWithBodyWithResponse Update
+// Patchcrmobjects202603partnerServicesPartnerServiceIdWithBodyWithResponse Update a partner service
 //
 // Perform a partial update of an Object identified by `{partnerServiceId}`or optionally a unique property value as specified by the `idProperty` query param. `{partnerServiceId}` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
 //
@@ -4127,7 +6760,7 @@ func (c *ClientWithResponses) Patchcrmobjects202603partnerServicesPartnerService
 	return ParsePatchcrmobjects202603partnerServicesPartnerServiceIdResponse(rsp)
 }
 
-// Patchcrmobjects202603partnerServicesPartnerServiceIdWithResponse Update
+// Patchcrmobjects202603partnerServicesPartnerServiceIdWithResponse Update a partner service
 //
 // Perform a partial update of an Object identified by `{partnerServiceId}`or optionally a unique property value as specified by the `idProperty` query param. `{partnerServiceId}` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
 //
@@ -4140,21 +6773,6 @@ func (c *ClientWithResponses) Patchcrmobjects202603partnerServicesPartnerService
 		return nil, err
 	}
 	return ParsePatchcrmobjects202603partnerServicesPartnerServiceIdResponse(rsp)
-}
-
-// Getcrmobjects202603partnerServicesPartnerServiceIdassociationsToObjectTypeWithResponse List associations of a partner service by type
-//
-// Retrieve a list of associations for a specific partner service, filtered by the type of associated object.
-//
-// Returns a wrapper object for the known response body format(s).
-//
-// Corresponds with GET /crm/objects/2026-03/partner_services/{partnerServiceId}/associations/{toObjectType} (the `Getcrmobjects202603partnerServicesPartnerServiceIdassociationsToObjectType` operationId).
-func (c *ClientWithResponses) Getcrmobjects202603partnerServicesPartnerServiceIdassociationsToObjectTypeWithResponse(ctx context.Context, partnerServiceId string, toObjectType string, params *Getcrmobjects202603partnerServicesPartnerServiceIdassociationsToObjectTypeParams, reqEditors ...RequestEditorFn) (*Getcrmobjects202603partnerServicesPartnerServiceIdassociationsToObjectTypeResponse, error) {
-	rsp, err := c.Getcrmobjects202603partnerServicesPartnerServiceIdassociationsToObjectType(ctx, partnerServiceId, toObjectType, params, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseGetcrmobjects202603partnerServicesPartnerServiceIdassociationsToObjectTypeResponse(rsp)
 }
 
 // Getcrmobjects202603postalMailGetPageWithResponse performs a GET /crm/objects/2026-03/postal_mail (the `Getcrmobjects202603postalMailGetPage` operationId) request.
@@ -5301,6 +7919,36 @@ func (c *ClientWithResponses) Patchcrmobjects202603quotesQuoteIdUpdateWithRespon
 		return nil, err
 	}
 	return ParsePatchcrmobjects202603quotesQuoteIdUpdateResponse(rsp)
+}
+
+// Postcrmobjects202603servicesmergeWithBodyWithResponse Merge services
+//
+// Merge two services.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/services/merge (the `Postcrmobjects202603servicesmerge` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603servicesmergeWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603servicesmergeResponse, error) {
+	rsp, err := c.Postcrmobjects202603servicesmergeWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects202603servicesmergeResponse(rsp)
+}
+
+// Postcrmobjects202603servicesmergeWithResponse Merge services
+//
+// Merge two services.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/services/merge (the `Postcrmobjects202603servicesmerge` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603servicesmergeWithResponse(ctx context.Context, body Postcrmobjects202603servicesmergeJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603servicesmergeResponse, error) {
+	rsp, err := c.Postcrmobjects202603servicesmerge(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects202603servicesmergeResponse(rsp)
 }
 
 // Getcrmobjects202603subscriptionsWithResponse Retrieve a list of subscription objects.
@@ -6758,379 +9406,383 @@ func (c *ClientWithResponses) Patchcrmobjects202603usersUserIdWithResponse(ctx c
 	return ParsePatchcrmobjects202603usersUserIdResponse(rsp)
 }
 
-// Putcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdcrmobjects202509FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdWithResponse Associate records (default)
-//
-// Create the default (most generic) association type between two object types.
+// Putcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdWithResponse performs a PUT /crm/objects/2026-03/{fromObjectType}/{fromObjectId}/associations/default/{toObjectType}/{toObjectId} (the `Putcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectId` operationId) request.
 //
 // Returns a wrapper object for the known response body format(s).
-//
-// Corresponds with PUT /crm/objects/2026-03/{fromObjectType}/{fromObjectId}/associations/default/{toObjectType}/{toObjectId} (the `Putcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdcrmobjects202509FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectId` operationId).
-func (c *ClientWithResponses) Putcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdcrmobjects202509FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdWithResponse(ctx context.Context, fromObjectType string, fromObjectId string, toObjectType string, toObjectId string, reqEditors ...RequestEditorFn) (*Putcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdcrmobjects202509FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdResponse, error) {
-	rsp, err := c.Putcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdcrmobjects202509FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectId(ctx, fromObjectType, fromObjectId, toObjectType, toObjectId, reqEditors...)
+func (c *ClientWithResponses) Putcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdWithResponse(ctx context.Context, fromObjectType string, fromObjectId string, toObjectType string, toObjectId string, reqEditors ...RequestEditorFn) (*Putcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdResponse, error) {
+	rsp, err := c.Putcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectId(ctx, fromObjectType, fromObjectId, toObjectType, toObjectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParsePutcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdcrmobjects202509FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdResponse(rsp)
+	return ParsePutcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdResponse(rsp)
 }
 
-// Getcrmobjects202603ObjectTypecrmobjects202509ObjectTypeWithResponse List
+// Getcrmobjects202603ObjectTypeWithResponse List
 //
 // Read a page of objects. Control what is returned via the `properties` query param.
 //
 // Returns a wrapper object for the known response body format(s).
 //
-// Corresponds with GET /crm/objects/2026-03/{objectType} (the `Getcrmobjects202603ObjectTypecrmobjects202509ObjectType` operationId).
-func (c *ClientWithResponses) Getcrmobjects202603ObjectTypecrmobjects202509ObjectTypeWithResponse(ctx context.Context, objectType string, params *Getcrmobjects202603ObjectTypecrmobjects202509ObjectTypeParams, reqEditors ...RequestEditorFn) (*Getcrmobjects202603ObjectTypecrmobjects202509ObjectTypeResponse, error) {
-	rsp, err := c.Getcrmobjects202603ObjectTypecrmobjects202509ObjectType(ctx, objectType, params, reqEditors...)
+// Corresponds with GET /crm/objects/2026-03/{objectType} (the `Getcrmobjects202603ObjectType` operationId).
+func (c *ClientWithResponses) Getcrmobjects202603ObjectTypeWithResponse(ctx context.Context, objectType string, params *Getcrmobjects202603ObjectTypeParams, reqEditors ...RequestEditorFn) (*Getcrmobjects202603ObjectTypeResponse, error) {
+	rsp, err := c.Getcrmobjects202603ObjectType(ctx, objectType, params, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseGetcrmobjects202603ObjectTypecrmobjects202509ObjectTypeResponse(rsp)
+	return ParseGetcrmobjects202603ObjectTypeResponse(rsp)
 }
 
-// Postcrmobjects202603ObjectTypecrmobjects202509ObjectTypeWithBodyWithResponse Create
+// Postcrmobjects202603ObjectTypeWithBodyWithResponse Create
 //
 // Create a CRM object with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard objects is provided.
 //
 // Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 //
-// Corresponds with POST /crm/objects/2026-03/{objectType} (the `Postcrmobjects202603ObjectTypecrmobjects202509ObjectType` operationId).
-func (c *ClientWithResponses) Postcrmobjects202603ObjectTypecrmobjects202509ObjectTypeWithBodyWithResponse(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypecrmobjects202509ObjectTypeResponse, error) {
-	rsp, err := c.Postcrmobjects202603ObjectTypecrmobjects202509ObjectTypeWithBody(ctx, objectType, contentType, body, reqEditors...)
+// Corresponds with POST /crm/objects/2026-03/{objectType} (the `Postcrmobjects202603ObjectType` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603ObjectTypeWithBodyWithResponse(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypeResponse, error) {
+	rsp, err := c.Postcrmobjects202603ObjectTypeWithBody(ctx, objectType, contentType, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParsePostcrmobjects202603ObjectTypecrmobjects202509ObjectTypeResponse(rsp)
+	return ParsePostcrmobjects202603ObjectTypeResponse(rsp)
 }
 
-// Postcrmobjects202603ObjectTypecrmobjects202509ObjectTypeWithResponse Create
+// Postcrmobjects202603ObjectTypeWithResponse Create
 //
 // Create a CRM object with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard objects is provided.
 //
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 //
-// Corresponds with POST /crm/objects/2026-03/{objectType} (the `Postcrmobjects202603ObjectTypecrmobjects202509ObjectType` operationId).
-func (c *ClientWithResponses) Postcrmobjects202603ObjectTypecrmobjects202509ObjectTypeWithResponse(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypecrmobjects202509ObjectTypeJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypecrmobjects202509ObjectTypeResponse, error) {
-	rsp, err := c.Postcrmobjects202603ObjectTypecrmobjects202509ObjectType(ctx, objectType, body, reqEditors...)
+// Corresponds with POST /crm/objects/2026-03/{objectType} (the `Postcrmobjects202603ObjectType` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603ObjectTypeWithResponse(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypeJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypeResponse, error) {
+	rsp, err := c.Postcrmobjects202603ObjectType(ctx, objectType, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParsePostcrmobjects202603ObjectTypecrmobjects202509ObjectTypeResponse(rsp)
+	return ParsePostcrmobjects202603ObjectTypeResponse(rsp)
 }
 
-// Postcrmobjects202603ObjectTypebatcharchivecrmobjects202509ObjectTypebatcharchiveWithBodyWithResponse Archive a batch of objects by ID
+// Postcrmobjects202603ObjectTypebatcharchiveWithBodyWithResponse Archive a batch of objects by ID
 //
 // Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 //
-// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/archive (the `Postcrmobjects202603ObjectTypebatcharchivecrmobjects202509ObjectTypebatcharchive` operationId).
-func (c *ClientWithResponses) Postcrmobjects202603ObjectTypebatcharchivecrmobjects202509ObjectTypebatcharchiveWithBodyWithResponse(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypebatcharchivecrmobjects202509ObjectTypebatcharchiveResponse, error) {
-	rsp, err := c.Postcrmobjects202603ObjectTypebatcharchivecrmobjects202509ObjectTypebatcharchiveWithBody(ctx, objectType, contentType, body, reqEditors...)
+// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/archive (the `Postcrmobjects202603ObjectTypebatcharchive` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603ObjectTypebatcharchiveWithBodyWithResponse(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypebatcharchiveResponse, error) {
+	rsp, err := c.Postcrmobjects202603ObjectTypebatcharchiveWithBody(ctx, objectType, contentType, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParsePostcrmobjects202603ObjectTypebatcharchivecrmobjects202509ObjectTypebatcharchiveResponse(rsp)
+	return ParsePostcrmobjects202603ObjectTypebatcharchiveResponse(rsp)
 }
 
-// Postcrmobjects202603ObjectTypebatcharchivecrmobjects202509ObjectTypebatcharchiveWithResponse Archive a batch of objects by ID
+// Postcrmobjects202603ObjectTypebatcharchiveWithResponse Archive a batch of objects by ID
 //
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 //
-// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/archive (the `Postcrmobjects202603ObjectTypebatcharchivecrmobjects202509ObjectTypebatcharchive` operationId).
-func (c *ClientWithResponses) Postcrmobjects202603ObjectTypebatcharchivecrmobjects202509ObjectTypebatcharchiveWithResponse(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypebatcharchivecrmobjects202509ObjectTypebatcharchiveJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypebatcharchivecrmobjects202509ObjectTypebatcharchiveResponse, error) {
-	rsp, err := c.Postcrmobjects202603ObjectTypebatcharchivecrmobjects202509ObjectTypebatcharchive(ctx, objectType, body, reqEditors...)
+// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/archive (the `Postcrmobjects202603ObjectTypebatcharchive` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603ObjectTypebatcharchiveWithResponse(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypebatcharchiveJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypebatcharchiveResponse, error) {
+	rsp, err := c.Postcrmobjects202603ObjectTypebatcharchive(ctx, objectType, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParsePostcrmobjects202603ObjectTypebatcharchivecrmobjects202509ObjectTypebatcharchiveResponse(rsp)
+	return ParsePostcrmobjects202603ObjectTypebatcharchiveResponse(rsp)
 }
 
-// Postcrmobjects202603ObjectTypebatchcreatecrmobjects202509ObjectTypebatchcreateWithBodyWithResponse Create a batch of objects
+// Postcrmobjects202603ObjectTypebatchcreateWithBodyWithResponse Create a batch of objects
 //
 // Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 //
-// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/create (the `Postcrmobjects202603ObjectTypebatchcreatecrmobjects202509ObjectTypebatchcreate` operationId).
-func (c *ClientWithResponses) Postcrmobjects202603ObjectTypebatchcreatecrmobjects202509ObjectTypebatchcreateWithBodyWithResponse(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypebatchcreatecrmobjects202509ObjectTypebatchcreateResponse, error) {
-	rsp, err := c.Postcrmobjects202603ObjectTypebatchcreatecrmobjects202509ObjectTypebatchcreateWithBody(ctx, objectType, contentType, body, reqEditors...)
+// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/create (the `Postcrmobjects202603ObjectTypebatchcreate` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603ObjectTypebatchcreateWithBodyWithResponse(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypebatchcreateResponse, error) {
+	rsp, err := c.Postcrmobjects202603ObjectTypebatchcreateWithBody(ctx, objectType, contentType, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParsePostcrmobjects202603ObjectTypebatchcreatecrmobjects202509ObjectTypebatchcreateResponse(rsp)
+	return ParsePostcrmobjects202603ObjectTypebatchcreateResponse(rsp)
 }
 
-// Postcrmobjects202603ObjectTypebatchcreatecrmobjects202509ObjectTypebatchcreateWithResponse Create a batch of objects
+// Postcrmobjects202603ObjectTypebatchcreateWithResponse Create a batch of objects
 //
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 //
-// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/create (the `Postcrmobjects202603ObjectTypebatchcreatecrmobjects202509ObjectTypebatchcreate` operationId).
-func (c *ClientWithResponses) Postcrmobjects202603ObjectTypebatchcreatecrmobjects202509ObjectTypebatchcreateWithResponse(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypebatchcreatecrmobjects202509ObjectTypebatchcreateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypebatchcreatecrmobjects202509ObjectTypebatchcreateResponse, error) {
-	rsp, err := c.Postcrmobjects202603ObjectTypebatchcreatecrmobjects202509ObjectTypebatchcreate(ctx, objectType, body, reqEditors...)
+// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/create (the `Postcrmobjects202603ObjectTypebatchcreate` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603ObjectTypebatchcreateWithResponse(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypebatchcreateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypebatchcreateResponse, error) {
+	rsp, err := c.Postcrmobjects202603ObjectTypebatchcreate(ctx, objectType, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParsePostcrmobjects202603ObjectTypebatchcreatecrmobjects202509ObjectTypebatchcreateResponse(rsp)
+	return ParsePostcrmobjects202603ObjectTypebatchcreateResponse(rsp)
 }
 
-// Postcrmobjects202603ObjectTypebatchreadcrmobjects202509ObjectTypebatchreadWithBodyWithResponse Read a batch of objects by internal ID, or unique property values
-//
-// Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
+// Postcrmobjects202603ObjectTypebatchreadWithBodyWithResponse Read a batch of objects by internal ID, or unique property values
 //
 // Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 //
-// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/read (the `Postcrmobjects202603ObjectTypebatchreadcrmobjects202509ObjectTypebatchread` operationId).
-func (c *ClientWithResponses) Postcrmobjects202603ObjectTypebatchreadcrmobjects202509ObjectTypebatchreadWithBodyWithResponse(ctx context.Context, objectType string, params *Postcrmobjects202603ObjectTypebatchreadcrmobjects202509ObjectTypebatchreadParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypebatchreadcrmobjects202509ObjectTypebatchreadResponse, error) {
-	rsp, err := c.Postcrmobjects202603ObjectTypebatchreadcrmobjects202509ObjectTypebatchreadWithBody(ctx, objectType, params, contentType, body, reqEditors...)
+// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/read (the `Postcrmobjects202603ObjectTypebatchread` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603ObjectTypebatchreadWithBodyWithResponse(ctx context.Context, objectType string, params *Postcrmobjects202603ObjectTypebatchreadParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypebatchreadResponse, error) {
+	rsp, err := c.Postcrmobjects202603ObjectTypebatchreadWithBody(ctx, objectType, params, contentType, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParsePostcrmobjects202603ObjectTypebatchreadcrmobjects202509ObjectTypebatchreadResponse(rsp)
+	return ParsePostcrmobjects202603ObjectTypebatchreadResponse(rsp)
 }
 
-// Postcrmobjects202603ObjectTypebatchreadcrmobjects202509ObjectTypebatchreadWithResponse Read a batch of objects by internal ID, or unique property values
-//
-// Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
+// Postcrmobjects202603ObjectTypebatchreadWithResponse Read a batch of objects by internal ID, or unique property values
 //
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 //
-// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/read (the `Postcrmobjects202603ObjectTypebatchreadcrmobjects202509ObjectTypebatchread` operationId).
-func (c *ClientWithResponses) Postcrmobjects202603ObjectTypebatchreadcrmobjects202509ObjectTypebatchreadWithResponse(ctx context.Context, objectType string, params *Postcrmobjects202603ObjectTypebatchreadcrmobjects202509ObjectTypebatchreadParams, body Postcrmobjects202603ObjectTypebatchreadcrmobjects202509ObjectTypebatchreadJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypebatchreadcrmobjects202509ObjectTypebatchreadResponse, error) {
-	rsp, err := c.Postcrmobjects202603ObjectTypebatchreadcrmobjects202509ObjectTypebatchread(ctx, objectType, params, body, reqEditors...)
+// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/read (the `Postcrmobjects202603ObjectTypebatchread` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603ObjectTypebatchreadWithResponse(ctx context.Context, objectType string, params *Postcrmobjects202603ObjectTypebatchreadParams, body Postcrmobjects202603ObjectTypebatchreadJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypebatchreadResponse, error) {
+	rsp, err := c.Postcrmobjects202603ObjectTypebatchread(ctx, objectType, params, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParsePostcrmobjects202603ObjectTypebatchreadcrmobjects202509ObjectTypebatchreadResponse(rsp)
+	return ParsePostcrmobjects202603ObjectTypebatchreadResponse(rsp)
 }
 
-// Postcrmobjects202603ObjectTypebatchupdatecrmobjects202509ObjectTypebatchupdateWithBodyWithResponse Update a batch of objects by internal ID, or unique property values
+// Postcrmobjects202603ObjectTypebatchupdateWithBodyWithResponse Update a batch of objects
 //
 // Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 //
-// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/update (the `Postcrmobjects202603ObjectTypebatchupdatecrmobjects202509ObjectTypebatchupdate` operationId).
-func (c *ClientWithResponses) Postcrmobjects202603ObjectTypebatchupdatecrmobjects202509ObjectTypebatchupdateWithBodyWithResponse(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypebatchupdatecrmobjects202509ObjectTypebatchupdateResponse, error) {
-	rsp, err := c.Postcrmobjects202603ObjectTypebatchupdatecrmobjects202509ObjectTypebatchupdateWithBody(ctx, objectType, contentType, body, reqEditors...)
+// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/update (the `Postcrmobjects202603ObjectTypebatchupdate` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603ObjectTypebatchupdateWithBodyWithResponse(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypebatchupdateResponse, error) {
+	rsp, err := c.Postcrmobjects202603ObjectTypebatchupdateWithBody(ctx, objectType, contentType, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParsePostcrmobjects202603ObjectTypebatchupdatecrmobjects202509ObjectTypebatchupdateResponse(rsp)
+	return ParsePostcrmobjects202603ObjectTypebatchupdateResponse(rsp)
 }
 
-// Postcrmobjects202603ObjectTypebatchupdatecrmobjects202509ObjectTypebatchupdateWithResponse Update a batch of objects by internal ID, or unique property values
+// Postcrmobjects202603ObjectTypebatchupdateWithResponse Update a batch of objects
 //
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 //
-// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/update (the `Postcrmobjects202603ObjectTypebatchupdatecrmobjects202509ObjectTypebatchupdate` operationId).
-func (c *ClientWithResponses) Postcrmobjects202603ObjectTypebatchupdatecrmobjects202509ObjectTypebatchupdateWithResponse(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypebatchupdatecrmobjects202509ObjectTypebatchupdateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypebatchupdatecrmobjects202509ObjectTypebatchupdateResponse, error) {
-	rsp, err := c.Postcrmobjects202603ObjectTypebatchupdatecrmobjects202509ObjectTypebatchupdate(ctx, objectType, body, reqEditors...)
+// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/update (the `Postcrmobjects202603ObjectTypebatchupdate` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603ObjectTypebatchupdateWithResponse(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypebatchupdateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypebatchupdateResponse, error) {
+	rsp, err := c.Postcrmobjects202603ObjectTypebatchupdate(ctx, objectType, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParsePostcrmobjects202603ObjectTypebatchupdatecrmobjects202509ObjectTypebatchupdateResponse(rsp)
+	return ParsePostcrmobjects202603ObjectTypebatchupdateResponse(rsp)
 }
 
-// Postcrmobjects202603ObjectTypebatchupsertcrmobjects202509ObjectTypebatchupsertWithBodyWithResponse Create or update a batch of objects by unique property values
-//
-// Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
+// Postcrmobjects202603ObjectTypebatchupsertWithBodyWithResponse Create or update a batch of objects by unique property values
 //
 // Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 //
-// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/upsert (the `Postcrmobjects202603ObjectTypebatchupsertcrmobjects202509ObjectTypebatchupsert` operationId).
-func (c *ClientWithResponses) Postcrmobjects202603ObjectTypebatchupsertcrmobjects202509ObjectTypebatchupsertWithBodyWithResponse(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypebatchupsertcrmobjects202509ObjectTypebatchupsertResponse, error) {
-	rsp, err := c.Postcrmobjects202603ObjectTypebatchupsertcrmobjects202509ObjectTypebatchupsertWithBody(ctx, objectType, contentType, body, reqEditors...)
+// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/upsert (the `Postcrmobjects202603ObjectTypebatchupsert` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603ObjectTypebatchupsertWithBodyWithResponse(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypebatchupsertResponse, error) {
+	rsp, err := c.Postcrmobjects202603ObjectTypebatchupsertWithBody(ctx, objectType, contentType, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParsePostcrmobjects202603ObjectTypebatchupsertcrmobjects202509ObjectTypebatchupsertResponse(rsp)
+	return ParsePostcrmobjects202603ObjectTypebatchupsertResponse(rsp)
 }
 
-// Postcrmobjects202603ObjectTypebatchupsertcrmobjects202509ObjectTypebatchupsertWithResponse Create or update a batch of objects by unique property values
-//
-// Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
+// Postcrmobjects202603ObjectTypebatchupsertWithResponse Create or update a batch of objects by unique property values
 //
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 //
-// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/upsert (the `Postcrmobjects202603ObjectTypebatchupsertcrmobjects202509ObjectTypebatchupsert` operationId).
-func (c *ClientWithResponses) Postcrmobjects202603ObjectTypebatchupsertcrmobjects202509ObjectTypebatchupsertWithResponse(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypebatchupsertcrmobjects202509ObjectTypebatchupsertJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypebatchupsertcrmobjects202509ObjectTypebatchupsertResponse, error) {
-	rsp, err := c.Postcrmobjects202603ObjectTypebatchupsertcrmobjects202509ObjectTypebatchupsert(ctx, objectType, body, reqEditors...)
+// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/upsert (the `Postcrmobjects202603ObjectTypebatchupsert` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603ObjectTypebatchupsertWithResponse(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypebatchupsertJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypebatchupsertResponse, error) {
+	rsp, err := c.Postcrmobjects202603ObjectTypebatchupsert(ctx, objectType, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParsePostcrmobjects202603ObjectTypebatchupsertcrmobjects202509ObjectTypebatchupsertResponse(rsp)
+	return ParsePostcrmobjects202603ObjectTypebatchupsertResponse(rsp)
 }
 
-// Postcrmobjects202603ObjectTypemergeMergeWithBodyWithResponse Merge two objects with same type
+// Postcrmobjects202603ObjectTypegdprDeleteWithBodyWithResponse GDPR DELETE
 //
-// Merge two CRM objects of the same type by specifying one as the primary object and the other as the object to be merged into it.
+// Permanently delete a contact and all associated content to follow GDPR. Use optional property 'idProperty' set to 'email' to identify contact by email address. If email address is not found, the email address will be added to a blocklist and prevent it from being used in the future.
 //
 // Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 //
-// Corresponds with POST /crm/objects/2026-03/{objectType}/merge (the `Postcrmobjects202603ObjectTypemergeMerge` operationId).
-func (c *ClientWithResponses) Postcrmobjects202603ObjectTypemergeMergeWithBodyWithResponse(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypemergeMergeResponse, error) {
-	rsp, err := c.Postcrmobjects202603ObjectTypemergeMergeWithBody(ctx, objectType, contentType, body, reqEditors...)
+// Corresponds with POST /crm/objects/2026-03/{objectType}/gdpr-delete (the `Postcrmobjects202603ObjectTypegdprDelete` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603ObjectTypegdprDeleteWithBodyWithResponse(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypegdprDeleteResponse, error) {
+	rsp, err := c.Postcrmobjects202603ObjectTypegdprDeleteWithBody(ctx, objectType, contentType, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParsePostcrmobjects202603ObjectTypemergeMergeResponse(rsp)
+	return ParsePostcrmobjects202603ObjectTypegdprDeleteResponse(rsp)
 }
 
-// Postcrmobjects202603ObjectTypemergeMergeWithResponse Merge two objects with same type
+// Postcrmobjects202603ObjectTypegdprDeleteWithResponse GDPR DELETE
 //
-// Merge two CRM objects of the same type by specifying one as the primary object and the other as the object to be merged into it.
+// Permanently delete a contact and all associated content to follow GDPR. Use optional property 'idProperty' set to 'email' to identify contact by email address. If email address is not found, the email address will be added to a blocklist and prevent it from being used in the future.
 //
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 //
-// Corresponds with POST /crm/objects/2026-03/{objectType}/merge (the `Postcrmobjects202603ObjectTypemergeMerge` operationId).
-func (c *ClientWithResponses) Postcrmobjects202603ObjectTypemergeMergeWithResponse(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypemergeMergeJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypemergeMergeResponse, error) {
-	rsp, err := c.Postcrmobjects202603ObjectTypemergeMerge(ctx, objectType, body, reqEditors...)
+// Corresponds with POST /crm/objects/2026-03/{objectType}/gdpr-delete (the `Postcrmobjects202603ObjectTypegdprDelete` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603ObjectTypegdprDeleteWithResponse(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypegdprDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypegdprDeleteResponse, error) {
+	rsp, err := c.Postcrmobjects202603ObjectTypegdprDelete(ctx, objectType, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParsePostcrmobjects202603ObjectTypemergeMergeResponse(rsp)
+	return ParsePostcrmobjects202603ObjectTypegdprDeleteResponse(rsp)
 }
 
-// Postcrmobjects202603ObjectTypesearchcrmobjects202509ObjectTypesearchWithBodyWithResponse performs a POST /crm/objects/2026-03/{objectType}/search (the `Postcrmobjects202603ObjectTypesearchcrmobjects202509ObjectTypesearch` operationId) request,
+// Postcrmobjects202603ObjectTypemergeWithBodyWithResponse Merge two objects with same type
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/{objectType}/merge (the `Postcrmobjects202603ObjectTypemerge` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603ObjectTypemergeWithBodyWithResponse(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypemergeResponse, error) {
+	rsp, err := c.Postcrmobjects202603ObjectTypemergeWithBody(ctx, objectType, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects202603ObjectTypemergeResponse(rsp)
+}
+
+// Postcrmobjects202603ObjectTypemergeWithResponse Merge two objects with same type
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/objects/2026-03/{objectType}/merge (the `Postcrmobjects202603ObjectTypemerge` operationId).
+func (c *ClientWithResponses) Postcrmobjects202603ObjectTypemergeWithResponse(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypemergeJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypemergeResponse, error) {
+	rsp, err := c.Postcrmobjects202603ObjectTypemerge(ctx, objectType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmobjects202603ObjectTypemergeResponse(rsp)
+}
+
+// Postcrmobjects202603ObjectTypesearchWithBodyWithResponse performs a POST /crm/objects/2026-03/{objectType}/search (the `Postcrmobjects202603ObjectTypesearch` operationId) request,
 // with any type of body and a specified content type.
 //
 // Returns a wrapper object for the known response body format(s).
-func (c *ClientWithResponses) Postcrmobjects202603ObjectTypesearchcrmobjects202509ObjectTypesearchWithBodyWithResponse(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypesearchcrmobjects202509ObjectTypesearchResponse, error) {
-	rsp, err := c.Postcrmobjects202603ObjectTypesearchcrmobjects202509ObjectTypesearchWithBody(ctx, objectType, contentType, body, reqEditors...)
+func (c *ClientWithResponses) Postcrmobjects202603ObjectTypesearchWithBodyWithResponse(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypesearchResponse, error) {
+	rsp, err := c.Postcrmobjects202603ObjectTypesearchWithBody(ctx, objectType, contentType, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParsePostcrmobjects202603ObjectTypesearchcrmobjects202509ObjectTypesearchResponse(rsp)
+	return ParsePostcrmobjects202603ObjectTypesearchResponse(rsp)
 }
 
-// Postcrmobjects202603ObjectTypesearchcrmobjects202509ObjectTypesearchWithResponse performs a POST /crm/objects/2026-03/{objectType}/search (the `Postcrmobjects202603ObjectTypesearchcrmobjects202509ObjectTypesearch` operationId) request.
+// Postcrmobjects202603ObjectTypesearchWithResponse performs a POST /crm/objects/2026-03/{objectType}/search (the `Postcrmobjects202603ObjectTypesearch` operationId) request.
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
-func (c *ClientWithResponses) Postcrmobjects202603ObjectTypesearchcrmobjects202509ObjectTypesearchWithResponse(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypesearchcrmobjects202509ObjectTypesearchJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypesearchcrmobjects202509ObjectTypesearchResponse, error) {
-	rsp, err := c.Postcrmobjects202603ObjectTypesearchcrmobjects202509ObjectTypesearch(ctx, objectType, body, reqEditors...)
+func (c *ClientWithResponses) Postcrmobjects202603ObjectTypesearchWithResponse(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypesearchJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypesearchResponse, error) {
+	rsp, err := c.Postcrmobjects202603ObjectTypesearch(ctx, objectType, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParsePostcrmobjects202603ObjectTypesearchcrmobjects202509ObjectTypesearchResponse(rsp)
+	return ParsePostcrmobjects202603ObjectTypesearchResponse(rsp)
 }
 
-// Deletecrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdWithResponse Archive
+// Deletecrmobjects202603ObjectTypeObjectIdWithResponse Archive
 //
 // Move an Object identified by `{objectId}` to the recycling bin.
 //
 // Returns a wrapper object for the known response body format(s).
 //
-// Corresponds with DELETE /crm/objects/2026-03/{objectType}/{objectId} (the `Deletecrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectId` operationId).
-func (c *ClientWithResponses) Deletecrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdWithResponse(ctx context.Context, objectType string, objectId string, reqEditors ...RequestEditorFn) (*Deletecrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdResponse, error) {
-	rsp, err := c.Deletecrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectId(ctx, objectType, objectId, reqEditors...)
+// Corresponds with DELETE /crm/objects/2026-03/{objectType}/{objectId} (the `Deletecrmobjects202603ObjectTypeObjectId` operationId).
+func (c *ClientWithResponses) Deletecrmobjects202603ObjectTypeObjectIdWithResponse(ctx context.Context, objectType string, objectId string, reqEditors ...RequestEditorFn) (*Deletecrmobjects202603ObjectTypeObjectIdResponse, error) {
+	rsp, err := c.Deletecrmobjects202603ObjectTypeObjectId(ctx, objectType, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseDeletecrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdResponse(rsp)
+	return ParseDeletecrmobjects202603ObjectTypeObjectIdResponse(rsp)
 }
 
-// Getcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdWithResponse Read
+// Getcrmobjects202603ObjectTypeObjectIdWithResponse Read
 //
 // Read an Object identified by `{objectId}`. `{objectId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param.
 //
 // Returns a wrapper object for the known response body format(s).
 //
-// Corresponds with GET /crm/objects/2026-03/{objectType}/{objectId} (the `Getcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectId` operationId).
-func (c *ClientWithResponses) Getcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdWithResponse(ctx context.Context, objectType string, objectId string, params *Getcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdParams, reqEditors ...RequestEditorFn) (*Getcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdResponse, error) {
-	rsp, err := c.Getcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectId(ctx, objectType, objectId, params, reqEditors...)
+// Corresponds with GET /crm/objects/2026-03/{objectType}/{objectId} (the `Getcrmobjects202603ObjectTypeObjectId` operationId).
+func (c *ClientWithResponses) Getcrmobjects202603ObjectTypeObjectIdWithResponse(ctx context.Context, objectType string, objectId string, params *Getcrmobjects202603ObjectTypeObjectIdParams, reqEditors ...RequestEditorFn) (*Getcrmobjects202603ObjectTypeObjectIdResponse, error) {
+	rsp, err := c.Getcrmobjects202603ObjectTypeObjectId(ctx, objectType, objectId, params, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseGetcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdResponse(rsp)
+	return ParseGetcrmobjects202603ObjectTypeObjectIdResponse(rsp)
 }
 
-// Patchcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdWithBodyWithResponse Update
+// Patchcrmobjects202603ObjectTypeObjectIdWithBodyWithResponse Update
 //
-// Perform a partial update of an Object identified by `{objectId}`or optionally a unique property value as specified by the `idProperty` query param. `{objectId}` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
+// Perform a partial update of an Object identified by `{objectId}`. `{objectId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param. Provided property values will be overwritten. Read-only and non-existent properties will be ignored. Properties values can be cleared by passing an empty string.
 //
 // Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 //
-// Corresponds with PATCH /crm/objects/2026-03/{objectType}/{objectId} (the `Patchcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectId` operationId).
-func (c *ClientWithResponses) Patchcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdWithBodyWithResponse(ctx context.Context, objectType string, objectId string, params *Patchcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Patchcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdResponse, error) {
-	rsp, err := c.Patchcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdWithBody(ctx, objectType, objectId, params, contentType, body, reqEditors...)
+// Corresponds with PATCH /crm/objects/2026-03/{objectType}/{objectId} (the `Patchcrmobjects202603ObjectTypeObjectId` operationId).
+func (c *ClientWithResponses) Patchcrmobjects202603ObjectTypeObjectIdWithBodyWithResponse(ctx context.Context, objectType string, objectId string, params *Patchcrmobjects202603ObjectTypeObjectIdParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Patchcrmobjects202603ObjectTypeObjectIdResponse, error) {
+	rsp, err := c.Patchcrmobjects202603ObjectTypeObjectIdWithBody(ctx, objectType, objectId, params, contentType, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParsePatchcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdResponse(rsp)
+	return ParsePatchcrmobjects202603ObjectTypeObjectIdResponse(rsp)
 }
 
-// Patchcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdWithResponse Update
+// Patchcrmobjects202603ObjectTypeObjectIdWithResponse Update
 //
-// Perform a partial update of an Object identified by `{objectId}`or optionally a unique property value as specified by the `idProperty` query param. `{objectId}` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
+// Perform a partial update of an Object identified by `{objectId}`. `{objectId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param. Provided property values will be overwritten. Read-only and non-existent properties will be ignored. Properties values can be cleared by passing an empty string.
 //
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 //
-// Corresponds with PATCH /crm/objects/2026-03/{objectType}/{objectId} (the `Patchcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectId` operationId).
-func (c *ClientWithResponses) Patchcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdWithResponse(ctx context.Context, objectType string, objectId string, params *Patchcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdParams, body Patchcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdJSONRequestBody, reqEditors ...RequestEditorFn) (*Patchcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdResponse, error) {
-	rsp, err := c.Patchcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectId(ctx, objectType, objectId, params, body, reqEditors...)
+// Corresponds with PATCH /crm/objects/2026-03/{objectType}/{objectId} (the `Patchcrmobjects202603ObjectTypeObjectId` operationId).
+func (c *ClientWithResponses) Patchcrmobjects202603ObjectTypeObjectIdWithResponse(ctx context.Context, objectType string, objectId string, params *Patchcrmobjects202603ObjectTypeObjectIdParams, body Patchcrmobjects202603ObjectTypeObjectIdJSONRequestBody, reqEditors ...RequestEditorFn) (*Patchcrmobjects202603ObjectTypeObjectIdResponse, error) {
+	rsp, err := c.Patchcrmobjects202603ObjectTypeObjectId(ctx, objectType, objectId, params, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParsePatchcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdResponse(rsp)
+	return ParsePatchcrmobjects202603ObjectTypeObjectIdResponse(rsp)
 }
 
-// Getcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypecrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeWithResponse Retrieve all associations by object type
-//
-// Retrieve all associations between a specific record and an object type. Limit 500 per call.
+// Getcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeWithResponse List associations of an object by type
 //
 // Returns a wrapper object for the known response body format(s).
 //
-// Corresponds with GET /crm/objects/2026-03/{objectType}/{objectId}/associations/{toObjectType} (the `Getcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypecrmobjects202509ObjectTypeObjectIdassociationsToObjectType` operationId).
-func (c *ClientWithResponses) Getcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypecrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeWithResponse(ctx context.Context, objectType string, objectId string, toObjectType string, params *Getcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypecrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeParams, reqEditors ...RequestEditorFn) (*Getcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypecrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeResponse, error) {
-	rsp, err := c.Getcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypecrmobjects202509ObjectTypeObjectIdassociationsToObjectType(ctx, objectType, objectId, toObjectType, params, reqEditors...)
+// Corresponds with GET /crm/objects/2026-03/{objectType}/{objectId}/associations/{toObjectType} (the `Getcrmobjects202603ObjectTypeObjectIdassociationsToObjectType` operationId).
+func (c *ClientWithResponses) Getcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeWithResponse(ctx context.Context, objectType string, objectId string, toObjectType string, params *Getcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeParams, reqEditors ...RequestEditorFn) (*Getcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeResponse, error) {
+	rsp, err := c.Getcrmobjects202603ObjectTypeObjectIdassociationsToObjectType(ctx, objectType, objectId, toObjectType, params, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseGetcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypecrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeResponse(rsp)
+	return ParseGetcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeResponse(rsp)
 }
 
-// Deletecrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectIdWithResponse Delete associations between two records
-//
-// deletes all associations between two records.
+// Deletecrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdWithResponse performs a DELETE /crm/objects/2026-03/{objectType}/{objectId}/associations/{toObjectType}/{toObjectId} (the `Deletecrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectId` operationId) request.
 //
 // Returns a wrapper object for the known response body format(s).
-//
-// Corresponds with DELETE /crm/objects/2026-03/{objectType}/{objectId}/associations/{toObjectType}/{toObjectId} (the `Deletecrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectId` operationId).
-func (c *ClientWithResponses) Deletecrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectIdWithResponse(ctx context.Context, objectType string, objectId string, toObjectType string, toObjectId string, reqEditors ...RequestEditorFn) (*Deletecrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectIdResponse, error) {
-	rsp, err := c.Deletecrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectId(ctx, objectType, objectId, toObjectType, toObjectId, reqEditors...)
+func (c *ClientWithResponses) Deletecrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdWithResponse(ctx context.Context, objectType string, objectId string, toObjectType string, toObjectId string, reqEditors ...RequestEditorFn) (*Deletecrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdResponse, error) {
+	rsp, err := c.Deletecrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectId(ctx, objectType, objectId, toObjectType, toObjectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseDeletecrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectIdResponse(rsp)
+	return ParseDeletecrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdResponse(rsp)
 }
 
-// Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectIdWithBodyWithResponse Associate records (labelled)
+// Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdWithBodyWithResponse performs a PUT /crm/objects/2026-03/{objectType}/{objectId}/associations/{toObjectType}/{toObjectId} (the `Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectId` operationId) request,
+// with any type of body and a specified content type.
 //
-// Set association labels between two records.
-//
-// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
-//
-// Corresponds with PUT /crm/objects/2026-03/{objectType}/{objectId}/associations/{toObjectType}/{toObjectId} (the `Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectId` operationId).
-func (c *ClientWithResponses) Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectIdWithBodyWithResponse(ctx context.Context, objectType string, objectId string, toObjectType string, toObjectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectIdResponse, error) {
-	rsp, err := c.Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectIdWithBody(ctx, objectType, objectId, toObjectType, toObjectId, contentType, body, reqEditors...)
+// Returns a wrapper object for the known response body format(s).
+func (c *ClientWithResponses) Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdWithBodyWithResponse(ctx context.Context, objectType string, objectId string, toObjectType string, toObjectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdResponse, error) {
+	rsp, err := c.Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdWithBody(ctx, objectType, objectId, toObjectType, toObjectId, contentType, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParsePutcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectIdResponse(rsp)
+	return ParsePutcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdResponse(rsp)
 }
 
-// Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectIdWithResponse Associate records (labelled)
-//
-// Set association labels between two records.
-//
+// Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdWithResponse performs a PUT /crm/objects/2026-03/{objectType}/{objectId}/associations/{toObjectType}/{toObjectId} (the `Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectId` operationId) request.
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
-//
-// Corresponds with PUT /crm/objects/2026-03/{objectType}/{objectId}/associations/{toObjectType}/{toObjectId} (the `Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectId` operationId).
-func (c *ClientWithResponses) Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectIdWithResponse(ctx context.Context, objectType string, objectId string, toObjectType string, toObjectId string, body Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectIdJSONRequestBody, reqEditors ...RequestEditorFn) (*Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectIdResponse, error) {
-	rsp, err := c.Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectId(ctx, objectType, objectId, toObjectType, toObjectId, body, reqEditors...)
+func (c *ClientWithResponses) Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdWithResponse(ctx context.Context, objectType string, objectId string, toObjectType string, toObjectId string, body Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdJSONRequestBody, reqEditors ...RequestEditorFn) (*Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdResponse, error) {
+	rsp, err := c.Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectId(ctx, objectType, objectId, toObjectType, toObjectId, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParsePutcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectIdResponse(rsp)
+	return ParsePutcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdResponse(rsp)
 }
 
-// Getcrmowners202603crmownersv3WithResponse performs a GET /crm/owners/2026-03 (the `Getcrmowners202603crmownersv3` operationId) request.
+// Getcrmowners202603crmownersv3WithResponse List owners
+//
+// Retrieve a paginated list of owners from your HubSpot account. This endpoint allows filtering by email and supports pagination through the 'after' parameter. You can also specify the maximum number of results per page and choose to include archived owners in the response.
 //
 // Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /crm/owners/2026-03 (the `Getcrmowners202603crmownersv3` operationId).
 func (c *ClientWithResponses) Getcrmowners202603crmownersv3WithResponse(ctx context.Context, params *Getcrmowners202603crmownersv3Params, reqEditors ...RequestEditorFn) (*Getcrmowners202603crmownersv3Response, error) {
 	rsp, err := c.Getcrmowners202603crmownersv3(ctx, params, reqEditors...)
 	if err != nil {
@@ -7201,6 +9853,8 @@ func (c *ClientWithResponses) Postcrmpipelines202603ObjectTypeCreateWithResponse
 
 // Deletecrmpipelines202603ObjectTypePipelineIdArchiveWithResponse Delete a pipeline
 //
+// Delete a pipeline identified by its unique pipelineId.
+//
 // Returns a wrapper object for the known response body format(s).
 //
 // Corresponds with DELETE /crm/pipelines/2026-03/{objectType}/{pipelineId} (the `Deletecrmpipelines202603ObjectTypePipelineIdArchive` operationId).
@@ -7227,12 +9881,13 @@ func (c *ClientWithResponses) Getcrmpipelines202603ObjectTypePipelineIdGetByIdWi
 	return ParseGetcrmpipelines202603ObjectTypePipelineIdGetByIdResponse(rsp)
 }
 
-// Patchcrmpipelines202603ObjectTypePipelineIdUpdateWithBodyWithResponse performs a PATCH /crm/pipelines/2026-03/{objectType}/{pipelineId} (the `Patchcrmpipelines202603ObjectTypePipelineIdUpdate` operationId) request,
-// with any type of body and a specified content type.
+// Patchcrmpipelines202603ObjectTypePipelineIdUpdateWithBodyWithResponse Perform a partial update of the pipeline identified by pipelineId.
 //
 // Perform a partial update of the pipeline identified by `{pipelineId}`. The updated pipeline will be returned in the response.
 //
-// Returns a wrapper object for the known response body format(s).
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PATCH /crm/pipelines/2026-03/{objectType}/{pipelineId} (the `Patchcrmpipelines202603ObjectTypePipelineIdUpdate` operationId).
 func (c *ClientWithResponses) Patchcrmpipelines202603ObjectTypePipelineIdUpdateWithBodyWithResponse(ctx context.Context, objectType string, pipelineId string, params *Patchcrmpipelines202603ObjectTypePipelineIdUpdateParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Patchcrmpipelines202603ObjectTypePipelineIdUpdateResponse, error) {
 	rsp, err := c.Patchcrmpipelines202603ObjectTypePipelineIdUpdateWithBody(ctx, objectType, pipelineId, params, contentType, body, reqEditors...)
 	if err != nil {
@@ -7241,10 +9896,13 @@ func (c *ClientWithResponses) Patchcrmpipelines202603ObjectTypePipelineIdUpdateW
 	return ParsePatchcrmpipelines202603ObjectTypePipelineIdUpdateResponse(rsp)
 }
 
-// Patchcrmpipelines202603ObjectTypePipelineIdUpdateWithResponse performs a PATCH /crm/pipelines/2026-03/{objectType}/{pipelineId} (the `Patchcrmpipelines202603ObjectTypePipelineIdUpdate` operationId) request.
-// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+// Patchcrmpipelines202603ObjectTypePipelineIdUpdateWithResponse Perform a partial update of the pipeline identified by pipelineId.
 //
 // Perform a partial update of the pipeline identified by `{pipelineId}`. The updated pipeline will be returned in the response.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PATCH /crm/pipelines/2026-03/{objectType}/{pipelineId} (the `Patchcrmpipelines202603ObjectTypePipelineIdUpdate` operationId).
 func (c *ClientWithResponses) Patchcrmpipelines202603ObjectTypePipelineIdUpdateWithResponse(ctx context.Context, objectType string, pipelineId string, params *Patchcrmpipelines202603ObjectTypePipelineIdUpdateParams, body Patchcrmpipelines202603ObjectTypePipelineIdUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*Patchcrmpipelines202603ObjectTypePipelineIdUpdateResponse, error) {
 	rsp, err := c.Patchcrmpipelines202603ObjectTypePipelineIdUpdate(ctx, objectType, pipelineId, params, body, reqEditors...)
 	if err != nil {
@@ -7254,6 +9912,8 @@ func (c *ClientWithResponses) Patchcrmpipelines202603ObjectTypePipelineIdUpdateW
 }
 
 // Putcrmpipelines202603ObjectTypePipelineIdReplaceWithBodyWithResponse Replace a pipeline
+//
+// Replace all properties of an existing pipeline with the provided values.
 //
 // Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 //
@@ -7267,6 +9927,8 @@ func (c *ClientWithResponses) Putcrmpipelines202603ObjectTypePipelineIdReplaceWi
 }
 
 // Putcrmpipelines202603ObjectTypePipelineIdReplaceWithResponse Replace a pipeline
+//
+// Replace all properties of an existing pipeline with the provided values.
 //
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 //
@@ -7311,6 +9973,8 @@ func (c *ClientWithResponses) Getcrmpipelines202603ObjectTypePipelineIdstagesGet
 
 // Postcrmpipelines202603ObjectTypePipelineIdstagesCreateWithBodyWithResponse Create a pipeline stage
 //
+// Create a new stage within the specified pipeline.
+//
 // Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 //
 // Corresponds with POST /crm/pipelines/2026-03/{objectType}/{pipelineId}/stages (the `Postcrmpipelines202603ObjectTypePipelineIdstagesCreate` operationId).
@@ -7323,6 +9987,8 @@ func (c *ClientWithResponses) Postcrmpipelines202603ObjectTypePipelineIdstagesCr
 }
 
 // Postcrmpipelines202603ObjectTypePipelineIdstagesCreateWithResponse Create a pipeline stage
+//
+// Create a new stage within the specified pipeline.
 //
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 //
@@ -7337,11 +10003,13 @@ func (c *ClientWithResponses) Postcrmpipelines202603ObjectTypePipelineIdstagesCr
 
 // Deletecrmpipelines202603ObjectTypePipelineIdstagesStageIdArchiveWithResponse Delete a pipeline stage
 //
+// Delete a specific stage from a pipeline.
+//
 // Returns a wrapper object for the known response body format(s).
 //
 // Corresponds with DELETE /crm/pipelines/2026-03/{objectType}/{pipelineId}/stages/{stageId} (the `Deletecrmpipelines202603ObjectTypePipelineIdstagesStageIdArchive` operationId).
-func (c *ClientWithResponses) Deletecrmpipelines202603ObjectTypePipelineIdstagesStageIdArchiveWithResponse(ctx context.Context, objectType string, pipelineId string, stageId string, reqEditors ...RequestEditorFn) (*Deletecrmpipelines202603ObjectTypePipelineIdstagesStageIdArchiveResponse, error) {
-	rsp, err := c.Deletecrmpipelines202603ObjectTypePipelineIdstagesStageIdArchive(ctx, objectType, pipelineId, stageId, reqEditors...)
+func (c *ClientWithResponses) Deletecrmpipelines202603ObjectTypePipelineIdstagesStageIdArchiveWithResponse(ctx context.Context, objectType string, pipelineId string, stageId string, params *Deletecrmpipelines202603ObjectTypePipelineIdstagesStageIdArchiveParams, reqEditors ...RequestEditorFn) (*Deletecrmpipelines202603ObjectTypePipelineIdstagesStageIdArchiveResponse, error) {
+	rsp, err := c.Deletecrmpipelines202603ObjectTypePipelineIdstagesStageIdArchive(ctx, objectType, pipelineId, stageId, params, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
@@ -7349,6 +10017,8 @@ func (c *ClientWithResponses) Deletecrmpipelines202603ObjectTypePipelineIdstages
 }
 
 // Getcrmpipelines202603ObjectTypePipelineIdstagesStageIdGetByIdWithResponse Return a pipeline stage by ID
+//
+// Retrieve a specific stage from a pipeline using its ID.
 //
 // Returns a wrapper object for the known response body format(s).
 //
@@ -7361,10 +10031,13 @@ func (c *ClientWithResponses) Getcrmpipelines202603ObjectTypePipelineIdstagesSta
 	return ParseGetcrmpipelines202603ObjectTypePipelineIdstagesStageIdGetByIdResponse(rsp)
 }
 
-// Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdateWithBodyWithResponse performs a PATCH /crm/pipelines/2026-03/{objectType}/{pipelineId}/stages/{stageId} (the `Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdate` operationId) request,
-// with any type of body and a specified content type.
+// Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdateWithBodyWithResponse Update specific properties of an existing pipeline stage.
 //
-// Returns a wrapper object for the known response body format(s).
+// Perform a partial update on a specific stage of a pipeline.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PATCH /crm/pipelines/2026-03/{objectType}/{pipelineId}/stages/{stageId} (the `Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdate` operationId).
 func (c *ClientWithResponses) Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdateWithBodyWithResponse(ctx context.Context, objectType string, pipelineId string, stageId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdateResponse, error) {
 	rsp, err := c.Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdateWithBody(ctx, objectType, pipelineId, stageId, contentType, body, reqEditors...)
 	if err != nil {
@@ -7373,8 +10046,13 @@ func (c *ClientWithResponses) Patchcrmpipelines202603ObjectTypePipelineIdstagesS
 	return ParsePatchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdateResponse(rsp)
 }
 
-// Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdateWithResponse performs a PATCH /crm/pipelines/2026-03/{objectType}/{pipelineId}/stages/{stageId} (the `Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdate` operationId) request.
+// Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdateWithResponse Update specific properties of an existing pipeline stage.
+//
+// Perform a partial update on a specific stage of a pipeline.
+//
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PATCH /crm/pipelines/2026-03/{objectType}/{pipelineId}/stages/{stageId} (the `Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdate` operationId).
 func (c *ClientWithResponses) Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdateWithResponse(ctx context.Context, objectType string, pipelineId string, stageId string, body Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdateResponse, error) {
 	rsp, err := c.Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdate(ctx, objectType, pipelineId, stageId, body, reqEditors...)
 	if err != nil {
@@ -7413,11 +10091,13 @@ func (c *ClientWithResponses) Putcrmpipelines202603ObjectTypePipelineIdstagesSta
 	return ParsePutcrmpipelines202603ObjectTypePipelineIdstagesStageIdReplaceResponse(rsp)
 }
 
-// Getcrmpipelines202603ObjectTypePipelineIdstagesStageIdauditGetAuditWithResponse performs a GET /crm/pipelines/2026-03/{objectType}/{pipelineId}/stages/{stageId}/audit (the `Getcrmpipelines202603ObjectTypePipelineIdstagesStageIdauditGetAudit` operationId) request.
+// Getcrmpipelines202603ObjectTypePipelineIdstagesStageIdauditGetAuditWithResponse Retrieve a reverse chronological list of all changes made to a specific pipeline stage.
 //
 // Return a reverse chronological list of all mutations that have occurred on the pipeline stage identified by `{stageId}`.
 //
 // Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /crm/pipelines/2026-03/{objectType}/{pipelineId}/stages/{stageId}/audit (the `Getcrmpipelines202603ObjectTypePipelineIdstagesStageIdauditGetAudit` operationId).
 func (c *ClientWithResponses) Getcrmpipelines202603ObjectTypePipelineIdstagesStageIdauditGetAuditWithResponse(ctx context.Context, objectType string, pipelineId string, stageId string, reqEditors ...RequestEditorFn) (*Getcrmpipelines202603ObjectTypePipelineIdstagesStageIdauditGetAuditResponse, error) {
 	rsp, err := c.Getcrmpipelines202603ObjectTypePipelineIdstagesStageIdauditGetAudit(ctx, objectType, pipelineId, stageId, reqEditors...)
 	if err != nil {
@@ -8093,9 +10773,9 @@ func (c *ClientWithResponses) Postevents202603sendbatchSendWithResponse(ctx cont
 	return ParsePostevents202603sendbatchSendResponse(rsp)
 }
 
-// GeteventseventOccurrences202603eventseventOccurrences202603WithResponse Retrieve event occurrences
+// GeteventseventOccurrences202603eventseventOccurrences202603WithResponse Retrieve events
 //
-// Retrieve event occurrences for the specified time frame. This endpoint allows filtering by various parameters such as object type, event type, and occurrence time. It supports pagination and sorting of results.
+// Retrieve event occurrences for a specified date in September 2026. This endpoint allows you to filter and sort events based on various criteria, such as event type, object type, and occurrence dates. It supports pagination and can return specific properties of events if requested.
 //
 // Returns a wrapper object for the known response body format(s).
 //
@@ -8125,9 +10805,13 @@ func (c *ClientWithResponses) GeteventseventOccurrences202603eventTypeseventseve
 	return ParseGeteventseventOccurrences202603eventTypeseventseventOccurrences202603eventTypesResponse(rsp)
 }
 
-// GetfeatureFlags202603AppIdflagsallfeatureFlagsv3AppIdflagsallWithResponse performs a GET /feature-flags/2026-03/{appId}/flags/all (the `GetfeatureFlags202603AppIdflagsallfeatureFlagsv3AppIdflagsall` operationId) request.
+// GetfeatureFlags202603AppIdflagsallfeatureFlagsv3AppIdflagsallWithResponse List Flags
+//
+// Retrieve all feature flags associated with a specific application in your HubSpot account. This endpoint is useful for developers who need to manage or audit feature flags for their applications. It requires the application ID to identify which application's flags to list.
 //
 // Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /feature-flags/2026-03/{appId}/flags/all (the `GetfeatureFlags202603AppIdflagsallfeatureFlagsv3AppIdflagsall` operationId).
 func (c *ClientWithResponses) GetfeatureFlags202603AppIdflagsallfeatureFlagsv3AppIdflagsallWithResponse(ctx context.Context, appId int32, reqEditors ...RequestEditorFn) (*GetfeatureFlags202603AppIdflagsallfeatureFlagsv3AppIdflagsallResponse, error) {
 	rsp, err := c.GetfeatureFlags202603AppIdflagsallfeatureFlagsv3AppIdflagsall(ctx, appId, reqEditors...)
 	if err != nil {
@@ -8736,10 +11420,13 @@ func (c *ClientWithResponses) Postintegratorstimeline202603eventsCreateWithRespo
 	return ParsePostintegratorstimeline202603eventsCreateResponse(rsp)
 }
 
-// Postintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatchWithBodyWithResponse performs a POST /integrators/timeline/2026-03/events/batch (the `Postintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatch` operationId) request,
-// with any type of body and a specified content type.
+// Postintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatchWithBodyWithResponse Batch insert events
 //
-// Returns a wrapper object for the known response body format(s).
+// Insert a batch of new App Event occurrences into the timeline. Each occurrence in the batch is immutable, and if an occurrence with the same ID already exists, the entire batch will be rejected. The batch can include occurrences from multiple event types, but all must belong to a single portal.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /integrators/timeline/2026-03/events/batch (the `Postintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatch` operationId).
 func (c *ClientWithResponses) Postintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatchWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatchResponse, error) {
 	rsp, err := c.Postintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatchWithBody(ctx, contentType, body, reqEditors...)
 	if err != nil {
@@ -8748,8 +11435,13 @@ func (c *ClientWithResponses) Postintegratorstimeline202603eventsbatchintegrator
 	return ParsePostintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatchResponse(rsp)
 }
 
-// Postintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatchWithResponse performs a POST /integrators/timeline/2026-03/events/batch (the `Postintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatch` operationId) request.
+// Postintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatchWithResponse Batch insert events
+//
+// Insert a batch of new App Event occurrences into the timeline. Each occurrence in the batch is immutable, and if an occurrence with the same ID already exists, the entire batch will be rejected. The batch can include occurrences from multiple event types, but all must belong to a single portal.
+//
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /integrators/timeline/2026-03/events/batch (the `Postintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatch` operationId).
 func (c *ClientWithResponses) Postintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatchWithResponse(ctx context.Context, body Postintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatchJSONRequestBody, reqEditors ...RequestEditorFn) (*Postintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatchResponse, error) {
 	rsp, err := c.Postintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatch(ctx, body, reqEditors...)
 	if err != nil {
@@ -8758,10 +11450,13 @@ func (c *ClientWithResponses) Postintegratorstimeline202603eventsbatchintegrator
 	return ParsePostintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatchResponse(rsp)
 }
 
-// Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojectsWithBodyWithResponse performs a POST /integrators/timeline/2026-03/types/projects (the `Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojects` operationId) request,
-// with any type of body and a specified content type.
+// Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojectsWithBodyWithResponse Resolve Event Type
 //
-// Returns a wrapper object for the known response body format(s).
+// Resolve the fully qualified name (FQN) of an App Event Type using its developer coordinates, which include the project name and developer symbol. This endpoint is used for event types managed through Projects and does not support legacy or non-migrated event types.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /integrators/timeline/2026-03/types/projects (the `Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojects` operationId).
 func (c *ClientWithResponses) Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojectsWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojectsResponse, error) {
 	rsp, err := c.Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojectsWithBody(ctx, contentType, body, reqEditors...)
 	if err != nil {
@@ -8770,8 +11465,13 @@ func (c *ClientWithResponses) Postintegratorstimeline202603typesprojectsintegrat
 	return ParsePostintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojectsResponse(rsp)
 }
 
-// Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojectsWithResponse performs a POST /integrators/timeline/2026-03/types/projects (the `Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojects` operationId) request.
+// Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojectsWithResponse Resolve Event Type
+//
+// Resolve the fully qualified name (FQN) of an App Event Type using its developer coordinates, which include the project name and developer symbol. This endpoint is used for event types managed through Projects and does not support legacy or non-migrated event types.
+//
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /integrators/timeline/2026-03/types/projects (the `Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojects` operationId).
 func (c *ClientWithResponses) Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojectsWithResponse(ctx context.Context, body Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojectsJSONRequestBody, reqEditors ...RequestEditorFn) (*Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojectsResponse, error) {
 	rsp, err := c.Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojects(ctx, body, reqEditors...)
 	if err != nil {
@@ -8780,13 +11480,9 @@ func (c *ClientWithResponses) Postintegratorstimeline202603typesprojectsintegrat
 	return ParsePostintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojectsResponse(rsp)
 }
 
-// Getmarketingcampaigns202603marketingcampaignsv3WithResponse Retrieve campaigns
-//
-// Retrieve a paginated list of campaigns from your HubSpot account. This endpoint allows you to specify sorting, pagination, and filtering options to tailor the results to your needs.
+// Getmarketingcampaigns202603marketingcampaignsv3WithResponse performs a GET /marketing/campaigns/2026-03 (the `Getmarketingcampaigns202603marketingcampaignsv3` operationId) request.
 //
 // Returns a wrapper object for the known response body format(s).
-//
-// Corresponds with GET /marketing/campaigns/2026-03 (the `Getmarketingcampaigns202603marketingcampaignsv3` operationId).
 func (c *ClientWithResponses) Getmarketingcampaigns202603marketingcampaignsv3WithResponse(ctx context.Context, params *Getmarketingcampaigns202603marketingcampaignsv3Params, reqEditors ...RequestEditorFn) (*Getmarketingcampaigns202603marketingcampaignsv3Response, error) {
 	rsp, err := c.Getmarketingcampaigns202603marketingcampaignsv3(ctx, params, reqEditors...)
 	if err != nil {
@@ -8795,13 +11491,10 @@ func (c *ClientWithResponses) Getmarketingcampaigns202603marketingcampaignsv3Wit
 	return ParseGetmarketingcampaigns202603marketingcampaignsv3Response(rsp)
 }
 
-// Postmarketingcampaigns202603marketingcampaignsv3WithBodyWithResponse Create a campaign
+// Postmarketingcampaigns202603marketingcampaignsv3WithBodyWithResponse performs a POST /marketing/campaigns/2026-03 (the `Postmarketingcampaigns202603marketingcampaignsv3` operationId) request,
+// with any type of body and a specified content type.
 //
-// Create a campaign with the specified properties and receive a copy of the campaign object, including its ID. Note that the 'hs_goal' property is deprecated and will be ignored if provided.
-//
-// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
-//
-// Corresponds with POST /marketing/campaigns/2026-03 (the `Postmarketingcampaigns202603marketingcampaignsv3` operationId).
+// Returns a wrapper object for the known response body format(s).
 func (c *ClientWithResponses) Postmarketingcampaigns202603marketingcampaignsv3WithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postmarketingcampaigns202603marketingcampaignsv3Response, error) {
 	rsp, err := c.Postmarketingcampaigns202603marketingcampaignsv3WithBody(ctx, contentType, body, reqEditors...)
 	if err != nil {
@@ -8810,13 +11503,8 @@ func (c *ClientWithResponses) Postmarketingcampaigns202603marketingcampaignsv3Wi
 	return ParsePostmarketingcampaigns202603marketingcampaignsv3Response(rsp)
 }
 
-// Postmarketingcampaigns202603marketingcampaignsv3WithResponse Create a campaign
-//
-// Create a campaign with the specified properties and receive a copy of the campaign object, including its ID. Note that the 'hs_goal' property is deprecated and will be ignored if provided.
-//
+// Postmarketingcampaigns202603marketingcampaignsv3WithResponse performs a POST /marketing/campaigns/2026-03 (the `Postmarketingcampaigns202603marketingcampaignsv3` operationId) request.
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
-//
-// Corresponds with POST /marketing/campaigns/2026-03 (the `Postmarketingcampaigns202603marketingcampaignsv3` operationId).
 func (c *ClientWithResponses) Postmarketingcampaigns202603marketingcampaignsv3WithResponse(ctx context.Context, body Postmarketingcampaigns202603marketingcampaignsv3JSONRequestBody, reqEditors ...RequestEditorFn) (*Postmarketingcampaigns202603marketingcampaignsv3Response, error) {
 	rsp, err := c.Postmarketingcampaigns202603marketingcampaignsv3(ctx, body, reqEditors...)
 	if err != nil {
@@ -9345,9 +12033,13 @@ func (c *ClientWithResponses) PostmarketingemailCampaigns202603singleSendmarketi
 	return ParsePostmarketingemailCampaigns202603singleSendmarketingv4emailsingleSendResponse(rsp)
 }
 
-// Getmarketingemails202603marketingemailsv3WithResponse performs a GET /marketing/emails/2026-03 (the `Getmarketingemails202603marketingemailsv3` operationId) request.
+// Getmarketingemails202603marketingemailsv3WithResponse List Emails
+//
+// Retrieve a list of marketing emails from your HubSpot account. This endpoint allows you to filter emails based on various criteria such as publication date, creation date, update date, and more. You can also control the number of results per page and include additional statistics or properties in the response.
 //
 // Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /marketing/emails/2026-03 (the `Getmarketingemails202603marketingemailsv3` operationId).
 func (c *ClientWithResponses) Getmarketingemails202603marketingemailsv3WithResponse(ctx context.Context, params *Getmarketingemails202603marketingemailsv3Params, reqEditors ...RequestEditorFn) (*Getmarketingemails202603marketingemailsv3Response, error) {
 	rsp, err := c.Getmarketingemails202603marketingemailsv3(ctx, params, reqEditors...)
 	if err != nil {
@@ -9356,10 +12048,13 @@ func (c *ClientWithResponses) Getmarketingemails202603marketingemailsv3WithRespo
 	return ParseGetmarketingemails202603marketingemailsv3Response(rsp)
 }
 
-// Postmarketingemails202603marketingemailsv3WithBodyWithResponse performs a POST /marketing/emails/2026-03 (the `Postmarketingemails202603marketingemailsv3` operationId) request,
-// with any type of body and a specified content type.
+// Postmarketingemails202603marketingemailsv3WithBodyWithResponse Create Email
 //
-// Returns a wrapper object for the known response body format(s).
+// Create a new marketing email in your HubSpot account using the specified parameters. This endpoint allows you to define the content, settings, and other details of the email. Upon successful creation, the URL of the newly created email resource is returned.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /marketing/emails/2026-03 (the `Postmarketingemails202603marketingemailsv3` operationId).
 func (c *ClientWithResponses) Postmarketingemails202603marketingemailsv3WithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postmarketingemails202603marketingemailsv3Response, error) {
 	rsp, err := c.Postmarketingemails202603marketingemailsv3WithBody(ctx, contentType, body, reqEditors...)
 	if err != nil {
@@ -9368,8 +12063,13 @@ func (c *ClientWithResponses) Postmarketingemails202603marketingemailsv3WithBody
 	return ParsePostmarketingemails202603marketingemailsv3Response(rsp)
 }
 
-// Postmarketingemails202603marketingemailsv3WithResponse performs a POST /marketing/emails/2026-03 (the `Postmarketingemails202603marketingemailsv3` operationId) request.
+// Postmarketingemails202603marketingemailsv3WithResponse Create Email
+//
+// Create a new marketing email in your HubSpot account using the specified parameters. This endpoint allows you to define the content, settings, and other details of the email. Upon successful creation, the URL of the newly created email resource is returned.
+//
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /marketing/emails/2026-03 (the `Postmarketingemails202603marketingemailsv3` operationId).
 func (c *ClientWithResponses) Postmarketingemails202603marketingemailsv3WithResponse(ctx context.Context, body Postmarketingemails202603marketingemailsv3JSONRequestBody, reqEditors ...RequestEditorFn) (*Postmarketingemails202603marketingemailsv3Response, error) {
 	rsp, err := c.Postmarketingemails202603marketingemailsv3(ctx, body, reqEditors...)
 	if err != nil {
@@ -9605,7 +12305,7 @@ func (c *ClientWithResponses) Postmarketingemails202603EmailIddraftresetResetDra
 
 // Postmarketingemails202603EmailIdpublishPublishOrSendWithResponse Publish or send a marketing email
 //
-// If you have a Marketing Hub Enterprise account or the transactional email add-on, you can use this endpoint to publish an automated email or send/schedule a regular email.
+// If you have a Marketing Hub Enterprise account or the Transactional Email Add-On, you can use this endpoint to publish an automated email or send/schedule a regular email.
 //
 // Returns a wrapper object for the known response body format(s).
 //
@@ -9680,7 +12380,7 @@ func (c *ClientWithResponses) Postmarketingemails202603EmailIdrevisionsRevisionI
 
 // Postmarketingemails202603EmailIdunpublishUnpublishOrCancelWithResponse Unpublish or cancel a marketing email
 //
-// If you have a Marketing Hub Enterprise account or the transactional email add-on, you can use this endpoint to unpublish an automated email or cancel a regular email. If the email is already in the process of being sent, canceling might not be possible.
+// If you have a Marketing Hub Enterprise account or the Transactional Email Add-On, you can use this endpoint to unpublish an automated email or cancel a regular email. If the email is already in the process of being sent, canceling might not be possible.
 //
 // Returns a wrapper object for the known response body format(s).
 //
@@ -9693,9 +12393,13 @@ func (c *ClientWithResponses) Postmarketingemails202603EmailIdunpublishUnpublish
 	return ParsePostmarketingemails202603EmailIdunpublishUnpublishOrCancelResponse(rsp)
 }
 
-// GetmarketingmarketingEvents202603marketingmarketingEventsv3WithResponse performs a GET /marketing/marketing-events/2026-03 (the `GetmarketingmarketingEvents202603marketingmarketingEventsv3` operationId) request.
+// GetmarketingmarketingEvents202603marketingmarketingEventsv3WithResponse List
+//
+// Retrieve a list of marketing events for the specified API version. This endpoint supports pagination to navigate through large sets of data. Use this to access marketing event details in a paginated format.
 //
 // Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /marketing/marketing-events/2026-03 (the `GetmarketingmarketingEvents202603marketingmarketingEventsv3` operationId).
 func (c *ClientWithResponses) GetmarketingmarketingEvents202603marketingmarketingEventsv3WithResponse(ctx context.Context, params *GetmarketingmarketingEvents202603marketingmarketingEventsv3Params, reqEditors ...RequestEditorFn) (*GetmarketingmarketingEvents202603marketingmarketingEventsv3Response, error) {
 	rsp, err := c.GetmarketingmarketingEvents202603marketingmarketingEventsv3(ctx, params, reqEditors...)
 	if err != nil {
@@ -10681,9 +13385,9 @@ func (c *ClientWithResponses) Postmarketingtransactional202603smtpTokensTokenIdp
 	return ParsePostmarketingtransactional202603smtpTokensTokenIdpasswordResetResetPasswordResponse(rsp)
 }
 
-// PostmediaBridge202603eventsattentionSpanWithBodyWithResponse Create an attention span event
+// PostmediaBridge202603eventsattentionSpanWithBodyWithResponse Create Event
 //
-// Create an event containing the viewers attention span details for the media.
+// Create a new attention span event in the MediaBridgeService. This endpoint is used to record attention span events, which can be useful for tracking user engagement with media content. The request must include a valid JSON body conforming to the AttentionSpanEventRequest schema.
 //
 // Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 //
@@ -10696,9 +13400,9 @@ func (c *ClientWithResponses) PostmediaBridge202603eventsattentionSpanWithBodyWi
 	return ParsePostmediaBridge202603eventsattentionSpanResponse(rsp)
 }
 
-// PostmediaBridge202603eventsattentionSpanWithResponse Create an attention span event
+// PostmediaBridge202603eventsattentionSpanWithResponse Create Event
 //
-// Create an event containing the viewers attention span details for the media.
+// Create a new attention span event in the MediaBridgeService. This endpoint is used to record attention span events, which can be useful for tracking user engagement with media content. The request must include a valid JSON body conforming to the AttentionSpanEventRequest schema.
 //
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 //
@@ -10711,9 +13415,9 @@ func (c *ClientWithResponses) PostmediaBridge202603eventsattentionSpanWithRespon
 	return ParsePostmediaBridge202603eventsattentionSpanResponse(rsp)
 }
 
-// PostmediaBridge202603eventsmediaPlayedWithBodyWithResponse Create a played event
+// PostmediaBridge202603eventsmediaPlayedWithBodyWithResponse Create
 //
-// Create an event for when a user begins playing a piece of media.
+// Create a media played event in the HubSpot account. This endpoint is used to log when media content has been played, which can be useful for tracking user engagement with media resources.
 //
 // Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 //
@@ -10726,9 +13430,9 @@ func (c *ClientWithResponses) PostmediaBridge202603eventsmediaPlayedWithBodyWith
 	return ParsePostmediaBridge202603eventsmediaPlayedResponse(rsp)
 }
 
-// PostmediaBridge202603eventsmediaPlayedWithResponse Create a played event
+// PostmediaBridge202603eventsmediaPlayedWithResponse Create
 //
-// Create an event for when a user begins playing a piece of media.
+// Create a media played event in the HubSpot account. This endpoint is used to log when media content has been played, which can be useful for tracking user engagement with media resources.
 //
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 //
@@ -10741,9 +13445,9 @@ func (c *ClientWithResponses) PostmediaBridge202603eventsmediaPlayedWithResponse
 	return ParsePostmediaBridge202603eventsmediaPlayedResponse(rsp)
 }
 
-// PostmediaBridge202603eventsmediaPlayedPercentWithBodyWithResponse Create a quartile event
+// PostmediaBridge202603eventsmediaPlayedPercentWithBodyWithResponse Record Media Played Percentage
 //
-// Create an event representing a user reaching quarterly milestones in a piece of media they're viewing.
+// This endpoint allows you to record the percentage of media that has been played. It is useful for tracking user engagement with media content, such as videos or audio files, by capturing the extent to which the media has been consumed. This data can be used for analytics and improving content delivery strategies.
 //
 // Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 //
@@ -10756,9 +13460,9 @@ func (c *ClientWithResponses) PostmediaBridge202603eventsmediaPlayedPercentWithB
 	return ParsePostmediaBridge202603eventsmediaPlayedPercentResponse(rsp)
 }
 
-// PostmediaBridge202603eventsmediaPlayedPercentWithResponse Create a quartile event
+// PostmediaBridge202603eventsmediaPlayedPercentWithResponse Record Media Played Percentage
 //
-// Create an event representing a user reaching quarterly milestones in a piece of media they're viewing.
+// This endpoint allows you to record the percentage of media that has been played. It is useful for tracking user engagement with media content, such as videos or audio files, by capturing the extent to which the media has been consumed. This data can be used for analytics and improving content delivery strategies.
 //
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 //
@@ -10771,9 +13475,9 @@ func (c *ClientWithResponses) PostmediaBridge202603eventsmediaPlayedPercentWithR
 	return ParsePostmediaBridge202603eventsmediaPlayedPercentResponse(rsp)
 }
 
-// GetmediaBridge202603AppIdpropertiesObjectTypeWithResponse Get the properties for an object type.
+// GetmediaBridge202603AppIdpropertiesObjectTypeWithResponse Retrieve properties
 //
-// Get the existing properties defined for a media object type.
+// Retrieve properties for a specified object type within a given app. This endpoint allows you to filter properties based on whether they are archived and to specify which properties to include in the response. It is useful for accessing and managing the properties associated with different object types in your application.
 //
 // Returns a wrapper object for the known response body format(s).
 //
@@ -10786,9 +13490,9 @@ func (c *ClientWithResponses) GetmediaBridge202603AppIdpropertiesObjectTypeWithR
 	return ParseGetmediaBridge202603AppIdpropertiesObjectTypeResponse(rsp)
 }
 
-// PostmediaBridge202603AppIdpropertiesObjectTypeWithBodyWithResponse Create a new property
+// PostmediaBridge202603AppIdpropertiesObjectTypeWithBodyWithResponse Create property
 //
-// Create a new property for the specified media type.
+// Create a new property for a specified object type within a given app in the MediaBridge service. This endpoint allows you to define new properties that can be used to store additional information related to the object type. The request must include the necessary property details in the request body.
 //
 // Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 //
@@ -10801,9 +13505,9 @@ func (c *ClientWithResponses) PostmediaBridge202603AppIdpropertiesObjectTypeWith
 	return ParsePostmediaBridge202603AppIdpropertiesObjectTypeResponse(rsp)
 }
 
-// PostmediaBridge202603AppIdpropertiesObjectTypeWithResponse Create a new property
+// PostmediaBridge202603AppIdpropertiesObjectTypeWithResponse Create property
 //
-// Create a new property for the specified media type.
+// Create a new property for a specified object type within a given app in the MediaBridge service. This endpoint allows you to define new properties that can be used to store additional information related to the object type. The request must include the necessary property details in the request body.
 //
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 //
@@ -10816,9 +13520,9 @@ func (c *ClientWithResponses) PostmediaBridge202603AppIdpropertiesObjectTypeWith
 	return ParsePostmediaBridge202603AppIdpropertiesObjectTypeResponse(rsp)
 }
 
-// PostmediaBridge202603AppIdpropertiesObjectTypebatcharchiveWithBodyWithResponse Archive multiple properties
+// PostmediaBridge202603AppIdpropertiesObjectTypebatcharchiveWithBodyWithResponse Batch archive properties
 //
-// Archive a batch of existing properties for the specified types.
+// Archive multiple properties for a specified object type within a given app. This endpoint is useful for managing large sets of properties that are no longer needed or should be hidden from active use. It requires specifying the app ID and object type in the path parameters.
 //
 // Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 //
@@ -10831,9 +13535,9 @@ func (c *ClientWithResponses) PostmediaBridge202603AppIdpropertiesObjectTypebatc
 	return ParsePostmediaBridge202603AppIdpropertiesObjectTypebatcharchiveResponse(rsp)
 }
 
-// PostmediaBridge202603AppIdpropertiesObjectTypebatcharchiveWithResponse Archive multiple properties
+// PostmediaBridge202603AppIdpropertiesObjectTypebatcharchiveWithResponse Batch archive properties
 //
-// Archive a batch of existing properties for the specified types.
+// Archive multiple properties for a specified object type within a given app. This endpoint is useful for managing large sets of properties that are no longer needed or should be hidden from active use. It requires specifying the app ID and object type in the path parameters.
 //
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 //
@@ -10846,9 +13550,9 @@ func (c *ClientWithResponses) PostmediaBridge202603AppIdpropertiesObjectTypebatc
 	return ParsePostmediaBridge202603AppIdpropertiesObjectTypebatcharchiveResponse(rsp)
 }
 
-// PostmediaBridge202603AppIdpropertiesObjectTypebatchcreateWithBodyWithResponse Create multiple properties
+// PostmediaBridge202603AppIdpropertiesObjectTypebatchcreateWithBodyWithResponse Batch create properties
 //
-// Create a batch of properties of the specified object type.
+// Create multiple properties in a batch for a specified object type within a given app. This endpoint is useful for efficiently setting up multiple properties at once, reducing the need for multiple individual API calls.
 //
 // Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 //
@@ -10861,9 +13565,9 @@ func (c *ClientWithResponses) PostmediaBridge202603AppIdpropertiesObjectTypebatc
 	return ParsePostmediaBridge202603AppIdpropertiesObjectTypebatchcreateResponse(rsp)
 }
 
-// PostmediaBridge202603AppIdpropertiesObjectTypebatchcreateWithResponse Create multiple properties
+// PostmediaBridge202603AppIdpropertiesObjectTypebatchcreateWithResponse Batch create properties
 //
-// Create a batch of properties of the specified object type.
+// Create multiple properties in a batch for a specified object type within a given app. This endpoint is useful for efficiently setting up multiple properties at once, reducing the need for multiple individual API calls.
 //
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 //
@@ -10876,9 +13580,9 @@ func (c *ClientWithResponses) PostmediaBridge202603AppIdpropertiesObjectTypebatc
 	return ParsePostmediaBridge202603AppIdpropertiesObjectTypebatchcreateResponse(rsp)
 }
 
-// PostmediaBridge202603AppIdpropertiesObjectTypebatchreadWithBodyWithResponse Get the details for multiple properties
+// PostmediaBridge202603AppIdpropertiesObjectTypebatchreadWithBodyWithResponse Batch read properties
 //
-// Get the details for a batch of properties for a specified object type.
+// Retrieve a batch of properties for a specified object type within a given app. This endpoint is useful for fetching multiple properties efficiently in a single request, especially when dealing with large datasets or when specific properties are needed for processing.
 //
 // Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 //
@@ -10891,9 +13595,9 @@ func (c *ClientWithResponses) PostmediaBridge202603AppIdpropertiesObjectTypebatc
 	return ParsePostmediaBridge202603AppIdpropertiesObjectTypebatchreadResponse(rsp)
 }
 
-// PostmediaBridge202603AppIdpropertiesObjectTypebatchreadWithResponse Get the details for multiple properties
+// PostmediaBridge202603AppIdpropertiesObjectTypebatchreadWithResponse Batch read properties
 //
-// Get the details for a batch of properties for a specified object type.
+// Retrieve a batch of properties for a specified object type within a given app. This endpoint is useful for fetching multiple properties efficiently in a single request, especially when dealing with large datasets or when specific properties are needed for processing.
 //
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 //
@@ -10906,9 +13610,9 @@ func (c *ClientWithResponses) PostmediaBridge202603AppIdpropertiesObjectTypebatc
 	return ParsePostmediaBridge202603AppIdpropertiesObjectTypebatchreadResponse(rsp)
 }
 
-// GetmediaBridge202603AppIdpropertiesObjectTypegroupsWithResponse Get property groups
+// GetmediaBridge202603AppIdpropertiesObjectTypegroupsWithResponse List groups
 //
-// Get the property groups for a specified object type.
+// Retrieve a list of property groups for a specified object type within a given app. This endpoint is useful for obtaining organizational information about properties associated with different object types in your application.
 //
 // Returns a wrapper object for the known response body format(s).
 //
@@ -10921,9 +13625,9 @@ func (c *ClientWithResponses) GetmediaBridge202603AppIdpropertiesObjectTypegroup
 	return ParseGetmediaBridge202603AppIdpropertiesObjectTypegroupsResponse(rsp)
 }
 
-// PostmediaBridge202603AppIdpropertiesObjectTypegroupsWithBodyWithResponse Create a new property group
+// PostmediaBridge202603AppIdpropertiesObjectTypegroupsWithBodyWithResponse Create Group
 //
-// Create a new property group for the specified object type.
+// Create a new property group for a specified object type within a given app. This endpoint allows you to organize properties into groups, making it easier to manage and categorize them within your application.
 //
 // Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 //
@@ -10936,9 +13640,9 @@ func (c *ClientWithResponses) PostmediaBridge202603AppIdpropertiesObjectTypegrou
 	return ParsePostmediaBridge202603AppIdpropertiesObjectTypegroupsResponse(rsp)
 }
 
-// PostmediaBridge202603AppIdpropertiesObjectTypegroupsWithResponse Create a new property group
+// PostmediaBridge202603AppIdpropertiesObjectTypegroupsWithResponse Create Group
 //
-// Create a new property group for the specified object type.
+// Create a new property group for a specified object type within a given app. This endpoint allows you to organize properties into groups, making it easier to manage and categorize them within your application.
 //
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 //
@@ -10951,9 +13655,9 @@ func (c *ClientWithResponses) PostmediaBridge202603AppIdpropertiesObjectTypegrou
 	return ParsePostmediaBridge202603AppIdpropertiesObjectTypegroupsResponse(rsp)
 }
 
-// DeletemediaBridge202603AppIdpropertiesObjectTypegroupsGroupNameWithResponse Delete a property group
+// DeletemediaBridge202603AppIdpropertiesObjectTypegroupsGroupNameWithResponse Delete group
 //
-// Delete an existing property group by name.
+// Delete a specific property group for a given object type within an app. This operation is useful for removing unnecessary or obsolete property groups, helping to maintain a clean and organized structure within your app's properties.
 //
 // Returns a wrapper object for the known response body format(s).
 //
@@ -10966,9 +13670,9 @@ func (c *ClientWithResponses) DeletemediaBridge202603AppIdpropertiesObjectTypegr
 	return ParseDeletemediaBridge202603AppIdpropertiesObjectTypegroupsGroupNameResponse(rsp)
 }
 
-// GetmediaBridge202603AppIdpropertiesObjectTypegroupsGroupNameWithResponse Get a specific property group
+// GetmediaBridge202603AppIdpropertiesObjectTypegroupsGroupNameWithResponse Retrieve group
 //
-// Get the details of an existing property group by name.
+// Retrieve a specific property group for a given object type within an app. This endpoint is useful for accessing detailed information about how properties are grouped under a specific group name for a particular object type in your application.
 //
 // Returns a wrapper object for the known response body format(s).
 //
@@ -10981,9 +13685,9 @@ func (c *ClientWithResponses) GetmediaBridge202603AppIdpropertiesObjectTypegroup
 	return ParseGetmediaBridge202603AppIdpropertiesObjectTypegroupsGroupNameResponse(rsp)
 }
 
-// PatchmediaBridge202603AppIdpropertiesObjectTypegroupsGroupNameWithBodyWithResponse Update a property group
+// PatchmediaBridge202603AppIdpropertiesObjectTypegroupsGroupNameWithBodyWithResponse Update group
 //
-// Update an existing property group by name.
+// Update the properties of a specific group within a specified object type for a given app. This operation allows you to modify the details of a property group, such as its label or display order, within the context of the MediaBridge service.
 //
 // Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 //
@@ -10996,9 +13700,9 @@ func (c *ClientWithResponses) PatchmediaBridge202603AppIdpropertiesObjectTypegro
 	return ParsePatchmediaBridge202603AppIdpropertiesObjectTypegroupsGroupNameResponse(rsp)
 }
 
-// PatchmediaBridge202603AppIdpropertiesObjectTypegroupsGroupNameWithResponse Update a property group
+// PatchmediaBridge202603AppIdpropertiesObjectTypegroupsGroupNameWithResponse Update group
 //
-// Update an existing property group by name.
+// Update the properties of a specific group within a specified object type for a given app. This operation allows you to modify the details of a property group, such as its label or display order, within the context of the MediaBridge service.
 //
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 //
@@ -11011,9 +13715,9 @@ func (c *ClientWithResponses) PatchmediaBridge202603AppIdpropertiesObjectTypegro
 	return ParsePatchmediaBridge202603AppIdpropertiesObjectTypegroupsGroupNameResponse(rsp)
 }
 
-// DeletemediaBridge202603AppIdpropertiesObjectTypePropertyNameWithResponse Delete a property
+// DeletemediaBridge202603AppIdpropertiesObjectTypePropertyNameWithResponse Delete property
 //
-// Delete an existing property for an object type.
+// Delete a specific property from a given object type within an app. This operation is useful for removing properties that are no longer needed or were created in error. The endpoint requires specifying the app ID, object type, and property name to identify the property to be deleted.
 //
 // Returns a wrapper object for the known response body format(s).
 //
@@ -11026,9 +13730,9 @@ func (c *ClientWithResponses) DeletemediaBridge202603AppIdpropertiesObjectTypePr
 	return ParseDeletemediaBridge202603AppIdpropertiesObjectTypePropertyNameResponse(rsp)
 }
 
-// GetmediaBridge202603AppIdpropertiesObjectTypePropertyNameWithResponse Get the details for a property
+// GetmediaBridge202603AppIdpropertiesObjectTypePropertyNameWithResponse Retrieve property
 //
-// Get the details for an existing property by name.
+// Retrieve a specific property for a given object type within a specified app. This endpoint allows you to access details about a property, including its configuration and settings, for a particular object type identified by the property name. This can be useful for understanding property configurations or for integration purposes.
 //
 // Returns a wrapper object for the known response body format(s).
 //
@@ -11041,9 +13745,9 @@ func (c *ClientWithResponses) GetmediaBridge202603AppIdpropertiesObjectTypePrope
 	return ParseGetmediaBridge202603AppIdpropertiesObjectTypePropertyNameResponse(rsp)
 }
 
-// PatchmediaBridge202603AppIdpropertiesObjectTypePropertyNameWithBodyWithResponse Update a property
+// PatchmediaBridge202603AppIdpropertiesObjectTypePropertyNameWithBodyWithResponse Update property
 //
-// Update an existing property for an object type.
+// Update an existing property for a specified object type within a given app. This operation allows you to modify the details of a property, such as its label, type, or description, to better fit your application's requirements.
 //
 // Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 //
@@ -11056,9 +13760,9 @@ func (c *ClientWithResponses) PatchmediaBridge202603AppIdpropertiesObjectTypePro
 	return ParsePatchmediaBridge202603AppIdpropertiesObjectTypePropertyNameResponse(rsp)
 }
 
-// PatchmediaBridge202603AppIdpropertiesObjectTypePropertyNameWithResponse Update a property
+// PatchmediaBridge202603AppIdpropertiesObjectTypePropertyNameWithResponse Update property
 //
-// Update an existing property for an object type.
+// Update an existing property for a specified object type within a given app. This operation allows you to modify the details of a property, such as its label, type, or description, to better fit your application's requirements.
 //
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 //
@@ -11071,9 +13775,9 @@ func (c *ClientWithResponses) PatchmediaBridge202603AppIdpropertiesObjectTypePro
 	return ParsePatchmediaBridge202603AppIdpropertiesObjectTypePropertyNameResponse(rsp)
 }
 
-// GetmediaBridge202603AppIdschemasWithResponse Get all schemas
+// GetmediaBridge202603AppIdschemasWithResponse Retrieve schemas
 //
-// Get the schemas for all object types.
+// Retrieve the schemas associated with a specific app in the HubSpot account. This endpoint allows you to fetch schema details, which can be useful for understanding the data structure and properties associated with the app. You can optionally filter the results to include only archived schemas.
 //
 // Returns a wrapper object for the known response body format(s).
 //
@@ -11086,9 +13790,9 @@ func (c *ClientWithResponses) GetmediaBridge202603AppIdschemasWithResponse(ctx c
 	return ParseGetmediaBridge202603AppIdschemasResponse(rsp)
 }
 
-// GetmediaBridge202603AppIdschemasObjectTypeWithResponse Get the schema for an object type
+// GetmediaBridge202603AppIdschemasObjectTypeWithResponse Retrieve schema
 //
-// Get the schema for a specified object type.
+// Retrieve the schema for a specific object type within a given app in your HubSpot account. This endpoint is useful for understanding the structure and properties of a particular object type, which can assist in data integration and management tasks.
 //
 // Returns a wrapper object for the known response body format(s).
 //
@@ -11101,9 +13805,9 @@ func (c *ClientWithResponses) GetmediaBridge202603AppIdschemasObjectTypeWithResp
 	return ParseGetmediaBridge202603AppIdschemasObjectTypeResponse(rsp)
 }
 
-// PatchmediaBridge202603AppIdschemasObjectTypeWithBodyWithResponse Update the schema for an object type
+// PatchmediaBridge202603AppIdschemasObjectTypeWithBodyWithResponse Update schema
 //
-// Update the schema for an existing object type.
+// Update the schema for a specific object type within a given app. This operation allows you to modify the existing schema details, which can be useful for adapting to changes in data structure requirements or business logic.
 //
 // Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 //
@@ -11116,9 +13820,9 @@ func (c *ClientWithResponses) PatchmediaBridge202603AppIdschemasObjectTypeWithBo
 	return ParsePatchmediaBridge202603AppIdschemasObjectTypeResponse(rsp)
 }
 
-// PatchmediaBridge202603AppIdschemasObjectTypeWithResponse Update the schema for an object type
+// PatchmediaBridge202603AppIdschemasObjectTypeWithResponse Update schema
 //
-// Update the schema for an existing object type.
+// Update the schema for a specific object type within a given app. This operation allows you to modify the existing schema details, which can be useful for adapting to changes in data structure requirements or business logic.
 //
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 //
@@ -11131,9 +13835,9 @@ func (c *ClientWithResponses) PatchmediaBridge202603AppIdschemasObjectTypeWithRe
 	return ParsePatchmediaBridge202603AppIdschemasObjectTypeResponse(rsp)
 }
 
-// PostmediaBridge202603AppIdschemasObjectTypeassociationsWithBodyWithResponse Create association definition
+// PostmediaBridge202603AppIdschemasObjectTypeassociationsWithBodyWithResponse Create associations
 //
-// Create a new association definition for the specified object type.
+// Create new associations for a specified object type within a given app. This endpoint allows you to define relationships between different object types, enhancing data connectivity and integration within your HubSpot account.
 //
 // Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 //
@@ -11146,9 +13850,9 @@ func (c *ClientWithResponses) PostmediaBridge202603AppIdschemasObjectTypeassocia
 	return ParsePostmediaBridge202603AppIdschemasObjectTypeassociationsResponse(rsp)
 }
 
-// PostmediaBridge202603AppIdschemasObjectTypeassociationsWithResponse Create association definition
+// PostmediaBridge202603AppIdschemasObjectTypeassociationsWithResponse Create associations
 //
-// Create a new association definition for the specified object type.
+// Create new associations for a specified object type within a given app. This endpoint allows you to define relationships between different object types, enhancing data connectivity and integration within your HubSpot account.
 //
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 //
@@ -11161,9 +13865,9 @@ func (c *ClientWithResponses) PostmediaBridge202603AppIdschemasObjectTypeassocia
 	return ParsePostmediaBridge202603AppIdschemasObjectTypeassociationsResponse(rsp)
 }
 
-// DeletemediaBridge202603AppIdschemasObjectTypeassociationsAssociationIdWithResponse Delete an association definition
+// DeletemediaBridge202603AppIdschemasObjectTypeassociationsAssociationIdWithResponse Delete association
 //
-// Delete an existing association definition for an object type.
+// Remove an existing association between schemas for a specified app in the MediaBridge service. This operation is useful when you need to disassociate entities that are no longer related or to clean up outdated associations.
 //
 // Returns a wrapper object for the known response body format(s).
 //
@@ -11176,9 +13880,9 @@ func (c *ClientWithResponses) DeletemediaBridge202603AppIdschemasObjectTypeassoc
 	return ParseDeletemediaBridge202603AppIdschemasObjectTypeassociationsAssociationIdResponse(rsp)
 }
 
-// PutmediaBridge202603AppIdsettingsWithBodyWithResponse Update the media bridge app name
+// PutmediaBridge202603AppIdsettingsWithBodyWithResponse Update settings
 //
-// Update the name that your app will display when a user is selecting media bridge items.
+// Update the settings for a specific app in the MediaBridgeService. This endpoint allows you to modify the configuration settings associated with the specified appId. It is useful for updating app-specific settings to ensure they align with your current requirements.
 //
 // Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 //
@@ -11191,9 +13895,9 @@ func (c *ClientWithResponses) PutmediaBridge202603AppIdsettingsWithBodyWithRespo
 	return ParsePutmediaBridge202603AppIdsettingsResponse(rsp)
 }
 
-// PutmediaBridge202603AppIdsettingsWithResponse Update the media bridge app name
+// PutmediaBridge202603AppIdsettingsWithResponse Update settings
 //
-// Update the name that your app will display when a user is selecting media bridge items.
+// Update the settings for a specific app in the MediaBridgeService. This endpoint allows you to modify the configuration settings associated with the specified appId. It is useful for updating app-specific settings to ensure they align with your current requirements.
 //
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 //
@@ -11206,9 +13910,9 @@ func (c *ClientWithResponses) PutmediaBridge202603AppIdsettingsWithResponse(ctx 
 	return ParsePutmediaBridge202603AppIdsettingsResponse(rsp)
 }
 
-// GetmediaBridge202603AppIdsettingseventVisibilityWithResponse View event visibility settings
+// GetmediaBridge202603AppIdsettingseventVisibilityWithResponse Retrieve settings
 //
-// Get the visibility settings for media bridge events for your apps.
+// Retrieve the event visibility settings for a specific app in the MediaBridge service. This endpoint provides information on how events are visible within the specified application context.
 //
 // Returns a wrapper object for the known response body format(s).
 //
@@ -11221,9 +13925,9 @@ func (c *ClientWithResponses) GetmediaBridge202603AppIdsettingseventVisibilityWi
 	return ParseGetmediaBridge202603AppIdsettingseventVisibilityResponse(rsp)
 }
 
-// PatchmediaBridge202603AppIdsettingseventVisibilityWithBodyWithResponse Create or update event visibility settings
+// PatchmediaBridge202603AppIdsettingseventVisibilityWithBodyWithResponse Update settings
 //
-// Set the visibility settings for media bridge events created by your app.
+// Update the event visibility settings for a specific app in the MediaBridgeService. This operation allows you to modify how events are displayed or managed for the specified app. It is useful for configuring event visibility preferences based on your application's requirements.
 //
 // Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 //
@@ -11236,9 +13940,9 @@ func (c *ClientWithResponses) PatchmediaBridge202603AppIdsettingseventVisibility
 	return ParsePatchmediaBridge202603AppIdsettingseventVisibilityResponse(rsp)
 }
 
-// PatchmediaBridge202603AppIdsettingseventVisibilityWithResponse Create or update event visibility settings
+// PatchmediaBridge202603AppIdsettingseventVisibilityWithResponse Update settings
 //
-// Set the visibility settings for media bridge events created by your app.
+// Update the event visibility settings for a specific app in the MediaBridgeService. This operation allows you to modify how events are displayed or managed for the specified app. It is useful for configuring event visibility preferences based on your application's requirements.
 //
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 //
@@ -11251,9 +13955,9 @@ func (c *ClientWithResponses) PatchmediaBridge202603AppIdsettingseventVisibility
 	return ParsePatchmediaBridge202603AppIdsettingseventVisibilityResponse(rsp)
 }
 
-// PostmediaBridge202603AppIdsettingsobjectDefinitionsWithBodyWithResponse Create a new object type
+// PostmediaBridge202603AppIdsettingsobjectDefinitionsWithBodyWithResponse Create Object Definitions
 //
-// Create a new media object type.
+// Create new object definitions for a specific app in the HubSpot Media Bridge. This endpoint is used to define new objects that can be utilized within the app, allowing for customization and integration of media-related functionalities.
 //
 // Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 //
@@ -11266,9 +13970,9 @@ func (c *ClientWithResponses) PostmediaBridge202603AppIdsettingsobjectDefinition
 	return ParsePostmediaBridge202603AppIdsettingsobjectDefinitionsResponse(rsp)
 }
 
-// PostmediaBridge202603AppIdsettingsobjectDefinitionsWithResponse Create a new object type
+// PostmediaBridge202603AppIdsettingsobjectDefinitionsWithResponse Create Object Definitions
 //
-// Create a new media object type.
+// Create new object definitions for a specific app in the HubSpot Media Bridge. This endpoint is used to define new objects that can be utilized within the app, allowing for customization and integration of media-related functionalities.
 //
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 //
@@ -11281,9 +13985,9 @@ func (c *ClientWithResponses) PostmediaBridge202603AppIdsettingsobjectDefinition
 	return ParsePostmediaBridge202603AppIdsettingsobjectDefinitionsResponse(rsp)
 }
 
-// GetmediaBridge202603AppIdsettingsobjectDefinitionsMediaTypeWithResponse Get object types for a supported media
+// GetmediaBridge202603AppIdsettingsobjectDefinitionsMediaTypeWithResponse Retrieve object definitions
 //
-// Get the existing objects types that belong to the specified media type.
+// Retrieve the object definitions for a specified media type within an app. This endpoint allows you to access the settings related to the object definitions of various media types such as VIDEO, AUDIO, DOCUMENT, OTHER, and IMAGE. It is useful for understanding the structure and properties associated with different media types in your application.
 //
 // Returns a wrapper object for the known response body format(s).
 //
@@ -11296,9 +14000,9 @@ func (c *ClientWithResponses) GetmediaBridge202603AppIdsettingsobjectDefinitions
 	return ParseGetmediaBridge202603AppIdsettingsobjectDefinitionsMediaTypeResponse(rsp)
 }
 
-// DeletemediaBridge202603AppIdsettingsoembedDomainsWithResponse Delete an oEmbed domain
+// DeletemediaBridge202603AppIdsettingsoembedDomainsWithResponse Delete domains
 //
-// Delete an existing oEmbed domain.
+// Delete oEmbed domains associated with a specific app in HubSpot. This operation allows you to manage and remove domains that are no longer needed for embedding media content within the app's settings.
 //
 // Returns a wrapper object for the known response body format(s).
 //
@@ -11311,9 +14015,9 @@ func (c *ClientWithResponses) DeletemediaBridge202603AppIdsettingsoembedDomainsW
 	return ParseDeletemediaBridge202603AppIdsettingsoembedDomainsResponse(rsp)
 }
 
-// GetmediaBridge202603AppIdsettingsoembedDomainsWithResponse Get oEmbed domains
+// GetmediaBridge202603AppIdsettingsoembedDomainsWithResponse List OEmbed Domains
 //
-// Get the details for existing oEmbed domains for your app.
+// Retrieve the list of OEmbed domains associated with a specific app in your HubSpot account. This endpoint is useful for managing and verifying the domains that are allowed to embed media content. It provides a way to ensure that only trusted domains are used for embedding media.
 //
 // Returns a wrapper object for the known response body format(s).
 //
@@ -11326,9 +14030,9 @@ func (c *ClientWithResponses) GetmediaBridge202603AppIdsettingsoembedDomainsWith
 	return ParseGetmediaBridge202603AppIdsettingsoembedDomainsResponse(rsp)
 }
 
-// PostmediaBridge202603AppIdsettingsoembedDomainsWithBodyWithResponse Set up a new oEmbed domain
+// PostmediaBridge202603AppIdsettingsoembedDomainsWithBodyWithResponse Create
 //
-// Set up a new oEmbed domain for your media bridge app.
+// Create a new oEmbed domain setting for a specific app in your HubSpot account. This endpoint allows you to define domains that can be used for oEmbed purposes, facilitating the integration of media content from external sources.
 //
 // Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 //
@@ -11341,9 +14045,9 @@ func (c *ClientWithResponses) PostmediaBridge202603AppIdsettingsoembedDomainsWit
 	return ParsePostmediaBridge202603AppIdsettingsoembedDomainsResponse(rsp)
 }
 
-// PostmediaBridge202603AppIdsettingsoembedDomainsWithResponse Set up a new oEmbed domain
+// PostmediaBridge202603AppIdsettingsoembedDomainsWithResponse Create
 //
-// Set up a new oEmbed domain for your media bridge app.
+// Create a new oEmbed domain setting for a specific app in your HubSpot account. This endpoint allows you to define domains that can be used for oEmbed purposes, facilitating the integration of media content from external sources.
 //
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 //
@@ -11356,9 +14060,9 @@ func (c *ClientWithResponses) PostmediaBridge202603AppIdsettingsoembedDomainsWit
 	return ParsePostmediaBridge202603AppIdsettingsoembedDomainsResponse(rsp)
 }
 
-// GetmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainIdWithResponse Get an oEmbed domain
+// GetmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainIdWithResponse Retrieve domain
 //
-// Get the details for an existing oEmbed domain.
+// Retrieve details of a specific oEmbed domain for a given app. This endpoint is useful for fetching configuration or settings related to oEmbed domains associated with a particular application.
 //
 // Returns a wrapper object for the known response body format(s).
 //
@@ -11371,9 +14075,9 @@ func (c *ClientWithResponses) GetmediaBridge202603AppIdsettingsoembedDomainsOEmb
 	return ParseGetmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainIdResponse(rsp)
 }
 
-// PatchmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainIdWithBodyWithResponse Update an oEmbed domain
+// PatchmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainIdWithBodyWithResponse Update oEmbed domain
 //
-// Update an existing oEmbed domain.
+// Update the settings for a specific oEmbed domain associated with a given app. This endpoint allows you to modify the configuration of an oEmbed domain, which can be useful for managing how media content is embedded across different domains.
 //
 // Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 //
@@ -11386,9 +14090,9 @@ func (c *ClientWithResponses) PatchmediaBridge202603AppIdsettingsoembedDomainsOE
 	return ParsePatchmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainIdResponse(rsp)
 }
 
-// PatchmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainIdWithResponse Update an oEmbed domain
+// PatchmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainIdWithResponse Update oEmbed domain
 //
-// Update an existing oEmbed domain.
+// Update the settings for a specific oEmbed domain associated with a given app. This endpoint allows you to modify the configuration of an oEmbed domain, which can be useful for managing how media content is embedded across different domains.
 //
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 //
@@ -11401,9 +14105,9 @@ func (c *ClientWithResponses) PatchmediaBridge202603AppIdsettingsoembedDomainsOE
 	return ParsePatchmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainIdResponse(rsp)
 }
 
-// PostmediaBridge202603AppIdsettingsregisterWithBodyWithResponse Register the media bridge app name
+// PostmediaBridge202603AppIdsettingsregisterWithBodyWithResponse Register Settings
 //
-// Register the name that your app will display when a user is selecting media bridge items.
+// Register settings for a specific app in the MediaBridge service. This endpoint is deprecated and should be used with caution. It allows for the registration of settings associated with the specified app ID.
 //
 // Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 //
@@ -11418,9 +14122,9 @@ func (c *ClientWithResponses) PostmediaBridge202603AppIdsettingsregisterWithBody
 	return ParsePostmediaBridge202603AppIdsettingsregisterResponse(rsp)
 }
 
-// PostmediaBridge202603AppIdsettingsregisterWithResponse Register the media bridge app name
+// PostmediaBridge202603AppIdsettingsregisterWithResponse Register Settings
 //
-// Register the name that your app will display when a user is selecting media bridge items.
+// Register settings for a specific app in the MediaBridge service. This endpoint is deprecated and should be used with caution. It allows for the registration of settings associated with the specified app ID.
 //
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 //
@@ -11434,9 +14138,13 @@ func (c *ClientWithResponses) PostmediaBridge202603AppIdsettingsregisterWithResp
 	return ParsePostmediaBridge202603AppIdsettingsregisterResponse(rsp)
 }
 
-// PostmediaBridge202603AppIdsettingsvideoAssociationDefinitionmediaBridgev1AppIdsettingsvideoAssociationDefinitionWithResponse performs a POST /media-bridge/2026-03/{appId}/settings/video-association-definition (the `PostmediaBridge202603AppIdsettingsvideoAssociationDefinitionmediaBridgev1AppIdsettingsvideoAssociationDefinition` operationId) request.
+// PostmediaBridge202603AppIdsettingsvideoAssociationDefinitionmediaBridgev1AppIdsettingsvideoAssociationDefinitionWithResponse Define Video Association
+//
+// Create a video association definition for a specific application in the HubSpot Media Bridge. This endpoint is used to define how videos are associated with other objects within the specified app. It is particularly useful for applications that need to manage video content and its relationships programmatically.
 //
 // Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /media-bridge/2026-03/{appId}/settings/video-association-definition (the `PostmediaBridge202603AppIdsettingsvideoAssociationDefinitionmediaBridgev1AppIdsettingsvideoAssociationDefinition` operationId).
 func (c *ClientWithResponses) PostmediaBridge202603AppIdsettingsvideoAssociationDefinitionmediaBridgev1AppIdsettingsvideoAssociationDefinitionWithResponse(ctx context.Context, appId int32, reqEditors ...RequestEditorFn) (*PostmediaBridge202603AppIdsettingsvideoAssociationDefinitionmediaBridgev1AppIdsettingsvideoAssociationDefinitionResponse, error) {
 	rsp, err := c.PostmediaBridge202603AppIdsettingsvideoAssociationDefinitionmediaBridgev1AppIdsettingsvideoAssociationDefinition(ctx, appId, reqEditors...)
 	if err != nil {
@@ -11565,9 +14273,9 @@ func (c *ClientWithResponses) Postoauth202603tokenrevokeoauthv3tokenrevokeWithFo
 	return ParsePostoauth202603tokenrevokeoauthv3tokenrevokeResponse(rsp)
 }
 
-// Postscheduler202603meetingscalendarWithBodyWithResponse Create a new calendar meeting event.
+// Postscheduler202603meetingscalendarWithBodyWithResponse Create meeting
 //
-// Create a new calendar event and meeting object by providing the necessary details such as associations, email reminders, meeting object properties, and timezone.
+// Create a new calendar meeting event in your HubSpot account. This endpoint allows you to specify details such as the meeting title, start and end times, and associated users. The organizerUserId is required to identify the meeting organizer.
 //
 // Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 //
@@ -11580,9 +14288,9 @@ func (c *ClientWithResponses) Postscheduler202603meetingscalendarWithBodyWithRes
 	return ParsePostscheduler202603meetingscalendarResponse(rsp)
 }
 
-// Postscheduler202603meetingscalendarWithResponse Create a new calendar meeting event.
+// Postscheduler202603meetingscalendarWithResponse Create meeting
 //
-// Create a new calendar event and meeting object by providing the necessary details such as associations, email reminders, meeting object properties, and timezone.
+// Create a new calendar meeting event in your HubSpot account. This endpoint allows you to specify details such as the meeting title, start and end times, and associated users. The organizerUserId is required to identify the meeting organizer.
 //
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 //
@@ -11595,9 +14303,9 @@ func (c *ClientWithResponses) Postscheduler202603meetingscalendarWithResponse(ct
 	return ParsePostscheduler202603meetingscalendarResponse(rsp)
 }
 
-// Getscheduler202603meetingsmeetingLinksWithResponse Get meeting scheduling pages
+// Getscheduler202603meetingsmeetingLinksWithResponse List Meeting Links
 //
-// Get a paged list meeting scheduling pages.
+// Retrieve a list of meeting links available in the HubSpot account. This endpoint allows filtering by various criteria such as meeting name, organizer user ID, and meeting type. It supports pagination to navigate through large sets of results.
 //
 // Returns a wrapper object for the known response body format(s).
 //
@@ -11610,9 +14318,9 @@ func (c *ClientWithResponses) Getscheduler202603meetingsmeetingLinksWithResponse
 	return ParseGetscheduler202603meetingsmeetingLinksResponse(rsp)
 }
 
-// Postscheduler202603meetingsmeetingLinksbookWithBodyWithResponse Book a meeting
+// Postscheduler202603meetingsmeetingLinksbookWithBodyWithResponse Book Meeting
 //
-// Book a meeting for a specified meeting page.
+// Book a meeting using a specified meeting link. This endpoint allows you to create a meeting by providing necessary details such as duration, email, and start time. It is useful for scheduling meetings programmatically through HubSpot's API.
 //
 // Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 //
@@ -11625,9 +14333,9 @@ func (c *ClientWithResponses) Postscheduler202603meetingsmeetingLinksbookWithBod
 	return ParsePostscheduler202603meetingsmeetingLinksbookResponse(rsp)
 }
 
-// Postscheduler202603meetingsmeetingLinksbookWithResponse Book a meeting
+// Postscheduler202603meetingsmeetingLinksbookWithResponse Book Meeting
 //
-// Book a meeting for a specified meeting page.
+// Book a meeting using a specified meeting link. This endpoint allows you to create a meeting by providing necessary details such as duration, email, and start time. It is useful for scheduling meetings programmatically through HubSpot's API.
 //
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 //
@@ -11640,9 +14348,9 @@ func (c *ClientWithResponses) Postscheduler202603meetingsmeetingLinksbookWithRes
 	return ParsePostscheduler202603meetingsmeetingLinksbookResponse(rsp)
 }
 
-// Getscheduler202603meetingsmeetingLinksbookavailabilityPageSlugWithResponse Get the availability for a meeting
+// Getscheduler202603meetingsmeetingLinksbookavailabilityPageSlugWithResponse Retrieve availability
 //
-// Get the next availability times for a meeting page.
+// Retrieve the availability and busy times for a specific meeting link. This endpoint is useful for checking available slots for booking meetings based on the provided slug. It requires specifying the timezone and optionally allows adjusting the month view with an offset.
 //
 // Returns a wrapper object for the known response body format(s).
 //
@@ -11655,9 +14363,9 @@ func (c *ClientWithResponses) Getscheduler202603meetingsmeetingLinksbookavailabi
 	return ParseGetscheduler202603meetingsmeetingLinksbookavailabilityPageSlugResponse(rsp)
 }
 
-// Getscheduler202603meetingsmeetingLinksbookSlugWithResponse List booking information
+// Getscheduler202603meetingsmeetingLinksbookSlugWithResponse Retrieve booking info
 //
-// Get details about the initial information necessary for a meeting scheduler.
+// Retrieve detailed booking information for a specific meeting link using its slug. This endpoint provides insights into the availability and settings associated with the meeting link. It is useful for understanding the booking context and ensuring that the correct timezone is applied.
 //
 // Returns a wrapper object for the known response body format(s).
 //
@@ -12556,9 +15264,9 @@ func (c *ClientWithResponses) PostwebhooksJournalsnapshots202603crmWithResponse(
 	return ParsePostwebhooksJournalsnapshots202603crmResponse(rsp)
 }
 
-// GetwebhooksJournalsubscriptions202603WithResponse List Subscriptions
+// GetwebhooksJournalsubscriptions202603WithResponse List subscriptions
 //
-// Retrieve a list of webhook journal subscriptions for the specified version. This endpoint allows you to view all active subscriptions without pagination. It is useful for monitoring and managing webhook subscriptions in your HubSpot account.
+// Retrieve a list of webhook journal subscriptions. This endpoint provides access to subscription details without pagination, allowing you to view all current subscriptions in a single request. It is useful for managing and reviewing webhook subscriptions for your app.
 //
 // Returns a wrapper object for the known response body format(s).
 //
@@ -12571,9 +15279,9 @@ func (c *ClientWithResponses) GetwebhooksJournalsubscriptions202603WithResponse(
 	return ParseGetwebhooksJournalsubscriptions202603Response(rsp)
 }
 
-// PostwebhooksJournalsubscriptions202603WithBodyWithResponse Create Subscription
+// PostwebhooksJournalsubscriptions202603WithBodyWithResponse Upsert subscription
 //
-// Create a new subscription in the Webhooks Journal for the specified version. This endpoint allows you to define the subscription details by providing the necessary information in the request body. It supports various types of subscriptions, including object, association, event, app lifecycle event, list membership, and GDPR privacy deletion. Ensure that all required fields are included in the request to successfully create a subscription.
+// Create a new webhook journal subscription for the specified portal. This endpoint allows you to define the actions and object types that the subscription will monitor. It requires a request body with the subscription details.
 //
 // Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 //
@@ -12586,9 +15294,9 @@ func (c *ClientWithResponses) PostwebhooksJournalsubscriptions202603WithBodyWith
 	return ParsePostwebhooksJournalsubscriptions202603Response(rsp)
 }
 
-// PostwebhooksJournalsubscriptions202603WithResponse Create Subscription
+// PostwebhooksJournalsubscriptions202603WithResponse Upsert subscription
 //
-// Create a new subscription in the Webhooks Journal for the specified version. This endpoint allows you to define the subscription details by providing the necessary information in the request body. It supports various types of subscriptions, including object, association, event, app lifecycle event, list membership, and GDPR privacy deletion. Ensure that all required fields are included in the request to successfully create a subscription.
+// Create a new webhook journal subscription for the specified portal. This endpoint allows you to define the actions and object types that the subscription will monitor. It requires a request body with the subscription details.
 //
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 //
@@ -12931,7 +15639,7 @@ func ParseGetaccountInfo202603activityauditLogsResponse(rsp *http.Response) (*Ge
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest AccountActivityCollectionResponsePublicApiUserActionEventForwardPaging
+		var dest CollectionResponsePublicApiUserActionEventForwardPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -12957,7 +15665,7 @@ func ParseGetaccountInfo202603activityloginResponse(rsp *http.Response) (*Getacc
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest AccountActivityCollectionResponsePublicLoginAuditForwardPaging
+		var dest CollectionResponsePublicLoginAuditForwardPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -12983,7 +15691,7 @@ func ParseGetaccountInfo202603activitysecurityResponse(rsp *http.Response) (*Get
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest AccountActivityCollectionResponseHydratedCriticalActionForwardPaging
+		var dest CollectionResponseHydratedCriticalActionForwardPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13009,7 +15717,7 @@ func ParseGetaccountInfo202603apiUsagedailyprivateAppsaccountInfo202509apiUsaged
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest AccountCollectionResponseApiUsageNoPaging
+		var dest CollectionResponseApiUsageNoPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13035,7 +15743,7 @@ func ParseGetaccountInfo202603detailsaccountInfo202509detailsResponse(rsp *http.
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest AccountPortalInformationResponse
+		var dest PortalInformationResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13077,7 +15785,7 @@ func ParseGetautomationactions202603AppIdGetPageResponse(rsp *http.Response) (*G
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest AutomationActionsCollectionResponsePublicActionDefinitionForwardPaging
+		var dest CollectionResponsePublicActionDefinitionForwardPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13103,12 +15811,25 @@ func ParsePostautomationactions202603AppIdCreateResponse(rsp *http.Response) (*P
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest AutomationActionsPublicActionDefinition
+		var dest PublicActionDefinition
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postautomationactions202603AppIdCreateResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -13145,7 +15866,7 @@ func ParseGetautomationactions202603AppIdDefinitionIdGetByIdResponse(rsp *http.R
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest AutomationActionsPublicActionDefinition
+		var dest PublicActionDefinition
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13171,7 +15892,7 @@ func ParsePatchautomationactions202603AppIdDefinitionIdUpdateResponse(rsp *http.
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest AutomationActionsPublicActionDefinition
+		var dest PublicActionDefinition
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13197,7 +15918,7 @@ func ParseGetautomationactions202603AppIdDefinitionIdfunctionsGetPageResponse(rs
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest AutomationActionsCollectionResponsePublicActionFunctionIdentifierNoPaging
+		var dest CollectionResponsePublicActionFunctionIdentifierNoPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13239,7 +15960,7 @@ func ParseGetautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeGetByF
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest AutomationActionsPublicActionFunction
+		var dest PublicActionFunction
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13265,7 +15986,7 @@ func ParsePutautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeCreate
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest AutomationActionsPublicActionFunctionIdentifier
+		var dest PublicActionFunctionIdentifier
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13307,7 +16028,7 @@ func ParseGetautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeFuncti
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest AutomationActionsPublicActionFunction
+		var dest PublicActionFunction
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13333,7 +16054,7 @@ func ParsePutautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeFuncti
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest AutomationActionsPublicActionFunctionIdentifier
+		var dest PublicActionFunctionIdentifier
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13359,7 +16080,7 @@ func ParseGetautomationactions202603AppIdDefinitionIdrequiresObjectautomationv4a
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest AutomationActionsPublicActionDefinitionRequiresObjectResponse
+		var dest PublicActionDefinitionRequiresObjectResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13401,7 +16122,7 @@ func ParseGetautomationactions202603AppIdDefinitionIdrevisionsGetPageResponse(rs
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest AutomationActionsCollectionResponsePublicActionRevisionForwardPaging
+		var dest CollectionResponsePublicActionRevisionForwardPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13427,7 +16148,7 @@ func ParseGetautomationactions202603AppIdDefinitionIdrevisionsRevisionIdGetByIdR
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest AutomationActionsPublicActionRevision
+		var dest PublicActionRevision
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13485,7 +16206,7 @@ func ParseGetautomationsequences202603automationsequences202603Response(rsp *htt
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest AutomationSequencesCollectionResponseWithTotalPublicSequenceLiteResponse
+		var dest CollectionResponseWithTotalPublicSequenceLiteResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13511,7 +16232,7 @@ func ParsePostautomationsequences202603enrollmentsResponse(rsp *http.Response) (
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest AutomationSequencesPublicSequenceEnrollmentLiteResponse
+		var dest PublicSequenceEnrollmentLiteResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13537,7 +16258,7 @@ func ParseGetautomationsequences202603enrollmentscontactContactIdResponse(rsp *h
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest AutomationSequencesPublicSequenceEnrollmentResponse
+		var dest PublicSequenceEnrollmentResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13563,7 +16284,7 @@ func ParseGetautomationsequences202603SequenceIdResponse(rsp *http.Response) (*G
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest AutomationSequencesPublicSequenceResponse
+		var dest PublicSequenceResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13589,7 +16310,7 @@ func ParseGetbusinessUnitspublic202603businessUnitsuserUserIdGetByUserIDResponse
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest BusinessUnitsCollectionResponsePublicBusinessUnitNoPaging
+		var dest CollectionResponsePublicBusinessUnitNoPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13615,7 +16336,7 @@ func ParseGetcmsauditLogs202603cmsauditLogsv3Response(rsp *http.Response) (*Getc
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsAuditLogsCollectionResponsePublicAuditLog
+		var dest CollectionResponsePublicAuditLog
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13657,7 +16378,7 @@ func ParseGetcmsblogSettings202603settingsResponse(rsp *http.Response) (*Getcmsb
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsBlogsSettingsCollectionResponseWithTotalBlog
+		var dest CollectionResponseWithTotalBlog
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13699,7 +16420,7 @@ func ParsePostcmsblogSettings202603settingsmultiLanguagecreateLanguageVariationR
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsBlogsSettingsBlog
+		var dest Blog
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13773,7 +16494,7 @@ func ParseGetcmsblogSettings202603settingsBlogIdResponse(rsp *http.Response) (*G
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsBlogsSettingsBlog
+		var dest Blog
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13799,7 +16520,7 @@ func ParseGetcmsblogSettings202603settingsBlogIdrevisionsResponse(rsp *http.Resp
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsBlogsSettingsCollectionResponseWithTotalBlogVersion
+		var dest CollectionResponseWithTotalBlogVersion
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13825,7 +16546,7 @@ func ParseGetcmsblogSettings202603settingsBlogIdrevisionsRevisionIdResponse(rsp 
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsBlogsSettingsBlogVersion
+		var dest BlogVersion
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -13863,6 +16584,19 @@ func ParsePostcmsblogs202603authorsCreateResponse(rsp *http.Response) (*Postcmsb
 	response := &Postcmsblogs202603authorsCreateResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcmsblogs202603authorsCreateResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -14119,6 +16853,19 @@ func ParsePostcmsblogs202603postsCreateResponse(rsp *http.Response) (*Postcmsblo
 	response := &Postcmsblogs202603postsCreateResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcmsblogs202603postsCreateResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -14537,6 +17284,19 @@ func ParsePostcmsblogs202603tagsCreateResponse(rsp *http.Response) (*Postcmsblog
 		HTTPResponse: rsp,
 	}
 
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcmsblogs202603tagsCreateResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
+	}
+
 	return response, nil
 }
 
@@ -14779,7 +17539,7 @@ func ParseGetcmsdomains202603cmsdomainsv3Response(rsp *http.Response) (*Getcmsdo
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsDomainsCollectionResponseWithTotalDomain
+		var dest CollectionResponseWithTotalDomain
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -14805,7 +17565,7 @@ func ParseGetcmsdomains202603DomainIdGetByIdResponse(rsp *http.Response) (*Getcm
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsDomainsDomain
+		var dest Domain
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -14831,7 +17591,7 @@ func ParseGetcmshubdb202603tablesGetAllTablesResponse(rsp *http.Response) (*Getc
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsHubdbCollectionResponseWithTotalHubDbTableV3
+		var dest CollectionResponseWithTotalHubDbTableV3
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -14857,12 +17617,25 @@ func ParsePostcmshubdb202603tablesCreateTableResponse(rsp *http.Response) (*Post
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CmsHubdbHubDbTableV3
+		var dest HubDbTableV3
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcmshubdb202603tablesCreateTableResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -14883,7 +17656,7 @@ func ParseGetcmshubdb202603tablesdraftGetAllDraftTablesResponse(rsp *http.Respon
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsHubdbCollectionResponseWithTotalHubDbTableV3
+		var dest CollectionResponseWithTotalHubDbTableV3
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -14925,7 +17698,7 @@ func ParseGetcmshubdb202603tablesTableIdOrNameGetTableDetailsResponse(rsp *http.
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsHubdbHubDbTableV3
+		var dest HubDbTableV3
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -14951,7 +17724,7 @@ func ParseGetcmshubdb202603tablesTableIdOrNamedraftGetDraftTableDetailsByIdRespo
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsHubdbHubDbTableV3
+		var dest HubDbTableV3
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -14977,7 +17750,7 @@ func ParsePatchcmshubdb202603tablesTableIdOrNamedraftUpdateDraftTableResponse(rs
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsHubdbHubDbTableV3
+		var dest HubDbTableV3
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15003,7 +17776,7 @@ func ParsePostcmshubdb202603tablesTableIdOrNamedraftcloneCloneDraftTableResponse
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsHubdbHubDbTableV3
+		var dest HubDbTableV3
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15045,7 +17818,7 @@ func ParsePostcmshubdb202603tablesTableIdOrNamedraftimportImportDraftTableRespon
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsHubdbImportResult
+		var dest ImportResult
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15071,7 +17844,7 @@ func ParsePostcmshubdb202603tablesTableIdOrNamedraftpublishPublishDraftTableResp
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsHubdbHubDbTableV3
+		var dest HubDbTableV3
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15097,7 +17870,7 @@ func ParsePostcmshubdb202603tablesTableIdOrNamedraftresetResetDraftTableResponse
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsHubdbHubDbTableV3
+		var dest HubDbTableV3
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15139,7 +17912,7 @@ func ParseGetcmshubdb202603tablesTableIdOrNamerowsGetTableRowsResponse(rsp *http
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsHubdbUnifiedCollectionResponseWithTotalBaseHubDbTableRowV3
+		var dest UnifiedCollectionResponseWithTotalBaseHubDbTableRowV3
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15165,12 +17938,25 @@ func ParsePostcmshubdb202603tablesTableIdOrNamerowsCreateTableRowResponse(rsp *h
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CmsHubdbHubDbTableRowV3
+		var dest HubDbTableRowV3
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -15191,14 +17977,14 @@ func ParsePostcmshubdb202603tablesTableIdOrNamerowsbatchreadReadTableRowsRespons
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsHubdbBatchResponseHubDbTableRowV3
+		var dest BatchResponseHubDbTableRowV3
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CmsHubdbBatchResponseHubDbTableRowV3WithErrors
+		var dest BatchResponseHubDbTableRowV3WithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15224,7 +18010,7 @@ func ParseGetcmshubdb202603tablesTableIdOrNamerowsdraftReadDraftTableRowsRespons
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsHubdbUnifiedCollectionResponseWithTotalBaseHubDbTableRowV3
+		var dest UnifiedCollectionResponseWithTotalBaseHubDbTableRowV3
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15250,7 +18036,7 @@ func ParsePostcmshubdb202603tablesTableIdOrNamerowsdraftbatchcloneCloneDraftTabl
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsHubdbBatchResponseHubDbTableRowV3
+		var dest BatchResponseHubDbTableRowV3
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15276,14 +18062,14 @@ func ParsePostcmshubdb202603tablesTableIdOrNamerowsdraftbatchcreateCreateDraftTa
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CmsHubdbBatchResponseHubDbTableRowV3
+		var dest BatchResponseHubDbTableRowV3
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CmsHubdbBatchResponseHubDbTableRowV3WithErrors
+		var dest BatchResponseHubDbTableRowV3WithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15325,14 +18111,14 @@ func ParsePostcmshubdb202603tablesTableIdOrNamerowsdraftbatchreadReadDraftTableR
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsHubdbBatchResponseHubDbTableRowV3
+		var dest BatchResponseHubDbTableRowV3
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CmsHubdbBatchResponseHubDbTableRowV3WithErrors
+		var dest BatchResponseHubDbTableRowV3WithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15358,14 +18144,14 @@ func ParsePostcmshubdb202603tablesTableIdOrNamerowsdraftbatchreplaceReplaceDraft
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsHubdbBatchResponseHubDbTableRowV3
+		var dest BatchResponseHubDbTableRowV3
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CmsHubdbBatchResponseHubDbTableRowV3WithErrors
+		var dest BatchResponseHubDbTableRowV3WithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15391,14 +18177,14 @@ func ParsePostcmshubdb202603tablesTableIdOrNamerowsdraftbatchupdateUpdateDraftTa
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsHubdbBatchResponseHubDbTableRowV3
+		var dest BatchResponseHubDbTableRowV3
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CmsHubdbBatchResponseHubDbTableRowV3WithErrors
+		var dest BatchResponseHubDbTableRowV3WithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15424,7 +18210,7 @@ func ParseGetcmshubdb202603tablesTableIdOrNamerowsRowIdGetTableRowResponse(rsp *
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsHubdbHubDbTableRowV3
+		var dest HubDbTableRowV3
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15466,7 +18252,7 @@ func ParseGetcmshubdb202603tablesTableIdOrNamerowsRowIddraftGetDraftTableRowById
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsHubdbHubDbTableRowV3
+		var dest HubDbTableRowV3
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15492,7 +18278,7 @@ func ParsePatchcmshubdb202603tablesTableIdOrNamerowsRowIddraftUpdateDraftTableRo
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsHubdbHubDbTableRowV3
+		var dest HubDbTableRowV3
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15518,7 +18304,7 @@ func ParsePutcmshubdb202603tablesTableIdOrNamerowsRowIddraftReplaceDraftTableRow
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsHubdbHubDbTableRowV3
+		var dest HubDbTableRowV3
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15544,7 +18330,7 @@ func ParsePostcmshubdb202603tablesTableIdOrNamerowsRowIddraftcloneCloneDraftTabl
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsHubdbHubDbTableRowV3
+		var dest HubDbTableRowV3
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15570,7 +18356,7 @@ func ParsePostcmshubdb202603tablesTableIdOrNameunpublishUnpublishTableResponse(r
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsHubdbHubDbTableV3
+		var dest HubDbTableV3
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15612,7 +18398,7 @@ func ParseGetcmspages202603landingPagesGetPageResponse(rsp *http.Response) (*Get
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsPagesCollectionResponseWithTotalPageForwardPaging
+		var dest CollectionResponseWithTotalPageForwardPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15638,12 +18424,25 @@ func ParsePostcmspages202603landingPagesCreateResponse(rsp *http.Response) (*Pos
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CmsPagesPage
+		var dest Page
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcmspages202603landingPagesCreateResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -15664,12 +18463,25 @@ func ParsePostcmspages202603landingPagesabTestcreateVariationCreateABTestVariati
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CmsPagesPage
+		var dest Page
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcmspages202603landingPagesabTestcreateVariationCreateABTestVariationResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -15738,14 +18550,14 @@ func ParsePostcmspages202603landingPagesbatchcreateCreateBatchResponse(rsp *http
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CmsPagesBatchResponsePage
+		var dest BatchResponsePage
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CmsPagesBatchResponsePageWithErrors
+		var dest BatchResponsePageWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15771,14 +18583,14 @@ func ParsePostcmspages202603landingPagesbatchreadReadBatchResponse(rsp *http.Res
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsPagesBatchResponsePage
+		var dest BatchResponsePage
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CmsPagesBatchResponsePageWithErrors
+		var dest BatchResponsePageWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15804,14 +18616,14 @@ func ParsePostcmspages202603landingPagesbatchupdateUpdateBatchResponse(rsp *http
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsPagesBatchResponsePage
+		var dest BatchResponsePage
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CmsPagesBatchResponsePageWithErrors
+		var dest BatchResponsePageWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15837,7 +18649,7 @@ func ParsePostcmspages202603landingPagescloneCloneResponse(rsp *http.Response) (
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsPagesPage
+		var dest Page
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15863,7 +18675,7 @@ func ParseGetcmspages202603landingPagesfoldersGetFoldersPageResponse(rsp *http.R
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsPagesCollectionResponseWithTotalContentFolderForwardPaging
+		var dest CollectionResponseWithTotalContentFolderForwardPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15889,12 +18701,25 @@ func ParsePostcmspages202603landingPagesfoldersCreateFolderResponse(rsp *http.Re
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CmsPagesContentFolder
+		var dest ContentFolder
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcmspages202603landingPagesfoldersCreateFolderResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -15931,14 +18756,14 @@ func ParsePostcmspages202603landingPagesfoldersbatchcreateCreateFoldersResponse(
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CmsPagesBatchResponseContentFolder
+		var dest BatchResponseContentFolder
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CmsPagesBatchResponseContentFolderWithErrors
+		var dest BatchResponseContentFolderWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15964,14 +18789,14 @@ func ParsePostcmspages202603landingPagesfoldersbatchreadReadFoldersResponse(rsp 
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsPagesBatchResponseContentFolder
+		var dest BatchResponseContentFolder
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CmsPagesBatchResponseContentFolderWithErrors
+		var dest BatchResponseContentFolderWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15997,14 +18822,14 @@ func ParsePostcmspages202603landingPagesfoldersbatchupdateUpdateFoldersResponse(
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsPagesBatchResponseContentFolder
+		var dest BatchResponseContentFolder
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CmsPagesBatchResponseContentFolderWithErrors
+		var dest BatchResponseContentFolderWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -16046,7 +18871,7 @@ func ParseGetcmspages202603landingPagesfoldersObjectIdGetFolderByIdResponse(rsp 
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsPagesContentFolder
+		var dest ContentFolder
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -16072,7 +18897,7 @@ func ParsePatchcmspages202603landingPagesfoldersObjectIdUpdateFolderResponse(rsp
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsPagesContentFolder
+		var dest ContentFolder
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -16098,7 +18923,7 @@ func ParseGetcmspages202603landingPagesfoldersObjectIdrevisionsGetFolderPrevious
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsPagesCollectionResponseWithTotalContentFolderVersion
+		var dest CollectionResponseWithTotalContentFolderVersion
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -16124,7 +18949,7 @@ func ParseGetcmspages202603landingPagesfoldersObjectIdrevisionsRevisionIdGetFold
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsPagesContentFolderVersion
+		var dest ContentFolderVersion
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -16150,7 +18975,7 @@ func ParsePostcmspages202603landingPagesfoldersObjectIdrevisionsRevisionIdrestor
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsPagesContentFolder
+		var dest ContentFolder
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -16192,7 +19017,7 @@ func ParsePostcmspages202603landingPagesmultiLanguagecreateLanguageVariationCrea
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsPagesPage
+		var dest Page
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -16298,7 +19123,7 @@ func ParseGetcmspages202603landingPagesObjectIdGetByIdResponse(rsp *http.Respons
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsPagesPage
+		var dest Page
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -16324,7 +19149,7 @@ func ParsePatchcmspages202603landingPagesObjectIdUpdateResponse(rsp *http.Respon
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsPagesPage
+		var dest Page
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -16350,7 +19175,7 @@ func ParseGetcmspages202603landingPagesObjectIddraftGetDraftByIdResponse(rsp *ht
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsPagesPage
+		var dest Page
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -16376,7 +19201,7 @@ func ParsePatchcmspages202603landingPagesObjectIddraftUpdateDraftResponse(rsp *h
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsPagesPage
+		var dest Page
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -16434,7 +19259,7 @@ func ParseGetcmspages202603landingPagesObjectIdrevisionsGetPreviousVersionsRespo
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsPagesCollectionResponseWithTotalPageVersion
+		var dest CollectionResponseWithTotalPageVersion
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -16460,7 +19285,7 @@ func ParseGetcmspages202603landingPagesObjectIdrevisionsRevisionIdGetPreviousVer
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsPagesPageVersion
+		var dest PageVersion
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -16486,7 +19311,7 @@ func ParsePostcmspages202603landingPagesObjectIdrevisionsRevisionIdrestoreRestor
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsPagesPage
+		var dest Page
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -16512,7 +19337,7 @@ func ParsePostcmspages202603landingPagesObjectIdrevisionsRevisionIdrestoreToDraf
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsPagesPage
+		var dest Page
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -16538,7 +19363,7 @@ func ParseGetcmspages202603sitePagesGetPageResponse(rsp *http.Response) (*Getcms
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsPagesCollectionResponseWithTotalPageForwardPaging
+		var dest CollectionResponseWithTotalPageForwardPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -16564,12 +19389,25 @@ func ParsePostcmspages202603sitePagesCreateResponse(rsp *http.Response) (*Postcm
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CmsPagesPage
+		var dest Page
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcmspages202603sitePagesCreateResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -16590,12 +19428,25 @@ func ParsePostcmspages202603sitePagesabTestcreateVariationCreateABTestVariationR
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CmsPagesPage
+		var dest Page
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcmspages202603sitePagesabTestcreateVariationCreateABTestVariationResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
 	}
 
 	return response, nil
@@ -16664,14 +19515,14 @@ func ParsePostcmspages202603sitePagesbatchcreateCreateBatchResponse(rsp *http.Re
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CmsPagesBatchResponsePage
+		var dest BatchResponsePage
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON201 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CmsPagesBatchResponsePageWithErrors
+		var dest BatchResponsePageWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -16697,14 +19548,14 @@ func ParsePostcmspages202603sitePagesbatchreadReadBatchResponse(rsp *http.Respon
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsPagesBatchResponsePage
+		var dest BatchResponsePage
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CmsPagesBatchResponsePageWithErrors
+		var dest BatchResponsePageWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -16730,14 +19581,14 @@ func ParsePostcmspages202603sitePagesbatchupdateUpdateBatchResponse(rsp *http.Re
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsPagesBatchResponsePage
+		var dest BatchResponsePage
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CmsPagesBatchResponsePageWithErrors
+		var dest BatchResponsePageWithErrors
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -16763,7 +19614,7 @@ func ParsePostcmspages202603sitePagescloneCloneResponse(rsp *http.Response) (*Po
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsPagesPage
+		var dest Page
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -16805,7 +19656,7 @@ func ParsePostcmspages202603sitePagesmultiLanguagecreateLanguageVariationCreateL
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsPagesPage
+		var dest Page
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -16911,7 +19762,7 @@ func ParseGetcmspages202603sitePagesObjectIdGetByIdResponse(rsp *http.Response) 
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsPagesPage
+		var dest Page
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -16937,7 +19788,7 @@ func ParsePatchcmspages202603sitePagesObjectIdUpdateResponse(rsp *http.Response)
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsPagesPage
+		var dest Page
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -16963,7 +19814,7 @@ func ParseGetcmspages202603sitePagesObjectIddraftGetDraftByIdResponse(rsp *http.
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsPagesPage
+		var dest Page
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -16989,7 +19840,7 @@ func ParsePatchcmspages202603sitePagesObjectIddraftUpdateDraftResponse(rsp *http
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsPagesPage
+		var dest Page
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -17047,7 +19898,7 @@ func ParseGetcmspages202603sitePagesObjectIdrevisionsGetPreviousVersionsResponse
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsPagesCollectionResponseWithTotalPageVersion
+		var dest CollectionResponseWithTotalPageVersion
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -17073,7 +19924,7 @@ func ParseGetcmspages202603sitePagesObjectIdrevisionsRevisionIdGetPreviousVersio
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsPagesPageVersion
+		var dest PageVersion
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -17099,7 +19950,7 @@ func ParsePostcmspages202603sitePagesObjectIdrevisionsRevisionIdrestoreRestorePr
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsPagesPage
+		var dest Page
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -17125,7 +19976,7 @@ func ParsePostcmspages202603sitePagesObjectIdrevisionsRevisionIdrestoreToDraftRe
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsPagesPage
+		var dest Page
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -17151,7 +20002,7 @@ func ParseGetcmssiteSearch202603indexedDataContentIdGetByIdResponse(rsp *http.Re
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsSiteSearchIndexedData
+		var dest IndexedData
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -17162,2877 +20013,26 @@ func ParseGetcmssiteSearch202603indexedDataContentIdGetByIdResponse(rsp *http.Re
 	return response, nil
 }
 
-// ParsePostcmssourceCode202603extractasyncDoAsyncResponse parses an HTTP response from a PostcmssourceCode202603extractasyncDoAsyncWithResponse call
-func ParsePostcmssourceCode202603extractasyncDoAsyncResponse(rsp *http.Response) (*PostcmssourceCode202603extractasyncDoAsyncResponse, error) {
+// ParseGetcmssiteSearch202603searchcmssiteSearch202603searchResponse parses an HTTP response from a GetcmssiteSearch202603searchcmssiteSearch202603searchWithResponse call
+func ParseGetcmssiteSearch202603searchcmssiteSearch202603searchResponse(rsp *http.Response) (*GetcmssiteSearch202603searchcmssiteSearch202603searchResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &PostcmssourceCode202603extractasyncDoAsyncResponse{
+	response := &GetcmssiteSearch202603searchcmssiteSearch202603searchResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
 
 	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 202:
-		var dest TaskLocator
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON202 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetcmssourceCode202603extractasynctasksTaskIdstatusGetAsyncStatusResponse parses an HTTP response from a GetcmssourceCode202603extractasynctasksTaskIdstatusGetAsyncStatusWithResponse call
-func ParseGetcmssourceCode202603extractasynctasksTaskIdstatusGetAsyncStatusResponse(rsp *http.Response) (*GetcmssourceCode202603extractasynctasksTaskIdstatusGetAsyncStatusResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetcmssourceCode202603extractasynctasksTaskIdstatusGetAsyncStatusResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest ActionResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseDeletecmssourceCode202603EnvironmentcontentPathArchiveResponse parses an HTTP response from a DeletecmssourceCode202603EnvironmentcontentPathArchiveWithResponse call
-func ParseDeletecmssourceCode202603EnvironmentcontentPathArchiveResponse(rsp *http.Response) (*DeletecmssourceCode202603EnvironmentcontentPathArchiveResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &DeletecmssourceCode202603EnvironmentcontentPathArchiveResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParseGetcmssourceCode202603EnvironmentcontentPathDownloadResponse parses an HTTP response from a GetcmssourceCode202603EnvironmentcontentPathDownloadWithResponse call
-func ParseGetcmssourceCode202603EnvironmentcontentPathDownloadResponse(rsp *http.Response) (*GetcmssourceCode202603EnvironmentcontentPathDownloadResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetcmssourceCode202603EnvironmentcontentPathDownloadResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParsePostcmssourceCode202603EnvironmentcontentPathCreateResponse parses an HTTP response from a PostcmssourceCode202603EnvironmentcontentPathCreateWithResponse call
-func ParsePostcmssourceCode202603EnvironmentcontentPathCreateResponse(rsp *http.Response) (*PostcmssourceCode202603EnvironmentcontentPathCreateResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostcmssourceCode202603EnvironmentcontentPathCreateResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsSourceCodeAssetFileMetadata
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePutcmssourceCode202603EnvironmentcontentPathCreateOrUpdateResponse parses an HTTP response from a PutcmssourceCode202603EnvironmentcontentPathCreateOrUpdateWithResponse call
-func ParsePutcmssourceCode202603EnvironmentcontentPathCreateOrUpdateResponse(rsp *http.Response) (*PutcmssourceCode202603EnvironmentcontentPathCreateOrUpdateResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PutcmssourceCode202603EnvironmentcontentPathCreateOrUpdateResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsSourceCodeAssetFileMetadata
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetcmssourceCode202603EnvironmentmetadataPathGetResponse parses an HTTP response from a GetcmssourceCode202603EnvironmentmetadataPathGetWithResponse call
-func ParseGetcmssourceCode202603EnvironmentmetadataPathGetResponse(rsp *http.Response) (*GetcmssourceCode202603EnvironmentmetadataPathGetResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetcmssourceCode202603EnvironmentmetadataPathGetResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsSourceCodeAssetFileMetadata
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostcmssourceCode202603EnvironmentvalidatePathDoValidateResponse parses an HTTP response from a PostcmssourceCode202603EnvironmentvalidatePathDoValidateWithResponse call
-func ParsePostcmssourceCode202603EnvironmentvalidatePathDoValidateResponse(rsp *http.Response) (*PostcmssourceCode202603EnvironmentvalidatePathDoValidateResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostcmssourceCode202603EnvironmentvalidatePathDoValidateResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParseGetcmsurlRedirects202603cmsurlRedirectsv3Response parses an HTTP response from a GetcmsurlRedirects202603cmsurlRedirectsv3WithResponse call
-func ParseGetcmsurlRedirects202603cmsurlRedirectsv3Response(rsp *http.Response) (*GetcmsurlRedirects202603cmsurlRedirectsv3Response, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetcmsurlRedirects202603cmsurlRedirectsv3Response{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsUrlRedirectsCollectionResponseWithTotalUrlMappingForwardPaging
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostcmsurlRedirects202603cmsurlRedirectsv3Response parses an HTTP response from a PostcmsurlRedirects202603cmsurlRedirectsv3WithResponse call
-func ParsePostcmsurlRedirects202603cmsurlRedirectsv3Response(rsp *http.Response) (*PostcmsurlRedirects202603cmsurlRedirectsv3Response, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostcmsurlRedirects202603cmsurlRedirectsv3Response{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CmsUrlRedirectsUrlMapping
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON201 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetcmsurlRedirects202603urlMappingsResponse parses an HTTP response from a GetcmsurlRedirects202603urlMappingsWithResponse call
-func ParseGetcmsurlRedirects202603urlMappingsResponse(rsp *http.Response) (*GetcmsurlRedirects202603urlMappingsResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetcmsurlRedirects202603urlMappingsResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParsePostcmsurlRedirects202603urlMappingsResponse parses an HTTP response from a PostcmsurlRedirects202603urlMappingsWithResponse call
-func ParsePostcmsurlRedirects202603urlMappingsResponse(rsp *http.Response) (*PostcmsurlRedirects202603urlMappingsResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostcmsurlRedirects202603urlMappingsResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParseDeletecmsurlRedirects202603urlMappingsIdResponse parses an HTTP response from a DeletecmsurlRedirects202603urlMappingsIdWithResponse call
-func ParseDeletecmsurlRedirects202603urlMappingsIdResponse(rsp *http.Response) (*DeletecmsurlRedirects202603urlMappingsIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &DeletecmsurlRedirects202603urlMappingsIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParseGetcmsurlRedirects202603urlMappingsIdResponse parses an HTTP response from a GetcmsurlRedirects202603urlMappingsIdWithResponse call
-func ParseGetcmsurlRedirects202603urlMappingsIdResponse(rsp *http.Response) (*GetcmsurlRedirects202603urlMappingsIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetcmsurlRedirects202603urlMappingsIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParseDeletecmsurlRedirects202603UrlRedirectIdArchiveResponse parses an HTTP response from a DeletecmsurlRedirects202603UrlRedirectIdArchiveWithResponse call
-func ParseDeletecmsurlRedirects202603UrlRedirectIdArchiveResponse(rsp *http.Response) (*DeletecmsurlRedirects202603UrlRedirectIdArchiveResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &DeletecmsurlRedirects202603UrlRedirectIdArchiveResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParseGetcmsurlRedirects202603UrlRedirectIdGetByIdResponse parses an HTTP response from a GetcmsurlRedirects202603UrlRedirectIdGetByIdWithResponse call
-func ParseGetcmsurlRedirects202603UrlRedirectIdGetByIdResponse(rsp *http.Response) (*GetcmsurlRedirects202603UrlRedirectIdGetByIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetcmsurlRedirects202603UrlRedirectIdGetByIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsUrlRedirectsUrlMapping
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePatchcmsurlRedirects202603UrlRedirectIdUpdateResponse parses an HTTP response from a PatchcmsurlRedirects202603UrlRedirectIdUpdateWithResponse call
-func ParsePatchcmsurlRedirects202603UrlRedirectIdUpdateResponse(rsp *http.Response) (*PatchcmsurlRedirects202603UrlRedirectIdUpdateResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PatchcmsurlRedirects202603UrlRedirectIdUpdateResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CmsUrlRedirectsUrlMapping
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetcommunicationPreferences202603definitionsResponse parses an HTTP response from a GetcommunicationPreferences202603definitionsWithResponse call
-func ParseGetcommunicationPreferences202603definitionsResponse(rsp *http.Response) (*GetcommunicationPreferences202603definitionsResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetcommunicationPreferences202603definitionsResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CommunicationPreferencesActionResponseWithResultsSubscriptionDefinition
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostcommunicationPreferences202603linksgeneratecommunicationPreferencesv4linksgenerateResponse parses an HTTP response from a PostcommunicationPreferences202603linksgeneratecommunicationPreferencesv4linksgenerateWithResponse call
-func ParsePostcommunicationPreferences202603linksgeneratecommunicationPreferencesv4linksgenerateResponse(rsp *http.Response) (*PostcommunicationPreferences202603linksgeneratecommunicationPreferencesv4linksgenerateResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostcommunicationPreferences202603linksgeneratecommunicationPreferencesv4linksgenerateResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CommunicationPreferencesLinkGenerationResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostcommunicationPreferences202603statusesbatchreadResponse parses an HTTP response from a PostcommunicationPreferences202603statusesbatchreadWithResponse call
-func ParsePostcommunicationPreferences202603statusesbatchreadResponse(rsp *http.Response) (*PostcommunicationPreferences202603statusesbatchreadResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostcommunicationPreferences202603statusesbatchreadResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CommunicationPreferencesBatchResponsePublicStatusBulkResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CommunicationPreferencesBatchResponsePublicStatusBulkResponseWithErrors
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON207 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostcommunicationPreferences202603statusesbatchunsubscribeAllResponse parses an HTTP response from a PostcommunicationPreferences202603statusesbatchunsubscribeAllWithResponse call
-func ParsePostcommunicationPreferences202603statusesbatchunsubscribeAllResponse(rsp *http.Response) (*PostcommunicationPreferences202603statusesbatchunsubscribeAllResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostcommunicationPreferences202603statusesbatchunsubscribeAllResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CommunicationPreferencesBatchResponsePublicBulkOptOutFromAllResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostcommunicationPreferences202603statusesbatchunsubscribeAllreadResponse parses an HTTP response from a PostcommunicationPreferences202603statusesbatchunsubscribeAllreadWithResponse call
-func ParsePostcommunicationPreferences202603statusesbatchunsubscribeAllreadResponse(rsp *http.Response) (*PostcommunicationPreferences202603statusesbatchunsubscribeAllreadResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostcommunicationPreferences202603statusesbatchunsubscribeAllreadResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CommunicationPreferencesBatchResponsePublicWideStatusBulkResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CommunicationPreferencesBatchResponsePublicWideStatusBulkResponseWithErrors
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON207 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostcommunicationPreferences202603statusesbatchwriteResponse parses an HTTP response from a PostcommunicationPreferences202603statusesbatchwriteWithResponse call
-func ParsePostcommunicationPreferences202603statusesbatchwriteResponse(rsp *http.Response) (*PostcommunicationPreferences202603statusesbatchwriteResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostcommunicationPreferences202603statusesbatchwriteResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CommunicationPreferencesBatchResponsePublicStatus
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetcommunicationPreferences202603statusesSubscriberIdStringResponse parses an HTTP response from a GetcommunicationPreferences202603statusesSubscriberIdStringWithResponse call
-func ParseGetcommunicationPreferences202603statusesSubscriberIdStringResponse(rsp *http.Response) (*GetcommunicationPreferences202603statusesSubscriberIdStringResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetcommunicationPreferences202603statusesSubscriberIdStringResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CommunicationPreferencesActionResponseWithResultsPublicStatus
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostcommunicationPreferences202603statusesSubscriberIdStringResponse parses an HTTP response from a PostcommunicationPreferences202603statusesSubscriberIdStringWithResponse call
-func ParsePostcommunicationPreferences202603statusesSubscriberIdStringResponse(rsp *http.Response) (*PostcommunicationPreferences202603statusesSubscriberIdStringResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostcommunicationPreferences202603statusesSubscriberIdStringResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CommunicationPreferencesActionResponseWithResultsPublicStatus
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetcommunicationPreferences202603statusesSubscriberIdStringunsubscribeAllResponse parses an HTTP response from a GetcommunicationPreferences202603statusesSubscriberIdStringunsubscribeAllWithResponse call
-func ParseGetcommunicationPreferences202603statusesSubscriberIdStringunsubscribeAllResponse(rsp *http.Response) (*GetcommunicationPreferences202603statusesSubscriberIdStringunsubscribeAllResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetcommunicationPreferences202603statusesSubscriberIdStringunsubscribeAllResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CommunicationPreferencesActionResponseWithResultsPublicWideStatus
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostcommunicationPreferences202603statusesSubscriberIdStringunsubscribeAllResponse parses an HTTP response from a PostcommunicationPreferences202603statusesSubscriberIdStringunsubscribeAllWithResponse call
-func ParsePostcommunicationPreferences202603statusesSubscriberIdStringunsubscribeAllResponse(rsp *http.Response) (*PostcommunicationPreferences202603statusesSubscriberIdStringunsubscribeAllResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostcommunicationPreferences202603statusesSubscriberIdStringunsubscribeAllResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CommunicationPreferencesActionResponseWithResultsPublicStatus
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetconversationscustomChannels202603conversationscustomChannelsv3Response parses an HTTP response from a GetconversationscustomChannels202603conversationscustomChannelsv3WithResponse call
-func ParseGetconversationscustomChannels202603conversationscustomChannelsv3Response(rsp *http.Response) (*GetconversationscustomChannels202603conversationscustomChannelsv3Response, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetconversationscustomChannels202603conversationscustomChannelsv3Response{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest ConversationsCustomChannelsCollectionResponseWithTotalPublicChannelIntegrationChannel
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostconversationscustomChannels202603conversationscustomChannelsv3Response parses an HTTP response from a PostconversationscustomChannels202603conversationscustomChannelsv3WithResponse call
-func ParsePostconversationscustomChannels202603conversationscustomChannelsv3Response(rsp *http.Response) (*PostconversationscustomChannels202603conversationscustomChannelsv3Response, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostconversationscustomChannels202603conversationscustomChannelsv3Response{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest ConversationsCustomChannelsPublicChannelIntegrationChannel
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON201 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseDeleteconversationscustomChannels202603ChannelIdResponse parses an HTTP response from a DeleteconversationscustomChannels202603ChannelIdWithResponse call
-func ParseDeleteconversationscustomChannels202603ChannelIdResponse(rsp *http.Response) (*DeleteconversationscustomChannels202603ChannelIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &DeleteconversationscustomChannels202603ChannelIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParseGetconversationscustomChannels202603ChannelIdResponse parses an HTTP response from a GetconversationscustomChannels202603ChannelIdWithResponse call
-func ParseGetconversationscustomChannels202603ChannelIdResponse(rsp *http.Response) (*GetconversationscustomChannels202603ChannelIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetconversationscustomChannels202603ChannelIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest ConversationsCustomChannelsPublicChannelIntegrationChannel
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePatchconversationscustomChannels202603ChannelIdResponse parses an HTTP response from a PatchconversationscustomChannels202603ChannelIdWithResponse call
-func ParsePatchconversationscustomChannels202603ChannelIdResponse(rsp *http.Response) (*PatchconversationscustomChannels202603ChannelIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PatchconversationscustomChannels202603ChannelIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest ConversationsCustomChannelsPublicChannelIntegrationChannel
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePatchconversationscustomChannels202603ChannelIdchannelAccountStagingTokensAccountTokenResponse parses an HTTP response from a PatchconversationscustomChannels202603ChannelIdchannelAccountStagingTokensAccountTokenWithResponse call
-func ParsePatchconversationscustomChannels202603ChannelIdchannelAccountStagingTokensAccountTokenResponse(rsp *http.Response) (*PatchconversationscustomChannels202603ChannelIdchannelAccountStagingTokensAccountTokenResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PatchconversationscustomChannels202603ChannelIdchannelAccountStagingTokensAccountTokenResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest ConversationsCustomChannelsPublicChannelAccountStagingToken
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetconversationscustomChannels202603ChannelIdchannelAccountsResponse parses an HTTP response from a GetconversationscustomChannels202603ChannelIdchannelAccountsWithResponse call
-func ParseGetconversationscustomChannels202603ChannelIdchannelAccountsResponse(rsp *http.Response) (*GetconversationscustomChannels202603ChannelIdchannelAccountsResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetconversationscustomChannels202603ChannelIdchannelAccountsResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest ConversationsCustomChannelsCollectionResponseWithTotalPublicChannelAccount
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostconversationscustomChannels202603ChannelIdchannelAccountsResponse parses an HTTP response from a PostconversationscustomChannels202603ChannelIdchannelAccountsWithResponse call
-func ParsePostconversationscustomChannels202603ChannelIdchannelAccountsResponse(rsp *http.Response) (*PostconversationscustomChannels202603ChannelIdchannelAccountsResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostconversationscustomChannels202603ChannelIdchannelAccountsResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest ConversationsCustomChannelsPublicChannelAccount
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON201 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountIdResponse parses an HTTP response from a GetconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountIdWithResponse call
-func ParseGetconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountIdResponse(rsp *http.Response) (*GetconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest ConversationsCustomChannelsPublicChannelAccount
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePatchconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountIdResponse parses an HTTP response from a PatchconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountIdWithResponse call
-func ParsePatchconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountIdResponse(rsp *http.Response) (*PatchconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PatchconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest ConversationsCustomChannelsPublicChannelAccount
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostconversationscustomChannels202603ChannelIdmessagesResponse parses an HTTP response from a PostconversationscustomChannels202603ChannelIdmessagesWithResponse call
-func ParsePostconversationscustomChannels202603ChannelIdmessagesResponse(rsp *http.Response) (*PostconversationscustomChannels202603ChannelIdmessagesResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostconversationscustomChannels202603ChannelIdmessagesResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest ConversationsCustomChannelsPublicConversationsMessage
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON201 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetconversationscustomChannels202603ChannelIdmessagesMessageIdResponse parses an HTTP response from a GetconversationscustomChannels202603ChannelIdmessagesMessageIdWithResponse call
-func ParseGetconversationscustomChannels202603ChannelIdmessagesMessageIdResponse(rsp *http.Response) (*GetconversationscustomChannels202603ChannelIdmessagesMessageIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetconversationscustomChannels202603ChannelIdmessagesMessageIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest ConversationsCustomChannelsPublicConversationsMessage
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePatchconversationscustomChannels202603ChannelIdmessagesMessageIdResponse parses an HTTP response from a PatchconversationscustomChannels202603ChannelIdmessagesMessageIdWithResponse call
-func ParsePatchconversationscustomChannels202603ChannelIdmessagesMessageIdResponse(rsp *http.Response) (*PatchconversationscustomChannels202603ChannelIdmessagesMessageIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PatchconversationscustomChannels202603ChannelIdmessagesMessageIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest ConversationsCustomChannelsPublicConversationsMessage
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetcrmObjectSchemas202603schemasGetAllResponse parses an HTTP response from a GetcrmObjectSchemas202603schemasGetAllWithResponse call
-func ParseGetcrmObjectSchemas202603schemasGetAllResponse(rsp *http.Response) (*GetcrmObjectSchemas202603schemasGetAllResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetcrmObjectSchemas202603schemasGetAllResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectSchemasCollectionResponseObjectSchemaNoPaging
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostcrmObjectSchemas202603schemasCreateResponse parses an HTTP response from a PostcrmObjectSchemas202603schemasCreateWithResponse call
-func ParsePostcrmObjectSchemas202603schemasCreateResponse(rsp *http.Response) (*PostcrmObjectSchemas202603schemasCreateResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostcrmObjectSchemas202603schemasCreateResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmObjectSchemasObjectSchema
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON201 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostcrmObjectSchemas202603schemasbatchreadcrmObjectSchemasv3schemasbatchreadResponse parses an HTTP response from a PostcrmObjectSchemas202603schemasbatchreadcrmObjectSchemasv3schemasbatchreadWithResponse call
-func ParsePostcrmObjectSchemas202603schemasbatchreadcrmObjectSchemasv3schemasbatchreadResponse(rsp *http.Response) (*PostcrmObjectSchemas202603schemasbatchreadcrmObjectSchemasv3schemasbatchreadResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostcrmObjectSchemas202603schemasbatchreadcrmObjectSchemasv3schemasbatchreadResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectSchemasCollectionResponseObjectSchemaNoPaging
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseDeletecrmObjectSchemas202603schemasObjectTypeArchiveResponse parses an HTTP response from a DeletecrmObjectSchemas202603schemasObjectTypeArchiveWithResponse call
-func ParseDeletecrmObjectSchemas202603schemasObjectTypeArchiveResponse(rsp *http.Response) (*DeletecrmObjectSchemas202603schemasObjectTypeArchiveResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &DeletecrmObjectSchemas202603schemasObjectTypeArchiveResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParseGetcrmObjectSchemas202603schemasObjectTypeGetByIdResponse parses an HTTP response from a GetcrmObjectSchemas202603schemasObjectTypeGetByIdWithResponse call
-func ParseGetcrmObjectSchemas202603schemasObjectTypeGetByIdResponse(rsp *http.Response) (*GetcrmObjectSchemas202603schemasObjectTypeGetByIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetcrmObjectSchemas202603schemasObjectTypeGetByIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmObjectSchemasObjectSchema
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePatchcrmObjectSchemas202603schemasObjectTypeUpdateResponse parses an HTTP response from a PatchcrmObjectSchemas202603schemasObjectTypeUpdateWithResponse call
-func ParsePatchcrmObjectSchemas202603schemasObjectTypeUpdateResponse(rsp *http.Response) (*PatchcrmObjectSchemas202603schemasObjectTypeUpdateResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PatchcrmObjectSchemas202603schemasObjectTypeUpdateResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest ObjectTypeDefinition
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostcrmObjectSchemas202603schemasObjectTypeassociationsCreateAssociationResponse parses an HTTP response from a PostcrmObjectSchemas202603schemasObjectTypeassociationsCreateAssociationWithResponse call
-func ParsePostcrmObjectSchemas202603schemasObjectTypeassociationsCreateAssociationResponse(rsp *http.Response) (*PostcrmObjectSchemas202603schemasObjectTypeassociationsCreateAssociationResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostcrmObjectSchemas202603schemasObjectTypeassociationsCreateAssociationResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest AssociationDefinition
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON201 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseDeletecrmObjectSchemas202603schemasObjectTypeassociationsAssociationIdentifierArchiveAssociationResponse parses an HTTP response from a DeletecrmObjectSchemas202603schemasObjectTypeassociationsAssociationIdentifierArchiveAssociationWithResponse call
-func ParseDeletecrmObjectSchemas202603schemasObjectTypeassociationsAssociationIdentifierArchiveAssociationResponse(rsp *http.Response) (*DeletecrmObjectSchemas202603schemasObjectTypeassociationsAssociationIdentifierArchiveAssociationResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &DeletecrmObjectSchemas202603schemasObjectTypeassociationsAssociationIdentifierArchiveAssociationResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParseGetcrmassociations202603definitionsconfigurationsallGetPageResponse parses an HTTP response from a Getcrmassociations202603definitionsconfigurationsallGetPageWithResponse call
-func ParseGetcrmassociations202603definitionsconfigurationsallGetPageResponse(rsp *http.Response) (*Getcrmassociations202603definitionsconfigurationsallGetPageResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getcrmassociations202603definitionsconfigurationsallGetPageResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmAssociationsSchemaCollectionResponsePublicAssociationDefinitionUserConfigurationNoPaging
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypeGetPageBetweenTwoObjectTypesResponse parses an HTTP response from a Getcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypeGetPageBetweenTwoObjectTypesWithResponse call
-func ParseGetcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypeGetPageBetweenTwoObjectTypesResponse(rsp *http.Response) (*Getcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypeGetPageBetweenTwoObjectTypesResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypeGetPageBetweenTwoObjectTypesResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmAssociationsSchemaCollectionResponsePublicAssociationDefinitionUserConfigurationNoPaging
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchcreateBatchCreateResponse parses an HTTP response from a Postcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchcreateBatchCreateWithResponse call
-func ParsePostcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchcreateBatchCreateResponse(rsp *http.Response) (*Postcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchcreateBatchCreateResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchcreateBatchCreateResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmAssociationsSchemaBatchResponsePublicAssociationDefinitionUserConfiguration
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON201 = &dest
-
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmAssociationsSchemaBatchResponsePublicAssociationDefinitionUserConfigurationWithErrors
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON207 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchpurgeBatchRemoveResponse parses an HTTP response from a Postcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchpurgeBatchRemoveWithResponse call
-func ParsePostcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchpurgeBatchRemoveResponse(rsp *http.Response) (*Postcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchpurgeBatchRemoveResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchpurgeBatchRemoveResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParsePostcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchupdateBatchUpdateResponse parses an HTTP response from a Postcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchupdateBatchUpdateWithResponse call
-func ParsePostcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchupdateBatchUpdateResponse(rsp *http.Response) (*Postcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchupdateBatchUpdateResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchupdateBatchUpdateResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmAssociationsSchemaBatchResponsePublicAssociationDefinitionConfigurationUpdateResult
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmAssociationsSchemaBatchResponsePublicAssociationDefinitionConfigurationUpdateResultWithErrors
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON207 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostcrmassociations202603usagehighUsageReportUserIdcrmassociations202509usagehighUsageReportUserIdResponse parses an HTTP response from a Postcrmassociations202603usagehighUsageReportUserIdcrmassociations202509usagehighUsageReportUserIdWithResponse call
-func ParsePostcrmassociations202603usagehighUsageReportUserIdcrmassociations202509usagehighUsageReportUserIdResponse(rsp *http.Response) (*Postcrmassociations202603usagehighUsageReportUserIdcrmassociations202509usagehighUsageReportUserIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postcrmassociations202603usagehighUsageReportUserIdcrmassociations202509usagehighUsageReportUserIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmReportCreationResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostcrmassociations202603FromObjectTypeToObjectTypebatcharchivecrmassociations202509FromObjectTypeToObjectTypebatcharchiveResponse parses an HTTP response from a Postcrmassociations202603FromObjectTypeToObjectTypebatcharchivecrmassociations202509FromObjectTypeToObjectTypebatcharchiveWithResponse call
-func ParsePostcrmassociations202603FromObjectTypeToObjectTypebatcharchivecrmassociations202509FromObjectTypeToObjectTypebatcharchiveResponse(rsp *http.Response) (*Postcrmassociations202603FromObjectTypeToObjectTypebatcharchivecrmassociations202509FromObjectTypeToObjectTypebatcharchiveResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postcrmassociations202603FromObjectTypeToObjectTypebatcharchivecrmassociations202509FromObjectTypeToObjectTypebatcharchiveResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParsePostcrmassociations202603FromObjectTypeToObjectTypebatchassociatedefaultcrmassociations202509FromObjectTypeToObjectTypebatchassociatedefaultResponse parses an HTTP response from a Postcrmassociations202603FromObjectTypeToObjectTypebatchassociatedefaultcrmassociations202509FromObjectTypeToObjectTypebatchassociatedefaultWithResponse call
-func ParsePostcrmassociations202603FromObjectTypeToObjectTypebatchassociatedefaultcrmassociations202509FromObjectTypeToObjectTypebatchassociatedefaultResponse(rsp *http.Response) (*Postcrmassociations202603FromObjectTypeToObjectTypebatchassociatedefaultcrmassociations202509FromObjectTypeToObjectTypebatchassociatedefaultResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postcrmassociations202603FromObjectTypeToObjectTypebatchassociatedefaultcrmassociations202509FromObjectTypeToObjectTypebatchassociatedefaultResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmBatchResponsePublicDefaultAssociation
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostcrmassociations202603FromObjectTypeToObjectTypebatchcreatecrmassociations202509FromObjectTypeToObjectTypebatchcreateResponse parses an HTTP response from a Postcrmassociations202603FromObjectTypeToObjectTypebatchcreatecrmassociations202509FromObjectTypeToObjectTypebatchcreateWithResponse call
-func ParsePostcrmassociations202603FromObjectTypeToObjectTypebatchcreatecrmassociations202509FromObjectTypeToObjectTypebatchcreateResponse(rsp *http.Response) (*Postcrmassociations202603FromObjectTypeToObjectTypebatchcreatecrmassociations202509FromObjectTypeToObjectTypebatchcreateResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postcrmassociations202603FromObjectTypeToObjectTypebatchcreatecrmassociations202509FromObjectTypeToObjectTypebatchcreateResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmBatchResponseLabelsBetweenObjectPair
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON201 = &dest
-
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmBatchResponseLabelsBetweenObjectPairWithErrors
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON207 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostcrmassociations202603FromObjectTypeToObjectTypebatchlabelsarchivecrmassociations202509FromObjectTypeToObjectTypebatchlabelsarchiveResponse parses an HTTP response from a Postcrmassociations202603FromObjectTypeToObjectTypebatchlabelsarchivecrmassociations202509FromObjectTypeToObjectTypebatchlabelsarchiveWithResponse call
-func ParsePostcrmassociations202603FromObjectTypeToObjectTypebatchlabelsarchivecrmassociations202509FromObjectTypeToObjectTypebatchlabelsarchiveResponse(rsp *http.Response) (*Postcrmassociations202603FromObjectTypeToObjectTypebatchlabelsarchivecrmassociations202509FromObjectTypeToObjectTypebatchlabelsarchiveResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postcrmassociations202603FromObjectTypeToObjectTypebatchlabelsarchivecrmassociations202509FromObjectTypeToObjectTypebatchlabelsarchiveResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParsePostcrmassociations202603FromObjectTypeToObjectTypebatchreadcrmassociations202509FromObjectTypeToObjectTypebatchreadResponse parses an HTTP response from a Postcrmassociations202603FromObjectTypeToObjectTypebatchreadcrmassociations202509FromObjectTypeToObjectTypebatchreadWithResponse call
-func ParsePostcrmassociations202603FromObjectTypeToObjectTypebatchreadcrmassociations202509FromObjectTypeToObjectTypebatchreadResponse(rsp *http.Response) (*Postcrmassociations202603FromObjectTypeToObjectTypebatchreadcrmassociations202509FromObjectTypeToObjectTypebatchreadResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postcrmassociations202603FromObjectTypeToObjectTypebatchreadcrmassociations202509FromObjectTypeToObjectTypebatchreadResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmBatchResponsePublicAssociationMultiWithLabel
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmBatchResponsePublicAssociationMultiWithLabelWithErrors
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON207 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetcrmassociations202603FromObjectTypeToObjectTypelabelsGetPageResponse parses an HTTP response from a Getcrmassociations202603FromObjectTypeToObjectTypelabelsGetPageWithResponse call
-func ParseGetcrmassociations202603FromObjectTypeToObjectTypelabelsGetPageResponse(rsp *http.Response) (*Getcrmassociations202603FromObjectTypeToObjectTypelabelsGetPageResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getcrmassociations202603FromObjectTypeToObjectTypelabelsGetPageResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmAssociationsSchemaCollectionResponseAssociationSpecWithLabelNoPaging
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostcrmassociations202603FromObjectTypeToObjectTypelabelsCreateResponse parses an HTTP response from a Postcrmassociations202603FromObjectTypeToObjectTypelabelsCreateWithResponse call
-func ParsePostcrmassociations202603FromObjectTypeToObjectTypelabelsCreateResponse(rsp *http.Response) (*Postcrmassociations202603FromObjectTypeToObjectTypelabelsCreateResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postcrmassociations202603FromObjectTypeToObjectTypelabelsCreateResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmAssociationsSchemaCollectionResponseAssociationSpecWithLabelNoPaging
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePutcrmassociations202603FromObjectTypeToObjectTypelabelsUpdateResponse parses an HTTP response from a Putcrmassociations202603FromObjectTypeToObjectTypelabelsUpdateWithResponse call
-func ParsePutcrmassociations202603FromObjectTypeToObjectTypelabelsUpdateResponse(rsp *http.Response) (*Putcrmassociations202603FromObjectTypeToObjectTypelabelsUpdateResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Putcrmassociations202603FromObjectTypeToObjectTypelabelsUpdateResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParseDeletecrmassociations202603FromObjectTypeToObjectTypelabelsAssociationTypeIdRemoveResponse parses an HTTP response from a Deletecrmassociations202603FromObjectTypeToObjectTypelabelsAssociationTypeIdRemoveWithResponse call
-func ParseDeletecrmassociations202603FromObjectTypeToObjectTypelabelsAssociationTypeIdRemoveResponse(rsp *http.Response) (*Deletecrmassociations202603FromObjectTypeToObjectTypelabelsAssociationTypeIdRemoveResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Deletecrmassociations202603FromObjectTypeToObjectTypelabelsAssociationTypeIdRemoveResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParsePostcrmexports202603exportasyncStartResponse parses an HTTP response from a Postcrmexports202603exportasyncStartWithResponse call
-func ParsePostcrmexports202603exportasyncStartResponse(rsp *http.Response) (*Postcrmexports202603exportasyncStartResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postcrmexports202603exportasyncStartResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 202:
-		var dest TaskLocator
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON202 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetcrmexports202603exportasynctasksTaskIdstatusGetStatusResponse parses an HTTP response from a Getcrmexports202603exportasynctasksTaskIdstatusGetStatusWithResponse call
-func ParseGetcrmexports202603exportasynctasksTaskIdstatusGetStatusResponse(rsp *http.Response) (*Getcrmexports202603exportasynctasksTaskIdstatusGetStatusResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getcrmexports202603exportasynctasksTaskIdstatusGetStatusResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmExportsActionResponseWithSingleResultURI
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetcrmexports202603exportExportIdGetByIdResponse parses an HTTP response from a Getcrmexports202603exportExportIdGetByIdWithResponse call
-func ParseGetcrmexports202603exportExportIdGetByIdResponse(rsp *http.Response) (*Getcrmexports202603exportExportIdGetByIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getcrmexports202603exportExportIdGetByIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmExportsPublicExportResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostcrmextensionscalling202603inboundCallcrmv3extensionscallinginboundCallResponse parses an HTTP response from a Postcrmextensionscalling202603inboundCallcrmv3extensionscallinginboundCallWithResponse call
-func ParsePostcrmextensionscalling202603inboundCallcrmv3extensionscallinginboundCallResponse(rsp *http.Response) (*Postcrmextensionscalling202603inboundCallcrmv3extensionscallinginboundCallResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postcrmextensionscalling202603inboundCallcrmv3extensionscallinginboundCallResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmExtensionsCallingCompletedThirdPartyCallResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostcrmextensionscalling202603recordingsreadyMarkAsReadyResponse parses an HTTP response from a Postcrmextensionscalling202603recordingsreadyMarkAsReadyWithResponse call
-func ParsePostcrmextensionscalling202603recordingsreadyMarkAsReadyResponse(rsp *http.Response) (*Postcrmextensionscalling202603recordingsreadyMarkAsReadyResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postcrmextensionscalling202603recordingsreadyMarkAsReadyResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParsePostcrmextensionscalling202603transcriptscrmextensionscalling202603transcriptsResponse parses an HTTP response from a Postcrmextensionscalling202603transcriptscrmextensionscalling202603transcriptsWithResponse call
-func ParsePostcrmextensionscalling202603transcriptscrmextensionscalling202603transcriptsResponse(rsp *http.Response) (*Postcrmextensionscalling202603transcriptscrmextensionscalling202603transcriptsResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postcrmextensionscalling202603transcriptscrmextensionscalling202603transcriptsResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmExtensionsCallingTranscriptsTranscriptCreateResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseDeletecrmextensionscalling202603transcriptsTranscriptIdcrmextensionscalling202603transcriptsTranscriptIdResponse parses an HTTP response from a Deletecrmextensionscalling202603transcriptsTranscriptIdcrmextensionscalling202603transcriptsTranscriptIdWithResponse call
-func ParseDeletecrmextensionscalling202603transcriptsTranscriptIdcrmextensionscalling202603transcriptsTranscriptIdResponse(rsp *http.Response) (*Deletecrmextensionscalling202603transcriptsTranscriptIdcrmextensionscalling202603transcriptsTranscriptIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Deletecrmextensionscalling202603transcriptsTranscriptIdcrmextensionscalling202603transcriptsTranscriptIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParseGetcrmextensionscalling202603transcriptsTranscriptIdcrmextensionscalling202603transcriptsTranscriptIdResponse parses an HTTP response from a Getcrmextensionscalling202603transcriptsTranscriptIdcrmextensionscalling202603transcriptsTranscriptIdWithResponse call
-func ParseGetcrmextensionscalling202603transcriptsTranscriptIdcrmextensionscalling202603transcriptsTranscriptIdResponse(rsp *http.Response) (*Getcrmextensionscalling202603transcriptsTranscriptIdcrmextensionscalling202603transcriptsTranscriptIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getcrmextensionscalling202603transcriptsTranscriptIdcrmextensionscalling202603transcriptsTranscriptIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmExtensionsCallingTranscriptsTranscriptResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseDeletecrmextensionscalling202603AppIdsettingsRemoveResponse parses an HTTP response from a Deletecrmextensionscalling202603AppIdsettingsRemoveWithResponse call
-func ParseDeletecrmextensionscalling202603AppIdsettingsRemoveResponse(rsp *http.Response) (*Deletecrmextensionscalling202603AppIdsettingsRemoveResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Deletecrmextensionscalling202603AppIdsettingsRemoveResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParseGetcrmextensionscalling202603AppIdsettingsGetResponse parses an HTTP response from a Getcrmextensionscalling202603AppIdsettingsGetWithResponse call
-func ParseGetcrmextensionscalling202603AppIdsettingsGetResponse(rsp *http.Response) (*Getcrmextensionscalling202603AppIdsettingsGetResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getcrmextensionscalling202603AppIdsettingsGetResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmExtensionsCallingSettingsResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePatchcrmextensionscalling202603AppIdsettingsUpdateResponse parses an HTTP response from a Patchcrmextensionscalling202603AppIdsettingsUpdateWithResponse call
-func ParsePatchcrmextensionscalling202603AppIdsettingsUpdateResponse(rsp *http.Response) (*Patchcrmextensionscalling202603AppIdsettingsUpdateResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Patchcrmextensionscalling202603AppIdsettingsUpdateResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmExtensionsCallingSettingsResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostcrmextensionscalling202603AppIdsettingsCreateResponse parses an HTTP response from a Postcrmextensionscalling202603AppIdsettingsCreateWithResponse call
-func ParsePostcrmextensionscalling202603AppIdsettingsCreateResponse(rsp *http.Response) (*Postcrmextensionscalling202603AppIdsettingsCreateResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postcrmextensionscalling202603AppIdsettingsCreateResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmExtensionsCallingSettingsResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseDeletecrmextensionscalling202603AppIdsettingschannelConnectionRemoveResponse parses an HTTP response from a Deletecrmextensionscalling202603AppIdsettingschannelConnectionRemoveWithResponse call
-func ParseDeletecrmextensionscalling202603AppIdsettingschannelConnectionRemoveResponse(rsp *http.Response) (*Deletecrmextensionscalling202603AppIdsettingschannelConnectionRemoveResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Deletecrmextensionscalling202603AppIdsettingschannelConnectionRemoveResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParseGetcrmextensionscalling202603AppIdsettingschannelConnectionGetResponse parses an HTTP response from a Getcrmextensionscalling202603AppIdsettingschannelConnectionGetWithResponse call
-func ParseGetcrmextensionscalling202603AppIdsettingschannelConnectionGetResponse(rsp *http.Response) (*Getcrmextensionscalling202603AppIdsettingschannelConnectionGetResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getcrmextensionscalling202603AppIdsettingschannelConnectionGetResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmExtensionsCallingChannelConnectionSettingsResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePatchcrmextensionscalling202603AppIdsettingschannelConnectionUpdateResponse parses an HTTP response from a Patchcrmextensionscalling202603AppIdsettingschannelConnectionUpdateWithResponse call
-func ParsePatchcrmextensionscalling202603AppIdsettingschannelConnectionUpdateResponse(rsp *http.Response) (*Patchcrmextensionscalling202603AppIdsettingschannelConnectionUpdateResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Patchcrmextensionscalling202603AppIdsettingschannelConnectionUpdateResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmExtensionsCallingChannelConnectionSettingsResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostcrmextensionscalling202603AppIdsettingschannelConnectionCreateResponse parses an HTTP response from a Postcrmextensionscalling202603AppIdsettingschannelConnectionCreateWithResponse call
-func ParsePostcrmextensionscalling202603AppIdsettingschannelConnectionCreateResponse(rsp *http.Response) (*Postcrmextensionscalling202603AppIdsettingschannelConnectionCreateResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postcrmextensionscalling202603AppIdsettingschannelConnectionCreateResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmExtensionsCallingChannelConnectionSettingsResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetcrmextensionscalling202603AppIdsettingsrecordingGetResponse parses an HTTP response from a Getcrmextensionscalling202603AppIdsettingsrecordingGetWithResponse call
-func ParseGetcrmextensionscalling202603AppIdsettingsrecordingGetResponse(rsp *http.Response) (*Getcrmextensionscalling202603AppIdsettingsrecordingGetResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getcrmextensionscalling202603AppIdsettingsrecordingGetResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmExtensionsCallingRecordingSettingsResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePatchcrmextensionscalling202603AppIdsettingsrecordingUpdateResponse parses an HTTP response from a Patchcrmextensionscalling202603AppIdsettingsrecordingUpdateWithResponse call
-func ParsePatchcrmextensionscalling202603AppIdsettingsrecordingUpdateResponse(rsp *http.Response) (*Patchcrmextensionscalling202603AppIdsettingsrecordingUpdateResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Patchcrmextensionscalling202603AppIdsettingsrecordingUpdateResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmExtensionsCallingRecordingSettingsResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostcrmextensionscalling202603AppIdsettingsrecordingCreateResponse parses an HTTP response from a Postcrmextensionscalling202603AppIdsettingsrecordingCreateWithResponse call
-func ParsePostcrmextensionscalling202603AppIdsettingsrecordingCreateResponse(rsp *http.Response) (*Postcrmextensionscalling202603AppIdsettingsrecordingCreateResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postcrmextensionscalling202603AppIdsettingsrecordingCreateResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmExtensionsCallingRecordingSettingsResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetcrmextensionscardsDev202603sampleResponseGetCardsSampleResponseResponse parses an HTTP response from a GetcrmextensionscardsDev202603sampleResponseGetCardsSampleResponseWithResponse call
-func ParseGetcrmextensionscardsDev202603sampleResponseGetCardsSampleResponseResponse(rsp *http.Response) (*GetcrmextensionscardsDev202603sampleResponseGetCardsSampleResponseResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetcrmextensionscardsDev202603sampleResponseGetCardsSampleResponseResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmExtensionsCardsDevIntegratorCardPayloadResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetcrmextensionscardsDev202603AppIdGetAllResponse parses an HTTP response from a GetcrmextensionscardsDev202603AppIdGetAllWithResponse call
-func ParseGetcrmextensionscardsDev202603AppIdGetAllResponse(rsp *http.Response) (*GetcrmextensionscardsDev202603AppIdGetAllResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetcrmextensionscardsDev202603AppIdGetAllResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmExtensionsCardsDevPublicCardListResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostcrmextensionscardsDev202603AppIdCreateResponse parses an HTTP response from a PostcrmextensionscardsDev202603AppIdCreateWithResponse call
-func ParsePostcrmextensionscardsDev202603AppIdCreateResponse(rsp *http.Response) (*PostcrmextensionscardsDev202603AppIdCreateResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostcrmextensionscardsDev202603AppIdCreateResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CrmExtensionsCardsDevPublicCardResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON201 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostcrmextensionscardsDev202603AppIdviewsmigratecrmv3extensionscardsDevAppIdviewsmigrateResponse parses an HTTP response from a PostcrmextensionscardsDev202603AppIdviewsmigratecrmv3extensionscardsDevAppIdviewsmigrateWithResponse call
-func ParsePostcrmextensionscardsDev202603AppIdviewsmigratecrmv3extensionscardsDevAppIdviewsmigrateResponse(rsp *http.Response) (*PostcrmextensionscardsDev202603AppIdviewsmigratecrmv3extensionscardsDevAppIdviewsmigrateResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostcrmextensionscardsDev202603AppIdviewsmigratecrmv3extensionscardsDevAppIdviewsmigrateResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmExtensionsCardsDevCardMigrateViewsResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseDeletecrmextensionscardsDev202603AppIdCardIdArchiveResponse parses an HTTP response from a DeletecrmextensionscardsDev202603AppIdCardIdArchiveWithResponse call
-func ParseDeletecrmextensionscardsDev202603AppIdCardIdArchiveResponse(rsp *http.Response) (*DeletecrmextensionscardsDev202603AppIdCardIdArchiveResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &DeletecrmextensionscardsDev202603AppIdCardIdArchiveResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParseGetcrmextensionscardsDev202603AppIdCardIdGetByIdResponse parses an HTTP response from a GetcrmextensionscardsDev202603AppIdCardIdGetByIdWithResponse call
-func ParseGetcrmextensionscardsDev202603AppIdCardIdGetByIdResponse(rsp *http.Response) (*GetcrmextensionscardsDev202603AppIdCardIdGetByIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetcrmextensionscardsDev202603AppIdCardIdGetByIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmExtensionsCardsDevPublicCardResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePatchcrmextensionscardsDev202603AppIdCardIdUpdateResponse parses an HTTP response from a PatchcrmextensionscardsDev202603AppIdCardIdUpdateWithResponse call
-func ParsePatchcrmextensionscardsDev202603AppIdCardIdUpdateResponse(rsp *http.Response) (*PatchcrmextensionscardsDev202603AppIdCardIdUpdateResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PatchcrmextensionscardsDev202603AppIdCardIdUpdateResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmExtensionsCardsDevPublicCardResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseDeletecrmextensionsvideoconferencing202603settingsAppIdArchiveResponse parses an HTTP response from a Deletecrmextensionsvideoconferencing202603settingsAppIdArchiveWithResponse call
-func ParseDeletecrmextensionsvideoconferencing202603settingsAppIdArchiveResponse(rsp *http.Response) (*Deletecrmextensionsvideoconferencing202603settingsAppIdArchiveResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Deletecrmextensionsvideoconferencing202603settingsAppIdArchiveResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParseGetcrmextensionsvideoconferencing202603settingsAppIdGetByIdResponse parses an HTTP response from a Getcrmextensionsvideoconferencing202603settingsAppIdGetByIdWithResponse call
-func ParseGetcrmextensionsvideoconferencing202603settingsAppIdGetByIdResponse(rsp *http.Response) (*Getcrmextensionsvideoconferencing202603settingsAppIdGetByIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getcrmextensionsvideoconferencing202603settingsAppIdGetByIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmExtensionsVideoConferencingExternalSettings
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePutcrmextensionsvideoconferencing202603settingsAppIdReplaceResponse parses an HTTP response from a Putcrmextensionsvideoconferencing202603settingsAppIdReplaceWithResponse call
-func ParsePutcrmextensionsvideoconferencing202603settingsAppIdReplaceResponse(rsp *http.Response) (*Putcrmextensionsvideoconferencing202603settingsAppIdReplaceResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Putcrmextensionsvideoconferencing202603settingsAppIdReplaceResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmExtensionsVideoConferencingExternalSettings
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetcrmimports202603crmimportsv3Response parses an HTTP response from a Getcrmimports202603crmimportsv3WithResponse call
-func ParseGetcrmimports202603crmimportsv3Response(rsp *http.Response) (*Getcrmimports202603crmimportsv3Response, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getcrmimports202603crmimportsv3Response{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmImportsCollectionResponsePublicImportResponseForwardPaging
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostcrmimports202603crmimportsv3Response parses an HTTP response from a Postcrmimports202603crmimportsv3WithResponse call
-func ParsePostcrmimports202603crmimportsv3Response(rsp *http.Response) (*Postcrmimports202603crmimportsv3Response, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postcrmimports202603crmimportsv3Response{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmImportsPublicImportResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetcrmimports202603ImportIdcrmimportsv3ImportIdResponse parses an HTTP response from a Getcrmimports202603ImportIdcrmimportsv3ImportIdWithResponse call
-func ParseGetcrmimports202603ImportIdcrmimportsv3ImportIdResponse(rsp *http.Response) (*Getcrmimports202603ImportIdcrmimportsv3ImportIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getcrmimports202603ImportIdcrmimportsv3ImportIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmImportsPublicImportResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostcrmimports202603ImportIdcancelcrmimportsv3ImportIdcancelResponse parses an HTTP response from a Postcrmimports202603ImportIdcancelcrmimportsv3ImportIdcancelWithResponse call
-func ParsePostcrmimports202603ImportIdcancelcrmimportsv3ImportIdcancelResponse(rsp *http.Response) (*Postcrmimports202603ImportIdcancelcrmimportsv3ImportIdcancelResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postcrmimports202603ImportIdcancelcrmimportsv3ImportIdcancelResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest ActionResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetcrmimports202603ImportIderrorscrmimportsv3ImportIderrorsResponse parses an HTTP response from a Getcrmimports202603ImportIderrorscrmimportsv3ImportIderrorsWithResponse call
-func ParseGetcrmimports202603ImportIderrorscrmimportsv3ImportIderrorsResponse(rsp *http.Response) (*Getcrmimports202603ImportIderrorscrmimportsv3ImportIderrorsResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getcrmimports202603ImportIderrorscrmimportsv3ImportIderrorsResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmImportsCollectionResponsePublicImportErrorForwardPaging
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetcrmlimits202603associationslabelsResponse parses an HTTP response from a Getcrmlimits202603associationslabelsWithResponse call
-func ParseGetcrmlimits202603associationslabelsResponse(rsp *http.Response) (*Getcrmlimits202603associationslabelsResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getcrmlimits202603associationslabelsResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmLimitsCollectionResponseAssociationLabelLimitResponseNoPaging
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetcrmlimits202603associationsrecordsfromResponse parses an HTTP response from a Getcrmlimits202603associationsrecordsfromWithResponse call
-func ParseGetcrmlimits202603associationsrecordsfromResponse(rsp *http.Response) (*Getcrmlimits202603associationsrecordsfromResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getcrmlimits202603associationsrecordsfromResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmLimitsCollectionResponseObjectTypeNearOrAtAssociationLimitNoPaging
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetcrmlimits202603associationsrecordsFromObjectTypeIdtoResponse parses an HTTP response from a Getcrmlimits202603associationsrecordsFromObjectTypeIdtoWithResponse call
-func ParseGetcrmlimits202603associationsrecordsFromObjectTypeIdtoResponse(rsp *http.Response) (*Getcrmlimits202603associationsrecordsFromObjectTypeIdtoResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getcrmlimits202603associationsrecordsFromObjectTypeIdtoResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmLimitsCollectionResponseObjectTypeNearOrAtAssociationLimitNoPaging
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetcrmlimits202603associationsrecordsFromObjectTypeIdToObjectTypeIdResponse parses an HTTP response from a Getcrmlimits202603associationsrecordsFromObjectTypeIdToObjectTypeIdWithResponse call
-func ParseGetcrmlimits202603associationsrecordsFromObjectTypeIdToObjectTypeIdResponse(rsp *http.Response) (*Getcrmlimits202603associationsrecordsFromObjectTypeIdToObjectTypeIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getcrmlimits202603associationsrecordsFromObjectTypeIdToObjectTypeIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmLimitsAssociationRecordLimitResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetcrmlimits202603calculatedPropertiesResponse parses an HTTP response from a Getcrmlimits202603calculatedPropertiesWithResponse call
-func ParseGetcrmlimits202603calculatedPropertiesResponse(rsp *http.Response) (*Getcrmlimits202603calculatedPropertiesResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getcrmlimits202603calculatedPropertiesResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmLimitsCalculatedPropertyLimitResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetcrmlimits202603customObjectTypesResponse parses an HTTP response from a Getcrmlimits202603customObjectTypesWithResponse call
-func ParseGetcrmlimits202603customObjectTypesResponse(rsp *http.Response) (*Getcrmlimits202603customObjectTypesResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getcrmlimits202603customObjectTypesResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmLimitsCustomObjectLimitResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetcrmlimits202603customPropertiesResponse parses an HTTP response from a Getcrmlimits202603customPropertiesWithResponse call
-func ParseGetcrmlimits202603customPropertiesResponse(rsp *http.Response) (*Getcrmlimits202603customPropertiesResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getcrmlimits202603customPropertiesResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmLimitsCustomPropertyLimitResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetcrmlimits202603pipelinesResponse parses an HTTP response from a Getcrmlimits202603pipelinesWithResponse call
-func ParseGetcrmlimits202603pipelinesResponse(rsp *http.Response) (*Getcrmlimits202603pipelinesResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getcrmlimits202603pipelinesResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmLimitsPipelineLimitResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetcrmlimits202603recordsResponse parses an HTTP response from a Getcrmlimits202603recordsWithResponse call
-func ParseGetcrmlimits202603recordsResponse(rsp *http.Response) (*Getcrmlimits202603recordsResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getcrmlimits202603recordsResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmLimitsRecordLimitResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetcrmlists202603crmlistsv3Response parses an HTTP response from a Getcrmlists202603crmlistsv3WithResponse call
-func ParseGetcrmlists202603crmlistsv3Response(rsp *http.Response) (*Getcrmlists202603crmlistsv3Response, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getcrmlists202603crmlistsv3Response{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmListsListsByIdResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostcrmlists202603crmlistsv3Response parses an HTTP response from a Postcrmlists202603crmlistsv3WithResponse call
-func ParsePostcrmlists202603crmlistsv3Response(rsp *http.Response) (*Postcrmlists202603crmlistsv3Response, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postcrmlists202603crmlistsv3Response{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmListsListCreateResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetcrmlists202603folderscrmlistsv3foldersResponse parses an HTTP response from a Getcrmlists202603folderscrmlistsv3foldersWithResponse call
-func ParseGetcrmlists202603folderscrmlistsv3foldersResponse(rsp *http.Response) (*Getcrmlists202603folderscrmlistsv3foldersResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getcrmlists202603folderscrmlistsv3foldersResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmListsListFolderFetchResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostcrmlists202603folderscrmlistsv3foldersResponse parses an HTTP response from a Postcrmlists202603folderscrmlistsv3foldersWithResponse call
-func ParsePostcrmlists202603folderscrmlistsv3foldersResponse(rsp *http.Response) (*Postcrmlists202603folderscrmlistsv3foldersResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postcrmlists202603folderscrmlistsv3foldersResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmListsListFolderCreateResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePutcrmlists202603foldersmoveListcrmlistsv3foldersmoveListResponse parses an HTTP response from a Putcrmlists202603foldersmoveListcrmlistsv3foldersmoveListWithResponse call
-func ParsePutcrmlists202603foldersmoveListcrmlistsv3foldersmoveListResponse(rsp *http.Response) (*Putcrmlists202603foldersmoveListcrmlistsv3foldersmoveListResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Putcrmlists202603foldersmoveListcrmlistsv3foldersmoveListResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParseDeletecrmlists202603foldersFolderIdcrmlistsv3foldersFolderIdResponse parses an HTTP response from a Deletecrmlists202603foldersFolderIdcrmlistsv3foldersFolderIdWithResponse call
-func ParseDeletecrmlists202603foldersFolderIdcrmlistsv3foldersFolderIdResponse(rsp *http.Response) (*Deletecrmlists202603foldersFolderIdcrmlistsv3foldersFolderIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Deletecrmlists202603foldersFolderIdcrmlistsv3foldersFolderIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParsePutcrmlists202603foldersFolderIdmoveNewParentFolderIdcrmlistsv3foldersFolderIdmoveNewParentFolderIdResponse parses an HTTP response from a Putcrmlists202603foldersFolderIdmoveNewParentFolderIdcrmlistsv3foldersFolderIdmoveNewParentFolderIdWithResponse call
-func ParsePutcrmlists202603foldersFolderIdmoveNewParentFolderIdcrmlistsv3foldersFolderIdmoveNewParentFolderIdResponse(rsp *http.Response) (*Putcrmlists202603foldersFolderIdmoveNewParentFolderIdcrmlistsv3foldersFolderIdmoveNewParentFolderIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Putcrmlists202603foldersFolderIdmoveNewParentFolderIdcrmlistsv3foldersFolderIdmoveNewParentFolderIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmListsListFolderFetchResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePutcrmlists202603foldersFolderIdrenamecrmlistsv3foldersFolderIdrenameResponse parses an HTTP response from a Putcrmlists202603foldersFolderIdrenamecrmlistsv3foldersFolderIdrenameWithResponse call
-func ParsePutcrmlists202603foldersFolderIdrenamecrmlistsv3foldersFolderIdrenameResponse(rsp *http.Response) (*Putcrmlists202603foldersFolderIdrenamecrmlistsv3foldersFolderIdrenameResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Putcrmlists202603foldersFolderIdrenamecrmlistsv3foldersFolderIdrenameResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmListsListFolderFetchResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetcrmlists202603idmappingcrmlistsv3idmappingResponse parses an HTTP response from a Getcrmlists202603idmappingcrmlistsv3idmappingWithResponse call
-func ParseGetcrmlists202603idmappingcrmlistsv3idmappingResponse(rsp *http.Response) (*Getcrmlists202603idmappingcrmlistsv3idmappingResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getcrmlists202603idmappingcrmlistsv3idmappingResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmListsPublicMigrationMapping
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostcrmlists202603idmappingcrmlistsv3idmappingResponse parses an HTTP response from a Postcrmlists202603idmappingcrmlistsv3idmappingWithResponse call
-func ParsePostcrmlists202603idmappingcrmlistsv3idmappingResponse(rsp *http.Response) (*Postcrmlists202603idmappingcrmlistsv3idmappingResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postcrmlists202603idmappingcrmlistsv3idmappingResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmListsPublicBatchMigrationMapping
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetcrmlists202603objectTypeIdObjectTypeIdnameListNamecrmlistsv3objectTypeIdObjectTypeIdnameListNameResponse parses an HTTP response from a Getcrmlists202603objectTypeIdObjectTypeIdnameListNamecrmlistsv3objectTypeIdObjectTypeIdnameListNameWithResponse call
-func ParseGetcrmlists202603objectTypeIdObjectTypeIdnameListNamecrmlistsv3objectTypeIdObjectTypeIdnameListNameResponse(rsp *http.Response) (*Getcrmlists202603objectTypeIdObjectTypeIdnameListNamecrmlistsv3objectTypeIdObjectTypeIdnameListNameResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getcrmlists202603objectTypeIdObjectTypeIdnameListNamecrmlistsv3objectTypeIdObjectTypeIdnameListNameResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmListsListFetchResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostcrmlists202603recordsmembershipsbatchreadcrmlistsv3recordsmembershipsbatchreadResponse parses an HTTP response from a Postcrmlists202603recordsmembershipsbatchreadcrmlistsv3recordsmembershipsbatchreadWithResponse call
-func ParsePostcrmlists202603recordsmembershipsbatchreadcrmlistsv3recordsmembershipsbatchreadResponse(rsp *http.Response) (*Postcrmlists202603recordsmembershipsbatchreadcrmlistsv3recordsmembershipsbatchreadResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postcrmlists202603recordsmembershipsbatchreadcrmlistsv3recordsmembershipsbatchreadResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CrmListsBatchResponseRecordIdWithMemberships
+		var dest PublicSearchResults
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON200 = &dest
-
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest CrmListsBatchResponseRecordIdWithMembershipsWithErrors
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON207 = &dest
 
 	}
 

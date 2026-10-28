@@ -11,10 +11,1039 @@ import (
 	"io"
 	"net/http"
 	"net/url"
+	"strings"
 
 	"github.com/oapi-codegen/runtime"
 	openapi_types "github.com/oapi-codegen/runtime/types"
 )
+
+// NewGetwebhooksJournaljournalLocal202603latestRequest constructs an http.Request for the GetwebhooksJournaljournalLocal202603latest method
+func NewGetwebhooksJournaljournalLocal202603latestRequest(server string, params *GetwebhooksJournaljournalLocal202603latestParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/webhooks-journal/journal-local/2026-03/latest")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.InstallPortalId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "installPortalId", *params.InstallPortalId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: "int32"}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGetwebhooksJournaljournalLocal202603offsetOffsetnextRequest constructs an http.Request for the GetwebhooksJournaljournalLocal202603offsetOffsetnext method
+func NewGetwebhooksJournaljournalLocal202603offsetOffsetnextRequest(server string, offset string, params *GetwebhooksJournaljournalLocal202603offsetOffsetnextParams) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "offset", offset, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/webhooks-journal/journal-local/2026-03/offset/%s/next", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.InstallPortalId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "installPortalId", *params.InstallPortalId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: "int32"}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGetwebhooksJournaljournalLocal202603statusStatusIdRequest constructs an http.Request for the GetwebhooksJournaljournalLocal202603statusStatusId method
+func NewGetwebhooksJournaljournalLocal202603statusStatusIdRequest(server string, statusId openapi_types.UUID) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "statusId", statusId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: "uuid"})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/webhooks-journal/journal-local/2026-03/status/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGetwebhooksJournaljournal202603batchearliestCountRequest constructs an http.Request for the GetwebhooksJournaljournal202603batchearliestCount method
+func NewGetwebhooksJournaljournal202603batchearliestCountRequest(server string, count int32, params *GetwebhooksJournaljournal202603batchearliestCountParams) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "count", count, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: "int32"})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/webhooks-journal/journal/2026-03/batch/earliest/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.InstallPortalId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "installPortalId", *params.InstallPortalId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: "int32"}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGetwebhooksJournaljournal202603batchlatestCountRequest constructs an http.Request for the GetwebhooksJournaljournal202603batchlatestCount method
+func NewGetwebhooksJournaljournal202603batchlatestCountRequest(server string, count int32, params *GetwebhooksJournaljournal202603batchlatestCountParams) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "count", count, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: "int32"})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/webhooks-journal/journal/2026-03/batch/latest/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.InstallPortalId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "installPortalId", *params.InstallPortalId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: "int32"}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewPostwebhooksJournaljournal202603batchreadRequest calls the generic PostwebhooksJournaljournal202603batchread builder with application/json body
+func NewPostwebhooksJournaljournal202603batchreadRequest(server string, params *PostwebhooksJournaljournal202603batchreadParams, body PostwebhooksJournaljournal202603batchreadJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostwebhooksJournaljournal202603batchreadRequestWithBody(server, params, "application/json", bodyReader)
+}
+
+// NewPostwebhooksJournaljournal202603batchreadRequestWithBody constructs an http.Request for the PostwebhooksJournaljournal202603batchread method, with any body, and a specified content type
+func NewPostwebhooksJournaljournal202603batchreadRequestWithBody(server string, params *PostwebhooksJournaljournal202603batchreadParams, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/webhooks-journal/journal/2026-03/batch/read")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.InstallPortalId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "installPortalId", *params.InstallPortalId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: "int32"}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewGetwebhooksJournaljournal202603batchOffsetnextCountRequest constructs an http.Request for the GetwebhooksJournaljournal202603batchOffsetnextCount method
+func NewGetwebhooksJournaljournal202603batchOffsetnextCountRequest(server string, offset string, count int32, params *GetwebhooksJournaljournal202603batchOffsetnextCountParams) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "offset", offset, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	var pathParam1 string
+
+	pathParam1, err = runtime.StyleParamWithOptions("simple", false, "count", count, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: "int32"})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/webhooks-journal/journal/2026-03/batch/%s/next/%s", pathParam0, pathParam1)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.InstallPortalId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "installPortalId", *params.InstallPortalId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: "int32"}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGetwebhooksJournaljournal202603earliestRequest constructs an http.Request for the GetwebhooksJournaljournal202603earliest method
+func NewGetwebhooksJournaljournal202603earliestRequest(server string, params *GetwebhooksJournaljournal202603earliestParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/webhooks-journal/journal/2026-03/earliest")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.InstallPortalId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "installPortalId", *params.InstallPortalId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: "int32"}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGetwebhooksJournaljournal202603latestRequest constructs an http.Request for the GetwebhooksJournaljournal202603latest method
+func NewGetwebhooksJournaljournal202603latestRequest(server string, params *GetwebhooksJournaljournal202603latestParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/webhooks-journal/journal/2026-03/latest")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.InstallPortalId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "installPortalId", *params.InstallPortalId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: "int32"}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGetwebhooksJournaljournal202603offsetOffsetnextRequest constructs an http.Request for the GetwebhooksJournaljournal202603offsetOffsetnext method
+func NewGetwebhooksJournaljournal202603offsetOffsetnextRequest(server string, offset string, params *GetwebhooksJournaljournal202603offsetOffsetnextParams) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "offset", offset, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/webhooks-journal/journal/2026-03/offset/%s/next", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.InstallPortalId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "installPortalId", *params.InstallPortalId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: "int32"}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGetwebhooksJournaljournal202603statusStatusIdRequest constructs an http.Request for the GetwebhooksJournaljournal202603statusStatusId method
+func NewGetwebhooksJournaljournal202603statusStatusIdRequest(server string, statusId openapi_types.UUID) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "statusId", statusId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: "uuid"})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/webhooks-journal/journal/2026-03/status/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewPostwebhooksJournalsnapshots202603crmRequest calls the generic PostwebhooksJournalsnapshots202603crm builder with application/json body
+func NewPostwebhooksJournalsnapshots202603crmRequest(server string, body PostwebhooksJournalsnapshots202603crmJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostwebhooksJournalsnapshots202603crmRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewPostwebhooksJournalsnapshots202603crmRequestWithBody constructs an http.Request for the PostwebhooksJournalsnapshots202603crm method, with any body, and a specified content type
+func NewPostwebhooksJournalsnapshots202603crmRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/webhooks-journal/snapshots/2026-03/crm")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewGetwebhooksJournalsubscriptions202603Request constructs an http.Request for the GetwebhooksJournalsubscriptions202603 method
+func NewGetwebhooksJournalsubscriptions202603Request(server string) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/webhooks-journal/subscriptions/2026-03")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewPostwebhooksJournalsubscriptions202603Request calls the generic PostwebhooksJournalsubscriptions202603 builder with application/json body
+func NewPostwebhooksJournalsubscriptions202603Request(server string, body PostwebhooksJournalsubscriptions202603JSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostwebhooksJournalsubscriptions202603RequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewPostwebhooksJournalsubscriptions202603RequestWithBody constructs an http.Request for the PostwebhooksJournalsubscriptions202603 method, with any body, and a specified content type
+func NewPostwebhooksJournalsubscriptions202603RequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/webhooks-journal/subscriptions/2026-03")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewPostwebhooksJournalsubscriptions202603filtersRequest calls the generic PostwebhooksJournalsubscriptions202603filters builder with application/json body
+func NewPostwebhooksJournalsubscriptions202603filtersRequest(server string, body PostwebhooksJournalsubscriptions202603filtersJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostwebhooksJournalsubscriptions202603filtersRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewPostwebhooksJournalsubscriptions202603filtersRequestWithBody constructs an http.Request for the PostwebhooksJournalsubscriptions202603filters method, with any body, and a specified content type
+func NewPostwebhooksJournalsubscriptions202603filtersRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/webhooks-journal/subscriptions/2026-03/filters")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewGetwebhooksJournalsubscriptions202603filterssubscriptionSubscriptionIdRequest constructs an http.Request for the GetwebhooksJournalsubscriptions202603filterssubscriptionSubscriptionId method
+func NewGetwebhooksJournalsubscriptions202603filterssubscriptionSubscriptionIdRequest(server string, subscriptionId int64) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "subscriptionId", subscriptionId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: "int64"})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/webhooks-journal/subscriptions/2026-03/filters/subscription/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewDeletewebhooksJournalsubscriptions202603filtersFilterIdRequest constructs an http.Request for the DeletewebhooksJournalsubscriptions202603filtersFilterId method
+func NewDeletewebhooksJournalsubscriptions202603filtersFilterIdRequest(server string, filterId int64) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "filterId", filterId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: "int64"})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/webhooks-journal/subscriptions/2026-03/filters/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodDelete, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGetwebhooksJournalsubscriptions202603filtersFilterIdRequest constructs an http.Request for the GetwebhooksJournalsubscriptions202603filtersFilterId method
+func NewGetwebhooksJournalsubscriptions202603filtersFilterIdRequest(server string, filterId int64) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "filterId", filterId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: "int64"})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/webhooks-journal/subscriptions/2026-03/filters/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewDeletewebhooksJournalsubscriptions202603portalsPortalIdRequest constructs an http.Request for the DeletewebhooksJournalsubscriptions202603portalsPortalId method
+func NewDeletewebhooksJournalsubscriptions202603portalsPortalIdRequest(server string, portalId int64) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "portalId", portalId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: "int64"})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/webhooks-journal/subscriptions/2026-03/portals/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodDelete, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewDeletewebhooksJournalsubscriptions202603SubscriptionIdRequest constructs an http.Request for the DeletewebhooksJournalsubscriptions202603SubscriptionId method
+func NewDeletewebhooksJournalsubscriptions202603SubscriptionIdRequest(server string, subscriptionId int64) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "subscriptionId", subscriptionId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: "int64"})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/webhooks-journal/subscriptions/2026-03/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodDelete, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGetwebhooksJournalsubscriptions202603SubscriptionIdRequest constructs an http.Request for the GetwebhooksJournalsubscriptions202603SubscriptionId method
+func NewGetwebhooksJournalsubscriptions202603SubscriptionIdRequest(server string, subscriptionId int64) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "subscriptionId", subscriptionId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: "int64"})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/webhooks-journal/subscriptions/2026-03/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewDeletewebhooks202603AppIdsettingsClearRequest constructs an http.Request for the Deletewebhooks202603AppIdsettingsClear method
+func NewDeletewebhooks202603AppIdsettingsClearRequest(server string, appId int32) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "appId", appId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: "int32"})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/webhooks/2026-03/%s/settings", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodDelete, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGetwebhooks202603AppIdsettingsGetAllRequest constructs an http.Request for the Getwebhooks202603AppIdsettingsGetAll method
+func NewGetwebhooks202603AppIdsettingsGetAllRequest(server string, appId int32) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "appId", appId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: "int32"})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/webhooks/2026-03/%s/settings", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
 
 // NewPutwebhooks202603AppIdsettingsConfigureRequest calls the generic Putwebhooks202603AppIdsettingsConfigure builder with application/json body
 func NewPutwebhooks202603AppIdsettingsConfigureRequest(server string, appId int32, body Putwebhooks202603AppIdsettingsConfigureJSONRequestBody) (*http.Request, error) {
@@ -650,13 +1679,9 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /automation/actions/callbacks/2026-03/{callbackId}/complete (the `Postautomationactionscallbacks202603CallbackIdcompleteComplete` operationId).
 	Postautomationactionscallbacks202603CallbackIdcompleteCompleteWithResponse(ctx context.Context, callbackId string, body Postautomationactionscallbacks202603CallbackIdcompleteCompleteJSONRequestBody, reqEditors ...RequestEditorFn) (*Postautomationactionscallbacks202603CallbackIdcompleteCompleteResponse, error)
 
-	// Getautomationsequences202603automationsequences202603WithResponse Retrieve sequences
-	//
-	// Retrieve a list of sequences available in your HubSpot account. This endpoint allows you to filter sequences by user ID and name, and supports pagination for large result sets. Use this endpoint to manage and review your sequences effectively.
+	// Getautomationsequences202603automationsequences202603WithResponse performs a GET /automation/sequences/2026-03 (the `Getautomationsequences202603automationsequences202603` operationId) request.
 	//
 	// Returns a wrapper object for the known response body format(s).
-	//
-	// Corresponds with GET /automation/sequences/2026-03 (the `Getautomationsequences202603automationsequences202603` operationId).
 	Getautomationsequences202603automationsequences202603WithResponse(ctx context.Context, params *Getautomationsequences202603automationsequences202603Params, reqEditors ...RequestEditorFn) (*Getautomationsequences202603automationsequences202603Response, error)
 
 	// Postautomationsequences202603enrollmentsWithBodyWithResponse Enroll a contact in a sequence
@@ -704,19 +1729,31 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with GET /business-units/public/2026-03/business-units/user/{userId} (the `GetbusinessUnitspublic202603businessUnitsuserUserIdGetByUserID` operationId).
 	GetbusinessUnitspublic202603businessUnitsuserUserIdGetByUserIDWithResponse(ctx context.Context, userId string, params *GetbusinessUnitspublic202603businessUnitsuserUserIdGetByUserIDParams, reqEditors ...RequestEditorFn) (*GetbusinessUnitspublic202603businessUnitsuserUserIdGetByUserIDResponse, error)
 
-	// GetcmsauditLogs202603cmsauditLogsv3WithResponse performs a GET /cms/audit-logs/2026-03 (the `GetcmsauditLogs202603cmsauditLogsv3` operationId) request.
+	// GetcmsauditLogs202603cmsauditLogsv3WithResponse Retrieve logs
+	//
+	// Retrieve audit logs for the CMS in your HubSpot account. This endpoint allows you to filter logs by user, event type, object type, and object ID. It supports pagination and sorting, making it easier to navigate through large sets of log data. Use this endpoint to monitor changes and activities within your CMS.
 	//
 	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /cms/audit-logs/2026-03 (the `GetcmsauditLogs202603cmsauditLogsv3` operationId).
 	GetcmsauditLogs202603cmsauditLogsv3WithResponse(ctx context.Context, params *GetcmsauditLogs202603cmsauditLogsv3Params, reqEditors ...RequestEditorFn) (*GetcmsauditLogs202603cmsauditLogsv3Response, error)
 
-	// PostcmsauditLogs202603exportcmsauditLogs202603exportWithBodyWithResponse performs a POST /cms/audit-logs/2026-03/export (the `PostcmsauditLogs202603exportcmsauditLogs202603export` operationId) request,
-	// with any type of body and a specified content type.
+	// PostcmsauditLogs202603exportcmsauditLogs202603exportWithBodyWithResponse Export Logs
 	//
-	// Returns a wrapper object for the known response body format(s).
+	// Export CMS audit logs based on specified settings. This endpoint allows users to export logs in various formats such as XLS, XLSX, or CSV. The request requires specifying details like the email, portal ID, and recipient user IDs. This is useful for auditing and monitoring changes within the CMS.
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/audit-logs/2026-03/export (the `PostcmsauditLogs202603exportcmsauditLogs202603export` operationId).
 	PostcmsauditLogs202603exportcmsauditLogs202603exportWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*PostcmsauditLogs202603exportcmsauditLogs202603exportResponse, error)
 
-	// PostcmsauditLogs202603exportcmsauditLogs202603exportWithResponse performs a POST /cms/audit-logs/2026-03/export (the `PostcmsauditLogs202603exportcmsauditLogs202603export` operationId) request.
+	// PostcmsauditLogs202603exportcmsauditLogs202603exportWithResponse Export Logs
+	//
+	// Export CMS audit logs based on specified settings. This endpoint allows users to export logs in various formats such as XLS, XLSX, or CSV. The request requires specifying details like the email, portal ID, and recipient user IDs. This is useful for auditing and monitoring changes within the CMS.
+	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/audit-logs/2026-03/export (the `PostcmsauditLogs202603exportcmsauditLogs202603export` operationId).
 	PostcmsauditLogs202603exportcmsauditLogs202603exportWithResponse(ctx context.Context, body PostcmsauditLogs202603exportcmsauditLogs202603exportJSONRequestBody, reqEditors ...RequestEditorFn) (*PostcmsauditLogs202603exportcmsauditLogs202603exportResponse, error)
 
 	// GetcmsblogSettings202603settingsWithResponse Retrieve all blogs
@@ -899,14 +1936,22 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /cms/blogs/2026-03/authors/batch/update (the `Postcmsblogs202603authorsbatchupdateUpdateBatch` operationId).
 	Postcmsblogs202603authorsbatchupdateUpdateBatchWithBodyWithResponse(ctx context.Context, params *Postcmsblogs202603authorsbatchupdateUpdateBatchParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmsblogs202603authorsbatchupdateUpdateBatchResponse, error)
 
-	// Getcmsblogs202603authorscursorcmsblogsv3authorscursorWithResponse performs a GET /cms/blogs/2026-03/authors/cursor (the `Getcmsblogs202603authorscursorcmsblogsv3authorscursor` operationId) request.
+	// Getcmsblogs202603authorscursorcmsblogsv3authorscursorWithResponse List Authors
+	//
+	// Retrieve a list of blog authors using various query parameters to filter and sort the results. This endpoint supports pagination and can return archived authors if specified.
 	//
 	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /cms/blogs/2026-03/authors/cursor (the `Getcmsblogs202603authorscursorcmsblogsv3authorscursor` operationId).
 	Getcmsblogs202603authorscursorcmsblogsv3authorscursorWithResponse(ctx context.Context, params *Getcmsblogs202603authorscursorcmsblogsv3authorscursorParams, reqEditors ...RequestEditorFn) (*Getcmsblogs202603authorscursorcmsblogsv3authorscursorResponse, error)
 
-	// Getcmsblogs202603authorscursorquerycmsblogsv3authorscursorqueryWithResponse performs a GET /cms/blogs/2026-03/authors/cursor/query (the `Getcmsblogs202603authorscursorquerycmsblogsv3authorscursorquery` operationId) request.
+	// Getcmsblogs202603authorscursorquerycmsblogsv3authorscursorqueryWithResponse Query authors
+	//
+	// Retrieve a list of blog authors with optional filters for creation and update timestamps. This endpoint supports pagination and sorting, allowing you to efficiently manage large datasets of authors.
 	//
 	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /cms/blogs/2026-03/authors/cursor/query (the `Getcmsblogs202603authorscursorquerycmsblogsv3authorscursorquery` operationId).
 	Getcmsblogs202603authorscursorquerycmsblogsv3authorscursorqueryWithResponse(ctx context.Context, params *Getcmsblogs202603authorscursorquerycmsblogsv3authorscursorqueryParams, reqEditors ...RequestEditorFn) (*Getcmsblogs202603authorscursorquerycmsblogsv3authorscursorqueryResponse, error)
 
 	// Postcmsblogs202603authorsmultiLanguageattachToLangGroupAttachToLangGroupWithBodyWithResponse Attach a Blog Author to a multi-language group
@@ -1046,14 +2091,22 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /cms/blogs/2026-03/posts/clone (the `Postcmsblogs202603postscloneClone` operationId).
 	Postcmsblogs202603postscloneCloneWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmsblogs202603postscloneCloneResponse, error)
 
-	// Getcmsblogs202603postscursorcmsblogsv3postscursorWithResponse performs a GET /cms/blogs/2026-03/posts/cursor (the `Getcmsblogs202603postscursorcmsblogsv3postscursor` operationId) request.
+	// Getcmsblogs202603postscursorcmsblogsv3postscursorWithResponse List posts
+	//
+	// Retrieve a list of blog posts with optional filtering and sorting capabilities. This endpoint supports pagination and allows you to specify date ranges for creation and update times, as well as sorting preferences. It is useful for obtaining an overview of blog posts, including archived ones if desired.
 	//
 	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /cms/blogs/2026-03/posts/cursor (the `Getcmsblogs202603postscursorcmsblogsv3postscursor` operationId).
 	Getcmsblogs202603postscursorcmsblogsv3postscursorWithResponse(ctx context.Context, params *Getcmsblogs202603postscursorcmsblogsv3postscursorParams, reqEditors ...RequestEditorFn) (*Getcmsblogs202603postscursorcmsblogsv3postscursorResponse, error)
 
-	// Getcmsblogs202603postscursorquerycmsblogsv3postscursorqueryWithResponse performs a GET /cms/blogs/2026-03/posts/cursor/query (the `Getcmsblogs202603postscursorquerycmsblogsv3postscursorquery` operationId) request.
+	// Getcmsblogs202603postscursorquerycmsblogsv3postscursorqueryWithResponse Query Posts
+	//
+	// Retrieve blog posts from the HubSpot CMS using various query parameters to filter and sort the results. This endpoint supports pagination and allows you to specify date ranges for creation and updates, as well as sorting options. It is useful for fetching a list of posts with specific criteria, such as posts created after a certain date or posts that have been archived.
 	//
 	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /cms/blogs/2026-03/posts/cursor/query (the `Getcmsblogs202603postscursorquerycmsblogsv3postscursorquery` operationId).
 	Getcmsblogs202603postscursorquerycmsblogsv3postscursorqueryWithResponse(ctx context.Context, params *Getcmsblogs202603postscursorquerycmsblogsv3postscursorqueryParams, reqEditors ...RequestEditorFn) (*Getcmsblogs202603postscursorquerycmsblogsv3postscursorqueryResponse, error)
 
 	// Postcmsblogs202603postsmultiLanguageattachToLangGroupAttachToLangGroupWithBodyWithResponse Attach post to a multi-language group
@@ -1263,14 +2316,22 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /cms/blogs/2026-03/tags/batch/update (the `Postcmsblogs202603tagsbatchupdateUpdateBatch` operationId).
 	Postcmsblogs202603tagsbatchupdateUpdateBatchWithBodyWithResponse(ctx context.Context, params *Postcmsblogs202603tagsbatchupdateUpdateBatchParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmsblogs202603tagsbatchupdateUpdateBatchResponse, error)
 
-	// Getcmsblogs202603tagscursorcmsblogsv3tagscursorWithResponse performs a GET /cms/blogs/2026-03/tags/cursor (the `Getcmsblogs202603tagscursorcmsblogsv3tagscursor` operationId) request.
+	// Getcmsblogs202603tagscursorcmsblogsv3tagscursorWithResponse List tags
+	//
+	// Retrieve a list of blog tags from your HubSpot account. This endpoint supports pagination and filtering based on creation and update timestamps. It is useful for managing and organizing your blog content by tags.
 	//
 	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /cms/blogs/2026-03/tags/cursor (the `Getcmsblogs202603tagscursorcmsblogsv3tagscursor` operationId).
 	Getcmsblogs202603tagscursorcmsblogsv3tagscursorWithResponse(ctx context.Context, params *Getcmsblogs202603tagscursorcmsblogsv3tagscursorParams, reqEditors ...RequestEditorFn) (*Getcmsblogs202603tagscursorcmsblogsv3tagscursorResponse, error)
 
-	// Getcmsblogs202603tagscursorquerycmsblogsv3tagscursorqueryWithResponse performs a GET /cms/blogs/2026-03/tags/cursor/query (the `Getcmsblogs202603tagscursorquerycmsblogsv3tagscursorquery` operationId) request.
+	// Getcmsblogs202603tagscursorquerycmsblogsv3tagscursorqueryWithResponse Query Tags
+	//
+	// Retrieve a list of blog tags using various filters and sorting options. This endpoint supports pagination and allows you to filter tags based on creation and update timestamps. It is useful for managing and organizing blog content by tags.
 	//
 	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /cms/blogs/2026-03/tags/cursor/query (the `Getcmsblogs202603tagscursorquerycmsblogsv3tagscursorquery` operationId).
 	Getcmsblogs202603tagscursorquerycmsblogsv3tagscursorqueryWithResponse(ctx context.Context, params *Getcmsblogs202603tagscursorquerycmsblogsv3tagscursorqueryParams, reqEditors ...RequestEditorFn) (*Getcmsblogs202603tagscursorquerycmsblogsv3tagscursorqueryResponse, error)
 
 	// Postcmsblogs202603tagsmultiLanguageattachToLangGroupAttachToLangGroupWithBodyWithResponse Attach a Blog Tag to a multi-language group
@@ -1346,9 +2407,13 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with PATCH /cms/blogs/2026-03/tags/{objectId} (the `Patchcmsblogs202603tagsObjectIdUpdate` operationId).
 	Patchcmsblogs202603tagsObjectIdUpdateWithBodyWithResponse(ctx context.Context, objectId string, params *Patchcmsblogs202603tagsObjectIdUpdateParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Patchcmsblogs202603tagsObjectIdUpdateResponse, error)
 
-	// Getcmsdomains202603cmsdomainsv3WithResponse performs a GET /cms/domains/2026-03 (the `Getcmsdomains202603cmsdomainsv3` operationId) request.
+	// Getcmsdomains202603cmsdomainsv3WithResponse List Domains
+	//
+	// Retrieve a list of content domains associated with your HubSpot account. This endpoint allows filtering by creation and update timestamps, sorting, and pagination. It is useful for managing and reviewing the domains configured in your CMS.
 	//
 	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /cms/domains/2026-03 (the `Getcmsdomains202603cmsdomainsv3` operationId).
 	Getcmsdomains202603cmsdomainsv3WithResponse(ctx context.Context, params *Getcmsdomains202603cmsdomainsv3Params, reqEditors ...RequestEditorFn) (*Getcmsdomains202603cmsdomainsv3Response, error)
 
 	// Getcmsdomains202603DomainIdGetByIdWithResponse Get a single domain
@@ -1369,7 +2434,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with GET /cms/hubdb/2026-03/tables (the `Getcmshubdb202603tablesGetAllTables` operationId).
 	Getcmshubdb202603tablesGetAllTablesWithResponse(ctx context.Context, params *Getcmshubdb202603tablesGetAllTablesParams, reqEditors ...RequestEditorFn) (*Getcmshubdb202603tablesGetAllTablesResponse, error)
 
-	// Postcmshubdb202603tablesCreateTableWithBodyWithResponse Create a table
+	// Postcmshubdb202603tablesCreateTableWithBodyWithResponse Create a new table
 	//
 	// Creates a new draft HubDB table given a JSON schema. The table name and label should be unique for each account.
 	//
@@ -1378,7 +2443,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /cms/hubdb/2026-03/tables (the `Postcmshubdb202603tablesCreateTable` operationId).
 	Postcmshubdb202603tablesCreateTableWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmshubdb202603tablesCreateTableResponse, error)
 
-	// Postcmshubdb202603tablesCreateTableWithResponse Create a table
+	// Postcmshubdb202603tablesCreateTableWithResponse Create a new table
 	//
 	// Creates a new draft HubDB table given a JSON schema. The table name and label should be unique for each account.
 	//
@@ -1491,7 +2556,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /cms/hubdb/2026-03/tables/{tableIdOrName}/draft/publish (the `Postcmshubdb202603tablesTableIdOrNamedraftpublishPublishDraftTable` operationId).
 	Postcmshubdb202603tablesTableIdOrNamedraftpublishPublishDraftTableWithResponse(ctx context.Context, tableIdOrName string, params *Postcmshubdb202603tablesTableIdOrNamedraftpublishPublishDraftTableParams, reqEditors ...RequestEditorFn) (*Postcmshubdb202603tablesTableIdOrNamedraftpublishPublishDraftTableResponse, error)
 
-	// Postcmshubdb202603tablesTableIdOrNamedraftresetResetDraftTableWithResponse Reset a table draft
+	// Postcmshubdb202603tablesTableIdOrNamedraftresetResetDraftTableWithResponse Reset a draft table
 	//
 	// Replaces the data in the draft version of the table with values from the published version. Any unpublished changes in the draft will be lost after this call is made.
 	//
@@ -1519,7 +2584,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with GET /cms/hubdb/2026-03/tables/{tableIdOrName}/rows (the `Getcmshubdb202603tablesTableIdOrNamerowsGetTableRows` operationId).
 	Getcmshubdb202603tablesTableIdOrNamerowsGetTableRowsWithResponse(ctx context.Context, tableIdOrName string, params *Getcmshubdb202603tablesTableIdOrNamerowsGetTableRowsParams, reqEditors ...RequestEditorFn) (*Getcmshubdb202603tablesTableIdOrNamerowsGetTableRowsResponse, error)
 
-	// Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowWithBodyWithResponse Add a row to a table
+	// Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowWithBodyWithResponse Add a new row to a table
 	//
 	// Add a new row to a HubDB table. New rows will be added to the draft version of the table. Use the `/publish` endpoint to push these changes to published version.
 	//
@@ -1528,7 +2593,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /cms/hubdb/2026-03/tables/{tableIdOrName}/rows (the `Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRow` operationId).
 	Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowWithBodyWithResponse(ctx context.Context, tableIdOrName string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowResponse, error)
 
-	// Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowWithResponse Add a row to a table
+	// Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowWithResponse Add a new row to a table
 	//
 	// Add a new row to a HubDB table. New rows will be added to the draft version of the table. Use the `/publish` endpoint to push these changes to published version.
 	//
@@ -1602,18 +2667,18 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /cms/hubdb/2026-03/tables/{tableIdOrName}/rows/draft/batch/create (the `Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcreateCreateDraftTableRows` operationId).
 	Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcreateCreateDraftTableRowsWithResponse(ctx context.Context, tableIdOrName string, body Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcreateCreateDraftTableRowsJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcreateCreateDraftTableRowsResponse, error)
 
-	// Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchpurgePurgeDraftTableRowsWithBodyWithResponse Delete rows
+	// Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchpurgePurgeDraftTableRowsWithBodyWithResponse Permanently deletes rows
 	//
-	// Permanently delete rows from the draft version of a table, given a set of row IDs. Maximum of 100 row IDs per call.
+	// Permanently deletes rows from the draft version of the table, given a set of row IDs. Maximum of 100 row IDs per call.
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with POST /cms/hubdb/2026-03/tables/{tableIdOrName}/rows/draft/batch/purge (the `Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchpurgePurgeDraftTableRows` operationId).
 	Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchpurgePurgeDraftTableRowsWithBodyWithResponse(ctx context.Context, tableIdOrName string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchpurgePurgeDraftTableRowsResponse, error)
 
-	// Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchpurgePurgeDraftTableRowsWithResponse Delete rows
+	// Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchpurgePurgeDraftTableRowsWithResponse Permanently deletes rows
 	//
-	// Permanently delete rows from the draft version of a table, given a set of row IDs. Maximum of 100 row IDs per call.
+	// Permanently deletes rows from the draft version of the table, given a set of row IDs. Maximum of 100 row IDs per call.
 	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
@@ -1702,7 +2767,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with GET /cms/hubdb/2026-03/tables/{tableIdOrName}/rows/{rowId}/draft (the `Getcmshubdb202603tablesTableIdOrNamerowsRowIddraftGetDraftTableRowById` operationId).
 	Getcmshubdb202603tablesTableIdOrNamerowsRowIddraftGetDraftTableRowByIdWithResponse(ctx context.Context, tableIdOrName string, rowId string, params *Getcmshubdb202603tablesTableIdOrNamerowsRowIddraftGetDraftTableRowByIdParams, reqEditors ...RequestEditorFn) (*Getcmshubdb202603tablesTableIdOrNamerowsRowIddraftGetDraftTableRowByIdResponse, error)
 
-	// Patchcmshubdb202603tablesTableIdOrNamerowsRowIddraftUpdateDraftTableRowWithBodyWithResponse Update a row
+	// Patchcmshubdb202603tablesTableIdOrNamerowsRowIddraftUpdateDraftTableRowWithBodyWithResponse Updates an existing row
 	//
 	// Partially update a single row in the table's draft version.
 	// All the column values need not be specified. Only the columns or fields that needs to be modified can be specified.
@@ -1713,7 +2778,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with PATCH /cms/hubdb/2026-03/tables/{tableIdOrName}/rows/{rowId}/draft (the `Patchcmshubdb202603tablesTableIdOrNamerowsRowIddraftUpdateDraftTableRow` operationId).
 	Patchcmshubdb202603tablesTableIdOrNamerowsRowIddraftUpdateDraftTableRowWithBodyWithResponse(ctx context.Context, tableIdOrName string, rowId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Patchcmshubdb202603tablesTableIdOrNamerowsRowIddraftUpdateDraftTableRowResponse, error)
 
-	// Patchcmshubdb202603tablesTableIdOrNamerowsRowIddraftUpdateDraftTableRowWithResponse Update a row
+	// Patchcmshubdb202603tablesTableIdOrNamerowsRowIddraftUpdateDraftTableRowWithResponse Updates an existing row
 	//
 	// Partially update a single row in the table's draft version.
 	// All the column values need not be specified. Only the columns or fields that needs to be modified can be specified.
@@ -1724,7 +2789,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with PATCH /cms/hubdb/2026-03/tables/{tableIdOrName}/rows/{rowId}/draft (the `Patchcmshubdb202603tablesTableIdOrNamerowsRowIddraftUpdateDraftTableRow` operationId).
 	Patchcmshubdb202603tablesTableIdOrNamerowsRowIddraftUpdateDraftTableRowWithResponse(ctx context.Context, tableIdOrName string, rowId string, body Patchcmshubdb202603tablesTableIdOrNamerowsRowIddraftUpdateDraftTableRowJSONRequestBody, reqEditors ...RequestEditorFn) (*Patchcmshubdb202603tablesTableIdOrNamerowsRowIddraftUpdateDraftTableRowResponse, error)
 
-	// Putcmshubdb202603tablesTableIdOrNamerowsRowIddraftReplaceDraftTableRowWithBodyWithResponse Replace an existing row
+	// Putcmshubdb202603tablesTableIdOrNamerowsRowIddraftReplaceDraftTableRowWithBodyWithResponse Replaces an existing row
 	//
 	// Replace a single row in the draft version of a table. All column values must be specified. If a column has a value in the target table and this request doesn't define that value, it will be deleted.
 	// See the "Create a row" endpoint for instructions on how to format the JSON row definitions.
@@ -1734,7 +2799,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with PUT /cms/hubdb/2026-03/tables/{tableIdOrName}/rows/{rowId}/draft (the `Putcmshubdb202603tablesTableIdOrNamerowsRowIddraftReplaceDraftTableRow` operationId).
 	Putcmshubdb202603tablesTableIdOrNamerowsRowIddraftReplaceDraftTableRowWithBodyWithResponse(ctx context.Context, tableIdOrName string, rowId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Putcmshubdb202603tablesTableIdOrNamerowsRowIddraftReplaceDraftTableRowResponse, error)
 
-	// Putcmshubdb202603tablesTableIdOrNamerowsRowIddraftReplaceDraftTableRowWithResponse Replace an existing row
+	// Putcmshubdb202603tablesTableIdOrNamerowsRowIddraftReplaceDraftTableRowWithResponse Replaces an existing row
 	//
 	// Replace a single row in the draft version of a table. All column values must be specified. If a column has a value in the target table and this request doesn't define that value, it will be deleted.
 	// See the "Create a row" endpoint for instructions on how to format the JSON row definitions.
@@ -1771,7 +2836,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with DELETE /cms/hubdb/2026-03/tables/{tableIdOrName}/versions/{versionId} (the `Deletecmshubdb202603tablesTableIdOrNameversionsVersionIdRemoveTableVersion` operationId).
 	Deletecmshubdb202603tablesTableIdOrNameversionsVersionIdRemoveTableVersionWithResponse(ctx context.Context, tableIdOrName string, versionId int64, reqEditors ...RequestEditorFn) (*Deletecmshubdb202603tablesTableIdOrNameversionsVersionIdRemoveTableVersionResponse, error)
 
-	// Getcmspages202603landingPagesGetPageWithResponse List landing pages
+	// Getcmspages202603landingPagesGetPageWithResponse Get all landing pages
 	//
 	// Retrieve a list of landing pages in your HubSpot account. This endpoint allows you to filter landing pages based on creation and update timestamps, sort them, and paginate through results. You can also choose to include archived pages or specify certain properties to be included in the response.
 	//
@@ -2375,6 +3440,15 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with GET /cms/site-search/2026-03/indexed-data/{contentId} (the `GetcmssiteSearch202603indexedDataContentIdGetById` operationId).
 	GetcmssiteSearch202603indexedDataContentIdGetByIdWithResponse(ctx context.Context, contentId string, params *GetcmssiteSearch202603indexedDataContentIdGetByIdParams, reqEditors ...RequestEditorFn) (*GetcmssiteSearch202603indexedDataContentIdGetByIdResponse, error)
 
+	// GetcmssiteSearch202603searchcmssiteSearch202603searchWithResponse Search your site
+	//
+	// Returns any website content matching the given search criteria for a given HubSpot account. Searches can be filtered by content type, domain, or URL path. Includes options for weighing results by recency and popularity, along with language support.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /cms/site-search/2026-03/search (the `GetcmssiteSearch202603searchcmssiteSearch202603search` operationId).
+	GetcmssiteSearch202603searchcmssiteSearch202603searchWithResponse(ctx context.Context, params *GetcmssiteSearch202603searchcmssiteSearch202603searchParams, reqEditors ...RequestEditorFn) (*GetcmssiteSearch202603searchcmssiteSearch202603searchResponse, error)
+
 	// PostcmssourceCode202603extractasyncDoAsyncWithBodyWithResponse Extract a zip file
 	//
 	// Extract a zip file in the developer file system. Extraction status can be checked with the `/extract/async/tasks/taskId/status` endpoint below.
@@ -2458,53 +3532,68 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /cms/source-code/2026-03/{environment}/validate/{path} (the `PostcmssourceCode202603EnvironmentvalidatePathDoValidate` operationId).
 	PostcmssourceCode202603EnvironmentvalidatePathDoValidateWithBodyWithResponse(ctx context.Context, environment string, path string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*PostcmssourceCode202603EnvironmentvalidatePathDoValidateResponse, error)
 
-	// GetcmsurlRedirects202603cmsurlRedirectsv3WithResponse Retrieve redirects
+	// GetcmsurlRedirects202603cmsurlRedirectsv3WithResponse List URL Redirects
 	//
-	// Retrieve a list of URL redirects configured in your HubSpot account. This endpoint allows you to filter redirects based on their creation or update timestamps, and sort the results. It supports pagination and can include archived redirects if specified.
+	// Retrieve a list of URL redirects in your HubSpot account. This endpoint allows you to filter redirects based on their creation or update timestamps, and sort the results. It supports pagination and can include archived redirects if specified.
 	//
 	// Returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with GET /cms/url-redirects/2026-03 (the `GetcmsurlRedirects202603cmsurlRedirectsv3` operationId).
 	GetcmsurlRedirects202603cmsurlRedirectsv3WithResponse(ctx context.Context, params *GetcmsurlRedirects202603cmsurlRedirectsv3Params, reqEditors ...RequestEditorFn) (*GetcmsurlRedirects202603cmsurlRedirectsv3Response, error)
 
-	// PostcmsurlRedirects202603cmsurlRedirectsv3WithBodyWithResponse Create redirect
+	// PostcmsurlRedirects202603cmsurlRedirectsv3WithBodyWithResponse Create URL Redirect
 	//
-	// Create a new URL redirect in your HubSpot account. This endpoint allows you to define a new URL mapping that redirects traffic from a specified route to a destination URL. This is useful for managing URL changes, handling outdated links, or creating short links.
+	// Create a new URL redirect in your HubSpot account. This endpoint allows you to define the destination URL, redirect style, and route prefix for the redirect. It is useful for managing URL redirections and ensuring that users are directed to the correct pages.
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with POST /cms/url-redirects/2026-03 (the `PostcmsurlRedirects202603cmsurlRedirectsv3` operationId).
 	PostcmsurlRedirects202603cmsurlRedirectsv3WithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*PostcmsurlRedirects202603cmsurlRedirectsv3Response, error)
 
-	// PostcmsurlRedirects202603cmsurlRedirectsv3WithResponse Create redirect
+	// PostcmsurlRedirects202603cmsurlRedirectsv3WithResponse Create URL Redirect
 	//
-	// Create a new URL redirect in your HubSpot account. This endpoint allows you to define a new URL mapping that redirects traffic from a specified route to a destination URL. This is useful for managing URL changes, handling outdated links, or creating short links.
+	// Create a new URL redirect in your HubSpot account. This endpoint allows you to define the destination URL, redirect style, and route prefix for the redirect. It is useful for managing URL redirections and ensuring that users are directed to the correct pages.
 	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with POST /cms/url-redirects/2026-03 (the `PostcmsurlRedirects202603cmsurlRedirectsv3` operationId).
 	PostcmsurlRedirects202603cmsurlRedirectsv3WithResponse(ctx context.Context, body PostcmsurlRedirects202603cmsurlRedirectsv3JSONRequestBody, reqEditors ...RequestEditorFn) (*PostcmsurlRedirects202603cmsurlRedirectsv3Response, error)
 
-	// GetcmsurlRedirects202603urlMappingsWithResponse performs a GET /cms/url-redirects/2026-03/url-mappings (the `GetcmsurlRedirects202603urlMappings` operationId) request.
+	// GetcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappingsWithResponse List URL Mappings
+	//
+	// Retrieve a list of URL mappings for redirects in your HubSpot account. This endpoint allows you to access all URL mappings, which can be useful for managing and auditing redirects. The response includes details about each URL mapping, such as the destination and route prefix.
 	//
 	// Returns a wrapper object for the known response body format(s).
-	GetcmsurlRedirects202603urlMappingsWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*GetcmsurlRedirects202603urlMappingsResponse, error)
+	//
+	// Corresponds with GET /cms/url-redirects/2026-03/url-mappings (the `GetcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappings` operationId).
+	GetcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappingsWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*GetcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappingsResponse, error)
 
-	// PostcmsurlRedirects202603urlMappingsWithBodyWithResponse performs a POST /cms/url-redirects/2026-03/url-mappings (the `PostcmsurlRedirects202603urlMappings` operationId) request,
-	// with any type of body and a specified content type.
+	// PostcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappingsWithBodyWithResponse Create URL Mapping
 	//
-	// Returns a wrapper object for the known response body format(s).
-	PostcmsurlRedirects202603urlMappingsWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*PostcmsurlRedirects202603urlMappingsResponse, error)
+	// Create a new URL mapping in your HubSpot account. This endpoint allows you to define a new URL redirect rule by specifying the route prefix, destination URL, and redirect style. The request body must include these required fields to successfully create a URL mapping.
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/url-redirects/2026-03/url-mappings (the `PostcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappings` operationId).
+	PostcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappingsWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*PostcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappingsResponse, error)
 
-	// DeletecmsurlRedirects202603urlMappingsIdWithResponse performs a DELETE /cms/url-redirects/2026-03/url-mappings/{id} (the `DeletecmsurlRedirects202603urlMappingsId` operationId) request.
+	// DeletecmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsIdWithResponse Delete
+	//
+	// Delete a specific URL mapping in your HubSpot account using its unique identifier. This operation is useful for removing outdated or incorrect URL redirects. Ensure you have the necessary permissions to perform this action.
 	//
 	// Returns a wrapper object for the known response body format(s).
-	DeletecmsurlRedirects202603urlMappingsIdWithResponse(ctx context.Context, id int64, reqEditors ...RequestEditorFn) (*DeletecmsurlRedirects202603urlMappingsIdResponse, error)
+	//
+	// Corresponds with DELETE /cms/url-redirects/2026-03/url-mappings/{id} (the `DeletecmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsId` operationId).
+	DeletecmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsIdWithResponse(ctx context.Context, id int64, reqEditors ...RequestEditorFn) (*DeletecmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsIdResponse, error)
 
-	// GetcmsurlRedirects202603urlMappingsIdWithResponse performs a GET /cms/url-redirects/2026-03/url-mappings/{id} (the `GetcmsurlRedirects202603urlMappingsId` operationId) request.
+	// GetcmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsIdWithResponse Retrieve URL Mapping
+	//
+	// Retrieve a specific URL mapping by its unique identifier. This endpoint is useful for obtaining details about a particular URL redirect configuration within your HubSpot account. It requires the unique ID of the URL mapping to be specified in the path.
 	//
 	// Returns a wrapper object for the known response body format(s).
-	GetcmsurlRedirects202603urlMappingsIdWithResponse(ctx context.Context, id int64, reqEditors ...RequestEditorFn) (*GetcmsurlRedirects202603urlMappingsIdResponse, error)
+	//
+	// Corresponds with GET /cms/url-redirects/2026-03/url-mappings/{id} (the `GetcmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsId` operationId).
+	GetcmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsIdWithResponse(ctx context.Context, id int64, reqEditors ...RequestEditorFn) (*GetcmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsIdResponse, error)
 
 	// DeletecmsurlRedirects202603UrlRedirectIdArchiveWithResponse Delete a redirect
 	//
@@ -2686,19 +3775,31 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /communication-preferences/2026-03/statuses/{subscriberIdString}/unsubscribe-all (the `PostcommunicationPreferences202603statusesSubscriberIdStringunsubscribeAll` operationId).
 	PostcommunicationPreferences202603statusesSubscriberIdStringunsubscribeAllWithResponse(ctx context.Context, subscriberIdString string, params *PostcommunicationPreferences202603statusesSubscriberIdStringunsubscribeAllParams, reqEditors ...RequestEditorFn) (*PostcommunicationPreferences202603statusesSubscriberIdStringunsubscribeAllResponse, error)
 
-	// GetconversationscustomChannels202603conversationscustomChannelsv3WithResponse performs a GET /conversations/custom-channels/2026-03 (the `GetconversationscustomChannels202603conversationscustomChannelsv3` operationId) request.
+	// GetconversationscustomChannels202603conversationscustomChannelsv3WithResponse List Channels
+	//
+	// Retrieve a list of custom conversation channels for the specified version. This endpoint allows you to paginate through the results and sort them according to your preferences.
 	//
 	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /conversations/custom-channels/2026-03 (the `GetconversationscustomChannels202603conversationscustomChannelsv3` operationId).
 	GetconversationscustomChannels202603conversationscustomChannelsv3WithResponse(ctx context.Context, params *GetconversationscustomChannels202603conversationscustomChannelsv3Params, reqEditors ...RequestEditorFn) (*GetconversationscustomChannels202603conversationscustomChannelsv3Response, error)
 
-	// PostconversationscustomChannels202603conversationscustomChannelsv3WithBodyWithResponse performs a POST /conversations/custom-channels/2026-03 (the `PostconversationscustomChannels202603conversationscustomChannelsv3` operationId) request,
-	// with any type of body and a specified content type.
+	// PostconversationscustomChannels202603conversationscustomChannelsv3WithBodyWithResponse Create
 	//
-	// Returns a wrapper object for the known response body format(s).
+	// Create a new custom channel integration in your HubSpot account. This endpoint allows you to define the capabilities and properties of the custom channel, such as its name, description, and webhook URL. The request must include a JSON body with the necessary details for the new channel integration.
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /conversations/custom-channels/2026-03 (the `PostconversationscustomChannels202603conversationscustomChannelsv3` operationId).
 	PostconversationscustomChannels202603conversationscustomChannelsv3WithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*PostconversationscustomChannels202603conversationscustomChannelsv3Response, error)
 
-	// PostconversationscustomChannels202603conversationscustomChannelsv3WithResponse performs a POST /conversations/custom-channels/2026-03 (the `PostconversationscustomChannels202603conversationscustomChannelsv3` operationId) request.
+	// PostconversationscustomChannels202603conversationscustomChannelsv3WithResponse Create
+	//
+	// Create a new custom channel integration in your HubSpot account. This endpoint allows you to define the capabilities and properties of the custom channel, such as its name, description, and webhook URL. The request must include a JSON body with the necessary details for the new channel integration.
+	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /conversations/custom-channels/2026-03 (the `PostconversationscustomChannels202603conversationscustomChannelsv3` operationId).
 	PostconversationscustomChannels202603conversationscustomChannelsv3WithResponse(ctx context.Context, body PostconversationscustomChannels202603conversationscustomChannelsv3JSONRequestBody, reqEditors ...RequestEditorFn) (*PostconversationscustomChannels202603conversationscustomChannelsv3Response, error)
 
 	// DeleteconversationscustomChannels202603ChannelIdWithResponse Archive a custom channel
@@ -3061,7 +4162,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/associations/2026-03/{fromObjectType}/{toObjectType}/batch/archive (the `Postcrmassociations202603FromObjectTypeToObjectTypebatcharchivecrmassociations202509FromObjectTypeToObjectTypebatcharchive` operationId).
 	Postcrmassociations202603FromObjectTypeToObjectTypebatcharchivecrmassociations202509FromObjectTypeToObjectTypebatcharchiveWithResponse(ctx context.Context, fromObjectType string, toObjectType string, body Postcrmassociations202603FromObjectTypeToObjectTypebatcharchivecrmassociations202509FromObjectTypeToObjectTypebatcharchiveJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmassociations202603FromObjectTypeToObjectTypebatcharchivecrmassociations202509FromObjectTypeToObjectTypebatcharchiveResponse, error)
 
-	// Postcrmassociations202603FromObjectTypeToObjectTypebatchassociatedefaultcrmassociations202509FromObjectTypeToObjectTypebatchassociatedefaultWithBodyWithResponse Associate records (default)
+	// Postcrmassociations202603FromObjectTypeToObjectTypebatchassociatedefaultcrmassociations202509FromObjectTypeToObjectTypebatchassociatedefaultWithBodyWithResponse  Create Default Associations
 	//
 	// Create the default (most generic) association type between two object types.
 	//
@@ -3070,7 +4171,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/associations/2026-03/{fromObjectType}/{toObjectType}/batch/associate/default (the `Postcrmassociations202603FromObjectTypeToObjectTypebatchassociatedefaultcrmassociations202509FromObjectTypeToObjectTypebatchassociatedefault` operationId).
 	Postcrmassociations202603FromObjectTypeToObjectTypebatchassociatedefaultcrmassociations202509FromObjectTypeToObjectTypebatchassociatedefaultWithBodyWithResponse(ctx context.Context, fromObjectType string, toObjectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmassociations202603FromObjectTypeToObjectTypebatchassociatedefaultcrmassociations202509FromObjectTypeToObjectTypebatchassociatedefaultResponse, error)
 
-	// Postcrmassociations202603FromObjectTypeToObjectTypebatchassociatedefaultcrmassociations202509FromObjectTypeToObjectTypebatchassociatedefaultWithResponse Associate records (default)
+	// Postcrmassociations202603FromObjectTypeToObjectTypebatchassociatedefaultcrmassociations202509FromObjectTypeToObjectTypebatchassociatedefaultWithResponse  Create Default Associations
 	//
 	// Create the default (most generic) association type between two object types.
 	//
@@ -3097,7 +4198,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/associations/2026-03/{fromObjectType}/{toObjectType}/batch/create (the `Postcrmassociations202603FromObjectTypeToObjectTypebatchcreatecrmassociations202509FromObjectTypeToObjectTypebatchcreate` operationId).
 	Postcrmassociations202603FromObjectTypeToObjectTypebatchcreatecrmassociations202509FromObjectTypeToObjectTypebatchcreateWithResponse(ctx context.Context, fromObjectType string, toObjectType string, body Postcrmassociations202603FromObjectTypeToObjectTypebatchcreatecrmassociations202509FromObjectTypeToObjectTypebatchcreateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmassociations202603FromObjectTypeToObjectTypebatchcreatecrmassociations202509FromObjectTypeToObjectTypebatchcreateResponse, error)
 
-	// Postcrmassociations202603FromObjectTypeToObjectTypebatchlabelsarchivecrmassociations202509FromObjectTypeToObjectTypebatchlabelsarchiveWithBodyWithResponse Delete specific labels
+	// Postcrmassociations202603FromObjectTypeToObjectTypebatchlabelsarchivecrmassociations202509FromObjectTypeToObjectTypebatchlabelsarchiveWithBodyWithResponse Delete Specific Labels
 	//
 	// Batch delete specific association labels for objects. Deleting an unlabeled association will also delete all labeled associations between those two objects
 	//
@@ -3106,7 +4207,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/associations/2026-03/{fromObjectType}/{toObjectType}/batch/labels/archive (the `Postcrmassociations202603FromObjectTypeToObjectTypebatchlabelsarchivecrmassociations202509FromObjectTypeToObjectTypebatchlabelsarchive` operationId).
 	Postcrmassociations202603FromObjectTypeToObjectTypebatchlabelsarchivecrmassociations202509FromObjectTypeToObjectTypebatchlabelsarchiveWithBodyWithResponse(ctx context.Context, fromObjectType string, toObjectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmassociations202603FromObjectTypeToObjectTypebatchlabelsarchivecrmassociations202509FromObjectTypeToObjectTypebatchlabelsarchiveResponse, error)
 
-	// Postcrmassociations202603FromObjectTypeToObjectTypebatchlabelsarchivecrmassociations202509FromObjectTypeToObjectTypebatchlabelsarchiveWithResponse Delete specific labels
+	// Postcrmassociations202603FromObjectTypeToObjectTypebatchlabelsarchivecrmassociations202509FromObjectTypeToObjectTypebatchlabelsarchiveWithResponse Delete Specific Labels
 	//
 	// Batch delete specific association labels for objects. Deleting an unlabeled association will also delete all labeled associations between those two objects
 	//
@@ -3223,14 +4324,22 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with GET /crm/exports/2026-03/export/{exportId} (the `Getcrmexports202603exportExportIdGetById` operationId).
 	Getcrmexports202603exportExportIdGetByIdWithResponse(ctx context.Context, exportId int64, reqEditors ...RequestEditorFn) (*Getcrmexports202603exportExportIdGetByIdResponse, error)
 
-	// Postcrmextensionscalling202603inboundCallcrmv3extensionscallinginboundCallWithBodyWithResponse performs a POST /crm/extensions/calling/2026-03/inbound-call (the `Postcrmextensionscalling202603inboundCallcrmv3extensionscallinginboundCall` operationId) request,
-	// with any type of body and a specified content type.
+	// Postcrmextensionscalling202603inboundCallcrmv3extensionscallinginboundCallWithBodyWithResponse Submit details of an inbound call to the CRM.
 	//
-	// Returns a wrapper object for the known response body format(s).
+	// This endpoint allows you to submit information about an inbound call to the CRM system. The request must include details such as the external call ID, call status, and involved phone numbers. This operation helps in logging and managing inbound call data within the CRM.
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /crm/extensions/calling/2026-03/inbound-call (the `Postcrmextensionscalling202603inboundCallcrmv3extensionscallinginboundCall` operationId).
 	Postcrmextensionscalling202603inboundCallcrmv3extensionscallinginboundCallWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmextensionscalling202603inboundCallcrmv3extensionscallinginboundCallResponse, error)
 
-	// Postcrmextensionscalling202603inboundCallcrmv3extensionscallinginboundCallWithResponse performs a POST /crm/extensions/calling/2026-03/inbound-call (the `Postcrmextensionscalling202603inboundCallcrmv3extensionscallinginboundCall` operationId) request.
+	// Postcrmextensionscalling202603inboundCallcrmv3extensionscallinginboundCallWithResponse Submit details of an inbound call to the CRM.
+	//
+	// This endpoint allows you to submit information about an inbound call to the CRM system. The request must include details such as the external call ID, call status, and involved phone numbers. This operation helps in logging and managing inbound call data within the CRM.
+	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /crm/extensions/calling/2026-03/inbound-call (the `Postcrmextensionscalling202603inboundCallcrmv3extensionscallinginboundCall` operationId).
 	Postcrmextensionscalling202603inboundCallcrmv3extensionscallinginboundCallWithResponse(ctx context.Context, body Postcrmextensionscalling202603inboundCallcrmv3extensionscallinginboundCallJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmextensionscalling202603inboundCallcrmv3extensionscallinginboundCallResponse, error)
 
 	// Postcrmextensionscalling202603recordingsreadyMarkAsReadyWithBodyWithResponse Mark a call recording as ready for retrieval.
@@ -3251,24 +4360,40 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/extensions/calling/2026-03/recordings/ready (the `Postcrmextensionscalling202603recordingsreadyMarkAsReady` operationId).
 	Postcrmextensionscalling202603recordingsreadyMarkAsReadyWithResponse(ctx context.Context, body Postcrmextensionscalling202603recordingsreadyMarkAsReadyJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmextensionscalling202603recordingsreadyMarkAsReadyResponse, error)
 
-	// Postcrmextensionscalling202603transcriptscrmextensionscalling202603transcriptsWithBodyWithResponse performs a POST /crm/extensions/calling/2026-03/transcripts (the `Postcrmextensionscalling202603transcriptscrmextensionscalling202603transcripts` operationId) request,
-	// with any type of body and a specified content type.
+	// Postcrmextensionscalling202603transcriptscrmextensionscalling202603transcriptsWithBodyWithResponse Create Transcript
 	//
-	// Returns a wrapper object for the known response body format(s).
+	// Create a new transcript for a call in your HubSpot account. This endpoint allows you to submit the details of a call transcript, including engagement ID and utterances, to be stored and managed within HubSpot. This is useful for integrating call transcription data into your CRM workflows.
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /crm/extensions/calling/2026-03/transcripts (the `Postcrmextensionscalling202603transcriptscrmextensionscalling202603transcripts` operationId).
 	Postcrmextensionscalling202603transcriptscrmextensionscalling202603transcriptsWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmextensionscalling202603transcriptscrmextensionscalling202603transcriptsResponse, error)
 
-	// Postcrmextensionscalling202603transcriptscrmextensionscalling202603transcriptsWithResponse performs a POST /crm/extensions/calling/2026-03/transcripts (the `Postcrmextensionscalling202603transcriptscrmextensionscalling202603transcripts` operationId) request.
+	// Postcrmextensionscalling202603transcriptscrmextensionscalling202603transcriptsWithResponse Create Transcript
+	//
+	// Create a new transcript for a call in your HubSpot account. This endpoint allows you to submit the details of a call transcript, including engagement ID and utterances, to be stored and managed within HubSpot. This is useful for integrating call transcription data into your CRM workflows.
+	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /crm/extensions/calling/2026-03/transcripts (the `Postcrmextensionscalling202603transcriptscrmextensionscalling202603transcripts` operationId).
 	Postcrmextensionscalling202603transcriptscrmextensionscalling202603transcriptsWithResponse(ctx context.Context, body Postcrmextensionscalling202603transcriptscrmextensionscalling202603transcriptsJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmextensionscalling202603transcriptscrmextensionscalling202603transcriptsResponse, error)
 
-	// Deletecrmextensionscalling202603transcriptsTranscriptIdcrmextensionscalling202603transcriptsTranscriptIdWithResponse performs a DELETE /crm/extensions/calling/2026-03/transcripts/{transcriptId} (the `Deletecrmextensionscalling202603transcriptsTranscriptIdcrmextensionscalling202603transcriptsTranscriptId` operationId) request.
+	// Deletecrmextensionscalling202603transcriptsTranscriptIdcrmextensionscalling202603transcriptsTranscriptIdWithResponse Delete transcript
+	//
+	// Delete a specific call transcript from your HubSpot account using its unique identifier. This operation is useful for managing and cleaning up transcript data that is no longer needed.
 	//
 	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with DELETE /crm/extensions/calling/2026-03/transcripts/{transcriptId} (the `Deletecrmextensionscalling202603transcriptsTranscriptIdcrmextensionscalling202603transcriptsTranscriptId` operationId).
 	Deletecrmextensionscalling202603transcriptsTranscriptIdcrmextensionscalling202603transcriptsTranscriptIdWithResponse(ctx context.Context, transcriptId string, reqEditors ...RequestEditorFn) (*Deletecrmextensionscalling202603transcriptsTranscriptIdcrmextensionscalling202603transcriptsTranscriptIdResponse, error)
 
-	// Getcrmextensionscalling202603transcriptsTranscriptIdcrmextensionscalling202603transcriptsTranscriptIdWithResponse performs a GET /crm/extensions/calling/2026-03/transcripts/{transcriptId} (the `Getcrmextensionscalling202603transcriptsTranscriptIdcrmextensionscalling202603transcriptsTranscriptId` operationId) request.
+	// Getcrmextensionscalling202603transcriptsTranscriptIdcrmextensionscalling202603transcriptsTranscriptIdWithResponse Retrieve transcript
+	//
+	// Retrieve a specific call transcript by its unique identifier. This endpoint allows you to access the details of a transcript, including its creation and update timestamps, engagement ID, source, and the transcript utterances. It is useful for reviewing and analyzing call interactions stored in your HubSpot account.
 	//
 	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /crm/extensions/calling/2026-03/transcripts/{transcriptId} (the `Getcrmextensionscalling202603transcriptsTranscriptIdcrmextensionscalling202603transcriptsTranscriptId` operationId).
 	Getcrmextensionscalling202603transcriptsTranscriptIdcrmextensionscalling202603transcriptsTranscriptIdWithResponse(ctx context.Context, transcriptId string, reqEditors ...RequestEditorFn) (*Getcrmextensionscalling202603transcriptsTranscriptIdcrmextensionscalling202603transcriptsTranscriptIdResponse, error)
 
 	// Deletecrmextensionscalling202603AppIdsettingsRemoveWithResponse Delete the calling extension settings for a specific app.
@@ -3550,30 +4675,49 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with PUT /crm/extensions/videoconferencing/2026-03/settings/{appId} (the `Putcrmextensionsvideoconferencing202603settingsAppIdReplace` operationId).
 	Putcrmextensionsvideoconferencing202603settingsAppIdReplaceWithResponse(ctx context.Context, appId int32, body Putcrmextensionsvideoconferencing202603settingsAppIdReplaceJSONRequestBody, reqEditors ...RequestEditorFn) (*Putcrmextensionsvideoconferencing202603settingsAppIdReplaceResponse, error)
 
-	// Getcrmimports202603crmimportsv3WithResponse performs a GET /crm/imports/2026-03 (the `Getcrmimports202603crmimportsv3` operationId) request.
+	// Getcrmimports202603crmimportsv3WithResponse List Imports
+	//
+	// Retrieve a list of imports in your HubSpot account. This endpoint allows you to view the imports that have been processed, providing details about each import. It supports pagination to navigate through large sets of import data.
 	//
 	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /crm/imports/2026-03 (the `Getcrmimports202603crmimportsv3` operationId).
 	Getcrmimports202603crmimportsv3WithResponse(ctx context.Context, params *Getcrmimports202603crmimportsv3Params, reqEditors ...RequestEditorFn) (*Getcrmimports202603crmimportsv3Response, error)
 
-	// Postcrmimports202603crmimportsv3WithBodyWithResponse performs a POST /crm/imports/2026-03 (the `Postcrmimports202603crmimportsv3` operationId) request,
-	// with any type of body and a specified content type.
+	// Postcrmimports202603crmimportsv3WithBodyWithResponse Create Import
 	//
-	// Returns a wrapper object for the known response body format(s).
+	// Create a new import in your HubSpot account by uploading files and specifying import settings. This endpoint allows you to initiate the import process by providing the necessary files and configuration details.
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /crm/imports/2026-03 (the `Postcrmimports202603crmimportsv3` operationId).
 	Postcrmimports202603crmimportsv3WithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmimports202603crmimportsv3Response, error)
 
-	// Getcrmimports202603ImportIdcrmimportsv3ImportIdWithResponse performs a GET /crm/imports/2026-03/{importId} (the `Getcrmimports202603ImportIdcrmimportsv3ImportId` operationId) request.
+	// Getcrmimports202603ImportIdcrmimportsv3ImportIdWithResponse Get the information on any import
+	//
+	// A complete summary of an import record, including any updates.
 	//
 	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /crm/imports/2026-03/{importId} (the `Getcrmimports202603ImportIdcrmimportsv3ImportId` operationId).
 	Getcrmimports202603ImportIdcrmimportsv3ImportIdWithResponse(ctx context.Context, importId int64, reqEditors ...RequestEditorFn) (*Getcrmimports202603ImportIdcrmimportsv3ImportIdResponse, error)
 
-	// Postcrmimports202603ImportIdcancelcrmimportsv3ImportIdcancelWithResponse performs a POST /crm/imports/2026-03/{importId}/cancel (the `Postcrmimports202603ImportIdcancelcrmimportsv3ImportIdcancel` operationId) request.
+	// Postcrmimports202603ImportIdcancelcrmimportsv3ImportIdcancelWithResponse Cancel an active import
+	//
+	// This allows a developer to cancel an active import.
 	//
 	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /crm/imports/2026-03/{importId}/cancel (the `Postcrmimports202603ImportIdcancelcrmimportsv3ImportIdcancel` operationId).
 	Postcrmimports202603ImportIdcancelcrmimportsv3ImportIdcancelWithResponse(ctx context.Context, importId int64, reqEditors ...RequestEditorFn) (*Postcrmimports202603ImportIdcancelcrmimportsv3ImportIdcancelResponse, error)
 
-	// Getcrmimports202603ImportIderrorscrmimportsv3ImportIderrorsWithResponse performs a GET /crm/imports/2026-03/{importId}/errors (the `Getcrmimports202603ImportIderrorscrmimportsv3ImportIderrors` operationId) request.
+	// Getcrmimports202603ImportIderrorscrmimportsv3ImportIderrorsWithResponse Retrieve errors for a specific import
+	//
+	// Retrieves detailed error records for a specific import operation, enabling you to identify and troubleshoot records that failed during processing.
 	//
 	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /crm/imports/2026-03/{importId}/errors (the `Getcrmimports202603ImportIderrorscrmimportsv3ImportIderrors` operationId).
 	Getcrmimports202603ImportIderrorscrmimportsv3ImportIderrorsWithResponse(ctx context.Context, importId int64, params *Getcrmimports202603ImportIderrorscrmimportsv3ImportIderrorsParams, reqEditors ...RequestEditorFn) (*Getcrmimports202603ImportIderrorscrmimportsv3ImportIderrorsResponse, error)
 
 	// Getcrmlimits202603associationslabelsWithResponse Read association label limits
@@ -3672,64 +4816,112 @@ type ClientWithResponsesInterface interface {
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	Postcrmlists202603crmlistsv3WithResponse(ctx context.Context, body Postcrmlists202603crmlistsv3JSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmlists202603crmlistsv3Response, error)
 
-	// Getcrmlists202603folderscrmlistsv3foldersWithResponse performs a GET /crm/lists/2026-03/folders (the `Getcrmlists202603folderscrmlistsv3folders` operationId) request.
+	// Getcrmlists202603folderscrmlistsv3foldersWithResponse Retrieves a folder.
+	//
+	// Retrieves a folder and recursively includes all folders via the childNodes attribute.  The child lists field will be empty in all child nodes. Only the folder retrieved will include the child lists in that folder.
 	//
 	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /crm/lists/2026-03/folders (the `Getcrmlists202603folderscrmlistsv3folders` operationId).
 	Getcrmlists202603folderscrmlistsv3foldersWithResponse(ctx context.Context, params *Getcrmlists202603folderscrmlistsv3foldersParams, reqEditors ...RequestEditorFn) (*Getcrmlists202603folderscrmlistsv3foldersResponse, error)
 
-	// Postcrmlists202603folderscrmlistsv3foldersWithBodyWithResponse performs a POST /crm/lists/2026-03/folders (the `Postcrmlists202603folderscrmlistsv3folders` operationId) request,
-	// with any type of body and a specified content type.
+	// Postcrmlists202603folderscrmlistsv3foldersWithBodyWithResponse Creates a folder
 	//
-	// Returns a wrapper object for the known response body format(s).
+	// Creates a folder with the given information.
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /crm/lists/2026-03/folders (the `Postcrmlists202603folderscrmlistsv3folders` operationId).
 	Postcrmlists202603folderscrmlistsv3foldersWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmlists202603folderscrmlistsv3foldersResponse, error)
 
-	// Postcrmlists202603folderscrmlistsv3foldersWithResponse performs a POST /crm/lists/2026-03/folders (the `Postcrmlists202603folderscrmlistsv3folders` operationId) request.
+	// Postcrmlists202603folderscrmlistsv3foldersWithResponse Creates a folder
+	//
+	// Creates a folder with the given information.
+	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /crm/lists/2026-03/folders (the `Postcrmlists202603folderscrmlistsv3folders` operationId).
 	Postcrmlists202603folderscrmlistsv3foldersWithResponse(ctx context.Context, body Postcrmlists202603folderscrmlistsv3foldersJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmlists202603folderscrmlistsv3foldersResponse, error)
 
-	// Putcrmlists202603foldersmoveListcrmlistsv3foldersmoveListWithBodyWithResponse performs a PUT /crm/lists/2026-03/folders/move-list (the `Putcrmlists202603foldersmoveListcrmlistsv3foldersmoveList` operationId) request,
-	// with any type of body and a specified content type.
+	// Putcrmlists202603foldersmoveListcrmlistsv3foldersmoveListWithBodyWithResponse Moves a list to a given folder
 	//
-	// Returns a wrapper object for the known response body format(s).
+	// Given a list and a folder, the list will be moved to that folder.
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PUT /crm/lists/2026-03/folders/move-list (the `Putcrmlists202603foldersmoveListcrmlistsv3foldersmoveList` operationId).
 	Putcrmlists202603foldersmoveListcrmlistsv3foldersmoveListWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Putcrmlists202603foldersmoveListcrmlistsv3foldersmoveListResponse, error)
 
-	// Putcrmlists202603foldersmoveListcrmlistsv3foldersmoveListWithResponse performs a PUT /crm/lists/2026-03/folders/move-list (the `Putcrmlists202603foldersmoveListcrmlistsv3foldersmoveList` operationId) request.
+	// Putcrmlists202603foldersmoveListcrmlistsv3foldersmoveListWithResponse Moves a list to a given folder
+	//
+	// Given a list and a folder, the list will be moved to that folder.
+	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PUT /crm/lists/2026-03/folders/move-list (the `Putcrmlists202603foldersmoveListcrmlistsv3foldersmoveList` operationId).
 	Putcrmlists202603foldersmoveListcrmlistsv3foldersmoveListWithResponse(ctx context.Context, body Putcrmlists202603foldersmoveListcrmlistsv3foldersmoveListJSONRequestBody, reqEditors ...RequestEditorFn) (*Putcrmlists202603foldersmoveListcrmlistsv3foldersmoveListResponse, error)
 
-	// Deletecrmlists202603foldersFolderIdcrmlistsv3foldersFolderIdWithResponse performs a DELETE /crm/lists/2026-03/folders/{folderId} (the `Deletecrmlists202603foldersFolderIdcrmlistsv3foldersFolderId` operationId) request.
+	// Deletecrmlists202603foldersFolderIdcrmlistsv3foldersFolderIdWithResponse Deletes a folder
+	//
+	// Deletes the folder with the given Id.
 	//
 	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with DELETE /crm/lists/2026-03/folders/{folderId} (the `Deletecrmlists202603foldersFolderIdcrmlistsv3foldersFolderId` operationId).
 	Deletecrmlists202603foldersFolderIdcrmlistsv3foldersFolderIdWithResponse(ctx context.Context, folderId string, reqEditors ...RequestEditorFn) (*Deletecrmlists202603foldersFolderIdcrmlistsv3foldersFolderIdResponse, error)
 
-	// Putcrmlists202603foldersFolderIdmoveNewParentFolderIdcrmlistsv3foldersFolderIdmoveNewParentFolderIdWithResponse performs a PUT /crm/lists/2026-03/folders/{folderId}/move/{newParentFolderId} (the `Putcrmlists202603foldersFolderIdmoveNewParentFolderIdcrmlistsv3foldersFolderIdmoveNewParentFolderId` operationId) request.
+	// Putcrmlists202603foldersFolderIdmoveNewParentFolderIdcrmlistsv3foldersFolderIdmoveNewParentFolderIdWithResponse Moves a folder
+	//
+	// This moves the folder from its current location to a new location. It updates the parent of this folder to the new Id given.
 	//
 	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PUT /crm/lists/2026-03/folders/{folderId}/move/{newParentFolderId} (the `Putcrmlists202603foldersFolderIdmoveNewParentFolderIdcrmlistsv3foldersFolderIdmoveNewParentFolderId` operationId).
 	Putcrmlists202603foldersFolderIdmoveNewParentFolderIdcrmlistsv3foldersFolderIdmoveNewParentFolderIdWithResponse(ctx context.Context, folderId string, newParentFolderId string, reqEditors ...RequestEditorFn) (*Putcrmlists202603foldersFolderIdmoveNewParentFolderIdcrmlistsv3foldersFolderIdmoveNewParentFolderIdResponse, error)
 
-	// Putcrmlists202603foldersFolderIdrenamecrmlistsv3foldersFolderIdrenameWithResponse performs a PUT /crm/lists/2026-03/folders/{folderId}/rename (the `Putcrmlists202603foldersFolderIdrenamecrmlistsv3foldersFolderIdrename` operationId) request.
+	// Putcrmlists202603foldersFolderIdrenamecrmlistsv3foldersFolderIdrenameWithResponse Rename a folder
+	//
+	// Renames the given folderId with a new name.
 	//
 	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PUT /crm/lists/2026-03/folders/{folderId}/rename (the `Putcrmlists202603foldersFolderIdrenamecrmlistsv3foldersFolderIdrename` operationId).
 	Putcrmlists202603foldersFolderIdrenamecrmlistsv3foldersFolderIdrenameWithResponse(ctx context.Context, folderId string, params *Putcrmlists202603foldersFolderIdrenamecrmlistsv3foldersFolderIdrenameParams, reqEditors ...RequestEditorFn) (*Putcrmlists202603foldersFolderIdrenamecrmlistsv3foldersFolderIdrenameResponse, error)
 
-	// Getcrmlists202603idmappingcrmlistsv3idmappingWithResponse performs a GET /crm/lists/2026-03/idmapping (the `Getcrmlists202603idmappingcrmlistsv3idmapping` operationId) request.
+	// Getcrmlists202603idmappingcrmlistsv3idmappingWithResponse Translate Legacy List Id to Modern List Id
+	//
+	// This API allows translation of legacy list id to list id. This is a temporary API allowed for mapping old id's to new id's and will expire on May 30th, 2025.
 	//
 	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /crm/lists/2026-03/idmapping (the `Getcrmlists202603idmappingcrmlistsv3idmapping` operationId).
 	Getcrmlists202603idmappingcrmlistsv3idmappingWithResponse(ctx context.Context, params *Getcrmlists202603idmappingcrmlistsv3idmappingParams, reqEditors ...RequestEditorFn) (*Getcrmlists202603idmappingcrmlistsv3idmappingResponse, error)
 
-	// Postcrmlists202603idmappingcrmlistsv3idmappingWithBodyWithResponse performs a POST /crm/lists/2026-03/idmapping (the `Postcrmlists202603idmappingcrmlistsv3idmapping` operationId) request,
-	// with any type of body and a specified content type.
+	// Postcrmlists202603idmappingcrmlistsv3idmappingWithBodyWithResponse Translate Legacy List Id to Modern List Id in Batch
 	//
-	// Returns a wrapper object for the known response body format(s).
+	// This API allows translation of a batch of legacy list id's to list id's. This allows for a maximum of 10,000 id's. This is a temporary API allowed for mapping old id's to new id's and will expire on May 30th, 2025.
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /crm/lists/2026-03/idmapping (the `Postcrmlists202603idmappingcrmlistsv3idmapping` operationId).
 	Postcrmlists202603idmappingcrmlistsv3idmappingWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmlists202603idmappingcrmlistsv3idmappingResponse, error)
 
-	// Postcrmlists202603idmappingcrmlistsv3idmappingWithResponse performs a POST /crm/lists/2026-03/idmapping (the `Postcrmlists202603idmappingcrmlistsv3idmapping` operationId) request.
+	// Postcrmlists202603idmappingcrmlistsv3idmappingWithResponse Translate Legacy List Id to Modern List Id in Batch
+	//
+	// This API allows translation of a batch of legacy list id's to list id's. This allows for a maximum of 10,000 id's. This is a temporary API allowed for mapping old id's to new id's and will expire on May 30th, 2025.
+	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /crm/lists/2026-03/idmapping (the `Postcrmlists202603idmappingcrmlistsv3idmapping` operationId).
 	Postcrmlists202603idmappingcrmlistsv3idmappingWithResponse(ctx context.Context, body Postcrmlists202603idmappingcrmlistsv3idmappingJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmlists202603idmappingcrmlistsv3idmappingResponse, error)
 
-	// Getcrmlists202603objectTypeIdObjectTypeIdnameListNamecrmlistsv3objectTypeIdObjectTypeIdnameListNameWithResponse performs a GET /crm/lists/2026-03/object-type-id/{objectTypeId}/name/{listName} (the `Getcrmlists202603objectTypeIdObjectTypeIdnameListNamecrmlistsv3objectTypeIdObjectTypeIdnameListName` operationId) request.
+	// Getcrmlists202603objectTypeIdObjectTypeIdnameListNamecrmlistsv3objectTypeIdObjectTypeIdnameListNameWithResponse Fetch List by Name
+	//
+	// Fetch a single list by list name and object type.
 	//
 	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /crm/lists/2026-03/object-type-id/{objectTypeId}/name/{listName} (the `Getcrmlists202603objectTypeIdObjectTypeIdnameListNamecrmlistsv3objectTypeIdObjectTypeIdnameListName` operationId).
 	Getcrmlists202603objectTypeIdObjectTypeIdnameListNamecrmlistsv3objectTypeIdObjectTypeIdnameListNameWithResponse(ctx context.Context, objectTypeId string, listName string, params *Getcrmlists202603objectTypeIdObjectTypeIdnameListNamecrmlistsv3objectTypeIdObjectTypeIdnameListNameParams, reqEditors ...RequestEditorFn) (*Getcrmlists202603objectTypeIdObjectTypeIdnameListNamecrmlistsv3objectTypeIdObjectTypeIdnameListNameResponse, error)
 
 	// Postcrmlists202603recordsmembershipsbatchreadcrmlistsv3recordsmembershipsbatchreadWithBodyWithResponse performs a POST /crm/lists/2026-03/records/memberships/batch/read (the `Postcrmlists202603recordsmembershipsbatchreadcrmlistsv3recordsmembershipsbatchread` operationId) request,
@@ -3742,104 +4934,212 @@ type ClientWithResponsesInterface interface {
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	Postcrmlists202603recordsmembershipsbatchreadcrmlistsv3recordsmembershipsbatchreadWithResponse(ctx context.Context, body Postcrmlists202603recordsmembershipsbatchreadcrmlistsv3recordsmembershipsbatchreadJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmlists202603recordsmembershipsbatchreadcrmlistsv3recordsmembershipsbatchreadResponse, error)
 
-	// Getcrmlists202603recordsObjectTypeIdRecordIdmembershipscrmlistsv3recordsObjectTypeIdRecordIdmembershipsWithResponse performs a GET /crm/lists/2026-03/records/{objectTypeId}/{recordId}/memberships (the `Getcrmlists202603recordsObjectTypeIdRecordIdmembershipscrmlistsv3recordsObjectTypeIdRecordIdmemberships` operationId) request.
+	// Getcrmlists202603recordsObjectTypeIdRecordIdmembershipscrmlistsv3recordsObjectTypeIdRecordIdmembershipsWithResponse Get lists record is member of
+	//
+	// For given record provide lists this record is member of.
 	//
 	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /crm/lists/2026-03/records/{objectTypeId}/{recordId}/memberships (the `Getcrmlists202603recordsObjectTypeIdRecordIdmembershipscrmlistsv3recordsObjectTypeIdRecordIdmemberships` operationId).
 	Getcrmlists202603recordsObjectTypeIdRecordIdmembershipscrmlistsv3recordsObjectTypeIdRecordIdmembershipsWithResponse(ctx context.Context, objectTypeId string, recordId string, reqEditors ...RequestEditorFn) (*Getcrmlists202603recordsObjectTypeIdRecordIdmembershipscrmlistsv3recordsObjectTypeIdRecordIdmembershipsResponse, error)
 
-	// Postcrmlists202603searchcrmlistsv3searchWithBodyWithResponse performs a POST /crm/lists/2026-03/search (the `Postcrmlists202603searchcrmlistsv3search` operationId) request,
-	// with any type of body and a specified content type.
+	// Postcrmlists202603searchcrmlistsv3searchWithBodyWithResponse Search Lists
 	//
-	// Returns a wrapper object for the known response body format(s).
+	// Search lists by list name or page through all lists by providing an empty `query` value.
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /crm/lists/2026-03/search (the `Postcrmlists202603searchcrmlistsv3search` operationId).
 	Postcrmlists202603searchcrmlistsv3searchWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmlists202603searchcrmlistsv3searchResponse, error)
 
-	// Postcrmlists202603searchcrmlistsv3searchWithResponse performs a POST /crm/lists/2026-03/search (the `Postcrmlists202603searchcrmlistsv3search` operationId) request.
+	// Postcrmlists202603searchcrmlistsv3searchWithResponse Search Lists
+	//
+	// Search lists by list name or page through all lists by providing an empty `query` value.
+	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /crm/lists/2026-03/search (the `Postcrmlists202603searchcrmlistsv3search` operationId).
 	Postcrmlists202603searchcrmlistsv3searchWithResponse(ctx context.Context, body Postcrmlists202603searchcrmlistsv3searchJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmlists202603searchcrmlistsv3searchResponse, error)
 
-	// Deletecrmlists202603ListIdcrmlistsv3ListIdWithResponse performs a DELETE /crm/lists/2026-03/{listId} (the `Deletecrmlists202603ListIdcrmlistsv3ListId` operationId) request.
+	// Deletecrmlists202603ListIdcrmlistsv3ListIdWithResponse Delete a List
+	//
+	// Delete a list by **ILS list ID**. Lists deleted through this endpoint can be restored up to 90-days following the delete. After 90-days, the list is purged and can no longer be restored.
 	//
 	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with DELETE /crm/lists/2026-03/{listId} (the `Deletecrmlists202603ListIdcrmlistsv3ListId` operationId).
 	Deletecrmlists202603ListIdcrmlistsv3ListIdWithResponse(ctx context.Context, listId string, reqEditors ...RequestEditorFn) (*Deletecrmlists202603ListIdcrmlistsv3ListIdResponse, error)
 
-	// Getcrmlists202603ListIdcrmlistsv3ListIdWithResponse performs a GET /crm/lists/2026-03/{listId} (the `Getcrmlists202603ListIdcrmlistsv3ListId` operationId) request.
+	// Getcrmlists202603ListIdcrmlistsv3ListIdWithResponse Fetch List by ID
+	//
+	// Fetch a single list by **ILS list ID**.
 	//
 	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /crm/lists/2026-03/{listId} (the `Getcrmlists202603ListIdcrmlistsv3ListId` operationId).
 	Getcrmlists202603ListIdcrmlistsv3ListIdWithResponse(ctx context.Context, listId string, params *Getcrmlists202603ListIdcrmlistsv3ListIdParams, reqEditors ...RequestEditorFn) (*Getcrmlists202603ListIdcrmlistsv3ListIdResponse, error)
 
-	// Deletecrmlists202603ListIdmembershipscrmlistsv3ListIdmembershipsWithResponse performs a DELETE /crm/lists/2026-03/{listId}/memberships (the `Deletecrmlists202603ListIdmembershipscrmlistsv3ListIdmemberships` operationId) request.
+	// Deletecrmlists202603ListIdmembershipscrmlistsv3ListIdmembershipsWithResponse Delete All Records from a List
+	//
+	// Remove **all** of the records from a list. ***Note:*** *The list is not deleted.*
+	//
+	// This endpoint only works for lists that have a `processingType` of `MANUAL` or `SNAPSHOT`.
+	//
+	// This endpoint only supports lists that have less than 100,000 memberships.
 	//
 	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with DELETE /crm/lists/2026-03/{listId}/memberships (the `Deletecrmlists202603ListIdmembershipscrmlistsv3ListIdmemberships` operationId).
 	Deletecrmlists202603ListIdmembershipscrmlistsv3ListIdmembershipsWithResponse(ctx context.Context, listId string, reqEditors ...RequestEditorFn) (*Deletecrmlists202603ListIdmembershipscrmlistsv3ListIdmembershipsResponse, error)
 
-	// Getcrmlists202603ListIdmembershipscrmlistsv3ListIdmembershipsWithResponse performs a GET /crm/lists/2026-03/{listId}/memberships (the `Getcrmlists202603ListIdmembershipscrmlistsv3ListIdmemberships` operationId) request.
+	// Getcrmlists202603ListIdmembershipscrmlistsv3ListIdmembershipsWithResponse Fetch List Memberships Ordered by ID
+	//
+	// Fetch the memberships of a list in order sorted by the `recordId` of the records in the list.
+	//
+	// The `recordId`s are sorted in *ascending* order if an `after` offset or no offset is provided. If only a `before` offset is provided, then the records are sorted in *descending* order.
+	//
+	// The `after` offset parameter will take precedence over the `before` offset in a case where both are provided.
 	//
 	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /crm/lists/2026-03/{listId}/memberships (the `Getcrmlists202603ListIdmembershipscrmlistsv3ListIdmemberships` operationId).
 	Getcrmlists202603ListIdmembershipscrmlistsv3ListIdmembershipsWithResponse(ctx context.Context, listId string, params *Getcrmlists202603ListIdmembershipscrmlistsv3ListIdmembershipsParams, reqEditors ...RequestEditorFn) (*Getcrmlists202603ListIdmembershipscrmlistsv3ListIdmembershipsResponse, error)
 
-	// Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsaddWithBodyWithResponse performs a PUT /crm/lists/2026-03/{listId}/memberships/add (the `Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsadd` operationId) request,
-	// with any type of body and a specified content type.
+	// Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsaddWithBodyWithResponse Add Records to a List
 	//
-	// Returns a wrapper object for the known response body format(s).
+	// Add the records provided to the list. Records that do not exist or that are already members of the list are ignored.
+	//
+	// This endpoint only works for lists that have a `processingType` of `MANUAL` or `SNAPSHOT`.
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PUT /crm/lists/2026-03/{listId}/memberships/add (the `Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsadd` operationId).
 	Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsaddWithBodyWithResponse(ctx context.Context, listId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsaddResponse, error)
 
-	// Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsaddWithResponse performs a PUT /crm/lists/2026-03/{listId}/memberships/add (the `Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsadd` operationId) request.
+	// Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsaddWithResponse Add Records to a List
+	//
+	// Add the records provided to the list. Records that do not exist or that are already members of the list are ignored.
+	//
+	// This endpoint only works for lists that have a `processingType` of `MANUAL` or `SNAPSHOT`.
+	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PUT /crm/lists/2026-03/{listId}/memberships/add (the `Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsadd` operationId).
 	Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsaddWithResponse(ctx context.Context, listId string, body Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsaddJSONRequestBody, reqEditors ...RequestEditorFn) (*Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsaddResponse, error)
 
-	// Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemoveWithBodyWithResponse performs a PUT /crm/lists/2026-03/{listId}/memberships/add-and-remove (the `Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemove` operationId) request,
-	// with any type of body and a specified content type.
+	// Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemoveWithBodyWithResponse Add and/or Remove Records from a List
 	//
-	// Returns a wrapper object for the known response body format(s).
+	// Add and/or remove records that have already been created in the system to and/or from a list.
+	//
+	// This endpoint only works for lists that have a `processingType` of `MANUAL` or `SNAPSHOT`.
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PUT /crm/lists/2026-03/{listId}/memberships/add-and-remove (the `Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemove` operationId).
 	Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemoveWithBodyWithResponse(ctx context.Context, listId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemoveResponse, error)
 
-	// Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemoveWithResponse performs a PUT /crm/lists/2026-03/{listId}/memberships/add-and-remove (the `Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemove` operationId) request.
+	// Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemoveWithResponse Add and/or Remove Records from a List
+	//
+	// Add and/or remove records that have already been created in the system to and/or from a list.
+	//
+	// This endpoint only works for lists that have a `processingType` of `MANUAL` or `SNAPSHOT`.
+	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PUT /crm/lists/2026-03/{listId}/memberships/add-and-remove (the `Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemove` operationId).
 	Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemoveWithResponse(ctx context.Context, listId string, body Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemoveJSONRequestBody, reqEditors ...RequestEditorFn) (*Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemoveResponse, error)
 
-	// Putcrmlists202603ListIdmembershipsaddFromSourceListIdcrmlistsv3ListIdmembershipsaddFromSourceListIdWithResponse performs a PUT /crm/lists/2026-03/{listId}/memberships/add-from/{sourceListId} (the `Putcrmlists202603ListIdmembershipsaddFromSourceListIdcrmlistsv3ListIdmembershipsaddFromSourceListId` operationId) request.
+	// Putcrmlists202603ListIdmembershipsaddFromSourceListIdcrmlistsv3ListIdmembershipsaddFromSourceListIdWithResponse Add All Records from a Source List to a Destination List
+	//
+	// Add all of the records from a *source list* (specified by the `sourceListId`) to a *destination list* (specified by the `listId`). Records that are already members of the *destination list* will be ignored. The *destination* and *source list* IDs must be different. The *destination* and *source lists* must contain records of the same type (e.g. contacts, companies, etc.).
+	//
+	// This endpoint only works for *destination lists* that have a `processingType` of `MANUAL` or `SNAPSHOT`. The *source list* can have any `processingType`.
+	//
+	// This endpoint only supports a `sourceListId` for lists with less than 100,000 memberships.
 	//
 	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PUT /crm/lists/2026-03/{listId}/memberships/add-from/{sourceListId} (the `Putcrmlists202603ListIdmembershipsaddFromSourceListIdcrmlistsv3ListIdmembershipsaddFromSourceListId` operationId).
 	Putcrmlists202603ListIdmembershipsaddFromSourceListIdcrmlistsv3ListIdmembershipsaddFromSourceListIdWithResponse(ctx context.Context, listId string, sourceListId string, reqEditors ...RequestEditorFn) (*Putcrmlists202603ListIdmembershipsaddFromSourceListIdcrmlistsv3ListIdmembershipsaddFromSourceListIdResponse, error)
 
-	// Getcrmlists202603ListIdmembershipsjoinOrdercrmlistsv3ListIdmembershipsjoinOrderWithResponse performs a GET /crm/lists/2026-03/{listId}/memberships/join-order (the `Getcrmlists202603ListIdmembershipsjoinOrdercrmlistsv3ListIdmembershipsjoinOrder` operationId) request.
+	// Getcrmlists202603ListIdmembershipsjoinOrdercrmlistsv3ListIdmembershipsjoinOrderWithResponse Fetch List Memberships Ordered by Added to List Date
+	//
+	// Fetch the memberships of a list in order sorted by the time the records were added to the list.
+	//
+	// The `recordId`s are sorted in *ascending* order if an `after` offset or no offset is provided. If only a `before` offset is provided, then the records are sorted in *descending* order.
+	//
+	// The `after` offset parameter will take precedence over the `before` offset in a case where both are provided.
 	//
 	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /crm/lists/2026-03/{listId}/memberships/join-order (the `Getcrmlists202603ListIdmembershipsjoinOrdercrmlistsv3ListIdmembershipsjoinOrder` operationId).
 	Getcrmlists202603ListIdmembershipsjoinOrdercrmlistsv3ListIdmembershipsjoinOrderWithResponse(ctx context.Context, listId string, params *Getcrmlists202603ListIdmembershipsjoinOrdercrmlistsv3ListIdmembershipsjoinOrderParams, reqEditors ...RequestEditorFn) (*Getcrmlists202603ListIdmembershipsjoinOrdercrmlistsv3ListIdmembershipsjoinOrderResponse, error)
 
-	// Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremoveWithBodyWithResponse performs a PUT /crm/lists/2026-03/{listId}/memberships/remove (the `Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremove` operationId) request,
-	// with any type of body and a specified content type.
+	// Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremoveWithBodyWithResponse Remove Records from a List
 	//
-	// Returns a wrapper object for the known response body format(s).
+	// Remove the records provided from the list. Records that do not exist or that are not members of the list are ignored.
+	//
+	// This endpoint only works for lists that have a `processingType` of `MANUAL` or `SNAPSHOT`.
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PUT /crm/lists/2026-03/{listId}/memberships/remove (the `Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremove` operationId).
 	Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremoveWithBodyWithResponse(ctx context.Context, listId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremoveResponse, error)
 
-	// Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremoveWithResponse performs a PUT /crm/lists/2026-03/{listId}/memberships/remove (the `Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremove` operationId) request.
+	// Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremoveWithResponse Remove Records from a List
+	//
+	// Remove the records provided from the list. Records that do not exist or that are not members of the list are ignored.
+	//
+	// This endpoint only works for lists that have a `processingType` of `MANUAL` or `SNAPSHOT`.
+	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PUT /crm/lists/2026-03/{listId}/memberships/remove (the `Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremove` operationId).
 	Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremoveWithResponse(ctx context.Context, listId string, body Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremoveJSONRequestBody, reqEditors ...RequestEditorFn) (*Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremoveResponse, error)
 
-	// Putcrmlists202603ListIdrestorecrmlistsv3ListIdrestoreWithResponse performs a PUT /crm/lists/2026-03/{listId}/restore (the `Putcrmlists202603ListIdrestorecrmlistsv3ListIdrestore` operationId) request.
+	// Putcrmlists202603ListIdrestorecrmlistsv3ListIdrestoreWithResponse Restore a List
+	//
+	// Restore a previously deleted list by **ILS list ID**. Deleted lists are eligible to be restored up-to 90-days after the list has been deleted.
 	//
 	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PUT /crm/lists/2026-03/{listId}/restore (the `Putcrmlists202603ListIdrestorecrmlistsv3ListIdrestore` operationId).
 	Putcrmlists202603ListIdrestorecrmlistsv3ListIdrestoreWithResponse(ctx context.Context, listId string, reqEditors ...RequestEditorFn) (*Putcrmlists202603ListIdrestorecrmlistsv3ListIdrestoreResponse, error)
 
-	// Deletecrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionWithResponse performs a DELETE /crm/lists/2026-03/{listId}/schedule-conversion (the `Deletecrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversion` operationId) request.
+	// Deletecrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionWithResponse Cancel the conversion of a list
+	//
+	// Delete an existing scheduled conversion for a list.
 	//
 	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with DELETE /crm/lists/2026-03/{listId}/schedule-conversion (the `Deletecrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversion` operationId).
 	Deletecrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionWithResponse(ctx context.Context, listId string, reqEditors ...RequestEditorFn) (*Deletecrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionResponse, error)
 
-	// Getcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionWithResponse performs a GET /crm/lists/2026-03/{listId}/schedule-conversion (the `Getcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversion` operationId) request.
+	// Getcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionWithResponse Retrieve the conversion details for a list
+	//
+	// Retrieve the conversion details for a list. This can be used to check for an upcoming conversion, or to get the details of when a list was already converted.
 	//
 	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /crm/lists/2026-03/{listId}/schedule-conversion (the `Getcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversion` operationId).
 	Getcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionWithResponse(ctx context.Context, listId string, reqEditors ...RequestEditorFn) (*Getcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionResponse, error)
 
-	// Putcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionWithBodyWithResponse performs a PUT /crm/lists/2026-03/{listId}/schedule-conversion (the `Putcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversion` operationId) request,
-	// with any type of body and a specified content type.
+	// Putcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionWithBodyWithResponse Schedule or update the conversion of a list to static
 	//
-	// Returns a wrapper object for the known response body format(s).
+	// Schedule the conversion of an active list into a static list, or update the already scheduled conversion. This can be scheduled for a specific date or based on activity.
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PUT /crm/lists/2026-03/{listId}/schedule-conversion (the `Putcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversion` operationId).
 	Putcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionWithBodyWithResponse(ctx context.Context, listId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Putcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionResponse, error)
 
-	// Putcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionWithResponse performs a PUT /crm/lists/2026-03/{listId}/schedule-conversion (the `Putcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversion` operationId) request.
+	// Putcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionWithResponse Schedule or update the conversion of a list to static
+	//
+	// Schedule the conversion of an active list into a static list, or update the already scheduled conversion. This can be scheduled for a specific date or based on activity.
+	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PUT /crm/lists/2026-03/{listId}/schedule-conversion (the `Putcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversion` operationId).
 	Putcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionWithResponse(ctx context.Context, listId string, body Putcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionJSONRequestBody, reqEditors ...RequestEditorFn) (*Putcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionResponse, error)
 
 	// Getcrmlists202603ListIdsizeAndEditsHistorybetweencrmlists202603ListIdsizeAndEditsHistorybetweenWithResponse performs a GET /crm/lists/2026-03/{listId}/size-and-edits-history/between (the `Getcrmlists202603ListIdsizeAndEditsHistorybetweencrmlists202603ListIdsizeAndEditsHistorybetween` operationId) request.
@@ -3847,32 +5147,52 @@ type ClientWithResponsesInterface interface {
 	// Returns a wrapper object for the known response body format(s).
 	Getcrmlists202603ListIdsizeAndEditsHistorybetweencrmlists202603ListIdsizeAndEditsHistorybetweenWithResponse(ctx context.Context, listId string, params *Getcrmlists202603ListIdsizeAndEditsHistorybetweencrmlists202603ListIdsizeAndEditsHistorybetweenParams, reqEditors ...RequestEditorFn) (*Getcrmlists202603ListIdsizeAndEditsHistorybetweencrmlists202603ListIdsizeAndEditsHistorybetweenResponse, error)
 
-	// Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersWithBodyWithResponse performs a PUT /crm/lists/2026-03/{listId}/update-list-filters (the `Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFilters` operationId) request,
-	// with any type of body and a specified content type.
+	// Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersWithBodyWithResponse Update List Filter Definition
 	//
-	// Returns a wrapper object for the known response body format(s).
+	// Update the filter branch definition of a `DYNAMIC` list. Once updated, the list memberships will be re-evaluated and updated to match the new definition.
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PUT /crm/lists/2026-03/{listId}/update-list-filters (the `Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFilters` operationId).
 	Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersWithBodyWithResponse(ctx context.Context, listId string, params *Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersResponse, error)
 
-	// Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersWithResponse performs a PUT /crm/lists/2026-03/{listId}/update-list-filters (the `Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFilters` operationId) request.
+	// Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersWithResponse Update List Filter Definition
+	//
+	// Update the filter branch definition of a `DYNAMIC` list. Once updated, the list memberships will be re-evaluated and updated to match the new definition.
+	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PUT /crm/lists/2026-03/{listId}/update-list-filters (the `Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFilters` operationId).
 	Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersWithResponse(ctx context.Context, listId string, params *Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersParams, body Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersJSONRequestBody, reqEditors ...RequestEditorFn) (*Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersResponse, error)
 
-	// Putcrmlists202603ListIdupdateListNamecrmlistsv3ListIdupdateListNameWithResponse performs a PUT /crm/lists/2026-03/{listId}/update-list-name (the `Putcrmlists202603ListIdupdateListNamecrmlistsv3ListIdupdateListName` operationId) request.
+	// Putcrmlists202603ListIdupdateListNamecrmlistsv3ListIdupdateListNameWithResponse Update List Name
+	//
+	// Update the name of a list. The name must be globally unique relative to all other public lists in the portal.
 	//
 	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PUT /crm/lists/2026-03/{listId}/update-list-name (the `Putcrmlists202603ListIdupdateListNamecrmlistsv3ListIdupdateListName` operationId).
 	Putcrmlists202603ListIdupdateListNamecrmlistsv3ListIdupdateListNameWithResponse(ctx context.Context, listId string, params *Putcrmlists202603ListIdupdateListNamecrmlistsv3ListIdupdateListNameParams, reqEditors ...RequestEditorFn) (*Putcrmlists202603ListIdupdateListNamecrmlistsv3ListIdupdateListNameResponse, error)
 
-	// GetcrmobjectLibrary202603enablementcrmobjectLibrary202603enablementWithResponse performs a GET /crm/object-library/2026-03/enablement (the `GetcrmobjectLibrary202603enablementcrmobjectLibrary202603enablement` operationId) request.
+	// GetcrmobjectLibrary202603enablementcrmobjectLibrary202603enablementWithResponse Get object activation statuses
+	//
+	// For all object types supporting enablement, returns whether they're enabled or disabled
 	//
 	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /crm/object-library/2026-03/enablement (the `GetcrmobjectLibrary202603enablementcrmobjectLibrary202603enablement` operationId).
 	GetcrmobjectLibrary202603enablementcrmobjectLibrary202603enablementWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*GetcrmobjectLibrary202603enablementcrmobjectLibrary202603enablementResponse, error)
 
-	// GetcrmobjectLibrary202603enablementObjectTypeIdcrmobjectLibrary202603enablementObjectTypeIdWithResponse performs a GET /crm/object-library/2026-03/enablement/{objectTypeId} (the `GetcrmobjectLibrary202603enablementObjectTypeIdcrmobjectLibrary202603enablementObjectTypeId` operationId) request.
+	// GetcrmobjectLibrary202603enablementObjectTypeIdcrmobjectLibrary202603enablementObjectTypeIdWithResponse Get object activation status
+	//
+	// Fetch whether object type is enabled.
 	//
 	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /crm/object-library/2026-03/enablement/{objectTypeId} (the `GetcrmobjectLibrary202603enablementObjectTypeIdcrmobjectLibrary202603enablementObjectTypeId` operationId).
 	GetcrmobjectLibrary202603enablementObjectTypeIdcrmobjectLibrary202603enablementObjectTypeIdWithResponse(ctx context.Context, objectTypeId string, reqEditors ...RequestEditorFn) (*GetcrmobjectLibrary202603enablementObjectTypeIdcrmobjectLibrary202603enablementObjectTypeIdResponse, error)
 
-	// Getcrmobjects2026030162WithResponse List
+	// Getcrmobjects2026030162WithResponse Retrieve services
 	//
 	// Read a page of services. Control what is returned via the `properties` query param.
 	//
@@ -3881,7 +5201,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with GET /crm/objects/2026-03/0-162 (the `Getcrmobjects2026030162` operationId).
 	Getcrmobjects2026030162WithResponse(ctx context.Context, params *Getcrmobjects2026030162Params, reqEditors ...RequestEditorFn) (*Getcrmobjects2026030162Response, error)
 
-	// Postcrmobjects2026030162WithBodyWithResponse Create
+	// Postcrmobjects2026030162WithBodyWithResponse Create a service
 	//
 	// Create a service with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard services is provided.
 	//
@@ -3890,7 +5210,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/0-162 (the `Postcrmobjects2026030162` operationId).
 	Postcrmobjects2026030162WithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030162Response, error)
 
-	// Postcrmobjects2026030162WithResponse Create
+	// Postcrmobjects2026030162WithResponse Create a service
 	//
 	// Create a service with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard services is provided.
 	//
@@ -3899,7 +5219,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/0-162 (the `Postcrmobjects2026030162` operationId).
 	Postcrmobjects2026030162WithResponse(ctx context.Context, body Postcrmobjects2026030162JSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030162Response, error)
 
-	// Postcrmobjects2026030162batcharchiveWithBodyWithResponse Archive a batch of services by ID
+	// Postcrmobjects2026030162batcharchiveWithBodyWithResponse Batch archive services
 	//
 	// Archive a batch of objects.
 	//
@@ -3908,7 +5228,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/0-162/batch/archive (the `Postcrmobjects2026030162batcharchive` operationId).
 	Postcrmobjects2026030162batcharchiveWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030162batcharchiveResponse, error)
 
-	// Postcrmobjects2026030162batcharchiveWithResponse Archive a batch of services by ID
+	// Postcrmobjects2026030162batcharchiveWithResponse Batch archive services
 	//
 	// Archive a batch of objects.
 	//
@@ -3971,7 +5291,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/0-162/batch/update (the `Postcrmobjects2026030162batchupdate` operationId).
 	Postcrmobjects2026030162batchupdateWithResponse(ctx context.Context, body Postcrmobjects2026030162batchupdateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030162batchupdateResponse, error)
 
-	// Postcrmobjects2026030162batchupsertWithBodyWithResponse Create or update a batch of services by unique property values
+	// Postcrmobjects2026030162batchupsertWithBodyWithResponse Upsert services
 	//
 	// Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
 	//
@@ -3980,7 +5300,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/0-162/batch/upsert (the `Postcrmobjects2026030162batchupsert` operationId).
 	Postcrmobjects2026030162batchupsertWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030162batchupsertResponse, error)
 
-	// Postcrmobjects2026030162batchupsertWithResponse Create or update a batch of services by unique property values
+	// Postcrmobjects2026030162batchupsertWithResponse Upsert services
 	//
 	// Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
 	//
@@ -3989,7 +5309,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/0-162/batch/upsert (the `Postcrmobjects2026030162batchupsert` operationId).
 	Postcrmobjects2026030162batchupsertWithResponse(ctx context.Context, body Postcrmobjects2026030162batchupsertJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030162batchupsertResponse, error)
 
-	// Postcrmobjects2026030162searchWithBodyWithResponse Search across objects
+	// Postcrmobjects2026030162searchWithBodyWithResponse Search for services
 	//
 	// Fetch objects via a search query.
 	//
@@ -3998,7 +5318,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/0-162/search (the `Postcrmobjects2026030162search` operationId).
 	Postcrmobjects2026030162searchWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030162searchResponse, error)
 
-	// Postcrmobjects2026030162searchWithResponse Search across objects
+	// Postcrmobjects2026030162searchWithResponse Search for services
 	//
 	// Fetch objects via a search query.
 	//
@@ -4007,7 +5327,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/0-162/search (the `Postcrmobjects2026030162search` operationId).
 	Postcrmobjects2026030162searchWithResponse(ctx context.Context, body Postcrmobjects2026030162searchJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030162searchResponse, error)
 
-	// Deletecrmobjects2026030162ServiceIdWithResponse Archive
+	// Deletecrmobjects2026030162ServiceIdWithResponse Archive a service
 	//
 	// Move an Object identified by `{serviceId}` to the recycling bin.
 	//
@@ -4016,7 +5336,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with DELETE /crm/objects/2026-03/0-162/{serviceId} (the `Deletecrmobjects2026030162ServiceId` operationId).
 	Deletecrmobjects2026030162ServiceIdWithResponse(ctx context.Context, serviceId string, reqEditors ...RequestEditorFn) (*Deletecrmobjects2026030162ServiceIdResponse, error)
 
-	// Getcrmobjects2026030162ServiceIdWithResponse Read
+	// Getcrmobjects2026030162ServiceIdWithResponse Retrieve a service
 	//
 	// Read an Object identified by `{serviceId}`. `{serviceId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param.
 	//
@@ -4025,7 +5345,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with GET /crm/objects/2026-03/0-162/{serviceId} (the `Getcrmobjects2026030162ServiceId` operationId).
 	Getcrmobjects2026030162ServiceIdWithResponse(ctx context.Context, serviceId string, params *Getcrmobjects2026030162ServiceIdParams, reqEditors ...RequestEditorFn) (*Getcrmobjects2026030162ServiceIdResponse, error)
 
-	// Patchcrmobjects2026030162ServiceIdWithBodyWithResponse Update
+	// Patchcrmobjects2026030162ServiceIdWithBodyWithResponse Update  a service
 	//
 	// Perform a partial update of an Object identified by `{serviceId}`or optionally a unique property value as specified by the `idProperty` query param. `{serviceId}` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
 	//
@@ -4034,7 +5354,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with PATCH /crm/objects/2026-03/0-162/{serviceId} (the `Patchcrmobjects2026030162ServiceId` operationId).
 	Patchcrmobjects2026030162ServiceIdWithBodyWithResponse(ctx context.Context, serviceId string, params *Patchcrmobjects2026030162ServiceIdParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Patchcrmobjects2026030162ServiceIdResponse, error)
 
-	// Patchcrmobjects2026030162ServiceIdWithResponse Update
+	// Patchcrmobjects2026030162ServiceIdWithResponse Update  a service
 	//
 	// Perform a partial update of an Object identified by `{serviceId}`or optionally a unique property value as specified by the `idProperty` query param. `{serviceId}` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
 	//
@@ -4232,7 +5552,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with PATCH /crm/objects/2026-03/0-3/{dealId} (the `Patchcrmobjects20260303DealIdUpdate` operationId).
 	Patchcrmobjects20260303DealIdUpdateWithResponse(ctx context.Context, dealId string, params *Patchcrmobjects20260303DealIdUpdateParams, body Patchcrmobjects20260303DealIdUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*Patchcrmobjects20260303DealIdUpdateResponse, error)
 
-	// Getcrmobjects2026030410WithResponse List
+	// Getcrmobjects2026030410WithResponse Retrieve courses
 	//
 	// Read a page of courses. Control what is returned via the `properties` query param.
 	//
@@ -4241,7 +5561,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with GET /crm/objects/2026-03/0-410 (the `Getcrmobjects2026030410` operationId).
 	Getcrmobjects2026030410WithResponse(ctx context.Context, params *Getcrmobjects2026030410Params, reqEditors ...RequestEditorFn) (*Getcrmobjects2026030410Response, error)
 
-	// Postcrmobjects2026030410WithBodyWithResponse Create
+	// Postcrmobjects2026030410WithBodyWithResponse Create a course
 	//
 	// Create a course with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard courses is provided.
 	//
@@ -4250,7 +5570,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/0-410 (the `Postcrmobjects2026030410` operationId).
 	Postcrmobjects2026030410WithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030410Response, error)
 
-	// Postcrmobjects2026030410WithResponse Create
+	// Postcrmobjects2026030410WithResponse Create a course
 	//
 	// Create a course with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard courses is provided.
 	//
@@ -4259,7 +5579,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/0-410 (the `Postcrmobjects2026030410` operationId).
 	Postcrmobjects2026030410WithResponse(ctx context.Context, body Postcrmobjects2026030410JSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030410Response, error)
 
-	// Postcrmobjects2026030410batcharchiveWithBodyWithResponse Archive a batch of courses by ID
+	// Postcrmobjects2026030410batcharchiveWithBodyWithResponse Batch archive courses
 	//
 	// Archive a batch of objects.
 	//
@@ -4268,7 +5588,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/0-410/batch/archive (the `Postcrmobjects2026030410batcharchive` operationId).
 	Postcrmobjects2026030410batcharchiveWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030410batcharchiveResponse, error)
 
-	// Postcrmobjects2026030410batcharchiveWithResponse Archive a batch of courses by ID
+	// Postcrmobjects2026030410batcharchiveWithResponse Batch archive courses
 	//
 	// Archive a batch of objects.
 	//
@@ -4277,7 +5597,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/0-410/batch/archive (the `Postcrmobjects2026030410batcharchive` operationId).
 	Postcrmobjects2026030410batcharchiveWithResponse(ctx context.Context, body Postcrmobjects2026030410batcharchiveJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030410batcharchiveResponse, error)
 
-	// Postcrmobjects2026030410batchcreateWithBodyWithResponse Create a batch of courses
+	// Postcrmobjects2026030410batchcreateWithBodyWithResponse Batch create courses
 	//
 	// Create a batch of objects.
 	//
@@ -4286,7 +5606,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/0-410/batch/create (the `Postcrmobjects2026030410batchcreate` operationId).
 	Postcrmobjects2026030410batchcreateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030410batchcreateResponse, error)
 
-	// Postcrmobjects2026030410batchcreateWithResponse Create a batch of courses
+	// Postcrmobjects2026030410batchcreateWithResponse Batch create courses
 	//
 	// Create a batch of objects.
 	//
@@ -4295,7 +5615,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/0-410/batch/create (the `Postcrmobjects2026030410batchcreate` operationId).
 	Postcrmobjects2026030410batchcreateWithResponse(ctx context.Context, body Postcrmobjects2026030410batchcreateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030410batchcreateResponse, error)
 
-	// Postcrmobjects2026030410batchreadWithBodyWithResponse Read a batch of courses by internal ID, or unique property values
+	// Postcrmobjects2026030410batchreadWithBodyWithResponse Batch retrieve courses
 	//
 	// Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
 	//
@@ -4304,7 +5624,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/0-410/batch/read (the `Postcrmobjects2026030410batchread` operationId).
 	Postcrmobjects2026030410batchreadWithBodyWithResponse(ctx context.Context, params *Postcrmobjects2026030410batchreadParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030410batchreadResponse, error)
 
-	// Postcrmobjects2026030410batchreadWithResponse Read a batch of courses by internal ID, or unique property values
+	// Postcrmobjects2026030410batchreadWithResponse Batch retrieve courses
 	//
 	// Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
 	//
@@ -4313,7 +5633,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/0-410/batch/read (the `Postcrmobjects2026030410batchread` operationId).
 	Postcrmobjects2026030410batchreadWithResponse(ctx context.Context, params *Postcrmobjects2026030410batchreadParams, body Postcrmobjects2026030410batchreadJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030410batchreadResponse, error)
 
-	// Postcrmobjects2026030410batchupdateWithBodyWithResponse Update a batch of courses by internal ID, or unique property values
+	// Postcrmobjects2026030410batchupdateWithBodyWithResponse Batch update courses
 	//
 	// Update a batch of objects.
 	//
@@ -4322,7 +5642,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/0-410/batch/update (the `Postcrmobjects2026030410batchupdate` operationId).
 	Postcrmobjects2026030410batchupdateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030410batchupdateResponse, error)
 
-	// Postcrmobjects2026030410batchupdateWithResponse Update a batch of courses by internal ID, or unique property values
+	// Postcrmobjects2026030410batchupdateWithResponse Batch update courses
 	//
 	// Update a batch of objects.
 	//
@@ -4331,7 +5651,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/0-410/batch/update (the `Postcrmobjects2026030410batchupdate` operationId).
 	Postcrmobjects2026030410batchupdateWithResponse(ctx context.Context, body Postcrmobjects2026030410batchupdateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030410batchupdateResponse, error)
 
-	// Postcrmobjects2026030410batchupsertWithBodyWithResponse Create or update a batch of courses by unique property values
+	// Postcrmobjects2026030410batchupsertWithBodyWithResponse Upsert courses
 	//
 	// Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
 	//
@@ -4340,7 +5660,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/0-410/batch/upsert (the `Postcrmobjects2026030410batchupsert` operationId).
 	Postcrmobjects2026030410batchupsertWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030410batchupsertResponse, error)
 
-	// Postcrmobjects2026030410batchupsertWithResponse Create or update a batch of courses by unique property values
+	// Postcrmobjects2026030410batchupsertWithResponse Upsert courses
 	//
 	// Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
 	//
@@ -4349,7 +5669,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/0-410/batch/upsert (the `Postcrmobjects2026030410batchupsert` operationId).
 	Postcrmobjects2026030410batchupsertWithResponse(ctx context.Context, body Postcrmobjects2026030410batchupsertJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030410batchupsertResponse, error)
 
-	// Postcrmobjects2026030410searchWithBodyWithResponse Search for objects
+	// Postcrmobjects2026030410searchWithBodyWithResponse Search for courses
 	//
 	// Fetch objects using a search query.
 	//
@@ -4358,7 +5678,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/0-410/search (the `Postcrmobjects2026030410search` operationId).
 	Postcrmobjects2026030410searchWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030410searchResponse, error)
 
-	// Postcrmobjects2026030410searchWithResponse Search for objects
+	// Postcrmobjects2026030410searchWithResponse Search for courses
 	//
 	// Fetch objects using a search query.
 	//
@@ -4367,7 +5687,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/0-410/search (the `Postcrmobjects2026030410search` operationId).
 	Postcrmobjects2026030410searchWithResponse(ctx context.Context, body Postcrmobjects2026030410searchJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects2026030410searchResponse, error)
 
-	// Deletecrmobjects2026030410CourseIdWithResponse Archive
+	// Deletecrmobjects2026030410CourseIdWithResponse Archive a course
 	//
 	// Move an Object identified by `{courseId}` to the recycling bin.
 	//
@@ -4376,7 +5696,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with DELETE /crm/objects/2026-03/0-410/{courseId} (the `Deletecrmobjects2026030410CourseId` operationId).
 	Deletecrmobjects2026030410CourseIdWithResponse(ctx context.Context, courseId string, reqEditors ...RequestEditorFn) (*Deletecrmobjects2026030410CourseIdResponse, error)
 
-	// Getcrmobjects2026030410CourseIdWithResponse Read
+	// Getcrmobjects2026030410CourseIdWithResponse Retrieve a course
 	//
 	// Read an Object identified by `{courseId}`. `{courseId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param.
 	//
@@ -4385,7 +5705,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with GET /crm/objects/2026-03/0-410/{courseId} (the `Getcrmobjects2026030410CourseId` operationId).
 	Getcrmobjects2026030410CourseIdWithResponse(ctx context.Context, courseId string, params *Getcrmobjects2026030410CourseIdParams, reqEditors ...RequestEditorFn) (*Getcrmobjects2026030410CourseIdResponse, error)
 
-	// Patchcrmobjects2026030410CourseIdWithBodyWithResponse Update
+	// Patchcrmobjects2026030410CourseIdWithBodyWithResponse Update a course
 	//
 	// Perform a partial update of an Object identified by `{courseId}`or optionally a unique property value as specified by the `idProperty` query param. `{courseId}` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
 	//
@@ -4394,7 +5714,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with PATCH /crm/objects/2026-03/0-410/{courseId} (the `Patchcrmobjects2026030410CourseId` operationId).
 	Patchcrmobjects2026030410CourseIdWithBodyWithResponse(ctx context.Context, courseId string, params *Patchcrmobjects2026030410CourseIdParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Patchcrmobjects2026030410CourseIdResponse, error)
 
-	// Patchcrmobjects2026030410CourseIdWithResponse Update
+	// Patchcrmobjects2026030410CourseIdWithResponse Update a course
 	//
 	// Perform a partial update of an Object identified by `{courseId}`or optionally a unique property value as specified by the `idProperty` query param. `{courseId}` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
 	//
@@ -4772,7 +6092,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/carts (the `Postcrmobjects202603carts` operationId).
 	Postcrmobjects202603cartsWithResponse(ctx context.Context, body Postcrmobjects202603cartsJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603cartsResponse, error)
 
-	// Postcrmobjects202603cartsbatcharchiveWithBodyWithResponse Archive a batch of carts
+	// Postcrmobjects202603cartsbatcharchiveWithBodyWithResponse Archive a batch of carts by ID
 	//
 	// Archive a batch of carts identified by their IDs.
 	//
@@ -4781,7 +6101,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/carts/batch/archive (the `Postcrmobjects202603cartsbatcharchive` operationId).
 	Postcrmobjects202603cartsbatcharchiveWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603cartsbatcharchiveResponse, error)
 
-	// Postcrmobjects202603cartsbatcharchiveWithResponse Archive a batch of carts
+	// Postcrmobjects202603cartsbatcharchiveWithResponse Archive a batch of carts by ID
 	//
 	// Archive a batch of carts identified by their IDs.
 	//
@@ -4808,25 +6128,25 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/carts/batch/create (the `Postcrmobjects202603cartsbatchcreate` operationId).
 	Postcrmobjects202603cartsbatchcreateWithResponse(ctx context.Context, body Postcrmobjects202603cartsbatchcreateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603cartsbatchcreateResponse, error)
 
-	// Postcrmobjects202603cartsbatchreadWithBodyWithResponse Retrieve a batch of carts
+	// Postcrmobjects202603cartsbatchreadWithBodyWithResponse Read a batch of carts by internal ID, or unique property values
 	//
-	// Retrieve carts by ID, or include the `idProperty` parameter to retrieve carts by a custom unique value property.
+	// Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with POST /crm/objects/2026-03/carts/batch/read (the `Postcrmobjects202603cartsbatchread` operationId).
 	Postcrmobjects202603cartsbatchreadWithBodyWithResponse(ctx context.Context, params *Postcrmobjects202603cartsbatchreadParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603cartsbatchreadResponse, error)
 
-	// Postcrmobjects202603cartsbatchreadWithResponse Retrieve a batch of carts
+	// Postcrmobjects202603cartsbatchreadWithResponse Read a batch of carts by internal ID, or unique property values
 	//
-	// Retrieve carts by ID, or include the `idProperty` parameter to retrieve carts by a custom unique value property.
+	// Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
 	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with POST /crm/objects/2026-03/carts/batch/read (the `Postcrmobjects202603cartsbatchread` operationId).
 	Postcrmobjects202603cartsbatchreadWithResponse(ctx context.Context, params *Postcrmobjects202603cartsbatchreadParams, body Postcrmobjects202603cartsbatchreadJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603cartsbatchreadResponse, error)
 
-	// Postcrmobjects202603cartsbatchupdateWithBodyWithResponse Update a batch of carts
+	// Postcrmobjects202603cartsbatchupdateWithBodyWithResponse Update a batch of carts by internal ID, or unique property values
 	//
 	// Update a batch of carts using their internal IDs or unique property values.
 	//
@@ -4835,7 +6155,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/carts/batch/update (the `Postcrmobjects202603cartsbatchupdate` operationId).
 	Postcrmobjects202603cartsbatchupdateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603cartsbatchupdateResponse, error)
 
-	// Postcrmobjects202603cartsbatchupdateWithResponse Update a batch of carts
+	// Postcrmobjects202603cartsbatchupdateWithResponse Update a batch of carts by internal ID, or unique property values
 	//
 	// Update a batch of carts using their internal IDs or unique property values.
 	//
@@ -4844,18 +6164,18 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/carts/batch/update (the `Postcrmobjects202603cartsbatchupdate` operationId).
 	Postcrmobjects202603cartsbatchupdateWithResponse(ctx context.Context, body Postcrmobjects202603cartsbatchupdateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603cartsbatchupdateResponse, error)
 
-	// Postcrmobjects202603cartsbatchupsertWithBodyWithResponse Upsert a batch of carts
+	// Postcrmobjects202603cartsbatchupsertWithBodyWithResponse Create or update a batch of carts by unique property values
 	//
-	// Create or update records identified by a unique property value as specified by the `idProperty` query parameter.
+	// Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with POST /crm/objects/2026-03/carts/batch/upsert (the `Postcrmobjects202603cartsbatchupsert` operationId).
 	Postcrmobjects202603cartsbatchupsertWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603cartsbatchupsertResponse, error)
 
-	// Postcrmobjects202603cartsbatchupsertWithResponse Upsert a batch of carts
+	// Postcrmobjects202603cartsbatchupsertWithResponse Create or update a batch of carts by unique property values
 	//
-	// Create or update records identified by a unique property value as specified by the `idProperty` query parameter.
+	// Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
 	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
@@ -4882,7 +6202,7 @@ type ClientWithResponsesInterface interface {
 
 	// Deletecrmobjects202603cartsCartIdWithResponse Delete a cart
 	//
-	// Delete a cart by its ID, moving it to the recycling bin.
+	// Move an Object identified by `{cartId}` to the recycling bin.
 	//
 	// Returns a wrapper object for the known response body format(s).
 	//
@@ -4891,7 +6211,7 @@ type ClientWithResponsesInterface interface {
 
 	// Getcrmobjects202603cartsCartIdWithResponse Retrieve a cart
 	//
-	// Retrieve a cart by its ID. You can control what is returned via the `properties` query parameter.
+	// Read an Object identified by `{cartId}`. `{cartId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param.
 	//
 	// Returns a wrapper object for the known response body format(s).
 	//
@@ -4900,7 +6220,7 @@ type ClientWithResponsesInterface interface {
 
 	// Patchcrmobjects202603cartsCartIdWithBodyWithResponse Update a cart
 	//
-	// Perform a partial update of a cart, specified by its ID. Alternatively, you can specify a cart by a unique property value using the `idProperty` query parameter. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
+	// Perform a partial update of an Object identified by `{cartId}`or optionally a unique property value as specified by the `idProperty` query param. `{cartId}` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
@@ -4909,7 +6229,7 @@ type ClientWithResponsesInterface interface {
 
 	// Patchcrmobjects202603cartsCartIdWithResponse Update a cart
 	//
-	// Perform a partial update of a cart, specified by its ID. Alternatively, you can specify a cart by a unique property value using the `idProperty` query parameter. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
+	// Perform a partial update of an Object identified by `{cartId}`or optionally a unique property value as specified by the `idProperty` query param. `{cartId}` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
 	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
@@ -5447,12 +6767,18 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with PATCH /crm/objects/2026-03/companies/{companyId} (the `Patchcrmobjects202603companiesCompanyIdUpdate` operationId).
 	Patchcrmobjects202603companiesCompanyIdUpdateWithResponse(ctx context.Context, companyId string, params *Patchcrmobjects202603companiesCompanyIdUpdateParams, body Patchcrmobjects202603companiesCompanyIdUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*Patchcrmobjects202603companiesCompanyIdUpdateResponse, error)
 
-	// Getcrmobjects202603contactsGetPageWithResponse performs a GET /crm/objects/2026-03/contacts (the `Getcrmobjects202603contactsGetPage` operationId) request.
+	// Getcrmobjects202603contactsGetPageWithResponse Retrieve contacts
+	//
+	// Retrieve all contacts, using query parameters to specify the information that gets returned.
 	//
 	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /crm/objects/2026-03/contacts (the `Getcrmobjects202603contactsGetPage` operationId).
 	Getcrmobjects202603contactsGetPageWithResponse(ctx context.Context, params *Getcrmobjects202603contactsGetPageParams, reqEditors ...RequestEditorFn) (*Getcrmobjects202603contactsGetPageResponse, error)
 
 	// Postcrmobjects202603contactsCreateWithBodyWithResponse Create a contact
+	//
+	// Create a single contact. Include a `properties` object to define [property values](https://developers.hubspot.com/docs/guides/api/crm/properties) for the contact, along with an `associations` array to define [associations](https://developers.hubspot.com/docs/guides/api/crm/associations/associations-v4) with other CRM records.
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
@@ -5461,12 +6787,16 @@ type ClientWithResponsesInterface interface {
 
 	// Postcrmobjects202603contactsCreateWithResponse Create a contact
 	//
+	// Create a single contact. Include a `properties` object to define [property values](https://developers.hubspot.com/docs/guides/api/crm/properties) for the contact, along with an `associations` array to define [associations](https://developers.hubspot.com/docs/guides/api/crm/associations/associations-v4) with other CRM records.
+	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with POST /crm/objects/2026-03/contacts (the `Postcrmobjects202603contactsCreate` operationId).
 	Postcrmobjects202603contactsCreateWithResponse(ctx context.Context, body Postcrmobjects202603contactsCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603contactsCreateResponse, error)
 
 	// Postcrmobjects202603contactsbatcharchiveArchiveWithBodyWithResponse Archive a batch of contacts
+	//
+	// Archive a batch of contacts by ID. Archived contacts can be restored within 90 days of deletion. Learn more about the [data impacted by contact deletions](https://knowledge.hubspot.com/privacy-and-consent/understand-restorable-and-permanent-contact-deletions) and how to [restore archived records](https://knowledge.hubspot.com/records/restore-deleted-records).
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
@@ -5475,62 +6805,106 @@ type ClientWithResponsesInterface interface {
 
 	// Postcrmobjects202603contactsbatcharchiveArchiveWithResponse Archive a batch of contacts
 	//
+	// Archive a batch of contacts by ID. Archived contacts can be restored within 90 days of deletion. Learn more about the [data impacted by contact deletions](https://knowledge.hubspot.com/privacy-and-consent/understand-restorable-and-permanent-contact-deletions) and how to [restore archived records](https://knowledge.hubspot.com/records/restore-deleted-records).
+	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with POST /crm/objects/2026-03/contacts/batch/archive (the `Postcrmobjects202603contactsbatcharchiveArchive` operationId).
 	Postcrmobjects202603contactsbatcharchiveArchiveWithResponse(ctx context.Context, body Postcrmobjects202603contactsbatcharchiveArchiveJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603contactsbatcharchiveArchiveResponse, error)
 
-	// Postcrmobjects202603contactsbatchcreateCreateWithBodyWithResponse performs a POST /crm/objects/2026-03/contacts/batch/create (the `Postcrmobjects202603contactsbatchcreateCreate` operationId) request,
-	// with any type of body and a specified content type.
+	// Postcrmobjects202603contactsbatchcreateCreateWithBodyWithResponse Create a batch of contacts
 	//
-	// Returns a wrapper object for the known response body format(s).
+	// Create a batch of contacts. The `inputs` array can contain a `properties` object to define property values for each record, along with an `associations` array to define [associations](https://developers.hubspot.com/docs/guides/api/crm/associations/associations-v4) with other CRM records.
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /crm/objects/2026-03/contacts/batch/create (the `Postcrmobjects202603contactsbatchcreateCreate` operationId).
 	Postcrmobjects202603contactsbatchcreateCreateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603contactsbatchcreateCreateResponse, error)
 
-	// Postcrmobjects202603contactsbatchcreateCreateWithResponse performs a POST /crm/objects/2026-03/contacts/batch/create (the `Postcrmobjects202603contactsbatchcreateCreate` operationId) request.
+	// Postcrmobjects202603contactsbatchcreateCreateWithResponse Create a batch of contacts
+	//
+	// Create a batch of contacts. The `inputs` array can contain a `properties` object to define property values for each record, along with an `associations` array to define [associations](https://developers.hubspot.com/docs/guides/api/crm/associations/associations-v4) with other CRM records.
+	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /crm/objects/2026-03/contacts/batch/create (the `Postcrmobjects202603contactsbatchcreateCreate` operationId).
 	Postcrmobjects202603contactsbatchcreateCreateWithResponse(ctx context.Context, body Postcrmobjects202603contactsbatchcreateCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603contactsbatchcreateCreateResponse, error)
 
-	// Postcrmobjects202603contactsbatchreadReadWithBodyWithResponse performs a POST /crm/objects/2026-03/contacts/batch/read (the `Postcrmobjects202603contactsbatchreadRead` operationId) request,
-	// with any type of body and a specified content type.
+	// Postcrmobjects202603contactsbatchreadReadWithBodyWithResponse Retrieve a batch of contacts
 	//
-	// Returns a wrapper object for the known response body format(s).
+	// Retrieve a batch of contacts by ID (`contactId`) or unique property value (`idProperty`).
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /crm/objects/2026-03/contacts/batch/read (the `Postcrmobjects202603contactsbatchreadRead` operationId).
 	Postcrmobjects202603contactsbatchreadReadWithBodyWithResponse(ctx context.Context, params *Postcrmobjects202603contactsbatchreadReadParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603contactsbatchreadReadResponse, error)
 
-	// Postcrmobjects202603contactsbatchreadReadWithResponse performs a POST /crm/objects/2026-03/contacts/batch/read (the `Postcrmobjects202603contactsbatchreadRead` operationId) request.
+	// Postcrmobjects202603contactsbatchreadReadWithResponse Retrieve a batch of contacts
+	//
+	// Retrieve a batch of contacts by ID (`contactId`) or unique property value (`idProperty`).
+	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /crm/objects/2026-03/contacts/batch/read (the `Postcrmobjects202603contactsbatchreadRead` operationId).
 	Postcrmobjects202603contactsbatchreadReadWithResponse(ctx context.Context, params *Postcrmobjects202603contactsbatchreadReadParams, body Postcrmobjects202603contactsbatchreadReadJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603contactsbatchreadReadResponse, error)
 
-	// Postcrmobjects202603contactsbatchupdateUpdateWithBodyWithResponse performs a POST /crm/objects/2026-03/contacts/batch/update (the `Postcrmobjects202603contactsbatchupdateUpdate` operationId) request,
-	// with any type of body and a specified content type.
+	// Postcrmobjects202603contactsbatchupdateUpdateWithBodyWithResponse Update a batch of contacts
 	//
-	// Returns a wrapper object for the known response body format(s).
+	// Update a batch of contacts by ID (`contactId`) or unique property value (`idProperty`). Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /crm/objects/2026-03/contacts/batch/update (the `Postcrmobjects202603contactsbatchupdateUpdate` operationId).
 	Postcrmobjects202603contactsbatchupdateUpdateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603contactsbatchupdateUpdateResponse, error)
 
-	// Postcrmobjects202603contactsbatchupdateUpdateWithResponse performs a POST /crm/objects/2026-03/contacts/batch/update (the `Postcrmobjects202603contactsbatchupdateUpdate` operationId) request.
+	// Postcrmobjects202603contactsbatchupdateUpdateWithResponse Update a batch of contacts
+	//
+	// Update a batch of contacts by ID (`contactId`) or unique property value (`idProperty`). Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
+	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /crm/objects/2026-03/contacts/batch/update (the `Postcrmobjects202603contactsbatchupdateUpdate` operationId).
 	Postcrmobjects202603contactsbatchupdateUpdateWithResponse(ctx context.Context, body Postcrmobjects202603contactsbatchupdateUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603contactsbatchupdateUpdateResponse, error)
 
-	// Postcrmobjects202603contactsbatchupsertUpsertWithBodyWithResponse performs a POST /crm/objects/2026-03/contacts/batch/upsert (the `Postcrmobjects202603contactsbatchupsertUpsert` operationId) request,
-	// with any type of body and a specified content type.
+	// Postcrmobjects202603contactsbatchupsertUpsertWithBodyWithResponse Create or update a batch of contacts
 	//
-	// Returns a wrapper object for the known response body format(s).
+	// Upsert a batch of contacts. The `inputs` array can contain a `properties` object to define property values for each record.
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /crm/objects/2026-03/contacts/batch/upsert (the `Postcrmobjects202603contactsbatchupsertUpsert` operationId).
 	Postcrmobjects202603contactsbatchupsertUpsertWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603contactsbatchupsertUpsertResponse, error)
 
-	// Postcrmobjects202603contactsbatchupsertUpsertWithResponse performs a POST /crm/objects/2026-03/contacts/batch/upsert (the `Postcrmobjects202603contactsbatchupsertUpsert` operationId) request.
+	// Postcrmobjects202603contactsbatchupsertUpsertWithResponse Create or update a batch of contacts
+	//
+	// Upsert a batch of contacts. The `inputs` array can contain a `properties` object to define property values for each record.
+	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /crm/objects/2026-03/contacts/batch/upsert (the `Postcrmobjects202603contactsbatchupsertUpsert` operationId).
 	Postcrmobjects202603contactsbatchupsertUpsertWithResponse(ctx context.Context, body Postcrmobjects202603contactsbatchupsertUpsertJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603contactsbatchupsertUpsertResponse, error)
 
-	// Postcrmobjects202603contactsgdprDeletePurgeWithBodyWithResponse performs a POST /crm/objects/2026-03/contacts/gdpr-delete (the `Postcrmobjects202603contactsgdprDeletePurge` operationId) request,
-	// with any type of body and a specified content type.
+	// Postcrmobjects202603contactsgdprDeletePurgeWithBodyWithResponse Permanently delete a contact (GDPR-compliant)
 	//
-	// Returns a wrapper object for the known response body format(s).
+	// Permanently delete a contact and all associated content to follow GDPR. Use optional property `idProperty` set to `email` to identify contact by email address. If email address is not found, the email address will be added to a blocklist and prevent it from being used in the future. Learn more about [permanently deleting contacts](https://knowledge.hubspot.com/privacy-and-consent/how-do-i-perform-a-gdpr-delete-in-hubspot).
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /crm/objects/2026-03/contacts/gdpr-delete (the `Postcrmobjects202603contactsgdprDeletePurge` operationId).
 	Postcrmobjects202603contactsgdprDeletePurgeWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603contactsgdprDeletePurgeResponse, error)
 
-	// Postcrmobjects202603contactsgdprDeletePurgeWithResponse performs a POST /crm/objects/2026-03/contacts/gdpr-delete (the `Postcrmobjects202603contactsgdprDeletePurge` operationId) request.
+	// Postcrmobjects202603contactsgdprDeletePurgeWithResponse Permanently delete a contact (GDPR-compliant)
+	//
+	// Permanently delete a contact and all associated content to follow GDPR. Use optional property `idProperty` set to `email` to identify contact by email address. If email address is not found, the email address will be added to a blocklist and prevent it from being used in the future. Learn more about [permanently deleting contacts](https://knowledge.hubspot.com/privacy-and-consent/how-do-i-perform-a-gdpr-delete-in-hubspot).
+	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /crm/objects/2026-03/contacts/gdpr-delete (the `Postcrmobjects202603contactsgdprDeletePurge` operationId).
 	Postcrmobjects202603contactsgdprDeletePurgeWithResponse(ctx context.Context, body Postcrmobjects202603contactsgdprDeletePurgeJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603contactsgdprDeletePurgeResponse, error)
 
 	// Postcrmobjects202603contactsmergeMergeWithBodyWithResponse Merge two contacts
+	//
+	// Merge two contact records. Learn more about [merging records](https://knowledge.hubspot.com/records/merge-records).
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
@@ -5538,6 +6912,8 @@ type ClientWithResponsesInterface interface {
 	Postcrmobjects202603contactsmergeMergeWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603contactsmergeMergeResponse, error)
 
 	// Postcrmobjects202603contactsmergeMergeWithResponse Merge two contacts
+	//
+	// Merge two contact records. Learn more about [merging records](https://knowledge.hubspot.com/records/merge-records).
 	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
@@ -5562,30 +6938,40 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/contacts/search (the `Postcrmobjects202603contactssearchDoSearch` operationId).
 	Postcrmobjects202603contactssearchDoSearchWithResponse(ctx context.Context, body Postcrmobjects202603contactssearchDoSearchJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603contactssearchDoSearchResponse, error)
 
-	// Deletecrmobjects202603contactsContactIdArchiveWithResponse performs a DELETE /crm/objects/2026-03/contacts/{contactId} (the `Deletecrmobjects202603contactsContactIdArchive` operationId) request.
+	// Deletecrmobjects202603contactsContactIdArchiveWithResponse Archive a contact
 	//
 	// Delete a contact by ID. Deleted contacts can be restored within 90 days of deletion. Learn more about the [data impacted by contact deletions](https://knowledge.hubspot.com/privacy-and-consent/understand-restorable-and-permanent-contact-deletions) and how to [restore archived records](https://knowledge.hubspot.com/records/restore-deleted-records).
 	//
 	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with DELETE /crm/objects/2026-03/contacts/{contactId} (the `Deletecrmobjects202603contactsContactIdArchive` operationId).
 	Deletecrmobjects202603contactsContactIdArchiveWithResponse(ctx context.Context, contactId string, reqEditors ...RequestEditorFn) (*Deletecrmobjects202603contactsContactIdArchiveResponse, error)
 
-	// Getcrmobjects202603contactsContactIdGetByIdWithResponse performs a GET /crm/objects/2026-03/contacts/{contactId} (the `Getcrmobjects202603contactsContactIdGetById` operationId) request.
+	// Getcrmobjects202603contactsContactIdGetByIdWithResponse Retrieve a contact
+	//
+	// Retrieve a contact by its ID (`contactId`) or by a unique property (`idProperty`). You can specify what is returned using the `properties` query parameter.
 	//
 	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /crm/objects/2026-03/contacts/{contactId} (the `Getcrmobjects202603contactsContactIdGetById` operationId).
 	Getcrmobjects202603contactsContactIdGetByIdWithResponse(ctx context.Context, contactId string, params *Getcrmobjects202603contactsContactIdGetByIdParams, reqEditors ...RequestEditorFn) (*Getcrmobjects202603contactsContactIdGetByIdResponse, error)
 
-	// Patchcrmobjects202603contactsContactIdUpdateWithBodyWithResponse performs a PATCH /crm/objects/2026-03/contacts/{contactId} (the `Patchcrmobjects202603contactsContactIdUpdate` operationId) request,
-	// with any type of body and a specified content type.
+	// Patchcrmobjects202603contactsContactIdUpdateWithBodyWithResponse Update a contact
 	//
 	// Update an existing contact, identified by ID or email/unique property value. To identify a contact by ID, include the ID in the request URL path. To identify a contact by their email or other unique property, include the email/property value in the request URL path, and add the `idProperty` query parameter (`/crm/v3/objects/contacts/jon@website.com?idProperty=email`). Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
 	//
-	// Returns a wrapper object for the known response body format(s).
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PATCH /crm/objects/2026-03/contacts/{contactId} (the `Patchcrmobjects202603contactsContactIdUpdate` operationId).
 	Patchcrmobjects202603contactsContactIdUpdateWithBodyWithResponse(ctx context.Context, contactId string, params *Patchcrmobjects202603contactsContactIdUpdateParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Patchcrmobjects202603contactsContactIdUpdateResponse, error)
 
-	// Patchcrmobjects202603contactsContactIdUpdateWithResponse performs a PATCH /crm/objects/2026-03/contacts/{contactId} (the `Patchcrmobjects202603contactsContactIdUpdate` operationId) request.
-	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	// Patchcrmobjects202603contactsContactIdUpdateWithResponse Update a contact
 	//
 	// Update an existing contact, identified by ID or email/unique property value. To identify a contact by ID, include the ID in the request URL path. To identify a contact by their email or other unique property, include the email/property value in the request URL path, and add the `idProperty` query parameter (`/crm/v3/objects/contacts/jon@website.com?idProperty=email`). Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PATCH /crm/objects/2026-03/contacts/{contactId} (the `Patchcrmobjects202603contactsContactIdUpdate` operationId).
 	Patchcrmobjects202603contactsContactIdUpdateWithResponse(ctx context.Context, contactId string, params *Patchcrmobjects202603contactsContactIdUpdateParams, body Patchcrmobjects202603contactsContactIdUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*Patchcrmobjects202603contactsContactIdUpdateResponse, error)
 
 	// Getcrmobjects202603contractsWithResponse List
@@ -5624,59 +7010,95 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with GET /crm/objects/2026-03/contracts/{contractId} (the `Getcrmobjects202603contractsContractId` operationId).
 	Getcrmobjects202603contractsContractIdWithResponse(ctx context.Context, contractId string, params *Getcrmobjects202603contractsContractIdParams, reqEditors ...RequestEditorFn) (*Getcrmobjects202603contractsContractIdResponse, error)
 
+	// Postcrmobjects202603coursesmergeWithBodyWithResponse Merge two courses
+	//
+	// Merge two courses.
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /crm/objects/2026-03/courses/merge (the `Postcrmobjects202603coursesmerge` operationId).
+	Postcrmobjects202603coursesmergeWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603coursesmergeResponse, error)
+
+	// Postcrmobjects202603coursesmergeWithResponse Merge two courses
+	//
+	// Merge two courses.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /crm/objects/2026-03/courses/merge (the `Postcrmobjects202603coursesmerge` operationId).
+	Postcrmobjects202603coursesmergeWithResponse(ctx context.Context, body Postcrmobjects202603coursesmergeJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603coursesmergeResponse, error)
+
 	// Getcrmobjects202603discountsWithResponse List
+	//
+	// Read a page of discounts. Control what is returned via the `properties` query param.
 	//
 	// Returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with GET /crm/objects/2026-03/discounts (the `Getcrmobjects202603discounts` operationId).
 	Getcrmobjects202603discountsWithResponse(ctx context.Context, params *Getcrmobjects202603discountsParams, reqEditors ...RequestEditorFn) (*Getcrmobjects202603discountsResponse, error)
 
-	// Postcrmobjects202603discountsWithBodyWithResponse performs a POST /crm/objects/2026-03/discounts (the `Postcrmobjects202603discounts` operationId) request,
-	// with any type of body and a specified content type.
+	// Postcrmobjects202603discountsWithBodyWithResponse Create
 	//
 	// Create a discount with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard discounts is provided.
 	//
-	// Returns a wrapper object for the known response body format(s).
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /crm/objects/2026-03/discounts (the `Postcrmobjects202603discounts` operationId).
 	Postcrmobjects202603discountsWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603discountsResponse, error)
 
-	// Postcrmobjects202603discountsWithResponse performs a POST /crm/objects/2026-03/discounts (the `Postcrmobjects202603discounts` operationId) request.
-	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	// Postcrmobjects202603discountsWithResponse Create
 	//
 	// Create a discount with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard discounts is provided.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /crm/objects/2026-03/discounts (the `Postcrmobjects202603discounts` operationId).
 	Postcrmobjects202603discountsWithResponse(ctx context.Context, body Postcrmobjects202603discountsJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603discountsResponse, error)
 
-	// Postcrmobjects202603discountsbatcharchiveWithBodyWithResponse performs a POST /crm/objects/2026-03/discounts/batch/archive (the `Postcrmobjects202603discountsbatcharchive` operationId) request,
-	// with any type of body and a specified content type.
+	// Postcrmobjects202603discountsbatcharchiveWithBodyWithResponse Archive a batch of discounts by ID
 	//
-	// Returns a wrapper object for the known response body format(s).
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /crm/objects/2026-03/discounts/batch/archive (the `Postcrmobjects202603discountsbatcharchive` operationId).
 	Postcrmobjects202603discountsbatcharchiveWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603discountsbatcharchiveResponse, error)
 
-	// Postcrmobjects202603discountsbatcharchiveWithResponse performs a POST /crm/objects/2026-03/discounts/batch/archive (the `Postcrmobjects202603discountsbatcharchive` operationId) request.
+	// Postcrmobjects202603discountsbatcharchiveWithResponse Archive a batch of discounts by ID
+	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /crm/objects/2026-03/discounts/batch/archive (the `Postcrmobjects202603discountsbatcharchive` operationId).
 	Postcrmobjects202603discountsbatcharchiveWithResponse(ctx context.Context, body Postcrmobjects202603discountsbatcharchiveJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603discountsbatcharchiveResponse, error)
 
-	// Postcrmobjects202603discountsbatchcreateWithBodyWithResponse performs a POST /crm/objects/2026-03/discounts/batch/create (the `Postcrmobjects202603discountsbatchcreate` operationId) request,
-	// with any type of body and a specified content type.
+	// Postcrmobjects202603discountsbatchcreateWithBodyWithResponse Create a batch of discounts
 	//
-	// Returns a wrapper object for the known response body format(s).
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /crm/objects/2026-03/discounts/batch/create (the `Postcrmobjects202603discountsbatchcreate` operationId).
 	Postcrmobjects202603discountsbatchcreateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603discountsbatchcreateResponse, error)
 
-	// Postcrmobjects202603discountsbatchcreateWithResponse performs a POST /crm/objects/2026-03/discounts/batch/create (the `Postcrmobjects202603discountsbatchcreate` operationId) request.
+	// Postcrmobjects202603discountsbatchcreateWithResponse Create a batch of discounts
+	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /crm/objects/2026-03/discounts/batch/create (the `Postcrmobjects202603discountsbatchcreate` operationId).
 	Postcrmobjects202603discountsbatchcreateWithResponse(ctx context.Context, body Postcrmobjects202603discountsbatchcreateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603discountsbatchcreateResponse, error)
 
-	// Postcrmobjects202603discountsbatchreadWithBodyWithResponse performs a POST /crm/objects/2026-03/discounts/batch/read (the `Postcrmobjects202603discountsbatchread` operationId) request,
-	// with any type of body and a specified content type.
+	// Postcrmobjects202603discountsbatchreadWithBodyWithResponse Read a batch of discounts by internal ID, or unique property values
 	//
 	// Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
 	//
-	// Returns a wrapper object for the known response body format(s).
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /crm/objects/2026-03/discounts/batch/read (the `Postcrmobjects202603discountsbatchread` operationId).
 	Postcrmobjects202603discountsbatchreadWithBodyWithResponse(ctx context.Context, params *Postcrmobjects202603discountsbatchreadParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603discountsbatchreadResponse, error)
 
-	// Postcrmobjects202603discountsbatchreadWithResponse performs a POST /crm/objects/2026-03/discounts/batch/read (the `Postcrmobjects202603discountsbatchread` operationId) request.
-	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	// Postcrmobjects202603discountsbatchreadWithResponse Read a batch of discounts by internal ID, or unique property values
 	//
 	// Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /crm/objects/2026-03/discounts/batch/read (the `Postcrmobjects202603discountsbatchread` operationId).
 	Postcrmobjects202603discountsbatchreadWithResponse(ctx context.Context, params *Postcrmobjects202603discountsbatchreadParams, body Postcrmobjects202603discountsbatchreadJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603discountsbatchreadResponse, error)
 
 	// Postcrmobjects202603discountsbatchupdateWithBodyWithResponse Update a batch of discounts by internal ID, or unique property values
@@ -5693,14 +7115,22 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/discounts/batch/update (the `Postcrmobjects202603discountsbatchupdate` operationId).
 	Postcrmobjects202603discountsbatchupdateWithResponse(ctx context.Context, body Postcrmobjects202603discountsbatchupdateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603discountsbatchupdateResponse, error)
 
-	// Postcrmobjects202603discountsbatchupsertWithBodyWithResponse performs a POST /crm/objects/2026-03/discounts/batch/upsert (the `Postcrmobjects202603discountsbatchupsert` operationId) request,
-	// with any type of body and a specified content type.
+	// Postcrmobjects202603discountsbatchupsertWithBodyWithResponse Create or update a batch of discounts by unique property values
 	//
-	// Returns a wrapper object for the known response body format(s).
+	// Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /crm/objects/2026-03/discounts/batch/upsert (the `Postcrmobjects202603discountsbatchupsert` operationId).
 	Postcrmobjects202603discountsbatchupsertWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603discountsbatchupsertResponse, error)
 
-	// Postcrmobjects202603discountsbatchupsertWithResponse performs a POST /crm/objects/2026-03/discounts/batch/upsert (the `Postcrmobjects202603discountsbatchupsert` operationId) request.
+	// Postcrmobjects202603discountsbatchupsertWithResponse Create or update a batch of discounts by unique property values
+	//
+	// Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
+	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /crm/objects/2026-03/discounts/batch/upsert (the `Postcrmobjects202603discountsbatchupsert` operationId).
 	Postcrmobjects202603discountsbatchupsertWithResponse(ctx context.Context, body Postcrmobjects202603discountsbatchupsertJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603discountsbatchupsertResponse, error)
 
 	// Postcrmobjects202603discountssearchWithBodyWithResponse performs a POST /crm/objects/2026-03/discounts/search (the `Postcrmobjects202603discountssearch` operationId) request,
@@ -5715,16 +7145,20 @@ type ClientWithResponsesInterface interface {
 
 	// Deletecrmobjects202603discountsDiscountIdWithResponse Archive
 	//
+	// Move an Object identified by `{discountId}` to the recycling bin.
+	//
 	// Returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with DELETE /crm/objects/2026-03/discounts/{discountId} (the `Deletecrmobjects202603discountsDiscountId` operationId).
 	Deletecrmobjects202603discountsDiscountIdWithResponse(ctx context.Context, discountId string, reqEditors ...RequestEditorFn) (*Deletecrmobjects202603discountsDiscountIdResponse, error)
 
-	// Getcrmobjects202603discountsDiscountIdWithResponse performs a GET /crm/objects/2026-03/discounts/{discountId} (the `Getcrmobjects202603discountsDiscountId` operationId) request.
+	// Getcrmobjects202603discountsDiscountIdWithResponse Read
 	//
 	// Read an Object identified by `{discountId}`. `{discountId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param.
 	//
 	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /crm/objects/2026-03/discounts/{discountId} (the `Getcrmobjects202603discountsDiscountId` operationId).
 	Getcrmobjects202603discountsDiscountIdWithResponse(ctx context.Context, discountId string, params *Getcrmobjects202603discountsDiscountIdParams, reqEditors ...RequestEditorFn) (*Getcrmobjects202603discountsDiscountIdResponse, error)
 
 	// Patchcrmobjects202603discountsDiscountIdWithBodyWithResponse Update
@@ -5916,7 +7350,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with PATCH /crm/objects/2026-03/emails/{emailId} (the `Patchcrmobjects202603emailsEmailIdUpdate` operationId).
 	Patchcrmobjects202603emailsEmailIdUpdateWithResponse(ctx context.Context, emailId string, params *Patchcrmobjects202603emailsEmailIdUpdateParams, body Patchcrmobjects202603emailsEmailIdUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*Patchcrmobjects202603emailsEmailIdUpdateResponse, error)
 
-	// Getcrmobjects202603feedbackSubmissionsGetPageWithResponse List
+	// Getcrmobjects202603feedbackSubmissionsGetPageWithResponse Retrieve feedback submissions
 	//
 	// Read a page of feedback submissions. Control what is returned via the `properties` query param.
 	//
@@ -5925,7 +7359,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with GET /crm/objects/2026-03/feedback_submissions (the `Getcrmobjects202603feedbackSubmissionsGetPage` operationId).
 	Getcrmobjects202603feedbackSubmissionsGetPageWithResponse(ctx context.Context, params *Getcrmobjects202603feedbackSubmissionsGetPageParams, reqEditors ...RequestEditorFn) (*Getcrmobjects202603feedbackSubmissionsGetPageResponse, error)
 
-	// Postcrmobjects202603feedbackSubmissionsbatchreadReadWithBodyWithResponse Read a batch of feedback submissions by internal ID, or unique property values
+	// Postcrmobjects202603feedbackSubmissionsbatchreadReadWithBodyWithResponse Batch retrieve feedback submissions
 	//
 	// Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
 	//
@@ -5934,7 +7368,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/feedback_submissions/batch/read (the `Postcrmobjects202603feedbackSubmissionsbatchreadRead` operationId).
 	Postcrmobjects202603feedbackSubmissionsbatchreadReadWithBodyWithResponse(ctx context.Context, params *Postcrmobjects202603feedbackSubmissionsbatchreadReadParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603feedbackSubmissionsbatchreadReadResponse, error)
 
-	// Postcrmobjects202603feedbackSubmissionsbatchreadReadWithResponse Read a batch of feedback submissions by internal ID, or unique property values
+	// Postcrmobjects202603feedbackSubmissionsbatchreadReadWithResponse Batch retrieve feedback submissions
 	//
 	// Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
 	//
@@ -5943,7 +7377,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/feedback_submissions/batch/read (the `Postcrmobjects202603feedbackSubmissionsbatchreadRead` operationId).
 	Postcrmobjects202603feedbackSubmissionsbatchreadReadWithResponse(ctx context.Context, params *Postcrmobjects202603feedbackSubmissionsbatchreadReadParams, body Postcrmobjects202603feedbackSubmissionsbatchreadReadJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603feedbackSubmissionsbatchreadReadResponse, error)
 
-	// Postcrmobjects202603feedbackSubmissionssearchDoSearchWithBodyWithResponse Search for feedback submissions using specified criteria.
+	// Postcrmobjects202603feedbackSubmissionssearchDoSearchWithBodyWithResponse Search for feedback submissions
 	//
 	// Execute a search to retrieve feedback submissions based on defined filters, properties, and sorting options.
 	//
@@ -5952,7 +7386,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/feedback_submissions/search (the `Postcrmobjects202603feedbackSubmissionssearchDoSearch` operationId).
 	Postcrmobjects202603feedbackSubmissionssearchDoSearchWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603feedbackSubmissionssearchDoSearchResponse, error)
 
-	// Postcrmobjects202603feedbackSubmissionssearchDoSearchWithResponse Search for feedback submissions using specified criteria.
+	// Postcrmobjects202603feedbackSubmissionssearchDoSearchWithResponse Search for feedback submissions
 	//
 	// Execute a search to retrieve feedback submissions based on defined filters, properties, and sorting options.
 	//
@@ -5961,7 +7395,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/feedback_submissions/search (the `Postcrmobjects202603feedbackSubmissionssearchDoSearch` operationId).
 	Postcrmobjects202603feedbackSubmissionssearchDoSearchWithResponse(ctx context.Context, body Postcrmobjects202603feedbackSubmissionssearchDoSearchJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603feedbackSubmissionssearchDoSearchResponse, error)
 
-	// Getcrmobjects202603feedbackSubmissionsFeedbackSubmissionIdGetByIdWithResponse Read
+	// Getcrmobjects202603feedbackSubmissionsFeedbackSubmissionIdGetByIdWithResponse Retrieve a feedback submission
 	//
 	// Read an Object identified by `{feedbackSubmissionId}`. `{feedbackSubmissionId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param.
 	//
@@ -6168,7 +7602,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/goal_targets (the `Postcrmobjects202603goalTargetsCreate` operationId).
 	Postcrmobjects202603goalTargetsCreateWithResponse(ctx context.Context, body Postcrmobjects202603goalTargetsCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603goalTargetsCreateResponse, error)
 
-	// Postcrmobjects202603goalTargetsbatcharchiveArchiveWithBodyWithResponse Delete goal targets
+	// Postcrmobjects202603goalTargetsbatcharchiveArchiveWithBodyWithResponse Archive a batch of goal targets by ID
 	//
 	// Archive multiple goal targets in a single batch operation using their IDs.
 	//
@@ -6177,7 +7611,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/goal_targets/batch/archive (the `Postcrmobjects202603goalTargetsbatcharchiveArchive` operationId).
 	Postcrmobjects202603goalTargetsbatcharchiveArchiveWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603goalTargetsbatcharchiveArchiveResponse, error)
 
-	// Postcrmobjects202603goalTargetsbatcharchiveArchiveWithResponse Delete goal targets
+	// Postcrmobjects202603goalTargetsbatcharchiveArchiveWithResponse Archive a batch of goal targets by ID
 	//
 	// Archive multiple goal targets in a single batch operation using their IDs.
 	//
@@ -6186,7 +7620,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/goal_targets/batch/archive (the `Postcrmobjects202603goalTargetsbatcharchiveArchive` operationId).
 	Postcrmobjects202603goalTargetsbatcharchiveArchiveWithResponse(ctx context.Context, body Postcrmobjects202603goalTargetsbatcharchiveArchiveJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603goalTargetsbatcharchiveArchiveResponse, error)
 
-	// Postcrmobjects202603goalTargetsbatchcreateCreateWithBodyWithResponse Create goal targets
+	// Postcrmobjects202603goalTargetsbatchcreateCreateWithBodyWithResponse Create a batch of goal targets
 	//
 	// Create multiple goal targets in a single batch operation.
 	//
@@ -6195,7 +7629,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/goal_targets/batch/create (the `Postcrmobjects202603goalTargetsbatchcreateCreate` operationId).
 	Postcrmobjects202603goalTargetsbatchcreateCreateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603goalTargetsbatchcreateCreateResponse, error)
 
-	// Postcrmobjects202603goalTargetsbatchcreateCreateWithResponse Create goal targets
+	// Postcrmobjects202603goalTargetsbatchcreateCreateWithResponse Create a batch of goal targets
 	//
 	// Create multiple goal targets in a single batch operation.
 	//
@@ -6204,7 +7638,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/goal_targets/batch/create (the `Postcrmobjects202603goalTargetsbatchcreateCreate` operationId).
 	Postcrmobjects202603goalTargetsbatchcreateCreateWithResponse(ctx context.Context, body Postcrmobjects202603goalTargetsbatchcreateCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603goalTargetsbatchcreateCreateResponse, error)
 
-	// Postcrmobjects202603goalTargetsbatchreadReadWithBodyWithResponse Retrieve goal targets
+	// Postcrmobjects202603goalTargetsbatchreadReadWithBodyWithResponse Read a batch of goal targets by internal ID, or unique property values
 	//
 	// Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
 	//
@@ -6213,7 +7647,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/goal_targets/batch/read (the `Postcrmobjects202603goalTargetsbatchreadRead` operationId).
 	Postcrmobjects202603goalTargetsbatchreadReadWithBodyWithResponse(ctx context.Context, params *Postcrmobjects202603goalTargetsbatchreadReadParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603goalTargetsbatchreadReadResponse, error)
 
-	// Postcrmobjects202603goalTargetsbatchreadReadWithResponse Retrieve goal targets
+	// Postcrmobjects202603goalTargetsbatchreadReadWithResponse Read a batch of goal targets by internal ID, or unique property values
 	//
 	// Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
 	//
@@ -6222,7 +7656,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/goal_targets/batch/read (the `Postcrmobjects202603goalTargetsbatchreadRead` operationId).
 	Postcrmobjects202603goalTargetsbatchreadReadWithResponse(ctx context.Context, params *Postcrmobjects202603goalTargetsbatchreadReadParams, body Postcrmobjects202603goalTargetsbatchreadReadJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603goalTargetsbatchreadReadResponse, error)
 
-	// Postcrmobjects202603goalTargetsbatchupdateUpdateWithBodyWithResponse Update goal targets
+	// Postcrmobjects202603goalTargetsbatchupdateUpdateWithBodyWithResponse Update a batch of goal targets by internal ID, or unique property values
 	//
 	// Update multiple goal targets in a single batch operation using their internal IDs or unique property values.
 	//
@@ -6231,7 +7665,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/goal_targets/batch/update (the `Postcrmobjects202603goalTargetsbatchupdateUpdate` operationId).
 	Postcrmobjects202603goalTargetsbatchupdateUpdateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603goalTargetsbatchupdateUpdateResponse, error)
 
-	// Postcrmobjects202603goalTargetsbatchupdateUpdateWithResponse Update goal targets
+	// Postcrmobjects202603goalTargetsbatchupdateUpdateWithResponse Update a batch of goal targets by internal ID, or unique property values
 	//
 	// Update multiple goal targets in a single batch operation using their internal IDs or unique property values.
 	//
@@ -6240,18 +7674,18 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/goal_targets/batch/update (the `Postcrmobjects202603goalTargetsbatchupdateUpdate` operationId).
 	Postcrmobjects202603goalTargetsbatchupdateUpdateWithResponse(ctx context.Context, body Postcrmobjects202603goalTargetsbatchupdateUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603goalTargetsbatchupdateUpdateResponse, error)
 
-	// Postcrmobjects202603goalTargetsbatchupsertUpsertWithBodyWithResponse Upsert goal tagets
+	// Postcrmobjects202603goalTargetsbatchupsertUpsertWithBodyWithResponse Create or update a batch of goal targets by unique property values
 	//
-	// Create and update a batch of goal targets by a unique property. Goal targets that don't exist will be created, while existing goal targets will be updated.
+	// Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with POST /crm/objects/2026-03/goal_targets/batch/upsert (the `Postcrmobjects202603goalTargetsbatchupsertUpsert` operationId).
 	Postcrmobjects202603goalTargetsbatchupsertUpsertWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603goalTargetsbatchupsertUpsertResponse, error)
 
-	// Postcrmobjects202603goalTargetsbatchupsertUpsertWithResponse Upsert goal tagets
+	// Postcrmobjects202603goalTargetsbatchupsertUpsertWithResponse Create or update a batch of goal targets by unique property values
 	//
-	// Create and update a batch of goal targets by a unique property. Goal targets that don't exist will be created, while existing goal targets will be updated.
+	// Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
 	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
@@ -6278,7 +7712,7 @@ type ClientWithResponsesInterface interface {
 
 	// Deletecrmobjects202603goalTargetsGoalTargetIdArchiveWithResponse Delete a goal target
 	//
-	// Delete a goal target by `{goalTargetId}` to the recycling bin.
+	// Move an Object identified by `{goalTargetId}` to the recycling bin.
 	//
 	// Returns a wrapper object for the known response body format(s).
 	//
@@ -6287,7 +7721,7 @@ type ClientWithResponsesInterface interface {
 
 	// Getcrmobjects202603goalTargetsGoalTargetIdGetByIdWithResponse Retrieve a goal target
 	//
-	// Retrieve a goal target by its ID. You can specify what is returned using the `properties` query parameter.
+	// Read an Object identified by `{goalTargetId}`. `{goalTargetId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param.
 	//
 	// Returns a wrapper object for the known response body format(s).
 	//
@@ -7167,7 +8601,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with PATCH /crm/objects/2026-03/notes/{noteId} (the `Patchcrmobjects202603notesNoteIdUpdate` operationId).
 	Patchcrmobjects202603notesNoteIdUpdateWithResponse(ctx context.Context, noteId string, params *Patchcrmobjects202603notesNoteIdUpdateParams, body Patchcrmobjects202603notesNoteIdUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*Patchcrmobjects202603notesNoteIdUpdateResponse, error)
 
-	// Getcrmobjects202603ordersWithResponse List
+	// Getcrmobjects202603ordersWithResponse Rertrieve orders
 	//
 	// Read a page of orders. Control what is returned via the `properties` query param.
 	//
@@ -7176,7 +8610,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with GET /crm/objects/2026-03/orders (the `Getcrmobjects202603orders` operationId).
 	Getcrmobjects202603ordersWithResponse(ctx context.Context, params *Getcrmobjects202603ordersParams, reqEditors ...RequestEditorFn) (*Getcrmobjects202603ordersResponse, error)
 
-	// Postcrmobjects202603ordersWithBodyWithResponse Create
+	// Postcrmobjects202603ordersWithBodyWithResponse Create an order
 	//
 	// Create a order with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard orders is provided.
 	//
@@ -7185,7 +8619,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/orders (the `Postcrmobjects202603orders` operationId).
 	Postcrmobjects202603ordersWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ordersResponse, error)
 
-	// Postcrmobjects202603ordersWithResponse Create
+	// Postcrmobjects202603ordersWithResponse Create an order
 	//
 	// Create a order with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard orders is provided.
 	//
@@ -7194,7 +8628,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/orders (the `Postcrmobjects202603orders` operationId).
 	Postcrmobjects202603ordersWithResponse(ctx context.Context, body Postcrmobjects202603ordersJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ordersResponse, error)
 
-	// Postcrmobjects202603ordersbatcharchiveWithBodyWithResponse Archive a batch of orders by ID
+	// Postcrmobjects202603ordersbatcharchiveWithBodyWithResponse Batch archive orders
 	//
 	// Archive a batch of orders identified by their IDs.
 	//
@@ -7203,7 +8637,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/orders/batch/archive (the `Postcrmobjects202603ordersbatcharchive` operationId).
 	Postcrmobjects202603ordersbatcharchiveWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ordersbatcharchiveResponse, error)
 
-	// Postcrmobjects202603ordersbatcharchiveWithResponse Archive a batch of orders by ID
+	// Postcrmobjects202603ordersbatcharchiveWithResponse Batch archive orders
 	//
 	// Archive a batch of orders identified by their IDs.
 	//
@@ -7212,7 +8646,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/orders/batch/archive (the `Postcrmobjects202603ordersbatcharchive` operationId).
 	Postcrmobjects202603ordersbatcharchiveWithResponse(ctx context.Context, body Postcrmobjects202603ordersbatcharchiveJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ordersbatcharchiveResponse, error)
 
-	// Postcrmobjects202603ordersbatchcreateWithBodyWithResponse Create a batch of orders
+	// Postcrmobjects202603ordersbatchcreateWithBodyWithResponse Batch create orders
 	//
 	// Create a batch of orders in the system.
 	//
@@ -7221,7 +8655,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/orders/batch/create (the `Postcrmobjects202603ordersbatchcreate` operationId).
 	Postcrmobjects202603ordersbatchcreateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ordersbatchcreateResponse, error)
 
-	// Postcrmobjects202603ordersbatchcreateWithResponse Create a batch of orders
+	// Postcrmobjects202603ordersbatchcreateWithResponse Batch create orders
 	//
 	// Create a batch of orders in the system.
 	//
@@ -7230,7 +8664,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/orders/batch/create (the `Postcrmobjects202603ordersbatchcreate` operationId).
 	Postcrmobjects202603ordersbatchcreateWithResponse(ctx context.Context, body Postcrmobjects202603ordersbatchcreateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ordersbatchcreateResponse, error)
 
-	// Postcrmobjects202603ordersbatchreadWithBodyWithResponse Read a batch of orders by internal ID, or unique property values
+	// Postcrmobjects202603ordersbatchreadWithBodyWithResponse Batch retrieve orders
 	//
 	// Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
 	//
@@ -7239,7 +8673,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/orders/batch/read (the `Postcrmobjects202603ordersbatchread` operationId).
 	Postcrmobjects202603ordersbatchreadWithBodyWithResponse(ctx context.Context, params *Postcrmobjects202603ordersbatchreadParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ordersbatchreadResponse, error)
 
-	// Postcrmobjects202603ordersbatchreadWithResponse Read a batch of orders by internal ID, or unique property values
+	// Postcrmobjects202603ordersbatchreadWithResponse Batch retrieve orders
 	//
 	// Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
 	//
@@ -7248,7 +8682,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/orders/batch/read (the `Postcrmobjects202603ordersbatchread` operationId).
 	Postcrmobjects202603ordersbatchreadWithResponse(ctx context.Context, params *Postcrmobjects202603ordersbatchreadParams, body Postcrmobjects202603ordersbatchreadJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ordersbatchreadResponse, error)
 
-	// Postcrmobjects202603ordersbatchupdateWithBodyWithResponse Update a batch of orders by internal ID, or unique property values
+	// Postcrmobjects202603ordersbatchupdateWithBodyWithResponse Batch update orders
 	//
 	// Update a batch of orders using their internal IDs or unique property values.
 	//
@@ -7257,7 +8691,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/orders/batch/update (the `Postcrmobjects202603ordersbatchupdate` operationId).
 	Postcrmobjects202603ordersbatchupdateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ordersbatchupdateResponse, error)
 
-	// Postcrmobjects202603ordersbatchupdateWithResponse Update a batch of orders by internal ID, or unique property values
+	// Postcrmobjects202603ordersbatchupdateWithResponse Batch update orders
 	//
 	// Update a batch of orders using their internal IDs or unique property values.
 	//
@@ -7266,7 +8700,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/orders/batch/update (the `Postcrmobjects202603ordersbatchupdate` operationId).
 	Postcrmobjects202603ordersbatchupdateWithResponse(ctx context.Context, body Postcrmobjects202603ordersbatchupdateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ordersbatchupdateResponse, error)
 
-	// Postcrmobjects202603ordersbatchupsertWithBodyWithResponse Create or update a batch of orders by unique property values
+	// Postcrmobjects202603ordersbatchupsertWithBodyWithResponse Upsert orders
 	//
 	// Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
 	//
@@ -7275,7 +8709,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/orders/batch/upsert (the `Postcrmobjects202603ordersbatchupsert` operationId).
 	Postcrmobjects202603ordersbatchupsertWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ordersbatchupsertResponse, error)
 
-	// Postcrmobjects202603ordersbatchupsertWithResponse Create or update a batch of orders by unique property values
+	// Postcrmobjects202603ordersbatchupsertWithResponse Upsert orders
 	//
 	// Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
 	//
@@ -7284,7 +8718,25 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/orders/batch/upsert (the `Postcrmobjects202603ordersbatchupsert` operationId).
 	Postcrmobjects202603ordersbatchupsertWithResponse(ctx context.Context, body Postcrmobjects202603ordersbatchupsertJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ordersbatchupsertResponse, error)
 
-	// Postcrmobjects202603orderssearchWithBodyWithResponse Search for orders in the CRM using various filters and sorting options to retrieve specific order data.
+	// Postcrmobjects202603ordersmergeWithBodyWithResponse Merge orders
+	//
+	// Merge two orders.
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /crm/objects/2026-03/orders/merge (the `Postcrmobjects202603ordersmerge` operationId).
+	Postcrmobjects202603ordersmergeWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ordersmergeResponse, error)
+
+	// Postcrmobjects202603ordersmergeWithResponse Merge orders
+	//
+	// Merge two orders.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /crm/objects/2026-03/orders/merge (the `Postcrmobjects202603ordersmerge` operationId).
+	Postcrmobjects202603ordersmergeWithResponse(ctx context.Context, body Postcrmobjects202603ordersmergeJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ordersmergeResponse, error)
+
+	// Postcrmobjects202603orderssearchWithBodyWithResponse Search for orders
 	//
 	// Execute a search for orders using specified criteria and return matching results.
 	//
@@ -7293,7 +8745,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/orders/search (the `Postcrmobjects202603orderssearch` operationId).
 	Postcrmobjects202603orderssearchWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603orderssearchResponse, error)
 
-	// Postcrmobjects202603orderssearchWithResponse Search for orders in the CRM using various filters and sorting options to retrieve specific order data.
+	// Postcrmobjects202603orderssearchWithResponse Search for orders
 	//
 	// Execute a search for orders using specified criteria and return matching results.
 	//
@@ -7302,7 +8754,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/orders/search (the `Postcrmobjects202603orderssearch` operationId).
 	Postcrmobjects202603orderssearchWithResponse(ctx context.Context, body Postcrmobjects202603orderssearchJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603orderssearchResponse, error)
 
-	// Deletecrmobjects202603ordersOrderIdWithResponse Archive
+	// Deletecrmobjects202603ordersOrderIdWithResponse Archive an order
 	//
 	// Move an Object identified by `{orderId}` to the recycling bin.
 	//
@@ -7311,7 +8763,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with DELETE /crm/objects/2026-03/orders/{orderId} (the `Deletecrmobjects202603ordersOrderId` operationId).
 	Deletecrmobjects202603ordersOrderIdWithResponse(ctx context.Context, orderId string, reqEditors ...RequestEditorFn) (*Deletecrmobjects202603ordersOrderIdResponse, error)
 
-	// Getcrmobjects202603ordersOrderIdWithResponse Read
+	// Getcrmobjects202603ordersOrderIdWithResponse Retrieve an order
 	//
 	// Read an Object identified by `{orderId}`. `{orderId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param.
 	//
@@ -7320,7 +8772,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with GET /crm/objects/2026-03/orders/{orderId} (the `Getcrmobjects202603ordersOrderId` operationId).
 	Getcrmobjects202603ordersOrderIdWithResponse(ctx context.Context, orderId string, params *Getcrmobjects202603ordersOrderIdParams, reqEditors ...RequestEditorFn) (*Getcrmobjects202603ordersOrderIdResponse, error)
 
-	// Patchcrmobjects202603ordersOrderIdWithBodyWithResponse Update
+	// Patchcrmobjects202603ordersOrderIdWithBodyWithResponse Update an order
 	//
 	// Perform a partial update of an Object identified by `{orderId}`or optionally a unique property value as specified by the `idProperty` query param. `{orderId}` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
 	//
@@ -7329,7 +8781,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with PATCH /crm/objects/2026-03/orders/{orderId} (the `Patchcrmobjects202603ordersOrderId` operationId).
 	Patchcrmobjects202603ordersOrderIdWithBodyWithResponse(ctx context.Context, orderId string, params *Patchcrmobjects202603ordersOrderIdParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Patchcrmobjects202603ordersOrderIdResponse, error)
 
-	// Patchcrmobjects202603ordersOrderIdWithResponse Update
+	// Patchcrmobjects202603ordersOrderIdWithResponse Update an order
 	//
 	// Perform a partial update of an Object identified by `{orderId}`or optionally a unique property value as specified by the `idProperty` query param. `{orderId}` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
 	//
@@ -7437,7 +8889,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with GET /crm/objects/2026-03/partner_clients/{partnerClientId}/associations/{toObjectType} (the `Getcrmobjects202603partnerClientsPartnerClientIdassociationsToObjectType` operationId).
 	Getcrmobjects202603partnerClientsPartnerClientIdassociationsToObjectTypeWithResponse(ctx context.Context, partnerClientId string, toObjectType string, params *Getcrmobjects202603partnerClientsPartnerClientIdassociationsToObjectTypeParams, reqEditors ...RequestEditorFn) (*Getcrmobjects202603partnerClientsPartnerClientIdassociationsToObjectTypeResponse, error)
 
-	// Getcrmobjects202603partnerServicesWithResponse List
+	// Getcrmobjects202603partnerServicesWithResponse Retrieve partner services
 	//
 	// Read a page of partner services. Control what is returned via the `properties` query param.
 	//
@@ -7446,7 +8898,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with GET /crm/objects/2026-03/partner_services (the `Getcrmobjects202603partnerServices` operationId).
 	Getcrmobjects202603partnerServicesWithResponse(ctx context.Context, params *Getcrmobjects202603partnerServicesParams, reqEditors ...RequestEditorFn) (*Getcrmobjects202603partnerServicesResponse, error)
 
-	// Postcrmobjects202603partnerServicesbatchreadWithBodyWithResponse Read a batch of partner services by internal ID, or unique property values
+	// Postcrmobjects202603partnerServicesbatchreadWithBodyWithResponse Batch retrieve partner services
 	//
 	// Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
 	//
@@ -7455,7 +8907,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/partner_services/batch/read (the `Postcrmobjects202603partnerServicesbatchread` operationId).
 	Postcrmobjects202603partnerServicesbatchreadWithBodyWithResponse(ctx context.Context, params *Postcrmobjects202603partnerServicesbatchreadParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603partnerServicesbatchreadResponse, error)
 
-	// Postcrmobjects202603partnerServicesbatchreadWithResponse Read a batch of partner services by internal ID, or unique property values
+	// Postcrmobjects202603partnerServicesbatchreadWithResponse Batch retrieve partner services
 	//
 	// Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
 	//
@@ -7464,7 +8916,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/partner_services/batch/read (the `Postcrmobjects202603partnerServicesbatchread` operationId).
 	Postcrmobjects202603partnerServicesbatchreadWithResponse(ctx context.Context, params *Postcrmobjects202603partnerServicesbatchreadParams, body Postcrmobjects202603partnerServicesbatchreadJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603partnerServicesbatchreadResponse, error)
 
-	// Postcrmobjects202603partnerServicesbatchupdateWithBodyWithResponse Update a batch of partner services by internal ID, or unique property values
+	// Postcrmobjects202603partnerServicesbatchupdateWithBodyWithResponse Batch update partner services
 	//
 	// Update multiple partner services using their internal IDs or unique property values. This operation allows for batch processing of updates, ensuring efficient synchronization of service data between HubSpot and other systems.
 	//
@@ -7473,7 +8925,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/partner_services/batch/update (the `Postcrmobjects202603partnerServicesbatchupdate` operationId).
 	Postcrmobjects202603partnerServicesbatchupdateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603partnerServicesbatchupdateResponse, error)
 
-	// Postcrmobjects202603partnerServicesbatchupdateWithResponse Update a batch of partner services by internal ID, or unique property values
+	// Postcrmobjects202603partnerServicesbatchupdateWithResponse Batch update partner services
 	//
 	// Update multiple partner services using their internal IDs or unique property values. This operation allows for batch processing of updates, ensuring efficient synchronization of service data between HubSpot and other systems.
 	//
@@ -7482,7 +8934,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/partner_services/batch/update (the `Postcrmobjects202603partnerServicesbatchupdate` operationId).
 	Postcrmobjects202603partnerServicesbatchupdateWithResponse(ctx context.Context, body Postcrmobjects202603partnerServicesbatchupdateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603partnerServicesbatchupdateResponse, error)
 
-	// Postcrmobjects202603partnerServicessearchWithBodyWithResponse Search for partner services using specified criteria.
+	// Postcrmobjects202603partnerServicessearchWithBodyWithResponse Search for partner services
 	//
 	// Execute a search query to find partner services based on defined filters, properties, and sorting options. This endpoint allows you to retrieve a collection of partner services that match the specified search criteria.
 	//
@@ -7491,7 +8943,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/partner_services/search (the `Postcrmobjects202603partnerServicessearch` operationId).
 	Postcrmobjects202603partnerServicessearchWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603partnerServicessearchResponse, error)
 
-	// Postcrmobjects202603partnerServicessearchWithResponse Search for partner services using specified criteria.
+	// Postcrmobjects202603partnerServicessearchWithResponse Search for partner services
 	//
 	// Execute a search query to find partner services based on defined filters, properties, and sorting options. This endpoint allows you to retrieve a collection of partner services that match the specified search criteria.
 	//
@@ -7500,7 +8952,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /crm/objects/2026-03/partner_services/search (the `Postcrmobjects202603partnerServicessearch` operationId).
 	Postcrmobjects202603partnerServicessearchWithResponse(ctx context.Context, body Postcrmobjects202603partnerServicessearchJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603partnerServicessearchResponse, error)
 
-	// Getcrmobjects202603partnerServicesPartnerServiceIdWithResponse Read
+	// Getcrmobjects202603partnerServicesPartnerServiceIdWithResponse Retrieve a partner service
 	//
 	// Read an Object identified by `{partnerServiceId}`. `{partnerServiceId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param.
 	//
@@ -7509,7 +8961,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with GET /crm/objects/2026-03/partner_services/{partnerServiceId} (the `Getcrmobjects202603partnerServicesPartnerServiceId` operationId).
 	Getcrmobjects202603partnerServicesPartnerServiceIdWithResponse(ctx context.Context, partnerServiceId string, params *Getcrmobjects202603partnerServicesPartnerServiceIdParams, reqEditors ...RequestEditorFn) (*Getcrmobjects202603partnerServicesPartnerServiceIdResponse, error)
 
-	// Patchcrmobjects202603partnerServicesPartnerServiceIdWithBodyWithResponse Update
+	// Patchcrmobjects202603partnerServicesPartnerServiceIdWithBodyWithResponse Update a partner service
 	//
 	// Perform a partial update of an Object identified by `{partnerServiceId}`or optionally a unique property value as specified by the `idProperty` query param. `{partnerServiceId}` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
 	//
@@ -7518,7 +8970,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with PATCH /crm/objects/2026-03/partner_services/{partnerServiceId} (the `Patchcrmobjects202603partnerServicesPartnerServiceId` operationId).
 	Patchcrmobjects202603partnerServicesPartnerServiceIdWithBodyWithResponse(ctx context.Context, partnerServiceId string, params *Patchcrmobjects202603partnerServicesPartnerServiceIdParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Patchcrmobjects202603partnerServicesPartnerServiceIdResponse, error)
 
-	// Patchcrmobjects202603partnerServicesPartnerServiceIdWithResponse Update
+	// Patchcrmobjects202603partnerServicesPartnerServiceIdWithResponse Update a partner service
 	//
 	// Perform a partial update of an Object identified by `{partnerServiceId}`or optionally a unique property value as specified by the `idProperty` query param. `{partnerServiceId}` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
 	//
@@ -7526,15 +8978,6 @@ type ClientWithResponsesInterface interface {
 	//
 	// Corresponds with PATCH /crm/objects/2026-03/partner_services/{partnerServiceId} (the `Patchcrmobjects202603partnerServicesPartnerServiceId` operationId).
 	Patchcrmobjects202603partnerServicesPartnerServiceIdWithResponse(ctx context.Context, partnerServiceId string, params *Patchcrmobjects202603partnerServicesPartnerServiceIdParams, body Patchcrmobjects202603partnerServicesPartnerServiceIdJSONRequestBody, reqEditors ...RequestEditorFn) (*Patchcrmobjects202603partnerServicesPartnerServiceIdResponse, error)
-
-	// Getcrmobjects202603partnerServicesPartnerServiceIdassociationsToObjectTypeWithResponse List associations of a partner service by type
-	//
-	// Retrieve a list of associations for a specific partner service, filtered by the type of associated object.
-	//
-	// Returns a wrapper object for the known response body format(s).
-	//
-	// Corresponds with GET /crm/objects/2026-03/partner_services/{partnerServiceId}/associations/{toObjectType} (the `Getcrmobjects202603partnerServicesPartnerServiceIdassociationsToObjectType` operationId).
-	Getcrmobjects202603partnerServicesPartnerServiceIdassociationsToObjectTypeWithResponse(ctx context.Context, partnerServiceId string, toObjectType string, params *Getcrmobjects202603partnerServicesPartnerServiceIdassociationsToObjectTypeParams, reqEditors ...RequestEditorFn) (*Getcrmobjects202603partnerServicesPartnerServiceIdassociationsToObjectTypeResponse, error)
 
 	// Getcrmobjects202603postalMailGetPageWithResponse performs a GET /crm/objects/2026-03/postal_mail (the `Getcrmobjects202603postalMailGetPage` operationId) request.
 	//
@@ -8213,6 +9656,24 @@ type ClientWithResponsesInterface interface {
 	//
 	// Corresponds with PATCH /crm/objects/2026-03/quotes/{quoteId} (the `Patchcrmobjects202603quotesQuoteIdUpdate` operationId).
 	Patchcrmobjects202603quotesQuoteIdUpdateWithResponse(ctx context.Context, quoteId string, params *Patchcrmobjects202603quotesQuoteIdUpdateParams, body Patchcrmobjects202603quotesQuoteIdUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*Patchcrmobjects202603quotesQuoteIdUpdateResponse, error)
+
+	// Postcrmobjects202603servicesmergeWithBodyWithResponse Merge services
+	//
+	// Merge two services.
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /crm/objects/2026-03/services/merge (the `Postcrmobjects202603servicesmerge` operationId).
+	Postcrmobjects202603servicesmergeWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603servicesmergeResponse, error)
+
+	// Postcrmobjects202603servicesmergeWithResponse Merge services
+	//
+	// Merge two services.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /crm/objects/2026-03/services/merge (the `Postcrmobjects202603servicesmerge` operationId).
+	Postcrmobjects202603servicesmergeWithResponse(ctx context.Context, body Postcrmobjects202603servicesmergeJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603servicesmergeResponse, error)
 
 	// Getcrmobjects202603subscriptionsWithResponse Retrieve a list of subscription objects.
 	//
@@ -9087,223 +10548,215 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with PATCH /crm/objects/2026-03/users/{userId} (the `Patchcrmobjects202603usersUserId` operationId).
 	Patchcrmobjects202603usersUserIdWithResponse(ctx context.Context, userId string, params *Patchcrmobjects202603usersUserIdParams, body Patchcrmobjects202603usersUserIdJSONRequestBody, reqEditors ...RequestEditorFn) (*Patchcrmobjects202603usersUserIdResponse, error)
 
-	// Putcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdcrmobjects202509FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdWithResponse Associate records (default)
-	//
-	// Create the default (most generic) association type between two object types.
+	// Putcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdWithResponse performs a PUT /crm/objects/2026-03/{fromObjectType}/{fromObjectId}/associations/default/{toObjectType}/{toObjectId} (the `Putcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectId` operationId) request.
 	//
 	// Returns a wrapper object for the known response body format(s).
-	//
-	// Corresponds with PUT /crm/objects/2026-03/{fromObjectType}/{fromObjectId}/associations/default/{toObjectType}/{toObjectId} (the `Putcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdcrmobjects202509FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectId` operationId).
-	Putcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdcrmobjects202509FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdWithResponse(ctx context.Context, fromObjectType string, fromObjectId string, toObjectType string, toObjectId string, reqEditors ...RequestEditorFn) (*Putcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdcrmobjects202509FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdResponse, error)
+	Putcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdWithResponse(ctx context.Context, fromObjectType string, fromObjectId string, toObjectType string, toObjectId string, reqEditors ...RequestEditorFn) (*Putcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdResponse, error)
 
-	// Getcrmobjects202603ObjectTypecrmobjects202509ObjectTypeWithResponse List
+	// Getcrmobjects202603ObjectTypeWithResponse List
 	//
 	// Read a page of objects. Control what is returned via the `properties` query param.
 	//
 	// Returns a wrapper object for the known response body format(s).
 	//
-	// Corresponds with GET /crm/objects/2026-03/{objectType} (the `Getcrmobjects202603ObjectTypecrmobjects202509ObjectType` operationId).
-	Getcrmobjects202603ObjectTypecrmobjects202509ObjectTypeWithResponse(ctx context.Context, objectType string, params *Getcrmobjects202603ObjectTypecrmobjects202509ObjectTypeParams, reqEditors ...RequestEditorFn) (*Getcrmobjects202603ObjectTypecrmobjects202509ObjectTypeResponse, error)
+	// Corresponds with GET /crm/objects/2026-03/{objectType} (the `Getcrmobjects202603ObjectType` operationId).
+	Getcrmobjects202603ObjectTypeWithResponse(ctx context.Context, objectType string, params *Getcrmobjects202603ObjectTypeParams, reqEditors ...RequestEditorFn) (*Getcrmobjects202603ObjectTypeResponse, error)
 
-	// Postcrmobjects202603ObjectTypecrmobjects202509ObjectTypeWithBodyWithResponse Create
+	// Postcrmobjects202603ObjectTypeWithBodyWithResponse Create
 	//
 	// Create a CRM object with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard objects is provided.
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
-	// Corresponds with POST /crm/objects/2026-03/{objectType} (the `Postcrmobjects202603ObjectTypecrmobjects202509ObjectType` operationId).
-	Postcrmobjects202603ObjectTypecrmobjects202509ObjectTypeWithBodyWithResponse(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypecrmobjects202509ObjectTypeResponse, error)
+	// Corresponds with POST /crm/objects/2026-03/{objectType} (the `Postcrmobjects202603ObjectType` operationId).
+	Postcrmobjects202603ObjectTypeWithBodyWithResponse(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypeResponse, error)
 
-	// Postcrmobjects202603ObjectTypecrmobjects202509ObjectTypeWithResponse Create
+	// Postcrmobjects202603ObjectTypeWithResponse Create
 	//
 	// Create a CRM object with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard objects is provided.
 	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
-	// Corresponds with POST /crm/objects/2026-03/{objectType} (the `Postcrmobjects202603ObjectTypecrmobjects202509ObjectType` operationId).
-	Postcrmobjects202603ObjectTypecrmobjects202509ObjectTypeWithResponse(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypecrmobjects202509ObjectTypeJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypecrmobjects202509ObjectTypeResponse, error)
+	// Corresponds with POST /crm/objects/2026-03/{objectType} (the `Postcrmobjects202603ObjectType` operationId).
+	Postcrmobjects202603ObjectTypeWithResponse(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypeJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypeResponse, error)
 
-	// Postcrmobjects202603ObjectTypebatcharchivecrmobjects202509ObjectTypebatcharchiveWithBodyWithResponse Archive a batch of objects by ID
+	// Postcrmobjects202603ObjectTypebatcharchiveWithBodyWithResponse Archive a batch of objects by ID
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
-	// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/archive (the `Postcrmobjects202603ObjectTypebatcharchivecrmobjects202509ObjectTypebatcharchive` operationId).
-	Postcrmobjects202603ObjectTypebatcharchivecrmobjects202509ObjectTypebatcharchiveWithBodyWithResponse(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypebatcharchivecrmobjects202509ObjectTypebatcharchiveResponse, error)
+	// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/archive (the `Postcrmobjects202603ObjectTypebatcharchive` operationId).
+	Postcrmobjects202603ObjectTypebatcharchiveWithBodyWithResponse(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypebatcharchiveResponse, error)
 
-	// Postcrmobjects202603ObjectTypebatcharchivecrmobjects202509ObjectTypebatcharchiveWithResponse Archive a batch of objects by ID
+	// Postcrmobjects202603ObjectTypebatcharchiveWithResponse Archive a batch of objects by ID
 	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
-	// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/archive (the `Postcrmobjects202603ObjectTypebatcharchivecrmobjects202509ObjectTypebatcharchive` operationId).
-	Postcrmobjects202603ObjectTypebatcharchivecrmobjects202509ObjectTypebatcharchiveWithResponse(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypebatcharchivecrmobjects202509ObjectTypebatcharchiveJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypebatcharchivecrmobjects202509ObjectTypebatcharchiveResponse, error)
+	// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/archive (the `Postcrmobjects202603ObjectTypebatcharchive` operationId).
+	Postcrmobjects202603ObjectTypebatcharchiveWithResponse(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypebatcharchiveJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypebatcharchiveResponse, error)
 
-	// Postcrmobjects202603ObjectTypebatchcreatecrmobjects202509ObjectTypebatchcreateWithBodyWithResponse Create a batch of objects
+	// Postcrmobjects202603ObjectTypebatchcreateWithBodyWithResponse Create a batch of objects
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
-	// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/create (the `Postcrmobjects202603ObjectTypebatchcreatecrmobjects202509ObjectTypebatchcreate` operationId).
-	Postcrmobjects202603ObjectTypebatchcreatecrmobjects202509ObjectTypebatchcreateWithBodyWithResponse(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypebatchcreatecrmobjects202509ObjectTypebatchcreateResponse, error)
+	// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/create (the `Postcrmobjects202603ObjectTypebatchcreate` operationId).
+	Postcrmobjects202603ObjectTypebatchcreateWithBodyWithResponse(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypebatchcreateResponse, error)
 
-	// Postcrmobjects202603ObjectTypebatchcreatecrmobjects202509ObjectTypebatchcreateWithResponse Create a batch of objects
+	// Postcrmobjects202603ObjectTypebatchcreateWithResponse Create a batch of objects
 	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
-	// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/create (the `Postcrmobjects202603ObjectTypebatchcreatecrmobjects202509ObjectTypebatchcreate` operationId).
-	Postcrmobjects202603ObjectTypebatchcreatecrmobjects202509ObjectTypebatchcreateWithResponse(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypebatchcreatecrmobjects202509ObjectTypebatchcreateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypebatchcreatecrmobjects202509ObjectTypebatchcreateResponse, error)
+	// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/create (the `Postcrmobjects202603ObjectTypebatchcreate` operationId).
+	Postcrmobjects202603ObjectTypebatchcreateWithResponse(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypebatchcreateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypebatchcreateResponse, error)
 
-	// Postcrmobjects202603ObjectTypebatchreadcrmobjects202509ObjectTypebatchreadWithBodyWithResponse Read a batch of objects by internal ID, or unique property values
-	//
-	// Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
+	// Postcrmobjects202603ObjectTypebatchreadWithBodyWithResponse Read a batch of objects by internal ID, or unique property values
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
-	// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/read (the `Postcrmobjects202603ObjectTypebatchreadcrmobjects202509ObjectTypebatchread` operationId).
-	Postcrmobjects202603ObjectTypebatchreadcrmobjects202509ObjectTypebatchreadWithBodyWithResponse(ctx context.Context, objectType string, params *Postcrmobjects202603ObjectTypebatchreadcrmobjects202509ObjectTypebatchreadParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypebatchreadcrmobjects202509ObjectTypebatchreadResponse, error)
+	// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/read (the `Postcrmobjects202603ObjectTypebatchread` operationId).
+	Postcrmobjects202603ObjectTypebatchreadWithBodyWithResponse(ctx context.Context, objectType string, params *Postcrmobjects202603ObjectTypebatchreadParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypebatchreadResponse, error)
 
-	// Postcrmobjects202603ObjectTypebatchreadcrmobjects202509ObjectTypebatchreadWithResponse Read a batch of objects by internal ID, or unique property values
-	//
-	// Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
+	// Postcrmobjects202603ObjectTypebatchreadWithResponse Read a batch of objects by internal ID, or unique property values
 	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
-	// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/read (the `Postcrmobjects202603ObjectTypebatchreadcrmobjects202509ObjectTypebatchread` operationId).
-	Postcrmobjects202603ObjectTypebatchreadcrmobjects202509ObjectTypebatchreadWithResponse(ctx context.Context, objectType string, params *Postcrmobjects202603ObjectTypebatchreadcrmobjects202509ObjectTypebatchreadParams, body Postcrmobjects202603ObjectTypebatchreadcrmobjects202509ObjectTypebatchreadJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypebatchreadcrmobjects202509ObjectTypebatchreadResponse, error)
+	// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/read (the `Postcrmobjects202603ObjectTypebatchread` operationId).
+	Postcrmobjects202603ObjectTypebatchreadWithResponse(ctx context.Context, objectType string, params *Postcrmobjects202603ObjectTypebatchreadParams, body Postcrmobjects202603ObjectTypebatchreadJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypebatchreadResponse, error)
 
-	// Postcrmobjects202603ObjectTypebatchupdatecrmobjects202509ObjectTypebatchupdateWithBodyWithResponse Update a batch of objects by internal ID, or unique property values
+	// Postcrmobjects202603ObjectTypebatchupdateWithBodyWithResponse Update a batch of objects
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
-	// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/update (the `Postcrmobjects202603ObjectTypebatchupdatecrmobjects202509ObjectTypebatchupdate` operationId).
-	Postcrmobjects202603ObjectTypebatchupdatecrmobjects202509ObjectTypebatchupdateWithBodyWithResponse(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypebatchupdatecrmobjects202509ObjectTypebatchupdateResponse, error)
+	// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/update (the `Postcrmobjects202603ObjectTypebatchupdate` operationId).
+	Postcrmobjects202603ObjectTypebatchupdateWithBodyWithResponse(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypebatchupdateResponse, error)
 
-	// Postcrmobjects202603ObjectTypebatchupdatecrmobjects202509ObjectTypebatchupdateWithResponse Update a batch of objects by internal ID, or unique property values
+	// Postcrmobjects202603ObjectTypebatchupdateWithResponse Update a batch of objects
 	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
-	// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/update (the `Postcrmobjects202603ObjectTypebatchupdatecrmobjects202509ObjectTypebatchupdate` operationId).
-	Postcrmobjects202603ObjectTypebatchupdatecrmobjects202509ObjectTypebatchupdateWithResponse(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypebatchupdatecrmobjects202509ObjectTypebatchupdateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypebatchupdatecrmobjects202509ObjectTypebatchupdateResponse, error)
+	// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/update (the `Postcrmobjects202603ObjectTypebatchupdate` operationId).
+	Postcrmobjects202603ObjectTypebatchupdateWithResponse(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypebatchupdateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypebatchupdateResponse, error)
 
-	// Postcrmobjects202603ObjectTypebatchupsertcrmobjects202509ObjectTypebatchupsertWithBodyWithResponse Create or update a batch of objects by unique property values
-	//
-	// Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
+	// Postcrmobjects202603ObjectTypebatchupsertWithBodyWithResponse Create or update a batch of objects by unique property values
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
-	// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/upsert (the `Postcrmobjects202603ObjectTypebatchupsertcrmobjects202509ObjectTypebatchupsert` operationId).
-	Postcrmobjects202603ObjectTypebatchupsertcrmobjects202509ObjectTypebatchupsertWithBodyWithResponse(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypebatchupsertcrmobjects202509ObjectTypebatchupsertResponse, error)
+	// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/upsert (the `Postcrmobjects202603ObjectTypebatchupsert` operationId).
+	Postcrmobjects202603ObjectTypebatchupsertWithBodyWithResponse(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypebatchupsertResponse, error)
 
-	// Postcrmobjects202603ObjectTypebatchupsertcrmobjects202509ObjectTypebatchupsertWithResponse Create or update a batch of objects by unique property values
-	//
-	// Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
+	// Postcrmobjects202603ObjectTypebatchupsertWithResponse Create or update a batch of objects by unique property values
 	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
-	// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/upsert (the `Postcrmobjects202603ObjectTypebatchupsertcrmobjects202509ObjectTypebatchupsert` operationId).
-	Postcrmobjects202603ObjectTypebatchupsertcrmobjects202509ObjectTypebatchupsertWithResponse(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypebatchupsertcrmobjects202509ObjectTypebatchupsertJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypebatchupsertcrmobjects202509ObjectTypebatchupsertResponse, error)
+	// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/upsert (the `Postcrmobjects202603ObjectTypebatchupsert` operationId).
+	Postcrmobjects202603ObjectTypebatchupsertWithResponse(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypebatchupsertJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypebatchupsertResponse, error)
 
-	// Postcrmobjects202603ObjectTypemergeMergeWithBodyWithResponse Merge two objects with same type
+	// Postcrmobjects202603ObjectTypegdprDeleteWithBodyWithResponse GDPR DELETE
 	//
-	// Merge two CRM objects of the same type by specifying one as the primary object and the other as the object to be merged into it.
+	// Permanently delete a contact and all associated content to follow GDPR. Use optional property 'idProperty' set to 'email' to identify contact by email address. If email address is not found, the email address will be added to a blocklist and prevent it from being used in the future.
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
-	// Corresponds with POST /crm/objects/2026-03/{objectType}/merge (the `Postcrmobjects202603ObjectTypemergeMerge` operationId).
-	Postcrmobjects202603ObjectTypemergeMergeWithBodyWithResponse(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypemergeMergeResponse, error)
+	// Corresponds with POST /crm/objects/2026-03/{objectType}/gdpr-delete (the `Postcrmobjects202603ObjectTypegdprDelete` operationId).
+	Postcrmobjects202603ObjectTypegdprDeleteWithBodyWithResponse(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypegdprDeleteResponse, error)
 
-	// Postcrmobjects202603ObjectTypemergeMergeWithResponse Merge two objects with same type
+	// Postcrmobjects202603ObjectTypegdprDeleteWithResponse GDPR DELETE
 	//
-	// Merge two CRM objects of the same type by specifying one as the primary object and the other as the object to be merged into it.
+	// Permanently delete a contact and all associated content to follow GDPR. Use optional property 'idProperty' set to 'email' to identify contact by email address. If email address is not found, the email address will be added to a blocklist and prevent it from being used in the future.
 	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
-	// Corresponds with POST /crm/objects/2026-03/{objectType}/merge (the `Postcrmobjects202603ObjectTypemergeMerge` operationId).
-	Postcrmobjects202603ObjectTypemergeMergeWithResponse(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypemergeMergeJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypemergeMergeResponse, error)
+	// Corresponds with POST /crm/objects/2026-03/{objectType}/gdpr-delete (the `Postcrmobjects202603ObjectTypegdprDelete` operationId).
+	Postcrmobjects202603ObjectTypegdprDeleteWithResponse(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypegdprDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypegdprDeleteResponse, error)
 
-	// Postcrmobjects202603ObjectTypesearchcrmobjects202509ObjectTypesearchWithBodyWithResponse performs a POST /crm/objects/2026-03/{objectType}/search (the `Postcrmobjects202603ObjectTypesearchcrmobjects202509ObjectTypesearch` operationId) request,
+	// Postcrmobjects202603ObjectTypemergeWithBodyWithResponse Merge two objects with same type
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /crm/objects/2026-03/{objectType}/merge (the `Postcrmobjects202603ObjectTypemerge` operationId).
+	Postcrmobjects202603ObjectTypemergeWithBodyWithResponse(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypemergeResponse, error)
+
+	// Postcrmobjects202603ObjectTypemergeWithResponse Merge two objects with same type
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /crm/objects/2026-03/{objectType}/merge (the `Postcrmobjects202603ObjectTypemerge` operationId).
+	Postcrmobjects202603ObjectTypemergeWithResponse(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypemergeJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypemergeResponse, error)
+
+	// Postcrmobjects202603ObjectTypesearchWithBodyWithResponse performs a POST /crm/objects/2026-03/{objectType}/search (the `Postcrmobjects202603ObjectTypesearch` operationId) request,
 	// with any type of body and a specified content type.
 	//
 	// Returns a wrapper object for the known response body format(s).
-	Postcrmobjects202603ObjectTypesearchcrmobjects202509ObjectTypesearchWithBodyWithResponse(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypesearchcrmobjects202509ObjectTypesearchResponse, error)
+	Postcrmobjects202603ObjectTypesearchWithBodyWithResponse(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypesearchResponse, error)
 
-	// Postcrmobjects202603ObjectTypesearchcrmobjects202509ObjectTypesearchWithResponse performs a POST /crm/objects/2026-03/{objectType}/search (the `Postcrmobjects202603ObjectTypesearchcrmobjects202509ObjectTypesearch` operationId) request.
+	// Postcrmobjects202603ObjectTypesearchWithResponse performs a POST /crm/objects/2026-03/{objectType}/search (the `Postcrmobjects202603ObjectTypesearch` operationId) request.
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
-	Postcrmobjects202603ObjectTypesearchcrmobjects202509ObjectTypesearchWithResponse(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypesearchcrmobjects202509ObjectTypesearchJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypesearchcrmobjects202509ObjectTypesearchResponse, error)
+	Postcrmobjects202603ObjectTypesearchWithResponse(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypesearchJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmobjects202603ObjectTypesearchResponse, error)
 
-	// Deletecrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdWithResponse Archive
+	// Deletecrmobjects202603ObjectTypeObjectIdWithResponse Archive
 	//
 	// Move an Object identified by `{objectId}` to the recycling bin.
 	//
 	// Returns a wrapper object for the known response body format(s).
 	//
-	// Corresponds with DELETE /crm/objects/2026-03/{objectType}/{objectId} (the `Deletecrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectId` operationId).
-	Deletecrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdWithResponse(ctx context.Context, objectType string, objectId string, reqEditors ...RequestEditorFn) (*Deletecrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdResponse, error)
+	// Corresponds with DELETE /crm/objects/2026-03/{objectType}/{objectId} (the `Deletecrmobjects202603ObjectTypeObjectId` operationId).
+	Deletecrmobjects202603ObjectTypeObjectIdWithResponse(ctx context.Context, objectType string, objectId string, reqEditors ...RequestEditorFn) (*Deletecrmobjects202603ObjectTypeObjectIdResponse, error)
 
-	// Getcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdWithResponse Read
+	// Getcrmobjects202603ObjectTypeObjectIdWithResponse Read
 	//
 	// Read an Object identified by `{objectId}`. `{objectId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param.
 	//
 	// Returns a wrapper object for the known response body format(s).
 	//
-	// Corresponds with GET /crm/objects/2026-03/{objectType}/{objectId} (the `Getcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectId` operationId).
-	Getcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdWithResponse(ctx context.Context, objectType string, objectId string, params *Getcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdParams, reqEditors ...RequestEditorFn) (*Getcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdResponse, error)
+	// Corresponds with GET /crm/objects/2026-03/{objectType}/{objectId} (the `Getcrmobjects202603ObjectTypeObjectId` operationId).
+	Getcrmobjects202603ObjectTypeObjectIdWithResponse(ctx context.Context, objectType string, objectId string, params *Getcrmobjects202603ObjectTypeObjectIdParams, reqEditors ...RequestEditorFn) (*Getcrmobjects202603ObjectTypeObjectIdResponse, error)
 
-	// Patchcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdWithBodyWithResponse Update
+	// Patchcrmobjects202603ObjectTypeObjectIdWithBodyWithResponse Update
 	//
-	// Perform a partial update of an Object identified by `{objectId}`or optionally a unique property value as specified by the `idProperty` query param. `{objectId}` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
+	// Perform a partial update of an Object identified by `{objectId}`. `{objectId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param. Provided property values will be overwritten. Read-only and non-existent properties will be ignored. Properties values can be cleared by passing an empty string.
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
-	// Corresponds with PATCH /crm/objects/2026-03/{objectType}/{objectId} (the `Patchcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectId` operationId).
-	Patchcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdWithBodyWithResponse(ctx context.Context, objectType string, objectId string, params *Patchcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Patchcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdResponse, error)
+	// Corresponds with PATCH /crm/objects/2026-03/{objectType}/{objectId} (the `Patchcrmobjects202603ObjectTypeObjectId` operationId).
+	Patchcrmobjects202603ObjectTypeObjectIdWithBodyWithResponse(ctx context.Context, objectType string, objectId string, params *Patchcrmobjects202603ObjectTypeObjectIdParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Patchcrmobjects202603ObjectTypeObjectIdResponse, error)
 
-	// Patchcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdWithResponse Update
+	// Patchcrmobjects202603ObjectTypeObjectIdWithResponse Update
 	//
-	// Perform a partial update of an Object identified by `{objectId}`or optionally a unique property value as specified by the `idProperty` query param. `{objectId}` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
+	// Perform a partial update of an Object identified by `{objectId}`. `{objectId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param. Provided property values will be overwritten. Read-only and non-existent properties will be ignored. Properties values can be cleared by passing an empty string.
 	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
-	// Corresponds with PATCH /crm/objects/2026-03/{objectType}/{objectId} (the `Patchcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectId` operationId).
-	Patchcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdWithResponse(ctx context.Context, objectType string, objectId string, params *Patchcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdParams, body Patchcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdJSONRequestBody, reqEditors ...RequestEditorFn) (*Patchcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdResponse, error)
+	// Corresponds with PATCH /crm/objects/2026-03/{objectType}/{objectId} (the `Patchcrmobjects202603ObjectTypeObjectId` operationId).
+	Patchcrmobjects202603ObjectTypeObjectIdWithResponse(ctx context.Context, objectType string, objectId string, params *Patchcrmobjects202603ObjectTypeObjectIdParams, body Patchcrmobjects202603ObjectTypeObjectIdJSONRequestBody, reqEditors ...RequestEditorFn) (*Patchcrmobjects202603ObjectTypeObjectIdResponse, error)
 
-	// Getcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypecrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeWithResponse Retrieve all associations by object type
-	//
-	// Retrieve all associations between a specific record and an object type. Limit 500 per call.
+	// Getcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeWithResponse List associations of an object by type
 	//
 	// Returns a wrapper object for the known response body format(s).
 	//
-	// Corresponds with GET /crm/objects/2026-03/{objectType}/{objectId}/associations/{toObjectType} (the `Getcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypecrmobjects202509ObjectTypeObjectIdassociationsToObjectType` operationId).
-	Getcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypecrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeWithResponse(ctx context.Context, objectType string, objectId string, toObjectType string, params *Getcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypecrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeParams, reqEditors ...RequestEditorFn) (*Getcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypecrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeResponse, error)
+	// Corresponds with GET /crm/objects/2026-03/{objectType}/{objectId}/associations/{toObjectType} (the `Getcrmobjects202603ObjectTypeObjectIdassociationsToObjectType` operationId).
+	Getcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeWithResponse(ctx context.Context, objectType string, objectId string, toObjectType string, params *Getcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeParams, reqEditors ...RequestEditorFn) (*Getcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeResponse, error)
 
-	// Deletecrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectIdWithResponse Delete associations between two records
-	//
-	// deletes all associations between two records.
+	// Deletecrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdWithResponse performs a DELETE /crm/objects/2026-03/{objectType}/{objectId}/associations/{toObjectType}/{toObjectId} (the `Deletecrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectId` operationId) request.
 	//
 	// Returns a wrapper object for the known response body format(s).
-	//
-	// Corresponds with DELETE /crm/objects/2026-03/{objectType}/{objectId}/associations/{toObjectType}/{toObjectId} (the `Deletecrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectId` operationId).
-	Deletecrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectIdWithResponse(ctx context.Context, objectType string, objectId string, toObjectType string, toObjectId string, reqEditors ...RequestEditorFn) (*Deletecrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectIdResponse, error)
+	Deletecrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdWithResponse(ctx context.Context, objectType string, objectId string, toObjectType string, toObjectId string, reqEditors ...RequestEditorFn) (*Deletecrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdResponse, error)
 
-	// Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectIdWithBodyWithResponse Associate records (labelled)
+	// Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdWithBodyWithResponse performs a PUT /crm/objects/2026-03/{objectType}/{objectId}/associations/{toObjectType}/{toObjectId} (the `Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectId` operationId) request,
+	// with any type of body and a specified content type.
 	//
-	// Set association labels between two records.
-	//
-	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
-	//
-	// Corresponds with PUT /crm/objects/2026-03/{objectType}/{objectId}/associations/{toObjectType}/{toObjectId} (the `Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectId` operationId).
-	Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectIdWithBodyWithResponse(ctx context.Context, objectType string, objectId string, toObjectType string, toObjectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectIdResponse, error)
+	// Returns a wrapper object for the known response body format(s).
+	Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdWithBodyWithResponse(ctx context.Context, objectType string, objectId string, toObjectType string, toObjectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdResponse, error)
 
-	// Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectIdWithResponse Associate records (labelled)
-	//
-	// Set association labels between two records.
-	//
+	// Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdWithResponse performs a PUT /crm/objects/2026-03/{objectType}/{objectId}/associations/{toObjectType}/{toObjectId} (the `Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectId` operationId) request.
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
-	//
-	// Corresponds with PUT /crm/objects/2026-03/{objectType}/{objectId}/associations/{toObjectType}/{toObjectId} (the `Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectId` operationId).
-	Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectIdWithResponse(ctx context.Context, objectType string, objectId string, toObjectType string, toObjectId string, body Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectIdJSONRequestBody, reqEditors ...RequestEditorFn) (*Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectIdResponse, error)
+	Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdWithResponse(ctx context.Context, objectType string, objectId string, toObjectType string, toObjectId string, body Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdJSONRequestBody, reqEditors ...RequestEditorFn) (*Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdResponse, error)
 
-	// Getcrmowners202603crmownersv3WithResponse performs a GET /crm/owners/2026-03 (the `Getcrmowners202603crmownersv3` operationId) request.
+	// Getcrmowners202603crmownersv3WithResponse List owners
+	//
+	// Retrieve a paginated list of owners from your HubSpot account. This endpoint allows filtering by email and supports pagination through the 'after' parameter. You can also specify the maximum number of results per page and choose to include archived owners in the response.
 	//
 	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /crm/owners/2026-03 (the `Getcrmowners202603crmownersv3` operationId).
 	Getcrmowners202603crmownersv3WithResponse(ctx context.Context, params *Getcrmowners202603crmownersv3Params, reqEditors ...RequestEditorFn) (*Getcrmowners202603crmownersv3Response, error)
 
 	// Getcrmowners202603OwnerIdGetByIdWithResponse Retrieve a specific owner by ID
@@ -9344,6 +10797,8 @@ type ClientWithResponsesInterface interface {
 
 	// Deletecrmpipelines202603ObjectTypePipelineIdArchiveWithResponse Delete a pipeline
 	//
+	// Delete a pipeline identified by its unique pipelineId.
+	//
 	// Returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with DELETE /crm/pipelines/2026-03/{objectType}/{pipelineId} (the `Deletecrmpipelines202603ObjectTypePipelineIdArchive` operationId).
@@ -9358,21 +10813,27 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with GET /crm/pipelines/2026-03/{objectType}/{pipelineId} (the `Getcrmpipelines202603ObjectTypePipelineIdGetById` operationId).
 	Getcrmpipelines202603ObjectTypePipelineIdGetByIdWithResponse(ctx context.Context, objectType string, pipelineId string, reqEditors ...RequestEditorFn) (*Getcrmpipelines202603ObjectTypePipelineIdGetByIdResponse, error)
 
-	// Patchcrmpipelines202603ObjectTypePipelineIdUpdateWithBodyWithResponse performs a PATCH /crm/pipelines/2026-03/{objectType}/{pipelineId} (the `Patchcrmpipelines202603ObjectTypePipelineIdUpdate` operationId) request,
-	// with any type of body and a specified content type.
+	// Patchcrmpipelines202603ObjectTypePipelineIdUpdateWithBodyWithResponse Perform a partial update of the pipeline identified by pipelineId.
 	//
 	// Perform a partial update of the pipeline identified by `{pipelineId}`. The updated pipeline will be returned in the response.
 	//
-	// Returns a wrapper object for the known response body format(s).
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PATCH /crm/pipelines/2026-03/{objectType}/{pipelineId} (the `Patchcrmpipelines202603ObjectTypePipelineIdUpdate` operationId).
 	Patchcrmpipelines202603ObjectTypePipelineIdUpdateWithBodyWithResponse(ctx context.Context, objectType string, pipelineId string, params *Patchcrmpipelines202603ObjectTypePipelineIdUpdateParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Patchcrmpipelines202603ObjectTypePipelineIdUpdateResponse, error)
 
-	// Patchcrmpipelines202603ObjectTypePipelineIdUpdateWithResponse performs a PATCH /crm/pipelines/2026-03/{objectType}/{pipelineId} (the `Patchcrmpipelines202603ObjectTypePipelineIdUpdate` operationId) request.
-	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	// Patchcrmpipelines202603ObjectTypePipelineIdUpdateWithResponse Perform a partial update of the pipeline identified by pipelineId.
 	//
 	// Perform a partial update of the pipeline identified by `{pipelineId}`. The updated pipeline will be returned in the response.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PATCH /crm/pipelines/2026-03/{objectType}/{pipelineId} (the `Patchcrmpipelines202603ObjectTypePipelineIdUpdate` operationId).
 	Patchcrmpipelines202603ObjectTypePipelineIdUpdateWithResponse(ctx context.Context, objectType string, pipelineId string, params *Patchcrmpipelines202603ObjectTypePipelineIdUpdateParams, body Patchcrmpipelines202603ObjectTypePipelineIdUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*Patchcrmpipelines202603ObjectTypePipelineIdUpdateResponse, error)
 
 	// Putcrmpipelines202603ObjectTypePipelineIdReplaceWithBodyWithResponse Replace a pipeline
+	//
+	// Replace all properties of an existing pipeline with the provided values.
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
@@ -9380,6 +10841,8 @@ type ClientWithResponsesInterface interface {
 	Putcrmpipelines202603ObjectTypePipelineIdReplaceWithBodyWithResponse(ctx context.Context, objectType string, pipelineId string, params *Putcrmpipelines202603ObjectTypePipelineIdReplaceParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Putcrmpipelines202603ObjectTypePipelineIdReplaceResponse, error)
 
 	// Putcrmpipelines202603ObjectTypePipelineIdReplaceWithResponse Replace a pipeline
+	//
+	// Replace all properties of an existing pipeline with the provided values.
 	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
@@ -9406,12 +10869,16 @@ type ClientWithResponsesInterface interface {
 
 	// Postcrmpipelines202603ObjectTypePipelineIdstagesCreateWithBodyWithResponse Create a pipeline stage
 	//
+	// Create a new stage within the specified pipeline.
+	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with POST /crm/pipelines/2026-03/{objectType}/{pipelineId}/stages (the `Postcrmpipelines202603ObjectTypePipelineIdstagesCreate` operationId).
 	Postcrmpipelines202603ObjectTypePipelineIdstagesCreateWithBodyWithResponse(ctx context.Context, objectType string, pipelineId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmpipelines202603ObjectTypePipelineIdstagesCreateResponse, error)
 
 	// Postcrmpipelines202603ObjectTypePipelineIdstagesCreateWithResponse Create a pipeline stage
+	//
+	// Create a new stage within the specified pipeline.
 	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
@@ -9420,26 +10887,38 @@ type ClientWithResponsesInterface interface {
 
 	// Deletecrmpipelines202603ObjectTypePipelineIdstagesStageIdArchiveWithResponse Delete a pipeline stage
 	//
+	// Delete a specific stage from a pipeline.
+	//
 	// Returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with DELETE /crm/pipelines/2026-03/{objectType}/{pipelineId}/stages/{stageId} (the `Deletecrmpipelines202603ObjectTypePipelineIdstagesStageIdArchive` operationId).
-	Deletecrmpipelines202603ObjectTypePipelineIdstagesStageIdArchiveWithResponse(ctx context.Context, objectType string, pipelineId string, stageId string, reqEditors ...RequestEditorFn) (*Deletecrmpipelines202603ObjectTypePipelineIdstagesStageIdArchiveResponse, error)
+	Deletecrmpipelines202603ObjectTypePipelineIdstagesStageIdArchiveWithResponse(ctx context.Context, objectType string, pipelineId string, stageId string, params *Deletecrmpipelines202603ObjectTypePipelineIdstagesStageIdArchiveParams, reqEditors ...RequestEditorFn) (*Deletecrmpipelines202603ObjectTypePipelineIdstagesStageIdArchiveResponse, error)
 
 	// Getcrmpipelines202603ObjectTypePipelineIdstagesStageIdGetByIdWithResponse Return a pipeline stage by ID
+	//
+	// Retrieve a specific stage from a pipeline using its ID.
 	//
 	// Returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with GET /crm/pipelines/2026-03/{objectType}/{pipelineId}/stages/{stageId} (the `Getcrmpipelines202603ObjectTypePipelineIdstagesStageIdGetById` operationId).
 	Getcrmpipelines202603ObjectTypePipelineIdstagesStageIdGetByIdWithResponse(ctx context.Context, objectType string, pipelineId string, stageId string, reqEditors ...RequestEditorFn) (*Getcrmpipelines202603ObjectTypePipelineIdstagesStageIdGetByIdResponse, error)
 
-	// Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdateWithBodyWithResponse performs a PATCH /crm/pipelines/2026-03/{objectType}/{pipelineId}/stages/{stageId} (the `Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdate` operationId) request,
-	// with any type of body and a specified content type.
+	// Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdateWithBodyWithResponse Update specific properties of an existing pipeline stage.
 	//
-	// Returns a wrapper object for the known response body format(s).
+	// Perform a partial update on a specific stage of a pipeline.
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PATCH /crm/pipelines/2026-03/{objectType}/{pipelineId}/stages/{stageId} (the `Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdate` operationId).
 	Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdateWithBodyWithResponse(ctx context.Context, objectType string, pipelineId string, stageId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdateResponse, error)
 
-	// Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdateWithResponse performs a PATCH /crm/pipelines/2026-03/{objectType}/{pipelineId}/stages/{stageId} (the `Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdate` operationId) request.
+	// Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdateWithResponse Update specific properties of an existing pipeline stage.
+	//
+	// Perform a partial update on a specific stage of a pipeline.
+	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PATCH /crm/pipelines/2026-03/{objectType}/{pipelineId}/stages/{stageId} (the `Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdate` operationId).
 	Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdateWithResponse(ctx context.Context, objectType string, pipelineId string, stageId string, body Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdateResponse, error)
 
 	// Putcrmpipelines202603ObjectTypePipelineIdstagesStageIdReplaceWithBodyWithResponse Replace a pipeline stage
@@ -9460,11 +10939,13 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with PUT /crm/pipelines/2026-03/{objectType}/{pipelineId}/stages/{stageId} (the `Putcrmpipelines202603ObjectTypePipelineIdstagesStageIdReplace` operationId).
 	Putcrmpipelines202603ObjectTypePipelineIdstagesStageIdReplaceWithResponse(ctx context.Context, objectType string, pipelineId string, stageId string, body Putcrmpipelines202603ObjectTypePipelineIdstagesStageIdReplaceJSONRequestBody, reqEditors ...RequestEditorFn) (*Putcrmpipelines202603ObjectTypePipelineIdstagesStageIdReplaceResponse, error)
 
-	// Getcrmpipelines202603ObjectTypePipelineIdstagesStageIdauditGetAuditWithResponse performs a GET /crm/pipelines/2026-03/{objectType}/{pipelineId}/stages/{stageId}/audit (the `Getcrmpipelines202603ObjectTypePipelineIdstagesStageIdauditGetAudit` operationId) request.
+	// Getcrmpipelines202603ObjectTypePipelineIdstagesStageIdauditGetAuditWithResponse Retrieve a reverse chronological list of all changes made to a specific pipeline stage.
 	//
 	// Return a reverse chronological list of all mutations that have occurred on the pipeline stage identified by `{stageId}`.
 	//
 	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /crm/pipelines/2026-03/{objectType}/{pipelineId}/stages/{stageId}/audit (the `Getcrmpipelines202603ObjectTypePipelineIdstagesStageIdauditGetAudit` operationId).
 	Getcrmpipelines202603ObjectTypePipelineIdstagesStageIdauditGetAuditWithResponse(ctx context.Context, objectType string, pipelineId string, stageId string, reqEditors ...RequestEditorFn) (*Getcrmpipelines202603ObjectTypePipelineIdstagesStageIdauditGetAuditResponse, error)
 
 	// Getcrmproperties202603ObjectTypecrmproperties202509ObjectTypeWithResponse Read all properties
@@ -9864,9 +11345,9 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /events/2026-03/send/batch (the `Postevents202603sendbatchSend` operationId).
 	Postevents202603sendbatchSendWithResponse(ctx context.Context, body Postevents202603sendbatchSendJSONRequestBody, reqEditors ...RequestEditorFn) (*Postevents202603sendbatchSendResponse, error)
 
-	// GeteventseventOccurrences202603eventseventOccurrences202603WithResponse Retrieve event occurrences
+	// GeteventseventOccurrences202603eventseventOccurrences202603WithResponse Retrieve events
 	//
-	// Retrieve event occurrences for the specified time frame. This endpoint allows filtering by various parameters such as object type, event type, and occurrence time. It supports pagination and sorting of results.
+	// Retrieve event occurrences for a specified date in September 2026. This endpoint allows you to filter and sort events based on various criteria, such as event type, object type, and occurrence dates. It supports pagination and can return specific properties of events if requested.
 	//
 	// Returns a wrapper object for the known response body format(s).
 	//
@@ -9884,9 +11365,13 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with GET /events/event-occurrences/2026-03/event-types (the `GeteventseventOccurrences202603eventTypeseventseventOccurrences202603eventTypes` operationId).
 	GeteventseventOccurrences202603eventTypeseventseventOccurrences202603eventTypesWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*GeteventseventOccurrences202603eventTypeseventseventOccurrences202603eventTypesResponse, error)
 
-	// GetfeatureFlags202603AppIdflagsallfeatureFlagsv3AppIdflagsallWithResponse performs a GET /feature-flags/2026-03/{appId}/flags/all (the `GetfeatureFlags202603AppIdflagsallfeatureFlagsv3AppIdflagsall` operationId) request.
+	// GetfeatureFlags202603AppIdflagsallfeatureFlagsv3AppIdflagsallWithResponse List Flags
+	//
+	// Retrieve all feature flags associated with a specific application in your HubSpot account. This endpoint is useful for developers who need to manage or audit feature flags for their applications. It requires the application ID to identify which application's flags to list.
 	//
 	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /feature-flags/2026-03/{appId}/flags/all (the `GetfeatureFlags202603AppIdflagsallfeatureFlagsv3AppIdflagsall` operationId).
 	GetfeatureFlags202603AppIdflagsallfeatureFlagsv3AppIdflagsallWithResponse(ctx context.Context, appId int32, reqEditors ...RequestEditorFn) (*GetfeatureFlags202603AppIdflagsallfeatureFlagsv3AppIdflagsallResponse, error)
 
 	// DeletefeatureFlags202603AppIdflagsFlagNameWithResponse Delete an app's feature flag
@@ -10249,51 +11734,55 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /integrators/timeline/2026-03/events (the `Postintegratorstimeline202603eventsCreate` operationId).
 	Postintegratorstimeline202603eventsCreateWithResponse(ctx context.Context, body Postintegratorstimeline202603eventsCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postintegratorstimeline202603eventsCreateResponse, error)
 
-	// Postintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatchWithBodyWithResponse performs a POST /integrators/timeline/2026-03/events/batch (the `Postintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatch` operationId) request,
-	// with any type of body and a specified content type.
+	// Postintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatchWithBodyWithResponse Batch insert events
 	//
-	// Returns a wrapper object for the known response body format(s).
-	Postintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatchWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatchResponse, error)
-
-	// Postintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatchWithResponse performs a POST /integrators/timeline/2026-03/events/batch (the `Postintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatch` operationId) request.
-	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
-	Postintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatchWithResponse(ctx context.Context, body Postintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatchJSONRequestBody, reqEditors ...RequestEditorFn) (*Postintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatchResponse, error)
-
-	// Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojectsWithBodyWithResponse performs a POST /integrators/timeline/2026-03/types/projects (the `Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojects` operationId) request,
-	// with any type of body and a specified content type.
-	//
-	// Returns a wrapper object for the known response body format(s).
-	Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojectsWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojectsResponse, error)
-
-	// Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojectsWithResponse performs a POST /integrators/timeline/2026-03/types/projects (the `Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojects` operationId) request.
-	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
-	Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojectsWithResponse(ctx context.Context, body Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojectsJSONRequestBody, reqEditors ...RequestEditorFn) (*Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojectsResponse, error)
-
-	// Getmarketingcampaigns202603marketingcampaignsv3WithResponse Retrieve campaigns
-	//
-	// Retrieve a paginated list of campaigns from your HubSpot account. This endpoint allows you to specify sorting, pagination, and filtering options to tailor the results to your needs.
-	//
-	// Returns a wrapper object for the known response body format(s).
-	//
-	// Corresponds with GET /marketing/campaigns/2026-03 (the `Getmarketingcampaigns202603marketingcampaignsv3` operationId).
-	Getmarketingcampaigns202603marketingcampaignsv3WithResponse(ctx context.Context, params *Getmarketingcampaigns202603marketingcampaignsv3Params, reqEditors ...RequestEditorFn) (*Getmarketingcampaigns202603marketingcampaignsv3Response, error)
-
-	// Postmarketingcampaigns202603marketingcampaignsv3WithBodyWithResponse Create a campaign
-	//
-	// Create a campaign with the specified properties and receive a copy of the campaign object, including its ID. Note that the 'hs_goal' property is deprecated and will be ignored if provided.
+	// Insert a batch of new App Event occurrences into the timeline. Each occurrence in the batch is immutable, and if an occurrence with the same ID already exists, the entire batch will be rejected. The batch can include occurrences from multiple event types, but all must belong to a single portal.
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
-	// Corresponds with POST /marketing/campaigns/2026-03 (the `Postmarketingcampaigns202603marketingcampaignsv3` operationId).
-	Postmarketingcampaigns202603marketingcampaignsv3WithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postmarketingcampaigns202603marketingcampaignsv3Response, error)
+	// Corresponds with POST /integrators/timeline/2026-03/events/batch (the `Postintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatch` operationId).
+	Postintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatchWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatchResponse, error)
 
-	// Postmarketingcampaigns202603marketingcampaignsv3WithResponse Create a campaign
+	// Postintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatchWithResponse Batch insert events
 	//
-	// Create a campaign with the specified properties and receive a copy of the campaign object, including its ID. Note that the 'hs_goal' property is deprecated and will be ignored if provided.
+	// Insert a batch of new App Event occurrences into the timeline. Each occurrence in the batch is immutable, and if an occurrence with the same ID already exists, the entire batch will be rejected. The batch can include occurrences from multiple event types, but all must belong to a single portal.
 	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
-	// Corresponds with POST /marketing/campaigns/2026-03 (the `Postmarketingcampaigns202603marketingcampaignsv3` operationId).
+	// Corresponds with POST /integrators/timeline/2026-03/events/batch (the `Postintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatch` operationId).
+	Postintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatchWithResponse(ctx context.Context, body Postintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatchJSONRequestBody, reqEditors ...RequestEditorFn) (*Postintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatchResponse, error)
+
+	// Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojectsWithBodyWithResponse Resolve Event Type
+	//
+	// Resolve the fully qualified name (FQN) of an App Event Type using its developer coordinates, which include the project name and developer symbol. This endpoint is used for event types managed through Projects and does not support legacy or non-migrated event types.
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /integrators/timeline/2026-03/types/projects (the `Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojects` operationId).
+	Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojectsWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojectsResponse, error)
+
+	// Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojectsWithResponse Resolve Event Type
+	//
+	// Resolve the fully qualified name (FQN) of an App Event Type using its developer coordinates, which include the project name and developer symbol. This endpoint is used for event types managed through Projects and does not support legacy or non-migrated event types.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /integrators/timeline/2026-03/types/projects (the `Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojects` operationId).
+	Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojectsWithResponse(ctx context.Context, body Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojectsJSONRequestBody, reqEditors ...RequestEditorFn) (*Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojectsResponse, error)
+
+	// Getmarketingcampaigns202603marketingcampaignsv3WithResponse performs a GET /marketing/campaigns/2026-03 (the `Getmarketingcampaigns202603marketingcampaignsv3` operationId) request.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	Getmarketingcampaigns202603marketingcampaignsv3WithResponse(ctx context.Context, params *Getmarketingcampaigns202603marketingcampaignsv3Params, reqEditors ...RequestEditorFn) (*Getmarketingcampaigns202603marketingcampaignsv3Response, error)
+
+	// Postmarketingcampaigns202603marketingcampaignsv3WithBodyWithResponse performs a POST /marketing/campaigns/2026-03 (the `Postmarketingcampaigns202603marketingcampaignsv3` operationId) request,
+	// with any type of body and a specified content type.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	Postmarketingcampaigns202603marketingcampaignsv3WithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postmarketingcampaigns202603marketingcampaignsv3Response, error)
+
+	// Postmarketingcampaigns202603marketingcampaignsv3WithResponse performs a POST /marketing/campaigns/2026-03 (the `Postmarketingcampaigns202603marketingcampaignsv3` operationId) request.
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	Postmarketingcampaigns202603marketingcampaignsv3WithResponse(ctx context.Context, body Postmarketingcampaigns202603marketingcampaignsv3JSONRequestBody, reqEditors ...RequestEditorFn) (*Postmarketingcampaigns202603marketingcampaignsv3Response, error)
 
 	// Postmarketingcampaigns202603batcharchiveWithBodyWithResponse Delete a batch of campaigns
@@ -10618,19 +12107,31 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /marketing/email-campaigns/2026-03/single-send (the `PostmarketingemailCampaigns202603singleSendmarketingv4emailsingleSend` operationId).
 	PostmarketingemailCampaigns202603singleSendmarketingv4emailsingleSendWithResponse(ctx context.Context, body PostmarketingemailCampaigns202603singleSendmarketingv4emailsingleSendJSONRequestBody, reqEditors ...RequestEditorFn) (*PostmarketingemailCampaigns202603singleSendmarketingv4emailsingleSendResponse, error)
 
-	// Getmarketingemails202603marketingemailsv3WithResponse performs a GET /marketing/emails/2026-03 (the `Getmarketingemails202603marketingemailsv3` operationId) request.
+	// Getmarketingemails202603marketingemailsv3WithResponse List Emails
+	//
+	// Retrieve a list of marketing emails from your HubSpot account. This endpoint allows you to filter emails based on various criteria such as publication date, creation date, update date, and more. You can also control the number of results per page and include additional statistics or properties in the response.
 	//
 	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /marketing/emails/2026-03 (the `Getmarketingemails202603marketingemailsv3` operationId).
 	Getmarketingemails202603marketingemailsv3WithResponse(ctx context.Context, params *Getmarketingemails202603marketingemailsv3Params, reqEditors ...RequestEditorFn) (*Getmarketingemails202603marketingemailsv3Response, error)
 
-	// Postmarketingemails202603marketingemailsv3WithBodyWithResponse performs a POST /marketing/emails/2026-03 (the `Postmarketingemails202603marketingemailsv3` operationId) request,
-	// with any type of body and a specified content type.
+	// Postmarketingemails202603marketingemailsv3WithBodyWithResponse Create Email
 	//
-	// Returns a wrapper object for the known response body format(s).
+	// Create a new marketing email in your HubSpot account using the specified parameters. This endpoint allows you to define the content, settings, and other details of the email. Upon successful creation, the URL of the newly created email resource is returned.
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /marketing/emails/2026-03 (the `Postmarketingemails202603marketingemailsv3` operationId).
 	Postmarketingemails202603marketingemailsv3WithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postmarketingemails202603marketingemailsv3Response, error)
 
-	// Postmarketingemails202603marketingemailsv3WithResponse performs a POST /marketing/emails/2026-03 (the `Postmarketingemails202603marketingemailsv3` operationId) request.
+	// Postmarketingemails202603marketingemailsv3WithResponse Create Email
+	//
+	// Create a new marketing email in your HubSpot account using the specified parameters. This endpoint allows you to define the content, settings, and other details of the email. Upon successful creation, the URL of the newly created email resource is returned.
+	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /marketing/emails/2026-03 (the `Postmarketingemails202603marketingemailsv3` operationId).
 	Postmarketingemails202603marketingemailsv3WithResponse(ctx context.Context, body Postmarketingemails202603marketingemailsv3JSONRequestBody, reqEditors ...RequestEditorFn) (*Postmarketingemails202603marketingemailsv3Response, error)
 
 	// Postmarketingemails202603abTestcreateVariationCreateAbTestVariationWithBodyWithResponse Create an A/B test variation of a marketing email
@@ -10770,7 +12271,7 @@ type ClientWithResponsesInterface interface {
 
 	// Postmarketingemails202603EmailIdpublishPublishOrSendWithResponse Publish or send a marketing email
 	//
-	// If you have a Marketing Hub Enterprise account or the transactional email add-on, you can use this endpoint to publish an automated email or send/schedule a regular email.
+	// If you have a Marketing Hub Enterprise account or the Transactional Email Add-On, you can use this endpoint to publish an automated email or send/schedule a regular email.
 	//
 	// Returns a wrapper object for the known response body format(s).
 	//
@@ -10815,16 +12316,20 @@ type ClientWithResponsesInterface interface {
 
 	// Postmarketingemails202603EmailIdunpublishUnpublishOrCancelWithResponse Unpublish or cancel a marketing email
 	//
-	// If you have a Marketing Hub Enterprise account or the transactional email add-on, you can use this endpoint to unpublish an automated email or cancel a regular email. If the email is already in the process of being sent, canceling might not be possible.
+	// If you have a Marketing Hub Enterprise account or the Transactional Email Add-On, you can use this endpoint to unpublish an automated email or cancel a regular email. If the email is already in the process of being sent, canceling might not be possible.
 	//
 	// Returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with POST /marketing/emails/2026-03/{emailId}/unpublish (the `Postmarketingemails202603EmailIdunpublishUnpublishOrCancel` operationId).
 	Postmarketingemails202603EmailIdunpublishUnpublishOrCancelWithResponse(ctx context.Context, emailId string, reqEditors ...RequestEditorFn) (*Postmarketingemails202603EmailIdunpublishUnpublishOrCancelResponse, error)
 
-	// GetmarketingmarketingEvents202603marketingmarketingEventsv3WithResponse performs a GET /marketing/marketing-events/2026-03 (the `GetmarketingmarketingEvents202603marketingmarketingEventsv3` operationId) request.
+	// GetmarketingmarketingEvents202603marketingmarketingEventsv3WithResponse List
+	//
+	// Retrieve a list of marketing events for the specified API version. This endpoint supports pagination to navigate through large sets of data. Use this to access marketing event details in a paginated format.
 	//
 	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /marketing/marketing-events/2026-03 (the `GetmarketingmarketingEvents202603marketingmarketingEventsv3` operationId).
 	GetmarketingmarketingEvents202603marketingmarketingEventsv3WithResponse(ctx context.Context, params *GetmarketingmarketingEvents202603marketingmarketingEventsv3Params, reqEditors ...RequestEditorFn) (*GetmarketingmarketingEvents202603marketingmarketingEventsv3Response, error)
 
 	// GetmarketingmarketingEvents202603associationsExternalAccountIdExternalEventIdlistsGetAllByExternalAccountAndEventIdsWithResponse Get lists associated with a marketing event
@@ -11450,441 +12955,441 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /marketing/transactional/2026-03/smtp-tokens/{tokenId}/password-reset (the `Postmarketingtransactional202603smtpTokensTokenIdpasswordResetResetPassword` operationId).
 	Postmarketingtransactional202603smtpTokensTokenIdpasswordResetResetPasswordWithResponse(ctx context.Context, tokenId string, reqEditors ...RequestEditorFn) (*Postmarketingtransactional202603smtpTokensTokenIdpasswordResetResetPasswordResponse, error)
 
-	// PostmediaBridge202603eventsattentionSpanWithBodyWithResponse Create an attention span event
+	// PostmediaBridge202603eventsattentionSpanWithBodyWithResponse Create Event
 	//
-	// Create an event containing the viewers attention span details for the media.
+	// Create a new attention span event in the MediaBridgeService. This endpoint is used to record attention span events, which can be useful for tracking user engagement with media content. The request must include a valid JSON body conforming to the AttentionSpanEventRequest schema.
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with POST /media-bridge/2026-03/events/attention-span (the `PostmediaBridge202603eventsattentionSpan` operationId).
 	PostmediaBridge202603eventsattentionSpanWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*PostmediaBridge202603eventsattentionSpanResponse, error)
 
-	// PostmediaBridge202603eventsattentionSpanWithResponse Create an attention span event
+	// PostmediaBridge202603eventsattentionSpanWithResponse Create Event
 	//
-	// Create an event containing the viewers attention span details for the media.
+	// Create a new attention span event in the MediaBridgeService. This endpoint is used to record attention span events, which can be useful for tracking user engagement with media content. The request must include a valid JSON body conforming to the AttentionSpanEventRequest schema.
 	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with POST /media-bridge/2026-03/events/attention-span (the `PostmediaBridge202603eventsattentionSpan` operationId).
 	PostmediaBridge202603eventsattentionSpanWithResponse(ctx context.Context, body PostmediaBridge202603eventsattentionSpanJSONRequestBody, reqEditors ...RequestEditorFn) (*PostmediaBridge202603eventsattentionSpanResponse, error)
 
-	// PostmediaBridge202603eventsmediaPlayedWithBodyWithResponse Create a played event
+	// PostmediaBridge202603eventsmediaPlayedWithBodyWithResponse Create
 	//
-	// Create an event for when a user begins playing a piece of media.
+	// Create a media played event in the HubSpot account. This endpoint is used to log when media content has been played, which can be useful for tracking user engagement with media resources.
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with POST /media-bridge/2026-03/events/media-played (the `PostmediaBridge202603eventsmediaPlayed` operationId).
 	PostmediaBridge202603eventsmediaPlayedWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*PostmediaBridge202603eventsmediaPlayedResponse, error)
 
-	// PostmediaBridge202603eventsmediaPlayedWithResponse Create a played event
+	// PostmediaBridge202603eventsmediaPlayedWithResponse Create
 	//
-	// Create an event for when a user begins playing a piece of media.
+	// Create a media played event in the HubSpot account. This endpoint is used to log when media content has been played, which can be useful for tracking user engagement with media resources.
 	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with POST /media-bridge/2026-03/events/media-played (the `PostmediaBridge202603eventsmediaPlayed` operationId).
 	PostmediaBridge202603eventsmediaPlayedWithResponse(ctx context.Context, body PostmediaBridge202603eventsmediaPlayedJSONRequestBody, reqEditors ...RequestEditorFn) (*PostmediaBridge202603eventsmediaPlayedResponse, error)
 
-	// PostmediaBridge202603eventsmediaPlayedPercentWithBodyWithResponse Create a quartile event
+	// PostmediaBridge202603eventsmediaPlayedPercentWithBodyWithResponse Record Media Played Percentage
 	//
-	// Create an event representing a user reaching quarterly milestones in a piece of media they're viewing.
+	// This endpoint allows you to record the percentage of media that has been played. It is useful for tracking user engagement with media content, such as videos or audio files, by capturing the extent to which the media has been consumed. This data can be used for analytics and improving content delivery strategies.
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with POST /media-bridge/2026-03/events/media-played-percent (the `PostmediaBridge202603eventsmediaPlayedPercent` operationId).
 	PostmediaBridge202603eventsmediaPlayedPercentWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*PostmediaBridge202603eventsmediaPlayedPercentResponse, error)
 
-	// PostmediaBridge202603eventsmediaPlayedPercentWithResponse Create a quartile event
+	// PostmediaBridge202603eventsmediaPlayedPercentWithResponse Record Media Played Percentage
 	//
-	// Create an event representing a user reaching quarterly milestones in a piece of media they're viewing.
+	// This endpoint allows you to record the percentage of media that has been played. It is useful for tracking user engagement with media content, such as videos or audio files, by capturing the extent to which the media has been consumed. This data can be used for analytics and improving content delivery strategies.
 	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with POST /media-bridge/2026-03/events/media-played-percent (the `PostmediaBridge202603eventsmediaPlayedPercent` operationId).
 	PostmediaBridge202603eventsmediaPlayedPercentWithResponse(ctx context.Context, body PostmediaBridge202603eventsmediaPlayedPercentJSONRequestBody, reqEditors ...RequestEditorFn) (*PostmediaBridge202603eventsmediaPlayedPercentResponse, error)
 
-	// GetmediaBridge202603AppIdpropertiesObjectTypeWithResponse Get the properties for an object type.
+	// GetmediaBridge202603AppIdpropertiesObjectTypeWithResponse Retrieve properties
 	//
-	// Get the existing properties defined for a media object type.
+	// Retrieve properties for a specified object type within a given app. This endpoint allows you to filter properties based on whether they are archived and to specify which properties to include in the response. It is useful for accessing and managing the properties associated with different object types in your application.
 	//
 	// Returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with GET /media-bridge/2026-03/{appId}/properties/{objectType} (the `GetmediaBridge202603AppIdpropertiesObjectType` operationId).
 	GetmediaBridge202603AppIdpropertiesObjectTypeWithResponse(ctx context.Context, appId int32, objectType string, params *GetmediaBridge202603AppIdpropertiesObjectTypeParams, reqEditors ...RequestEditorFn) (*GetmediaBridge202603AppIdpropertiesObjectTypeResponse, error)
 
-	// PostmediaBridge202603AppIdpropertiesObjectTypeWithBodyWithResponse Create a new property
+	// PostmediaBridge202603AppIdpropertiesObjectTypeWithBodyWithResponse Create property
 	//
-	// Create a new property for the specified media type.
+	// Create a new property for a specified object type within a given app in the MediaBridge service. This endpoint allows you to define new properties that can be used to store additional information related to the object type. The request must include the necessary property details in the request body.
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with POST /media-bridge/2026-03/{appId}/properties/{objectType} (the `PostmediaBridge202603AppIdpropertiesObjectType` operationId).
 	PostmediaBridge202603AppIdpropertiesObjectTypeWithBodyWithResponse(ctx context.Context, appId int32, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*PostmediaBridge202603AppIdpropertiesObjectTypeResponse, error)
 
-	// PostmediaBridge202603AppIdpropertiesObjectTypeWithResponse Create a new property
+	// PostmediaBridge202603AppIdpropertiesObjectTypeWithResponse Create property
 	//
-	// Create a new property for the specified media type.
+	// Create a new property for a specified object type within a given app in the MediaBridge service. This endpoint allows you to define new properties that can be used to store additional information related to the object type. The request must include the necessary property details in the request body.
 	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with POST /media-bridge/2026-03/{appId}/properties/{objectType} (the `PostmediaBridge202603AppIdpropertiesObjectType` operationId).
 	PostmediaBridge202603AppIdpropertiesObjectTypeWithResponse(ctx context.Context, appId int32, objectType string, body PostmediaBridge202603AppIdpropertiesObjectTypeJSONRequestBody, reqEditors ...RequestEditorFn) (*PostmediaBridge202603AppIdpropertiesObjectTypeResponse, error)
 
-	// PostmediaBridge202603AppIdpropertiesObjectTypebatcharchiveWithBodyWithResponse Archive multiple properties
+	// PostmediaBridge202603AppIdpropertiesObjectTypebatcharchiveWithBodyWithResponse Batch archive properties
 	//
-	// Archive a batch of existing properties for the specified types.
+	// Archive multiple properties for a specified object type within a given app. This endpoint is useful for managing large sets of properties that are no longer needed or should be hidden from active use. It requires specifying the app ID and object type in the path parameters.
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with POST /media-bridge/2026-03/{appId}/properties/{objectType}/batch/archive (the `PostmediaBridge202603AppIdpropertiesObjectTypebatcharchive` operationId).
 	PostmediaBridge202603AppIdpropertiesObjectTypebatcharchiveWithBodyWithResponse(ctx context.Context, appId int32, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*PostmediaBridge202603AppIdpropertiesObjectTypebatcharchiveResponse, error)
 
-	// PostmediaBridge202603AppIdpropertiesObjectTypebatcharchiveWithResponse Archive multiple properties
+	// PostmediaBridge202603AppIdpropertiesObjectTypebatcharchiveWithResponse Batch archive properties
 	//
-	// Archive a batch of existing properties for the specified types.
+	// Archive multiple properties for a specified object type within a given app. This endpoint is useful for managing large sets of properties that are no longer needed or should be hidden from active use. It requires specifying the app ID and object type in the path parameters.
 	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with POST /media-bridge/2026-03/{appId}/properties/{objectType}/batch/archive (the `PostmediaBridge202603AppIdpropertiesObjectTypebatcharchive` operationId).
 	PostmediaBridge202603AppIdpropertiesObjectTypebatcharchiveWithResponse(ctx context.Context, appId int32, objectType string, body PostmediaBridge202603AppIdpropertiesObjectTypebatcharchiveJSONRequestBody, reqEditors ...RequestEditorFn) (*PostmediaBridge202603AppIdpropertiesObjectTypebatcharchiveResponse, error)
 
-	// PostmediaBridge202603AppIdpropertiesObjectTypebatchcreateWithBodyWithResponse Create multiple properties
+	// PostmediaBridge202603AppIdpropertiesObjectTypebatchcreateWithBodyWithResponse Batch create properties
 	//
-	// Create a batch of properties of the specified object type.
+	// Create multiple properties in a batch for a specified object type within a given app. This endpoint is useful for efficiently setting up multiple properties at once, reducing the need for multiple individual API calls.
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with POST /media-bridge/2026-03/{appId}/properties/{objectType}/batch/create (the `PostmediaBridge202603AppIdpropertiesObjectTypebatchcreate` operationId).
 	PostmediaBridge202603AppIdpropertiesObjectTypebatchcreateWithBodyWithResponse(ctx context.Context, appId int32, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*PostmediaBridge202603AppIdpropertiesObjectTypebatchcreateResponse, error)
 
-	// PostmediaBridge202603AppIdpropertiesObjectTypebatchcreateWithResponse Create multiple properties
+	// PostmediaBridge202603AppIdpropertiesObjectTypebatchcreateWithResponse Batch create properties
 	//
-	// Create a batch of properties of the specified object type.
+	// Create multiple properties in a batch for a specified object type within a given app. This endpoint is useful for efficiently setting up multiple properties at once, reducing the need for multiple individual API calls.
 	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with POST /media-bridge/2026-03/{appId}/properties/{objectType}/batch/create (the `PostmediaBridge202603AppIdpropertiesObjectTypebatchcreate` operationId).
 	PostmediaBridge202603AppIdpropertiesObjectTypebatchcreateWithResponse(ctx context.Context, appId int32, objectType string, body PostmediaBridge202603AppIdpropertiesObjectTypebatchcreateJSONRequestBody, reqEditors ...RequestEditorFn) (*PostmediaBridge202603AppIdpropertiesObjectTypebatchcreateResponse, error)
 
-	// PostmediaBridge202603AppIdpropertiesObjectTypebatchreadWithBodyWithResponse Get the details for multiple properties
+	// PostmediaBridge202603AppIdpropertiesObjectTypebatchreadWithBodyWithResponse Batch read properties
 	//
-	// Get the details for a batch of properties for a specified object type.
+	// Retrieve a batch of properties for a specified object type within a given app. This endpoint is useful for fetching multiple properties efficiently in a single request, especially when dealing with large datasets or when specific properties are needed for processing.
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with POST /media-bridge/2026-03/{appId}/properties/{objectType}/batch/read (the `PostmediaBridge202603AppIdpropertiesObjectTypebatchread` operationId).
 	PostmediaBridge202603AppIdpropertiesObjectTypebatchreadWithBodyWithResponse(ctx context.Context, appId int32, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*PostmediaBridge202603AppIdpropertiesObjectTypebatchreadResponse, error)
 
-	// PostmediaBridge202603AppIdpropertiesObjectTypebatchreadWithResponse Get the details for multiple properties
+	// PostmediaBridge202603AppIdpropertiesObjectTypebatchreadWithResponse Batch read properties
 	//
-	// Get the details for a batch of properties for a specified object type.
+	// Retrieve a batch of properties for a specified object type within a given app. This endpoint is useful for fetching multiple properties efficiently in a single request, especially when dealing with large datasets or when specific properties are needed for processing.
 	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with POST /media-bridge/2026-03/{appId}/properties/{objectType}/batch/read (the `PostmediaBridge202603AppIdpropertiesObjectTypebatchread` operationId).
 	PostmediaBridge202603AppIdpropertiesObjectTypebatchreadWithResponse(ctx context.Context, appId int32, objectType string, body PostmediaBridge202603AppIdpropertiesObjectTypebatchreadJSONRequestBody, reqEditors ...RequestEditorFn) (*PostmediaBridge202603AppIdpropertiesObjectTypebatchreadResponse, error)
 
-	// GetmediaBridge202603AppIdpropertiesObjectTypegroupsWithResponse Get property groups
+	// GetmediaBridge202603AppIdpropertiesObjectTypegroupsWithResponse List groups
 	//
-	// Get the property groups for a specified object type.
+	// Retrieve a list of property groups for a specified object type within a given app. This endpoint is useful for obtaining organizational information about properties associated with different object types in your application.
 	//
 	// Returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with GET /media-bridge/2026-03/{appId}/properties/{objectType}/groups (the `GetmediaBridge202603AppIdpropertiesObjectTypegroups` operationId).
 	GetmediaBridge202603AppIdpropertiesObjectTypegroupsWithResponse(ctx context.Context, appId int32, objectType string, reqEditors ...RequestEditorFn) (*GetmediaBridge202603AppIdpropertiesObjectTypegroupsResponse, error)
 
-	// PostmediaBridge202603AppIdpropertiesObjectTypegroupsWithBodyWithResponse Create a new property group
+	// PostmediaBridge202603AppIdpropertiesObjectTypegroupsWithBodyWithResponse Create Group
 	//
-	// Create a new property group for the specified object type.
+	// Create a new property group for a specified object type within a given app. This endpoint allows you to organize properties into groups, making it easier to manage and categorize them within your application.
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with POST /media-bridge/2026-03/{appId}/properties/{objectType}/groups (the `PostmediaBridge202603AppIdpropertiesObjectTypegroups` operationId).
 	PostmediaBridge202603AppIdpropertiesObjectTypegroupsWithBodyWithResponse(ctx context.Context, appId int32, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*PostmediaBridge202603AppIdpropertiesObjectTypegroupsResponse, error)
 
-	// PostmediaBridge202603AppIdpropertiesObjectTypegroupsWithResponse Create a new property group
+	// PostmediaBridge202603AppIdpropertiesObjectTypegroupsWithResponse Create Group
 	//
-	// Create a new property group for the specified object type.
+	// Create a new property group for a specified object type within a given app. This endpoint allows you to organize properties into groups, making it easier to manage and categorize them within your application.
 	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with POST /media-bridge/2026-03/{appId}/properties/{objectType}/groups (the `PostmediaBridge202603AppIdpropertiesObjectTypegroups` operationId).
 	PostmediaBridge202603AppIdpropertiesObjectTypegroupsWithResponse(ctx context.Context, appId int32, objectType string, body PostmediaBridge202603AppIdpropertiesObjectTypegroupsJSONRequestBody, reqEditors ...RequestEditorFn) (*PostmediaBridge202603AppIdpropertiesObjectTypegroupsResponse, error)
 
-	// DeletemediaBridge202603AppIdpropertiesObjectTypegroupsGroupNameWithResponse Delete a property group
+	// DeletemediaBridge202603AppIdpropertiesObjectTypegroupsGroupNameWithResponse Delete group
 	//
-	// Delete an existing property group by name.
+	// Delete a specific property group for a given object type within an app. This operation is useful for removing unnecessary or obsolete property groups, helping to maintain a clean and organized structure within your app's properties.
 	//
 	// Returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with DELETE /media-bridge/2026-03/{appId}/properties/{objectType}/groups/{groupName} (the `DeletemediaBridge202603AppIdpropertiesObjectTypegroupsGroupName` operationId).
 	DeletemediaBridge202603AppIdpropertiesObjectTypegroupsGroupNameWithResponse(ctx context.Context, appId int32, objectType string, groupName string, reqEditors ...RequestEditorFn) (*DeletemediaBridge202603AppIdpropertiesObjectTypegroupsGroupNameResponse, error)
 
-	// GetmediaBridge202603AppIdpropertiesObjectTypegroupsGroupNameWithResponse Get a specific property group
+	// GetmediaBridge202603AppIdpropertiesObjectTypegroupsGroupNameWithResponse Retrieve group
 	//
-	// Get the details of an existing property group by name.
+	// Retrieve a specific property group for a given object type within an app. This endpoint is useful for accessing detailed information about how properties are grouped under a specific group name for a particular object type in your application.
 	//
 	// Returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with GET /media-bridge/2026-03/{appId}/properties/{objectType}/groups/{groupName} (the `GetmediaBridge202603AppIdpropertiesObjectTypegroupsGroupName` operationId).
 	GetmediaBridge202603AppIdpropertiesObjectTypegroupsGroupNameWithResponse(ctx context.Context, appId int32, objectType string, groupName string, reqEditors ...RequestEditorFn) (*GetmediaBridge202603AppIdpropertiesObjectTypegroupsGroupNameResponse, error)
 
-	// PatchmediaBridge202603AppIdpropertiesObjectTypegroupsGroupNameWithBodyWithResponse Update a property group
+	// PatchmediaBridge202603AppIdpropertiesObjectTypegroupsGroupNameWithBodyWithResponse Update group
 	//
-	// Update an existing property group by name.
+	// Update the properties of a specific group within a specified object type for a given app. This operation allows you to modify the details of a property group, such as its label or display order, within the context of the MediaBridge service.
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with PATCH /media-bridge/2026-03/{appId}/properties/{objectType}/groups/{groupName} (the `PatchmediaBridge202603AppIdpropertiesObjectTypegroupsGroupName` operationId).
 	PatchmediaBridge202603AppIdpropertiesObjectTypegroupsGroupNameWithBodyWithResponse(ctx context.Context, appId int32, objectType string, groupName string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*PatchmediaBridge202603AppIdpropertiesObjectTypegroupsGroupNameResponse, error)
 
-	// PatchmediaBridge202603AppIdpropertiesObjectTypegroupsGroupNameWithResponse Update a property group
+	// PatchmediaBridge202603AppIdpropertiesObjectTypegroupsGroupNameWithResponse Update group
 	//
-	// Update an existing property group by name.
+	// Update the properties of a specific group within a specified object type for a given app. This operation allows you to modify the details of a property group, such as its label or display order, within the context of the MediaBridge service.
 	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with PATCH /media-bridge/2026-03/{appId}/properties/{objectType}/groups/{groupName} (the `PatchmediaBridge202603AppIdpropertiesObjectTypegroupsGroupName` operationId).
 	PatchmediaBridge202603AppIdpropertiesObjectTypegroupsGroupNameWithResponse(ctx context.Context, appId int32, objectType string, groupName string, body PatchmediaBridge202603AppIdpropertiesObjectTypegroupsGroupNameJSONRequestBody, reqEditors ...RequestEditorFn) (*PatchmediaBridge202603AppIdpropertiesObjectTypegroupsGroupNameResponse, error)
 
-	// DeletemediaBridge202603AppIdpropertiesObjectTypePropertyNameWithResponse Delete a property
+	// DeletemediaBridge202603AppIdpropertiesObjectTypePropertyNameWithResponse Delete property
 	//
-	// Delete an existing property for an object type.
+	// Delete a specific property from a given object type within an app. This operation is useful for removing properties that are no longer needed or were created in error. The endpoint requires specifying the app ID, object type, and property name to identify the property to be deleted.
 	//
 	// Returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with DELETE /media-bridge/2026-03/{appId}/properties/{objectType}/{propertyName} (the `DeletemediaBridge202603AppIdpropertiesObjectTypePropertyName` operationId).
 	DeletemediaBridge202603AppIdpropertiesObjectTypePropertyNameWithResponse(ctx context.Context, appId int32, objectType string, propertyName string, reqEditors ...RequestEditorFn) (*DeletemediaBridge202603AppIdpropertiesObjectTypePropertyNameResponse, error)
 
-	// GetmediaBridge202603AppIdpropertiesObjectTypePropertyNameWithResponse Get the details for a property
+	// GetmediaBridge202603AppIdpropertiesObjectTypePropertyNameWithResponse Retrieve property
 	//
-	// Get the details for an existing property by name.
+	// Retrieve a specific property for a given object type within a specified app. This endpoint allows you to access details about a property, including its configuration and settings, for a particular object type identified by the property name. This can be useful for understanding property configurations or for integration purposes.
 	//
 	// Returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with GET /media-bridge/2026-03/{appId}/properties/{objectType}/{propertyName} (the `GetmediaBridge202603AppIdpropertiesObjectTypePropertyName` operationId).
 	GetmediaBridge202603AppIdpropertiesObjectTypePropertyNameWithResponse(ctx context.Context, appId int32, objectType string, propertyName string, params *GetmediaBridge202603AppIdpropertiesObjectTypePropertyNameParams, reqEditors ...RequestEditorFn) (*GetmediaBridge202603AppIdpropertiesObjectTypePropertyNameResponse, error)
 
-	// PatchmediaBridge202603AppIdpropertiesObjectTypePropertyNameWithBodyWithResponse Update a property
+	// PatchmediaBridge202603AppIdpropertiesObjectTypePropertyNameWithBodyWithResponse Update property
 	//
-	// Update an existing property for an object type.
+	// Update an existing property for a specified object type within a given app. This operation allows you to modify the details of a property, such as its label, type, or description, to better fit your application's requirements.
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with PATCH /media-bridge/2026-03/{appId}/properties/{objectType}/{propertyName} (the `PatchmediaBridge202603AppIdpropertiesObjectTypePropertyName` operationId).
 	PatchmediaBridge202603AppIdpropertiesObjectTypePropertyNameWithBodyWithResponse(ctx context.Context, appId int32, objectType string, propertyName string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*PatchmediaBridge202603AppIdpropertiesObjectTypePropertyNameResponse, error)
 
-	// PatchmediaBridge202603AppIdpropertiesObjectTypePropertyNameWithResponse Update a property
+	// PatchmediaBridge202603AppIdpropertiesObjectTypePropertyNameWithResponse Update property
 	//
-	// Update an existing property for an object type.
+	// Update an existing property for a specified object type within a given app. This operation allows you to modify the details of a property, such as its label, type, or description, to better fit your application's requirements.
 	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with PATCH /media-bridge/2026-03/{appId}/properties/{objectType}/{propertyName} (the `PatchmediaBridge202603AppIdpropertiesObjectTypePropertyName` operationId).
 	PatchmediaBridge202603AppIdpropertiesObjectTypePropertyNameWithResponse(ctx context.Context, appId int32, objectType string, propertyName string, body PatchmediaBridge202603AppIdpropertiesObjectTypePropertyNameJSONRequestBody, reqEditors ...RequestEditorFn) (*PatchmediaBridge202603AppIdpropertiesObjectTypePropertyNameResponse, error)
 
-	// GetmediaBridge202603AppIdschemasWithResponse Get all schemas
+	// GetmediaBridge202603AppIdschemasWithResponse Retrieve schemas
 	//
-	// Get the schemas for all object types.
+	// Retrieve the schemas associated with a specific app in the HubSpot account. This endpoint allows you to fetch schema details, which can be useful for understanding the data structure and properties associated with the app. You can optionally filter the results to include only archived schemas.
 	//
 	// Returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with GET /media-bridge/2026-03/{appId}/schemas (the `GetmediaBridge202603AppIdschemas` operationId).
 	GetmediaBridge202603AppIdschemasWithResponse(ctx context.Context, appId int32, params *GetmediaBridge202603AppIdschemasParams, reqEditors ...RequestEditorFn) (*GetmediaBridge202603AppIdschemasResponse, error)
 
-	// GetmediaBridge202603AppIdschemasObjectTypeWithResponse Get the schema for an object type
+	// GetmediaBridge202603AppIdschemasObjectTypeWithResponse Retrieve schema
 	//
-	// Get the schema for a specified object type.
+	// Retrieve the schema for a specific object type within a given app in your HubSpot account. This endpoint is useful for understanding the structure and properties of a particular object type, which can assist in data integration and management tasks.
 	//
 	// Returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with GET /media-bridge/2026-03/{appId}/schemas/{objectType} (the `GetmediaBridge202603AppIdschemasObjectType` operationId).
 	GetmediaBridge202603AppIdschemasObjectTypeWithResponse(ctx context.Context, appId int32, objectType string, reqEditors ...RequestEditorFn) (*GetmediaBridge202603AppIdschemasObjectTypeResponse, error)
 
-	// PatchmediaBridge202603AppIdschemasObjectTypeWithBodyWithResponse Update the schema for an object type
+	// PatchmediaBridge202603AppIdschemasObjectTypeWithBodyWithResponse Update schema
 	//
-	// Update the schema for an existing object type.
+	// Update the schema for a specific object type within a given app. This operation allows you to modify the existing schema details, which can be useful for adapting to changes in data structure requirements or business logic.
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with PATCH /media-bridge/2026-03/{appId}/schemas/{objectType} (the `PatchmediaBridge202603AppIdschemasObjectType` operationId).
 	PatchmediaBridge202603AppIdschemasObjectTypeWithBodyWithResponse(ctx context.Context, appId int32, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*PatchmediaBridge202603AppIdschemasObjectTypeResponse, error)
 
-	// PatchmediaBridge202603AppIdschemasObjectTypeWithResponse Update the schema for an object type
+	// PatchmediaBridge202603AppIdschemasObjectTypeWithResponse Update schema
 	//
-	// Update the schema for an existing object type.
+	// Update the schema for a specific object type within a given app. This operation allows you to modify the existing schema details, which can be useful for adapting to changes in data structure requirements or business logic.
 	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with PATCH /media-bridge/2026-03/{appId}/schemas/{objectType} (the `PatchmediaBridge202603AppIdschemasObjectType` operationId).
 	PatchmediaBridge202603AppIdschemasObjectTypeWithResponse(ctx context.Context, appId int32, objectType string, body PatchmediaBridge202603AppIdschemasObjectTypeJSONRequestBody, reqEditors ...RequestEditorFn) (*PatchmediaBridge202603AppIdschemasObjectTypeResponse, error)
 
-	// PostmediaBridge202603AppIdschemasObjectTypeassociationsWithBodyWithResponse Create association definition
+	// PostmediaBridge202603AppIdschemasObjectTypeassociationsWithBodyWithResponse Create associations
 	//
-	// Create a new association definition for the specified object type.
+	// Create new associations for a specified object type within a given app. This endpoint allows you to define relationships between different object types, enhancing data connectivity and integration within your HubSpot account.
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with POST /media-bridge/2026-03/{appId}/schemas/{objectType}/associations (the `PostmediaBridge202603AppIdschemasObjectTypeassociations` operationId).
 	PostmediaBridge202603AppIdschemasObjectTypeassociationsWithBodyWithResponse(ctx context.Context, appId int32, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*PostmediaBridge202603AppIdschemasObjectTypeassociationsResponse, error)
 
-	// PostmediaBridge202603AppIdschemasObjectTypeassociationsWithResponse Create association definition
+	// PostmediaBridge202603AppIdschemasObjectTypeassociationsWithResponse Create associations
 	//
-	// Create a new association definition for the specified object type.
+	// Create new associations for a specified object type within a given app. This endpoint allows you to define relationships between different object types, enhancing data connectivity and integration within your HubSpot account.
 	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with POST /media-bridge/2026-03/{appId}/schemas/{objectType}/associations (the `PostmediaBridge202603AppIdschemasObjectTypeassociations` operationId).
 	PostmediaBridge202603AppIdschemasObjectTypeassociationsWithResponse(ctx context.Context, appId int32, objectType string, body PostmediaBridge202603AppIdschemasObjectTypeassociationsJSONRequestBody, reqEditors ...RequestEditorFn) (*PostmediaBridge202603AppIdschemasObjectTypeassociationsResponse, error)
 
-	// DeletemediaBridge202603AppIdschemasObjectTypeassociationsAssociationIdWithResponse Delete an association definition
+	// DeletemediaBridge202603AppIdschemasObjectTypeassociationsAssociationIdWithResponse Delete association
 	//
-	// Delete an existing association definition for an object type.
+	// Remove an existing association between schemas for a specified app in the MediaBridge service. This operation is useful when you need to disassociate entities that are no longer related or to clean up outdated associations.
 	//
 	// Returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with DELETE /media-bridge/2026-03/{appId}/schemas/{objectType}/associations/{associationId} (the `DeletemediaBridge202603AppIdschemasObjectTypeassociationsAssociationId` operationId).
 	DeletemediaBridge202603AppIdschemasObjectTypeassociationsAssociationIdWithResponse(ctx context.Context, appId int32, objectType string, associationId string, reqEditors ...RequestEditorFn) (*DeletemediaBridge202603AppIdschemasObjectTypeassociationsAssociationIdResponse, error)
 
-	// PutmediaBridge202603AppIdsettingsWithBodyWithResponse Update the media bridge app name
+	// PutmediaBridge202603AppIdsettingsWithBodyWithResponse Update settings
 	//
-	// Update the name that your app will display when a user is selecting media bridge items.
+	// Update the settings for a specific app in the MediaBridgeService. This endpoint allows you to modify the configuration settings associated with the specified appId. It is useful for updating app-specific settings to ensure they align with your current requirements.
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with PUT /media-bridge/2026-03/{appId}/settings (the `PutmediaBridge202603AppIdsettings` operationId).
 	PutmediaBridge202603AppIdsettingsWithBodyWithResponse(ctx context.Context, appId int32, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*PutmediaBridge202603AppIdsettingsResponse, error)
 
-	// PutmediaBridge202603AppIdsettingsWithResponse Update the media bridge app name
+	// PutmediaBridge202603AppIdsettingsWithResponse Update settings
 	//
-	// Update the name that your app will display when a user is selecting media bridge items.
+	// Update the settings for a specific app in the MediaBridgeService. This endpoint allows you to modify the configuration settings associated with the specified appId. It is useful for updating app-specific settings to ensure they align with your current requirements.
 	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with PUT /media-bridge/2026-03/{appId}/settings (the `PutmediaBridge202603AppIdsettings` operationId).
 	PutmediaBridge202603AppIdsettingsWithResponse(ctx context.Context, appId int32, body PutmediaBridge202603AppIdsettingsJSONRequestBody, reqEditors ...RequestEditorFn) (*PutmediaBridge202603AppIdsettingsResponse, error)
 
-	// GetmediaBridge202603AppIdsettingseventVisibilityWithResponse View event visibility settings
+	// GetmediaBridge202603AppIdsettingseventVisibilityWithResponse Retrieve settings
 	//
-	// Get the visibility settings for media bridge events for your apps.
+	// Retrieve the event visibility settings for a specific app in the MediaBridge service. This endpoint provides information on how events are visible within the specified application context.
 	//
 	// Returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with GET /media-bridge/2026-03/{appId}/settings/event-visibility (the `GetmediaBridge202603AppIdsettingseventVisibility` operationId).
 	GetmediaBridge202603AppIdsettingseventVisibilityWithResponse(ctx context.Context, appId int32, reqEditors ...RequestEditorFn) (*GetmediaBridge202603AppIdsettingseventVisibilityResponse, error)
 
-	// PatchmediaBridge202603AppIdsettingseventVisibilityWithBodyWithResponse Create or update event visibility settings
+	// PatchmediaBridge202603AppIdsettingseventVisibilityWithBodyWithResponse Update settings
 	//
-	// Set the visibility settings for media bridge events created by your app.
+	// Update the event visibility settings for a specific app in the MediaBridgeService. This operation allows you to modify how events are displayed or managed for the specified app. It is useful for configuring event visibility preferences based on your application's requirements.
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with PATCH /media-bridge/2026-03/{appId}/settings/event-visibility (the `PatchmediaBridge202603AppIdsettingseventVisibility` operationId).
 	PatchmediaBridge202603AppIdsettingseventVisibilityWithBodyWithResponse(ctx context.Context, appId int32, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*PatchmediaBridge202603AppIdsettingseventVisibilityResponse, error)
 
-	// PatchmediaBridge202603AppIdsettingseventVisibilityWithResponse Create or update event visibility settings
+	// PatchmediaBridge202603AppIdsettingseventVisibilityWithResponse Update settings
 	//
-	// Set the visibility settings for media bridge events created by your app.
+	// Update the event visibility settings for a specific app in the MediaBridgeService. This operation allows you to modify how events are displayed or managed for the specified app. It is useful for configuring event visibility preferences based on your application's requirements.
 	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with PATCH /media-bridge/2026-03/{appId}/settings/event-visibility (the `PatchmediaBridge202603AppIdsettingseventVisibility` operationId).
 	PatchmediaBridge202603AppIdsettingseventVisibilityWithResponse(ctx context.Context, appId int32, body PatchmediaBridge202603AppIdsettingseventVisibilityJSONRequestBody, reqEditors ...RequestEditorFn) (*PatchmediaBridge202603AppIdsettingseventVisibilityResponse, error)
 
-	// PostmediaBridge202603AppIdsettingsobjectDefinitionsWithBodyWithResponse Create a new object type
+	// PostmediaBridge202603AppIdsettingsobjectDefinitionsWithBodyWithResponse Create Object Definitions
 	//
-	// Create a new media object type.
+	// Create new object definitions for a specific app in the HubSpot Media Bridge. This endpoint is used to define new objects that can be utilized within the app, allowing for customization and integration of media-related functionalities.
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with POST /media-bridge/2026-03/{appId}/settings/object-definitions (the `PostmediaBridge202603AppIdsettingsobjectDefinitions` operationId).
 	PostmediaBridge202603AppIdsettingsobjectDefinitionsWithBodyWithResponse(ctx context.Context, appId int32, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*PostmediaBridge202603AppIdsettingsobjectDefinitionsResponse, error)
 
-	// PostmediaBridge202603AppIdsettingsobjectDefinitionsWithResponse Create a new object type
+	// PostmediaBridge202603AppIdsettingsobjectDefinitionsWithResponse Create Object Definitions
 	//
-	// Create a new media object type.
+	// Create new object definitions for a specific app in the HubSpot Media Bridge. This endpoint is used to define new objects that can be utilized within the app, allowing for customization and integration of media-related functionalities.
 	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with POST /media-bridge/2026-03/{appId}/settings/object-definitions (the `PostmediaBridge202603AppIdsettingsobjectDefinitions` operationId).
 	PostmediaBridge202603AppIdsettingsobjectDefinitionsWithResponse(ctx context.Context, appId int32, body PostmediaBridge202603AppIdsettingsobjectDefinitionsJSONRequestBody, reqEditors ...RequestEditorFn) (*PostmediaBridge202603AppIdsettingsobjectDefinitionsResponse, error)
 
-	// GetmediaBridge202603AppIdsettingsobjectDefinitionsMediaTypeWithResponse Get object types for a supported media
+	// GetmediaBridge202603AppIdsettingsobjectDefinitionsMediaTypeWithResponse Retrieve object definitions
 	//
-	// Get the existing objects types that belong to the specified media type.
+	// Retrieve the object definitions for a specified media type within an app. This endpoint allows you to access the settings related to the object definitions of various media types such as VIDEO, AUDIO, DOCUMENT, OTHER, and IMAGE. It is useful for understanding the structure and properties associated with different media types in your application.
 	//
 	// Returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with GET /media-bridge/2026-03/{appId}/settings/object-definitions/{mediaType} (the `GetmediaBridge202603AppIdsettingsobjectDefinitionsMediaType` operationId).
 	GetmediaBridge202603AppIdsettingsobjectDefinitionsMediaTypeWithResponse(ctx context.Context, appId int32, mediaType GetmediaBridge202603AppIdsettingsobjectDefinitionsMediaTypeParamsMediaType, params *GetmediaBridge202603AppIdsettingsobjectDefinitionsMediaTypeParams, reqEditors ...RequestEditorFn) (*GetmediaBridge202603AppIdsettingsobjectDefinitionsMediaTypeResponse, error)
 
-	// DeletemediaBridge202603AppIdsettingsoembedDomainsWithResponse Delete an oEmbed domain
+	// DeletemediaBridge202603AppIdsettingsoembedDomainsWithResponse Delete domains
 	//
-	// Delete an existing oEmbed domain.
+	// Delete oEmbed domains associated with a specific app in HubSpot. This operation allows you to manage and remove domains that are no longer needed for embedding media content within the app's settings.
 	//
 	// Returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with DELETE /media-bridge/2026-03/{appId}/settings/oembed-domains (the `DeletemediaBridge202603AppIdsettingsoembedDomains` operationId).
 	DeletemediaBridge202603AppIdsettingsoembedDomainsWithResponse(ctx context.Context, appId int32, params *DeletemediaBridge202603AppIdsettingsoembedDomainsParams, reqEditors ...RequestEditorFn) (*DeletemediaBridge202603AppIdsettingsoembedDomainsResponse, error)
 
-	// GetmediaBridge202603AppIdsettingsoembedDomainsWithResponse Get oEmbed domains
+	// GetmediaBridge202603AppIdsettingsoembedDomainsWithResponse List OEmbed Domains
 	//
-	// Get the details for existing oEmbed domains for your app.
+	// Retrieve the list of OEmbed domains associated with a specific app in your HubSpot account. This endpoint is useful for managing and verifying the domains that are allowed to embed media content. It provides a way to ensure that only trusted domains are used for embedding media.
 	//
 	// Returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with GET /media-bridge/2026-03/{appId}/settings/oembed-domains (the `GetmediaBridge202603AppIdsettingsoembedDomains` operationId).
 	GetmediaBridge202603AppIdsettingsoembedDomainsWithResponse(ctx context.Context, appId int32, params *GetmediaBridge202603AppIdsettingsoembedDomainsParams, reqEditors ...RequestEditorFn) (*GetmediaBridge202603AppIdsettingsoembedDomainsResponse, error)
 
-	// PostmediaBridge202603AppIdsettingsoembedDomainsWithBodyWithResponse Set up a new oEmbed domain
+	// PostmediaBridge202603AppIdsettingsoembedDomainsWithBodyWithResponse Create
 	//
-	// Set up a new oEmbed domain for your media bridge app.
+	// Create a new oEmbed domain setting for a specific app in your HubSpot account. This endpoint allows you to define domains that can be used for oEmbed purposes, facilitating the integration of media content from external sources.
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with POST /media-bridge/2026-03/{appId}/settings/oembed-domains (the `PostmediaBridge202603AppIdsettingsoembedDomains` operationId).
 	PostmediaBridge202603AppIdsettingsoembedDomainsWithBodyWithResponse(ctx context.Context, appId int32, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*PostmediaBridge202603AppIdsettingsoembedDomainsResponse, error)
 
-	// PostmediaBridge202603AppIdsettingsoembedDomainsWithResponse Set up a new oEmbed domain
+	// PostmediaBridge202603AppIdsettingsoembedDomainsWithResponse Create
 	//
-	// Set up a new oEmbed domain for your media bridge app.
+	// Create a new oEmbed domain setting for a specific app in your HubSpot account. This endpoint allows you to define domains that can be used for oEmbed purposes, facilitating the integration of media content from external sources.
 	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with POST /media-bridge/2026-03/{appId}/settings/oembed-domains (the `PostmediaBridge202603AppIdsettingsoembedDomains` operationId).
 	PostmediaBridge202603AppIdsettingsoembedDomainsWithResponse(ctx context.Context, appId int32, body PostmediaBridge202603AppIdsettingsoembedDomainsJSONRequestBody, reqEditors ...RequestEditorFn) (*PostmediaBridge202603AppIdsettingsoembedDomainsResponse, error)
 
-	// GetmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainIdWithResponse Get an oEmbed domain
+	// GetmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainIdWithResponse Retrieve domain
 	//
-	// Get the details for an existing oEmbed domain.
+	// Retrieve details of a specific oEmbed domain for a given app. This endpoint is useful for fetching configuration or settings related to oEmbed domains associated with a particular application.
 	//
 	// Returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with GET /media-bridge/2026-03/{appId}/settings/oembed-domains/{oEmbedDomainId} (the `GetmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainId` operationId).
 	GetmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainIdWithResponse(ctx context.Context, appId int32, oEmbedDomainId string, reqEditors ...RequestEditorFn) (*GetmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainIdResponse, error)
 
-	// PatchmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainIdWithBodyWithResponse Update an oEmbed domain
+	// PatchmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainIdWithBodyWithResponse Update oEmbed domain
 	//
-	// Update an existing oEmbed domain.
+	// Update the settings for a specific oEmbed domain associated with a given app. This endpoint allows you to modify the configuration of an oEmbed domain, which can be useful for managing how media content is embedded across different domains.
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with PATCH /media-bridge/2026-03/{appId}/settings/oembed-domains/{oEmbedDomainId} (the `PatchmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainId` operationId).
 	PatchmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainIdWithBodyWithResponse(ctx context.Context, appId int32, oEmbedDomainId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*PatchmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainIdResponse, error)
 
-	// PatchmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainIdWithResponse Update an oEmbed domain
+	// PatchmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainIdWithResponse Update oEmbed domain
 	//
-	// Update an existing oEmbed domain.
+	// Update the settings for a specific oEmbed domain associated with a given app. This endpoint allows you to modify the configuration of an oEmbed domain, which can be useful for managing how media content is embedded across different domains.
 	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with PATCH /media-bridge/2026-03/{appId}/settings/oembed-domains/{oEmbedDomainId} (the `PatchmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainId` operationId).
 	PatchmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainIdWithResponse(ctx context.Context, appId int32, oEmbedDomainId string, body PatchmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainIdJSONRequestBody, reqEditors ...RequestEditorFn) (*PatchmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainIdResponse, error)
 
-	// PostmediaBridge202603AppIdsettingsregisterWithBodyWithResponse Register the media bridge app name
+	// PostmediaBridge202603AppIdsettingsregisterWithBodyWithResponse Register Settings
 	//
-	// Register the name that your app will display when a user is selecting media bridge items.
+	// Register settings for a specific app in the MediaBridge service. This endpoint is deprecated and should be used with caution. It allows for the registration of settings associated with the specified app ID.
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
@@ -11893,9 +13398,9 @@ type ClientWithResponsesInterface interface {
 	// Deprecated: this operation has been marked as deprecated upstream, but no `x-deprecated-reason` was set
 	PostmediaBridge202603AppIdsettingsregisterWithBodyWithResponse(ctx context.Context, appId int32, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*PostmediaBridge202603AppIdsettingsregisterResponse, error)
 
-	// PostmediaBridge202603AppIdsettingsregisterWithResponse Register the media bridge app name
+	// PostmediaBridge202603AppIdsettingsregisterWithResponse Register Settings
 	//
-	// Register the name that your app will display when a user is selecting media bridge items.
+	// Register settings for a specific app in the MediaBridge service. This endpoint is deprecated and should be used with caution. It allows for the registration of settings associated with the specified app ID.
 	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
@@ -11904,9 +13409,13 @@ type ClientWithResponsesInterface interface {
 	// Deprecated: this operation has been marked as deprecated upstream, but no `x-deprecated-reason` was set
 	PostmediaBridge202603AppIdsettingsregisterWithResponse(ctx context.Context, appId int32, body PostmediaBridge202603AppIdsettingsregisterJSONRequestBody, reqEditors ...RequestEditorFn) (*PostmediaBridge202603AppIdsettingsregisterResponse, error)
 
-	// PostmediaBridge202603AppIdsettingsvideoAssociationDefinitionmediaBridgev1AppIdsettingsvideoAssociationDefinitionWithResponse performs a POST /media-bridge/2026-03/{appId}/settings/video-association-definition (the `PostmediaBridge202603AppIdsettingsvideoAssociationDefinitionmediaBridgev1AppIdsettingsvideoAssociationDefinition` operationId) request.
+	// PostmediaBridge202603AppIdsettingsvideoAssociationDefinitionmediaBridgev1AppIdsettingsvideoAssociationDefinitionWithResponse Define Video Association
+	//
+	// Create a video association definition for a specific application in the HubSpot Media Bridge. This endpoint is used to define how videos are associated with other objects within the specified app. It is particularly useful for applications that need to manage video content and its relationships programmatically.
 	//
 	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /media-bridge/2026-03/{appId}/settings/video-association-definition (the `PostmediaBridge202603AppIdsettingsvideoAssociationDefinitionmediaBridgev1AppIdsettingsvideoAssociationDefinition` operationId).
 	PostmediaBridge202603AppIdsettingsvideoAssociationDefinitionmediaBridgev1AppIdsettingsvideoAssociationDefinitionWithResponse(ctx context.Context, appId int32, reqEditors ...RequestEditorFn) (*PostmediaBridge202603AppIdsettingsvideoAssociationDefinitionmediaBridgev1AppIdsettingsvideoAssociationDefinitionResponse, error)
 
 	// GetmetanetworkOrigins202603ipRangesmetanetworkOrigins202509ipRangesWithResponse Retrieve IP ranges
@@ -11981,63 +13490,63 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /oauth/2026-03/token/revoke (the `Postoauth202603tokenrevokeoauthv3tokenrevoke` operationId).
 	Postoauth202603tokenrevokeoauthv3tokenrevokeWithFormdataBodyWithResponse(ctx context.Context, body Postoauth202603tokenrevokeoauthv3tokenrevokeFormdataRequestBody, reqEditors ...RequestEditorFn) (*Postoauth202603tokenrevokeoauthv3tokenrevokeResponse, error)
 
-	// Postscheduler202603meetingscalendarWithBodyWithResponse Create a new calendar meeting event.
+	// Postscheduler202603meetingscalendarWithBodyWithResponse Create meeting
 	//
-	// Create a new calendar event and meeting object by providing the necessary details such as associations, email reminders, meeting object properties, and timezone.
+	// Create a new calendar meeting event in your HubSpot account. This endpoint allows you to specify details such as the meeting title, start and end times, and associated users. The organizerUserId is required to identify the meeting organizer.
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with POST /scheduler/2026-03/meetings/calendar (the `Postscheduler202603meetingscalendar` operationId).
 	Postscheduler202603meetingscalendarWithBodyWithResponse(ctx context.Context, params *Postscheduler202603meetingscalendarParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postscheduler202603meetingscalendarResponse, error)
 
-	// Postscheduler202603meetingscalendarWithResponse Create a new calendar meeting event.
+	// Postscheduler202603meetingscalendarWithResponse Create meeting
 	//
-	// Create a new calendar event and meeting object by providing the necessary details such as associations, email reminders, meeting object properties, and timezone.
+	// Create a new calendar meeting event in your HubSpot account. This endpoint allows you to specify details such as the meeting title, start and end times, and associated users. The organizerUserId is required to identify the meeting organizer.
 	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with POST /scheduler/2026-03/meetings/calendar (the `Postscheduler202603meetingscalendar` operationId).
 	Postscheduler202603meetingscalendarWithResponse(ctx context.Context, params *Postscheduler202603meetingscalendarParams, body Postscheduler202603meetingscalendarJSONRequestBody, reqEditors ...RequestEditorFn) (*Postscheduler202603meetingscalendarResponse, error)
 
-	// Getscheduler202603meetingsmeetingLinksWithResponse Get meeting scheduling pages
+	// Getscheduler202603meetingsmeetingLinksWithResponse List Meeting Links
 	//
-	// Get a paged list meeting scheduling pages.
+	// Retrieve a list of meeting links available in the HubSpot account. This endpoint allows filtering by various criteria such as meeting name, organizer user ID, and meeting type. It supports pagination to navigate through large sets of results.
 	//
 	// Returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with GET /scheduler/2026-03/meetings/meeting-links (the `Getscheduler202603meetingsmeetingLinks` operationId).
 	Getscheduler202603meetingsmeetingLinksWithResponse(ctx context.Context, params *Getscheduler202603meetingsmeetingLinksParams, reqEditors ...RequestEditorFn) (*Getscheduler202603meetingsmeetingLinksResponse, error)
 
-	// Postscheduler202603meetingsmeetingLinksbookWithBodyWithResponse Book a meeting
+	// Postscheduler202603meetingsmeetingLinksbookWithBodyWithResponse Book Meeting
 	//
-	// Book a meeting for a specified meeting page.
+	// Book a meeting using a specified meeting link. This endpoint allows you to create a meeting by providing necessary details such as duration, email, and start time. It is useful for scheduling meetings programmatically through HubSpot's API.
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with POST /scheduler/2026-03/meetings/meeting-links/book (the `Postscheduler202603meetingsmeetingLinksbook` operationId).
 	Postscheduler202603meetingsmeetingLinksbookWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postscheduler202603meetingsmeetingLinksbookResponse, error)
 
-	// Postscheduler202603meetingsmeetingLinksbookWithResponse Book a meeting
+	// Postscheduler202603meetingsmeetingLinksbookWithResponse Book Meeting
 	//
-	// Book a meeting for a specified meeting page.
+	// Book a meeting using a specified meeting link. This endpoint allows you to create a meeting by providing necessary details such as duration, email, and start time. It is useful for scheduling meetings programmatically through HubSpot's API.
 	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with POST /scheduler/2026-03/meetings/meeting-links/book (the `Postscheduler202603meetingsmeetingLinksbook` operationId).
 	Postscheduler202603meetingsmeetingLinksbookWithResponse(ctx context.Context, body Postscheduler202603meetingsmeetingLinksbookJSONRequestBody, reqEditors ...RequestEditorFn) (*Postscheduler202603meetingsmeetingLinksbookResponse, error)
 
-	// Getscheduler202603meetingsmeetingLinksbookavailabilityPageSlugWithResponse Get the availability for a meeting
+	// Getscheduler202603meetingsmeetingLinksbookavailabilityPageSlugWithResponse Retrieve availability
 	//
-	// Get the next availability times for a meeting page.
+	// Retrieve the availability and busy times for a specific meeting link. This endpoint is useful for checking available slots for booking meetings based on the provided slug. It requires specifying the timezone and optionally allows adjusting the month view with an offset.
 	//
 	// Returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with GET /scheduler/2026-03/meetings/meeting-links/book/availability-page/{slug} (the `Getscheduler202603meetingsmeetingLinksbookavailabilityPageSlug` operationId).
 	Getscheduler202603meetingsmeetingLinksbookavailabilityPageSlugWithResponse(ctx context.Context, slug string, params *Getscheduler202603meetingsmeetingLinksbookavailabilityPageSlugParams, reqEditors ...RequestEditorFn) (*Getscheduler202603meetingsmeetingLinksbookavailabilityPageSlugResponse, error)
 
-	// Getscheduler202603meetingsmeetingLinksbookSlugWithResponse List booking information
+	// Getscheduler202603meetingsmeetingLinksbookSlugWithResponse Retrieve booking info
 	//
-	// Get details about the initial information necessary for a meeting scheduler.
+	// Retrieve detailed booking information for a specific meeting link using its slug. This endpoint provides insights into the availability and settings associated with the meeting link. It is useful for understanding the booking context and ensuring that the correct timezone is applied.
 	//
 	// Returns a wrapper object for the known response body format(s).
 	//
@@ -12570,27 +14079,27 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /webhooks-journal/snapshots/2026-03/crm (the `PostwebhooksJournalsnapshots202603crm` operationId).
 	PostwebhooksJournalsnapshots202603crmWithResponse(ctx context.Context, body PostwebhooksJournalsnapshots202603crmJSONRequestBody, reqEditors ...RequestEditorFn) (*PostwebhooksJournalsnapshots202603crmResponse, error)
 
-	// GetwebhooksJournalsubscriptions202603WithResponse List Subscriptions
+	// GetwebhooksJournalsubscriptions202603WithResponse List subscriptions
 	//
-	// Retrieve a list of webhook journal subscriptions for the specified version. This endpoint allows you to view all active subscriptions without pagination. It is useful for monitoring and managing webhook subscriptions in your HubSpot account.
+	// Retrieve a list of webhook journal subscriptions. This endpoint provides access to subscription details without pagination, allowing you to view all current subscriptions in a single request. It is useful for managing and reviewing webhook subscriptions for your app.
 	//
 	// Returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with GET /webhooks-journal/subscriptions/2026-03 (the `GetwebhooksJournalsubscriptions202603` operationId).
 	GetwebhooksJournalsubscriptions202603WithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*GetwebhooksJournalsubscriptions202603Response, error)
 
-	// PostwebhooksJournalsubscriptions202603WithBodyWithResponse Create Subscription
+	// PostwebhooksJournalsubscriptions202603WithBodyWithResponse Upsert subscription
 	//
-	// Create a new subscription in the Webhooks Journal for the specified version. This endpoint allows you to define the subscription details by providing the necessary information in the request body. It supports various types of subscriptions, including object, association, event, app lifecycle event, list membership, and GDPR privacy deletion. Ensure that all required fields are included in the request to successfully create a subscription.
+	// Create a new webhook journal subscription for the specified portal. This endpoint allows you to define the actions and object types that the subscription will monitor. It requires a request body with the subscription details.
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with POST /webhooks-journal/subscriptions/2026-03 (the `PostwebhooksJournalsubscriptions202603` operationId).
 	PostwebhooksJournalsubscriptions202603WithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*PostwebhooksJournalsubscriptions202603Response, error)
 
-	// PostwebhooksJournalsubscriptions202603WithResponse Create Subscription
+	// PostwebhooksJournalsubscriptions202603WithResponse Upsert subscription
 	//
-	// Create a new subscription in the Webhooks Journal for the specified version. This endpoint allows you to define the subscription details by providing the necessary information in the request body. It supports various types of subscriptions, including object, association, event, app lifecycle event, list membership, and GDPR privacy deletion. Ensure that all required fields are included in the request to successfully create a subscription.
+	// Create a new webhook journal subscription for the specified portal. This endpoint allows you to define the actions and object types that the subscription will monitor. It requires a request body with the subscription details.
 	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
@@ -12791,11 +14300,11 @@ type GetaccountInfo202603activityauditLogsResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *AccountActivityCollectionResponsePublicApiUserActionEventForwardPaging
+	JSON200 *CollectionResponsePublicApiUserActionEventForwardPaging
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r GetaccountInfo202603activityauditLogsResponse) GetJSON200() *AccountActivityCollectionResponsePublicApiUserActionEventForwardPaging {
+func (r GetaccountInfo202603activityauditLogsResponse) GetJSON200() *CollectionResponsePublicApiUserActionEventForwardPaging {
 	return r.JSON200
 }
 
@@ -12832,11 +14341,11 @@ type GetaccountInfo202603activityloginResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *AccountActivityCollectionResponsePublicLoginAuditForwardPaging
+	JSON200 *CollectionResponsePublicLoginAuditForwardPaging
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r GetaccountInfo202603activityloginResponse) GetJSON200() *AccountActivityCollectionResponsePublicLoginAuditForwardPaging {
+func (r GetaccountInfo202603activityloginResponse) GetJSON200() *CollectionResponsePublicLoginAuditForwardPaging {
 	return r.JSON200
 }
 
@@ -12873,11 +14382,11 @@ type GetaccountInfo202603activitysecurityResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *AccountActivityCollectionResponseHydratedCriticalActionForwardPaging
+	JSON200 *CollectionResponseHydratedCriticalActionForwardPaging
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r GetaccountInfo202603activitysecurityResponse) GetJSON200() *AccountActivityCollectionResponseHydratedCriticalActionForwardPaging {
+func (r GetaccountInfo202603activitysecurityResponse) GetJSON200() *CollectionResponseHydratedCriticalActionForwardPaging {
 	return r.JSON200
 }
 
@@ -12914,11 +14423,11 @@ type GetaccountInfo202603apiUsagedailyprivateAppsaccountInfo202509apiUsagedailyp
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *AccountCollectionResponseApiUsageNoPaging
+	JSON200 *CollectionResponseApiUsageNoPaging
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r GetaccountInfo202603apiUsagedailyprivateAppsaccountInfo202509apiUsagedailyprivateAppsResponse) GetJSON200() *AccountCollectionResponseApiUsageNoPaging {
+func (r GetaccountInfo202603apiUsagedailyprivateAppsaccountInfo202509apiUsagedailyprivateAppsResponse) GetJSON200() *CollectionResponseApiUsageNoPaging {
 	return r.JSON200
 }
 
@@ -12955,11 +14464,11 @@ type GetaccountInfo202603detailsaccountInfo202509detailsResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *AccountPortalInformationResponse
+	JSON200 *PortalInformationResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r GetaccountInfo202603detailsaccountInfo202509detailsResponse) GetJSON200() *AccountPortalInformationResponse {
+func (r GetaccountInfo202603detailsaccountInfo202509detailsResponse) GetJSON200() *PortalInformationResponse {
 	return r.JSON200
 }
 
@@ -13030,11 +14539,11 @@ type Getautomationactions202603AppIdGetPageResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *AutomationActionsCollectionResponsePublicActionDefinitionForwardPaging
+	JSON200 *CollectionResponsePublicActionDefinitionForwardPaging
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getautomationactions202603AppIdGetPageResponse) GetJSON200() *AutomationActionsCollectionResponsePublicActionDefinitionForwardPaging {
+func (r Getautomationactions202603AppIdGetPageResponse) GetJSON200() *CollectionResponsePublicActionDefinitionForwardPaging {
 	return r.JSON200
 }
 
@@ -13067,15 +14576,22 @@ func (r Getautomationactions202603AppIdGetPageResponse) ContentType() string {
 	return ""
 }
 
+// Postautomationactions202603AppIdCreateResponse201Headers the declared response headers of an HTTP 201 response for Postautomationactions202603AppIdCreate
+type Postautomationactions202603AppIdCreateResponse201Headers struct {
+	Location *string
+}
+
 type Postautomationactions202603AppIdCreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *AutomationActionsPublicActionDefinition
+	JSON201 *PublicActionDefinition
+	// Headers201 the parsed response headers for an HTTP 201 response
+	Headers201 *Postautomationactions202603AppIdCreateResponse201Headers
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postautomationactions202603AppIdCreateResponse) GetJSON201() *AutomationActionsPublicActionDefinition {
+func (r Postautomationactions202603AppIdCreateResponse) GetJSON201() *PublicActionDefinition {
 	return r.JSON201
 }
 
@@ -13146,11 +14662,11 @@ type Getautomationactions202603AppIdDefinitionIdGetByIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *AutomationActionsPublicActionDefinition
+	JSON200 *PublicActionDefinition
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getautomationactions202603AppIdDefinitionIdGetByIdResponse) GetJSON200() *AutomationActionsPublicActionDefinition {
+func (r Getautomationactions202603AppIdDefinitionIdGetByIdResponse) GetJSON200() *PublicActionDefinition {
 	return r.JSON200
 }
 
@@ -13187,11 +14703,11 @@ type Patchautomationactions202603AppIdDefinitionIdUpdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *AutomationActionsPublicActionDefinition
+	JSON200 *PublicActionDefinition
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Patchautomationactions202603AppIdDefinitionIdUpdateResponse) GetJSON200() *AutomationActionsPublicActionDefinition {
+func (r Patchautomationactions202603AppIdDefinitionIdUpdateResponse) GetJSON200() *PublicActionDefinition {
 	return r.JSON200
 }
 
@@ -13228,11 +14744,11 @@ type Getautomationactions202603AppIdDefinitionIdfunctionsGetPageResponse struct 
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *AutomationActionsCollectionResponsePublicActionFunctionIdentifierNoPaging
+	JSON200 *CollectionResponsePublicActionFunctionIdentifierNoPaging
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getautomationactions202603AppIdDefinitionIdfunctionsGetPageResponse) GetJSON200() *AutomationActionsCollectionResponsePublicActionFunctionIdentifierNoPaging {
+func (r Getautomationactions202603AppIdDefinitionIdfunctionsGetPageResponse) GetJSON200() *CollectionResponsePublicActionFunctionIdentifierNoPaging {
 	return r.JSON200
 }
 
@@ -13303,11 +14819,11 @@ type Getautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeGetByFuncti
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *AutomationActionsPublicActionFunction
+	JSON200 *PublicActionFunction
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeGetByFunctionTypeResponse) GetJSON200() *AutomationActionsPublicActionFunction {
+func (r Getautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeGetByFunctionTypeResponse) GetJSON200() *PublicActionFunction {
 	return r.JSON200
 }
 
@@ -13344,11 +14860,11 @@ type Putautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeCreateOrRep
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *AutomationActionsPublicActionFunctionIdentifier
+	JSON200 *PublicActionFunctionIdentifier
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Putautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeCreateOrReplaceByFunctionTypeResponse) GetJSON200() *AutomationActionsPublicActionFunctionIdentifier {
+func (r Putautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeCreateOrReplaceByFunctionTypeResponse) GetJSON200() *PublicActionFunctionIdentifier {
 	return r.JSON200
 }
 
@@ -13419,11 +14935,11 @@ type Getautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeFunctionIdG
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *AutomationActionsPublicActionFunction
+	JSON200 *PublicActionFunction
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeFunctionIdGetByIdResponse) GetJSON200() *AutomationActionsPublicActionFunction {
+func (r Getautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeFunctionIdGetByIdResponse) GetJSON200() *PublicActionFunction {
 	return r.JSON200
 }
 
@@ -13460,11 +14976,11 @@ type Putautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeFunctionIdC
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *AutomationActionsPublicActionFunctionIdentifier
+	JSON200 *PublicActionFunctionIdentifier
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Putautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeFunctionIdCreateOrReplaceResponse) GetJSON200() *AutomationActionsPublicActionFunctionIdentifier {
+func (r Putautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeFunctionIdCreateOrReplaceResponse) GetJSON200() *PublicActionFunctionIdentifier {
 	return r.JSON200
 }
 
@@ -13501,11 +15017,11 @@ type Getautomationactions202603AppIdDefinitionIdrequiresObjectautomationv4action
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *AutomationActionsPublicActionDefinitionRequiresObjectResponse
+	JSON200 *PublicActionDefinitionRequiresObjectResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getautomationactions202603AppIdDefinitionIdrequiresObjectautomationv4actionsAppIdDefinitionIdrequiresObjectResponse) GetJSON200() *AutomationActionsPublicActionDefinitionRequiresObjectResponse {
+func (r Getautomationactions202603AppIdDefinitionIdrequiresObjectautomationv4actionsAppIdDefinitionIdrequiresObjectResponse) GetJSON200() *PublicActionDefinitionRequiresObjectResponse {
 	return r.JSON200
 }
 
@@ -13576,11 +15092,11 @@ type Getautomationactions202603AppIdDefinitionIdrevisionsGetPageResponse struct 
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *AutomationActionsCollectionResponsePublicActionRevisionForwardPaging
+	JSON200 *CollectionResponsePublicActionRevisionForwardPaging
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getautomationactions202603AppIdDefinitionIdrevisionsGetPageResponse) GetJSON200() *AutomationActionsCollectionResponsePublicActionRevisionForwardPaging {
+func (r Getautomationactions202603AppIdDefinitionIdrevisionsGetPageResponse) GetJSON200() *CollectionResponsePublicActionRevisionForwardPaging {
 	return r.JSON200
 }
 
@@ -13617,11 +15133,11 @@ type Getautomationactions202603AppIdDefinitionIdrevisionsRevisionIdGetByIdRespon
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *AutomationActionsPublicActionRevision
+	JSON200 *PublicActionRevision
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getautomationactions202603AppIdDefinitionIdrevisionsRevisionIdGetByIdResponse) GetJSON200() *AutomationActionsPublicActionRevision {
+func (r Getautomationactions202603AppIdDefinitionIdrevisionsRevisionIdGetByIdResponse) GetJSON200() *PublicActionRevision {
 	return r.JSON200
 }
 
@@ -13726,11 +15242,11 @@ type Getautomationsequences202603automationsequences202603Response struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *AutomationSequencesCollectionResponseWithTotalPublicSequenceLiteResponse
+	JSON200 *CollectionResponseWithTotalPublicSequenceLiteResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getautomationsequences202603automationsequences202603Response) GetJSON200() *AutomationSequencesCollectionResponseWithTotalPublicSequenceLiteResponse {
+func (r Getautomationsequences202603automationsequences202603Response) GetJSON200() *CollectionResponseWithTotalPublicSequenceLiteResponse {
 	return r.JSON200
 }
 
@@ -13767,11 +15283,11 @@ type Postautomationsequences202603enrollmentsResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *AutomationSequencesPublicSequenceEnrollmentLiteResponse
+	JSON200 *PublicSequenceEnrollmentLiteResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postautomationsequences202603enrollmentsResponse) GetJSON200() *AutomationSequencesPublicSequenceEnrollmentLiteResponse {
+func (r Postautomationsequences202603enrollmentsResponse) GetJSON200() *PublicSequenceEnrollmentLiteResponse {
 	return r.JSON200
 }
 
@@ -13808,11 +15324,11 @@ type Getautomationsequences202603enrollmentscontactContactIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *AutomationSequencesPublicSequenceEnrollmentResponse
+	JSON200 *PublicSequenceEnrollmentResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getautomationsequences202603enrollmentscontactContactIdResponse) GetJSON200() *AutomationSequencesPublicSequenceEnrollmentResponse {
+func (r Getautomationsequences202603enrollmentscontactContactIdResponse) GetJSON200() *PublicSequenceEnrollmentResponse {
 	return r.JSON200
 }
 
@@ -13849,11 +15365,11 @@ type Getautomationsequences202603SequenceIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *AutomationSequencesPublicSequenceResponse
+	JSON200 *PublicSequenceResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getautomationsequences202603SequenceIdResponse) GetJSON200() *AutomationSequencesPublicSequenceResponse {
+func (r Getautomationsequences202603SequenceIdResponse) GetJSON200() *PublicSequenceResponse {
 	return r.JSON200
 }
 
@@ -13890,11 +15406,11 @@ type GetbusinessUnitspublic202603businessUnitsuserUserIdGetByUserIDResponse stru
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *BusinessUnitsCollectionResponsePublicBusinessUnitNoPaging
+	JSON200 *CollectionResponsePublicBusinessUnitNoPaging
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r GetbusinessUnitspublic202603businessUnitsuserUserIdGetByUserIDResponse) GetJSON200() *BusinessUnitsCollectionResponsePublicBusinessUnitNoPaging {
+func (r GetbusinessUnitspublic202603businessUnitsuserUserIdGetByUserIDResponse) GetJSON200() *CollectionResponsePublicBusinessUnitNoPaging {
 	return r.JSON200
 }
 
@@ -13931,11 +15447,11 @@ type GetcmsauditLogs202603cmsauditLogsv3Response struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsAuditLogsCollectionResponsePublicAuditLog
+	JSON200 *CollectionResponsePublicAuditLog
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r GetcmsauditLogs202603cmsauditLogsv3Response) GetJSON200() *CmsAuditLogsCollectionResponsePublicAuditLog {
+func (r GetcmsauditLogs202603cmsauditLogsv3Response) GetJSON200() *CollectionResponsePublicAuditLog {
 	return r.JSON200
 }
 
@@ -14006,11 +15522,11 @@ type GetcmsblogSettings202603settingsResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsBlogsSettingsCollectionResponseWithTotalBlog
+	JSON200 *CollectionResponseWithTotalBlog
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r GetcmsblogSettings202603settingsResponse) GetJSON200() *CmsBlogsSettingsCollectionResponseWithTotalBlog {
+func (r GetcmsblogSettings202603settingsResponse) GetJSON200() *CollectionResponseWithTotalBlog {
 	return r.JSON200
 }
 
@@ -14081,11 +15597,11 @@ type PostcmsblogSettings202603settingsmultiLanguagecreateLanguageVariationRespon
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsBlogsSettingsBlog
+	JSON200 *Blog
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r PostcmsblogSettings202603settingsmultiLanguagecreateLanguageVariationResponse) GetJSON200() *CmsBlogsSettingsBlog {
+func (r PostcmsblogSettings202603settingsmultiLanguagecreateLanguageVariationResponse) GetJSON200() *Blog {
 	return r.JSON200
 }
 
@@ -14224,11 +15740,11 @@ type GetcmsblogSettings202603settingsBlogIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsBlogsSettingsBlog
+	JSON200 *Blog
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r GetcmsblogSettings202603settingsBlogIdResponse) GetJSON200() *CmsBlogsSettingsBlog {
+func (r GetcmsblogSettings202603settingsBlogIdResponse) GetJSON200() *Blog {
 	return r.JSON200
 }
 
@@ -14265,11 +15781,11 @@ type GetcmsblogSettings202603settingsBlogIdrevisionsResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsBlogsSettingsCollectionResponseWithTotalBlogVersion
+	JSON200 *CollectionResponseWithTotalBlogVersion
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r GetcmsblogSettings202603settingsBlogIdrevisionsResponse) GetJSON200() *CmsBlogsSettingsCollectionResponseWithTotalBlogVersion {
+func (r GetcmsblogSettings202603settingsBlogIdrevisionsResponse) GetJSON200() *CollectionResponseWithTotalBlogVersion {
 	return r.JSON200
 }
 
@@ -14306,11 +15822,11 @@ type GetcmsblogSettings202603settingsBlogIdrevisionsRevisionIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsBlogsSettingsBlogVersion
+	JSON200 *BlogVersion
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r GetcmsblogSettings202603settingsBlogIdrevisionsRevisionIdResponse) GetJSON200() *CmsBlogsSettingsBlogVersion {
+func (r GetcmsblogSettings202603settingsBlogIdrevisionsRevisionIdResponse) GetJSON200() *BlogVersion {
 	return r.JSON200
 }
 
@@ -14377,9 +15893,16 @@ func (r Getcmsblogs202603authorsGetPageResponse) ContentType() string {
 	return ""
 }
 
+// Postcmsblogs202603authorsCreateResponse201Headers the declared response headers of an HTTP 201 response for Postcmsblogs202603authorsCreate
+type Postcmsblogs202603authorsCreateResponse201Headers struct {
+	Location *string
+}
+
 type Postcmsblogs202603authorsCreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
+	// Headers201 the parsed response headers for an HTTP 201 response
+	Headers201 *Postcmsblogs202603authorsCreateResponse201Headers
 }
 
 // GetBody returns the raw response body bytes
@@ -14921,9 +16444,16 @@ func (r Getcmsblogs202603postsGetPageResponse) ContentType() string {
 	return ""
 }
 
+// Postcmsblogs202603postsCreateResponse201Headers the declared response headers of an HTTP 201 response for Postcmsblogs202603postsCreate
+type Postcmsblogs202603postsCreateResponse201Headers struct {
+	Location *string
+}
+
 type Postcmsblogs202603postsCreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
+	// Headers201 the parsed response headers for an HTTP 201 response
+	Headers201 *Postcmsblogs202603postsCreateResponse201Headers
 }
 
 // GetBody returns the raw response body bytes
@@ -15805,9 +17335,16 @@ func (r Getcmsblogs202603tagsGetPageResponse) ContentType() string {
 	return ""
 }
 
+// Postcmsblogs202603tagsCreateResponse201Headers the declared response headers of an HTTP 201 response for Postcmsblogs202603tagsCreate
+type Postcmsblogs202603tagsCreateResponse201Headers struct {
+	Location *string
+}
+
 type Postcmsblogs202603tagsCreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
+	// Headers201 the parsed response headers for an HTTP 201 response
+	Headers201 *Postcmsblogs202603tagsCreateResponse201Headers
 }
 
 // GetBody returns the raw response body bytes
@@ -16319,11 +17856,11 @@ type Getcmsdomains202603cmsdomainsv3Response struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsDomainsCollectionResponseWithTotalDomain
+	JSON200 *CollectionResponseWithTotalDomain
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcmsdomains202603cmsdomainsv3Response) GetJSON200() *CmsDomainsCollectionResponseWithTotalDomain {
+func (r Getcmsdomains202603cmsdomainsv3Response) GetJSON200() *CollectionResponseWithTotalDomain {
 	return r.JSON200
 }
 
@@ -16360,11 +17897,11 @@ type Getcmsdomains202603DomainIdGetByIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsDomainsDomain
+	JSON200 *Domain
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcmsdomains202603DomainIdGetByIdResponse) GetJSON200() *CmsDomainsDomain {
+func (r Getcmsdomains202603DomainIdGetByIdResponse) GetJSON200() *Domain {
 	return r.JSON200
 }
 
@@ -16401,11 +17938,11 @@ type Getcmshubdb202603tablesGetAllTablesResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsHubdbCollectionResponseWithTotalHubDbTableV3
+	JSON200 *CollectionResponseWithTotalHubDbTableV3
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcmshubdb202603tablesGetAllTablesResponse) GetJSON200() *CmsHubdbCollectionResponseWithTotalHubDbTableV3 {
+func (r Getcmshubdb202603tablesGetAllTablesResponse) GetJSON200() *CollectionResponseWithTotalHubDbTableV3 {
 	return r.JSON200
 }
 
@@ -16438,15 +17975,22 @@ func (r Getcmshubdb202603tablesGetAllTablesResponse) ContentType() string {
 	return ""
 }
 
+// Postcmshubdb202603tablesCreateTableResponse201Headers the declared response headers of an HTTP 201 response for Postcmshubdb202603tablesCreateTable
+type Postcmshubdb202603tablesCreateTableResponse201Headers struct {
+	Location *string
+}
+
 type Postcmshubdb202603tablesCreateTableResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CmsHubdbHubDbTableV3
+	JSON201 *HubDbTableV3
+	// Headers201 the parsed response headers for an HTTP 201 response
+	Headers201 *Postcmshubdb202603tablesCreateTableResponse201Headers
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcmshubdb202603tablesCreateTableResponse) GetJSON201() *CmsHubdbHubDbTableV3 {
+func (r Postcmshubdb202603tablesCreateTableResponse) GetJSON201() *HubDbTableV3 {
 	return r.JSON201
 }
 
@@ -16483,11 +18027,11 @@ type Getcmshubdb202603tablesdraftGetAllDraftTablesResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsHubdbCollectionResponseWithTotalHubDbTableV3
+	JSON200 *CollectionResponseWithTotalHubDbTableV3
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcmshubdb202603tablesdraftGetAllDraftTablesResponse) GetJSON200() *CmsHubdbCollectionResponseWithTotalHubDbTableV3 {
+func (r Getcmshubdb202603tablesdraftGetAllDraftTablesResponse) GetJSON200() *CollectionResponseWithTotalHubDbTableV3 {
 	return r.JSON200
 }
 
@@ -16558,11 +18102,11 @@ type Getcmshubdb202603tablesTableIdOrNameGetTableDetailsResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsHubdbHubDbTableV3
+	JSON200 *HubDbTableV3
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcmshubdb202603tablesTableIdOrNameGetTableDetailsResponse) GetJSON200() *CmsHubdbHubDbTableV3 {
+func (r Getcmshubdb202603tablesTableIdOrNameGetTableDetailsResponse) GetJSON200() *HubDbTableV3 {
 	return r.JSON200
 }
 
@@ -16599,11 +18143,11 @@ type Getcmshubdb202603tablesTableIdOrNamedraftGetDraftTableDetailsByIdResponse s
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsHubdbHubDbTableV3
+	JSON200 *HubDbTableV3
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcmshubdb202603tablesTableIdOrNamedraftGetDraftTableDetailsByIdResponse) GetJSON200() *CmsHubdbHubDbTableV3 {
+func (r Getcmshubdb202603tablesTableIdOrNamedraftGetDraftTableDetailsByIdResponse) GetJSON200() *HubDbTableV3 {
 	return r.JSON200
 }
 
@@ -16640,11 +18184,11 @@ type Patchcmshubdb202603tablesTableIdOrNamedraftUpdateDraftTableResponse struct 
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsHubdbHubDbTableV3
+	JSON200 *HubDbTableV3
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Patchcmshubdb202603tablesTableIdOrNamedraftUpdateDraftTableResponse) GetJSON200() *CmsHubdbHubDbTableV3 {
+func (r Patchcmshubdb202603tablesTableIdOrNamedraftUpdateDraftTableResponse) GetJSON200() *HubDbTableV3 {
 	return r.JSON200
 }
 
@@ -16681,11 +18225,11 @@ type Postcmshubdb202603tablesTableIdOrNamedraftcloneCloneDraftTableResponse stru
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsHubdbHubDbTableV3
+	JSON200 *HubDbTableV3
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcmshubdb202603tablesTableIdOrNamedraftcloneCloneDraftTableResponse) GetJSON200() *CmsHubdbHubDbTableV3 {
+func (r Postcmshubdb202603tablesTableIdOrNamedraftcloneCloneDraftTableResponse) GetJSON200() *HubDbTableV3 {
 	return r.JSON200
 }
 
@@ -16756,11 +18300,11 @@ type Postcmshubdb202603tablesTableIdOrNamedraftimportImportDraftTableResponse st
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsHubdbImportResult
+	JSON200 *ImportResult
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcmshubdb202603tablesTableIdOrNamedraftimportImportDraftTableResponse) GetJSON200() *CmsHubdbImportResult {
+func (r Postcmshubdb202603tablesTableIdOrNamedraftimportImportDraftTableResponse) GetJSON200() *ImportResult {
 	return r.JSON200
 }
 
@@ -16797,11 +18341,11 @@ type Postcmshubdb202603tablesTableIdOrNamedraftpublishPublishDraftTableResponse 
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsHubdbHubDbTableV3
+	JSON200 *HubDbTableV3
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcmshubdb202603tablesTableIdOrNamedraftpublishPublishDraftTableResponse) GetJSON200() *CmsHubdbHubDbTableV3 {
+func (r Postcmshubdb202603tablesTableIdOrNamedraftpublishPublishDraftTableResponse) GetJSON200() *HubDbTableV3 {
 	return r.JSON200
 }
 
@@ -16838,11 +18382,11 @@ type Postcmshubdb202603tablesTableIdOrNamedraftresetResetDraftTableResponse stru
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsHubdbHubDbTableV3
+	JSON200 *HubDbTableV3
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcmshubdb202603tablesTableIdOrNamedraftresetResetDraftTableResponse) GetJSON200() *CmsHubdbHubDbTableV3 {
+func (r Postcmshubdb202603tablesTableIdOrNamedraftresetResetDraftTableResponse) GetJSON200() *HubDbTableV3 {
 	return r.JSON200
 }
 
@@ -16913,11 +18457,11 @@ type Getcmshubdb202603tablesTableIdOrNamerowsGetTableRowsResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsHubdbUnifiedCollectionResponseWithTotalBaseHubDbTableRowV3
+	JSON200 *UnifiedCollectionResponseWithTotalBaseHubDbTableRowV3
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcmshubdb202603tablesTableIdOrNamerowsGetTableRowsResponse) GetJSON200() *CmsHubdbUnifiedCollectionResponseWithTotalBaseHubDbTableRowV3 {
+func (r Getcmshubdb202603tablesTableIdOrNamerowsGetTableRowsResponse) GetJSON200() *UnifiedCollectionResponseWithTotalBaseHubDbTableRowV3 {
 	return r.JSON200
 }
 
@@ -16950,15 +18494,22 @@ func (r Getcmshubdb202603tablesTableIdOrNamerowsGetTableRowsResponse) ContentTyp
 	return ""
 }
 
+// Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowResponse201Headers the declared response headers of an HTTP 201 response for Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRow
+type Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowResponse201Headers struct {
+	Location *string
+}
+
 type Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CmsHubdbHubDbTableRowV3
+	JSON201 *HubDbTableRowV3
+	// Headers201 the parsed response headers for an HTTP 201 response
+	Headers201 *Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowResponse201Headers
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowResponse) GetJSON201() *CmsHubdbHubDbTableRowV3 {
+func (r Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowResponse) GetJSON201() *HubDbTableRowV3 {
 	return r.JSON201
 }
 
@@ -16995,18 +18546,18 @@ type Postcmshubdb202603tablesTableIdOrNamerowsbatchreadReadTableRowsResponse str
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsHubdbBatchResponseHubDbTableRowV3
+	JSON200 *BatchResponseHubDbTableRowV3
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CmsHubdbBatchResponseHubDbTableRowV3WithErrors
+	JSON207 *BatchResponseHubDbTableRowV3WithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcmshubdb202603tablesTableIdOrNamerowsbatchreadReadTableRowsResponse) GetJSON200() *CmsHubdbBatchResponseHubDbTableRowV3 {
+func (r Postcmshubdb202603tablesTableIdOrNamerowsbatchreadReadTableRowsResponse) GetJSON200() *BatchResponseHubDbTableRowV3 {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcmshubdb202603tablesTableIdOrNamerowsbatchreadReadTableRowsResponse) GetJSON207() *CmsHubdbBatchResponseHubDbTableRowV3WithErrors {
+func (r Postcmshubdb202603tablesTableIdOrNamerowsbatchreadReadTableRowsResponse) GetJSON207() *BatchResponseHubDbTableRowV3WithErrors {
 	return r.JSON207
 }
 
@@ -17043,11 +18594,11 @@ type Getcmshubdb202603tablesTableIdOrNamerowsdraftReadDraftTableRowsResponse str
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsHubdbUnifiedCollectionResponseWithTotalBaseHubDbTableRowV3
+	JSON200 *UnifiedCollectionResponseWithTotalBaseHubDbTableRowV3
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcmshubdb202603tablesTableIdOrNamerowsdraftReadDraftTableRowsResponse) GetJSON200() *CmsHubdbUnifiedCollectionResponseWithTotalBaseHubDbTableRowV3 {
+func (r Getcmshubdb202603tablesTableIdOrNamerowsdraftReadDraftTableRowsResponse) GetJSON200() *UnifiedCollectionResponseWithTotalBaseHubDbTableRowV3 {
 	return r.JSON200
 }
 
@@ -17084,11 +18635,11 @@ type Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcloneCloneDraftTableRows
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsHubdbBatchResponseHubDbTableRowV3
+	JSON200 *BatchResponseHubDbTableRowV3
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcloneCloneDraftTableRowsResponse) GetJSON200() *CmsHubdbBatchResponseHubDbTableRowV3 {
+func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcloneCloneDraftTableRowsResponse) GetJSON200() *BatchResponseHubDbTableRowV3 {
 	return r.JSON200
 }
 
@@ -17125,18 +18676,18 @@ type Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcreateCreateDraftTableRo
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CmsHubdbBatchResponseHubDbTableRowV3
+	JSON201 *BatchResponseHubDbTableRowV3
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CmsHubdbBatchResponseHubDbTableRowV3WithErrors
+	JSON207 *BatchResponseHubDbTableRowV3WithErrors
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcreateCreateDraftTableRowsResponse) GetJSON201() *CmsHubdbBatchResponseHubDbTableRowV3 {
+func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcreateCreateDraftTableRowsResponse) GetJSON201() *BatchResponseHubDbTableRowV3 {
 	return r.JSON201
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcreateCreateDraftTableRowsResponse) GetJSON207() *CmsHubdbBatchResponseHubDbTableRowV3WithErrors {
+func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcreateCreateDraftTableRowsResponse) GetJSON207() *BatchResponseHubDbTableRowV3WithErrors {
 	return r.JSON207
 }
 
@@ -17207,18 +18758,18 @@ type Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreadReadDraftTableRowsRe
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsHubdbBatchResponseHubDbTableRowV3
+	JSON200 *BatchResponseHubDbTableRowV3
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CmsHubdbBatchResponseHubDbTableRowV3WithErrors
+	JSON207 *BatchResponseHubDbTableRowV3WithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreadReadDraftTableRowsResponse) GetJSON200() *CmsHubdbBatchResponseHubDbTableRowV3 {
+func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreadReadDraftTableRowsResponse) GetJSON200() *BatchResponseHubDbTableRowV3 {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreadReadDraftTableRowsResponse) GetJSON207() *CmsHubdbBatchResponseHubDbTableRowV3WithErrors {
+func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreadReadDraftTableRowsResponse) GetJSON207() *BatchResponseHubDbTableRowV3WithErrors {
 	return r.JSON207
 }
 
@@ -17255,18 +18806,18 @@ type Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreplaceReplaceDraftTable
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsHubdbBatchResponseHubDbTableRowV3
+	JSON200 *BatchResponseHubDbTableRowV3
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CmsHubdbBatchResponseHubDbTableRowV3WithErrors
+	JSON207 *BatchResponseHubDbTableRowV3WithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreplaceReplaceDraftTableRowsResponse) GetJSON200() *CmsHubdbBatchResponseHubDbTableRowV3 {
+func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreplaceReplaceDraftTableRowsResponse) GetJSON200() *BatchResponseHubDbTableRowV3 {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreplaceReplaceDraftTableRowsResponse) GetJSON207() *CmsHubdbBatchResponseHubDbTableRowV3WithErrors {
+func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreplaceReplaceDraftTableRowsResponse) GetJSON207() *BatchResponseHubDbTableRowV3WithErrors {
 	return r.JSON207
 }
 
@@ -17303,18 +18854,18 @@ type Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchupdateUpdateDraftTableRo
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsHubdbBatchResponseHubDbTableRowV3
+	JSON200 *BatchResponseHubDbTableRowV3
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CmsHubdbBatchResponseHubDbTableRowV3WithErrors
+	JSON207 *BatchResponseHubDbTableRowV3WithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchupdateUpdateDraftTableRowsResponse) GetJSON200() *CmsHubdbBatchResponseHubDbTableRowV3 {
+func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchupdateUpdateDraftTableRowsResponse) GetJSON200() *BatchResponseHubDbTableRowV3 {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchupdateUpdateDraftTableRowsResponse) GetJSON207() *CmsHubdbBatchResponseHubDbTableRowV3WithErrors {
+func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchupdateUpdateDraftTableRowsResponse) GetJSON207() *BatchResponseHubDbTableRowV3WithErrors {
 	return r.JSON207
 }
 
@@ -17351,11 +18902,11 @@ type Getcmshubdb202603tablesTableIdOrNamerowsRowIdGetTableRowResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsHubdbHubDbTableRowV3
+	JSON200 *HubDbTableRowV3
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcmshubdb202603tablesTableIdOrNamerowsRowIdGetTableRowResponse) GetJSON200() *CmsHubdbHubDbTableRowV3 {
+func (r Getcmshubdb202603tablesTableIdOrNamerowsRowIdGetTableRowResponse) GetJSON200() *HubDbTableRowV3 {
 	return r.JSON200
 }
 
@@ -17426,11 +18977,11 @@ type Getcmshubdb202603tablesTableIdOrNamerowsRowIddraftGetDraftTableRowByIdRespo
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsHubdbHubDbTableRowV3
+	JSON200 *HubDbTableRowV3
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcmshubdb202603tablesTableIdOrNamerowsRowIddraftGetDraftTableRowByIdResponse) GetJSON200() *CmsHubdbHubDbTableRowV3 {
+func (r Getcmshubdb202603tablesTableIdOrNamerowsRowIddraftGetDraftTableRowByIdResponse) GetJSON200() *HubDbTableRowV3 {
 	return r.JSON200
 }
 
@@ -17467,11 +19018,11 @@ type Patchcmshubdb202603tablesTableIdOrNamerowsRowIddraftUpdateDraftTableRowResp
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsHubdbHubDbTableRowV3
+	JSON200 *HubDbTableRowV3
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Patchcmshubdb202603tablesTableIdOrNamerowsRowIddraftUpdateDraftTableRowResponse) GetJSON200() *CmsHubdbHubDbTableRowV3 {
+func (r Patchcmshubdb202603tablesTableIdOrNamerowsRowIddraftUpdateDraftTableRowResponse) GetJSON200() *HubDbTableRowV3 {
 	return r.JSON200
 }
 
@@ -17508,11 +19059,11 @@ type Putcmshubdb202603tablesTableIdOrNamerowsRowIddraftReplaceDraftTableRowRespo
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsHubdbHubDbTableRowV3
+	JSON200 *HubDbTableRowV3
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Putcmshubdb202603tablesTableIdOrNamerowsRowIddraftReplaceDraftTableRowResponse) GetJSON200() *CmsHubdbHubDbTableRowV3 {
+func (r Putcmshubdb202603tablesTableIdOrNamerowsRowIddraftReplaceDraftTableRowResponse) GetJSON200() *HubDbTableRowV3 {
 	return r.JSON200
 }
 
@@ -17549,11 +19100,11 @@ type Postcmshubdb202603tablesTableIdOrNamerowsRowIddraftcloneCloneDraftTableRowR
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsHubdbHubDbTableRowV3
+	JSON200 *HubDbTableRowV3
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcmshubdb202603tablesTableIdOrNamerowsRowIddraftcloneCloneDraftTableRowResponse) GetJSON200() *CmsHubdbHubDbTableRowV3 {
+func (r Postcmshubdb202603tablesTableIdOrNamerowsRowIddraftcloneCloneDraftTableRowResponse) GetJSON200() *HubDbTableRowV3 {
 	return r.JSON200
 }
 
@@ -17590,11 +19141,11 @@ type Postcmshubdb202603tablesTableIdOrNameunpublishUnpublishTableResponse struct
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsHubdbHubDbTableV3
+	JSON200 *HubDbTableV3
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcmshubdb202603tablesTableIdOrNameunpublishUnpublishTableResponse) GetJSON200() *CmsHubdbHubDbTableV3 {
+func (r Postcmshubdb202603tablesTableIdOrNameunpublishUnpublishTableResponse) GetJSON200() *HubDbTableV3 {
 	return r.JSON200
 }
 
@@ -17665,11 +19216,11 @@ type Getcmspages202603landingPagesGetPageResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsPagesCollectionResponseWithTotalPageForwardPaging
+	JSON200 *CollectionResponseWithTotalPageForwardPaging
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcmspages202603landingPagesGetPageResponse) GetJSON200() *CmsPagesCollectionResponseWithTotalPageForwardPaging {
+func (r Getcmspages202603landingPagesGetPageResponse) GetJSON200() *CollectionResponseWithTotalPageForwardPaging {
 	return r.JSON200
 }
 
@@ -17702,15 +19253,22 @@ func (r Getcmspages202603landingPagesGetPageResponse) ContentType() string {
 	return ""
 }
 
+// Postcmspages202603landingPagesCreateResponse201Headers the declared response headers of an HTTP 201 response for Postcmspages202603landingPagesCreate
+type Postcmspages202603landingPagesCreateResponse201Headers struct {
+	Location *string
+}
+
 type Postcmspages202603landingPagesCreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CmsPagesPage
+	JSON201 *Page
+	// Headers201 the parsed response headers for an HTTP 201 response
+	Headers201 *Postcmspages202603landingPagesCreateResponse201Headers
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcmspages202603landingPagesCreateResponse) GetJSON201() *CmsPagesPage {
+func (r Postcmspages202603landingPagesCreateResponse) GetJSON201() *Page {
 	return r.JSON201
 }
 
@@ -17743,15 +19301,22 @@ func (r Postcmspages202603landingPagesCreateResponse) ContentType() string {
 	return ""
 }
 
+// Postcmspages202603landingPagesabTestcreateVariationCreateABTestVariationResponse201Headers the declared response headers of an HTTP 201 response for Postcmspages202603landingPagesabTestcreateVariationCreateABTestVariation
+type Postcmspages202603landingPagesabTestcreateVariationCreateABTestVariationResponse201Headers struct {
+	Location *string
+}
+
 type Postcmspages202603landingPagesabTestcreateVariationCreateABTestVariationResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CmsPagesPage
+	JSON201 *Page
+	// Headers201 the parsed response headers for an HTTP 201 response
+	Headers201 *Postcmspages202603landingPagesabTestcreateVariationCreateABTestVariationResponse201Headers
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcmspages202603landingPagesabTestcreateVariationCreateABTestVariationResponse) GetJSON201() *CmsPagesPage {
+func (r Postcmspages202603landingPagesabTestcreateVariationCreateABTestVariationResponse) GetJSON201() *Page {
 	return r.JSON201
 }
 
@@ -17890,18 +19455,18 @@ type Postcmspages202603landingPagesbatchcreateCreateBatchResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CmsPagesBatchResponsePage
+	JSON201 *BatchResponsePage
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CmsPagesBatchResponsePageWithErrors
+	JSON207 *BatchResponsePageWithErrors
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcmspages202603landingPagesbatchcreateCreateBatchResponse) GetJSON201() *CmsPagesBatchResponsePage {
+func (r Postcmspages202603landingPagesbatchcreateCreateBatchResponse) GetJSON201() *BatchResponsePage {
 	return r.JSON201
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcmspages202603landingPagesbatchcreateCreateBatchResponse) GetJSON207() *CmsPagesBatchResponsePageWithErrors {
+func (r Postcmspages202603landingPagesbatchcreateCreateBatchResponse) GetJSON207() *BatchResponsePageWithErrors {
 	return r.JSON207
 }
 
@@ -17938,18 +19503,18 @@ type Postcmspages202603landingPagesbatchreadReadBatchResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsPagesBatchResponsePage
+	JSON200 *BatchResponsePage
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CmsPagesBatchResponsePageWithErrors
+	JSON207 *BatchResponsePageWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcmspages202603landingPagesbatchreadReadBatchResponse) GetJSON200() *CmsPagesBatchResponsePage {
+func (r Postcmspages202603landingPagesbatchreadReadBatchResponse) GetJSON200() *BatchResponsePage {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcmspages202603landingPagesbatchreadReadBatchResponse) GetJSON207() *CmsPagesBatchResponsePageWithErrors {
+func (r Postcmspages202603landingPagesbatchreadReadBatchResponse) GetJSON207() *BatchResponsePageWithErrors {
 	return r.JSON207
 }
 
@@ -17986,18 +19551,18 @@ type Postcmspages202603landingPagesbatchupdateUpdateBatchResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsPagesBatchResponsePage
+	JSON200 *BatchResponsePage
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CmsPagesBatchResponsePageWithErrors
+	JSON207 *BatchResponsePageWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcmspages202603landingPagesbatchupdateUpdateBatchResponse) GetJSON200() *CmsPagesBatchResponsePage {
+func (r Postcmspages202603landingPagesbatchupdateUpdateBatchResponse) GetJSON200() *BatchResponsePage {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcmspages202603landingPagesbatchupdateUpdateBatchResponse) GetJSON207() *CmsPagesBatchResponsePageWithErrors {
+func (r Postcmspages202603landingPagesbatchupdateUpdateBatchResponse) GetJSON207() *BatchResponsePageWithErrors {
 	return r.JSON207
 }
 
@@ -18034,11 +19599,11 @@ type Postcmspages202603landingPagescloneCloneResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsPagesPage
+	JSON200 *Page
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcmspages202603landingPagescloneCloneResponse) GetJSON200() *CmsPagesPage {
+func (r Postcmspages202603landingPagescloneCloneResponse) GetJSON200() *Page {
 	return r.JSON200
 }
 
@@ -18075,11 +19640,11 @@ type Getcmspages202603landingPagesfoldersGetFoldersPageResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsPagesCollectionResponseWithTotalContentFolderForwardPaging
+	JSON200 *CollectionResponseWithTotalContentFolderForwardPaging
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcmspages202603landingPagesfoldersGetFoldersPageResponse) GetJSON200() *CmsPagesCollectionResponseWithTotalContentFolderForwardPaging {
+func (r Getcmspages202603landingPagesfoldersGetFoldersPageResponse) GetJSON200() *CollectionResponseWithTotalContentFolderForwardPaging {
 	return r.JSON200
 }
 
@@ -18112,15 +19677,22 @@ func (r Getcmspages202603landingPagesfoldersGetFoldersPageResponse) ContentType(
 	return ""
 }
 
+// Postcmspages202603landingPagesfoldersCreateFolderResponse201Headers the declared response headers of an HTTP 201 response for Postcmspages202603landingPagesfoldersCreateFolder
+type Postcmspages202603landingPagesfoldersCreateFolderResponse201Headers struct {
+	Location *string
+}
+
 type Postcmspages202603landingPagesfoldersCreateFolderResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CmsPagesContentFolder
+	JSON201 *ContentFolder
+	// Headers201 the parsed response headers for an HTTP 201 response
+	Headers201 *Postcmspages202603landingPagesfoldersCreateFolderResponse201Headers
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcmspages202603landingPagesfoldersCreateFolderResponse) GetJSON201() *CmsPagesContentFolder {
+func (r Postcmspages202603landingPagesfoldersCreateFolderResponse) GetJSON201() *ContentFolder {
 	return r.JSON201
 }
 
@@ -18191,18 +19763,18 @@ type Postcmspages202603landingPagesfoldersbatchcreateCreateFoldersResponse struc
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CmsPagesBatchResponseContentFolder
+	JSON201 *BatchResponseContentFolder
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CmsPagesBatchResponseContentFolderWithErrors
+	JSON207 *BatchResponseContentFolderWithErrors
 }
 
 // GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcmspages202603landingPagesfoldersbatchcreateCreateFoldersResponse) GetJSON201() *CmsPagesBatchResponseContentFolder {
+func (r Postcmspages202603landingPagesfoldersbatchcreateCreateFoldersResponse) GetJSON201() *BatchResponseContentFolder {
 	return r.JSON201
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcmspages202603landingPagesfoldersbatchcreateCreateFoldersResponse) GetJSON207() *CmsPagesBatchResponseContentFolderWithErrors {
+func (r Postcmspages202603landingPagesfoldersbatchcreateCreateFoldersResponse) GetJSON207() *BatchResponseContentFolderWithErrors {
 	return r.JSON207
 }
 
@@ -18239,18 +19811,18 @@ type Postcmspages202603landingPagesfoldersbatchreadReadFoldersResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsPagesBatchResponseContentFolder
+	JSON200 *BatchResponseContentFolder
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CmsPagesBatchResponseContentFolderWithErrors
+	JSON207 *BatchResponseContentFolderWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcmspages202603landingPagesfoldersbatchreadReadFoldersResponse) GetJSON200() *CmsPagesBatchResponseContentFolder {
+func (r Postcmspages202603landingPagesfoldersbatchreadReadFoldersResponse) GetJSON200() *BatchResponseContentFolder {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcmspages202603landingPagesfoldersbatchreadReadFoldersResponse) GetJSON207() *CmsPagesBatchResponseContentFolderWithErrors {
+func (r Postcmspages202603landingPagesfoldersbatchreadReadFoldersResponse) GetJSON207() *BatchResponseContentFolderWithErrors {
 	return r.JSON207
 }
 
@@ -18287,18 +19859,18 @@ type Postcmspages202603landingPagesfoldersbatchupdateUpdateFoldersResponse struc
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsPagesBatchResponseContentFolder
+	JSON200 *BatchResponseContentFolder
 	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CmsPagesBatchResponseContentFolderWithErrors
+	JSON207 *BatchResponseContentFolderWithErrors
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcmspages202603landingPagesfoldersbatchupdateUpdateFoldersResponse) GetJSON200() *CmsPagesBatchResponseContentFolder {
+func (r Postcmspages202603landingPagesfoldersbatchupdateUpdateFoldersResponse) GetJSON200() *BatchResponseContentFolder {
 	return r.JSON200
 }
 
 // GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcmspages202603landingPagesfoldersbatchupdateUpdateFoldersResponse) GetJSON207() *CmsPagesBatchResponseContentFolderWithErrors {
+func (r Postcmspages202603landingPagesfoldersbatchupdateUpdateFoldersResponse) GetJSON207() *BatchResponseContentFolderWithErrors {
 	return r.JSON207
 }
 
@@ -18369,11 +19941,11 @@ type Getcmspages202603landingPagesfoldersObjectIdGetFolderByIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsPagesContentFolder
+	JSON200 *ContentFolder
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcmspages202603landingPagesfoldersObjectIdGetFolderByIdResponse) GetJSON200() *CmsPagesContentFolder {
+func (r Getcmspages202603landingPagesfoldersObjectIdGetFolderByIdResponse) GetJSON200() *ContentFolder {
 	return r.JSON200
 }
 
@@ -18410,11 +19982,11 @@ type Patchcmspages202603landingPagesfoldersObjectIdUpdateFolderResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsPagesContentFolder
+	JSON200 *ContentFolder
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Patchcmspages202603landingPagesfoldersObjectIdUpdateFolderResponse) GetJSON200() *CmsPagesContentFolder {
+func (r Patchcmspages202603landingPagesfoldersObjectIdUpdateFolderResponse) GetJSON200() *ContentFolder {
 	return r.JSON200
 }
 
@@ -18445,1579 +20017,4 @@ func (r Patchcmspages202603landingPagesfoldersObjectIdUpdateFolderResponse) Cont
 		return r.HTTPResponse.Header.Get("Content-Type")
 	}
 	return ""
-}
-
-type Getcmspages202603landingPagesfoldersObjectIdrevisionsGetFolderPreviousVersionsResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsPagesCollectionResponseWithTotalContentFolderVersion
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcmspages202603landingPagesfoldersObjectIdrevisionsGetFolderPreviousVersionsResponse) GetJSON200() *CmsPagesCollectionResponseWithTotalContentFolderVersion {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcmspages202603landingPagesfoldersObjectIdrevisionsGetFolderPreviousVersionsResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcmspages202603landingPagesfoldersObjectIdrevisionsGetFolderPreviousVersionsResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcmspages202603landingPagesfoldersObjectIdrevisionsGetFolderPreviousVersionsResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcmspages202603landingPagesfoldersObjectIdrevisionsGetFolderPreviousVersionsResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcmspages202603landingPagesfoldersObjectIdrevisionsRevisionIdGetFolderPreviousVersionResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsPagesContentFolderVersion
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcmspages202603landingPagesfoldersObjectIdrevisionsRevisionIdGetFolderPreviousVersionResponse) GetJSON200() *CmsPagesContentFolderVersion {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcmspages202603landingPagesfoldersObjectIdrevisionsRevisionIdGetFolderPreviousVersionResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcmspages202603landingPagesfoldersObjectIdrevisionsRevisionIdGetFolderPreviousVersionResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcmspages202603landingPagesfoldersObjectIdrevisionsRevisionIdGetFolderPreviousVersionResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcmspages202603landingPagesfoldersObjectIdrevisionsRevisionIdGetFolderPreviousVersionResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmspages202603landingPagesfoldersObjectIdrevisionsRevisionIdrestoreRestoreFolderPreviousVersionResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsPagesContentFolder
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcmspages202603landingPagesfoldersObjectIdrevisionsRevisionIdrestoreRestoreFolderPreviousVersionResponse) GetJSON200() *CmsPagesContentFolder {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmspages202603landingPagesfoldersObjectIdrevisionsRevisionIdrestoreRestoreFolderPreviousVersionResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmspages202603landingPagesfoldersObjectIdrevisionsRevisionIdrestoreRestoreFolderPreviousVersionResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmspages202603landingPagesfoldersObjectIdrevisionsRevisionIdrestoreRestoreFolderPreviousVersionResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmspages202603landingPagesfoldersObjectIdrevisionsRevisionIdrestoreRestoreFolderPreviousVersionResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmspages202603landingPagesmultiLanguageattachToLangGroupAttachToLangGroupResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmspages202603landingPagesmultiLanguageattachToLangGroupAttachToLangGroupResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmspages202603landingPagesmultiLanguageattachToLangGroupAttachToLangGroupResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmspages202603landingPagesmultiLanguageattachToLangGroupAttachToLangGroupResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmspages202603landingPagesmultiLanguageattachToLangGroupAttachToLangGroupResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmspages202603landingPagesmultiLanguagecreateLanguageVariationCreateLangVariationResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsPagesPage
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcmspages202603landingPagesmultiLanguagecreateLanguageVariationCreateLangVariationResponse) GetJSON200() *CmsPagesPage {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmspages202603landingPagesmultiLanguagecreateLanguageVariationCreateLangVariationResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmspages202603landingPagesmultiLanguagecreateLanguageVariationCreateLangVariationResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmspages202603landingPagesmultiLanguagecreateLanguageVariationCreateLangVariationResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmspages202603landingPagesmultiLanguagecreateLanguageVariationCreateLangVariationResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmspages202603landingPagesmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmspages202603landingPagesmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmspages202603landingPagesmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmspages202603landingPagesmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmspages202603landingPagesmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Putcmspages202603landingPagesmultiLanguagesetNewLangPrimarySetLangPrimaryResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Putcmspages202603landingPagesmultiLanguagesetNewLangPrimarySetLangPrimaryResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Putcmspages202603landingPagesmultiLanguagesetNewLangPrimarySetLangPrimaryResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Putcmspages202603landingPagesmultiLanguagesetNewLangPrimarySetLangPrimaryResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Putcmspages202603landingPagesmultiLanguagesetNewLangPrimarySetLangPrimaryResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmspages202603landingPagesmultiLanguageupdateLanguagesUpdateLangsResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmspages202603landingPagesmultiLanguageupdateLanguagesUpdateLangsResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmspages202603landingPagesmultiLanguageupdateLanguagesUpdateLangsResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmspages202603landingPagesmultiLanguageupdateLanguagesUpdateLangsResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmspages202603landingPagesmultiLanguageupdateLanguagesUpdateLangsResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmspages202603landingPagesscheduleScheduleResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmspages202603landingPagesscheduleScheduleResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmspages202603landingPagesscheduleScheduleResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmspages202603landingPagesscheduleScheduleResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmspages202603landingPagesscheduleScheduleResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Deletecmspages202603landingPagesObjectIdArchiveResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Deletecmspages202603landingPagesObjectIdArchiveResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Deletecmspages202603landingPagesObjectIdArchiveResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Deletecmspages202603landingPagesObjectIdArchiveResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Deletecmspages202603landingPagesObjectIdArchiveResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcmspages202603landingPagesObjectIdGetByIdResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsPagesPage
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcmspages202603landingPagesObjectIdGetByIdResponse) GetJSON200() *CmsPagesPage {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcmspages202603landingPagesObjectIdGetByIdResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcmspages202603landingPagesObjectIdGetByIdResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcmspages202603landingPagesObjectIdGetByIdResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcmspages202603landingPagesObjectIdGetByIdResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Patchcmspages202603landingPagesObjectIdUpdateResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsPagesPage
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Patchcmspages202603landingPagesObjectIdUpdateResponse) GetJSON200() *CmsPagesPage {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Patchcmspages202603landingPagesObjectIdUpdateResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Patchcmspages202603landingPagesObjectIdUpdateResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Patchcmspages202603landingPagesObjectIdUpdateResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Patchcmspages202603landingPagesObjectIdUpdateResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcmspages202603landingPagesObjectIddraftGetDraftByIdResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsPagesPage
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcmspages202603landingPagesObjectIddraftGetDraftByIdResponse) GetJSON200() *CmsPagesPage {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcmspages202603landingPagesObjectIddraftGetDraftByIdResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcmspages202603landingPagesObjectIddraftGetDraftByIdResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcmspages202603landingPagesObjectIddraftGetDraftByIdResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcmspages202603landingPagesObjectIddraftGetDraftByIdResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Patchcmspages202603landingPagesObjectIddraftUpdateDraftResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsPagesPage
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Patchcmspages202603landingPagesObjectIddraftUpdateDraftResponse) GetJSON200() *CmsPagesPage {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Patchcmspages202603landingPagesObjectIddraftUpdateDraftResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Patchcmspages202603landingPagesObjectIddraftUpdateDraftResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Patchcmspages202603landingPagesObjectIddraftUpdateDraftResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Patchcmspages202603landingPagesObjectIddraftUpdateDraftResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmspages202603landingPagesObjectIddraftpushLivePushLiveResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmspages202603landingPagesObjectIddraftpushLivePushLiveResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmspages202603landingPagesObjectIddraftpushLivePushLiveResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmspages202603landingPagesObjectIddraftpushLivePushLiveResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmspages202603landingPagesObjectIddraftpushLivePushLiveResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmspages202603landingPagesObjectIddraftresetResetDraftResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmspages202603landingPagesObjectIddraftresetResetDraftResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmspages202603landingPagesObjectIddraftresetResetDraftResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmspages202603landingPagesObjectIddraftresetResetDraftResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmspages202603landingPagesObjectIddraftresetResetDraftResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcmspages202603landingPagesObjectIdrevisionsGetPreviousVersionsResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsPagesCollectionResponseWithTotalPageVersion
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcmspages202603landingPagesObjectIdrevisionsGetPreviousVersionsResponse) GetJSON200() *CmsPagesCollectionResponseWithTotalPageVersion {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcmspages202603landingPagesObjectIdrevisionsGetPreviousVersionsResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcmspages202603landingPagesObjectIdrevisionsGetPreviousVersionsResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcmspages202603landingPagesObjectIdrevisionsGetPreviousVersionsResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcmspages202603landingPagesObjectIdrevisionsGetPreviousVersionsResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcmspages202603landingPagesObjectIdrevisionsRevisionIdGetPreviousVersionResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsPagesPageVersion
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcmspages202603landingPagesObjectIdrevisionsRevisionIdGetPreviousVersionResponse) GetJSON200() *CmsPagesPageVersion {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcmspages202603landingPagesObjectIdrevisionsRevisionIdGetPreviousVersionResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcmspages202603landingPagesObjectIdrevisionsRevisionIdGetPreviousVersionResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcmspages202603landingPagesObjectIdrevisionsRevisionIdGetPreviousVersionResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcmspages202603landingPagesObjectIdrevisionsRevisionIdGetPreviousVersionResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmspages202603landingPagesObjectIdrevisionsRevisionIdrestoreRestorePreviousVersionResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsPagesPage
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcmspages202603landingPagesObjectIdrevisionsRevisionIdrestoreRestorePreviousVersionResponse) GetJSON200() *CmsPagesPage {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmspages202603landingPagesObjectIdrevisionsRevisionIdrestoreRestorePreviousVersionResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmspages202603landingPagesObjectIdrevisionsRevisionIdrestoreRestorePreviousVersionResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmspages202603landingPagesObjectIdrevisionsRevisionIdrestoreRestorePreviousVersionResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmspages202603landingPagesObjectIdrevisionsRevisionIdrestoreRestorePreviousVersionResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmspages202603landingPagesObjectIdrevisionsRevisionIdrestoreToDraftRestorePreviousVersionToDraftResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsPagesPage
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcmspages202603landingPagesObjectIdrevisionsRevisionIdrestoreToDraftRestorePreviousVersionToDraftResponse) GetJSON200() *CmsPagesPage {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmspages202603landingPagesObjectIdrevisionsRevisionIdrestoreToDraftRestorePreviousVersionToDraftResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmspages202603landingPagesObjectIdrevisionsRevisionIdrestoreToDraftRestorePreviousVersionToDraftResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmspages202603landingPagesObjectIdrevisionsRevisionIdrestoreToDraftRestorePreviousVersionToDraftResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmspages202603landingPagesObjectIdrevisionsRevisionIdrestoreToDraftRestorePreviousVersionToDraftResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcmspages202603sitePagesGetPageResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsPagesCollectionResponseWithTotalPageForwardPaging
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcmspages202603sitePagesGetPageResponse) GetJSON200() *CmsPagesCollectionResponseWithTotalPageForwardPaging {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcmspages202603sitePagesGetPageResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcmspages202603sitePagesGetPageResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcmspages202603sitePagesGetPageResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcmspages202603sitePagesGetPageResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmspages202603sitePagesCreateResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CmsPagesPage
-}
-
-// GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcmspages202603sitePagesCreateResponse) GetJSON201() *CmsPagesPage {
-	return r.JSON201
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmspages202603sitePagesCreateResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmspages202603sitePagesCreateResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmspages202603sitePagesCreateResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmspages202603sitePagesCreateResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmspages202603sitePagesabTestcreateVariationCreateABTestVariationResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CmsPagesPage
-}
-
-// GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcmspages202603sitePagesabTestcreateVariationCreateABTestVariationResponse) GetJSON201() *CmsPagesPage {
-	return r.JSON201
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmspages202603sitePagesabTestcreateVariationCreateABTestVariationResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmspages202603sitePagesabTestcreateVariationCreateABTestVariationResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmspages202603sitePagesabTestcreateVariationCreateABTestVariationResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmspages202603sitePagesabTestcreateVariationCreateABTestVariationResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmspages202603sitePagesabTestendEndActiveABTestResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmspages202603sitePagesabTestendEndActiveABTestResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmspages202603sitePagesabTestendEndActiveABTestResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmspages202603sitePagesabTestendEndActiveABTestResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmspages202603sitePagesabTestendEndActiveABTestResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmspages202603sitePagesabTestrerunRerunPreviousABTestResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmspages202603sitePagesabTestrerunRerunPreviousABTestResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmspages202603sitePagesabTestrerunRerunPreviousABTestResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmspages202603sitePagesabTestrerunRerunPreviousABTestResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmspages202603sitePagesabTestrerunRerunPreviousABTestResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmspages202603sitePagesbatcharchiveArchiveBatchResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmspages202603sitePagesbatcharchiveArchiveBatchResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmspages202603sitePagesbatcharchiveArchiveBatchResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmspages202603sitePagesbatcharchiveArchiveBatchResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmspages202603sitePagesbatcharchiveArchiveBatchResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmspages202603sitePagesbatchcreateCreateBatchResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *CmsPagesBatchResponsePage
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CmsPagesBatchResponsePageWithErrors
-}
-
-// GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcmspages202603sitePagesbatchcreateCreateBatchResponse) GetJSON201() *CmsPagesBatchResponsePage {
-	return r.JSON201
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcmspages202603sitePagesbatchcreateCreateBatchResponse) GetJSON207() *CmsPagesBatchResponsePageWithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmspages202603sitePagesbatchcreateCreateBatchResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmspages202603sitePagesbatchcreateCreateBatchResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmspages202603sitePagesbatchcreateCreateBatchResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmspages202603sitePagesbatchcreateCreateBatchResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmspages202603sitePagesbatchreadReadBatchResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsPagesBatchResponsePage
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CmsPagesBatchResponsePageWithErrors
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcmspages202603sitePagesbatchreadReadBatchResponse) GetJSON200() *CmsPagesBatchResponsePage {
-	return r.JSON200
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcmspages202603sitePagesbatchreadReadBatchResponse) GetJSON207() *CmsPagesBatchResponsePageWithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmspages202603sitePagesbatchreadReadBatchResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmspages202603sitePagesbatchreadReadBatchResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmspages202603sitePagesbatchreadReadBatchResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmspages202603sitePagesbatchreadReadBatchResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmspages202603sitePagesbatchupdateUpdateBatchResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsPagesBatchResponsePage
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *CmsPagesBatchResponsePageWithErrors
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcmspages202603sitePagesbatchupdateUpdateBatchResponse) GetJSON200() *CmsPagesBatchResponsePage {
-	return r.JSON200
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcmspages202603sitePagesbatchupdateUpdateBatchResponse) GetJSON207() *CmsPagesBatchResponsePageWithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmspages202603sitePagesbatchupdateUpdateBatchResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmspages202603sitePagesbatchupdateUpdateBatchResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmspages202603sitePagesbatchupdateUpdateBatchResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmspages202603sitePagesbatchupdateUpdateBatchResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmspages202603sitePagescloneCloneResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsPagesPage
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcmspages202603sitePagescloneCloneResponse) GetJSON200() *CmsPagesPage {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmspages202603sitePagescloneCloneResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmspages202603sitePagescloneCloneResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmspages202603sitePagescloneCloneResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmspages202603sitePagescloneCloneResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmspages202603sitePagesmultiLanguageattachToLangGroupAttachToLangGroupResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmspages202603sitePagesmultiLanguageattachToLangGroupAttachToLangGroupResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmspages202603sitePagesmultiLanguageattachToLangGroupAttachToLangGroupResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmspages202603sitePagesmultiLanguageattachToLangGroupAttachToLangGroupResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmspages202603sitePagesmultiLanguageattachToLangGroupAttachToLangGroupResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmspages202603sitePagesmultiLanguagecreateLanguageVariationCreateLangVariationResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsPagesPage
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcmspages202603sitePagesmultiLanguagecreateLanguageVariationCreateLangVariationResponse) GetJSON200() *CmsPagesPage {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmspages202603sitePagesmultiLanguagecreateLanguageVariationCreateLangVariationResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmspages202603sitePagesmultiLanguagecreateLanguageVariationCreateLangVariationResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmspages202603sitePagesmultiLanguagecreateLanguageVariationCreateLangVariationResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmspages202603sitePagesmultiLanguagecreateLanguageVariationCreateLangVariationResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmspages202603sitePagesmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmspages202603sitePagesmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmspages202603sitePagesmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmspages202603sitePagesmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmspages202603sitePagesmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Putcmspages202603sitePagesmultiLanguagesetNewLangPrimarySetLangPrimaryResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Putcmspages202603sitePagesmultiLanguagesetNewLangPrimarySetLangPrimaryResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Putcmspages202603sitePagesmultiLanguagesetNewLangPrimarySetLangPrimaryResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Putcmspages202603sitePagesmultiLanguagesetNewLangPrimarySetLangPrimaryResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Putcmspages202603sitePagesmultiLanguagesetNewLangPrimarySetLangPrimaryResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmspages202603sitePagesmultiLanguageupdateLanguagesUpdateLangsResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmspages202603sitePagesmultiLanguageupdateLanguagesUpdateLangsResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmspages202603sitePagesmultiLanguageupdateLanguagesUpdateLangsResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmspages202603sitePagesmultiLanguageupdateLanguagesUpdateLangsResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmspages202603sitePagesmultiLanguageupdateLanguagesUpdateLangsResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmspages202603sitePagesscheduleScheduleResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmspages202603sitePagesscheduleScheduleResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmspages202603sitePagesscheduleScheduleResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmspages202603sitePagesscheduleScheduleResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmspages202603sitePagesscheduleScheduleResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Deletecmspages202603sitePagesObjectIdArchiveResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Deletecmspages202603sitePagesObjectIdArchiveResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Deletecmspages202603sitePagesObjectIdArchiveResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Deletecmspages202603sitePagesObjectIdArchiveResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Deletecmspages202603sitePagesObjectIdArchiveResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcmspages202603sitePagesObjectIdGetByIdResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsPagesPage
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcmspages202603sitePagesObjectIdGetByIdResponse) GetJSON200() *CmsPagesPage {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcmspages202603sitePagesObjectIdGetByIdResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcmspages202603sitePagesObjectIdGetByIdResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcmspages202603sitePagesObjectIdGetByIdResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcmspages202603sitePagesObjectIdGetByIdResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Patchcmspages202603sitePagesObjectIdUpdateResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsPagesPage
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Patchcmspages202603sitePagesObjectIdUpdateResponse) GetJSON200() *CmsPagesPage {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Patchcmspages202603sitePagesObjectIdUpdateResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Patchcmspages202603sitePagesObjectIdUpdateResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Patchcmspages202603sitePagesObjectIdUpdateResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Patchcmspages202603sitePagesObjectIdUpdateResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcmspages202603sitePagesObjectIddraftGetDraftByIdResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsPagesPage
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcmspages202603sitePagesObjectIddraftGetDraftByIdResponse) GetJSON200() *CmsPagesPage {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcmspages202603sitePagesObjectIddraftGetDraftByIdResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcmspages202603sitePagesObjectIddraftGetDraftByIdResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcmspages202603sitePagesObjectIddraftGetDraftByIdResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcmspages202603sitePagesObjectIddraftGetDraftByIdResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Patchcmspages202603sitePagesObjectIddraftUpdateDraftResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CmsPagesPage
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Patchcmspages202603sitePagesObjectIddraftUpdateDraftResponse) GetJSON200() *CmsPagesPage {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Patchcmspages202603sitePagesObjectIddraftUpdateDraftResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Patchcmspages202603sitePagesObjectIddraftUpdateDraftResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Patchcmspages202603sitePagesObjectIddraftUpdateDraftResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
 }

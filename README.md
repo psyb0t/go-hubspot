@@ -6,7 +6,7 @@
 [![license](https://raw.githubusercontent.com/psyb0t/go-hubspot/badges/license.svg)](LICENSE)
 [![imported by](https://raw.githubusercontent.com/psyb0t/go-hubspot/badges/importers.svg)](https://github.com/psyb0t/go-hubspot/blob/badges/importers.md)
 
-Unofficial Go client for the [HubSpot API](https://developers.hubspot.com/docs/api-reference), generated with [oapi-codegen](https://github.com/oapi-codegen/oapi-codegen) from the unified OpenAPI document HubSpot publishes for its SDKs. I am not affiliated with HubSpot.
+Unofficial Go client for the [HubSpot API](https://developers.hubspot.com/docs/api-reference), generated with [oapi-codegen](https://github.com/oapi-codegen/oapi-codegen) from the OpenAPI documents HubSpot publishes for each of its APIs, merged into one. I am not affiliated with HubSpot.
 
 The package is `hubspot`, in the repository root. Everything in the `client_NNN.gen.go` files is generated. Don't edit them by hand, regenerate them.
 
@@ -81,7 +81,8 @@ make generate
 
 `gen.go` declares the steps, so `make generate` is just `go generate ./...`:
 
-- `scripts/fetch-spec.sh` reads `openapi_spec_url` from `.stats.yml` in [HubSpot/hubspot-sdk-python](https://github.com/HubSpot/hubspot-sdk-python) and downloads that URL to `api/openapi.yml`. The spec is hosted by Stainless under a URL that changes with every update, so the script looks it up each time.
+- `scripts/fetch-spec.sh` reads HubSpot's public spec index, `https://api.hubspot.com/public/api/spec/v1/specs`, downloads every document of API version `2026-03` (one per API) and merges them into `api/openapi.json` with `scripts/merge-specs.jq`. Schemas that share a name but differ in structure keep the name for the most common variant; the others get their API's name as a prefix. The merge stops with an error on any conflict it cannot resolve.
+- `scripts/patch-spec.sh` writes `api/openapi.patched.json`. It defines `HubDbTableRowV3Wrapper`, which the HubDB document references but never defines, and types the property calculation and rollup condition expressions as free-form objects instead of a union over about a hundred expression schemas.
 - oapi-codegen runs with `config.yaml` and writes `client.gen.go`. The config maps `number` to `float64`, because the spec gives many numbers no format and oapi-codegen would otherwise use `float32`.
 - `scripts/split-gen.sh` splits `client.gen.go` into `client_NNN.gen.go` files of about 20,000 lines each, at top-level declarations. One file of close to 300,000 lines makes golangci-lint very slow.
 

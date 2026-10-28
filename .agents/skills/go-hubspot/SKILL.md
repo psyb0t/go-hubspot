@@ -1,6 +1,6 @@
 ---
 name: go-hubspot
-description: Unofficial Go client for the HubSpot API. `hubspot.NewClientWithResponses("https://api.hubapi.com", ...)` from `github.com/psyb0t/go-hubspot` gives a typed method for every path in HubSpot's unified OpenAPI spec, including CRM objects such as contacts and companies, single-deal reads and updates, associations, properties, search, marketing, CMS, automation, conversations, files and webhooks. Auth is a Bearer private app or OAuth access token set through a request editor. Responses decode into typed `JSON200`/`JSON201` fields. Use when Go code needs to read or write HubSpot data, or already imports go-hubspot.
+description: Unofficial Go client for the HubSpot API. `hubspot.NewClientWithResponses("https://api.hubapi.com", ...)` from `github.com/psyb0t/go-hubspot` gives a typed method for every path in HubSpot's 2026-03 OpenAPI documents, including CRM objects such as contacts and companies, single-deal reads and updates, associations, properties, search, marketing, CMS, automation, conversations, files and webhooks. Auth is a Bearer private app or OAuth access token set through a request editor. Responses decode into typed `JSON200`/`JSON201` fields. Use when Go code needs to read or write HubSpot data, or already imports go-hubspot.
 license: MIT
 homepage: https://github.com/psyb0t/go-hubspot
 user-invocable: true
@@ -37,7 +37,7 @@ For install details, naming, more operations and the developer API key scheme, s
 ## When NOT to use
 
 - The code is not Go. Use one of HubSpot's own SDKs.
-- You need an endpoint outside HubSpot's unified spec, such as a legacy v1 API. The client has no method for it.
+- You need an endpoint outside HubSpot's 2026-03 specs, such as a legacy v1 API. The client has no method for it.
 - You only need to receive HubSpot webhooks. The client sends requests; it does not run a webhook server.
 
 ## Finding endpoints and types
@@ -103,8 +103,8 @@ Create a contact (`POST /crm/objects/2026-03/contacts`, answers 201):
 ```go
 res, err := client.Postcrmobjects202603contactsCreateWithResponse(
 	ctx,
-	hubspot.CrmObjectsSimplePublicObjectInputForCreate{
-		Associations: []hubspot.CrmObjectsPublicAssociationsForObject{},
+	hubspot.SimplePublicObjectInputForCreate{
+		Associations: []hubspot.PublicAssociationsForObject{},
 		Properties:   map[string]string{"email": "user@example.com"},
 	},
 )
@@ -124,11 +124,11 @@ value := "user@example.com"
 
 res, err := client.Postcrmobjects202603contactssearchDoSearchWithResponse(
 	ctx,
-	hubspot.CrmPublicObjectSearchRequest{
-		FilterGroups: []hubspot.CrmFilterGroup{{
-			Filters: []hubspot.CrmFilter{{
+	hubspot.PublicObjectSearchRequest{
+		FilterGroups: []hubspot.FilterGroup{{
+			Filters: []hubspot.Filter{{
 				PropertyName: "email",
-				Operator:     hubspot.CrmFilterOperatorEQ,
+				Operator:     hubspot.FilterOperatorEQ,
 				Value:        &value,
 			}},
 		}},

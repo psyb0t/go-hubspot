@@ -27,7 +27,7 @@ import "github.com/psyb0t/go-hubspot"
 
 ## Auth
 
-The spec declares two schemes:
+The spec lists OAuth 2, private app keys and a developer API key. Private app and OAuth access tokens both go in a Bearer header:
 
 | Scheme | How |
 |---|---|

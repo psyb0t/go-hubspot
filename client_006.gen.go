@@ -564,11 +564,7 @@ func (c *Client) Postautomationactionscallbacks202603CallbackIdcompleteComplete(
 	return c.Client.Do(req)
 }
 
-// Getautomationsequences202603automationsequences202603 Retrieve sequences
-//
-// Retrieve a list of sequences available in your HubSpot account. This endpoint allows you to filter sequences by user ID and name, and supports pagination for large result sets. Use this endpoint to manage and review your sequences effectively.
-//
-// Corresponds with GET /automation/sequences/2026-03 (the `Getautomationsequences202603automationsequences202603` operationId).
+// Getautomationsequences202603automationsequences202603 performs a GET /automation/sequences/2026-03 (the `Getautomationsequences202603automationsequences202603` operationId) request.
 func (c *Client) Getautomationsequences202603automationsequences202603(ctx context.Context, params *Getautomationsequences202603automationsequences202603Params, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewGetautomationsequences202603automationsequences202603Request(c.Server, params)
 	if err != nil {
@@ -670,7 +666,11 @@ func (c *Client) GetbusinessUnitspublic202603businessUnitsuserUserIdGetByUserID(
 	return c.Client.Do(req)
 }
 
-// GetcmsauditLogs202603cmsauditLogsv3 performs a GET /cms/audit-logs/2026-03 (the `GetcmsauditLogs202603cmsauditLogsv3` operationId) request.
+// GetcmsauditLogs202603cmsauditLogsv3 Retrieve logs
+//
+// Retrieve audit logs for the CMS in your HubSpot account. This endpoint allows you to filter logs by user, event type, object type, and object ID. It supports pagination and sorting, making it easier to navigate through large sets of log data. Use this endpoint to monitor changes and activities within your CMS.
+//
+// Corresponds with GET /cms/audit-logs/2026-03 (the `GetcmsauditLogs202603cmsauditLogsv3` operationId).
 func (c *Client) GetcmsauditLogs202603cmsauditLogsv3(ctx context.Context, params *GetcmsauditLogs202603cmsauditLogsv3Params, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewGetcmsauditLogs202603cmsauditLogsv3Request(c.Server, params)
 	if err != nil {
@@ -683,8 +683,13 @@ func (c *Client) GetcmsauditLogs202603cmsauditLogsv3(ctx context.Context, params
 	return c.Client.Do(req)
 }
 
-// PostcmsauditLogs202603exportcmsauditLogs202603exportWithBody performs a POST /cms/audit-logs/2026-03/export (the `PostcmsauditLogs202603exportcmsauditLogs202603export` operationId) request,
-// with any type of body and a specified content type.
+// PostcmsauditLogs202603exportcmsauditLogs202603exportWithBody Export Logs
+//
+// Export CMS audit logs based on specified settings. This endpoint allows users to export logs in various formats such as XLS, XLSX, or CSV. The request requires specifying details like the email, portal ID, and recipient user IDs. This is useful for auditing and monitoring changes within the CMS.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /cms/audit-logs/2026-03/export (the `PostcmsauditLogs202603exportcmsauditLogs202603export` operationId).
 func (c *Client) PostcmsauditLogs202603exportcmsauditLogs202603exportWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcmsauditLogs202603exportcmsauditLogs202603exportRequestWithBody(c.Server, contentType, body)
 	if err != nil {
@@ -697,8 +702,13 @@ func (c *Client) PostcmsauditLogs202603exportcmsauditLogs202603exportWithBody(ct
 	return c.Client.Do(req)
 }
 
-// PostcmsauditLogs202603exportcmsauditLogs202603export performs a POST /cms/audit-logs/2026-03/export (the `PostcmsauditLogs202603exportcmsauditLogs202603export` operationId) request.
+// PostcmsauditLogs202603exportcmsauditLogs202603export Export Logs
+//
+// Export CMS audit logs based on specified settings. This endpoint allows users to export logs in various formats such as XLS, XLSX, or CSV. The request requires specifying details like the email, portal ID, and recipient user IDs. This is useful for auditing and monitoring changes within the CMS.
+//
 // Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/audit-logs/2026-03/export (the `PostcmsauditLogs202603exportcmsauditLogs202603export` operationId).
 func (c *Client) PostcmsauditLogs202603exportcmsauditLogs202603export(ctx context.Context, body PostcmsauditLogs202603exportcmsauditLogs202603exportJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcmsauditLogs202603exportcmsauditLogs202603exportRequest(c.Server, body)
 	if err != nil {
@@ -1081,7 +1091,11 @@ func (c *Client) Postcmsblogs202603authorsbatchupdateUpdateBatchWithBody(ctx con
 	return c.Client.Do(req)
 }
 
-// Getcmsblogs202603authorscursorcmsblogsv3authorscursor performs a GET /cms/blogs/2026-03/authors/cursor (the `Getcmsblogs202603authorscursorcmsblogsv3authorscursor` operationId) request.
+// Getcmsblogs202603authorscursorcmsblogsv3authorscursor List Authors
+//
+// Retrieve a list of blog authors using various query parameters to filter and sort the results. This endpoint supports pagination and can return archived authors if specified.
+//
+// Corresponds with GET /cms/blogs/2026-03/authors/cursor (the `Getcmsblogs202603authorscursorcmsblogsv3authorscursor` operationId).
 func (c *Client) Getcmsblogs202603authorscursorcmsblogsv3authorscursor(ctx context.Context, params *Getcmsblogs202603authorscursorcmsblogsv3authorscursorParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewGetcmsblogs202603authorscursorcmsblogsv3authorscursorRequest(c.Server, params)
 	if err != nil {
@@ -1094,7 +1108,11 @@ func (c *Client) Getcmsblogs202603authorscursorcmsblogsv3authorscursor(ctx conte
 	return c.Client.Do(req)
 }
 
-// Getcmsblogs202603authorscursorquerycmsblogsv3authorscursorquery performs a GET /cms/blogs/2026-03/authors/cursor/query (the `Getcmsblogs202603authorscursorquerycmsblogsv3authorscursorquery` operationId) request.
+// Getcmsblogs202603authorscursorquerycmsblogsv3authorscursorquery Query authors
+//
+// Retrieve a list of blog authors with optional filters for creation and update timestamps. This endpoint supports pagination and sorting, allowing you to efficiently manage large datasets of authors.
+//
+// Corresponds with GET /cms/blogs/2026-03/authors/cursor/query (the `Getcmsblogs202603authorscursorquerycmsblogsv3authorscursorquery` operationId).
 func (c *Client) Getcmsblogs202603authorscursorquerycmsblogsv3authorscursorquery(ctx context.Context, params *Getcmsblogs202603authorscursorquerycmsblogsv3authorscursorqueryParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewGetcmsblogs202603authorscursorquerycmsblogsv3authorscursorqueryRequest(c.Server, params)
 	if err != nil {
@@ -1388,7 +1406,11 @@ func (c *Client) Postcmsblogs202603postscloneCloneWithBody(ctx context.Context, 
 	return c.Client.Do(req)
 }
 
-// Getcmsblogs202603postscursorcmsblogsv3postscursor performs a GET /cms/blogs/2026-03/posts/cursor (the `Getcmsblogs202603postscursorcmsblogsv3postscursor` operationId) request.
+// Getcmsblogs202603postscursorcmsblogsv3postscursor List posts
+//
+// Retrieve a list of blog posts with optional filtering and sorting capabilities. This endpoint supports pagination and allows you to specify date ranges for creation and update times, as well as sorting preferences. It is useful for obtaining an overview of blog posts, including archived ones if desired.
+//
+// Corresponds with GET /cms/blogs/2026-03/posts/cursor (the `Getcmsblogs202603postscursorcmsblogsv3postscursor` operationId).
 func (c *Client) Getcmsblogs202603postscursorcmsblogsv3postscursor(ctx context.Context, params *Getcmsblogs202603postscursorcmsblogsv3postscursorParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewGetcmsblogs202603postscursorcmsblogsv3postscursorRequest(c.Server, params)
 	if err != nil {
@@ -1401,7 +1423,11 @@ func (c *Client) Getcmsblogs202603postscursorcmsblogsv3postscursor(ctx context.C
 	return c.Client.Do(req)
 }
 
-// Getcmsblogs202603postscursorquerycmsblogsv3postscursorquery performs a GET /cms/blogs/2026-03/posts/cursor/query (the `Getcmsblogs202603postscursorquerycmsblogsv3postscursorquery` operationId) request.
+// Getcmsblogs202603postscursorquerycmsblogsv3postscursorquery Query Posts
+//
+// Retrieve blog posts from the HubSpot CMS using various query parameters to filter and sort the results. This endpoint supports pagination and allows you to specify date ranges for creation and updates, as well as sorting options. It is useful for fetching a list of posts with specific criteria, such as posts created after a certain date or posts that have been archived.
+//
+// Corresponds with GET /cms/blogs/2026-03/posts/cursor/query (the `Getcmsblogs202603postscursorquerycmsblogsv3postscursorquery` operationId).
 func (c *Client) Getcmsblogs202603postscursorquerycmsblogsv3postscursorquery(ctx context.Context, params *Getcmsblogs202603postscursorquerycmsblogsv3postscursorqueryParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewGetcmsblogs202603postscursorquerycmsblogsv3postscursorqueryRequest(c.Server, params)
 	if err != nil {
@@ -1831,7 +1857,11 @@ func (c *Client) Postcmsblogs202603tagsbatchupdateUpdateBatchWithBody(ctx contex
 	return c.Client.Do(req)
 }
 
-// Getcmsblogs202603tagscursorcmsblogsv3tagscursor performs a GET /cms/blogs/2026-03/tags/cursor (the `Getcmsblogs202603tagscursorcmsblogsv3tagscursor` operationId) request.
+// Getcmsblogs202603tagscursorcmsblogsv3tagscursor List tags
+//
+// Retrieve a list of blog tags from your HubSpot account. This endpoint supports pagination and filtering based on creation and update timestamps. It is useful for managing and organizing your blog content by tags.
+//
+// Corresponds with GET /cms/blogs/2026-03/tags/cursor (the `Getcmsblogs202603tagscursorcmsblogsv3tagscursor` operationId).
 func (c *Client) Getcmsblogs202603tagscursorcmsblogsv3tagscursor(ctx context.Context, params *Getcmsblogs202603tagscursorcmsblogsv3tagscursorParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewGetcmsblogs202603tagscursorcmsblogsv3tagscursorRequest(c.Server, params)
 	if err != nil {
@@ -1844,7 +1874,11 @@ func (c *Client) Getcmsblogs202603tagscursorcmsblogsv3tagscursor(ctx context.Con
 	return c.Client.Do(req)
 }
 
-// Getcmsblogs202603tagscursorquerycmsblogsv3tagscursorquery performs a GET /cms/blogs/2026-03/tags/cursor/query (the `Getcmsblogs202603tagscursorquerycmsblogsv3tagscursorquery` operationId) request.
+// Getcmsblogs202603tagscursorquerycmsblogsv3tagscursorquery Query Tags
+//
+// Retrieve a list of blog tags using various filters and sorting options. This endpoint supports pagination and allows you to filter tags based on creation and update timestamps. It is useful for managing and organizing blog content by tags.
+//
+// Corresponds with GET /cms/blogs/2026-03/tags/cursor/query (the `Getcmsblogs202603tagscursorquerycmsblogsv3tagscursorquery` operationId).
 func (c *Client) Getcmsblogs202603tagscursorquerycmsblogsv3tagscursorquery(ctx context.Context, params *Getcmsblogs202603tagscursorquerycmsblogsv3tagscursorqueryParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewGetcmsblogs202603tagscursorquerycmsblogsv3tagscursorqueryRequest(c.Server, params)
 	if err != nil {
@@ -2006,7 +2040,11 @@ func (c *Client) Patchcmsblogs202603tagsObjectIdUpdateWithBody(ctx context.Conte
 	return c.Client.Do(req)
 }
 
-// Getcmsdomains202603cmsdomainsv3 performs a GET /cms/domains/2026-03 (the `Getcmsdomains202603cmsdomainsv3` operationId) request.
+// Getcmsdomains202603cmsdomainsv3 List Domains
+//
+// Retrieve a list of content domains associated with your HubSpot account. This endpoint allows filtering by creation and update timestamps, sorting, and pagination. It is useful for managing and reviewing the domains configured in your CMS.
+//
+// Corresponds with GET /cms/domains/2026-03 (the `Getcmsdomains202603cmsdomainsv3` operationId).
 func (c *Client) Getcmsdomains202603cmsdomainsv3(ctx context.Context, params *Getcmsdomains202603cmsdomainsv3Params, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewGetcmsdomains202603cmsdomainsv3Request(c.Server, params)
 	if err != nil {
@@ -2053,7 +2091,7 @@ func (c *Client) Getcmshubdb202603tablesGetAllTables(ctx context.Context, params
 	return c.Client.Do(req)
 }
 
-// Postcmshubdb202603tablesCreateTableWithBody Create a table
+// Postcmshubdb202603tablesCreateTableWithBody Create a new table
 //
 // Creates a new draft HubDB table given a JSON schema. The table name and label should be unique for each account.
 //
@@ -2072,7 +2110,7 @@ func (c *Client) Postcmshubdb202603tablesCreateTableWithBody(ctx context.Context
 	return c.Client.Do(req)
 }
 
-// Postcmshubdb202603tablesCreateTable Create a table
+// Postcmshubdb202603tablesCreateTable Create a new table
 //
 // Creates a new draft HubDB table given a JSON schema. The table name and label should be unique for each account.
 //
@@ -2293,7 +2331,7 @@ func (c *Client) Postcmshubdb202603tablesTableIdOrNamedraftpublishPublishDraftTa
 	return c.Client.Do(req)
 }
 
-// Postcmshubdb202603tablesTableIdOrNamedraftresetResetDraftTable Reset a table draft
+// Postcmshubdb202603tablesTableIdOrNamedraftresetResetDraftTable Reset a draft table
 //
 // Replaces the data in the draft version of the table with values from the published version. Any unpublished changes in the draft will be lost after this call is made.
 //
@@ -2345,7 +2383,7 @@ func (c *Client) Getcmshubdb202603tablesTableIdOrNamerowsGetTableRows(ctx contex
 	return c.Client.Do(req)
 }
 
-// Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowWithBody Add a row to a table
+// Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowWithBody Add a new row to a table
 //
 // Add a new row to a HubDB table. New rows will be added to the draft version of the table. Use the `/publish` endpoint to push these changes to published version.
 //
@@ -2364,7 +2402,7 @@ func (c *Client) Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowWithBody
 	return c.Client.Do(req)
 }
 
-// Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRow Add a row to a table
+// Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRow Add a new row to a table
 //
 // Add a new row to a HubDB table. New rows will be added to the draft version of the table. Use the `/publish` endpoint to push these changes to published version.
 //
@@ -2516,9 +2554,9 @@ func (c *Client) Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcreateCreate
 	return c.Client.Do(req)
 }
 
-// Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchpurgePurgeDraftTableRowsWithBody Delete rows
+// Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchpurgePurgeDraftTableRowsWithBody Permanently deletes rows
 //
-// Permanently delete rows from the draft version of a table, given a set of row IDs. Maximum of 100 row IDs per call.
+// Permanently deletes rows from the draft version of the table, given a set of row IDs. Maximum of 100 row IDs per call.
 //
 // Takes any type of body and a specified content type.
 //
@@ -2535,9 +2573,9 @@ func (c *Client) Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchpurgePurgeDr
 	return c.Client.Do(req)
 }
 
-// Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchpurgePurgeDraftTableRows Delete rows
+// Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchpurgePurgeDraftTableRows Permanently deletes rows
 //
-// Permanently delete rows from the draft version of a table, given a set of row IDs. Maximum of 100 row IDs per call.
+// Permanently deletes rows from the draft version of the table, given a set of row IDs. Maximum of 100 row IDs per call.
 //
 // Takes a body of the `application/json` content type.
 //
@@ -2720,7 +2758,7 @@ func (c *Client) Getcmshubdb202603tablesTableIdOrNamerowsRowIddraftGetDraftTable
 	return c.Client.Do(req)
 }
 
-// Patchcmshubdb202603tablesTableIdOrNamerowsRowIddraftUpdateDraftTableRowWithBody Update a row
+// Patchcmshubdb202603tablesTableIdOrNamerowsRowIddraftUpdateDraftTableRowWithBody Updates an existing row
 //
 // Partially update a single row in the table's draft version.
 // All the column values need not be specified. Only the columns or fields that needs to be modified can be specified.
@@ -2741,7 +2779,7 @@ func (c *Client) Patchcmshubdb202603tablesTableIdOrNamerowsRowIddraftUpdateDraft
 	return c.Client.Do(req)
 }
 
-// Patchcmshubdb202603tablesTableIdOrNamerowsRowIddraftUpdateDraftTableRow Update a row
+// Patchcmshubdb202603tablesTableIdOrNamerowsRowIddraftUpdateDraftTableRow Updates an existing row
 //
 // Partially update a single row in the table's draft version.
 // All the column values need not be specified. Only the columns or fields that needs to be modified can be specified.
@@ -2762,7 +2800,7 @@ func (c *Client) Patchcmshubdb202603tablesTableIdOrNamerowsRowIddraftUpdateDraft
 	return c.Client.Do(req)
 }
 
-// Putcmshubdb202603tablesTableIdOrNamerowsRowIddraftReplaceDraftTableRowWithBody Replace an existing row
+// Putcmshubdb202603tablesTableIdOrNamerowsRowIddraftReplaceDraftTableRowWithBody Replaces an existing row
 //
 // Replace a single row in the draft version of a table. All column values must be specified. If a column has a value in the target table and this request doesn't define that value, it will be deleted.
 // See the "Create a row" endpoint for instructions on how to format the JSON row definitions.
@@ -2782,7 +2820,7 @@ func (c *Client) Putcmshubdb202603tablesTableIdOrNamerowsRowIddraftReplaceDraftT
 	return c.Client.Do(req)
 }
 
-// Putcmshubdb202603tablesTableIdOrNamerowsRowIddraftReplaceDraftTableRow Replace an existing row
+// Putcmshubdb202603tablesTableIdOrNamerowsRowIddraftReplaceDraftTableRow Replaces an existing row
 //
 // Replace a single row in the draft version of a table. All column values must be specified. If a column has a value in the target table and this request doesn't define that value, it will be deleted.
 // See the "Create a row" endpoint for instructions on how to format the JSON row definitions.
@@ -2853,7 +2891,7 @@ func (c *Client) Deletecmshubdb202603tablesTableIdOrNameversionsVersionIdRemoveT
 	return c.Client.Do(req)
 }
 
-// Getcmspages202603landingPagesGetPage List landing pages
+// Getcmspages202603landingPagesGetPage Get all landing pages
 //
 // Retrieve a list of landing pages in your HubSpot account. This endpoint allows you to filter landing pages based on creation and update timestamps, sort them, and paginate through results. You can also choose to include archived pages or specify certain properties to be included in the response.
 //
@@ -4073,6 +4111,23 @@ func (c *Client) GetcmssiteSearch202603indexedDataContentIdGetById(ctx context.C
 	return c.Client.Do(req)
 }
 
+// GetcmssiteSearch202603searchcmssiteSearch202603search Search your site
+//
+// Returns any website content matching the given search criteria for a given HubSpot account. Searches can be filtered by content type, domain, or URL path. Includes options for weighing results by recency and popularity, along with language support.
+//
+// Corresponds with GET /cms/site-search/2026-03/search (the `GetcmssiteSearch202603searchcmssiteSearch202603search` operationId).
+func (c *Client) GetcmssiteSearch202603searchcmssiteSearch202603search(ctx context.Context, params *GetcmssiteSearch202603searchcmssiteSearch202603searchParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetcmssiteSearch202603searchcmssiteSearch202603searchRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // PostcmssourceCode202603extractasyncDoAsyncWithBody Extract a zip file
 //
 // Extract a zip file in the developer file system. Extraction status can be checked with the `/extract/async/tasks/taskId/status` endpoint below.
@@ -4237,9 +4292,9 @@ func (c *Client) PostcmssourceCode202603EnvironmentvalidatePathDoValidateWithBod
 	return c.Client.Do(req)
 }
 
-// GetcmsurlRedirects202603cmsurlRedirectsv3 Retrieve redirects
+// GetcmsurlRedirects202603cmsurlRedirectsv3 List URL Redirects
 //
-// Retrieve a list of URL redirects configured in your HubSpot account. This endpoint allows you to filter redirects based on their creation or update timestamps, and sort the results. It supports pagination and can include archived redirects if specified.
+// Retrieve a list of URL redirects in your HubSpot account. This endpoint allows you to filter redirects based on their creation or update timestamps, and sort the results. It supports pagination and can include archived redirects if specified.
 //
 // Corresponds with GET /cms/url-redirects/2026-03 (the `GetcmsurlRedirects202603cmsurlRedirectsv3` operationId).
 func (c *Client) GetcmsurlRedirects202603cmsurlRedirectsv3(ctx context.Context, params *GetcmsurlRedirects202603cmsurlRedirectsv3Params, reqEditors ...RequestEditorFn) (*http.Response, error) {
@@ -4254,9 +4309,9 @@ func (c *Client) GetcmsurlRedirects202603cmsurlRedirectsv3(ctx context.Context, 
 	return c.Client.Do(req)
 }
 
-// PostcmsurlRedirects202603cmsurlRedirectsv3WithBody Create redirect
+// PostcmsurlRedirects202603cmsurlRedirectsv3WithBody Create URL Redirect
 //
-// Create a new URL redirect in your HubSpot account. This endpoint allows you to define a new URL mapping that redirects traffic from a specified route to a destination URL. This is useful for managing URL changes, handling outdated links, or creating short links.
+// Create a new URL redirect in your HubSpot account. This endpoint allows you to define the destination URL, redirect style, and route prefix for the redirect. It is useful for managing URL redirections and ensuring that users are directed to the correct pages.
 //
 // Takes any type of body and a specified content type.
 //
@@ -4273,9 +4328,9 @@ func (c *Client) PostcmsurlRedirects202603cmsurlRedirectsv3WithBody(ctx context.
 	return c.Client.Do(req)
 }
 
-// PostcmsurlRedirects202603cmsurlRedirectsv3 Create redirect
+// PostcmsurlRedirects202603cmsurlRedirectsv3 Create URL Redirect
 //
-// Create a new URL redirect in your HubSpot account. This endpoint allows you to define a new URL mapping that redirects traffic from a specified route to a destination URL. This is useful for managing URL changes, handling outdated links, or creating short links.
+// Create a new URL redirect in your HubSpot account. This endpoint allows you to define the destination URL, redirect style, and route prefix for the redirect. It is useful for managing URL redirections and ensuring that users are directed to the correct pages.
 //
 // Takes a body of the `application/json` content type.
 //
@@ -4292,9 +4347,13 @@ func (c *Client) PostcmsurlRedirects202603cmsurlRedirectsv3(ctx context.Context,
 	return c.Client.Do(req)
 }
 
-// GetcmsurlRedirects202603urlMappings performs a GET /cms/url-redirects/2026-03/url-mappings (the `GetcmsurlRedirects202603urlMappings` operationId) request.
-func (c *Client) GetcmsurlRedirects202603urlMappings(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewGetcmsurlRedirects202603urlMappingsRequest(c.Server)
+// GetcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappings List URL Mappings
+//
+// Retrieve a list of URL mappings for redirects in your HubSpot account. This endpoint allows you to access all URL mappings, which can be useful for managing and auditing redirects. The response includes details about each URL mapping, such as the destination and route prefix.
+//
+// Corresponds with GET /cms/url-redirects/2026-03/url-mappings (the `GetcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappings` operationId).
+func (c *Client) GetcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappings(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappingsRequest(c.Server)
 	if err != nil {
 		return nil, err
 	}
@@ -4305,10 +4364,15 @@ func (c *Client) GetcmsurlRedirects202603urlMappings(ctx context.Context, reqEdi
 	return c.Client.Do(req)
 }
 
-// PostcmsurlRedirects202603urlMappingsWithBody performs a POST /cms/url-redirects/2026-03/url-mappings (the `PostcmsurlRedirects202603urlMappings` operationId) request,
-// with any type of body and a specified content type.
-func (c *Client) PostcmsurlRedirects202603urlMappingsWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcmsurlRedirects202603urlMappingsRequestWithBody(c.Server, contentType, body)
+// PostcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappingsWithBody Create URL Mapping
+//
+// Create a new URL mapping in your HubSpot account. This endpoint allows you to define a new URL redirect rule by specifying the route prefix, destination URL, and redirect style. The request body must include these required fields to successfully create a URL mapping.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /cms/url-redirects/2026-03/url-mappings (the `PostcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappings` operationId).
+func (c *Client) PostcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappingsWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappingsRequestWithBody(c.Server, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -4319,9 +4383,13 @@ func (c *Client) PostcmsurlRedirects202603urlMappingsWithBody(ctx context.Contex
 	return c.Client.Do(req)
 }
 
-// DeletecmsurlRedirects202603urlMappingsId performs a DELETE /cms/url-redirects/2026-03/url-mappings/{id} (the `DeletecmsurlRedirects202603urlMappingsId` operationId) request.
-func (c *Client) DeletecmsurlRedirects202603urlMappingsId(ctx context.Context, id int64, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDeletecmsurlRedirects202603urlMappingsIdRequest(c.Server, id)
+// DeletecmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsId Delete
+//
+// Delete a specific URL mapping in your HubSpot account using its unique identifier. This operation is useful for removing outdated or incorrect URL redirects. Ensure you have the necessary permissions to perform this action.
+//
+// Corresponds with DELETE /cms/url-redirects/2026-03/url-mappings/{id} (the `DeletecmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsId` operationId).
+func (c *Client) DeletecmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsId(ctx context.Context, id int64, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDeletecmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsIdRequest(c.Server, id)
 	if err != nil {
 		return nil, err
 	}
@@ -4332,9 +4400,13 @@ func (c *Client) DeletecmsurlRedirects202603urlMappingsId(ctx context.Context, i
 	return c.Client.Do(req)
 }
 
-// GetcmsurlRedirects202603urlMappingsId performs a GET /cms/url-redirects/2026-03/url-mappings/{id} (the `GetcmsurlRedirects202603urlMappingsId` operationId) request.
-func (c *Client) GetcmsurlRedirects202603urlMappingsId(ctx context.Context, id int64, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewGetcmsurlRedirects202603urlMappingsIdRequest(c.Server, id)
+// GetcmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsId Retrieve URL Mapping
+//
+// Retrieve a specific URL mapping by its unique identifier. This endpoint is useful for obtaining details about a particular URL redirect configuration within your HubSpot account. It requires the unique ID of the URL mapping to be specified in the path.
+//
+// Corresponds with GET /cms/url-redirects/2026-03/url-mappings/{id} (the `GetcmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsId` operationId).
+func (c *Client) GetcmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsId(ctx context.Context, id int64, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetcmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsIdRequest(c.Server, id)
 	if err != nil {
 		return nil, err
 	}
@@ -4713,7 +4785,11 @@ func (c *Client) PostcommunicationPreferences202603statusesSubscriberIdStringuns
 	return c.Client.Do(req)
 }
 
-// GetconversationscustomChannels202603conversationscustomChannelsv3 performs a GET /conversations/custom-channels/2026-03 (the `GetconversationscustomChannels202603conversationscustomChannelsv3` operationId) request.
+// GetconversationscustomChannels202603conversationscustomChannelsv3 List Channels
+//
+// Retrieve a list of custom conversation channels for the specified version. This endpoint allows you to paginate through the results and sort them according to your preferences.
+//
+// Corresponds with GET /conversations/custom-channels/2026-03 (the `GetconversationscustomChannels202603conversationscustomChannelsv3` operationId).
 func (c *Client) GetconversationscustomChannels202603conversationscustomChannelsv3(ctx context.Context, params *GetconversationscustomChannels202603conversationscustomChannelsv3Params, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewGetconversationscustomChannels202603conversationscustomChannelsv3Request(c.Server, params)
 	if err != nil {
@@ -4726,8 +4802,13 @@ func (c *Client) GetconversationscustomChannels202603conversationscustomChannels
 	return c.Client.Do(req)
 }
 
-// PostconversationscustomChannels202603conversationscustomChannelsv3WithBody performs a POST /conversations/custom-channels/2026-03 (the `PostconversationscustomChannels202603conversationscustomChannelsv3` operationId) request,
-// with any type of body and a specified content type.
+// PostconversationscustomChannels202603conversationscustomChannelsv3WithBody Create
+//
+// Create a new custom channel integration in your HubSpot account. This endpoint allows you to define the capabilities and properties of the custom channel, such as its name, description, and webhook URL. The request must include a JSON body with the necessary details for the new channel integration.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /conversations/custom-channels/2026-03 (the `PostconversationscustomChannels202603conversationscustomChannelsv3` operationId).
 func (c *Client) PostconversationscustomChannels202603conversationscustomChannelsv3WithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostconversationscustomChannels202603conversationscustomChannelsv3RequestWithBody(c.Server, contentType, body)
 	if err != nil {
@@ -4740,8 +4821,13 @@ func (c *Client) PostconversationscustomChannels202603conversationscustomChannel
 	return c.Client.Do(req)
 }
 
-// PostconversationscustomChannels202603conversationscustomChannelsv3 performs a POST /conversations/custom-channels/2026-03 (the `PostconversationscustomChannels202603conversationscustomChannelsv3` operationId) request.
+// PostconversationscustomChannels202603conversationscustomChannelsv3 Create
+//
+// Create a new custom channel integration in your HubSpot account. This endpoint allows you to define the capabilities and properties of the custom channel, such as its name, description, and webhook URL. The request must include a JSON body with the necessary details for the new channel integration.
+//
 // Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /conversations/custom-channels/2026-03 (the `PostconversationscustomChannels202603conversationscustomChannelsv3` operationId).
 func (c *Client) PostconversationscustomChannels202603conversationscustomChannelsv3(ctx context.Context, body PostconversationscustomChannels202603conversationscustomChannelsv3JSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostconversationscustomChannels202603conversationscustomChannelsv3Request(c.Server, body)
 	if err != nil {
@@ -5490,7 +5576,7 @@ func (c *Client) Postcrmassociations202603FromObjectTypeToObjectTypebatcharchive
 	return c.Client.Do(req)
 }
 
-// Postcrmassociations202603FromObjectTypeToObjectTypebatchassociatedefaultcrmassociations202509FromObjectTypeToObjectTypebatchassociatedefaultWithBody Associate records (default)
+// Postcrmassociations202603FromObjectTypeToObjectTypebatchassociatedefaultcrmassociations202509FromObjectTypeToObjectTypebatchassociatedefaultWithBody  Create Default Associations
 //
 // Create the default (most generic) association type between two object types.
 //
@@ -5509,7 +5595,7 @@ func (c *Client) Postcrmassociations202603FromObjectTypeToObjectTypebatchassocia
 	return c.Client.Do(req)
 }
 
-// Postcrmassociations202603FromObjectTypeToObjectTypebatchassociatedefaultcrmassociations202509FromObjectTypeToObjectTypebatchassociatedefault Associate records (default)
+// Postcrmassociations202603FromObjectTypeToObjectTypebatchassociatedefaultcrmassociations202509FromObjectTypeToObjectTypebatchassociatedefault  Create Default Associations
 //
 // Create the default (most generic) association type between two object types.
 //
@@ -5566,7 +5652,7 @@ func (c *Client) Postcrmassociations202603FromObjectTypeToObjectTypebatchcreatec
 	return c.Client.Do(req)
 }
 
-// Postcrmassociations202603FromObjectTypeToObjectTypebatchlabelsarchivecrmassociations202509FromObjectTypeToObjectTypebatchlabelsarchiveWithBody Delete specific labels
+// Postcrmassociations202603FromObjectTypeToObjectTypebatchlabelsarchivecrmassociations202509FromObjectTypeToObjectTypebatchlabelsarchiveWithBody Delete Specific Labels
 //
 // Batch delete specific association labels for objects. Deleting an unlabeled association will also delete all labeled associations between those two objects
 //
@@ -5585,7 +5671,7 @@ func (c *Client) Postcrmassociations202603FromObjectTypeToObjectTypebatchlabelsa
 	return c.Client.Do(req)
 }
 
-// Postcrmassociations202603FromObjectTypeToObjectTypebatchlabelsarchivecrmassociations202509FromObjectTypeToObjectTypebatchlabelsarchive Delete specific labels
+// Postcrmassociations202603FromObjectTypeToObjectTypebatchlabelsarchivecrmassociations202509FromObjectTypeToObjectTypebatchlabelsarchive Delete Specific Labels
 //
 // Batch delete specific association labels for objects. Deleting an unlabeled association will also delete all labeled associations between those two objects
 //
@@ -5824,8 +5910,13 @@ func (c *Client) Getcrmexports202603exportExportIdGetById(ctx context.Context, e
 	return c.Client.Do(req)
 }
 
-// Postcrmextensionscalling202603inboundCallcrmv3extensionscallinginboundCallWithBody performs a POST /crm/extensions/calling/2026-03/inbound-call (the `Postcrmextensionscalling202603inboundCallcrmv3extensionscallinginboundCall` operationId) request,
-// with any type of body and a specified content type.
+// Postcrmextensionscalling202603inboundCallcrmv3extensionscallinginboundCallWithBody Submit details of an inbound call to the CRM.
+//
+// This endpoint allows you to submit information about an inbound call to the CRM system. The request must include details such as the external call ID, call status, and involved phone numbers. This operation helps in logging and managing inbound call data within the CRM.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /crm/extensions/calling/2026-03/inbound-call (the `Postcrmextensionscalling202603inboundCallcrmv3extensionscallinginboundCall` operationId).
 func (c *Client) Postcrmextensionscalling202603inboundCallcrmv3extensionscallinginboundCallWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcrmextensionscalling202603inboundCallcrmv3extensionscallinginboundCallRequestWithBody(c.Server, contentType, body)
 	if err != nil {
@@ -5838,8 +5929,13 @@ func (c *Client) Postcrmextensionscalling202603inboundCallcrmv3extensionscalling
 	return c.Client.Do(req)
 }
 
-// Postcrmextensionscalling202603inboundCallcrmv3extensionscallinginboundCall performs a POST /crm/extensions/calling/2026-03/inbound-call (the `Postcrmextensionscalling202603inboundCallcrmv3extensionscallinginboundCall` operationId) request.
+// Postcrmextensionscalling202603inboundCallcrmv3extensionscallinginboundCall Submit details of an inbound call to the CRM.
+//
+// This endpoint allows you to submit information about an inbound call to the CRM system. The request must include details such as the external call ID, call status, and involved phone numbers. This operation helps in logging and managing inbound call data within the CRM.
+//
 // Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /crm/extensions/calling/2026-03/inbound-call (the `Postcrmextensionscalling202603inboundCallcrmv3extensionscallinginboundCall` operationId).
 func (c *Client) Postcrmextensionscalling202603inboundCallcrmv3extensionscallinginboundCall(ctx context.Context, body Postcrmextensionscalling202603inboundCallcrmv3extensionscallinginboundCallJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcrmextensionscalling202603inboundCallcrmv3extensionscallinginboundCallRequest(c.Server, body)
 	if err != nil {
@@ -5890,8 +5986,13 @@ func (c *Client) Postcrmextensionscalling202603recordingsreadyMarkAsReady(ctx co
 	return c.Client.Do(req)
 }
 
-// Postcrmextensionscalling202603transcriptscrmextensionscalling202603transcriptsWithBody performs a POST /crm/extensions/calling/2026-03/transcripts (the `Postcrmextensionscalling202603transcriptscrmextensionscalling202603transcripts` operationId) request,
-// with any type of body and a specified content type.
+// Postcrmextensionscalling202603transcriptscrmextensionscalling202603transcriptsWithBody Create Transcript
+//
+// Create a new transcript for a call in your HubSpot account. This endpoint allows you to submit the details of a call transcript, including engagement ID and utterances, to be stored and managed within HubSpot. This is useful for integrating call transcription data into your CRM workflows.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /crm/extensions/calling/2026-03/transcripts (the `Postcrmextensionscalling202603transcriptscrmextensionscalling202603transcripts` operationId).
 func (c *Client) Postcrmextensionscalling202603transcriptscrmextensionscalling202603transcriptsWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcrmextensionscalling202603transcriptscrmextensionscalling202603transcriptsRequestWithBody(c.Server, contentType, body)
 	if err != nil {
@@ -5904,8 +6005,13 @@ func (c *Client) Postcrmextensionscalling202603transcriptscrmextensionscalling20
 	return c.Client.Do(req)
 }
 
-// Postcrmextensionscalling202603transcriptscrmextensionscalling202603transcripts performs a POST /crm/extensions/calling/2026-03/transcripts (the `Postcrmextensionscalling202603transcriptscrmextensionscalling202603transcripts` operationId) request.
+// Postcrmextensionscalling202603transcriptscrmextensionscalling202603transcripts Create Transcript
+//
+// Create a new transcript for a call in your HubSpot account. This endpoint allows you to submit the details of a call transcript, including engagement ID and utterances, to be stored and managed within HubSpot. This is useful for integrating call transcription data into your CRM workflows.
+//
 // Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /crm/extensions/calling/2026-03/transcripts (the `Postcrmextensionscalling202603transcriptscrmextensionscalling202603transcripts` operationId).
 func (c *Client) Postcrmextensionscalling202603transcriptscrmextensionscalling202603transcripts(ctx context.Context, body Postcrmextensionscalling202603transcriptscrmextensionscalling202603transcriptsJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcrmextensionscalling202603transcriptscrmextensionscalling202603transcriptsRequest(c.Server, body)
 	if err != nil {
@@ -5918,7 +6024,11 @@ func (c *Client) Postcrmextensionscalling202603transcriptscrmextensionscalling20
 	return c.Client.Do(req)
 }
 
-// Deletecrmextensionscalling202603transcriptsTranscriptIdcrmextensionscalling202603transcriptsTranscriptId performs a DELETE /crm/extensions/calling/2026-03/transcripts/{transcriptId} (the `Deletecrmextensionscalling202603transcriptsTranscriptIdcrmextensionscalling202603transcriptsTranscriptId` operationId) request.
+// Deletecrmextensionscalling202603transcriptsTranscriptIdcrmextensionscalling202603transcriptsTranscriptId Delete transcript
+//
+// Delete a specific call transcript from your HubSpot account using its unique identifier. This operation is useful for managing and cleaning up transcript data that is no longer needed.
+//
+// Corresponds with DELETE /crm/extensions/calling/2026-03/transcripts/{transcriptId} (the `Deletecrmextensionscalling202603transcriptsTranscriptIdcrmextensionscalling202603transcriptsTranscriptId` operationId).
 func (c *Client) Deletecrmextensionscalling202603transcriptsTranscriptIdcrmextensionscalling202603transcriptsTranscriptId(ctx context.Context, transcriptId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewDeletecrmextensionscalling202603transcriptsTranscriptIdcrmextensionscalling202603transcriptsTranscriptIdRequest(c.Server, transcriptId)
 	if err != nil {
@@ -5931,7 +6041,11 @@ func (c *Client) Deletecrmextensionscalling202603transcriptsTranscriptIdcrmexten
 	return c.Client.Do(req)
 }
 
-// Getcrmextensionscalling202603transcriptsTranscriptIdcrmextensionscalling202603transcriptsTranscriptId performs a GET /crm/extensions/calling/2026-03/transcripts/{transcriptId} (the `Getcrmextensionscalling202603transcriptsTranscriptIdcrmextensionscalling202603transcriptsTranscriptId` operationId) request.
+// Getcrmextensionscalling202603transcriptsTranscriptIdcrmextensionscalling202603transcriptsTranscriptId Retrieve transcript
+//
+// Retrieve a specific call transcript by its unique identifier. This endpoint allows you to access the details of a transcript, including its creation and update timestamps, engagement ID, source, and the transcript utterances. It is useful for reviewing and analyzing call interactions stored in your HubSpot account.
+//
+// Corresponds with GET /crm/extensions/calling/2026-03/transcripts/{transcriptId} (the `Getcrmextensionscalling202603transcriptsTranscriptIdcrmextensionscalling202603transcriptsTranscriptId` operationId).
 func (c *Client) Getcrmextensionscalling202603transcriptsTranscriptIdcrmextensionscalling202603transcriptsTranscriptId(ctx context.Context, transcriptId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewGetcrmextensionscalling202603transcriptsTranscriptIdcrmextensionscalling202603transcriptsTranscriptIdRequest(c.Server, transcriptId)
 	if err != nil {
@@ -6511,7 +6625,11 @@ func (c *Client) Putcrmextensionsvideoconferencing202603settingsAppIdReplace(ctx
 	return c.Client.Do(req)
 }
 
-// Getcrmimports202603crmimportsv3 performs a GET /crm/imports/2026-03 (the `Getcrmimports202603crmimportsv3` operationId) request.
+// Getcrmimports202603crmimportsv3 List Imports
+//
+// Retrieve a list of imports in your HubSpot account. This endpoint allows you to view the imports that have been processed, providing details about each import. It supports pagination to navigate through large sets of import data.
+//
+// Corresponds with GET /crm/imports/2026-03 (the `Getcrmimports202603crmimportsv3` operationId).
 func (c *Client) Getcrmimports202603crmimportsv3(ctx context.Context, params *Getcrmimports202603crmimportsv3Params, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewGetcrmimports202603crmimportsv3Request(c.Server, params)
 	if err != nil {
@@ -6524,8 +6642,13 @@ func (c *Client) Getcrmimports202603crmimportsv3(ctx context.Context, params *Ge
 	return c.Client.Do(req)
 }
 
-// Postcrmimports202603crmimportsv3WithBody performs a POST /crm/imports/2026-03 (the `Postcrmimports202603crmimportsv3` operationId) request,
-// with any type of body and a specified content type.
+// Postcrmimports202603crmimportsv3WithBody Create Import
+//
+// Create a new import in your HubSpot account by uploading files and specifying import settings. This endpoint allows you to initiate the import process by providing the necessary files and configuration details.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /crm/imports/2026-03 (the `Postcrmimports202603crmimportsv3` operationId).
 func (c *Client) Postcrmimports202603crmimportsv3WithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcrmimports202603crmimportsv3RequestWithBody(c.Server, contentType, body)
 	if err != nil {
@@ -6538,7 +6661,11 @@ func (c *Client) Postcrmimports202603crmimportsv3WithBody(ctx context.Context, c
 	return c.Client.Do(req)
 }
 
-// Getcrmimports202603ImportIdcrmimportsv3ImportId performs a GET /crm/imports/2026-03/{importId} (the `Getcrmimports202603ImportIdcrmimportsv3ImportId` operationId) request.
+// Getcrmimports202603ImportIdcrmimportsv3ImportId Get the information on any import
+//
+// A complete summary of an import record, including any updates.
+//
+// Corresponds with GET /crm/imports/2026-03/{importId} (the `Getcrmimports202603ImportIdcrmimportsv3ImportId` operationId).
 func (c *Client) Getcrmimports202603ImportIdcrmimportsv3ImportId(ctx context.Context, importId int64, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewGetcrmimports202603ImportIdcrmimportsv3ImportIdRequest(c.Server, importId)
 	if err != nil {
@@ -6551,7 +6678,11 @@ func (c *Client) Getcrmimports202603ImportIdcrmimportsv3ImportId(ctx context.Con
 	return c.Client.Do(req)
 }
 
-// Postcrmimports202603ImportIdcancelcrmimportsv3ImportIdcancel performs a POST /crm/imports/2026-03/{importId}/cancel (the `Postcrmimports202603ImportIdcancelcrmimportsv3ImportIdcancel` operationId) request.
+// Postcrmimports202603ImportIdcancelcrmimportsv3ImportIdcancel Cancel an active import
+//
+// This allows a developer to cancel an active import.
+//
+// Corresponds with POST /crm/imports/2026-03/{importId}/cancel (the `Postcrmimports202603ImportIdcancelcrmimportsv3ImportIdcancel` operationId).
 func (c *Client) Postcrmimports202603ImportIdcancelcrmimportsv3ImportIdcancel(ctx context.Context, importId int64, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcrmimports202603ImportIdcancelcrmimportsv3ImportIdcancelRequest(c.Server, importId)
 	if err != nil {
@@ -6564,7 +6695,11 @@ func (c *Client) Postcrmimports202603ImportIdcancelcrmimportsv3ImportIdcancel(ct
 	return c.Client.Do(req)
 }
 
-// Getcrmimports202603ImportIderrorscrmimportsv3ImportIderrors performs a GET /crm/imports/2026-03/{importId}/errors (the `Getcrmimports202603ImportIderrorscrmimportsv3ImportIderrors` operationId) request.
+// Getcrmimports202603ImportIderrorscrmimportsv3ImportIderrors Retrieve errors for a specific import
+//
+// Retrieves detailed error records for a specific import operation, enabling you to identify and troubleshoot records that failed during processing.
+//
+// Corresponds with GET /crm/imports/2026-03/{importId}/errors (the `Getcrmimports202603ImportIderrorscrmimportsv3ImportIderrors` operationId).
 func (c *Client) Getcrmimports202603ImportIderrorscrmimportsv3ImportIderrors(ctx context.Context, importId int64, params *Getcrmimports202603ImportIderrorscrmimportsv3ImportIderrorsParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewGetcrmimports202603ImportIderrorscrmimportsv3ImportIderrorsRequest(c.Server, importId, params)
 	if err != nil {
@@ -6771,7 +6906,11 @@ func (c *Client) Postcrmlists202603crmlistsv3(ctx context.Context, body Postcrml
 	return c.Client.Do(req)
 }
 
-// Getcrmlists202603folderscrmlistsv3folders performs a GET /crm/lists/2026-03/folders (the `Getcrmlists202603folderscrmlistsv3folders` operationId) request.
+// Getcrmlists202603folderscrmlistsv3folders Retrieves a folder.
+//
+// Retrieves a folder and recursively includes all folders via the childNodes attribute.  The child lists field will be empty in all child nodes. Only the folder retrieved will include the child lists in that folder.
+//
+// Corresponds with GET /crm/lists/2026-03/folders (the `Getcrmlists202603folderscrmlistsv3folders` operationId).
 func (c *Client) Getcrmlists202603folderscrmlistsv3folders(ctx context.Context, params *Getcrmlists202603folderscrmlistsv3foldersParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewGetcrmlists202603folderscrmlistsv3foldersRequest(c.Server, params)
 	if err != nil {
@@ -6784,8 +6923,13 @@ func (c *Client) Getcrmlists202603folderscrmlistsv3folders(ctx context.Context, 
 	return c.Client.Do(req)
 }
 
-// Postcrmlists202603folderscrmlistsv3foldersWithBody performs a POST /crm/lists/2026-03/folders (the `Postcrmlists202603folderscrmlistsv3folders` operationId) request,
-// with any type of body and a specified content type.
+// Postcrmlists202603folderscrmlistsv3foldersWithBody Creates a folder
+//
+// Creates a folder with the given information.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /crm/lists/2026-03/folders (the `Postcrmlists202603folderscrmlistsv3folders` operationId).
 func (c *Client) Postcrmlists202603folderscrmlistsv3foldersWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcrmlists202603folderscrmlistsv3foldersRequestWithBody(c.Server, contentType, body)
 	if err != nil {
@@ -6798,8 +6942,13 @@ func (c *Client) Postcrmlists202603folderscrmlistsv3foldersWithBody(ctx context.
 	return c.Client.Do(req)
 }
 
-// Postcrmlists202603folderscrmlistsv3folders performs a POST /crm/lists/2026-03/folders (the `Postcrmlists202603folderscrmlistsv3folders` operationId) request.
+// Postcrmlists202603folderscrmlistsv3folders Creates a folder
+//
+// Creates a folder with the given information.
+//
 // Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /crm/lists/2026-03/folders (the `Postcrmlists202603folderscrmlistsv3folders` operationId).
 func (c *Client) Postcrmlists202603folderscrmlistsv3folders(ctx context.Context, body Postcrmlists202603folderscrmlistsv3foldersJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcrmlists202603folderscrmlistsv3foldersRequest(c.Server, body)
 	if err != nil {
@@ -6812,8 +6961,13 @@ func (c *Client) Postcrmlists202603folderscrmlistsv3folders(ctx context.Context,
 	return c.Client.Do(req)
 }
 
-// Putcrmlists202603foldersmoveListcrmlistsv3foldersmoveListWithBody performs a PUT /crm/lists/2026-03/folders/move-list (the `Putcrmlists202603foldersmoveListcrmlistsv3foldersmoveList` operationId) request,
-// with any type of body and a specified content type.
+// Putcrmlists202603foldersmoveListcrmlistsv3foldersmoveListWithBody Moves a list to a given folder
+//
+// Given a list and a folder, the list will be moved to that folder.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with PUT /crm/lists/2026-03/folders/move-list (the `Putcrmlists202603foldersmoveListcrmlistsv3foldersmoveList` operationId).
 func (c *Client) Putcrmlists202603foldersmoveListcrmlistsv3foldersmoveListWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPutcrmlists202603foldersmoveListcrmlistsv3foldersmoveListRequestWithBody(c.Server, contentType, body)
 	if err != nil {
@@ -6826,8 +6980,13 @@ func (c *Client) Putcrmlists202603foldersmoveListcrmlistsv3foldersmoveListWithBo
 	return c.Client.Do(req)
 }
 
-// Putcrmlists202603foldersmoveListcrmlistsv3foldersmoveList performs a PUT /crm/lists/2026-03/folders/move-list (the `Putcrmlists202603foldersmoveListcrmlistsv3foldersmoveList` operationId) request.
+// Putcrmlists202603foldersmoveListcrmlistsv3foldersmoveList Moves a list to a given folder
+//
+// Given a list and a folder, the list will be moved to that folder.
+//
 // Takes a body of the `application/json` content type.
+//
+// Corresponds with PUT /crm/lists/2026-03/folders/move-list (the `Putcrmlists202603foldersmoveListcrmlistsv3foldersmoveList` operationId).
 func (c *Client) Putcrmlists202603foldersmoveListcrmlistsv3foldersmoveList(ctx context.Context, body Putcrmlists202603foldersmoveListcrmlistsv3foldersmoveListJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPutcrmlists202603foldersmoveListcrmlistsv3foldersmoveListRequest(c.Server, body)
 	if err != nil {
@@ -6840,7 +6999,11 @@ func (c *Client) Putcrmlists202603foldersmoveListcrmlistsv3foldersmoveList(ctx c
 	return c.Client.Do(req)
 }
 
-// Deletecrmlists202603foldersFolderIdcrmlistsv3foldersFolderId performs a DELETE /crm/lists/2026-03/folders/{folderId} (the `Deletecrmlists202603foldersFolderIdcrmlistsv3foldersFolderId` operationId) request.
+// Deletecrmlists202603foldersFolderIdcrmlistsv3foldersFolderId Deletes a folder
+//
+// Deletes the folder with the given Id.
+//
+// Corresponds with DELETE /crm/lists/2026-03/folders/{folderId} (the `Deletecrmlists202603foldersFolderIdcrmlistsv3foldersFolderId` operationId).
 func (c *Client) Deletecrmlists202603foldersFolderIdcrmlistsv3foldersFolderId(ctx context.Context, folderId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewDeletecrmlists202603foldersFolderIdcrmlistsv3foldersFolderIdRequest(c.Server, folderId)
 	if err != nil {
@@ -6853,7 +7016,11 @@ func (c *Client) Deletecrmlists202603foldersFolderIdcrmlistsv3foldersFolderId(ct
 	return c.Client.Do(req)
 }
 
-// Putcrmlists202603foldersFolderIdmoveNewParentFolderIdcrmlistsv3foldersFolderIdmoveNewParentFolderId performs a PUT /crm/lists/2026-03/folders/{folderId}/move/{newParentFolderId} (the `Putcrmlists202603foldersFolderIdmoveNewParentFolderIdcrmlistsv3foldersFolderIdmoveNewParentFolderId` operationId) request.
+// Putcrmlists202603foldersFolderIdmoveNewParentFolderIdcrmlistsv3foldersFolderIdmoveNewParentFolderId Moves a folder
+//
+// This moves the folder from its current location to a new location. It updates the parent of this folder to the new Id given.
+//
+// Corresponds with PUT /crm/lists/2026-03/folders/{folderId}/move/{newParentFolderId} (the `Putcrmlists202603foldersFolderIdmoveNewParentFolderIdcrmlistsv3foldersFolderIdmoveNewParentFolderId` operationId).
 func (c *Client) Putcrmlists202603foldersFolderIdmoveNewParentFolderIdcrmlistsv3foldersFolderIdmoveNewParentFolderId(ctx context.Context, folderId string, newParentFolderId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPutcrmlists202603foldersFolderIdmoveNewParentFolderIdcrmlistsv3foldersFolderIdmoveNewParentFolderIdRequest(c.Server, folderId, newParentFolderId)
 	if err != nil {
@@ -6866,7 +7033,11 @@ func (c *Client) Putcrmlists202603foldersFolderIdmoveNewParentFolderIdcrmlistsv3
 	return c.Client.Do(req)
 }
 
-// Putcrmlists202603foldersFolderIdrenamecrmlistsv3foldersFolderIdrename performs a PUT /crm/lists/2026-03/folders/{folderId}/rename (the `Putcrmlists202603foldersFolderIdrenamecrmlistsv3foldersFolderIdrename` operationId) request.
+// Putcrmlists202603foldersFolderIdrenamecrmlistsv3foldersFolderIdrename Rename a folder
+//
+// Renames the given folderId with a new name.
+//
+// Corresponds with PUT /crm/lists/2026-03/folders/{folderId}/rename (the `Putcrmlists202603foldersFolderIdrenamecrmlistsv3foldersFolderIdrename` operationId).
 func (c *Client) Putcrmlists202603foldersFolderIdrenamecrmlistsv3foldersFolderIdrename(ctx context.Context, folderId string, params *Putcrmlists202603foldersFolderIdrenamecrmlistsv3foldersFolderIdrenameParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPutcrmlists202603foldersFolderIdrenamecrmlistsv3foldersFolderIdrenameRequest(c.Server, folderId, params)
 	if err != nil {
@@ -6879,7 +7050,11 @@ func (c *Client) Putcrmlists202603foldersFolderIdrenamecrmlistsv3foldersFolderId
 	return c.Client.Do(req)
 }
 
-// Getcrmlists202603idmappingcrmlistsv3idmapping performs a GET /crm/lists/2026-03/idmapping (the `Getcrmlists202603idmappingcrmlistsv3idmapping` operationId) request.
+// Getcrmlists202603idmappingcrmlistsv3idmapping Translate Legacy List Id to Modern List Id
+//
+// This API allows translation of legacy list id to list id. This is a temporary API allowed for mapping old id's to new id's and will expire on May 30th, 2025.
+//
+// Corresponds with GET /crm/lists/2026-03/idmapping (the `Getcrmlists202603idmappingcrmlistsv3idmapping` operationId).
 func (c *Client) Getcrmlists202603idmappingcrmlistsv3idmapping(ctx context.Context, params *Getcrmlists202603idmappingcrmlistsv3idmappingParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewGetcrmlists202603idmappingcrmlistsv3idmappingRequest(c.Server, params)
 	if err != nil {
@@ -6892,8 +7067,13 @@ func (c *Client) Getcrmlists202603idmappingcrmlistsv3idmapping(ctx context.Conte
 	return c.Client.Do(req)
 }
 
-// Postcrmlists202603idmappingcrmlistsv3idmappingWithBody performs a POST /crm/lists/2026-03/idmapping (the `Postcrmlists202603idmappingcrmlistsv3idmapping` operationId) request,
-// with any type of body and a specified content type.
+// Postcrmlists202603idmappingcrmlistsv3idmappingWithBody Translate Legacy List Id to Modern List Id in Batch
+//
+// This API allows translation of a batch of legacy list id's to list id's. This allows for a maximum of 10,000 id's. This is a temporary API allowed for mapping old id's to new id's and will expire on May 30th, 2025.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /crm/lists/2026-03/idmapping (the `Postcrmlists202603idmappingcrmlistsv3idmapping` operationId).
 func (c *Client) Postcrmlists202603idmappingcrmlistsv3idmappingWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcrmlists202603idmappingcrmlistsv3idmappingRequestWithBody(c.Server, contentType, body)
 	if err != nil {
@@ -6906,8 +7086,13 @@ func (c *Client) Postcrmlists202603idmappingcrmlistsv3idmappingWithBody(ctx cont
 	return c.Client.Do(req)
 }
 
-// Postcrmlists202603idmappingcrmlistsv3idmapping performs a POST /crm/lists/2026-03/idmapping (the `Postcrmlists202603idmappingcrmlistsv3idmapping` operationId) request.
+// Postcrmlists202603idmappingcrmlistsv3idmapping Translate Legacy List Id to Modern List Id in Batch
+//
+// This API allows translation of a batch of legacy list id's to list id's. This allows for a maximum of 10,000 id's. This is a temporary API allowed for mapping old id's to new id's and will expire on May 30th, 2025.
+//
 // Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /crm/lists/2026-03/idmapping (the `Postcrmlists202603idmappingcrmlistsv3idmapping` operationId).
 func (c *Client) Postcrmlists202603idmappingcrmlistsv3idmapping(ctx context.Context, body Postcrmlists202603idmappingcrmlistsv3idmappingJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcrmlists202603idmappingcrmlistsv3idmappingRequest(c.Server, body)
 	if err != nil {
@@ -6920,7 +7105,11 @@ func (c *Client) Postcrmlists202603idmappingcrmlistsv3idmapping(ctx context.Cont
 	return c.Client.Do(req)
 }
 
-// Getcrmlists202603objectTypeIdObjectTypeIdnameListNamecrmlistsv3objectTypeIdObjectTypeIdnameListName performs a GET /crm/lists/2026-03/object-type-id/{objectTypeId}/name/{listName} (the `Getcrmlists202603objectTypeIdObjectTypeIdnameListNamecrmlistsv3objectTypeIdObjectTypeIdnameListName` operationId) request.
+// Getcrmlists202603objectTypeIdObjectTypeIdnameListNamecrmlistsv3objectTypeIdObjectTypeIdnameListName Fetch List by Name
+//
+// Fetch a single list by list name and object type.
+//
+// Corresponds with GET /crm/lists/2026-03/object-type-id/{objectTypeId}/name/{listName} (the `Getcrmlists202603objectTypeIdObjectTypeIdnameListNamecrmlistsv3objectTypeIdObjectTypeIdnameListName` operationId).
 func (c *Client) Getcrmlists202603objectTypeIdObjectTypeIdnameListNamecrmlistsv3objectTypeIdObjectTypeIdnameListName(ctx context.Context, objectTypeId string, listName string, params *Getcrmlists202603objectTypeIdObjectTypeIdnameListNamecrmlistsv3objectTypeIdObjectTypeIdnameListNameParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewGetcrmlists202603objectTypeIdObjectTypeIdnameListNamecrmlistsv3objectTypeIdObjectTypeIdnameListNameRequest(c.Server, objectTypeId, listName, params)
 	if err != nil {
@@ -6961,7 +7150,11 @@ func (c *Client) Postcrmlists202603recordsmembershipsbatchreadcrmlistsv3recordsm
 	return c.Client.Do(req)
 }
 
-// Getcrmlists202603recordsObjectTypeIdRecordIdmembershipscrmlistsv3recordsObjectTypeIdRecordIdmemberships performs a GET /crm/lists/2026-03/records/{objectTypeId}/{recordId}/memberships (the `Getcrmlists202603recordsObjectTypeIdRecordIdmembershipscrmlistsv3recordsObjectTypeIdRecordIdmemberships` operationId) request.
+// Getcrmlists202603recordsObjectTypeIdRecordIdmembershipscrmlistsv3recordsObjectTypeIdRecordIdmemberships Get lists record is member of
+//
+// For given record provide lists this record is member of.
+//
+// Corresponds with GET /crm/lists/2026-03/records/{objectTypeId}/{recordId}/memberships (the `Getcrmlists202603recordsObjectTypeIdRecordIdmembershipscrmlistsv3recordsObjectTypeIdRecordIdmemberships` operationId).
 func (c *Client) Getcrmlists202603recordsObjectTypeIdRecordIdmembershipscrmlistsv3recordsObjectTypeIdRecordIdmemberships(ctx context.Context, objectTypeId string, recordId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewGetcrmlists202603recordsObjectTypeIdRecordIdmembershipscrmlistsv3recordsObjectTypeIdRecordIdmembershipsRequest(c.Server, objectTypeId, recordId)
 	if err != nil {
@@ -6974,8 +7167,13 @@ func (c *Client) Getcrmlists202603recordsObjectTypeIdRecordIdmembershipscrmlists
 	return c.Client.Do(req)
 }
 
-// Postcrmlists202603searchcrmlistsv3searchWithBody performs a POST /crm/lists/2026-03/search (the `Postcrmlists202603searchcrmlistsv3search` operationId) request,
-// with any type of body and a specified content type.
+// Postcrmlists202603searchcrmlistsv3searchWithBody Search Lists
+//
+// Search lists by list name or page through all lists by providing an empty `query` value.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /crm/lists/2026-03/search (the `Postcrmlists202603searchcrmlistsv3search` operationId).
 func (c *Client) Postcrmlists202603searchcrmlistsv3searchWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcrmlists202603searchcrmlistsv3searchRequestWithBody(c.Server, contentType, body)
 	if err != nil {
@@ -6988,8 +7186,13 @@ func (c *Client) Postcrmlists202603searchcrmlistsv3searchWithBody(ctx context.Co
 	return c.Client.Do(req)
 }
 
-// Postcrmlists202603searchcrmlistsv3search performs a POST /crm/lists/2026-03/search (the `Postcrmlists202603searchcrmlistsv3search` operationId) request.
+// Postcrmlists202603searchcrmlistsv3search Search Lists
+//
+// Search lists by list name or page through all lists by providing an empty `query` value.
+//
 // Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /crm/lists/2026-03/search (the `Postcrmlists202603searchcrmlistsv3search` operationId).
 func (c *Client) Postcrmlists202603searchcrmlistsv3search(ctx context.Context, body Postcrmlists202603searchcrmlistsv3searchJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcrmlists202603searchcrmlistsv3searchRequest(c.Server, body)
 	if err != nil {
@@ -7002,7 +7205,11 @@ func (c *Client) Postcrmlists202603searchcrmlistsv3search(ctx context.Context, b
 	return c.Client.Do(req)
 }
 
-// Deletecrmlists202603ListIdcrmlistsv3ListId performs a DELETE /crm/lists/2026-03/{listId} (the `Deletecrmlists202603ListIdcrmlistsv3ListId` operationId) request.
+// Deletecrmlists202603ListIdcrmlistsv3ListId Delete a List
+//
+// Delete a list by **ILS list ID**. Lists deleted through this endpoint can be restored up to 90-days following the delete. After 90-days, the list is purged and can no longer be restored.
+//
+// Corresponds with DELETE /crm/lists/2026-03/{listId} (the `Deletecrmlists202603ListIdcrmlistsv3ListId` operationId).
 func (c *Client) Deletecrmlists202603ListIdcrmlistsv3ListId(ctx context.Context, listId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewDeletecrmlists202603ListIdcrmlistsv3ListIdRequest(c.Server, listId)
 	if err != nil {
@@ -7015,7 +7222,11 @@ func (c *Client) Deletecrmlists202603ListIdcrmlistsv3ListId(ctx context.Context,
 	return c.Client.Do(req)
 }
 
-// Getcrmlists202603ListIdcrmlistsv3ListId performs a GET /crm/lists/2026-03/{listId} (the `Getcrmlists202603ListIdcrmlistsv3ListId` operationId) request.
+// Getcrmlists202603ListIdcrmlistsv3ListId Fetch List by ID
+//
+// Fetch a single list by **ILS list ID**.
+//
+// Corresponds with GET /crm/lists/2026-03/{listId} (the `Getcrmlists202603ListIdcrmlistsv3ListId` operationId).
 func (c *Client) Getcrmlists202603ListIdcrmlistsv3ListId(ctx context.Context, listId string, params *Getcrmlists202603ListIdcrmlistsv3ListIdParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewGetcrmlists202603ListIdcrmlistsv3ListIdRequest(c.Server, listId, params)
 	if err != nil {
@@ -7028,7 +7239,15 @@ func (c *Client) Getcrmlists202603ListIdcrmlistsv3ListId(ctx context.Context, li
 	return c.Client.Do(req)
 }
 
-// Deletecrmlists202603ListIdmembershipscrmlistsv3ListIdmemberships performs a DELETE /crm/lists/2026-03/{listId}/memberships (the `Deletecrmlists202603ListIdmembershipscrmlistsv3ListIdmemberships` operationId) request.
+// Deletecrmlists202603ListIdmembershipscrmlistsv3ListIdmemberships Delete All Records from a List
+//
+// Remove **all** of the records from a list. ***Note:*** *The list is not deleted.*
+//
+// This endpoint only works for lists that have a `processingType` of `MANUAL` or `SNAPSHOT`.
+//
+// This endpoint only supports lists that have less than 100,000 memberships.
+//
+// Corresponds with DELETE /crm/lists/2026-03/{listId}/memberships (the `Deletecrmlists202603ListIdmembershipscrmlistsv3ListIdmemberships` operationId).
 func (c *Client) Deletecrmlists202603ListIdmembershipscrmlistsv3ListIdmemberships(ctx context.Context, listId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewDeletecrmlists202603ListIdmembershipscrmlistsv3ListIdmembershipsRequest(c.Server, listId)
 	if err != nil {
@@ -7041,7 +7260,15 @@ func (c *Client) Deletecrmlists202603ListIdmembershipscrmlistsv3ListIdmembership
 	return c.Client.Do(req)
 }
 
-// Getcrmlists202603ListIdmembershipscrmlistsv3ListIdmemberships performs a GET /crm/lists/2026-03/{listId}/memberships (the `Getcrmlists202603ListIdmembershipscrmlistsv3ListIdmemberships` operationId) request.
+// Getcrmlists202603ListIdmembershipscrmlistsv3ListIdmemberships Fetch List Memberships Ordered by ID
+//
+// Fetch the memberships of a list in order sorted by the `recordId` of the records in the list.
+//
+// The `recordId`s are sorted in *ascending* order if an `after` offset or no offset is provided. If only a `before` offset is provided, then the records are sorted in *descending* order.
+//
+// The `after` offset parameter will take precedence over the `before` offset in a case where both are provided.
+//
+// Corresponds with GET /crm/lists/2026-03/{listId}/memberships (the `Getcrmlists202603ListIdmembershipscrmlistsv3ListIdmemberships` operationId).
 func (c *Client) Getcrmlists202603ListIdmembershipscrmlistsv3ListIdmemberships(ctx context.Context, listId string, params *Getcrmlists202603ListIdmembershipscrmlistsv3ListIdmembershipsParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewGetcrmlists202603ListIdmembershipscrmlistsv3ListIdmembershipsRequest(c.Server, listId, params)
 	if err != nil {
@@ -7054,8 +7281,15 @@ func (c *Client) Getcrmlists202603ListIdmembershipscrmlistsv3ListIdmemberships(c
 	return c.Client.Do(req)
 }
 
-// Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsaddWithBody performs a PUT /crm/lists/2026-03/{listId}/memberships/add (the `Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsadd` operationId) request,
-// with any type of body and a specified content type.
+// Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsaddWithBody Add Records to a List
+//
+// Add the records provided to the list. Records that do not exist or that are already members of the list are ignored.
+//
+// This endpoint only works for lists that have a `processingType` of `MANUAL` or `SNAPSHOT`.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with PUT /crm/lists/2026-03/{listId}/memberships/add (the `Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsadd` operationId).
 func (c *Client) Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsaddWithBody(ctx context.Context, listId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPutcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsaddRequestWithBody(c.Server, listId, contentType, body)
 	if err != nil {
@@ -7068,8 +7302,15 @@ func (c *Client) Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembership
 	return c.Client.Do(req)
 }
 
-// Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsadd performs a PUT /crm/lists/2026-03/{listId}/memberships/add (the `Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsadd` operationId) request.
+// Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsadd Add Records to a List
+//
+// Add the records provided to the list. Records that do not exist or that are already members of the list are ignored.
+//
+// This endpoint only works for lists that have a `processingType` of `MANUAL` or `SNAPSHOT`.
+//
 // Takes a body of the `application/json` content type.
+//
+// Corresponds with PUT /crm/lists/2026-03/{listId}/memberships/add (the `Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsadd` operationId).
 func (c *Client) Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsadd(ctx context.Context, listId string, body Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsaddJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPutcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsaddRequest(c.Server, listId, body)
 	if err != nil {
@@ -7082,8 +7323,15 @@ func (c *Client) Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembership
 	return c.Client.Do(req)
 }
 
-// Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemoveWithBody performs a PUT /crm/lists/2026-03/{listId}/memberships/add-and-remove (the `Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemove` operationId) request,
-// with any type of body and a specified content type.
+// Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemoveWithBody Add and/or Remove Records from a List
+//
+// Add and/or remove records that have already been created in the system to and/or from a list.
+//
+// This endpoint only works for lists that have a `processingType` of `MANUAL` or `SNAPSHOT`.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with PUT /crm/lists/2026-03/{listId}/memberships/add-and-remove (the `Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemove` operationId).
 func (c *Client) Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemoveWithBody(ctx context.Context, listId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPutcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemoveRequestWithBody(c.Server, listId, contentType, body)
 	if err != nil {
@@ -7096,8 +7344,15 @@ func (c *Client) Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdm
 	return c.Client.Do(req)
 }
 
-// Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemove performs a PUT /crm/lists/2026-03/{listId}/memberships/add-and-remove (the `Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemove` operationId) request.
+// Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemove Add and/or Remove Records from a List
+//
+// Add and/or remove records that have already been created in the system to and/or from a list.
+//
+// This endpoint only works for lists that have a `processingType` of `MANUAL` or `SNAPSHOT`.
+//
 // Takes a body of the `application/json` content type.
+//
+// Corresponds with PUT /crm/lists/2026-03/{listId}/memberships/add-and-remove (the `Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemove` operationId).
 func (c *Client) Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemove(ctx context.Context, listId string, body Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemoveJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPutcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemoveRequest(c.Server, listId, body)
 	if err != nil {
@@ -7110,7 +7365,15 @@ func (c *Client) Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdm
 	return c.Client.Do(req)
 }
 
-// Putcrmlists202603ListIdmembershipsaddFromSourceListIdcrmlistsv3ListIdmembershipsaddFromSourceListId performs a PUT /crm/lists/2026-03/{listId}/memberships/add-from/{sourceListId} (the `Putcrmlists202603ListIdmembershipsaddFromSourceListIdcrmlistsv3ListIdmembershipsaddFromSourceListId` operationId) request.
+// Putcrmlists202603ListIdmembershipsaddFromSourceListIdcrmlistsv3ListIdmembershipsaddFromSourceListId Add All Records from a Source List to a Destination List
+//
+// Add all of the records from a *source list* (specified by the `sourceListId`) to a *destination list* (specified by the `listId`). Records that are already members of the *destination list* will be ignored. The *destination* and *source list* IDs must be different. The *destination* and *source lists* must contain records of the same type (e.g. contacts, companies, etc.).
+//
+// This endpoint only works for *destination lists* that have a `processingType` of `MANUAL` or `SNAPSHOT`. The *source list* can have any `processingType`.
+//
+// This endpoint only supports a `sourceListId` for lists with less than 100,000 memberships.
+//
+// Corresponds with PUT /crm/lists/2026-03/{listId}/memberships/add-from/{sourceListId} (the `Putcrmlists202603ListIdmembershipsaddFromSourceListIdcrmlistsv3ListIdmembershipsaddFromSourceListId` operationId).
 func (c *Client) Putcrmlists202603ListIdmembershipsaddFromSourceListIdcrmlistsv3ListIdmembershipsaddFromSourceListId(ctx context.Context, listId string, sourceListId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPutcrmlists202603ListIdmembershipsaddFromSourceListIdcrmlistsv3ListIdmembershipsaddFromSourceListIdRequest(c.Server, listId, sourceListId)
 	if err != nil {
@@ -7123,7 +7386,15 @@ func (c *Client) Putcrmlists202603ListIdmembershipsaddFromSourceListIdcrmlistsv3
 	return c.Client.Do(req)
 }
 
-// Getcrmlists202603ListIdmembershipsjoinOrdercrmlistsv3ListIdmembershipsjoinOrder performs a GET /crm/lists/2026-03/{listId}/memberships/join-order (the `Getcrmlists202603ListIdmembershipsjoinOrdercrmlistsv3ListIdmembershipsjoinOrder` operationId) request.
+// Getcrmlists202603ListIdmembershipsjoinOrdercrmlistsv3ListIdmembershipsjoinOrder Fetch List Memberships Ordered by Added to List Date
+//
+// Fetch the memberships of a list in order sorted by the time the records were added to the list.
+//
+// The `recordId`s are sorted in *ascending* order if an `after` offset or no offset is provided. If only a `before` offset is provided, then the records are sorted in *descending* order.
+//
+// The `after` offset parameter will take precedence over the `before` offset in a case where both are provided.
+//
+// Corresponds with GET /crm/lists/2026-03/{listId}/memberships/join-order (the `Getcrmlists202603ListIdmembershipsjoinOrdercrmlistsv3ListIdmembershipsjoinOrder` operationId).
 func (c *Client) Getcrmlists202603ListIdmembershipsjoinOrdercrmlistsv3ListIdmembershipsjoinOrder(ctx context.Context, listId string, params *Getcrmlists202603ListIdmembershipsjoinOrdercrmlistsv3ListIdmembershipsjoinOrderParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewGetcrmlists202603ListIdmembershipsjoinOrdercrmlistsv3ListIdmembershipsjoinOrderRequest(c.Server, listId, params)
 	if err != nil {
@@ -7136,8 +7407,15 @@ func (c *Client) Getcrmlists202603ListIdmembershipsjoinOrdercrmlistsv3ListIdmemb
 	return c.Client.Do(req)
 }
 
-// Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremoveWithBody performs a PUT /crm/lists/2026-03/{listId}/memberships/remove (the `Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremove` operationId) request,
-// with any type of body and a specified content type.
+// Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremoveWithBody Remove Records from a List
+//
+// Remove the records provided from the list. Records that do not exist or that are not members of the list are ignored.
+//
+// This endpoint only works for lists that have a `processingType` of `MANUAL` or `SNAPSHOT`.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with PUT /crm/lists/2026-03/{listId}/memberships/remove (the `Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremove` operationId).
 func (c *Client) Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremoveWithBody(ctx context.Context, listId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPutcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremoveRequestWithBody(c.Server, listId, contentType, body)
 	if err != nil {
@@ -7150,8 +7428,15 @@ func (c *Client) Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembers
 	return c.Client.Do(req)
 }
 
-// Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremove performs a PUT /crm/lists/2026-03/{listId}/memberships/remove (the `Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremove` operationId) request.
+// Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremove Remove Records from a List
+//
+// Remove the records provided from the list. Records that do not exist or that are not members of the list are ignored.
+//
+// This endpoint only works for lists that have a `processingType` of `MANUAL` or `SNAPSHOT`.
+//
 // Takes a body of the `application/json` content type.
+//
+// Corresponds with PUT /crm/lists/2026-03/{listId}/memberships/remove (the `Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremove` operationId).
 func (c *Client) Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremove(ctx context.Context, listId string, body Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremoveJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPutcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremoveRequest(c.Server, listId, body)
 	if err != nil {
@@ -7164,7 +7449,11 @@ func (c *Client) Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembers
 	return c.Client.Do(req)
 }
 
-// Putcrmlists202603ListIdrestorecrmlistsv3ListIdrestore performs a PUT /crm/lists/2026-03/{listId}/restore (the `Putcrmlists202603ListIdrestorecrmlistsv3ListIdrestore` operationId) request.
+// Putcrmlists202603ListIdrestorecrmlistsv3ListIdrestore Restore a List
+//
+// Restore a previously deleted list by **ILS list ID**. Deleted lists are eligible to be restored up-to 90-days after the list has been deleted.
+//
+// Corresponds with PUT /crm/lists/2026-03/{listId}/restore (the `Putcrmlists202603ListIdrestorecrmlistsv3ListIdrestore` operationId).
 func (c *Client) Putcrmlists202603ListIdrestorecrmlistsv3ListIdrestore(ctx context.Context, listId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPutcrmlists202603ListIdrestorecrmlistsv3ListIdrestoreRequest(c.Server, listId)
 	if err != nil {
@@ -7177,7 +7466,11 @@ func (c *Client) Putcrmlists202603ListIdrestorecrmlistsv3ListIdrestore(ctx conte
 	return c.Client.Do(req)
 }
 
-// Deletecrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversion performs a DELETE /crm/lists/2026-03/{listId}/schedule-conversion (the `Deletecrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversion` operationId) request.
+// Deletecrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversion Cancel the conversion of a list
+//
+// Delete an existing scheduled conversion for a list.
+//
+// Corresponds with DELETE /crm/lists/2026-03/{listId}/schedule-conversion (the `Deletecrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversion` operationId).
 func (c *Client) Deletecrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversion(ctx context.Context, listId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewDeletecrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionRequest(c.Server, listId)
 	if err != nil {
@@ -7190,7 +7483,11 @@ func (c *Client) Deletecrmlists202603ListIdscheduleConversioncrmlistsv3ListIdsch
 	return c.Client.Do(req)
 }
 
-// Getcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversion performs a GET /crm/lists/2026-03/{listId}/schedule-conversion (the `Getcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversion` operationId) request.
+// Getcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversion Retrieve the conversion details for a list
+//
+// Retrieve the conversion details for a list. This can be used to check for an upcoming conversion, or to get the details of when a list was already converted.
+//
+// Corresponds with GET /crm/lists/2026-03/{listId}/schedule-conversion (the `Getcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversion` operationId).
 func (c *Client) Getcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversion(ctx context.Context, listId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewGetcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionRequest(c.Server, listId)
 	if err != nil {
@@ -7203,8 +7500,13 @@ func (c *Client) Getcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdschedu
 	return c.Client.Do(req)
 }
 
-// Putcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionWithBody performs a PUT /crm/lists/2026-03/{listId}/schedule-conversion (the `Putcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversion` operationId) request,
-// with any type of body and a specified content type.
+// Putcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionWithBody Schedule or update the conversion of a list to static
+//
+// Schedule the conversion of an active list into a static list, or update the already scheduled conversion. This can be scheduled for a specific date or based on activity.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with PUT /crm/lists/2026-03/{listId}/schedule-conversion (the `Putcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversion` operationId).
 func (c *Client) Putcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionWithBody(ctx context.Context, listId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPutcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionRequestWithBody(c.Server, listId, contentType, body)
 	if err != nil {
@@ -7217,8 +7519,13 @@ func (c *Client) Putcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdschedu
 	return c.Client.Do(req)
 }
 
-// Putcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversion performs a PUT /crm/lists/2026-03/{listId}/schedule-conversion (the `Putcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversion` operationId) request.
+// Putcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversion Schedule or update the conversion of a list to static
+//
+// Schedule the conversion of an active list into a static list, or update the already scheduled conversion. This can be scheduled for a specific date or based on activity.
+//
 // Takes a body of the `application/json` content type.
+//
+// Corresponds with PUT /crm/lists/2026-03/{listId}/schedule-conversion (the `Putcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversion` operationId).
 func (c *Client) Putcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversion(ctx context.Context, listId string, body Putcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPutcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionRequest(c.Server, listId, body)
 	if err != nil {
@@ -7244,8 +7551,13 @@ func (c *Client) Getcrmlists202603ListIdsizeAndEditsHistorybetweencrmlists202603
 	return c.Client.Do(req)
 }
 
-// Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersWithBody performs a PUT /crm/lists/2026-03/{listId}/update-list-filters (the `Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFilters` operationId) request,
-// with any type of body and a specified content type.
+// Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersWithBody Update List Filter Definition
+//
+// Update the filter branch definition of a `DYNAMIC` list. Once updated, the list memberships will be re-evaluated and updated to match the new definition.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with PUT /crm/lists/2026-03/{listId}/update-list-filters (the `Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFilters` operationId).
 func (c *Client) Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersWithBody(ctx context.Context, listId string, params *Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPutcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersRequestWithBody(c.Server, listId, params, contentType, body)
 	if err != nil {
@@ -7258,8 +7570,13 @@ func (c *Client) Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateL
 	return c.Client.Do(req)
 }
 
-// Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFilters performs a PUT /crm/lists/2026-03/{listId}/update-list-filters (the `Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFilters` operationId) request.
+// Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFilters Update List Filter Definition
+//
+// Update the filter branch definition of a `DYNAMIC` list. Once updated, the list memberships will be re-evaluated and updated to match the new definition.
+//
 // Takes a body of the `application/json` content type.
+//
+// Corresponds with PUT /crm/lists/2026-03/{listId}/update-list-filters (the `Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFilters` operationId).
 func (c *Client) Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFilters(ctx context.Context, listId string, params *Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersParams, body Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPutcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersRequest(c.Server, listId, params, body)
 	if err != nil {
@@ -7272,7 +7589,11 @@ func (c *Client) Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateL
 	return c.Client.Do(req)
 }
 
-// Putcrmlists202603ListIdupdateListNamecrmlistsv3ListIdupdateListName performs a PUT /crm/lists/2026-03/{listId}/update-list-name (the `Putcrmlists202603ListIdupdateListNamecrmlistsv3ListIdupdateListName` operationId) request.
+// Putcrmlists202603ListIdupdateListNamecrmlistsv3ListIdupdateListName Update List Name
+//
+// Update the name of a list. The name must be globally unique relative to all other public lists in the portal.
+//
+// Corresponds with PUT /crm/lists/2026-03/{listId}/update-list-name (the `Putcrmlists202603ListIdupdateListNamecrmlistsv3ListIdupdateListName` operationId).
 func (c *Client) Putcrmlists202603ListIdupdateListNamecrmlistsv3ListIdupdateListName(ctx context.Context, listId string, params *Putcrmlists202603ListIdupdateListNamecrmlistsv3ListIdupdateListNameParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPutcrmlists202603ListIdupdateListNamecrmlistsv3ListIdupdateListNameRequest(c.Server, listId, params)
 	if err != nil {
@@ -7285,7 +7606,11 @@ func (c *Client) Putcrmlists202603ListIdupdateListNamecrmlistsv3ListIdupdateList
 	return c.Client.Do(req)
 }
 
-// GetcrmobjectLibrary202603enablementcrmobjectLibrary202603enablement performs a GET /crm/object-library/2026-03/enablement (the `GetcrmobjectLibrary202603enablementcrmobjectLibrary202603enablement` operationId) request.
+// GetcrmobjectLibrary202603enablementcrmobjectLibrary202603enablement Get object activation statuses
+//
+// For all object types supporting enablement, returns whether they're enabled or disabled
+//
+// Corresponds with GET /crm/object-library/2026-03/enablement (the `GetcrmobjectLibrary202603enablementcrmobjectLibrary202603enablement` operationId).
 func (c *Client) GetcrmobjectLibrary202603enablementcrmobjectLibrary202603enablement(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewGetcrmobjectLibrary202603enablementcrmobjectLibrary202603enablementRequest(c.Server)
 	if err != nil {
@@ -7298,7 +7623,11 @@ func (c *Client) GetcrmobjectLibrary202603enablementcrmobjectLibrary202603enable
 	return c.Client.Do(req)
 }
 
-// GetcrmobjectLibrary202603enablementObjectTypeIdcrmobjectLibrary202603enablementObjectTypeId performs a GET /crm/object-library/2026-03/enablement/{objectTypeId} (the `GetcrmobjectLibrary202603enablementObjectTypeIdcrmobjectLibrary202603enablementObjectTypeId` operationId) request.
+// GetcrmobjectLibrary202603enablementObjectTypeIdcrmobjectLibrary202603enablementObjectTypeId Get object activation status
+//
+// Fetch whether object type is enabled.
+//
+// Corresponds with GET /crm/object-library/2026-03/enablement/{objectTypeId} (the `GetcrmobjectLibrary202603enablementObjectTypeIdcrmobjectLibrary202603enablementObjectTypeId` operationId).
 func (c *Client) GetcrmobjectLibrary202603enablementObjectTypeIdcrmobjectLibrary202603enablementObjectTypeId(ctx context.Context, objectTypeId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewGetcrmobjectLibrary202603enablementObjectTypeIdcrmobjectLibrary202603enablementObjectTypeIdRequest(c.Server, objectTypeId)
 	if err != nil {
@@ -7311,7 +7640,7 @@ func (c *Client) GetcrmobjectLibrary202603enablementObjectTypeIdcrmobjectLibrary
 	return c.Client.Do(req)
 }
 
-// Getcrmobjects2026030162 List
+// Getcrmobjects2026030162 Retrieve services
 //
 // Read a page of services. Control what is returned via the `properties` query param.
 //
@@ -7328,7 +7657,7 @@ func (c *Client) Getcrmobjects2026030162(ctx context.Context, params *Getcrmobje
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects2026030162WithBody Create
+// Postcrmobjects2026030162WithBody Create a service
 //
 // Create a service with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard services is provided.
 //
@@ -7347,7 +7676,7 @@ func (c *Client) Postcrmobjects2026030162WithBody(ctx context.Context, contentTy
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects2026030162 Create
+// Postcrmobjects2026030162 Create a service
 //
 // Create a service with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard services is provided.
 //
@@ -7366,7 +7695,7 @@ func (c *Client) Postcrmobjects2026030162(ctx context.Context, body Postcrmobjec
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects2026030162batcharchiveWithBody Archive a batch of services by ID
+// Postcrmobjects2026030162batcharchiveWithBody Batch archive services
 //
 // Archive a batch of objects.
 //
@@ -7385,7 +7714,7 @@ func (c *Client) Postcrmobjects2026030162batcharchiveWithBody(ctx context.Contex
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects2026030162batcharchive Archive a batch of services by ID
+// Postcrmobjects2026030162batcharchive Batch archive services
 //
 // Archive a batch of objects.
 //
@@ -7518,7 +7847,7 @@ func (c *Client) Postcrmobjects2026030162batchupdate(ctx context.Context, body P
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects2026030162batchupsertWithBody Create or update a batch of services by unique property values
+// Postcrmobjects2026030162batchupsertWithBody Upsert services
 //
 // Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
 //
@@ -7537,7 +7866,7 @@ func (c *Client) Postcrmobjects2026030162batchupsertWithBody(ctx context.Context
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects2026030162batchupsert Create or update a batch of services by unique property values
+// Postcrmobjects2026030162batchupsert Upsert services
 //
 // Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
 //
@@ -7556,7 +7885,7 @@ func (c *Client) Postcrmobjects2026030162batchupsert(ctx context.Context, body P
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects2026030162searchWithBody Search across objects
+// Postcrmobjects2026030162searchWithBody Search for services
 //
 // Fetch objects via a search query.
 //
@@ -7575,7 +7904,7 @@ func (c *Client) Postcrmobjects2026030162searchWithBody(ctx context.Context, con
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects2026030162search Search across objects
+// Postcrmobjects2026030162search Search for services
 //
 // Fetch objects via a search query.
 //
@@ -7594,7 +7923,7 @@ func (c *Client) Postcrmobjects2026030162search(ctx context.Context, body Postcr
 	return c.Client.Do(req)
 }
 
-// Deletecrmobjects2026030162ServiceId Archive
+// Deletecrmobjects2026030162ServiceId Archive a service
 //
 // Move an Object identified by `{serviceId}` to the recycling bin.
 //
@@ -7611,7 +7940,7 @@ func (c *Client) Deletecrmobjects2026030162ServiceId(ctx context.Context, servic
 	return c.Client.Do(req)
 }
 
-// Getcrmobjects2026030162ServiceId Read
+// Getcrmobjects2026030162ServiceId Retrieve a service
 //
 // Read an Object identified by `{serviceId}`. `{serviceId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param.
 //
@@ -7628,7 +7957,7 @@ func (c *Client) Getcrmobjects2026030162ServiceId(ctx context.Context, serviceId
 	return c.Client.Do(req)
 }
 
-// Patchcrmobjects2026030162ServiceIdWithBody Update
+// Patchcrmobjects2026030162ServiceIdWithBody Update  a service
 //
 // Perform a partial update of an Object identified by `{serviceId}`or optionally a unique property value as specified by the `idProperty` query param. `{serviceId}` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
 //
@@ -7647,7 +7976,7 @@ func (c *Client) Patchcrmobjects2026030162ServiceIdWithBody(ctx context.Context,
 	return c.Client.Do(req)
 }
 
-// Patchcrmobjects2026030162ServiceId Update
+// Patchcrmobjects2026030162ServiceId Update  a service
 //
 // Perform a partial update of an Object identified by `{serviceId}`or optionally a unique property value as specified by the `idProperty` query param. `{serviceId}` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
 //
@@ -8059,7 +8388,7 @@ func (c *Client) Patchcrmobjects20260303DealIdUpdate(ctx context.Context, dealId
 	return c.Client.Do(req)
 }
 
-// Getcrmobjects2026030410 List
+// Getcrmobjects2026030410 Retrieve courses
 //
 // Read a page of courses. Control what is returned via the `properties` query param.
 //
@@ -8076,7 +8405,7 @@ func (c *Client) Getcrmobjects2026030410(ctx context.Context, params *Getcrmobje
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects2026030410WithBody Create
+// Postcrmobjects2026030410WithBody Create a course
 //
 // Create a course with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard courses is provided.
 //
@@ -8095,7 +8424,7 @@ func (c *Client) Postcrmobjects2026030410WithBody(ctx context.Context, contentTy
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects2026030410 Create
+// Postcrmobjects2026030410 Create a course
 //
 // Create a course with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard courses is provided.
 //
@@ -8114,7 +8443,7 @@ func (c *Client) Postcrmobjects2026030410(ctx context.Context, body Postcrmobjec
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects2026030410batcharchiveWithBody Archive a batch of courses by ID
+// Postcrmobjects2026030410batcharchiveWithBody Batch archive courses
 //
 // Archive a batch of objects.
 //
@@ -8133,7 +8462,7 @@ func (c *Client) Postcrmobjects2026030410batcharchiveWithBody(ctx context.Contex
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects2026030410batcharchive Archive a batch of courses by ID
+// Postcrmobjects2026030410batcharchive Batch archive courses
 //
 // Archive a batch of objects.
 //
@@ -8152,7 +8481,7 @@ func (c *Client) Postcrmobjects2026030410batcharchive(ctx context.Context, body 
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects2026030410batchcreateWithBody Create a batch of courses
+// Postcrmobjects2026030410batchcreateWithBody Batch create courses
 //
 // Create a batch of objects.
 //
@@ -8171,7 +8500,7 @@ func (c *Client) Postcrmobjects2026030410batchcreateWithBody(ctx context.Context
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects2026030410batchcreate Create a batch of courses
+// Postcrmobjects2026030410batchcreate Batch create courses
 //
 // Create a batch of objects.
 //
@@ -8190,7 +8519,7 @@ func (c *Client) Postcrmobjects2026030410batchcreate(ctx context.Context, body P
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects2026030410batchreadWithBody Read a batch of courses by internal ID, or unique property values
+// Postcrmobjects2026030410batchreadWithBody Batch retrieve courses
 //
 // Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
 //
@@ -8209,7 +8538,7 @@ func (c *Client) Postcrmobjects2026030410batchreadWithBody(ctx context.Context, 
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects2026030410batchread Read a batch of courses by internal ID, or unique property values
+// Postcrmobjects2026030410batchread Batch retrieve courses
 //
 // Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
 //
@@ -8228,7 +8557,7 @@ func (c *Client) Postcrmobjects2026030410batchread(ctx context.Context, params *
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects2026030410batchupdateWithBody Update a batch of courses by internal ID, or unique property values
+// Postcrmobjects2026030410batchupdateWithBody Batch update courses
 //
 // Update a batch of objects.
 //
@@ -8247,7 +8576,7 @@ func (c *Client) Postcrmobjects2026030410batchupdateWithBody(ctx context.Context
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects2026030410batchupdate Update a batch of courses by internal ID, or unique property values
+// Postcrmobjects2026030410batchupdate Batch update courses
 //
 // Update a batch of objects.
 //
@@ -8266,7 +8595,7 @@ func (c *Client) Postcrmobjects2026030410batchupdate(ctx context.Context, body P
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects2026030410batchupsertWithBody Create or update a batch of courses by unique property values
+// Postcrmobjects2026030410batchupsertWithBody Upsert courses
 //
 // Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
 //
@@ -8285,7 +8614,7 @@ func (c *Client) Postcrmobjects2026030410batchupsertWithBody(ctx context.Context
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects2026030410batchupsert Create or update a batch of courses by unique property values
+// Postcrmobjects2026030410batchupsert Upsert courses
 //
 // Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
 //
@@ -8304,7 +8633,7 @@ func (c *Client) Postcrmobjects2026030410batchupsert(ctx context.Context, body P
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects2026030410searchWithBody Search for objects
+// Postcrmobjects2026030410searchWithBody Search for courses
 //
 // Fetch objects using a search query.
 //
@@ -8323,7 +8652,7 @@ func (c *Client) Postcrmobjects2026030410searchWithBody(ctx context.Context, con
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects2026030410search Search for objects
+// Postcrmobjects2026030410search Search for courses
 //
 // Fetch objects using a search query.
 //
@@ -8342,7 +8671,7 @@ func (c *Client) Postcrmobjects2026030410search(ctx context.Context, body Postcr
 	return c.Client.Do(req)
 }
 
-// Deletecrmobjects2026030410CourseId Archive
+// Deletecrmobjects2026030410CourseId Archive a course
 //
 // Move an Object identified by `{courseId}` to the recycling bin.
 //
@@ -8359,7 +8688,7 @@ func (c *Client) Deletecrmobjects2026030410CourseId(ctx context.Context, courseI
 	return c.Client.Do(req)
 }
 
-// Getcrmobjects2026030410CourseId Read
+// Getcrmobjects2026030410CourseId Retrieve a course
 //
 // Read an Object identified by `{courseId}`. `{courseId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param.
 //
@@ -8376,7 +8705,7 @@ func (c *Client) Getcrmobjects2026030410CourseId(ctx context.Context, courseId s
 	return c.Client.Do(req)
 }
 
-// Patchcrmobjects2026030410CourseIdWithBody Update
+// Patchcrmobjects2026030410CourseIdWithBody Update a course
 //
 // Perform a partial update of an Object identified by `{courseId}`or optionally a unique property value as specified by the `idProperty` query param. `{courseId}` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
 //
@@ -8395,7 +8724,7 @@ func (c *Client) Patchcrmobjects2026030410CourseIdWithBody(ctx context.Context, 
 	return c.Client.Do(req)
 }
 
-// Patchcrmobjects2026030410CourseId Update
+// Patchcrmobjects2026030410CourseId Update a course
 //
 // Perform a partial update of an Object identified by `{courseId}`or optionally a unique property value as specified by the `idProperty` query param. `{courseId}` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
 //
@@ -9179,7 +9508,7 @@ func (c *Client) Postcrmobjects202603carts(ctx context.Context, body Postcrmobje
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603cartsbatcharchiveWithBody Archive a batch of carts
+// Postcrmobjects202603cartsbatcharchiveWithBody Archive a batch of carts by ID
 //
 // Archive a batch of carts identified by their IDs.
 //
@@ -9198,7 +9527,7 @@ func (c *Client) Postcrmobjects202603cartsbatcharchiveWithBody(ctx context.Conte
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603cartsbatcharchive Archive a batch of carts
+// Postcrmobjects202603cartsbatcharchive Archive a batch of carts by ID
 //
 // Archive a batch of carts identified by their IDs.
 //
@@ -9255,9 +9584,9 @@ func (c *Client) Postcrmobjects202603cartsbatchcreate(ctx context.Context, body 
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603cartsbatchreadWithBody Retrieve a batch of carts
+// Postcrmobjects202603cartsbatchreadWithBody Read a batch of carts by internal ID, or unique property values
 //
-// Retrieve carts by ID, or include the `idProperty` parameter to retrieve carts by a custom unique value property.
+// Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
 //
 // Takes any type of body and a specified content type.
 //
@@ -9274,9 +9603,9 @@ func (c *Client) Postcrmobjects202603cartsbatchreadWithBody(ctx context.Context,
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603cartsbatchread Retrieve a batch of carts
+// Postcrmobjects202603cartsbatchread Read a batch of carts by internal ID, or unique property values
 //
-// Retrieve carts by ID, or include the `idProperty` parameter to retrieve carts by a custom unique value property.
+// Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
 //
 // Takes a body of the `application/json` content type.
 //
@@ -9293,7 +9622,7 @@ func (c *Client) Postcrmobjects202603cartsbatchread(ctx context.Context, params 
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603cartsbatchupdateWithBody Update a batch of carts
+// Postcrmobjects202603cartsbatchupdateWithBody Update a batch of carts by internal ID, or unique property values
 //
 // Update a batch of carts using their internal IDs or unique property values.
 //
@@ -9312,7 +9641,7 @@ func (c *Client) Postcrmobjects202603cartsbatchupdateWithBody(ctx context.Contex
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603cartsbatchupdate Update a batch of carts
+// Postcrmobjects202603cartsbatchupdate Update a batch of carts by internal ID, or unique property values
 //
 // Update a batch of carts using their internal IDs or unique property values.
 //
@@ -9331,9 +9660,9 @@ func (c *Client) Postcrmobjects202603cartsbatchupdate(ctx context.Context, body 
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603cartsbatchupsertWithBody Upsert a batch of carts
+// Postcrmobjects202603cartsbatchupsertWithBody Create or update a batch of carts by unique property values
 //
-// Create or update records identified by a unique property value as specified by the `idProperty` query parameter.
+// Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
 //
 // Takes any type of body and a specified content type.
 //
@@ -9350,9 +9679,9 @@ func (c *Client) Postcrmobjects202603cartsbatchupsertWithBody(ctx context.Contex
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603cartsbatchupsert Upsert a batch of carts
+// Postcrmobjects202603cartsbatchupsert Create or update a batch of carts by unique property values
 //
-// Create or update records identified by a unique property value as specified by the `idProperty` query parameter.
+// Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
 //
 // Takes a body of the `application/json` content type.
 //
@@ -9409,7 +9738,7 @@ func (c *Client) Postcrmobjects202603cartssearch(ctx context.Context, body Postc
 
 // Deletecrmobjects202603cartsCartId Delete a cart
 //
-// Delete a cart by its ID, moving it to the recycling bin.
+// Move an Object identified by `{cartId}` to the recycling bin.
 //
 // Corresponds with DELETE /crm/objects/2026-03/carts/{cartId} (the `Deletecrmobjects202603cartsCartId` operationId).
 func (c *Client) Deletecrmobjects202603cartsCartId(ctx context.Context, cartId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
@@ -9426,7 +9755,7 @@ func (c *Client) Deletecrmobjects202603cartsCartId(ctx context.Context, cartId s
 
 // Getcrmobjects202603cartsCartId Retrieve a cart
 //
-// Retrieve a cart by its ID. You can control what is returned via the `properties` query parameter.
+// Read an Object identified by `{cartId}`. `{cartId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param.
 //
 // Corresponds with GET /crm/objects/2026-03/carts/{cartId} (the `Getcrmobjects202603cartsCartId` operationId).
 func (c *Client) Getcrmobjects202603cartsCartId(ctx context.Context, cartId string, params *Getcrmobjects202603cartsCartIdParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
@@ -9443,7 +9772,7 @@ func (c *Client) Getcrmobjects202603cartsCartId(ctx context.Context, cartId stri
 
 // Patchcrmobjects202603cartsCartIdWithBody Update a cart
 //
-// Perform a partial update of a cart, specified by its ID. Alternatively, you can specify a cart by a unique property value using the `idProperty` query parameter. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
+// Perform a partial update of an Object identified by `{cartId}`or optionally a unique property value as specified by the `idProperty` query param. `{cartId}` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
 //
 // Takes any type of body and a specified content type.
 //
@@ -9462,7 +9791,7 @@ func (c *Client) Patchcrmobjects202603cartsCartIdWithBody(ctx context.Context, c
 
 // Patchcrmobjects202603cartsCartId Update a cart
 //
-// Perform a partial update of a cart, specified by its ID. Alternatively, you can specify a cart by a unique property value using the `idProperty` query parameter. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
+// Perform a partial update of an Object identified by `{cartId}`or optionally a unique property value as specified by the `idProperty` query param. `{cartId}` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
 //
 // Takes a body of the `application/json` content type.
 //
@@ -10582,7 +10911,11 @@ func (c *Client) Patchcrmobjects202603companiesCompanyIdUpdate(ctx context.Conte
 	return c.Client.Do(req)
 }
 
-// Getcrmobjects202603contactsGetPage performs a GET /crm/objects/2026-03/contacts (the `Getcrmobjects202603contactsGetPage` operationId) request.
+// Getcrmobjects202603contactsGetPage Retrieve contacts
+//
+// Retrieve all contacts, using query parameters to specify the information that gets returned.
+//
+// Corresponds with GET /crm/objects/2026-03/contacts (the `Getcrmobjects202603contactsGetPage` operationId).
 func (c *Client) Getcrmobjects202603contactsGetPage(ctx context.Context, params *Getcrmobjects202603contactsGetPageParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewGetcrmobjects202603contactsGetPageRequest(c.Server, params)
 	if err != nil {
@@ -10596,6 +10929,8 @@ func (c *Client) Getcrmobjects202603contactsGetPage(ctx context.Context, params 
 }
 
 // Postcrmobjects202603contactsCreateWithBody Create a contact
+//
+// Create a single contact. Include a `properties` object to define [property values](https://developers.hubspot.com/docs/guides/api/crm/properties) for the contact, along with an `associations` array to define [associations](https://developers.hubspot.com/docs/guides/api/crm/associations/associations-v4) with other CRM records.
 //
 // Takes any type of body and a specified content type.
 //
@@ -10614,6 +10949,8 @@ func (c *Client) Postcrmobjects202603contactsCreateWithBody(ctx context.Context,
 
 // Postcrmobjects202603contactsCreate Create a contact
 //
+// Create a single contact. Include a `properties` object to define [property values](https://developers.hubspot.com/docs/guides/api/crm/properties) for the contact, along with an `associations` array to define [associations](https://developers.hubspot.com/docs/guides/api/crm/associations/associations-v4) with other CRM records.
+//
 // Takes a body of the `application/json` content type.
 //
 // Corresponds with POST /crm/objects/2026-03/contacts (the `Postcrmobjects202603contactsCreate` operationId).
@@ -10630,6 +10967,8 @@ func (c *Client) Postcrmobjects202603contactsCreate(ctx context.Context, body Po
 }
 
 // Postcrmobjects202603contactsbatcharchiveArchiveWithBody Archive a batch of contacts
+//
+// Archive a batch of contacts by ID. Archived contacts can be restored within 90 days of deletion. Learn more about the [data impacted by contact deletions](https://knowledge.hubspot.com/privacy-and-consent/understand-restorable-and-permanent-contact-deletions) and how to [restore archived records](https://knowledge.hubspot.com/records/restore-deleted-records).
 //
 // Takes any type of body and a specified content type.
 //
@@ -10648,6 +10987,8 @@ func (c *Client) Postcrmobjects202603contactsbatcharchiveArchiveWithBody(ctx con
 
 // Postcrmobjects202603contactsbatcharchiveArchive Archive a batch of contacts
 //
+// Archive a batch of contacts by ID. Archived contacts can be restored within 90 days of deletion. Learn more about the [data impacted by contact deletions](https://knowledge.hubspot.com/privacy-and-consent/understand-restorable-and-permanent-contact-deletions) and how to [restore archived records](https://knowledge.hubspot.com/records/restore-deleted-records).
+//
 // Takes a body of the `application/json` content type.
 //
 // Corresponds with POST /crm/objects/2026-03/contacts/batch/archive (the `Postcrmobjects202603contactsbatcharchiveArchive` operationId).
@@ -10663,8 +11004,13 @@ func (c *Client) Postcrmobjects202603contactsbatcharchiveArchive(ctx context.Con
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603contactsbatchcreateCreateWithBody performs a POST /crm/objects/2026-03/contacts/batch/create (the `Postcrmobjects202603contactsbatchcreateCreate` operationId) request,
-// with any type of body and a specified content type.
+// Postcrmobjects202603contactsbatchcreateCreateWithBody Create a batch of contacts
+//
+// Create a batch of contacts. The `inputs` array can contain a `properties` object to define property values for each record, along with an `associations` array to define [associations](https://developers.hubspot.com/docs/guides/api/crm/associations/associations-v4) with other CRM records.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /crm/objects/2026-03/contacts/batch/create (the `Postcrmobjects202603contactsbatchcreateCreate` operationId).
 func (c *Client) Postcrmobjects202603contactsbatchcreateCreateWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcrmobjects202603contactsbatchcreateCreateRequestWithBody(c.Server, contentType, body)
 	if err != nil {
@@ -10677,8 +11023,13 @@ func (c *Client) Postcrmobjects202603contactsbatchcreateCreateWithBody(ctx conte
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603contactsbatchcreateCreate performs a POST /crm/objects/2026-03/contacts/batch/create (the `Postcrmobjects202603contactsbatchcreateCreate` operationId) request.
+// Postcrmobjects202603contactsbatchcreateCreate Create a batch of contacts
+//
+// Create a batch of contacts. The `inputs` array can contain a `properties` object to define property values for each record, along with an `associations` array to define [associations](https://developers.hubspot.com/docs/guides/api/crm/associations/associations-v4) with other CRM records.
+//
 // Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /crm/objects/2026-03/contacts/batch/create (the `Postcrmobjects202603contactsbatchcreateCreate` operationId).
 func (c *Client) Postcrmobjects202603contactsbatchcreateCreate(ctx context.Context, body Postcrmobjects202603contactsbatchcreateCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcrmobjects202603contactsbatchcreateCreateRequest(c.Server, body)
 	if err != nil {
@@ -10691,8 +11042,13 @@ func (c *Client) Postcrmobjects202603contactsbatchcreateCreate(ctx context.Conte
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603contactsbatchreadReadWithBody performs a POST /crm/objects/2026-03/contacts/batch/read (the `Postcrmobjects202603contactsbatchreadRead` operationId) request,
-// with any type of body and a specified content type.
+// Postcrmobjects202603contactsbatchreadReadWithBody Retrieve a batch of contacts
+//
+// Retrieve a batch of contacts by ID (`contactId`) or unique property value (`idProperty`).
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /crm/objects/2026-03/contacts/batch/read (the `Postcrmobjects202603contactsbatchreadRead` operationId).
 func (c *Client) Postcrmobjects202603contactsbatchreadReadWithBody(ctx context.Context, params *Postcrmobjects202603contactsbatchreadReadParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcrmobjects202603contactsbatchreadReadRequestWithBody(c.Server, params, contentType, body)
 	if err != nil {
@@ -10705,8 +11061,13 @@ func (c *Client) Postcrmobjects202603contactsbatchreadReadWithBody(ctx context.C
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603contactsbatchreadRead performs a POST /crm/objects/2026-03/contacts/batch/read (the `Postcrmobjects202603contactsbatchreadRead` operationId) request.
+// Postcrmobjects202603contactsbatchreadRead Retrieve a batch of contacts
+//
+// Retrieve a batch of contacts by ID (`contactId`) or unique property value (`idProperty`).
+//
 // Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /crm/objects/2026-03/contacts/batch/read (the `Postcrmobjects202603contactsbatchreadRead` operationId).
 func (c *Client) Postcrmobjects202603contactsbatchreadRead(ctx context.Context, params *Postcrmobjects202603contactsbatchreadReadParams, body Postcrmobjects202603contactsbatchreadReadJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcrmobjects202603contactsbatchreadReadRequest(c.Server, params, body)
 	if err != nil {
@@ -10719,8 +11080,13 @@ func (c *Client) Postcrmobjects202603contactsbatchreadRead(ctx context.Context, 
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603contactsbatchupdateUpdateWithBody performs a POST /crm/objects/2026-03/contacts/batch/update (the `Postcrmobjects202603contactsbatchupdateUpdate` operationId) request,
-// with any type of body and a specified content type.
+// Postcrmobjects202603contactsbatchupdateUpdateWithBody Update a batch of contacts
+//
+// Update a batch of contacts by ID (`contactId`) or unique property value (`idProperty`). Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /crm/objects/2026-03/contacts/batch/update (the `Postcrmobjects202603contactsbatchupdateUpdate` operationId).
 func (c *Client) Postcrmobjects202603contactsbatchupdateUpdateWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcrmobjects202603contactsbatchupdateUpdateRequestWithBody(c.Server, contentType, body)
 	if err != nil {
@@ -10733,8 +11099,13 @@ func (c *Client) Postcrmobjects202603contactsbatchupdateUpdateWithBody(ctx conte
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603contactsbatchupdateUpdate performs a POST /crm/objects/2026-03/contacts/batch/update (the `Postcrmobjects202603contactsbatchupdateUpdate` operationId) request.
+// Postcrmobjects202603contactsbatchupdateUpdate Update a batch of contacts
+//
+// Update a batch of contacts by ID (`contactId`) or unique property value (`idProperty`). Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
+//
 // Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /crm/objects/2026-03/contacts/batch/update (the `Postcrmobjects202603contactsbatchupdateUpdate` operationId).
 func (c *Client) Postcrmobjects202603contactsbatchupdateUpdate(ctx context.Context, body Postcrmobjects202603contactsbatchupdateUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcrmobjects202603contactsbatchupdateUpdateRequest(c.Server, body)
 	if err != nil {
@@ -10747,8 +11118,13 @@ func (c *Client) Postcrmobjects202603contactsbatchupdateUpdate(ctx context.Conte
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603contactsbatchupsertUpsertWithBody performs a POST /crm/objects/2026-03/contacts/batch/upsert (the `Postcrmobjects202603contactsbatchupsertUpsert` operationId) request,
-// with any type of body and a specified content type.
+// Postcrmobjects202603contactsbatchupsertUpsertWithBody Create or update a batch of contacts
+//
+// Upsert a batch of contacts. The `inputs` array can contain a `properties` object to define property values for each record.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /crm/objects/2026-03/contacts/batch/upsert (the `Postcrmobjects202603contactsbatchupsertUpsert` operationId).
 func (c *Client) Postcrmobjects202603contactsbatchupsertUpsertWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcrmobjects202603contactsbatchupsertUpsertRequestWithBody(c.Server, contentType, body)
 	if err != nil {
@@ -10761,8 +11137,13 @@ func (c *Client) Postcrmobjects202603contactsbatchupsertUpsertWithBody(ctx conte
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603contactsbatchupsertUpsert performs a POST /crm/objects/2026-03/contacts/batch/upsert (the `Postcrmobjects202603contactsbatchupsertUpsert` operationId) request.
+// Postcrmobjects202603contactsbatchupsertUpsert Create or update a batch of contacts
+//
+// Upsert a batch of contacts. The `inputs` array can contain a `properties` object to define property values for each record.
+//
 // Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /crm/objects/2026-03/contacts/batch/upsert (the `Postcrmobjects202603contactsbatchupsertUpsert` operationId).
 func (c *Client) Postcrmobjects202603contactsbatchupsertUpsert(ctx context.Context, body Postcrmobjects202603contactsbatchupsertUpsertJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcrmobjects202603contactsbatchupsertUpsertRequest(c.Server, body)
 	if err != nil {
@@ -10775,8 +11156,13 @@ func (c *Client) Postcrmobjects202603contactsbatchupsertUpsert(ctx context.Conte
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603contactsgdprDeletePurgeWithBody performs a POST /crm/objects/2026-03/contacts/gdpr-delete (the `Postcrmobjects202603contactsgdprDeletePurge` operationId) request,
-// with any type of body and a specified content type.
+// Postcrmobjects202603contactsgdprDeletePurgeWithBody Permanently delete a contact (GDPR-compliant)
+//
+// Permanently delete a contact and all associated content to follow GDPR. Use optional property `idProperty` set to `email` to identify contact by email address. If email address is not found, the email address will be added to a blocklist and prevent it from being used in the future. Learn more about [permanently deleting contacts](https://knowledge.hubspot.com/privacy-and-consent/how-do-i-perform-a-gdpr-delete-in-hubspot).
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /crm/objects/2026-03/contacts/gdpr-delete (the `Postcrmobjects202603contactsgdprDeletePurge` operationId).
 func (c *Client) Postcrmobjects202603contactsgdprDeletePurgeWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcrmobjects202603contactsgdprDeletePurgeRequestWithBody(c.Server, contentType, body)
 	if err != nil {
@@ -10789,8 +11175,13 @@ func (c *Client) Postcrmobjects202603contactsgdprDeletePurgeWithBody(ctx context
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603contactsgdprDeletePurge performs a POST /crm/objects/2026-03/contacts/gdpr-delete (the `Postcrmobjects202603contactsgdprDeletePurge` operationId) request.
+// Postcrmobjects202603contactsgdprDeletePurge Permanently delete a contact (GDPR-compliant)
+//
+// Permanently delete a contact and all associated content to follow GDPR. Use optional property `idProperty` set to `email` to identify contact by email address. If email address is not found, the email address will be added to a blocklist and prevent it from being used in the future. Learn more about [permanently deleting contacts](https://knowledge.hubspot.com/privacy-and-consent/how-do-i-perform-a-gdpr-delete-in-hubspot).
+//
 // Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /crm/objects/2026-03/contacts/gdpr-delete (the `Postcrmobjects202603contactsgdprDeletePurge` operationId).
 func (c *Client) Postcrmobjects202603contactsgdprDeletePurge(ctx context.Context, body Postcrmobjects202603contactsgdprDeletePurgeJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcrmobjects202603contactsgdprDeletePurgeRequest(c.Server, body)
 	if err != nil {
@@ -10804,6 +11195,8 @@ func (c *Client) Postcrmobjects202603contactsgdprDeletePurge(ctx context.Context
 }
 
 // Postcrmobjects202603contactsmergeMergeWithBody Merge two contacts
+//
+// Merge two contact records. Learn more about [merging records](https://knowledge.hubspot.com/records/merge-records).
 //
 // Takes any type of body and a specified content type.
 //
@@ -10821,6 +11214,8 @@ func (c *Client) Postcrmobjects202603contactsmergeMergeWithBody(ctx context.Cont
 }
 
 // Postcrmobjects202603contactsmergeMerge Merge two contacts
+//
+// Merge two contact records. Learn more about [merging records](https://knowledge.hubspot.com/records/merge-records).
 //
 // Takes a body of the `application/json` content type.
 //
@@ -10875,9 +11270,11 @@ func (c *Client) Postcrmobjects202603contactssearchDoSearch(ctx context.Context,
 	return c.Client.Do(req)
 }
 
-// Deletecrmobjects202603contactsContactIdArchive performs a DELETE /crm/objects/2026-03/contacts/{contactId} (the `Deletecrmobjects202603contactsContactIdArchive` operationId) request.
+// Deletecrmobjects202603contactsContactIdArchive Archive a contact
 //
 // Delete a contact by ID. Deleted contacts can be restored within 90 days of deletion. Learn more about the [data impacted by contact deletions](https://knowledge.hubspot.com/privacy-and-consent/understand-restorable-and-permanent-contact-deletions) and how to [restore archived records](https://knowledge.hubspot.com/records/restore-deleted-records).
+//
+// Corresponds with DELETE /crm/objects/2026-03/contacts/{contactId} (the `Deletecrmobjects202603contactsContactIdArchive` operationId).
 func (c *Client) Deletecrmobjects202603contactsContactIdArchive(ctx context.Context, contactId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewDeletecrmobjects202603contactsContactIdArchiveRequest(c.Server, contactId)
 	if err != nil {
@@ -10890,7 +11287,11 @@ func (c *Client) Deletecrmobjects202603contactsContactIdArchive(ctx context.Cont
 	return c.Client.Do(req)
 }
 
-// Getcrmobjects202603contactsContactIdGetById performs a GET /crm/objects/2026-03/contacts/{contactId} (the `Getcrmobjects202603contactsContactIdGetById` operationId) request.
+// Getcrmobjects202603contactsContactIdGetById Retrieve a contact
+//
+// Retrieve a contact by its ID (`contactId`) or by a unique property (`idProperty`). You can specify what is returned using the `properties` query parameter.
+//
+// Corresponds with GET /crm/objects/2026-03/contacts/{contactId} (the `Getcrmobjects202603contactsContactIdGetById` operationId).
 func (c *Client) Getcrmobjects202603contactsContactIdGetById(ctx context.Context, contactId string, params *Getcrmobjects202603contactsContactIdGetByIdParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewGetcrmobjects202603contactsContactIdGetByIdRequest(c.Server, contactId, params)
 	if err != nil {
@@ -10903,10 +11304,13 @@ func (c *Client) Getcrmobjects202603contactsContactIdGetById(ctx context.Context
 	return c.Client.Do(req)
 }
 
-// Patchcrmobjects202603contactsContactIdUpdateWithBody performs a PATCH /crm/objects/2026-03/contacts/{contactId} (the `Patchcrmobjects202603contactsContactIdUpdate` operationId) request,
-// with any type of body and a specified content type.
+// Patchcrmobjects202603contactsContactIdUpdateWithBody Update a contact
 //
 // Update an existing contact, identified by ID or email/unique property value. To identify a contact by ID, include the ID in the request URL path. To identify a contact by their email or other unique property, include the email/property value in the request URL path, and add the `idProperty` query parameter (`/crm/v3/objects/contacts/jon@website.com?idProperty=email`). Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with PATCH /crm/objects/2026-03/contacts/{contactId} (the `Patchcrmobjects202603contactsContactIdUpdate` operationId).
 func (c *Client) Patchcrmobjects202603contactsContactIdUpdateWithBody(ctx context.Context, contactId string, params *Patchcrmobjects202603contactsContactIdUpdateParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPatchcrmobjects202603contactsContactIdUpdateRequestWithBody(c.Server, contactId, params, contentType, body)
 	if err != nil {
@@ -10919,10 +11323,13 @@ func (c *Client) Patchcrmobjects202603contactsContactIdUpdateWithBody(ctx contex
 	return c.Client.Do(req)
 }
 
-// Patchcrmobjects202603contactsContactIdUpdate performs a PATCH /crm/objects/2026-03/contacts/{contactId} (the `Patchcrmobjects202603contactsContactIdUpdate` operationId) request.
-// Takes a body of the `application/json` content type.
+// Patchcrmobjects202603contactsContactIdUpdate Update a contact
 //
 // Update an existing contact, identified by ID or email/unique property value. To identify a contact by ID, include the ID in the request URL path. To identify a contact by their email or other unique property, include the email/property value in the request URL path, and add the `idProperty` query parameter (`/crm/v3/objects/contacts/jon@website.com?idProperty=email`). Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with PATCH /crm/objects/2026-03/contacts/{contactId} (the `Patchcrmobjects202603contactsContactIdUpdate` operationId).
 func (c *Client) Patchcrmobjects202603contactsContactIdUpdate(ctx context.Context, contactId string, params *Patchcrmobjects202603contactsContactIdUpdateParams, body Patchcrmobjects202603contactsContactIdUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPatchcrmobjects202603contactsContactIdUpdateRequest(c.Server, contactId, params, body)
 	if err != nil {
@@ -11007,7 +11414,47 @@ func (c *Client) Getcrmobjects202603contractsContractId(ctx context.Context, con
 	return c.Client.Do(req)
 }
 
+// Postcrmobjects202603coursesmergeWithBody Merge two courses
+//
+// Merge two courses.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /crm/objects/2026-03/courses/merge (the `Postcrmobjects202603coursesmerge` operationId).
+func (c *Client) Postcrmobjects202603coursesmergeWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmobjects202603coursesmergeRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcrmobjects202603coursesmerge Merge two courses
+//
+// Merge two courses.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /crm/objects/2026-03/courses/merge (the `Postcrmobjects202603coursesmerge` operationId).
+func (c *Client) Postcrmobjects202603coursesmerge(ctx context.Context, body Postcrmobjects202603coursesmergeJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmobjects202603coursesmergeRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // Getcrmobjects202603discounts List
+//
+// Read a page of discounts. Control what is returned via the `properties` query param.
 //
 // Corresponds with GET /crm/objects/2026-03/discounts (the `Getcrmobjects202603discounts` operationId).
 func (c *Client) Getcrmobjects202603discounts(ctx context.Context, params *Getcrmobjects202603discountsParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
@@ -11022,10 +11469,13 @@ func (c *Client) Getcrmobjects202603discounts(ctx context.Context, params *Getcr
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603discountsWithBody performs a POST /crm/objects/2026-03/discounts (the `Postcrmobjects202603discounts` operationId) request,
-// with any type of body and a specified content type.
+// Postcrmobjects202603discountsWithBody Create
 //
 // Create a discount with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard discounts is provided.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /crm/objects/2026-03/discounts (the `Postcrmobjects202603discounts` operationId).
 func (c *Client) Postcrmobjects202603discountsWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcrmobjects202603discountsRequestWithBody(c.Server, contentType, body)
 	if err != nil {
@@ -11038,10 +11488,13 @@ func (c *Client) Postcrmobjects202603discountsWithBody(ctx context.Context, cont
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603discounts performs a POST /crm/objects/2026-03/discounts (the `Postcrmobjects202603discounts` operationId) request.
-// Takes a body of the `application/json` content type.
+// Postcrmobjects202603discounts Create
 //
 // Create a discount with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard discounts is provided.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /crm/objects/2026-03/discounts (the `Postcrmobjects202603discounts` operationId).
 func (c *Client) Postcrmobjects202603discounts(ctx context.Context, body Postcrmobjects202603discountsJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcrmobjects202603discountsRequest(c.Server, body)
 	if err != nil {
@@ -11054,8 +11507,11 @@ func (c *Client) Postcrmobjects202603discounts(ctx context.Context, body Postcrm
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603discountsbatcharchiveWithBody performs a POST /crm/objects/2026-03/discounts/batch/archive (the `Postcrmobjects202603discountsbatcharchive` operationId) request,
-// with any type of body and a specified content type.
+// Postcrmobjects202603discountsbatcharchiveWithBody Archive a batch of discounts by ID
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /crm/objects/2026-03/discounts/batch/archive (the `Postcrmobjects202603discountsbatcharchive` operationId).
 func (c *Client) Postcrmobjects202603discountsbatcharchiveWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcrmobjects202603discountsbatcharchiveRequestWithBody(c.Server, contentType, body)
 	if err != nil {
@@ -11068,8 +11524,11 @@ func (c *Client) Postcrmobjects202603discountsbatcharchiveWithBody(ctx context.C
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603discountsbatcharchive performs a POST /crm/objects/2026-03/discounts/batch/archive (the `Postcrmobjects202603discountsbatcharchive` operationId) request.
+// Postcrmobjects202603discountsbatcharchive Archive a batch of discounts by ID
+//
 // Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /crm/objects/2026-03/discounts/batch/archive (the `Postcrmobjects202603discountsbatcharchive` operationId).
 func (c *Client) Postcrmobjects202603discountsbatcharchive(ctx context.Context, body Postcrmobjects202603discountsbatcharchiveJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcrmobjects202603discountsbatcharchiveRequest(c.Server, body)
 	if err != nil {
@@ -11082,8 +11541,11 @@ func (c *Client) Postcrmobjects202603discountsbatcharchive(ctx context.Context, 
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603discountsbatchcreateWithBody performs a POST /crm/objects/2026-03/discounts/batch/create (the `Postcrmobjects202603discountsbatchcreate` operationId) request,
-// with any type of body and a specified content type.
+// Postcrmobjects202603discountsbatchcreateWithBody Create a batch of discounts
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /crm/objects/2026-03/discounts/batch/create (the `Postcrmobjects202603discountsbatchcreate` operationId).
 func (c *Client) Postcrmobjects202603discountsbatchcreateWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcrmobjects202603discountsbatchcreateRequestWithBody(c.Server, contentType, body)
 	if err != nil {
@@ -11096,8 +11558,11 @@ func (c *Client) Postcrmobjects202603discountsbatchcreateWithBody(ctx context.Co
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603discountsbatchcreate performs a POST /crm/objects/2026-03/discounts/batch/create (the `Postcrmobjects202603discountsbatchcreate` operationId) request.
+// Postcrmobjects202603discountsbatchcreate Create a batch of discounts
+//
 // Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /crm/objects/2026-03/discounts/batch/create (the `Postcrmobjects202603discountsbatchcreate` operationId).
 func (c *Client) Postcrmobjects202603discountsbatchcreate(ctx context.Context, body Postcrmobjects202603discountsbatchcreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcrmobjects202603discountsbatchcreateRequest(c.Server, body)
 	if err != nil {
@@ -11110,10 +11575,13 @@ func (c *Client) Postcrmobjects202603discountsbatchcreate(ctx context.Context, b
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603discountsbatchreadWithBody performs a POST /crm/objects/2026-03/discounts/batch/read (the `Postcrmobjects202603discountsbatchread` operationId) request,
-// with any type of body and a specified content type.
+// Postcrmobjects202603discountsbatchreadWithBody Read a batch of discounts by internal ID, or unique property values
 //
 // Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /crm/objects/2026-03/discounts/batch/read (the `Postcrmobjects202603discountsbatchread` operationId).
 func (c *Client) Postcrmobjects202603discountsbatchreadWithBody(ctx context.Context, params *Postcrmobjects202603discountsbatchreadParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcrmobjects202603discountsbatchreadRequestWithBody(c.Server, params, contentType, body)
 	if err != nil {
@@ -11126,10 +11594,13 @@ func (c *Client) Postcrmobjects202603discountsbatchreadWithBody(ctx context.Cont
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603discountsbatchread performs a POST /crm/objects/2026-03/discounts/batch/read (the `Postcrmobjects202603discountsbatchread` operationId) request.
-// Takes a body of the `application/json` content type.
+// Postcrmobjects202603discountsbatchread Read a batch of discounts by internal ID, or unique property values
 //
 // Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /crm/objects/2026-03/discounts/batch/read (the `Postcrmobjects202603discountsbatchread` operationId).
 func (c *Client) Postcrmobjects202603discountsbatchread(ctx context.Context, params *Postcrmobjects202603discountsbatchreadParams, body Postcrmobjects202603discountsbatchreadJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcrmobjects202603discountsbatchreadRequest(c.Server, params, body)
 	if err != nil {
@@ -11176,8 +11647,13 @@ func (c *Client) Postcrmobjects202603discountsbatchupdate(ctx context.Context, b
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603discountsbatchupsertWithBody performs a POST /crm/objects/2026-03/discounts/batch/upsert (the `Postcrmobjects202603discountsbatchupsert` operationId) request,
-// with any type of body and a specified content type.
+// Postcrmobjects202603discountsbatchupsertWithBody Create or update a batch of discounts by unique property values
+//
+// Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /crm/objects/2026-03/discounts/batch/upsert (the `Postcrmobjects202603discountsbatchupsert` operationId).
 func (c *Client) Postcrmobjects202603discountsbatchupsertWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcrmobjects202603discountsbatchupsertRequestWithBody(c.Server, contentType, body)
 	if err != nil {
@@ -11190,8 +11666,13 @@ func (c *Client) Postcrmobjects202603discountsbatchupsertWithBody(ctx context.Co
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603discountsbatchupsert performs a POST /crm/objects/2026-03/discounts/batch/upsert (the `Postcrmobjects202603discountsbatchupsert` operationId) request.
+// Postcrmobjects202603discountsbatchupsert Create or update a batch of discounts by unique property values
+//
+// Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
+//
 // Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /crm/objects/2026-03/discounts/batch/upsert (the `Postcrmobjects202603discountsbatchupsert` operationId).
 func (c *Client) Postcrmobjects202603discountsbatchupsert(ctx context.Context, body Postcrmobjects202603discountsbatchupsertJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcrmobjects202603discountsbatchupsertRequest(c.Server, body)
 	if err != nil {
@@ -11234,6 +11715,8 @@ func (c *Client) Postcrmobjects202603discountssearch(ctx context.Context, body P
 
 // Deletecrmobjects202603discountsDiscountId Archive
 //
+// Move an Object identified by `{discountId}` to the recycling bin.
+//
 // Corresponds with DELETE /crm/objects/2026-03/discounts/{discountId} (the `Deletecrmobjects202603discountsDiscountId` operationId).
 func (c *Client) Deletecrmobjects202603discountsDiscountId(ctx context.Context, discountId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewDeletecrmobjects202603discountsDiscountIdRequest(c.Server, discountId)
@@ -11247,9 +11730,11 @@ func (c *Client) Deletecrmobjects202603discountsDiscountId(ctx context.Context, 
 	return c.Client.Do(req)
 }
 
-// Getcrmobjects202603discountsDiscountId performs a GET /crm/objects/2026-03/discounts/{discountId} (the `Getcrmobjects202603discountsDiscountId` operationId) request.
+// Getcrmobjects202603discountsDiscountId Read
 //
 // Read an Object identified by `{discountId}`. `{discountId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param.
+//
+// Corresponds with GET /crm/objects/2026-03/discounts/{discountId} (the `Getcrmobjects202603discountsDiscountId` operationId).
 func (c *Client) Getcrmobjects202603discountsDiscountId(ctx context.Context, discountId string, params *Getcrmobjects202603discountsDiscountIdParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewGetcrmobjects202603discountsDiscountIdRequest(c.Server, discountId, params)
 	if err != nil {
@@ -11655,7 +12140,7 @@ func (c *Client) Patchcrmobjects202603emailsEmailIdUpdate(ctx context.Context, e
 	return c.Client.Do(req)
 }
 
-// Getcrmobjects202603feedbackSubmissionsGetPage List
+// Getcrmobjects202603feedbackSubmissionsGetPage Retrieve feedback submissions
 //
 // Read a page of feedback submissions. Control what is returned via the `properties` query param.
 //
@@ -11672,7 +12157,7 @@ func (c *Client) Getcrmobjects202603feedbackSubmissionsGetPage(ctx context.Conte
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603feedbackSubmissionsbatchreadReadWithBody Read a batch of feedback submissions by internal ID, or unique property values
+// Postcrmobjects202603feedbackSubmissionsbatchreadReadWithBody Batch retrieve feedback submissions
 //
 // Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
 //
@@ -11691,7 +12176,7 @@ func (c *Client) Postcrmobjects202603feedbackSubmissionsbatchreadReadWithBody(ct
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603feedbackSubmissionsbatchreadRead Read a batch of feedback submissions by internal ID, or unique property values
+// Postcrmobjects202603feedbackSubmissionsbatchreadRead Batch retrieve feedback submissions
 //
 // Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
 //
@@ -11710,7 +12195,7 @@ func (c *Client) Postcrmobjects202603feedbackSubmissionsbatchreadRead(ctx contex
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603feedbackSubmissionssearchDoSearchWithBody Search for feedback submissions using specified criteria.
+// Postcrmobjects202603feedbackSubmissionssearchDoSearchWithBody Search for feedback submissions
 //
 // Execute a search to retrieve feedback submissions based on defined filters, properties, and sorting options.
 //
@@ -11729,7 +12214,7 @@ func (c *Client) Postcrmobjects202603feedbackSubmissionssearchDoSearchWithBody(c
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603feedbackSubmissionssearchDoSearch Search for feedback submissions using specified criteria.
+// Postcrmobjects202603feedbackSubmissionssearchDoSearch Search for feedback submissions
 //
 // Execute a search to retrieve feedback submissions based on defined filters, properties, and sorting options.
 //
@@ -11748,7 +12233,7 @@ func (c *Client) Postcrmobjects202603feedbackSubmissionssearchDoSearch(ctx conte
 	return c.Client.Do(req)
 }
 
-// Getcrmobjects202603feedbackSubmissionsFeedbackSubmissionIdGetById Read
+// Getcrmobjects202603feedbackSubmissionsFeedbackSubmissionIdGetById Retrieve a feedback submission
 //
 // Read an Object identified by `{feedbackSubmissionId}`. `{feedbackSubmissionId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param.
 //
@@ -12175,7 +12660,7 @@ func (c *Client) Postcrmobjects202603goalTargetsCreate(ctx context.Context, body
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603goalTargetsbatcharchiveArchiveWithBody Delete goal targets
+// Postcrmobjects202603goalTargetsbatcharchiveArchiveWithBody Archive a batch of goal targets by ID
 //
 // Archive multiple goal targets in a single batch operation using their IDs.
 //
@@ -12194,7 +12679,7 @@ func (c *Client) Postcrmobjects202603goalTargetsbatcharchiveArchiveWithBody(ctx 
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603goalTargetsbatcharchiveArchive Delete goal targets
+// Postcrmobjects202603goalTargetsbatcharchiveArchive Archive a batch of goal targets by ID
 //
 // Archive multiple goal targets in a single batch operation using their IDs.
 //
@@ -12213,7 +12698,7 @@ func (c *Client) Postcrmobjects202603goalTargetsbatcharchiveArchive(ctx context.
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603goalTargetsbatchcreateCreateWithBody Create goal targets
+// Postcrmobjects202603goalTargetsbatchcreateCreateWithBody Create a batch of goal targets
 //
 // Create multiple goal targets in a single batch operation.
 //
@@ -12232,7 +12717,7 @@ func (c *Client) Postcrmobjects202603goalTargetsbatchcreateCreateWithBody(ctx co
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603goalTargetsbatchcreateCreate Create goal targets
+// Postcrmobjects202603goalTargetsbatchcreateCreate Create a batch of goal targets
 //
 // Create multiple goal targets in a single batch operation.
 //
@@ -12251,7 +12736,7 @@ func (c *Client) Postcrmobjects202603goalTargetsbatchcreateCreate(ctx context.Co
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603goalTargetsbatchreadReadWithBody Retrieve goal targets
+// Postcrmobjects202603goalTargetsbatchreadReadWithBody Read a batch of goal targets by internal ID, or unique property values
 //
 // Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
 //
@@ -12270,7 +12755,7 @@ func (c *Client) Postcrmobjects202603goalTargetsbatchreadReadWithBody(ctx contex
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603goalTargetsbatchreadRead Retrieve goal targets
+// Postcrmobjects202603goalTargetsbatchreadRead Read a batch of goal targets by internal ID, or unique property values
 //
 // Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
 //
@@ -12289,7 +12774,7 @@ func (c *Client) Postcrmobjects202603goalTargetsbatchreadRead(ctx context.Contex
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603goalTargetsbatchupdateUpdateWithBody Update goal targets
+// Postcrmobjects202603goalTargetsbatchupdateUpdateWithBody Update a batch of goal targets by internal ID, or unique property values
 //
 // Update multiple goal targets in a single batch operation using their internal IDs or unique property values.
 //
@@ -12308,7 +12793,7 @@ func (c *Client) Postcrmobjects202603goalTargetsbatchupdateUpdateWithBody(ctx co
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603goalTargetsbatchupdateUpdate Update goal targets
+// Postcrmobjects202603goalTargetsbatchupdateUpdate Update a batch of goal targets by internal ID, or unique property values
 //
 // Update multiple goal targets in a single batch operation using their internal IDs or unique property values.
 //
@@ -12327,9 +12812,9 @@ func (c *Client) Postcrmobjects202603goalTargetsbatchupdateUpdate(ctx context.Co
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603goalTargetsbatchupsertUpsertWithBody Upsert goal tagets
+// Postcrmobjects202603goalTargetsbatchupsertUpsertWithBody Create or update a batch of goal targets by unique property values
 //
-// Create and update a batch of goal targets by a unique property. Goal targets that don't exist will be created, while existing goal targets will be updated.
+// Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
 //
 // Takes any type of body and a specified content type.
 //
@@ -12346,9 +12831,9 @@ func (c *Client) Postcrmobjects202603goalTargetsbatchupsertUpsertWithBody(ctx co
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603goalTargetsbatchupsertUpsert Upsert goal tagets
+// Postcrmobjects202603goalTargetsbatchupsertUpsert Create or update a batch of goal targets by unique property values
 //
-// Create and update a batch of goal targets by a unique property. Goal targets that don't exist will be created, while existing goal targets will be updated.
+// Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
 //
 // Takes a body of the `application/json` content type.
 //
@@ -12405,7 +12890,7 @@ func (c *Client) Postcrmobjects202603goalTargetssearchDoSearch(ctx context.Conte
 
 // Deletecrmobjects202603goalTargetsGoalTargetIdArchive Delete a goal target
 //
-// Delete a goal target by `{goalTargetId}` to the recycling bin.
+// Move an Object identified by `{goalTargetId}` to the recycling bin.
 //
 // Corresponds with DELETE /crm/objects/2026-03/goal_targets/{goalTargetId} (the `Deletecrmobjects202603goalTargetsGoalTargetIdArchive` operationId).
 func (c *Client) Deletecrmobjects202603goalTargetsGoalTargetIdArchive(ctx context.Context, goalTargetId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
@@ -12422,7 +12907,7 @@ func (c *Client) Deletecrmobjects202603goalTargetsGoalTargetIdArchive(ctx contex
 
 // Getcrmobjects202603goalTargetsGoalTargetIdGetById Retrieve a goal target
 //
-// Retrieve a goal target by its ID. You can specify what is returned using the `properties` query parameter.
+// Read an Object identified by `{goalTargetId}`. `{goalTargetId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param.
 //
 // Corresponds with GET /crm/objects/2026-03/goal_targets/{goalTargetId} (the `Getcrmobjects202603goalTargetsGoalTargetIdGetById` operationId).
 func (c *Client) Getcrmobjects202603goalTargetsGoalTargetIdGetById(ctx context.Context, goalTargetId string, params *Getcrmobjects202603goalTargetsGoalTargetIdGetByIdParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
@@ -14250,7 +14735,7 @@ func (c *Client) Patchcrmobjects202603notesNoteIdUpdate(ctx context.Context, not
 	return c.Client.Do(req)
 }
 
-// Getcrmobjects202603orders List
+// Getcrmobjects202603orders Rertrieve orders
 //
 // Read a page of orders. Control what is returned via the `properties` query param.
 //
@@ -14267,7 +14752,7 @@ func (c *Client) Getcrmobjects202603orders(ctx context.Context, params *Getcrmob
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603ordersWithBody Create
+// Postcrmobjects202603ordersWithBody Create an order
 //
 // Create a order with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard orders is provided.
 //
@@ -14286,7 +14771,7 @@ func (c *Client) Postcrmobjects202603ordersWithBody(ctx context.Context, content
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603orders Create
+// Postcrmobjects202603orders Create an order
 //
 // Create a order with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard orders is provided.
 //
@@ -14305,7 +14790,7 @@ func (c *Client) Postcrmobjects202603orders(ctx context.Context, body Postcrmobj
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603ordersbatcharchiveWithBody Archive a batch of orders by ID
+// Postcrmobjects202603ordersbatcharchiveWithBody Batch archive orders
 //
 // Archive a batch of orders identified by their IDs.
 //
@@ -14324,7 +14809,7 @@ func (c *Client) Postcrmobjects202603ordersbatcharchiveWithBody(ctx context.Cont
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603ordersbatcharchive Archive a batch of orders by ID
+// Postcrmobjects202603ordersbatcharchive Batch archive orders
 //
 // Archive a batch of orders identified by their IDs.
 //
@@ -14343,7 +14828,7 @@ func (c *Client) Postcrmobjects202603ordersbatcharchive(ctx context.Context, bod
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603ordersbatchcreateWithBody Create a batch of orders
+// Postcrmobjects202603ordersbatchcreateWithBody Batch create orders
 //
 // Create a batch of orders in the system.
 //
@@ -14362,7 +14847,7 @@ func (c *Client) Postcrmobjects202603ordersbatchcreateWithBody(ctx context.Conte
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603ordersbatchcreate Create a batch of orders
+// Postcrmobjects202603ordersbatchcreate Batch create orders
 //
 // Create a batch of orders in the system.
 //
@@ -14381,7 +14866,7 @@ func (c *Client) Postcrmobjects202603ordersbatchcreate(ctx context.Context, body
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603ordersbatchreadWithBody Read a batch of orders by internal ID, or unique property values
+// Postcrmobjects202603ordersbatchreadWithBody Batch retrieve orders
 //
 // Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
 //
@@ -14400,7 +14885,7 @@ func (c *Client) Postcrmobjects202603ordersbatchreadWithBody(ctx context.Context
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603ordersbatchread Read a batch of orders by internal ID, or unique property values
+// Postcrmobjects202603ordersbatchread Batch retrieve orders
 //
 // Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
 //
@@ -14419,7 +14904,7 @@ func (c *Client) Postcrmobjects202603ordersbatchread(ctx context.Context, params
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603ordersbatchupdateWithBody Update a batch of orders by internal ID, or unique property values
+// Postcrmobjects202603ordersbatchupdateWithBody Batch update orders
 //
 // Update a batch of orders using their internal IDs or unique property values.
 //
@@ -14438,7 +14923,7 @@ func (c *Client) Postcrmobjects202603ordersbatchupdateWithBody(ctx context.Conte
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603ordersbatchupdate Update a batch of orders by internal ID, or unique property values
+// Postcrmobjects202603ordersbatchupdate Batch update orders
 //
 // Update a batch of orders using their internal IDs or unique property values.
 //
@@ -14457,7 +14942,7 @@ func (c *Client) Postcrmobjects202603ordersbatchupdate(ctx context.Context, body
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603ordersbatchupsertWithBody Create or update a batch of orders by unique property values
+// Postcrmobjects202603ordersbatchupsertWithBody Upsert orders
 //
 // Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
 //
@@ -14476,7 +14961,7 @@ func (c *Client) Postcrmobjects202603ordersbatchupsertWithBody(ctx context.Conte
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603ordersbatchupsert Create or update a batch of orders by unique property values
+// Postcrmobjects202603ordersbatchupsert Upsert orders
 //
 // Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
 //
@@ -14495,7 +14980,45 @@ func (c *Client) Postcrmobjects202603ordersbatchupsert(ctx context.Context, body
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603orderssearchWithBody Search for orders in the CRM using various filters and sorting options to retrieve specific order data.
+// Postcrmobjects202603ordersmergeWithBody Merge orders
+//
+// Merge two orders.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /crm/objects/2026-03/orders/merge (the `Postcrmobjects202603ordersmerge` operationId).
+func (c *Client) Postcrmobjects202603ordersmergeWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmobjects202603ordersmergeRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcrmobjects202603ordersmerge Merge orders
+//
+// Merge two orders.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /crm/objects/2026-03/orders/merge (the `Postcrmobjects202603ordersmerge` operationId).
+func (c *Client) Postcrmobjects202603ordersmerge(ctx context.Context, body Postcrmobjects202603ordersmergeJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmobjects202603ordersmergeRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcrmobjects202603orderssearchWithBody Search for orders
 //
 // Execute a search for orders using specified criteria and return matching results.
 //
@@ -14514,7 +15037,7 @@ func (c *Client) Postcrmobjects202603orderssearchWithBody(ctx context.Context, c
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603orderssearch Search for orders in the CRM using various filters and sorting options to retrieve specific order data.
+// Postcrmobjects202603orderssearch Search for orders
 //
 // Execute a search for orders using specified criteria and return matching results.
 //
@@ -14533,7 +15056,7 @@ func (c *Client) Postcrmobjects202603orderssearch(ctx context.Context, body Post
 	return c.Client.Do(req)
 }
 
-// Deletecrmobjects202603ordersOrderId Archive
+// Deletecrmobjects202603ordersOrderId Archive an order
 //
 // Move an Object identified by `{orderId}` to the recycling bin.
 //
@@ -14550,7 +15073,7 @@ func (c *Client) Deletecrmobjects202603ordersOrderId(ctx context.Context, orderI
 	return c.Client.Do(req)
 }
 
-// Getcrmobjects202603ordersOrderId Read
+// Getcrmobjects202603ordersOrderId Retrieve an order
 //
 // Read an Object identified by `{orderId}`. `{orderId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param.
 //
@@ -14567,7 +15090,7 @@ func (c *Client) Getcrmobjects202603ordersOrderId(ctx context.Context, orderId s
 	return c.Client.Do(req)
 }
 
-// Patchcrmobjects202603ordersOrderIdWithBody Update
+// Patchcrmobjects202603ordersOrderIdWithBody Update an order
 //
 // Perform a partial update of an Object identified by `{orderId}`or optionally a unique property value as specified by the `idProperty` query param. `{orderId}` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
 //
@@ -14586,7 +15109,7 @@ func (c *Client) Patchcrmobjects202603ordersOrderIdWithBody(ctx context.Context,
 	return c.Client.Do(req)
 }
 
-// Patchcrmobjects202603ordersOrderId Update
+// Patchcrmobjects202603ordersOrderId Update an order
 //
 // Perform a partial update of an Object identified by `{orderId}`or optionally a unique property value as specified by the `idProperty` query param. `{orderId}` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
 //
@@ -14808,7 +15331,7 @@ func (c *Client) Getcrmobjects202603partnerClientsPartnerClientIdassociationsToO
 	return c.Client.Do(req)
 }
 
-// Getcrmobjects202603partnerServices List
+// Getcrmobjects202603partnerServices Retrieve partner services
 //
 // Read a page of partner services. Control what is returned via the `properties` query param.
 //
@@ -14825,7 +15348,7 @@ func (c *Client) Getcrmobjects202603partnerServices(ctx context.Context, params 
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603partnerServicesbatchreadWithBody Read a batch of partner services by internal ID, or unique property values
+// Postcrmobjects202603partnerServicesbatchreadWithBody Batch retrieve partner services
 //
 // Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
 //
@@ -14844,7 +15367,7 @@ func (c *Client) Postcrmobjects202603partnerServicesbatchreadWithBody(ctx contex
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603partnerServicesbatchread Read a batch of partner services by internal ID, or unique property values
+// Postcrmobjects202603partnerServicesbatchread Batch retrieve partner services
 //
 // Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
 //
@@ -14863,7 +15386,7 @@ func (c *Client) Postcrmobjects202603partnerServicesbatchread(ctx context.Contex
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603partnerServicesbatchupdateWithBody Update a batch of partner services by internal ID, or unique property values
+// Postcrmobjects202603partnerServicesbatchupdateWithBody Batch update partner services
 //
 // Update multiple partner services using their internal IDs or unique property values. This operation allows for batch processing of updates, ensuring efficient synchronization of service data between HubSpot and other systems.
 //
@@ -14882,7 +15405,7 @@ func (c *Client) Postcrmobjects202603partnerServicesbatchupdateWithBody(ctx cont
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603partnerServicesbatchupdate Update a batch of partner services by internal ID, or unique property values
+// Postcrmobjects202603partnerServicesbatchupdate Batch update partner services
 //
 // Update multiple partner services using their internal IDs or unique property values. This operation allows for batch processing of updates, ensuring efficient synchronization of service data between HubSpot and other systems.
 //
@@ -14901,7 +15424,7 @@ func (c *Client) Postcrmobjects202603partnerServicesbatchupdate(ctx context.Cont
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603partnerServicessearchWithBody Search for partner services using specified criteria.
+// Postcrmobjects202603partnerServicessearchWithBody Search for partner services
 //
 // Execute a search query to find partner services based on defined filters, properties, and sorting options. This endpoint allows you to retrieve a collection of partner services that match the specified search criteria.
 //
@@ -14920,7 +15443,7 @@ func (c *Client) Postcrmobjects202603partnerServicessearchWithBody(ctx context.C
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603partnerServicessearch Search for partner services using specified criteria.
+// Postcrmobjects202603partnerServicessearch Search for partner services
 //
 // Execute a search query to find partner services based on defined filters, properties, and sorting options. This endpoint allows you to retrieve a collection of partner services that match the specified search criteria.
 //
@@ -14939,7 +15462,7 @@ func (c *Client) Postcrmobjects202603partnerServicessearch(ctx context.Context, 
 	return c.Client.Do(req)
 }
 
-// Getcrmobjects202603partnerServicesPartnerServiceId Read
+// Getcrmobjects202603partnerServicesPartnerServiceId Retrieve a partner service
 //
 // Read an Object identified by `{partnerServiceId}`. `{partnerServiceId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param.
 //
@@ -14956,7 +15479,7 @@ func (c *Client) Getcrmobjects202603partnerServicesPartnerServiceId(ctx context.
 	return c.Client.Do(req)
 }
 
-// Patchcrmobjects202603partnerServicesPartnerServiceIdWithBody Update
+// Patchcrmobjects202603partnerServicesPartnerServiceIdWithBody Update a partner service
 //
 // Perform a partial update of an Object identified by `{partnerServiceId}`or optionally a unique property value as specified by the `idProperty` query param. `{partnerServiceId}` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
 //
@@ -14975,7 +15498,7 @@ func (c *Client) Patchcrmobjects202603partnerServicesPartnerServiceIdWithBody(ct
 	return c.Client.Do(req)
 }
 
-// Patchcrmobjects202603partnerServicesPartnerServiceId Update
+// Patchcrmobjects202603partnerServicesPartnerServiceId Update a partner service
 //
 // Perform a partial update of an Object identified by `{partnerServiceId}`or optionally a unique property value as specified by the `idProperty` query param. `{partnerServiceId}` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
 //
@@ -14984,23 +15507,6 @@ func (c *Client) Patchcrmobjects202603partnerServicesPartnerServiceIdWithBody(ct
 // Corresponds with PATCH /crm/objects/2026-03/partner_services/{partnerServiceId} (the `Patchcrmobjects202603partnerServicesPartnerServiceId` operationId).
 func (c *Client) Patchcrmobjects202603partnerServicesPartnerServiceId(ctx context.Context, partnerServiceId string, params *Patchcrmobjects202603partnerServicesPartnerServiceIdParams, body Patchcrmobjects202603partnerServicesPartnerServiceIdJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPatchcrmobjects202603partnerServicesPartnerServiceIdRequest(c.Server, partnerServiceId, params, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Getcrmobjects202603partnerServicesPartnerServiceIdassociationsToObjectType List associations of a partner service by type
-//
-// Retrieve a list of associations for a specific partner service, filtered by the type of associated object.
-//
-// Corresponds with GET /crm/objects/2026-03/partner_services/{partnerServiceId}/associations/{toObjectType} (the `Getcrmobjects202603partnerServicesPartnerServiceIdassociationsToObjectType` operationId).
-func (c *Client) Getcrmobjects202603partnerServicesPartnerServiceIdassociationsToObjectType(ctx context.Context, partnerServiceId string, toObjectType string, params *Getcrmobjects202603partnerServicesPartnerServiceIdassociationsToObjectTypeParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewGetcrmobjects202603partnerServicesPartnerServiceIdassociationsToObjectTypeRequest(c.Server, partnerServiceId, toObjectType, params)
 	if err != nil {
 		return nil, err
 	}
@@ -16429,6 +16935,44 @@ func (c *Client) Patchcrmobjects202603quotesQuoteIdUpdateWithBody(ctx context.Co
 // Corresponds with PATCH /crm/objects/2026-03/quotes/{quoteId} (the `Patchcrmobjects202603quotesQuoteIdUpdate` operationId).
 func (c *Client) Patchcrmobjects202603quotesQuoteIdUpdate(ctx context.Context, quoteId string, params *Patchcrmobjects202603quotesQuoteIdUpdateParams, body Patchcrmobjects202603quotesQuoteIdUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPatchcrmobjects202603quotesQuoteIdUpdateRequest(c.Server, quoteId, params, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcrmobjects202603servicesmergeWithBody Merge services
+//
+// Merge two services.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /crm/objects/2026-03/services/merge (the `Postcrmobjects202603servicesmerge` operationId).
+func (c *Client) Postcrmobjects202603servicesmergeWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmobjects202603servicesmergeRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcrmobjects202603servicesmerge Merge services
+//
+// Merge two services.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /crm/objects/2026-03/services/merge (the `Postcrmobjects202603servicesmerge` operationId).
+func (c *Client) Postcrmobjects202603servicesmerge(ctx context.Context, body Postcrmobjects202603servicesmergeJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmobjects202603servicesmergeRequest(c.Server, body)
 	if err != nil {
 		return nil, err
 	}
@@ -18252,13 +18796,9 @@ func (c *Client) Patchcrmobjects202603usersUserId(ctx context.Context, userId st
 	return c.Client.Do(req)
 }
 
-// Putcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdcrmobjects202509FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectId Associate records (default)
-//
-// Create the default (most generic) association type between two object types.
-//
-// Corresponds with PUT /crm/objects/2026-03/{fromObjectType}/{fromObjectId}/associations/default/{toObjectType}/{toObjectId} (the `Putcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdcrmobjects202509FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectId` operationId).
-func (c *Client) Putcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdcrmobjects202509FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectId(ctx context.Context, fromObjectType string, fromObjectId string, toObjectType string, toObjectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPutcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdcrmobjects202509FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdRequest(c.Server, fromObjectType, fromObjectId, toObjectType, toObjectId)
+// Putcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectId performs a PUT /crm/objects/2026-03/{fromObjectType}/{fromObjectId}/associations/default/{toObjectType}/{toObjectId} (the `Putcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectId` operationId) request.
+func (c *Client) Putcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectId(ctx context.Context, fromObjectType string, fromObjectId string, toObjectType string, toObjectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPutcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdRequest(c.Server, fromObjectType, fromObjectId, toObjectType, toObjectId)
 	if err != nil {
 		return nil, err
 	}
@@ -18269,13 +18809,13 @@ func (c *Client) Putcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaul
 	return c.Client.Do(req)
 }
 
-// Getcrmobjects202603ObjectTypecrmobjects202509ObjectType List
+// Getcrmobjects202603ObjectType List
 //
 // Read a page of objects. Control what is returned via the `properties` query param.
 //
-// Corresponds with GET /crm/objects/2026-03/{objectType} (the `Getcrmobjects202603ObjectTypecrmobjects202509ObjectType` operationId).
-func (c *Client) Getcrmobjects202603ObjectTypecrmobjects202509ObjectType(ctx context.Context, objectType string, params *Getcrmobjects202603ObjectTypecrmobjects202509ObjectTypeParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewGetcrmobjects202603ObjectTypecrmobjects202509ObjectTypeRequest(c.Server, objectType, params)
+// Corresponds with GET /crm/objects/2026-03/{objectType} (the `Getcrmobjects202603ObjectType` operationId).
+func (c *Client) Getcrmobjects202603ObjectType(ctx context.Context, objectType string, params *Getcrmobjects202603ObjectTypeParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetcrmobjects202603ObjectTypeRequest(c.Server, objectType, params)
 	if err != nil {
 		return nil, err
 	}
@@ -18286,15 +18826,15 @@ func (c *Client) Getcrmobjects202603ObjectTypecrmobjects202509ObjectType(ctx con
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603ObjectTypecrmobjects202509ObjectTypeWithBody Create
+// Postcrmobjects202603ObjectTypeWithBody Create
 //
 // Create a CRM object with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard objects is provided.
 //
 // Takes any type of body and a specified content type.
 //
-// Corresponds with POST /crm/objects/2026-03/{objectType} (the `Postcrmobjects202603ObjectTypecrmobjects202509ObjectType` operationId).
-func (c *Client) Postcrmobjects202603ObjectTypecrmobjects202509ObjectTypeWithBody(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmobjects202603ObjectTypecrmobjects202509ObjectTypeRequestWithBody(c.Server, objectType, contentType, body)
+// Corresponds with POST /crm/objects/2026-03/{objectType} (the `Postcrmobjects202603ObjectType` operationId).
+func (c *Client) Postcrmobjects202603ObjectTypeWithBody(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmobjects202603ObjectTypeRequestWithBody(c.Server, objectType, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -18305,15 +18845,15 @@ func (c *Client) Postcrmobjects202603ObjectTypecrmobjects202509ObjectTypeWithBod
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603ObjectTypecrmobjects202509ObjectType Create
+// Postcrmobjects202603ObjectType Create
 //
 // Create a CRM object with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard objects is provided.
 //
 // Takes a body of the `application/json` content type.
 //
-// Corresponds with POST /crm/objects/2026-03/{objectType} (the `Postcrmobjects202603ObjectTypecrmobjects202509ObjectType` operationId).
-func (c *Client) Postcrmobjects202603ObjectTypecrmobjects202509ObjectType(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypecrmobjects202509ObjectTypeJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmobjects202603ObjectTypecrmobjects202509ObjectTypeRequest(c.Server, objectType, body)
+// Corresponds with POST /crm/objects/2026-03/{objectType} (the `Postcrmobjects202603ObjectType` operationId).
+func (c *Client) Postcrmobjects202603ObjectType(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypeJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmobjects202603ObjectTypeRequest(c.Server, objectType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -18324,13 +18864,13 @@ func (c *Client) Postcrmobjects202603ObjectTypecrmobjects202509ObjectType(ctx co
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603ObjectTypebatcharchivecrmobjects202509ObjectTypebatcharchiveWithBody Archive a batch of objects by ID
+// Postcrmobjects202603ObjectTypebatcharchiveWithBody Archive a batch of objects by ID
 //
 // Takes any type of body and a specified content type.
 //
-// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/archive (the `Postcrmobjects202603ObjectTypebatcharchivecrmobjects202509ObjectTypebatcharchive` operationId).
-func (c *Client) Postcrmobjects202603ObjectTypebatcharchivecrmobjects202509ObjectTypebatcharchiveWithBody(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmobjects202603ObjectTypebatcharchivecrmobjects202509ObjectTypebatcharchiveRequestWithBody(c.Server, objectType, contentType, body)
+// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/archive (the `Postcrmobjects202603ObjectTypebatcharchive` operationId).
+func (c *Client) Postcrmobjects202603ObjectTypebatcharchiveWithBody(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmobjects202603ObjectTypebatcharchiveRequestWithBody(c.Server, objectType, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -18341,13 +18881,13 @@ func (c *Client) Postcrmobjects202603ObjectTypebatcharchivecrmobjects202509Objec
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603ObjectTypebatcharchivecrmobjects202509ObjectTypebatcharchive Archive a batch of objects by ID
+// Postcrmobjects202603ObjectTypebatcharchive Archive a batch of objects by ID
 //
 // Takes a body of the `application/json` content type.
 //
-// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/archive (the `Postcrmobjects202603ObjectTypebatcharchivecrmobjects202509ObjectTypebatcharchive` operationId).
-func (c *Client) Postcrmobjects202603ObjectTypebatcharchivecrmobjects202509ObjectTypebatcharchive(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypebatcharchivecrmobjects202509ObjectTypebatcharchiveJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmobjects202603ObjectTypebatcharchivecrmobjects202509ObjectTypebatcharchiveRequest(c.Server, objectType, body)
+// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/archive (the `Postcrmobjects202603ObjectTypebatcharchive` operationId).
+func (c *Client) Postcrmobjects202603ObjectTypebatcharchive(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypebatcharchiveJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmobjects202603ObjectTypebatcharchiveRequest(c.Server, objectType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -18358,13 +18898,13 @@ func (c *Client) Postcrmobjects202603ObjectTypebatcharchivecrmobjects202509Objec
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603ObjectTypebatchcreatecrmobjects202509ObjectTypebatchcreateWithBody Create a batch of objects
+// Postcrmobjects202603ObjectTypebatchcreateWithBody Create a batch of objects
 //
 // Takes any type of body and a specified content type.
 //
-// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/create (the `Postcrmobjects202603ObjectTypebatchcreatecrmobjects202509ObjectTypebatchcreate` operationId).
-func (c *Client) Postcrmobjects202603ObjectTypebatchcreatecrmobjects202509ObjectTypebatchcreateWithBody(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmobjects202603ObjectTypebatchcreatecrmobjects202509ObjectTypebatchcreateRequestWithBody(c.Server, objectType, contentType, body)
+// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/create (the `Postcrmobjects202603ObjectTypebatchcreate` operationId).
+func (c *Client) Postcrmobjects202603ObjectTypebatchcreateWithBody(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmobjects202603ObjectTypebatchcreateRequestWithBody(c.Server, objectType, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -18375,13 +18915,13 @@ func (c *Client) Postcrmobjects202603ObjectTypebatchcreatecrmobjects202509Object
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603ObjectTypebatchcreatecrmobjects202509ObjectTypebatchcreate Create a batch of objects
+// Postcrmobjects202603ObjectTypebatchcreate Create a batch of objects
 //
 // Takes a body of the `application/json` content type.
 //
-// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/create (the `Postcrmobjects202603ObjectTypebatchcreatecrmobjects202509ObjectTypebatchcreate` operationId).
-func (c *Client) Postcrmobjects202603ObjectTypebatchcreatecrmobjects202509ObjectTypebatchcreate(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypebatchcreatecrmobjects202509ObjectTypebatchcreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmobjects202603ObjectTypebatchcreatecrmobjects202509ObjectTypebatchcreateRequest(c.Server, objectType, body)
+// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/create (the `Postcrmobjects202603ObjectTypebatchcreate` operationId).
+func (c *Client) Postcrmobjects202603ObjectTypebatchcreate(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypebatchcreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmobjects202603ObjectTypebatchcreateRequest(c.Server, objectType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -18392,15 +18932,13 @@ func (c *Client) Postcrmobjects202603ObjectTypebatchcreatecrmobjects202509Object
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603ObjectTypebatchreadcrmobjects202509ObjectTypebatchreadWithBody Read a batch of objects by internal ID, or unique property values
-//
-// Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
+// Postcrmobjects202603ObjectTypebatchreadWithBody Read a batch of objects by internal ID, or unique property values
 //
 // Takes any type of body and a specified content type.
 //
-// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/read (the `Postcrmobjects202603ObjectTypebatchreadcrmobjects202509ObjectTypebatchread` operationId).
-func (c *Client) Postcrmobjects202603ObjectTypebatchreadcrmobjects202509ObjectTypebatchreadWithBody(ctx context.Context, objectType string, params *Postcrmobjects202603ObjectTypebatchreadcrmobjects202509ObjectTypebatchreadParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmobjects202603ObjectTypebatchreadcrmobjects202509ObjectTypebatchreadRequestWithBody(c.Server, objectType, params, contentType, body)
+// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/read (the `Postcrmobjects202603ObjectTypebatchread` operationId).
+func (c *Client) Postcrmobjects202603ObjectTypebatchreadWithBody(ctx context.Context, objectType string, params *Postcrmobjects202603ObjectTypebatchreadParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmobjects202603ObjectTypebatchreadRequestWithBody(c.Server, objectType, params, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -18411,15 +18949,13 @@ func (c *Client) Postcrmobjects202603ObjectTypebatchreadcrmobjects202509ObjectTy
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603ObjectTypebatchreadcrmobjects202509ObjectTypebatchread Read a batch of objects by internal ID, or unique property values
-//
-// Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
+// Postcrmobjects202603ObjectTypebatchread Read a batch of objects by internal ID, or unique property values
 //
 // Takes a body of the `application/json` content type.
 //
-// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/read (the `Postcrmobjects202603ObjectTypebatchreadcrmobjects202509ObjectTypebatchread` operationId).
-func (c *Client) Postcrmobjects202603ObjectTypebatchreadcrmobjects202509ObjectTypebatchread(ctx context.Context, objectType string, params *Postcrmobjects202603ObjectTypebatchreadcrmobjects202509ObjectTypebatchreadParams, body Postcrmobjects202603ObjectTypebatchreadcrmobjects202509ObjectTypebatchreadJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmobjects202603ObjectTypebatchreadcrmobjects202509ObjectTypebatchreadRequest(c.Server, objectType, params, body)
+// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/read (the `Postcrmobjects202603ObjectTypebatchread` operationId).
+func (c *Client) Postcrmobjects202603ObjectTypebatchread(ctx context.Context, objectType string, params *Postcrmobjects202603ObjectTypebatchreadParams, body Postcrmobjects202603ObjectTypebatchreadJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmobjects202603ObjectTypebatchreadRequest(c.Server, objectType, params, body)
 	if err != nil {
 		return nil, err
 	}
@@ -18430,13 +18966,13 @@ func (c *Client) Postcrmobjects202603ObjectTypebatchreadcrmobjects202509ObjectTy
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603ObjectTypebatchupdatecrmobjects202509ObjectTypebatchupdateWithBody Update a batch of objects by internal ID, or unique property values
+// Postcrmobjects202603ObjectTypebatchupdateWithBody Update a batch of objects
 //
 // Takes any type of body and a specified content type.
 //
-// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/update (the `Postcrmobjects202603ObjectTypebatchupdatecrmobjects202509ObjectTypebatchupdate` operationId).
-func (c *Client) Postcrmobjects202603ObjectTypebatchupdatecrmobjects202509ObjectTypebatchupdateWithBody(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmobjects202603ObjectTypebatchupdatecrmobjects202509ObjectTypebatchupdateRequestWithBody(c.Server, objectType, contentType, body)
+// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/update (the `Postcrmobjects202603ObjectTypebatchupdate` operationId).
+func (c *Client) Postcrmobjects202603ObjectTypebatchupdateWithBody(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmobjects202603ObjectTypebatchupdateRequestWithBody(c.Server, objectType, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -18447,13 +18983,13 @@ func (c *Client) Postcrmobjects202603ObjectTypebatchupdatecrmobjects202509Object
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603ObjectTypebatchupdatecrmobjects202509ObjectTypebatchupdate Update a batch of objects by internal ID, or unique property values
+// Postcrmobjects202603ObjectTypebatchupdate Update a batch of objects
 //
 // Takes a body of the `application/json` content type.
 //
-// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/update (the `Postcrmobjects202603ObjectTypebatchupdatecrmobjects202509ObjectTypebatchupdate` operationId).
-func (c *Client) Postcrmobjects202603ObjectTypebatchupdatecrmobjects202509ObjectTypebatchupdate(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypebatchupdatecrmobjects202509ObjectTypebatchupdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmobjects202603ObjectTypebatchupdatecrmobjects202509ObjectTypebatchupdateRequest(c.Server, objectType, body)
+// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/update (the `Postcrmobjects202603ObjectTypebatchupdate` operationId).
+func (c *Client) Postcrmobjects202603ObjectTypebatchupdate(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypebatchupdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmobjects202603ObjectTypebatchupdateRequest(c.Server, objectType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -18464,15 +19000,13 @@ func (c *Client) Postcrmobjects202603ObjectTypebatchupdatecrmobjects202509Object
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603ObjectTypebatchupsertcrmobjects202509ObjectTypebatchupsertWithBody Create or update a batch of objects by unique property values
-//
-// Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
+// Postcrmobjects202603ObjectTypebatchupsertWithBody Create or update a batch of objects by unique property values
 //
 // Takes any type of body and a specified content type.
 //
-// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/upsert (the `Postcrmobjects202603ObjectTypebatchupsertcrmobjects202509ObjectTypebatchupsert` operationId).
-func (c *Client) Postcrmobjects202603ObjectTypebatchupsertcrmobjects202509ObjectTypebatchupsertWithBody(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmobjects202603ObjectTypebatchupsertcrmobjects202509ObjectTypebatchupsertRequestWithBody(c.Server, objectType, contentType, body)
+// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/upsert (the `Postcrmobjects202603ObjectTypebatchupsert` operationId).
+func (c *Client) Postcrmobjects202603ObjectTypebatchupsertWithBody(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmobjects202603ObjectTypebatchupsertRequestWithBody(c.Server, objectType, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -18483,15 +19017,13 @@ func (c *Client) Postcrmobjects202603ObjectTypebatchupsertcrmobjects202509Object
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603ObjectTypebatchupsertcrmobjects202509ObjectTypebatchupsert Create or update a batch of objects by unique property values
-//
-// Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
+// Postcrmobjects202603ObjectTypebatchupsert Create or update a batch of objects by unique property values
 //
 // Takes a body of the `application/json` content type.
 //
-// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/upsert (the `Postcrmobjects202603ObjectTypebatchupsertcrmobjects202509ObjectTypebatchupsert` operationId).
-func (c *Client) Postcrmobjects202603ObjectTypebatchupsertcrmobjects202509ObjectTypebatchupsert(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypebatchupsertcrmobjects202509ObjectTypebatchupsertJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmobjects202603ObjectTypebatchupsertcrmobjects202509ObjectTypebatchupsertRequest(c.Server, objectType, body)
+// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/upsert (the `Postcrmobjects202603ObjectTypebatchupsert` operationId).
+func (c *Client) Postcrmobjects202603ObjectTypebatchupsert(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypebatchupsertJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmobjects202603ObjectTypebatchupsertRequest(c.Server, objectType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -18502,15 +19034,15 @@ func (c *Client) Postcrmobjects202603ObjectTypebatchupsertcrmobjects202509Object
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603ObjectTypemergeMergeWithBody Merge two objects with same type
+// Postcrmobjects202603ObjectTypegdprDeleteWithBody GDPR DELETE
 //
-// Merge two CRM objects of the same type by specifying one as the primary object and the other as the object to be merged into it.
+// Permanently delete a contact and all associated content to follow GDPR. Use optional property 'idProperty' set to 'email' to identify contact by email address. If email address is not found, the email address will be added to a blocklist and prevent it from being used in the future.
 //
 // Takes any type of body and a specified content type.
 //
-// Corresponds with POST /crm/objects/2026-03/{objectType}/merge (the `Postcrmobjects202603ObjectTypemergeMerge` operationId).
-func (c *Client) Postcrmobjects202603ObjectTypemergeMergeWithBody(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmobjects202603ObjectTypemergeMergeRequestWithBody(c.Server, objectType, contentType, body)
+// Corresponds with POST /crm/objects/2026-03/{objectType}/gdpr-delete (the `Postcrmobjects202603ObjectTypegdprDelete` operationId).
+func (c *Client) Postcrmobjects202603ObjectTypegdprDeleteWithBody(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmobjects202603ObjectTypegdprDeleteRequestWithBody(c.Server, objectType, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -18521,15 +19053,15 @@ func (c *Client) Postcrmobjects202603ObjectTypemergeMergeWithBody(ctx context.Co
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603ObjectTypemergeMerge Merge two objects with same type
+// Postcrmobjects202603ObjectTypegdprDelete GDPR DELETE
 //
-// Merge two CRM objects of the same type by specifying one as the primary object and the other as the object to be merged into it.
+// Permanently delete a contact and all associated content to follow GDPR. Use optional property 'idProperty' set to 'email' to identify contact by email address. If email address is not found, the email address will be added to a blocklist and prevent it from being used in the future.
 //
 // Takes a body of the `application/json` content type.
 //
-// Corresponds with POST /crm/objects/2026-03/{objectType}/merge (the `Postcrmobjects202603ObjectTypemergeMerge` operationId).
-func (c *Client) Postcrmobjects202603ObjectTypemergeMerge(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypemergeMergeJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmobjects202603ObjectTypemergeMergeRequest(c.Server, objectType, body)
+// Corresponds with POST /crm/objects/2026-03/{objectType}/gdpr-delete (the `Postcrmobjects202603ObjectTypegdprDelete` operationId).
+func (c *Client) Postcrmobjects202603ObjectTypegdprDelete(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypegdprDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmobjects202603ObjectTypegdprDeleteRequest(c.Server, objectType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -18540,10 +19072,44 @@ func (c *Client) Postcrmobjects202603ObjectTypemergeMerge(ctx context.Context, o
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603ObjectTypesearchcrmobjects202509ObjectTypesearchWithBody performs a POST /crm/objects/2026-03/{objectType}/search (the `Postcrmobjects202603ObjectTypesearchcrmobjects202509ObjectTypesearch` operationId) request,
+// Postcrmobjects202603ObjectTypemergeWithBody Merge two objects with same type
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /crm/objects/2026-03/{objectType}/merge (the `Postcrmobjects202603ObjectTypemerge` operationId).
+func (c *Client) Postcrmobjects202603ObjectTypemergeWithBody(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmobjects202603ObjectTypemergeRequestWithBody(c.Server, objectType, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcrmobjects202603ObjectTypemerge Merge two objects with same type
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /crm/objects/2026-03/{objectType}/merge (the `Postcrmobjects202603ObjectTypemerge` operationId).
+func (c *Client) Postcrmobjects202603ObjectTypemerge(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypemergeJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmobjects202603ObjectTypemergeRequest(c.Server, objectType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcrmobjects202603ObjectTypesearchWithBody performs a POST /crm/objects/2026-03/{objectType}/search (the `Postcrmobjects202603ObjectTypesearch` operationId) request,
 // with any type of body and a specified content type.
-func (c *Client) Postcrmobjects202603ObjectTypesearchcrmobjects202509ObjectTypesearchWithBody(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmobjects202603ObjectTypesearchcrmobjects202509ObjectTypesearchRequestWithBody(c.Server, objectType, contentType, body)
+func (c *Client) Postcrmobjects202603ObjectTypesearchWithBody(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmobjects202603ObjectTypesearchRequestWithBody(c.Server, objectType, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -18554,10 +19120,10 @@ func (c *Client) Postcrmobjects202603ObjectTypesearchcrmobjects202509ObjectTypes
 	return c.Client.Do(req)
 }
 
-// Postcrmobjects202603ObjectTypesearchcrmobjects202509ObjectTypesearch performs a POST /crm/objects/2026-03/{objectType}/search (the `Postcrmobjects202603ObjectTypesearchcrmobjects202509ObjectTypesearch` operationId) request.
+// Postcrmobjects202603ObjectTypesearch performs a POST /crm/objects/2026-03/{objectType}/search (the `Postcrmobjects202603ObjectTypesearch` operationId) request.
 // Takes a body of the `application/json` content type.
-func (c *Client) Postcrmobjects202603ObjectTypesearchcrmobjects202509ObjectTypesearch(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypesearchcrmobjects202509ObjectTypesearchJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmobjects202603ObjectTypesearchcrmobjects202509ObjectTypesearchRequest(c.Server, objectType, body)
+func (c *Client) Postcrmobjects202603ObjectTypesearch(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypesearchJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmobjects202603ObjectTypesearchRequest(c.Server, objectType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -18568,13 +19134,13 @@ func (c *Client) Postcrmobjects202603ObjectTypesearchcrmobjects202509ObjectTypes
 	return c.Client.Do(req)
 }
 
-// Deletecrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectId Archive
+// Deletecrmobjects202603ObjectTypeObjectId Archive
 //
 // Move an Object identified by `{objectId}` to the recycling bin.
 //
-// Corresponds with DELETE /crm/objects/2026-03/{objectType}/{objectId} (the `Deletecrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectId` operationId).
-func (c *Client) Deletecrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectId(ctx context.Context, objectType string, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDeletecrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdRequest(c.Server, objectType, objectId)
+// Corresponds with DELETE /crm/objects/2026-03/{objectType}/{objectId} (the `Deletecrmobjects202603ObjectTypeObjectId` operationId).
+func (c *Client) Deletecrmobjects202603ObjectTypeObjectId(ctx context.Context, objectType string, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDeletecrmobjects202603ObjectTypeObjectIdRequest(c.Server, objectType, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -18585,13 +19151,13 @@ func (c *Client) Deletecrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectT
 	return c.Client.Do(req)
 }
 
-// Getcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectId Read
+// Getcrmobjects202603ObjectTypeObjectId Read
 //
 // Read an Object identified by `{objectId}`. `{objectId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param.
 //
-// Corresponds with GET /crm/objects/2026-03/{objectType}/{objectId} (the `Getcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectId` operationId).
-func (c *Client) Getcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectId(ctx context.Context, objectType string, objectId string, params *Getcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewGetcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdRequest(c.Server, objectType, objectId, params)
+// Corresponds with GET /crm/objects/2026-03/{objectType}/{objectId} (the `Getcrmobjects202603ObjectTypeObjectId` operationId).
+func (c *Client) Getcrmobjects202603ObjectTypeObjectId(ctx context.Context, objectType string, objectId string, params *Getcrmobjects202603ObjectTypeObjectIdParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetcrmobjects202603ObjectTypeObjectIdRequest(c.Server, objectType, objectId, params)
 	if err != nil {
 		return nil, err
 	}
@@ -18602,15 +19168,15 @@ func (c *Client) Getcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectType
 	return c.Client.Do(req)
 }
 
-// Patchcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdWithBody Update
+// Patchcrmobjects202603ObjectTypeObjectIdWithBody Update
 //
-// Perform a partial update of an Object identified by `{objectId}`or optionally a unique property value as specified by the `idProperty` query param. `{objectId}` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
+// Perform a partial update of an Object identified by `{objectId}`. `{objectId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param. Provided property values will be overwritten. Read-only and non-existent properties will be ignored. Properties values can be cleared by passing an empty string.
 //
 // Takes any type of body and a specified content type.
 //
-// Corresponds with PATCH /crm/objects/2026-03/{objectType}/{objectId} (the `Patchcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectId` operationId).
-func (c *Client) Patchcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdWithBody(ctx context.Context, objectType string, objectId string, params *Patchcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPatchcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdRequestWithBody(c.Server, objectType, objectId, params, contentType, body)
+// Corresponds with PATCH /crm/objects/2026-03/{objectType}/{objectId} (the `Patchcrmobjects202603ObjectTypeObjectId` operationId).
+func (c *Client) Patchcrmobjects202603ObjectTypeObjectIdWithBody(ctx context.Context, objectType string, objectId string, params *Patchcrmobjects202603ObjectTypeObjectIdParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPatchcrmobjects202603ObjectTypeObjectIdRequestWithBody(c.Server, objectType, objectId, params, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -18621,15 +19187,15 @@ func (c *Client) Patchcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTy
 	return c.Client.Do(req)
 }
 
-// Patchcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectId Update
+// Patchcrmobjects202603ObjectTypeObjectId Update
 //
-// Perform a partial update of an Object identified by `{objectId}`or optionally a unique property value as specified by the `idProperty` query param. `{objectId}` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
+// Perform a partial update of an Object identified by `{objectId}`. `{objectId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param. Provided property values will be overwritten. Read-only and non-existent properties will be ignored. Properties values can be cleared by passing an empty string.
 //
 // Takes a body of the `application/json` content type.
 //
-// Corresponds with PATCH /crm/objects/2026-03/{objectType}/{objectId} (the `Patchcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectId` operationId).
-func (c *Client) Patchcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectId(ctx context.Context, objectType string, objectId string, params *Patchcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdParams, body Patchcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPatchcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTypeObjectIdRequest(c.Server, objectType, objectId, params, body)
+// Corresponds with PATCH /crm/objects/2026-03/{objectType}/{objectId} (the `Patchcrmobjects202603ObjectTypeObjectId` operationId).
+func (c *Client) Patchcrmobjects202603ObjectTypeObjectId(ctx context.Context, objectType string, objectId string, params *Patchcrmobjects202603ObjectTypeObjectIdParams, body Patchcrmobjects202603ObjectTypeObjectIdJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPatchcrmobjects202603ObjectTypeObjectIdRequest(c.Server, objectType, objectId, params, body)
 	if err != nil {
 		return nil, err
 	}
@@ -18640,13 +19206,11 @@ func (c *Client) Patchcrmobjects202603ObjectTypeObjectIdcrmobjects202509ObjectTy
 	return c.Client.Do(req)
 }
 
-// Getcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypecrmobjects202509ObjectTypeObjectIdassociationsToObjectType Retrieve all associations by object type
+// Getcrmobjects202603ObjectTypeObjectIdassociationsToObjectType List associations of an object by type
 //
-// Retrieve all associations between a specific record and an object type. Limit 500 per call.
-//
-// Corresponds with GET /crm/objects/2026-03/{objectType}/{objectId}/associations/{toObjectType} (the `Getcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypecrmobjects202509ObjectTypeObjectIdassociationsToObjectType` operationId).
-func (c *Client) Getcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypecrmobjects202509ObjectTypeObjectIdassociationsToObjectType(ctx context.Context, objectType string, objectId string, toObjectType string, params *Getcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypecrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewGetcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypecrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeRequest(c.Server, objectType, objectId, toObjectType, params)
+// Corresponds with GET /crm/objects/2026-03/{objectType}/{objectId}/associations/{toObjectType} (the `Getcrmobjects202603ObjectTypeObjectIdassociationsToObjectType` operationId).
+func (c *Client) Getcrmobjects202603ObjectTypeObjectIdassociationsToObjectType(ctx context.Context, objectType string, objectId string, toObjectType string, params *Getcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeRequest(c.Server, objectType, objectId, toObjectType, params)
 	if err != nil {
 		return nil, err
 	}
@@ -18657,13 +19221,9 @@ func (c *Client) Getcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypecr
 	return c.Client.Do(req)
 }
 
-// Deletecrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectId Delete associations between two records
-//
-// deletes all associations between two records.
-//
-// Corresponds with DELETE /crm/objects/2026-03/{objectType}/{objectId}/associations/{toObjectType}/{toObjectId} (the `Deletecrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectId` operationId).
-func (c *Client) Deletecrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectId(ctx context.Context, objectType string, objectId string, toObjectType string, toObjectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDeletecrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectIdRequest(c.Server, objectType, objectId, toObjectType, toObjectId)
+// Deletecrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectId performs a DELETE /crm/objects/2026-03/{objectType}/{objectId}/associations/{toObjectType}/{toObjectId} (the `Deletecrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectId` operationId) request.
+func (c *Client) Deletecrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectId(ctx context.Context, objectType string, objectId string, toObjectType string, toObjectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDeletecrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdRequest(c.Server, objectType, objectId, toObjectType, toObjectId)
 	if err != nil {
 		return nil, err
 	}
@@ -18674,15 +19234,10 @@ func (c *Client) Deletecrmobjects202603ObjectTypeObjectIdassociationsToObjectTyp
 	return c.Client.Do(req)
 }
 
-// Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectIdWithBody Associate records (labelled)
-//
-// Set association labels between two records.
-//
-// Takes any type of body and a specified content type.
-//
-// Corresponds with PUT /crm/objects/2026-03/{objectType}/{objectId}/associations/{toObjectType}/{toObjectId} (the `Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectId` operationId).
-func (c *Client) Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectIdWithBody(ctx context.Context, objectType string, objectId string, toObjectType string, toObjectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPutcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectIdRequestWithBody(c.Server, objectType, objectId, toObjectType, toObjectId, contentType, body)
+// Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdWithBody performs a PUT /crm/objects/2026-03/{objectType}/{objectId}/associations/{toObjectType}/{toObjectId} (the `Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectId` operationId) request,
+// with any type of body and a specified content type.
+func (c *Client) Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdWithBody(ctx context.Context, objectType string, objectId string, toObjectType string, toObjectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPutcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdRequestWithBody(c.Server, objectType, objectId, toObjectType, toObjectId, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -18693,15 +19248,10 @@ func (c *Client) Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeTo
 	return c.Client.Do(req)
 }
 
-// Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectId Associate records (labelled)
-//
-// Set association labels between two records.
-//
+// Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectId performs a PUT /crm/objects/2026-03/{objectType}/{objectId}/associations/{toObjectType}/{toObjectId} (the `Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectId` operationId) request.
 // Takes a body of the `application/json` content type.
-//
-// Corresponds with PUT /crm/objects/2026-03/{objectType}/{objectId}/associations/{toObjectType}/{toObjectId} (the `Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectId` operationId).
-func (c *Client) Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectId(ctx context.Context, objectType string, objectId string, toObjectType string, toObjectId string, body Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectIdJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPutcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202509ObjectTypeObjectIdassociationsToObjectTypeToObjectIdRequest(c.Server, objectType, objectId, toObjectType, toObjectId, body)
+func (c *Client) Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectId(ctx context.Context, objectType string, objectId string, toObjectType string, toObjectId string, body Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPutcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdRequest(c.Server, objectType, objectId, toObjectType, toObjectId, body)
 	if err != nil {
 		return nil, err
 	}
@@ -18712,7 +19262,11 @@ func (c *Client) Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeTo
 	return c.Client.Do(req)
 }
 
-// Getcrmowners202603crmownersv3 performs a GET /crm/owners/2026-03 (the `Getcrmowners202603crmownersv3` operationId) request.
+// Getcrmowners202603crmownersv3 List owners
+//
+// Retrieve a paginated list of owners from your HubSpot account. This endpoint allows filtering by email and supports pagination through the 'after' parameter. You can also specify the maximum number of results per page and choose to include archived owners in the response.
+//
+// Corresponds with GET /crm/owners/2026-03 (the `Getcrmowners202603crmownersv3` operationId).
 func (c *Client) Getcrmowners202603crmownersv3(ctx context.Context, params *Getcrmowners202603crmownersv3Params, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewGetcrmowners202603crmownersv3Request(c.Server, params)
 	if err != nil {
@@ -18799,6 +19353,8 @@ func (c *Client) Postcrmpipelines202603ObjectTypeCreate(ctx context.Context, obj
 
 // Deletecrmpipelines202603ObjectTypePipelineIdArchive Delete a pipeline
 //
+// Delete a pipeline identified by its unique pipelineId.
+//
 // Corresponds with DELETE /crm/pipelines/2026-03/{objectType}/{pipelineId} (the `Deletecrmpipelines202603ObjectTypePipelineIdArchive` operationId).
 func (c *Client) Deletecrmpipelines202603ObjectTypePipelineIdArchive(ctx context.Context, objectType string, pipelineId string, params *Deletecrmpipelines202603ObjectTypePipelineIdArchiveParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewDeletecrmpipelines202603ObjectTypePipelineIdArchiveRequest(c.Server, objectType, pipelineId, params)
@@ -18829,10 +19385,13 @@ func (c *Client) Getcrmpipelines202603ObjectTypePipelineIdGetById(ctx context.Co
 	return c.Client.Do(req)
 }
 
-// Patchcrmpipelines202603ObjectTypePipelineIdUpdateWithBody performs a PATCH /crm/pipelines/2026-03/{objectType}/{pipelineId} (the `Patchcrmpipelines202603ObjectTypePipelineIdUpdate` operationId) request,
-// with any type of body and a specified content type.
+// Patchcrmpipelines202603ObjectTypePipelineIdUpdateWithBody Perform a partial update of the pipeline identified by pipelineId.
 //
 // Perform a partial update of the pipeline identified by `{pipelineId}`. The updated pipeline will be returned in the response.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with PATCH /crm/pipelines/2026-03/{objectType}/{pipelineId} (the `Patchcrmpipelines202603ObjectTypePipelineIdUpdate` operationId).
 func (c *Client) Patchcrmpipelines202603ObjectTypePipelineIdUpdateWithBody(ctx context.Context, objectType string, pipelineId string, params *Patchcrmpipelines202603ObjectTypePipelineIdUpdateParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPatchcrmpipelines202603ObjectTypePipelineIdUpdateRequestWithBody(c.Server, objectType, pipelineId, params, contentType, body)
 	if err != nil {
@@ -18845,10 +19404,13 @@ func (c *Client) Patchcrmpipelines202603ObjectTypePipelineIdUpdateWithBody(ctx c
 	return c.Client.Do(req)
 }
 
-// Patchcrmpipelines202603ObjectTypePipelineIdUpdate performs a PATCH /crm/pipelines/2026-03/{objectType}/{pipelineId} (the `Patchcrmpipelines202603ObjectTypePipelineIdUpdate` operationId) request.
-// Takes a body of the `application/json` content type.
+// Patchcrmpipelines202603ObjectTypePipelineIdUpdate Perform a partial update of the pipeline identified by pipelineId.
 //
 // Perform a partial update of the pipeline identified by `{pipelineId}`. The updated pipeline will be returned in the response.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with PATCH /crm/pipelines/2026-03/{objectType}/{pipelineId} (the `Patchcrmpipelines202603ObjectTypePipelineIdUpdate` operationId).
 func (c *Client) Patchcrmpipelines202603ObjectTypePipelineIdUpdate(ctx context.Context, objectType string, pipelineId string, params *Patchcrmpipelines202603ObjectTypePipelineIdUpdateParams, body Patchcrmpipelines202603ObjectTypePipelineIdUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPatchcrmpipelines202603ObjectTypePipelineIdUpdateRequest(c.Server, objectType, pipelineId, params, body)
 	if err != nil {
@@ -18862,6 +19424,8 @@ func (c *Client) Patchcrmpipelines202603ObjectTypePipelineIdUpdate(ctx context.C
 }
 
 // Putcrmpipelines202603ObjectTypePipelineIdReplaceWithBody Replace a pipeline
+//
+// Replace all properties of an existing pipeline with the provided values.
 //
 // Takes any type of body and a specified content type.
 //
@@ -18879,6 +19443,8 @@ func (c *Client) Putcrmpipelines202603ObjectTypePipelineIdReplaceWithBody(ctx co
 }
 
 // Putcrmpipelines202603ObjectTypePipelineIdReplace Replace a pipeline
+//
+// Replace all properties of an existing pipeline with the provided values.
 //
 // Takes a body of the `application/json` content type.
 //
@@ -18931,6 +19497,8 @@ func (c *Client) Getcrmpipelines202603ObjectTypePipelineIdstagesGetAll(ctx conte
 
 // Postcrmpipelines202603ObjectTypePipelineIdstagesCreateWithBody Create a pipeline stage
 //
+// Create a new stage within the specified pipeline.
+//
 // Takes any type of body and a specified content type.
 //
 // Corresponds with POST /crm/pipelines/2026-03/{objectType}/{pipelineId}/stages (the `Postcrmpipelines202603ObjectTypePipelineIdstagesCreate` operationId).
@@ -18947,6 +19515,8 @@ func (c *Client) Postcrmpipelines202603ObjectTypePipelineIdstagesCreateWithBody(
 }
 
 // Postcrmpipelines202603ObjectTypePipelineIdstagesCreate Create a pipeline stage
+//
+// Create a new stage within the specified pipeline.
 //
 // Takes a body of the `application/json` content type.
 //
@@ -18965,9 +19535,11 @@ func (c *Client) Postcrmpipelines202603ObjectTypePipelineIdstagesCreate(ctx cont
 
 // Deletecrmpipelines202603ObjectTypePipelineIdstagesStageIdArchive Delete a pipeline stage
 //
+// Delete a specific stage from a pipeline.
+//
 // Corresponds with DELETE /crm/pipelines/2026-03/{objectType}/{pipelineId}/stages/{stageId} (the `Deletecrmpipelines202603ObjectTypePipelineIdstagesStageIdArchive` operationId).
-func (c *Client) Deletecrmpipelines202603ObjectTypePipelineIdstagesStageIdArchive(ctx context.Context, objectType string, pipelineId string, stageId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDeletecrmpipelines202603ObjectTypePipelineIdstagesStageIdArchiveRequest(c.Server, objectType, pipelineId, stageId)
+func (c *Client) Deletecrmpipelines202603ObjectTypePipelineIdstagesStageIdArchive(ctx context.Context, objectType string, pipelineId string, stageId string, params *Deletecrmpipelines202603ObjectTypePipelineIdstagesStageIdArchiveParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDeletecrmpipelines202603ObjectTypePipelineIdstagesStageIdArchiveRequest(c.Server, objectType, pipelineId, stageId, params)
 	if err != nil {
 		return nil, err
 	}
@@ -18979,6 +19551,8 @@ func (c *Client) Deletecrmpipelines202603ObjectTypePipelineIdstagesStageIdArchiv
 }
 
 // Getcrmpipelines202603ObjectTypePipelineIdstagesStageIdGetById Return a pipeline stage by ID
+//
+// Retrieve a specific stage from a pipeline using its ID.
 //
 // Corresponds with GET /crm/pipelines/2026-03/{objectType}/{pipelineId}/stages/{stageId} (the `Getcrmpipelines202603ObjectTypePipelineIdstagesStageIdGetById` operationId).
 func (c *Client) Getcrmpipelines202603ObjectTypePipelineIdstagesStageIdGetById(ctx context.Context, objectType string, pipelineId string, stageId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
@@ -18993,8 +19567,13 @@ func (c *Client) Getcrmpipelines202603ObjectTypePipelineIdstagesStageIdGetById(c
 	return c.Client.Do(req)
 }
 
-// Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdateWithBody performs a PATCH /crm/pipelines/2026-03/{objectType}/{pipelineId}/stages/{stageId} (the `Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdate` operationId) request,
-// with any type of body and a specified content type.
+// Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdateWithBody Update specific properties of an existing pipeline stage.
+//
+// Perform a partial update on a specific stage of a pipeline.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with PATCH /crm/pipelines/2026-03/{objectType}/{pipelineId}/stages/{stageId} (the `Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdate` operationId).
 func (c *Client) Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdateWithBody(ctx context.Context, objectType string, pipelineId string, stageId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPatchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdateRequestWithBody(c.Server, objectType, pipelineId, stageId, contentType, body)
 	if err != nil {
@@ -19007,8 +19586,13 @@ func (c *Client) Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdateW
 	return c.Client.Do(req)
 }
 
-// Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdate performs a PATCH /crm/pipelines/2026-03/{objectType}/{pipelineId}/stages/{stageId} (the `Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdate` operationId) request.
+// Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdate Update specific properties of an existing pipeline stage.
+//
+// Perform a partial update on a specific stage of a pipeline.
+//
 // Takes a body of the `application/json` content type.
+//
+// Corresponds with PATCH /crm/pipelines/2026-03/{objectType}/{pipelineId}/stages/{stageId} (the `Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdate` operationId).
 func (c *Client) Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdate(ctx context.Context, objectType string, pipelineId string, stageId string, body Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPatchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdateRequest(c.Server, objectType, pipelineId, stageId, body)
 	if err != nil {
@@ -19059,9 +19643,11 @@ func (c *Client) Putcrmpipelines202603ObjectTypePipelineIdstagesStageIdReplace(c
 	return c.Client.Do(req)
 }
 
-// Getcrmpipelines202603ObjectTypePipelineIdstagesStageIdauditGetAudit performs a GET /crm/pipelines/2026-03/{objectType}/{pipelineId}/stages/{stageId}/audit (the `Getcrmpipelines202603ObjectTypePipelineIdstagesStageIdauditGetAudit` operationId) request.
+// Getcrmpipelines202603ObjectTypePipelineIdstagesStageIdauditGetAudit Retrieve a reverse chronological list of all changes made to a specific pipeline stage.
 //
 // Return a reverse chronological list of all mutations that have occurred on the pipeline stage identified by `{stageId}`.
+//
+// Corresponds with GET /crm/pipelines/2026-03/{objectType}/{pipelineId}/stages/{stageId}/audit (the `Getcrmpipelines202603ObjectTypePipelineIdstagesStageIdauditGetAudit` operationId).
 func (c *Client) Getcrmpipelines202603ObjectTypePipelineIdstagesStageIdauditGetAudit(ctx context.Context, objectType string, pipelineId string, stageId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewGetcrmpipelines202603ObjectTypePipelineIdstagesStageIdauditGetAuditRequest(c.Server, objectType, pipelineId, stageId)
 	if err != nil {
@@ -19413,599 +19999,6 @@ func (c *Client) Getcrmproperties202603ObjectTypePropertyNamecrmproperties202509
 // Corresponds with PATCH /crm/properties/2026-03/{objectType}/{propertyName} (the `Patchcrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyName` operationId).
 func (c *Client) Patchcrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyNameWithBody(ctx context.Context, objectType string, propertyName string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPatchcrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyNameRequestWithBody(c.Server, objectType, propertyName, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Patchcrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyName Update a property
-//
-// Perform a partial update of a property identified by { propertyName }. Provided fields will be overwritten.
-//
-// Takes a body of the `application/json` content type.
-//
-// Corresponds with PATCH /crm/properties/2026-03/{objectType}/{propertyName} (the `Patchcrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyName` operationId).
-func (c *Client) Patchcrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyName(ctx context.Context, objectType string, propertyName string, body Patchcrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyNameJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPatchcrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyNameRequest(c.Server, objectType, propertyName, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// GetcrmpropertyValidations202603ObjectTypeIdcrmv3propertyValidationsObjectTypeId Read all property validation rules for an object
-//
-// Read all properties with validation rules for a given object.
-//
-// Corresponds with GET /crm/property-validations/2026-03/{objectTypeId} (the `GetcrmpropertyValidations202603ObjectTypeIdcrmv3propertyValidationsObjectTypeId` operationId).
-func (c *Client) GetcrmpropertyValidations202603ObjectTypeIdcrmv3propertyValidationsObjectTypeId(ctx context.Context, objectTypeId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewGetcrmpropertyValidations202603ObjectTypeIdcrmv3propertyValidationsObjectTypeIdRequest(c.Server, objectTypeId)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// GetcrmpropertyValidations202603ObjectTypeIdPropertyNamecrmv3propertyValidationsObjectTypeIdPropertyName Read validation rules for a property
-//
-// Read a property's validation rules identified by {propertyName}.
-//
-// Corresponds with GET /crm/property-validations/2026-03/{objectTypeId}/{propertyName} (the `GetcrmpropertyValidations202603ObjectTypeIdPropertyNamecrmv3propertyValidationsObjectTypeIdPropertyName` operationId).
-func (c *Client) GetcrmpropertyValidations202603ObjectTypeIdPropertyNamecrmv3propertyValidationsObjectTypeIdPropertyName(ctx context.Context, objectTypeId string, propertyName string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewGetcrmpropertyValidations202603ObjectTypeIdPropertyNamecrmv3propertyValidationsObjectTypeIdPropertyNameRequest(c.Server, objectTypeId, propertyName)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// GetcrmpropertyValidations202603ObjectTypeIdPropertyNameruleTypeRuleTypecrmv3propertyValidationsObjectTypeIdPropertyNameruleTypeRuleType Retrieve a validation rule for a specific property and rule type, providing details on how property values should be formatted.
-//
-// Retrieve a specific validation rule for a property identified by its name and rule type.
-//
-// Corresponds with GET /crm/property-validations/2026-03/{objectTypeId}/{propertyName}/rule-type/{ruleType} (the `GetcrmpropertyValidations202603ObjectTypeIdPropertyNameruleTypeRuleTypecrmv3propertyValidationsObjectTypeIdPropertyNameruleTypeRuleType` operationId).
-func (c *Client) GetcrmpropertyValidations202603ObjectTypeIdPropertyNameruleTypeRuleTypecrmv3propertyValidationsObjectTypeIdPropertyNameruleTypeRuleType(ctx context.Context, objectTypeId string, propertyName string, ruleType GetcrmpropertyValidations202603ObjectTypeIdPropertyNameruleTypeRuleTypecrmv3propertyValidationsObjectTypeIdPropertyNameruleTypeRuleTypeParamsRuleType, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewGetcrmpropertyValidations202603ObjectTypeIdPropertyNameruleTypeRuleTypecrmv3propertyValidationsObjectTypeIdPropertyNameruleTypeRuleTypeRequest(c.Server, objectTypeId, propertyName, ruleType)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// PutcrmpropertyValidations202603ObjectTypeIdPropertyNameruleTypeRuleTypecrmv3propertyValidationsObjectTypeIdPropertyNameruleTypeRuleTypeWithBody Update a validation rule for a specific property and rule type, allowing customization of property value constraints.
-//
-// Update a specific validation rule for a property identified by its name and rule type.
-//
-// Takes any type of body and a specified content type.
-//
-// Corresponds with PUT /crm/property-validations/2026-03/{objectTypeId}/{propertyName}/rule-type/{ruleType} (the `PutcrmpropertyValidations202603ObjectTypeIdPropertyNameruleTypeRuleTypecrmv3propertyValidationsObjectTypeIdPropertyNameruleTypeRuleType` operationId).
-func (c *Client) PutcrmpropertyValidations202603ObjectTypeIdPropertyNameruleTypeRuleTypecrmv3propertyValidationsObjectTypeIdPropertyNameruleTypeRuleTypeWithBody(ctx context.Context, objectTypeId string, propertyName string, ruleType PutcrmpropertyValidations202603ObjectTypeIdPropertyNameruleTypeRuleTypecrmv3propertyValidationsObjectTypeIdPropertyNameruleTypeRuleTypeParamsRuleType, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPutcrmpropertyValidations202603ObjectTypeIdPropertyNameruleTypeRuleTypecrmv3propertyValidationsObjectTypeIdPropertyNameruleTypeRuleTypeRequestWithBody(c.Server, objectTypeId, propertyName, ruleType, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// PutcrmpropertyValidations202603ObjectTypeIdPropertyNameruleTypeRuleTypecrmv3propertyValidationsObjectTypeIdPropertyNameruleTypeRuleType Update a validation rule for a specific property and rule type, allowing customization of property value constraints.
-//
-// Update a specific validation rule for a property identified by its name and rule type.
-//
-// Takes a body of the `application/json` content type.
-//
-// Corresponds with PUT /crm/property-validations/2026-03/{objectTypeId}/{propertyName}/rule-type/{ruleType} (the `PutcrmpropertyValidations202603ObjectTypeIdPropertyNameruleTypeRuleTypecrmv3propertyValidationsObjectTypeIdPropertyNameruleTypeRuleType` operationId).
-func (c *Client) PutcrmpropertyValidations202603ObjectTypeIdPropertyNameruleTypeRuleTypecrmv3propertyValidationsObjectTypeIdPropertyNameruleTypeRuleType(ctx context.Context, objectTypeId string, propertyName string, ruleType PutcrmpropertyValidations202603ObjectTypeIdPropertyNameruleTypeRuleTypecrmv3propertyValidationsObjectTypeIdPropertyNameruleTypeRuleTypeParamsRuleType, body PutcrmpropertyValidations202603ObjectTypeIdPropertyNameruleTypeRuleTypecrmv3propertyValidationsObjectTypeIdPropertyNameruleTypeRuleTypeJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPutcrmpropertyValidations202603ObjectTypeIdPropertyNameruleTypeRuleTypecrmv3propertyValidationsObjectTypeIdPropertyNameruleTypeRuleTypeRequest(c.Server, objectTypeId, propertyName, ruleType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// PostdealSplits202603batchreadcrmobjectsv3dealssplitsbatchreadWithBody Read a batch of deal split objects by their associated deal object internal ID
-//
-// Takes any type of body and a specified content type.
-//
-// Corresponds with POST /deal-splits/2026-03/batch/read (the `PostdealSplits202603batchreadcrmobjectsv3dealssplitsbatchread` operationId).
-func (c *Client) PostdealSplits202603batchreadcrmobjectsv3dealssplitsbatchreadWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostdealSplits202603batchreadcrmobjectsv3dealssplitsbatchreadRequestWithBody(c.Server, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// PostdealSplits202603batchreadcrmobjectsv3dealssplitsbatchread Read a batch of deal split objects by their associated deal object internal ID
-//
-// Takes a body of the `application/json` content type.
-//
-// Corresponds with POST /deal-splits/2026-03/batch/read (the `PostdealSplits202603batchreadcrmobjectsv3dealssplitsbatchread` operationId).
-func (c *Client) PostdealSplits202603batchreadcrmobjectsv3dealssplitsbatchread(ctx context.Context, body PostdealSplits202603batchreadcrmobjectsv3dealssplitsbatchreadJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostdealSplits202603batchreadcrmobjectsv3dealssplitsbatchreadRequest(c.Server, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// PostdealSplits202603batchupsertcrmobjectsv3dealssplitsbatchupsertWithBody Create or replace deal splits for deals with the provided IDs. Deal split percentages for each deal must sum up to 1.0 (100%) and may have up to 8 decimal places
-//
-// Takes any type of body and a specified content type.
-//
-// Corresponds with POST /deal-splits/2026-03/batch/upsert (the `PostdealSplits202603batchupsertcrmobjectsv3dealssplitsbatchupsert` operationId).
-func (c *Client) PostdealSplits202603batchupsertcrmobjectsv3dealssplitsbatchupsertWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostdealSplits202603batchupsertcrmobjectsv3dealssplitsbatchupsertRequestWithBody(c.Server, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// PostdealSplits202603batchupsertcrmobjectsv3dealssplitsbatchupsert Create or replace deal splits for deals with the provided IDs. Deal split percentages for each deal must sum up to 1.0 (100%) and may have up to 8 decimal places
-//
-// Takes a body of the `application/json` content type.
-//
-// Corresponds with POST /deal-splits/2026-03/batch/upsert (the `PostdealSplits202603batchupsertcrmobjectsv3dealssplitsbatchupsert` operationId).
-func (c *Client) PostdealSplits202603batchupsertcrmobjectsv3dealssplitsbatchupsert(ctx context.Context, body PostdealSplits202603batchupsertcrmobjectsv3dealssplitsbatchupsertJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostdealSplits202603batchupsertcrmobjectsv3dealssplitsbatchupsertRequest(c.Server, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Getevents202603eventDefinitions Retrieve event definitions
-//
-// Retrieve existing custom event definitions.
-//
-// Corresponds with GET /events/2026-03/event-definitions (the `Getevents202603eventDefinitions` operationId).
-func (c *Client) Getevents202603eventDefinitions(ctx context.Context, params *Getevents202603eventDefinitionsParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewGetevents202603eventDefinitionsRequest(c.Server, params)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Postevents202603eventDefinitionsWithBody Create custom event definition
-//
-// Create a custom event definition.
-//
-// Takes any type of body and a specified content type.
-//
-// Corresponds with POST /events/2026-03/event-definitions (the `Postevents202603eventDefinitions` operationId).
-func (c *Client) Postevents202603eventDefinitionsWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostevents202603eventDefinitionsRequestWithBody(c.Server, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Postevents202603eventDefinitions Create custom event definition
-//
-// Create a custom event definition.
-//
-// Takes a body of the `application/json` content type.
-//
-// Corresponds with POST /events/2026-03/event-definitions (the `Postevents202603eventDefinitions` operationId).
-func (c *Client) Postevents202603eventDefinitions(ctx context.Context, body Postevents202603eventDefinitionsJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostevents202603eventDefinitionsRequest(c.Server, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Deleteevents202603eventDefinitionsEventName Delete an event definition
-//
-// Delete a custom event definition by name.
-//
-// Corresponds with DELETE /events/2026-03/event-definitions/{eventName} (the `Deleteevents202603eventDefinitionsEventName` operationId).
-func (c *Client) Deleteevents202603eventDefinitionsEventName(ctx context.Context, eventName string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDeleteevents202603eventDefinitionsEventNameRequest(c.Server, eventName)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Getevents202603eventDefinitionsEventName Retrieve a custom event definition
-//
-// Fetch a single custom event definition by name.
-//
-// Corresponds with GET /events/2026-03/event-definitions/{eventName} (the `Getevents202603eventDefinitionsEventName` operationId).
-func (c *Client) Getevents202603eventDefinitionsEventName(ctx context.Context, eventName string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewGetevents202603eventDefinitionsEventNameRequest(c.Server, eventName)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Patchevents202603eventDefinitionsEventNameWithBody Update a custom event definition
-//
-// Update a specific custom event definition by name.
-//
-// Takes any type of body and a specified content type.
-//
-// Corresponds with PATCH /events/2026-03/event-definitions/{eventName} (the `Patchevents202603eventDefinitionsEventName` operationId).
-func (c *Client) Patchevents202603eventDefinitionsEventNameWithBody(ctx context.Context, eventName string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPatchevents202603eventDefinitionsEventNameRequestWithBody(c.Server, eventName, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Patchevents202603eventDefinitionsEventName Update a custom event definition
-//
-// Update a specific custom event definition by name.
-//
-// Takes a body of the `application/json` content type.
-//
-// Corresponds with PATCH /events/2026-03/event-definitions/{eventName} (the `Patchevents202603eventDefinitionsEventName` operationId).
-func (c *Client) Patchevents202603eventDefinitionsEventName(ctx context.Context, eventName string, body Patchevents202603eventDefinitionsEventNameJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPatchevents202603eventDefinitionsEventNameRequest(c.Server, eventName, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Postevents202603eventDefinitionsEventNamepropertyWithBody Create a property for an event definition
-//
-// Create a new property for an existing event definition.
-//
-// Takes any type of body and a specified content type.
-//
-// Corresponds with POST /events/2026-03/event-definitions/{eventName}/property (the `Postevents202603eventDefinitionsEventNameproperty` operationId).
-func (c *Client) Postevents202603eventDefinitionsEventNamepropertyWithBody(ctx context.Context, eventName string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostevents202603eventDefinitionsEventNamepropertyRequestWithBody(c.Server, eventName, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Postevents202603eventDefinitionsEventNameproperty Create a property for an event definition
-//
-// Create a new property for an existing event definition.
-//
-// Takes a body of the `application/json` content type.
-//
-// Corresponds with POST /events/2026-03/event-definitions/{eventName}/property (the `Postevents202603eventDefinitionsEventNameproperty` operationId).
-func (c *Client) Postevents202603eventDefinitionsEventNameproperty(ctx context.Context, eventName string, body Postevents202603eventDefinitionsEventNamepropertyJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostevents202603eventDefinitionsEventNamepropertyRequest(c.Server, eventName, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Deleteevents202603eventDefinitionsEventNamepropertyPropertyName Delete a property from a custom event definition
-//
-// Delete an existing property from a custom event definition.
-//
-// Corresponds with DELETE /events/2026-03/event-definitions/{eventName}/property/{propertyName} (the `Deleteevents202603eventDefinitionsEventNamepropertyPropertyName` operationId).
-func (c *Client) Deleteevents202603eventDefinitionsEventNamepropertyPropertyName(ctx context.Context, eventName string, propertyName string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDeleteevents202603eventDefinitionsEventNamepropertyPropertyNameRequest(c.Server, eventName, propertyName)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Patchevents202603eventDefinitionsEventNamepropertyPropertyNameWithBody Update an existing custom event property
-//
-// Update an existing property in a custom event definition.
-//
-// Takes any type of body and a specified content type.
-//
-// Corresponds with PATCH /events/2026-03/event-definitions/{eventName}/property/{propertyName} (the `Patchevents202603eventDefinitionsEventNamepropertyPropertyName` operationId).
-func (c *Client) Patchevents202603eventDefinitionsEventNamepropertyPropertyNameWithBody(ctx context.Context, eventName string, propertyName string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPatchevents202603eventDefinitionsEventNamepropertyPropertyNameRequestWithBody(c.Server, eventName, propertyName, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Patchevents202603eventDefinitionsEventNamepropertyPropertyName Update an existing custom event property
-//
-// Update an existing property in a custom event definition.
-//
-// Takes a body of the `application/json` content type.
-//
-// Corresponds with PATCH /events/2026-03/event-definitions/{eventName}/property/{propertyName} (the `Patchevents202603eventDefinitionsEventNamepropertyPropertyName` operationId).
-func (c *Client) Patchevents202603eventDefinitionsEventNamepropertyPropertyName(ctx context.Context, eventName string, propertyName string, body Patchevents202603eventDefinitionsEventNamepropertyPropertyNameJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPatchevents202603eventDefinitionsEventNamepropertyPropertyNameRequest(c.Server, eventName, propertyName, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Postevents202603sendSendWithBody Send a custom event occurrence
-//
-// Send data for a single custom event occurrence.
-//
-// Takes any type of body and a specified content type.
-//
-// Corresponds with POST /events/2026-03/send (the `Postevents202603sendSend` operationId).
-func (c *Client) Postevents202603sendSendWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostevents202603sendSendRequestWithBody(c.Server, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Postevents202603sendSend Send a custom event occurrence
-//
-// Send data for a single custom event occurrence.
-//
-// Takes a body of the `application/json` content type.
-//
-// Corresponds with POST /events/2026-03/send (the `Postevents202603sendSend` operationId).
-func (c *Client) Postevents202603sendSend(ctx context.Context, body Postevents202603sendSendJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostevents202603sendSendRequest(c.Server, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Postevents202603sendbatchSendWithBody Send a batch of event occurrences
-//
-// Send multiple event occurrences at once.
-//
-// Takes any type of body and a specified content type.
-//
-// Corresponds with POST /events/2026-03/send/batch (the `Postevents202603sendbatchSend` operationId).
-func (c *Client) Postevents202603sendbatchSendWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostevents202603sendbatchSendRequestWithBody(c.Server, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Postevents202603sendbatchSend Send a batch of event occurrences
-//
-// Send multiple event occurrences at once.
-//
-// Takes a body of the `application/json` content type.
-//
-// Corresponds with POST /events/2026-03/send/batch (the `Postevents202603sendbatchSend` operationId).
-func (c *Client) Postevents202603sendbatchSend(ctx context.Context, body Postevents202603sendbatchSendJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostevents202603sendbatchSendRequest(c.Server, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// GeteventseventOccurrences202603eventseventOccurrences202603 Retrieve event occurrences
-//
-// Retrieve event occurrences for the specified time frame. This endpoint allows filtering by various parameters such as object type, event type, and occurrence time. It supports pagination and sorting of results.
-//
-// Corresponds with GET /events/event-occurrences/2026-03 (the `GeteventseventOccurrences202603eventseventOccurrences202603` operationId).
-func (c *Client) GeteventseventOccurrences202603eventseventOccurrences202603(ctx context.Context, params *GeteventseventOccurrences202603eventseventOccurrences202603Params, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewGeteventseventOccurrences202603eventseventOccurrences202603Request(c.Server, params)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// GeteventseventOccurrences202603eventTypeseventseventOccurrences202603eventTypes Retrieve event types
-//
-// Retrieve a list of event type names. You may use these event types to query the API for event occurrences of a desired type.
-//
-// Note: the `get_types` method is only supported in the Python SDK version `12.0.0-beta.1` or later.
-//
-// Corresponds with GET /events/event-occurrences/2026-03/event-types (the `GeteventseventOccurrences202603eventTypeseventseventOccurrences202603eventTypes` operationId).
-func (c *Client) GeteventseventOccurrences202603eventTypeseventseventOccurrences202603eventTypes(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewGeteventseventOccurrences202603eventTypeseventseventOccurrences202603eventTypesRequest(c.Server)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// GetfeatureFlags202603AppIdflagsallfeatureFlagsv3AppIdflagsall performs a GET /feature-flags/2026-03/{appId}/flags/all (the `GetfeatureFlags202603AppIdflagsallfeatureFlagsv3AppIdflagsall` operationId) request.
-func (c *Client) GetfeatureFlags202603AppIdflagsallfeatureFlagsv3AppIdflagsall(ctx context.Context, appId int32, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewGetfeatureFlags202603AppIdflagsallfeatureFlagsv3AppIdflagsallRequest(c.Server, appId)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// DeletefeatureFlags202603AppIdflagsFlagName Delete an app's feature flag
-//
-// Delete a feature flag in an app.  For example, delete the `hs-release-app-cards` flag after all accounts have been migrated.
-//
-// Corresponds with DELETE /feature-flags/2026-03/{appId}/flags/{flagName} (the `DeletefeatureFlags202603AppIdflagsFlagName` operationId).
-func (c *Client) DeletefeatureFlags202603AppIdflagsFlagName(ctx context.Context, appId int32, flagName string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDeletefeatureFlags202603AppIdflagsFlagNameRequest(c.Server, appId, flagName)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// GetfeatureFlags202603AppIdflagsFlagName Retrieve an app's feature flags
-//
-// Retrieve the current status of the app's feature flags. No request body is included.
-//
-// Corresponds with GET /feature-flags/2026-03/{appId}/flags/{flagName} (the `GetfeatureFlags202603AppIdflagsFlagName` operationId).
-func (c *Client) GetfeatureFlags202603AppIdflagsFlagName(ctx context.Context, appId int32, flagName string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewGetfeatureFlags202603AppIdflagsFlagNameRequest(c.Server, appId, flagName)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// PutfeatureFlags202603AppIdflagsFlagNameWithBody Set an app's feature flag
-//
-// Set a feature flag for an app. For example, update the `hs-hide-crm-cards` flag's `defaultState` to `ON` to hide classic CRM cards from new installs.
-//
-// Takes any type of body and a specified content type.
-//
-// Corresponds with PUT /feature-flags/2026-03/{appId}/flags/{flagName} (the `PutfeatureFlags202603AppIdflagsFlagName` operationId).
-func (c *Client) PutfeatureFlags202603AppIdflagsFlagNameWithBody(ctx context.Context, appId int32, flagName string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPutfeatureFlags202603AppIdflagsFlagNameRequestWithBody(c.Server, appId, flagName, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// PutfeatureFlags202603AppIdflagsFlagName Set an app's feature flag
-//
-// Set a feature flag for an app. For example, update the `hs-hide-crm-cards` flag's `defaultState` to `ON` to hide classic CRM cards from new installs.
-//
-// Takes a body of the `application/json` content type.
-//
-// Corresponds with PUT /feature-flags/2026-03/{appId}/flags/{flagName} (the `PutfeatureFlags202603AppIdflagsFlagName` operationId).
-func (c *Client) PutfeatureFlags202603AppIdflagsFlagName(ctx context.Context, appId int32, flagName string, body PutfeatureFlags202603AppIdflagsFlagNameJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPutfeatureFlags202603AppIdflagsFlagNameRequest(c.Server, appId, flagName, body)
 	if err != nil {
 		return nil, err
 	}
