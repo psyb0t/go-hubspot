@@ -4111,23 +4111,6 @@ func (c *Client) GetcmssiteSearch202603indexedDataContentIdGetById(ctx context.C
 	return c.Client.Do(req)
 }
 
-// GetcmssiteSearch202603searchcmssiteSearch202603search Search your site
-//
-// Returns any website content matching the given search criteria for a given HubSpot account. Searches can be filtered by content type, domain, or URL path. Includes options for weighing results by recency and popularity, along with language support.
-//
-// Corresponds with GET /cms/site-search/2026-03/search (the `GetcmssiteSearch202603searchcmssiteSearch202603search` operationId).
-func (c *Client) GetcmssiteSearch202603searchcmssiteSearch202603search(ctx context.Context, params *GetcmssiteSearch202603searchcmssiteSearch202603searchParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewGetcmssiteSearch202603searchcmssiteSearch202603searchRequest(c.Server, params)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
 // PostcmssourceCode202603extractasyncDoAsyncWithBody Extract a zip file
 //
 // Extract a zip file in the developer file system. Extraction status can be checked with the `/extract/async/tasks/taskId/status` endpoint below.
@@ -19999,6 +19982,25 @@ func (c *Client) Getcrmproperties202603ObjectTypePropertyNamecrmproperties202509
 // Corresponds with PATCH /crm/properties/2026-03/{objectType}/{propertyName} (the `Patchcrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyName` operationId).
 func (c *Client) Patchcrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyNameWithBody(ctx context.Context, objectType string, propertyName string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPatchcrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyNameRequestWithBody(c.Server, objectType, propertyName, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Patchcrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyName Update a property
+//
+// Perform a partial update of a property identified by { propertyName }. Provided fields will be overwritten.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with PATCH /crm/properties/2026-03/{objectType}/{propertyName} (the `Patchcrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyName` operationId).
+func (c *Client) Patchcrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyName(ctx context.Context, objectType string, propertyName string, body Patchcrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyNameJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPatchcrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyNameRequest(c.Server, objectType, propertyName, body)
 	if err != nil {
 		return nil, err
 	}

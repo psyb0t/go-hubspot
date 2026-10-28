@@ -15,317 +15,6 @@ import (
 	"github.com/oapi-codegen/runtime"
 )
 
-// NewPostconversationscustomChannels202603ChannelIdchannelAccountsRequest calls the generic PostconversationscustomChannels202603ChannelIdchannelAccounts builder with application/json body
-func NewPostconversationscustomChannels202603ChannelIdchannelAccountsRequest(server string, channelId int32, body PostconversationscustomChannels202603ChannelIdchannelAccountsJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewPostconversationscustomChannels202603ChannelIdchannelAccountsRequestWithBody(server, channelId, "application/json", bodyReader)
-}
-
-// NewPostconversationscustomChannels202603ChannelIdchannelAccountsRequestWithBody constructs an http.Request for the PostconversationscustomChannels202603ChannelIdchannelAccounts method, with any body, and a specified content type
-func NewPostconversationscustomChannels202603ChannelIdchannelAccountsRequestWithBody(server string, channelId int32, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "channelId", channelId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: "int32"})
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/conversations/custom-channels/2026-03/%s/channel-accounts", pathParam0)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
-}
-
-// NewGetconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountIdRequest constructs an http.Request for the GetconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountId method
-func NewGetconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountIdRequest(server string, channelId int32, channelAccountId int64, params *GetconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountIdParams) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "channelId", channelId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: "int32"})
-	if err != nil {
-		return nil, err
-	}
-
-	var pathParam1 string
-
-	pathParam1, err = runtime.StyleParamWithOptions("simple", false, "channelAccountId", channelAccountId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: "int64"})
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/conversations/custom-channels/2026-03/%s/channel-accounts/%s", pathParam0, pathParam1)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	if params != nil {
-		// queryValues collects non-styled parameters (passthrough, JSON)
-		// that are safe to round-trip through url.Values.Encode().
-		queryValues := queryURL.Query()
-		// rawQueryFragments collects pre-encoded query fragments from
-		// styled parameters, preserving literal commas as delimiters
-		// per the OpenAPI spec (e.g. "color=blue,black,brown").
-		var rawQueryFragments []string
-
-		if params.Archived != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "archived", *params.Archived, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "boolean", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if encoded := queryValues.Encode(); encoded != "" {
-			rawQueryFragments = append(rawQueryFragments, encoded)
-		}
-		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
-	}
-
-	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
-}
-
-// NewPatchconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountIdRequest calls the generic PatchconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountId builder with application/json body
-func NewPatchconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountIdRequest(server string, channelId int32, channelAccountId int64, body PatchconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountIdJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewPatchconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountIdRequestWithBody(server, channelId, channelAccountId, "application/json", bodyReader)
-}
-
-// NewPatchconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountIdRequestWithBody constructs an http.Request for the PatchconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountId method, with any body, and a specified content type
-func NewPatchconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountIdRequestWithBody(server string, channelId int32, channelAccountId int64, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "channelId", channelId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: "int32"})
-	if err != nil {
-		return nil, err
-	}
-
-	var pathParam1 string
-
-	pathParam1, err = runtime.StyleParamWithOptions("simple", false, "channelAccountId", channelAccountId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: "int64"})
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/conversations/custom-channels/2026-03/%s/channel-accounts/%s", pathParam0, pathParam1)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodPatch, queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
-}
-
-// NewPostconversationscustomChannels202603ChannelIdmessagesRequest calls the generic PostconversationscustomChannels202603ChannelIdmessages builder with application/json body
-func NewPostconversationscustomChannels202603ChannelIdmessagesRequest(server string, channelId int32, body PostconversationscustomChannels202603ChannelIdmessagesJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewPostconversationscustomChannels202603ChannelIdmessagesRequestWithBody(server, channelId, "application/json", bodyReader)
-}
-
-// NewPostconversationscustomChannels202603ChannelIdmessagesRequestWithBody constructs an http.Request for the PostconversationscustomChannels202603ChannelIdmessages method, with any body, and a specified content type
-func NewPostconversationscustomChannels202603ChannelIdmessagesRequestWithBody(server string, channelId int32, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "channelId", channelId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: "int32"})
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/conversations/custom-channels/2026-03/%s/messages", pathParam0)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
-}
-
-// NewGetconversationscustomChannels202603ChannelIdmessagesMessageIdRequest constructs an http.Request for the GetconversationscustomChannels202603ChannelIdmessagesMessageId method
-func NewGetconversationscustomChannels202603ChannelIdmessagesMessageIdRequest(server string, channelId int32, messageId string) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "channelId", channelId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: "int32"})
-	if err != nil {
-		return nil, err
-	}
-
-	var pathParam1 string
-
-	pathParam1, err = runtime.StyleParamWithOptions("simple", false, "messageId", messageId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/conversations/custom-channels/2026-03/%s/messages/%s", pathParam0, pathParam1)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
-}
-
-// NewPatchconversationscustomChannels202603ChannelIdmessagesMessageIdRequest calls the generic PatchconversationscustomChannels202603ChannelIdmessagesMessageId builder with application/json body
-func NewPatchconversationscustomChannels202603ChannelIdmessagesMessageIdRequest(server string, channelId int32, messageId string, body PatchconversationscustomChannels202603ChannelIdmessagesMessageIdJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewPatchconversationscustomChannels202603ChannelIdmessagesMessageIdRequestWithBody(server, channelId, messageId, "application/json", bodyReader)
-}
-
-// NewPatchconversationscustomChannels202603ChannelIdmessagesMessageIdRequestWithBody constructs an http.Request for the PatchconversationscustomChannels202603ChannelIdmessagesMessageId method, with any body, and a specified content type
-func NewPatchconversationscustomChannels202603ChannelIdmessagesMessageIdRequestWithBody(server string, channelId int32, messageId string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "channelId", channelId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: "int32"})
-	if err != nil {
-		return nil, err
-	}
-
-	var pathParam1 string
-
-	pathParam1, err = runtime.StyleParamWithOptions("simple", false, "messageId", messageId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/conversations/custom-channels/2026-03/%s/messages/%s", pathParam0, pathParam1)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodPatch, queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
-}
-
 // NewGetcrmObjectSchemas202603schemasGetAllRequest constructs an http.Request for the GetcrmObjectSchemas202603schemasGetAll method
 func NewGetcrmObjectSchemas202603schemasGetAllRequest(server string, params *GetcrmObjectSchemas202603schemasGetAllParams) (*http.Request, error) {
 	var err error
@@ -20019,4 +19708,316 @@ func NewPatchcrmobjects202603postalMailPostalMailIdUpdateRequestWithBody(server 
 	req.Header.Add("Content-Type", contentType)
 
 	return req, nil
+}
+
+// NewGetcrmobjects202603productsGetPageRequest constructs an http.Request for the Getcrmobjects202603productsGetPage method
+func NewGetcrmobjects202603productsGetPageRequest(server string, params *Getcrmobjects202603productsGetPageParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/crm/objects/2026-03/products")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.After != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "after", *params.After, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Archived != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "archived", *params.Archived, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "boolean", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Associations != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "associations", *params.Associations, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "limit", *params.Limit, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: "int32"}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Properties != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "properties", *params.Properties, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.PropertiesWithHistory != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "propertiesWithHistory", *params.PropertiesWithHistory, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewPostcrmobjects202603productsCreateRequest calls the generic Postcrmobjects202603productsCreate builder with application/json body
+func NewPostcrmobjects202603productsCreateRequest(server string, body Postcrmobjects202603productsCreateJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcrmobjects202603productsCreateRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewPostcrmobjects202603productsCreateRequestWithBody constructs an http.Request for the Postcrmobjects202603productsCreate method, with any body, and a specified content type
+func NewPostcrmobjects202603productsCreateRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/crm/objects/2026-03/products")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewPostcrmobjects202603productsbatcharchiveArchiveRequest calls the generic Postcrmobjects202603productsbatcharchiveArchive builder with application/json body
+func NewPostcrmobjects202603productsbatcharchiveArchiveRequest(server string, body Postcrmobjects202603productsbatcharchiveArchiveJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcrmobjects202603productsbatcharchiveArchiveRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewPostcrmobjects202603productsbatcharchiveArchiveRequestWithBody constructs an http.Request for the Postcrmobjects202603productsbatcharchiveArchive method, with any body, and a specified content type
+func NewPostcrmobjects202603productsbatcharchiveArchiveRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/crm/objects/2026-03/products/batch/archive")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewPostcrmobjects202603productsbatchcreateCreateRequest calls the generic Postcrmobjects202603productsbatchcreateCreate builder with application/json body
+func NewPostcrmobjects202603productsbatchcreateCreateRequest(server string, body Postcrmobjects202603productsbatchcreateCreateJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcrmobjects202603productsbatchcreateCreateRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewPostcrmobjects202603productsbatchcreateCreateRequestWithBody constructs an http.Request for the Postcrmobjects202603productsbatchcreateCreate method, with any body, and a specified content type
+func NewPostcrmobjects202603productsbatchcreateCreateRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/crm/objects/2026-03/products/batch/create")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewPostcrmobjects202603productsbatchreadReadRequest calls the generic Postcrmobjects202603productsbatchreadRead builder with application/json body
+func NewPostcrmobjects202603productsbatchreadReadRequest(server string, params *Postcrmobjects202603productsbatchreadReadParams, body Postcrmobjects202603productsbatchreadReadJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcrmobjects202603productsbatchreadReadRequestWithBody(server, params, "application/json", bodyReader)
+}
+
+// NewPostcrmobjects202603productsbatchreadReadRequestWithBody constructs an http.Request for the Postcrmobjects202603productsbatchreadRead method, with any body, and a specified content type
+func NewPostcrmobjects202603productsbatchreadReadRequestWithBody(server string, params *Postcrmobjects202603productsbatchreadReadParams, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/crm/objects/2026-03/products/batch/read")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.Archived != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "archived", *params.Archived, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "boolean", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewPostcrmobjects202603productsbatchupdateUpdateRequest calls the generic Postcrmobjects202603productsbatchupdateUpdate builder with application/json body
+func NewPostcrmobjects202603productsbatchupdateUpdateRequest(server string, body Postcrmobjects202603productsbatchupdateUpdateJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcrmobjects202603productsbatchupdateUpdateRequestWithBody(server, "application/json", bodyReader)
 }

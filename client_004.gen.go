@@ -7,6825 +7,9 @@ import (
 	"encoding/json"
 	"time"
 
+	"github.com/oapi-codegen/runtime"
 	openapi_types "github.com/oapi-codegen/runtime/types"
 )
-
-// ActionResponseWithResultsSubscriptionDefinitionStatus The current status of the operation, which can be PENDING, PROCESSING, CANCELED, or COMPLETE.
-type ActionResponseWithResultsSubscriptionDefinitionStatus string
-
-// ActionResponseWithSingleResultURI defines model for ActionResponseWithSingleResultURI.
-type ActionResponseWithSingleResultURI struct {
-	// CompletedAt The timestamp when the export was completed, in ISO 8601 format.
-	CompletedAt time.Time `json:"completedAt"`
-
-	// Errors An array of StandardError objects detailing any errors that occurred during the export task.
-	Errors *[]StandardError `json:"errors,omitempty"`
-
-	// Links A collection of related links associated with the export.
-	Links *map[string]string `json:"links,omitempty"`
-
-	// NumErrors The number of errors encountered during the export process.
-	NumErrors *int32 `json:"numErrors,omitempty"`
-
-	// RequestedAt The timestamp when the export request was made, in ISO 8601 format.
-	RequestedAt *time.Time `json:"requestedAt,omitempty"`
-
-	// Result The URL of the resulting file if the export status is COMPLETE.
-	Result *string `json:"result,omitempty"`
-
-	// StartedAt The timestamp when the export process started, in ISO 8601 format.
-	StartedAt time.Time `json:"startedAt"`
-
-	// Status The current status of the export, which can be PENDING, PROCESSING, COMPLETE or CANCELED.
-	Status ActionResponseWithSingleResultURIStatus `json:"status"`
-}
-
-// ActionResponseWithSingleResultURIStatus The current status of the export, which can be PENDING, PROCESSING, COMPLETE or CANCELED.
-type ActionResponseWithSingleResultURIStatus string
-
-// AggregateEmailStatistics defines model for AggregateEmailStatistics.
-type AggregateEmailStatistics struct {
-	Aggregate EmailStatisticsData `json:"aggregate"`
-
-	// CampaignAggregations The aggregated statistics per campaign.
-	CampaignAggregations map[string]EmailStatisticsData `json:"campaignAggregations"`
-
-	// Emails List of email IDs that were sent during the time span.
-	Emails []int64 `json:"emails"`
-}
-
-// AllHistoryRefineBy defines model for AllHistoryRefineBy.
-type AllHistoryRefineBy struct {
-	// Type A string that indicates the type of refinement. The default and only valid value is 'AllHistoryRefineBy'.
-	Type AllHistoryRefineByType `json:"type"`
-}
-
-// AllHistoryRefineByType A string that indicates the type of refinement. The default and only valid value is 'AllHistoryRefineBy'.
-type AllHistoryRefineByType string
-
-// AllPropertyTypesOperation defines model for AllPropertyTypesOperation.
-type AllPropertyTypesOperation struct {
-	// CoalescingRefineBy An object that specifies additional refinement criteria for coalescing, which can be one of several types such as NumOccurrencesRefineBy or SetOccurrencesRefineBy.
-	CoalescingRefineBy AllPropertyTypesOperation_CoalescingRefineBy `json:"coalescingRefineBy"`
-
-	// DefaultValue A string specifying the default value to be used in the operation.
-	DefaultValue *string `json:"defaultValue,omitempty"`
-
-	// IncludeObjectsWithNoValueSet A boolean indicating whether objects with no value set should be included in the operation.
-	IncludeObjectsWithNoValueSet bool `json:"includeObjectsWithNoValueSet"`
-
-	// OperationType A string indicating the type of operation being performed.
-	OperationType string `json:"operationType"`
-
-	// Operator A string representing the operation to be performed, with valid values including 'IS_KNOWN', 'IS_UNKNOWN', 'IS_BLANK', and 'IS_NOT_BLANK'.
-	Operator AllPropertyTypesOperationOperator `json:"operator"`
-
-	// OperatorName A string representing the name of the operator used in the operation.
-	OperatorName   string          `json:"operatorName"`
-	PropertyAspect *PropertyAspect `json:"propertyAspect,omitempty"`
-
-	// PropertyType A string indicating the type of property operation, which is 'alltypes' for this component.
-	PropertyType AllPropertyTypesOperationPropertyType `json:"propertyType"`
-
-	// PruningRefineBy An object that specifies additional refinement criteria for pruning, which can be one of several types such as RelativeComparativeTimestampRefineBy or AbsoluteRangedTimestampRefineBy.
-	PruningRefineBy *AllPropertyTypesOperation_PruningRefineBy `json:"pruningRefineBy,omitempty"`
-
-	// RenderSpec A string that provides rendering specifications for the operation.
-	RenderSpec *string `json:"renderSpec,omitempty"`
-}
-
-// AllPropertyTypesOperation_CoalescingRefineBy An object that specifies additional refinement criteria for coalescing, which can be one of several types such as NumOccurrencesRefineBy or SetOccurrencesRefineBy.
-type AllPropertyTypesOperation_CoalescingRefineBy struct {
-	union json.RawMessage
-}
-
-// AllPropertyTypesOperationOperator A string representing the operation to be performed, with valid values including 'IS_KNOWN', 'IS_UNKNOWN', 'IS_BLANK', and 'IS_NOT_BLANK'.
-type AllPropertyTypesOperationOperator string
-
-// AllPropertyTypesOperationPropertyType A string indicating the type of property operation, which is 'alltypes' for this component.
-type AllPropertyTypesOperationPropertyType string
-
-// AllPropertyTypesOperation_PruningRefineBy An object that specifies additional refinement criteria for pruning, which can be one of several types such as RelativeComparativeTimestampRefineBy or AbsoluteRangedTimestampRefineBy.
-type AllPropertyTypesOperation_PruningRefineBy struct {
-	union json.RawMessage
-}
-
-// Angle defines model for Angle.
-type Angle struct {
-	// Units The unit of measurement for the angle.
-	Units AngleUnits `json:"units"`
-
-	// Value The numerical representation of the angle.
-	Value float64 `json:"value"`
-}
-
-// AngleUnits The unit of measurement for the angle.
-type AngleUnits string
-
-// ApiCollectionResponseJoinTimeAndRecordId defines model for ApiCollectionResponseJoinTimeAndRecordId.
-type ApiCollectionResponseJoinTimeAndRecordId struct {
-	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
-	Paging  *Paging               `json:"paging,omitempty"`
-	Results []JoinTimeAndRecordId `json:"results"`
-
-	// Total The total number of records that match the query.
-	Total *int64 `json:"total,omitempty"`
-}
-
-// ApiCollectionResponseRecordListMembership defines model for ApiCollectionResponseRecordListMembership.
-type ApiCollectionResponseRecordListMembership struct {
-	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
-	Paging  *Paging                `json:"paging,omitempty"`
-	Results []RecordListMembership `json:"results"`
-	Total   *int64                 `json:"total,omitempty"`
-}
-
-// ApiUsage defines model for ApiUsage.
-type ApiUsage struct {
-	// CollectedAt Indicates when the cache was last updated.
-	CollectedAt time.Time `json:"collectedAt"`
-
-	// CurrentUsage How many API calls an account has made for the current day.
-	CurrentUsage int32 `json:"currentUsage"`
-
-	// FetchStatus Status of fetching the information, including if the data came from the cache.
-	FetchStatus ApiUsageFetchStatus `json:"fetchStatus"`
-
-	// Name Name of the limit type.
-	Name string `json:"name"`
-
-	// ResetsAt Time that the limit will reset.
-	ResetsAt *time.Time `json:"resetsAt,omitempty"`
-
-	// UsageLimit Limits by which a single integration can consume the HubSpot public APIs.
-	UsageLimit int32 `json:"usageLimit"`
-}
-
-// ApiUsageFetchStatus Status of fetching the information, including if the data came from the cache.
-type ApiUsageFetchStatus string
-
-// AppEventOccurrence defines model for AppEventOccurrence.
-type AppEventOccurrence struct {
-	// Domain The domain associated with the event occurrence, represented as a string.
-	Domain *string `json:"domain,omitempty"`
-
-	// Email The email address associated with the event occurrence, represented as a string.
-	Email *string `json:"email,omitempty"`
-
-	// EventTypeName The name of the event type, represented as a string.
-	EventTypeName string `json:"eventTypeName"`
-
-	// ExtraData An object containing additional data related to the event occurrence.
-	ExtraData *map[string]interface{} `json:"extraData,omitempty"`
-
-	// Id The unique identifier for this event occurrence, represented as a string.
-	Id string `json:"id"`
-
-	// ObjectId The unique identifier of the object related to the event, represented as a string.
-	ObjectId *string `json:"objectId,omitempty"`
-
-	// ObjectTypeFullyQualifiedName The fully qualified name of the object type associated with the event, represented as a string.
-	ObjectTypeFullyQualifiedName *string `json:"objectTypeFullyQualifiedName,omitempty"`
-
-	// Properties A map of custom property names to their values, represented as an object with string values.
-	Properties     map[string]string    `json:"properties"`
-	TimelineIFrame *TimelineEventIFrame `json:"timelineIFrame,omitempty"`
-
-	// Timestamp The date and time when the event occurred, represented in ISO 8601 format.
-	Timestamp *time.Time `json:"timestamp,omitempty"`
-
-	// Utk The user token key (utk) associated with the event, represented as a string.
-	Utk *string `json:"utk,omitempty"`
-}
-
-// AppEventResolutionResponse defines model for AppEventResolutionResponse.
-type AppEventResolutionResponse struct {
-	DeveloperQualifiedSymbol DeveloperQualifiedSymbol `json:"developerQualifiedSymbol"`
-
-	// FullyQualifiedName A string representing the fully qualified name of the App Event Type.
-	FullyQualifiedName string `json:"fullyQualifiedName"`
-}
-
-// AppInfo defines model for AppInfo.
-type AppInfo struct {
-	// Id The ID of the application
-	Id string `json:"id"`
-
-	// Name The name of the application
-	Name string `json:"name"`
-}
-
-// AppLifecycleEventSubscriptionUpsertRequest defines model for AppLifecycleEventSubscriptionUpsertRequest.
-type AppLifecycleEventSubscriptionUpsertRequest struct {
-	// EventTypeId A string representing the unique identifier for the event type that the subscription pertains to. This value corresponds to an internal event classification at HubSpot.
-	//
-	// 4-1909196: App install event
-	// 4-1916193: App uninstall event
-	EventTypeId string `json:"eventTypeId"`
-
-	// Properties An array of strings specifying the properties of the event associated with the subscription.
-	Properties []string `json:"properties"`
-
-	// SubscriptionType A string indicating the type of subscription, which is 'APP_LIFECYCLE_EVENT' by default.
-	SubscriptionType AppLifecycleEventSubscriptionUpsertRequestSubscriptionType `json:"subscriptionType"`
-}
-
-// AppLifecycleEventSubscriptionUpsertRequestSubscriptionType A string indicating the type of subscription, which is 'APP_LIFECYCLE_EVENT' by default.
-type AppLifecycleEventSubscriptionUpsertRequestSubscriptionType string
-
-// ArrayFieldSchema defines model for ArrayFieldSchema.
-type ArrayFieldSchema struct {
-	// Items Defines the type of elements contained within the array, which can be an integer, long, double, string, boolean, another array, or an object.
-	Items ArrayFieldSchema_Items `json:"items"`
-
-	// Type Specifies that the field is of type 'ARRAY'.
-	Type ArrayFieldSchemaType `json:"type"`
-}
-
-// ArrayFieldSchema_Items Defines the type of elements contained within the array, which can be an integer, long, double, string, boolean, another array, or an object.
-type ArrayFieldSchema_Items struct {
-	union json.RawMessage
-}
-
-// ArrayFieldSchemaType Specifies that the field is of type 'ARRAY'.
-type ArrayFieldSchemaType string
-
-// AssetFileMetadata defines model for AssetFileMetadata.
-type AssetFileMetadata struct {
-	// ArchivedAt Timestamp of when the object was archived (deleted).
-	ArchivedAt *int64 `json:"archivedAt,omitempty"`
-
-	// Children If the object is a folder, contains the filenames of the files within the folder.
-	Children *[]string `json:"children,omitempty"`
-
-	// CreatedAt Timestamp of when the object was first created.
-	CreatedAt int64 `json:"createdAt"`
-
-	// Folder Determines whether or not this path points to a folder.
-	Folder bool `json:"folder"`
-
-	// Hash A unique identifier for the file's content, used to verify data integrity.
-	Hash *string `json:"hash,omitempty"`
-
-	// Id The path of the file in the CMS Developer File System.
-	Id string `json:"id"`
-
-	// Name The name of the file.
-	Name string `json:"name"`
-
-	// UpdatedAt Timestamp of when the object was last updated.
-	UpdatedAt int64 `json:"updatedAt"`
-}
-
-// AssociatedId Contains the id and type of an association
-type AssociatedId struct {
-	// Id The unique identifier for the associated object.
-	Id string `json:"id"`
-
-	// Type The type of associations.
-	//
-	// Example: deal_to_contact
-	Type string `json:"type"`
-}
-
-// AssociationDefinition The definition of an association
-type AssociationDefinition struct {
-	// CreatedAt The date and time when this association definition was created, in ISO 8601 format.
-	CreatedAt *time.Time `json:"createdAt,omitempty"`
-
-	// FromObjectTypeId The unique identifier of the object type from which the association originates.
-	FromObjectTypeId string `json:"fromObjectTypeId"`
-
-	// Id The unique identifier for this association definition.
-	Id string `json:"id"`
-
-	// Name The name of the association, which serves as a human-readable identifier.
-	Name *string `json:"name,omitempty"`
-
-	// ToObjectTypeId The unique identifier of the object type to which the association points.
-	ToObjectTypeId string `json:"toObjectTypeId"`
-
-	// UpdatedAt The date and time when this association definition was last updated, in ISO 8601 format.
-	UpdatedAt *time.Time `json:"updatedAt,omitempty"`
-}
-
-// AssociationDefinitionEgg defines model for AssociationDefinitionEgg.
-type AssociationDefinitionEgg struct {
-	// FromObjectTypeId The unique identifier for the object type from which the association originates.
-	FromObjectTypeId string `json:"fromObjectTypeId"`
-
-	// Name The name of the association, used to identify and reference the relationship.
-	Name *string `json:"name,omitempty"`
-
-	// ToObjectTypeId The unique identifier for the object type to which the association is directed.
-	ToObjectTypeId string `json:"toObjectTypeId"`
-}
-
-// AssociationLabelLimitResponse defines model for AssociationLabelLimitResponse.
-type AssociationLabelLimitResponse struct {
-	// AllLabels A list of all association labels.
-	AllLabels      []string                           `json:"allLabels"`
-	FromObjectType LimitsTrackingObjectTypeDefinition `json:"fromObjectType"`
-
-	// Limit The maximum number of association labels allowed.
-	Limit int64 `json:"limit"`
-
-	// Percentage The percentage of the association label limit that has been used.
-	Percentage   float64                            `json:"percentage"`
-	ToObjectType LimitsTrackingObjectTypeDefinition `json:"toObjectType"`
-
-	// Usage The current number of association labels used.
-	Usage int64 `json:"usage"`
-}
-
-// AssociationRecordLimitResponse defines model for AssociationRecordLimitResponse.
-type AssociationRecordLimitResponse struct {
-	// AtLimitFromRecordSamples An array of AtLimitRecordSample objects, each representing a sample record that is at the association limit.
-	AtLimitFromRecordSamples []AtLimitRecordSample `json:"atLimitFromRecordSamples"`
-
-	// Limit The maximum number of associations allowed for records.
-	Limit int64 `json:"limit"`
-
-	// NearLimitFromRecordSamples An array of NearLimitRecordSample objects, each representing a sample record that is near the association limit.
-	NearLimitFromRecordSamples []NearLimitRecordSample `json:"nearLimitFromRecordSamples"`
-
-	// TotalRecordsAtLimit The total number of records that have reached their association limit.
-	TotalRecordsAtLimit int32 `json:"totalRecordsAtLimit"`
-
-	// TotalRecordsNearLimit The total number of records that are approaching their association limit.
-	TotalRecordsNearLimit int32 `json:"totalRecordsNearLimit"`
-}
-
-// AssociationSpec Defines the type, direction, and details of the relationship between two CRM objects.
-type AssociationSpec struct {
-	// AssociationCategory The category of the association, indicating its origin or purpose. Valid values include "HUBSPOT_DEFINED", "USER_DEFINED", "INTEGRATOR_DEFINED", and "WORK".
-	AssociationCategory AssociationSpecAssociationCategory `json:"associationCategory"`
-
-	// AssociationTypeId An integer representing the unique identifier for the type of association.
-	AssociationTypeId int32 `json:"associationTypeId"`
-}
-
-// AssociationSpecAssociationCategory The category of the association, indicating its origin or purpose. Valid values include "HUBSPOT_DEFINED", "USER_DEFINED", "INTEGRATOR_DEFINED", and "WORK".
-type AssociationSpecAssociationCategory string
-
-// AssociationSpecWithLabel Defines the type, direction, and details of the relationship between two CRM objects.
-type AssociationSpecWithLabel struct {
-	// Category The category of the association, such as 'HUBSPOT_DEFINED', 'USER_DEFINED', or 'INTEGRATOR_DEFINED'.
-	Category         AssociationSpecWithLabelCategory `json:"category"`
-	FromObjectTypeId *string                          `json:"fromObjectTypeId,omitempty"`
-
-	// Label The label associated with the type of association.
-	Label          *string `json:"label,omitempty"`
-	ToObjectTypeId *string `json:"toObjectTypeId,omitempty"`
-
-	// TypeId The ID representing the specific type of association.
-	TypeId int32 `json:"typeId"`
-}
-
-// AssociationSpecWithLabelCategory The category of the association, such as 'HUBSPOT_DEFINED', 'USER_DEFINED', or 'INTEGRATOR_DEFINED'.
-type AssociationSpecWithLabelCategory string
-
-// AssociationSubscriptionUpsertRequest defines model for AssociationSubscriptionUpsertRequest.
-type AssociationSubscriptionUpsertRequest struct {
-	// Actions An array of strings specifying the actions that trigger the subscription. Valid actions include  'ASSOCIATION_ADDED' and 'ASSOCIATION_REMOVED'.
-	Actions []AssociationSubscriptionUpsertRequestActions `json:"actions"`
-
-	// AssociatedObjectTypeIds An array of strings representing the type identifiers of the associated objects involved in the subscription. If present, events will only fire if the TO objectTypeId in the association is included in this array.
-	AssociatedObjectTypeIds []string `json:"associatedObjectTypeIds"`
-
-	// ObjectIds An array of integers representing the unique identifiers of the objects involved in the subscription.
-	ObjectIds []int64 `json:"objectIds"`
-
-	// ObjectTypeId A string representing the type identifier of the object involved in the subscription. For example "0-1" for Contacts. This corresponds to the FROM side of the association. An objectTypeId of "0-1" would match a CONTACT_TO_COMPANY association change.
-	ObjectTypeId string `json:"objectTypeId"`
-
-	// PortalId An integer representing the unique identifier of the HubSpot portal.
-	PortalId int64 `json:"portalId"`
-
-	// SubscriptionType A string indicating the type of subscription, which is 'ASSOCIATION' by default.
-	SubscriptionType AssociationSubscriptionUpsertRequestSubscriptionType `json:"subscriptionType"`
-}
-
-// AssociationSubscriptionUpsertRequestActions defines model for AssociationSubscriptionUpsertRequest.Actions.
-type AssociationSubscriptionUpsertRequestActions string
-
-// AssociationSubscriptionUpsertRequestSubscriptionType A string indicating the type of subscription, which is 'ASSOCIATION' by default.
-type AssociationSubscriptionUpsertRequestSubscriptionType string
-
-// AtLimitRecordSample defines model for AtLimitRecordSample.
-type AtLimitRecordSample struct {
-	// Label The label associated with a record that is at its limit.
-	Label string `json:"label"`
-
-	// ObjectId The objectId of the object that is at its limit.
-	ObjectId int64 `json:"objectId"`
-}
-
-// AttachToLangPrimaryRequestVNext defines model for AttachToLangPrimaryRequestVNext.
-type AttachToLangPrimaryRequestVNext struct {
-	// Id ID of the object to add to a multi-language group.
-	Id string `json:"id"`
-
-	// Language Designated language of the object to add to a multi-language group.
-	Language AttachToLangPrimaryRequestVNextLanguage `json:"language"`
-
-	// PrimaryId ID of primary language object in multi-language group.
-	PrimaryId string `json:"primaryId"`
-
-	// PrimaryLanguage Primary language of the multi-language group.
-	PrimaryLanguage *AttachToLangPrimaryRequestVNextPrimaryLanguage `json:"primaryLanguage,omitempty"`
-}
-
-// AttachToLangPrimaryRequestVNextLanguage Designated language of the object to add to a multi-language group.
-type AttachToLangPrimaryRequestVNextLanguage string
-
-// AttachToLangPrimaryRequestVNextPrimaryLanguage Primary language of the multi-language group.
-type AttachToLangPrimaryRequestVNextPrimaryLanguage string
-
-// AttendanceCounters defines model for AttendanceCounters.
-type AttendanceCounters struct {
-	// Attended Number of attended contact records of a marketing event
-	Attended int32 `json:"attended"`
-
-	// Cancelled Number of cancelled contact records of a marketing event
-	Cancelled int32 `json:"cancelled"`
-
-	// NoShows Number of no-show contact records of a marketing event
-	NoShows int32 `json:"noShows"`
-
-	// Registered Number of registered contact records of a marketing event
-	Registered int32 `json:"registered"`
-}
-
-// AttentionSpanCalculatedValues defines model for AttentionSpanCalculatedValues.
-type AttentionSpanCalculatedValues struct {
-	// TotalPercentPlayed The percentage of the media content that was played. This is a numerical value indicating how much of the total content was viewed, expressed as a percentage.
-	TotalPercentPlayed float64 `json:"totalPercentPlayed"`
-
-	// TotalSecondsPlayed The total duration in seconds that the media content was played. This is a numerical value representing the cumulative playtime.
-	TotalSecondsPlayed int32 `json:"totalSecondsPlayed"`
-}
-
-// AttentionSpanEvent defines model for AttentionSpanEvent.
-type AttentionSpanEvent struct {
-	// ContactId A string representing the unique identifier for the contact associated with the event.
-	ContactId int64 `json:"contactId"`
-
-	// ExternalPlayContext A string providing additional context about the play event from an external source.
-	ExternalPlayContext *AttentionSpanEventExternalPlayContext `json:"externalPlayContext,omitempty"`
-
-	// MediaBridgeId A string representing the unique identifier for the media bridge instance.
-	MediaBridgeId int64 `json:"mediaBridgeId"`
-
-	// MediaBridgeObjectCoordinates A string detailing the coordinates of the media bridge object.
-	MediaBridgeObjectCoordinates string `json:"mediaBridgeObjectCoordinates"`
-
-	// MediaBridgeObjectTypeId A string representing the type identifier for the media bridge object.
-	MediaBridgeObjectTypeId string `json:"mediaBridgeObjectTypeId"`
-
-	// MediaName A string representing the name of the media content.
-	MediaName string `json:"mediaName"`
-
-	// MediaType A string indicating the type of media involved in the event, such as 'VIDEO', 'AUDIO', etc.
-	MediaType AttentionSpanEventMediaType `json:"mediaType"`
-
-	// MediaUrl A string containing the URL of the media content.
-	MediaUrl *string `json:"mediaUrl,omitempty"`
-
-	// OccurredTimestamp A string representing the timestamp of when the event occurred, in ISO 8601 format.
-	OccurredTimestamp int64 `json:"occurredTimestamp"`
-
-	// PageId A string representing the unique identifier for the page.
-	PageId *int64 `json:"pageId,omitempty"`
-
-	// PageName A string representing the name of the page where the media was accessed.
-	PageName *string `json:"pageName,omitempty"`
-
-	// PageObjectCoordinates A string detailing the coordinates of the page object.
-	PageObjectCoordinates *string `json:"pageObjectCoordinates,omitempty"`
-
-	// PageUrl A string containing the URL of the page where the media was accessed.
-	PageUrl *string `json:"pageUrl,omitempty"`
-
-	// PercentRange A string indicating the range of percentages that were played during the session.
-	PercentRange string `json:"percentRange"`
-
-	// PortalId An integer representing the unique identifier for the HubSpot portal.
-	PortalId int32 `json:"portalId"`
-
-	// ProviderId A string representing the unique identifier for the media provider.
-	ProviderId int32 `json:"providerId"`
-
-	// RawData A string containing raw data associated with the event.
-	RawData *string `json:"rawData,omitempty"`
-
-	// SessionId A string representing the unique identifier for the session during which the media was played.
-	SessionId string `json:"sessionId"`
-
-	// TotalPercentPlayed A number indicating the total percentage of the media that was played.
-	TotalPercentPlayed float64 `json:"totalPercentPlayed"`
-
-	// TotalSecondsPlayed A number representing the total seconds of media that were played.
-	TotalSecondsPlayed *int32 `json:"totalSecondsPlayed,omitempty"`
-}
-
-// AttentionSpanEventExternalPlayContext A string providing additional context about the play event from an external source.
-type AttentionSpanEventExternalPlayContext string
-
-// AttentionSpanEventMediaType A string indicating the type of media involved in the event, such as 'VIDEO', 'AUDIO', etc.
-type AttentionSpanEventMediaType string
-
-// AttentionSpanEventRequest defines model for AttentionSpanEventRequest.
-type AttentionSpanEventRequest struct {
-	// UnderscoreHsenc An encoded string used for HubSpot-specific encoding purposes.
-	UnderscoreHsenc *string `json:"_hsenc,omitempty"`
-
-	// ContactId The unique identifier for the contact associated with the event.
-	ContactId *int64 `json:"contactId,omitempty"`
-
-	// ContactUtk The unique tracking key for the contact, used for tracking purposes.
-	ContactUtk    *string                        `json:"contactUtk,omitempty"`
-	DerivedValues *AttentionSpanCalculatedValues `json:"derivedValues,omitempty"`
-
-	// ExternalId An external identifier for the event, typically used to correlate with external systems.
-	ExternalId *string `json:"externalId,omitempty"`
-
-	// ExternalPlayContext Additional context about the play event, typically used for external integrations.
-	ExternalPlayContext *AttentionSpanEventRequestExternalPlayContext `json:"externalPlayContext,omitempty"`
-
-	// MediaBridgeId The unique identifier for the media bridge instance.
-	MediaBridgeId *int64 `json:"mediaBridgeId,omitempty"`
-
-	// MediaName The name of the media involved in the event.
-	MediaName *string `json:"mediaName,omitempty"`
-
-	// MediaType The type of media involved in the event. Valid values include 'VIDEO', 'AUDIO', 'DOCUMENT', 'OTHER', and 'IMAGE'.
-	MediaType AttentionSpanEventRequestMediaType `json:"mediaType"`
-
-	// MediaUrl The URL of the media involved in the event.
-	MediaUrl *string `json:"mediaUrl,omitempty"`
-
-	// OccurredTimestamp The timestamp when the event occurred, represented as a Unix timestamp in milliseconds.
-	OccurredTimestamp int64 `json:"occurredTimestamp"`
-
-	// PageId The unique identifier for the page where the event occurred.
-	PageId *int64 `json:"pageId,omitempty"`
-
-	// PageName The name of the page where the event occurred.
-	PageName *string `json:"pageName,omitempty"`
-
-	// PageUrl The URL of the page where the event occurred.
-	PageUrl *string `json:"pageUrl,omitempty"`
-
-	// RawDataMap A map of raw data key-value pairs providing additional context about the event.
-	RawDataMap map[string]int32 `json:"rawDataMap"`
-
-	// RawDataString A raw data string containing additional information about the event.
-	RawDataString *string `json:"rawDataString,omitempty"`
-
-	// SessionId The unique identifier for the session during which the event occurred.
-	SessionId string `json:"sessionId"`
-}
-
-// AttentionSpanEventRequestExternalPlayContext Additional context about the play event, typically used for external integrations.
-type AttentionSpanEventRequestExternalPlayContext string
-
-// AttentionSpanEventRequestMediaType The type of media involved in the event. Valid values include 'VIDEO', 'AUDIO', 'DOCUMENT', 'OTHER', and 'IMAGE'.
-type AttentionSpanEventRequestMediaType string
-
-// AutomationActionsV4Option A HubSpot property option
-type AutomationActionsV4Option struct {
-	// Description A string providing additional details about the option.
-	Description string `json:"description"`
-
-	// DisplayOrder An integer indicating the order in which the option should be displayed relative to other options.
-	DisplayOrder int32 `json:"displayOrder"`
-
-	// DoubleData A numerical value associated with the option.
-	DoubleData float64 `json:"doubleData"`
-
-	// Hidden A boolean indicating whether the option is hidden from the user interface.
-	Hidden bool `json:"hidden"`
-
-	// Label The display name of the option, shown to users. It is a string.
-	Label string `json:"label"`
-
-	// ReadOnly A boolean indicating whether the option is read-only and cannot be modified.
-	ReadOnly bool `json:"readOnly"`
-
-	// Value The internal value of the option, used in data processing. It is a string.
-	Value string `json:"value"`
-}
-
-// BackgroundImage defines model for BackgroundImage.
-type BackgroundImage struct {
-	// BackgroundPosition Defines the position of the background image.
-	BackgroundPosition string `json:"backgroundPosition"`
-
-	// BackgroundSize Specifies the size of the background image.
-	BackgroundSize string `json:"backgroundSize"`
-
-	// ImageUrl The URL of the background image.
-	ImageUrl string `json:"imageUrl"`
-}
-
-// BatchInputAppEventOccurrence defines model for BatchInputAppEventOccurrence.
-type BatchInputAppEventOccurrence struct {
-	// Inputs An array of AppEventOccurrence objects, each representing an individual app event occurrence to be included in the batch. This property is required.
-	Inputs []AppEventOccurrence `json:"inputs"`
-}
-
-// BatchInputBlogAuthor defines model for BatchInputBlogAuthor.
-type BatchInputBlogAuthor struct {
-	// Inputs Blog authors to input.
-	Inputs []BlogAuthor `json:"inputs"`
-}
-
-// BatchInputBlogPost defines model for BatchInputBlogPost.
-type BatchInputBlogPost struct {
-	// Inputs Blog posts to input.
-	Inputs []BlogPost `json:"inputs"`
-}
-
-// BatchInputCallbackCompletionBatchRequest defines model for BatchInputCallbackCompletionBatchRequest.
-type BatchInputCallbackCompletionBatchRequest struct {
-	// Inputs An array of CallbackCompletionBatchRequest objects, each representing a single callback completion request. This property is required.
-	Inputs []CallbackCompletionBatchRequest `json:"inputs"`
-}
-
-// BatchInputContentFolder defines model for BatchInputContentFolder.
-type BatchInputContentFolder struct {
-	// Inputs Content folders to input.
-	Inputs []ContentFolder `json:"inputs"`
-}
-
-// BatchInputExchangeRateCreateRequest defines model for BatchInputExchangeRateCreateRequest.
-type BatchInputExchangeRateCreateRequest struct {
-	// Inputs An array of ExchangeRateCreateRequest objects, each representing the details required to create a single exchange rate. This includes properties like fromCurrencyCode, conversionRate, and effectiveAt.
-	Inputs []ExchangeRateCreateRequest `json:"inputs"`
-}
-
-// BatchInputExchangeRateUpdateRequest defines model for BatchInputExchangeRateUpdateRequest.
-type BatchInputExchangeRateUpdateRequest struct {
-	// Inputs An array of ExchangeRateUpdateRequest objects, each representing an individual exchange rate update. This array is required and contains the details of each exchange rate to be updated, including the conversion rate and the effective date.
-	Inputs []ExchangeRateUpdateRequest `json:"inputs"`
-}
-
-// BatchInputHubDbTableRowBatchCloneRequest defines model for BatchInputHubDbTableRowBatchCloneRequest.
-type BatchInputHubDbTableRowBatchCloneRequest struct {
-	// Inputs An array of HubDbTableRowBatchCloneRequest objects, each specifying the details of a row to be cloned. This property is required.
-	Inputs []HubDbTableRowBatchCloneRequest `json:"inputs"`
-}
-
-// BatchInputHubDbTableRowV3BatchUpdateRequest defines model for BatchInputHubDbTableRowV3BatchUpdateRequest.
-type BatchInputHubDbTableRowV3BatchUpdateRequest struct {
-	// Inputs An array of HubDbTableRowV3BatchUpdateRequest objects, each containing details for a row update. This property is required.
-	Inputs []HubDbTableRowV3BatchUpdateRequest `json:"inputs"`
-}
-
-// BatchInputHubDbTableRowV3Request defines model for BatchInputHubDbTableRowV3Request.
-type BatchInputHubDbTableRowV3Request struct {
-	// Inputs An array of HubDbTableRowV3Request objects, each representing a row to be created. This property is required.
-	Inputs []HubDbTableRowV3Request `json:"inputs"`
-}
-
-// BatchInputJsonNode defines model for BatchInputJsonNode.
-type BatchInputJsonNode struct {
-	// Inputs JSON nodes to input.
-	Inputs []map[string]interface{} `json:"inputs"`
-}
-
-// BatchInputMarketingEventCreateRequestParams defines model for BatchInputMarketingEventCreateRequestParams.
-type BatchInputMarketingEventCreateRequestParams struct {
-	// Inputs An array of MarketingEventCreateRequestParams objects, each containing the necessary details to create a marketing event. This includes properties such as event name, organizer, and custom properties.
-	Inputs []MarketingEventCreateRequestParams `json:"inputs"`
-}
-
-// BatchInputMarketingEventEmailSubscriber defines model for BatchInputMarketingEventEmailSubscriber.
-type BatchInputMarketingEventEmailSubscriber struct {
-	// Inputs List of marketing event details to create or update
-	Inputs []MarketingEventEmailSubscriber `json:"inputs"`
-}
-
-// BatchInputMarketingEventExternalUniqueIdentifier defines model for BatchInputMarketingEventExternalUniqueIdentifier.
-type BatchInputMarketingEventExternalUniqueIdentifier struct {
-	// Inputs An array of MarketingEventExternalUniqueIdentifier objects, each representing a unique identifier for a marketing event. This is required for batch operations.
-	Inputs []MarketingEventExternalUniqueIdentifier `json:"inputs"`
-}
-
-// BatchInputMarketingEventPublicObjectIdDeleteRequest defines model for BatchInputMarketingEventPublicObjectIdDeleteRequest.
-type BatchInputMarketingEventPublicObjectIdDeleteRequest struct {
-	// Inputs An array of marketing event public object IDs to be deleted. Each item in the array is a MarketingEventPublicObjectIdDeleteRequest object.
-	Inputs []MarketingEventPublicObjectIdDeleteRequest `json:"inputs"`
-}
-
-// BatchInputMarketingEventPublicUpdateRequestFullV2 defines model for BatchInputMarketingEventPublicUpdateRequestFullV2.
-type BatchInputMarketingEventPublicUpdateRequestFullV2 struct {
-	// Inputs An array of MarketingEventPublicUpdateRequestFullV2 objects, each representing a marketing event update request. This property is required.
-	Inputs []MarketingEventPublicUpdateRequestFullV2 `json:"inputs"`
-}
-
-// BatchInputMarketingEventSubscriber defines model for BatchInputMarketingEventSubscriber.
-type BatchInputMarketingEventSubscriber struct {
-	// Inputs List of HubSpot contacts to subscribe to the marketing event
-	Inputs []MarketingEventSubscriber `json:"inputs"`
-}
-
-// BatchInputPage defines model for BatchInputPage.
-type BatchInputPage struct {
-	// Inputs Pages to input.
-	Inputs []Page `json:"inputs"`
-}
-
-// BatchInputPropertyCreate defines model for BatchInputPropertyCreate.
-type BatchInputPropertyCreate struct {
-	// Inputs An array of PropertyCreate objects, each representing a property to be created. This is a required field.
-	Inputs []PropertyCreate `json:"inputs"`
-}
-
-// BatchInputPropertyName defines model for BatchInputPropertyName.
-type BatchInputPropertyName struct {
-	// Inputs An array of property names to be processed in the batch operation. Each item in the array is expected to be a string representing a property name.
-	Inputs []PropertyName `json:"inputs"`
-}
-
-// BatchInputPublicAssociationDefinitionConfigurationCreateRequest defines model for BatchInputPublicAssociationDefinitionConfigurationCreateRequest.
-type BatchInputPublicAssociationDefinitionConfigurationCreateRequest struct {
-	// Inputs An array of PublicAssociationDefinitionConfigurationCreateRequest objects. Each item in the array specifies the configuration details for creating an association definition.
-	Inputs []PublicAssociationDefinitionConfigurationCreateRequest `json:"inputs"`
-}
-
-// BatchInputPublicAssociationDefinitionConfigurationUpdateRequest defines model for BatchInputPublicAssociationDefinitionConfigurationUpdateRequest.
-type BatchInputPublicAssociationDefinitionConfigurationUpdateRequest struct {
-	// Inputs An array of PublicAssociationDefinitionConfigurationUpdateRequest objects. Each object in the array specifies the configuration details to be updated.
-	Inputs []PublicAssociationDefinitionConfigurationUpdateRequest `json:"inputs"`
-}
-
-// BatchInputPublicAssociationMultiArchive defines model for BatchInputPublicAssociationMultiArchive.
-type BatchInputPublicAssociationMultiArchive struct {
-	Inputs []PublicAssociationMultiArchive `json:"inputs"`
-}
-
-// BatchInputPublicAssociationMultiPost defines model for BatchInputPublicAssociationMultiPost.
-type BatchInputPublicAssociationMultiPost struct {
-	Inputs []PublicAssociationMultiPost `json:"inputs"`
-}
-
-// BatchInputPublicAssociationSpec defines model for BatchInputPublicAssociationSpec.
-type BatchInputPublicAssociationSpec struct {
-	// Inputs An array of PublicAssociationSpec objects, each defining the specifications for an association. This property is required and allows multiple association specifications to be processed in a single batch operation.
-	Inputs []PublicAssociationSpec `json:"inputs"`
-}
-
-// BatchInputPublicCampaignBatchUpdateItem defines model for BatchInputPublicCampaignBatchUpdateItem.
-type BatchInputPublicCampaignBatchUpdateItem struct {
-	// Inputs An array of PublicCampaignBatchUpdateItem objects, each containing the ID and properties to update for a specific campaign.
-	Inputs []PublicCampaignBatchUpdateItem `json:"inputs"`
-}
-
-// BatchInputPublicCampaignDeleteInput defines model for BatchInputPublicCampaignDeleteInput.
-type BatchInputPublicCampaignDeleteInput struct {
-	// Inputs An array of PublicCampaignDeleteInput objects, each specifying a campaign to be deleted. Each object must include the campaign's unique identifier.
-	Inputs []PublicCampaignDeleteInput `json:"inputs"`
-}
-
-// BatchInputPublicCampaignInput defines model for BatchInputPublicCampaignInput.
-type BatchInputPublicCampaignInput struct {
-	// Inputs An array of PublicCampaignInput objects, each representing the properties of a campaign to be created in the batch. This property is required.
-	Inputs []PublicCampaignInput `json:"inputs"`
-}
-
-// BatchInputPublicCampaignReadInput defines model for BatchInputPublicCampaignReadInput.
-type BatchInputPublicCampaignReadInput struct {
-	// Inputs An array of PublicCampaignReadInput objects, each containing the ID of a campaign to be read. This property is required.
-	Inputs []PublicCampaignReadInput `json:"inputs"`
-}
-
-// BatchInputPublicDefaultAssociationMultiPost defines model for BatchInputPublicDefaultAssociationMultiPost.
-type BatchInputPublicDefaultAssociationMultiPost struct {
-	Inputs []PublicDefaultAssociationMultiPost `json:"inputs"`
-}
-
-// BatchInputPublicFetchAssociationsBatchRequest defines model for BatchInputPublicFetchAssociationsBatchRequest.
-type BatchInputPublicFetchAssociationsBatchRequest struct {
-	Inputs []PublicFetchAssociationsBatchRequest `json:"inputs"`
-}
-
-// BatchInputPublicObjectId defines model for BatchInputPublicObjectId.
-type BatchInputPublicObjectId struct {
-	// Inputs An array of deal split inputs
-	Inputs []PublicObjectId `json:"inputs"`
-}
-
-// BatchInputPublicStatusRequest defines model for BatchInputPublicStatusRequest.
-type BatchInputPublicStatusRequest struct {
-	// Inputs An array of PublicStatusRequest objects, each representing a subscription status update request. This property is required.
-	Inputs []PublicStatusRequest `json:"inputs"`
-}
-
-// BatchInputRecordIdInput defines model for BatchInputRecordIdInput.
-type BatchInputRecordIdInput struct {
-	Inputs []RecordIdInput `json:"inputs"`
-}
-
-// BatchInputSimplePublicObjectBatchInput Represents a batch input component used to handle multiple simple public objects in a single API request. This component is typically used when performing batch operations to create, update, or delete multiple records simultaneously.
-type BatchInputSimplePublicObjectBatchInput struct {
-	// Inputs An array of simple public objects to be processed in the batch operation. Each object in the array contains the data necessary for the specific operation being performed.
-	Inputs []SimplePublicObjectBatchInput `json:"inputs"`
-}
-
-// BatchInputSimplePublicObjectBatchInputForCreate Represents a batch input for creating multiple simple public objects in a single request. This component is used to streamline the process of adding new objects to a HubSpot account by allowing multiple entries to be created at once.
-type BatchInputSimplePublicObjectBatchInputForCreate struct {
-	// Inputs An array of simple public objects to be created. Each object in the array contains the necessary data for creating a new entry in the system.
-	Inputs []SimplePublicObjectBatchInputForCreate `json:"inputs"`
-}
-
-// BatchInputSimplePublicObjectBatchInputUpsert Represents a batch input operation for upserting simple public objects in HubSpot. This component is used to process multiple upsert operations in a single request, improving efficiency and performance.
-type BatchInputSimplePublicObjectBatchInputUpsert struct {
-	// Inputs An array of simple public objects to be upserted. Each object in the array contains the necessary data for creating or updating a record in HubSpot.
-	Inputs []SimplePublicObjectBatchInputUpsert `json:"inputs"`
-}
-
-// BatchInputSimplePublicObjectId Represents a batch input payload containing a list of simple public object IDs. This component is used when performing batch operations on multiple objects within HubSpot.
-type BatchInputSimplePublicObjectId struct {
-	// Inputs An array of simple public object IDs to be processed in the batch operation.
-	Inputs []SimplePublicObjectId `json:"inputs"`
-}
-
-// BatchInputString defines model for BatchInputString.
-type BatchInputString struct {
-	// Inputs Strings to input.
-	Inputs []string `json:"inputs"`
-}
-
-// BatchInputSubscriptionBatchUpdateRequest defines model for BatchInputSubscriptionBatchUpdateRequest.
-type BatchInputSubscriptionBatchUpdateRequest struct {
-	// Inputs An array of SubscriptionBatchUpdateRequest objects, each representing a subscription to be updated. This property is required.
-	Inputs []SubscriptionBatchUpdateRequest `json:"inputs"`
-}
-
-// BatchInputTag defines model for BatchInputTag.
-type BatchInputTag struct {
-	// Inputs Blog tags to input.
-	Inputs []Tag `json:"inputs"`
-}
-
-// BatchPortalEntry defines model for BatchPortalEntry.
-type BatchPortalEntry struct {
-	// FlagState The flag state for this portal (e.g. ON or OFF)
-	FlagState BatchPortalEntryFlagState `json:"flagState"`
-
-	// PortalId The ID of the portal
-	PortalId int32 `json:"portalId"`
-}
-
-// BatchPortalEntryFlagState The flag state for this portal (e.g. ON or OFF)
-type BatchPortalEntryFlagState string
-
-// BatchReadInputPropertyName defines model for BatchReadInputPropertyName.
-type BatchReadInputPropertyName struct {
-	// Archived A boolean indicating whether to include archived properties in the batch read. Defaults to false if not specified.
-	Archived bool `json:"archived"`
-
-	// DataSensitivity A string representing the sensitivity level of the data being accessed. This property helps in determining the security measures needed for handling the data.
-	DataSensitivity BatchReadInputPropertyNameDataSensitivity `json:"dataSensitivity"`
-
-	// Inputs An array of strings, each representing a property name to be included in the batch read operation.
-	Inputs []PropertyName `json:"inputs"`
-}
-
-// BatchReadInputPropertyNameDataSensitivity A string representing the sensitivity level of the data being accessed. This property helps in determining the security measures needed for handling the data.
-type BatchReadInputPropertyNameDataSensitivity string
-
-// BatchReadInputSimplePublicObjectId Specifies the input for reading a batch of CRM objects, including arrays of object IDs, requested property names (with optional history), and an optional unique identifying property.
-type BatchReadInputSimplePublicObjectId struct {
-	// IdProperty When using a custom unique value property to retrieve records, the name of the property. Do not include this parameter if retrieving by record ID.
-	IdProperty *string `json:"idProperty,omitempty"`
-
-	// Inputs An array of SimplePublicObjectId objects, each containing the ID of an object to be read.
-	Inputs []SimplePublicObjectId `json:"inputs"`
-
-	// Properties An array of the property names to be returned in the response. If a specified property is not present on the requested object(s), it will be ignored.
-	Properties []string `json:"properties"`
-
-	// PropertiesWithHistory An array of the property names to be returned along with their history of previous values. If a specified property is not present on the requested object(s), it will be ignored.
-	PropertiesWithHistory []string `json:"propertiesWithHistory"`
-}
-
-// BatchResponse defines model for BatchResponse.
-type BatchResponse struct {
-	CompletedAt time.Time                `json:"completedAt"`
-	Errors      *[]StandardError         `json:"errors,omitempty"`
-	Links       *map[string]string       `json:"links,omitempty"`
-	NumErrors   *int32                   `json:"numErrors,omitempty"`
-	RequestedAt *time.Time               `json:"requestedAt,omitempty"`
-	Results     []map[string]interface{} `json:"results"`
-	StartedAt   time.Time                `json:"startedAt"`
-	Status      BatchResponseStatus      `json:"status"`
-}
-
-// BatchResponseStatus defines model for BatchResponse.Status.
-type BatchResponseStatus string
-
-// BatchResponseAppEventOccurrence defines model for BatchResponseAppEventOccurrence.
-type BatchResponseAppEventOccurrence struct {
-	// CompletedAt The date and time when the batch operation was completed, in ISO 8601 format.
-	CompletedAt time.Time `json:"completedAt"`
-
-	// Errors An array of StandardError objects detailing any errors that occurred during the batch operation.
-	Errors *[]StandardError `json:"errors,omitempty"`
-
-	// Links A map of link names to associated URIs that provide additional information about the batch operation.
-	Links *map[string]string `json:"links,omitempty"`
-
-	// NumErrors The number of errors encountered during the batch operation.
-	NumErrors *int32 `json:"numErrors,omitempty"`
-
-	// RequestedAt The date and time when the batch operation was requested, in ISO 8601 format.
-	RequestedAt *time.Time `json:"requestedAt,omitempty"`
-
-	// Results An array of AppEventOccurrence objects representing the results of the batch operation.
-	Results []AppEventOccurrence `json:"results"`
-
-	// StartedAt The date and time when the batch operation started, in ISO 8601 format.
-	StartedAt time.Time `json:"startedAt"`
-
-	// Status The current status of the batch operation. Valid values include 'PENDING', 'PROCESSING', 'CANCELED', and 'COMPLETE'.
-	Status BatchResponseAppEventOccurrenceStatus `json:"status"`
-}
-
-// BatchResponseAppEventOccurrenceStatus The current status of the batch operation. Valid values include 'PENDING', 'PROCESSING', 'CANCELED', and 'COMPLETE'.
-type BatchResponseAppEventOccurrenceStatus string
-
-// BatchResponseBlogAuthor defines model for BatchResponseBlogAuthor.
-type BatchResponseBlogAuthor struct {
-	// CompletedAt Time of batch operation completion.
-	CompletedAt time.Time `json:"completedAt"`
-
-	// Links Links associated with batch operation.
-	Links *map[string]string `json:"links,omitempty"`
-
-	// RequestedAt Time of batch operation request.
-	RequestedAt *time.Time `json:"requestedAt,omitempty"`
-
-	// Results Results of batch operation.
-	Results []BlogAuthor `json:"results"`
-
-	// StartedAt Time of batch operation start.
-	StartedAt time.Time `json:"startedAt"`
-
-	// Status Status of batch operation.
-	Status BatchResponseBlogAuthorStatus `json:"status"`
-}
-
-// BatchResponseBlogAuthorStatus Status of batch operation.
-type BatchResponseBlogAuthorStatus string
-
-// BatchResponseBlogAuthorWithErrors defines model for BatchResponseBlogAuthorWithErrors.
-type BatchResponseBlogAuthorWithErrors struct {
-	// CompletedAt Time of batch operation completion.
-	CompletedAt time.Time `json:"completedAt"`
-
-	// Errors Errors in batch operation.
-	Errors *[]StandardError `json:"errors,omitempty"`
-
-	// Links Links associated with batch operation.
-	Links *map[string]string `json:"links,omitempty"`
-
-	// NumErrors Number of errors.
-	NumErrors *int32 `json:"numErrors,omitempty"`
-
-	// RequestedAt Time of batch operation request.
-	RequestedAt *time.Time `json:"requestedAt,omitempty"`
-
-	// Results Results of batch operation.
-	Results []BlogAuthor `json:"results"`
-
-	// StartedAt Time of batch operation start.
-	StartedAt time.Time `json:"startedAt"`
-
-	// Status Status of batch operation.
-	Status BatchResponseBlogAuthorWithErrorsStatus `json:"status"`
-}
-
-// BatchResponseBlogAuthorWithErrorsStatus Status of batch operation.
-type BatchResponseBlogAuthorWithErrorsStatus string
-
-// BatchResponseBlogPost defines model for BatchResponseBlogPost.
-type BatchResponseBlogPost struct {
-	// CompletedAt Time of batch operation completion.
-	CompletedAt time.Time `json:"completedAt"`
-
-	// Links Links associated with batch operation.
-	Links *map[string]string `json:"links,omitempty"`
-
-	// RequestedAt Time of batch operation request.
-	RequestedAt *time.Time `json:"requestedAt,omitempty"`
-
-	// Results Results of batch operation.
-	Results []BlogPost `json:"results"`
-
-	// StartedAt Time of batch operation start.
-	StartedAt time.Time `json:"startedAt"`
-
-	// Status Status of batch operation.
-	Status BatchResponseBlogPostStatus `json:"status"`
-}
-
-// BatchResponseBlogPostStatus Status of batch operation.
-type BatchResponseBlogPostStatus string
-
-// BatchResponseBlogPostWithErrors defines model for BatchResponseBlogPostWithErrors.
-type BatchResponseBlogPostWithErrors struct {
-	// CompletedAt Time of batch operation completion.
-	CompletedAt time.Time `json:"completedAt"`
-
-	// Errors Errors in batch operation.
-	Errors *[]StandardError `json:"errors,omitempty"`
-
-	// Links Links associated with batch operation.
-	Links *map[string]string `json:"links,omitempty"`
-
-	// NumErrors Number of errors.
-	NumErrors *int32 `json:"numErrors,omitempty"`
-
-	// RequestedAt Time of batch operation request.
-	RequestedAt *time.Time `json:"requestedAt,omitempty"`
-
-	// Results Results of batch operation.
-	Results []BlogPost `json:"results"`
-
-	// StartedAt Time of batch operation start.
-	StartedAt time.Time `json:"startedAt"`
-
-	// Status Status of batch operation.
-	Status BatchResponseBlogPostWithErrorsStatus `json:"status"`
-}
-
-// BatchResponseBlogPostWithErrorsStatus Status of batch operation.
-type BatchResponseBlogPostWithErrorsStatus string
-
-// BatchResponseContentFolder defines model for BatchResponseContentFolder.
-type BatchResponseContentFolder struct {
-	// CompletedAt Time of batch operation completion.
-	CompletedAt time.Time `json:"completedAt"`
-
-	// Links Links associated with batch operation.
-	Links *map[string]string `json:"links,omitempty"`
-
-	// RequestedAt Time of batch operation request.
-	RequestedAt *time.Time `json:"requestedAt,omitempty"`
-
-	// Results Results of batch operation.
-	Results []ContentFolder `json:"results"`
-
-	// StartedAt Time of batch operation start.
-	StartedAt time.Time `json:"startedAt"`
-
-	// Status Status of batch operation.
-	Status BatchResponseContentFolderStatus `json:"status"`
-}
-
-// BatchResponseContentFolderStatus Status of batch operation.
-type BatchResponseContentFolderStatus string
-
-// BatchResponseContentFolderWithErrors defines model for BatchResponseContentFolderWithErrors.
-type BatchResponseContentFolderWithErrors struct {
-	// CompletedAt Time of batch operation completion.
-	CompletedAt time.Time `json:"completedAt"`
-
-	// Errors Errors in batch operation.
-	Errors *[]StandardError `json:"errors,omitempty"`
-
-	// Links Links associated with batch operation.
-	Links *map[string]string `json:"links,omitempty"`
-
-	// NumErrors Number of errors.
-	NumErrors *int32 `json:"numErrors,omitempty"`
-
-	// RequestedAt Time of batch operation request.
-	RequestedAt *time.Time `json:"requestedAt,omitempty"`
-
-	// Results Results of batch operation.
-	Results []ContentFolder `json:"results"`
-
-	// StartedAt Time of batch operation start.
-	StartedAt time.Time `json:"startedAt"`
-
-	// Status Status of batch operation.
-	Status BatchResponseContentFolderWithErrorsStatus `json:"status"`
-}
-
-// BatchResponseContentFolderWithErrorsStatus Status of batch operation.
-type BatchResponseContentFolderWithErrorsStatus string
-
-// BatchResponseDealToDealSplits defines model for BatchResponseDealToDealSplits.
-type BatchResponseDealToDealSplits struct {
-	// CompletedAt The timestamp indicating when the batch operation was completed, in date-time format.
-	CompletedAt time.Time `json:"completedAt"`
-
-	// Links A map of link names to associated URIs for additional resources or documentation.
-	Links *map[string]string `json:"links,omitempty"`
-
-	// RequestedAt The timestamp indicating when the batch operation was requested, in date-time format.
-	RequestedAt *time.Time `json:"requestedAt,omitempty"`
-
-	// Results An array of deal-to-deal split objects representing the results of the batch operation.
-	Results []DealToDealSplits `json:"results"`
-
-	// StartedAt The timestamp indicating when the batch operation started, in date-time format.
-	StartedAt time.Time `json:"startedAt"`
-
-	// Status The current status of the batch operation, with possible values: CANCELED, COMPLETE, PENDING, PROCESSING.
-	Status BatchResponseDealToDealSplitsStatus `json:"status"`
-}
-
-// BatchResponseDealToDealSplitsStatus The current status of the batch operation, with possible values: CANCELED, COMPLETE, PENDING, PROCESSING.
-type BatchResponseDealToDealSplitsStatus string
-
-// BatchResponseDealToDealSplitsWithErrors defines model for BatchResponseDealToDealSplitsWithErrors.
-type BatchResponseDealToDealSplitsWithErrors struct {
-	// CompletedAt The timestamp indicating when the batch operation was completed, in date-time format.
-	CompletedAt time.Time `json:"completedAt"`
-
-	// Errors An array of error objects detailing the errors that occurred during the batch operation.
-	Errors *[]StandardError `json:"errors,omitempty"`
-
-	// Links A map of link names to associated URIs for additional resources or documentation.
-	Links *map[string]string `json:"links,omitempty"`
-
-	// NumErrors The total number of errors encountered during the batch operation.
-	NumErrors *int32 `json:"numErrors,omitempty"`
-
-	// RequestedAt The timestamp indicating when the batch operation was requested, in date-time format.
-	RequestedAt *time.Time `json:"requestedAt,omitempty"`
-
-	// Results An array of deal-to-deal split objects representing the results of the batch operation.
-	Results []DealToDealSplits `json:"results"`
-
-	// StartedAt The timestamp indicating when the batch operation started, in date-time format.
-	StartedAt time.Time `json:"startedAt"`
-
-	// Status The current status of the batch operation, with possible values: CANCELED, COMPLETE, PENDING, PROCESSING.
-	Status BatchResponseDealToDealSplitsWithErrorsStatus `json:"status"`
-}
-
-// BatchResponseDealToDealSplitsWithErrorsStatus The current status of the batch operation, with possible values: CANCELED, COMPLETE, PENDING, PROCESSING.
-type BatchResponseDealToDealSplitsWithErrorsStatus string
-
-// BatchResponseExchangeRate defines model for BatchResponseExchangeRate.
-type BatchResponseExchangeRate struct {
-	// CompletedAt The datetime the response was completed
-	CompletedAt time.Time `json:"completedAt"`
-
-	// Links The link to the next page with exchange rates.
-	Links *map[string]string `json:"links,omitempty"`
-
-	// RequestedAt The datetime the of the request.
-	RequestedAt *time.Time `json:"requestedAt,omitempty"`
-
-	// Results An array of exchange rate objects that represent the results of the batch operation.
-	Results []ExchangeRate `json:"results"`
-
-	// StartedAt The datetime the of the request.
-	StartedAt time.Time `json:"startedAt"`
-
-	// Status The current status of the response (e.g. COMPLETED)
-	Status BatchResponseExchangeRateStatus `json:"status"`
-}
-
-// BatchResponseExchangeRateStatus The current status of the response (e.g. COMPLETED)
-type BatchResponseExchangeRateStatus string
-
-// BatchResponseExchangeRateWithErrors defines model for BatchResponseExchangeRateWithErrors.
-type BatchResponseExchangeRateWithErrors struct {
-	// CompletedAt The datetime the response was completed
-	CompletedAt time.Time `json:"completedAt"`
-
-	// Errors An array of standard error objects detailing any errors encountered during the batch operation.
-	Errors *[]StandardError `json:"errors,omitempty"`
-
-	// Links The link to the next page with exchange rates.
-	Links *map[string]string `json:"links,omitempty"`
-
-	// NumErrors The number of errors associated to the request.
-	NumErrors *int32 `json:"numErrors,omitempty"`
-
-	// RequestedAt The datetime the of the request.
-	RequestedAt *time.Time `json:"requestedAt,omitempty"`
-
-	// Results An array of exchange rate objects representing the successful results of the batch operation.
-	Results []ExchangeRate `json:"results"`
-
-	// StartedAt The datetime the of the request.
-	StartedAt time.Time `json:"startedAt"`
-
-	// Status The current status of the response (e.g. COMPLETED)
-	Status BatchResponseExchangeRateWithErrorsStatus `json:"status"`
-}
-
-// BatchResponseExchangeRateWithErrorsStatus The current status of the response (e.g. COMPLETED)
-type BatchResponseExchangeRateWithErrorsStatus string
-
-// BatchResponseHubDbTableRowV3 defines model for BatchResponseHubDbTableRowV3.
-type BatchResponseHubDbTableRowV3 struct {
-	// CompletedAt The timestamp indicating when the batch processing was completed.
-	CompletedAt time.Time `json:"completedAt"`
-
-	// Links A collection of related links associated with the batch response.
-	Links *map[string]string `json:"links,omitempty"`
-
-	// RequestedAt The timestamp indicating when the batch request was made.
-	RequestedAt *time.Time `json:"requestedAt,omitempty"`
-
-	// Results An array of HubDbTableRowV3 objects representing the results of the batch operation.
-	Results []HubDbTableRowV3 `json:"results"`
-
-	// StartedAt The timestamp indicating when the batch processing began.
-	StartedAt time.Time `json:"startedAt"`
-
-	// Status The current status of the batch operation, with possible values: CANCELED, COMPLETE, PENDING, PROCESSING.
-	Status BatchResponseHubDbTableRowV3Status `json:"status"`
-}
-
-// BatchResponseHubDbTableRowV3Status The current status of the batch operation, with possible values: CANCELED, COMPLETE, PENDING, PROCESSING.
-type BatchResponseHubDbTableRowV3Status string
-
-// BatchResponseHubDbTableRowV3WithErrors defines model for BatchResponseHubDbTableRowV3WithErrors.
-type BatchResponseHubDbTableRowV3WithErrors struct {
-	// CompletedAt The timestamp indicating when the batch processing was completed.
-	CompletedAt time.Time `json:"completedAt"`
-
-	// Errors An array of StandardError objects detailing any errors encountered during the batch operation.
-	Errors *[]StandardError `json:"errors,omitempty"`
-
-	// Links A collection of related links associated with the batch response.
-	Links *map[string]string `json:"links,omitempty"`
-
-	// NumErrors The number of errors encountered during the batch operation.
-	NumErrors *int32 `json:"numErrors,omitempty"`
-
-	// RequestedAt The timestamp indicating when the batch request was made.
-	RequestedAt *time.Time `json:"requestedAt,omitempty"`
-
-	// Results An array of HubDbTableRowV3 objects representing the successful results of the batch operation.
-	Results []HubDbTableRowV3 `json:"results"`
-
-	// StartedAt The timestamp indicating when the batch processing began.
-	StartedAt time.Time `json:"startedAt"`
-
-	// Status The current status of the batch operation, with possible values: CANCELED, COMPLETE, PENDING, PROCESSING.
-	Status BatchResponseHubDbTableRowV3WithErrorsStatus `json:"status"`
-}
-
-// BatchResponseHubDbTableRowV3WithErrorsStatus The current status of the batch operation, with possible values: CANCELED, COMPLETE, PENDING, PROCESSING.
-type BatchResponseHubDbTableRowV3WithErrorsStatus string
-
-// BatchResponseJournalFetchResponse defines model for BatchResponseJournalFetchResponse.
-type BatchResponseJournalFetchResponse struct {
-	// CompletedAt The date and time when the batch operation was completed, in ISO 8601 format.
-	CompletedAt time.Time `json:"completedAt"`
-
-	// Links A map of link names to associated URIs related to the batch operation.
-	Links *map[string]string `json:"links,omitempty"`
-
-	// RequestedAt The date and time when the batch operation was requested, in ISO 8601 format.
-	RequestedAt *time.Time `json:"requestedAt,omitempty"`
-
-	// Results An array of results from the batch operation, each represented as a JournalFetchResponse object.
-	Results []JournalFetchResponse `json:"results"`
-
-	// StartedAt The date and time when the batch operation started, in ISO 8601 format.
-	StartedAt time.Time `json:"startedAt"`
-
-	// Status The current status of the batch operation. Valid values include 'PENDING', 'PROCESSING', 'CANCELED', and 'COMPLETE'.
-	Status BatchResponseJournalFetchResponseStatus `json:"status"`
-}
-
-// BatchResponseJournalFetchResponseStatus The current status of the batch operation. Valid values include 'PENDING', 'PROCESSING', 'CANCELED', and 'COMPLETE'.
-type BatchResponseJournalFetchResponseStatus string
-
-// BatchResponseJournalFetchResponseWithErrors defines model for BatchResponseJournalFetchResponseWithErrors.
-type BatchResponseJournalFetchResponseWithErrors struct {
-	// CompletedAt The date and time when the batch process was completed, in ISO 8601 format.
-	CompletedAt time.Time `json:"completedAt"`
-
-	// Errors An array of standard errors that occurred during the batch process, providing details about each error.
-	Errors *[]StandardError `json:"errors,omitempty"`
-
-	// Links A map of link names to associated URIs, providing additional context or actions related to the batch process.
-	Links *map[string]string `json:"links,omitempty"`
-
-	// NumErrors The number of errors that occurred during the batch process.
-	NumErrors *int32 `json:"numErrors,omitempty"`
-
-	// RequestedAt The date and time when the batch request was made, in ISO 8601 format.
-	RequestedAt *time.Time `json:"requestedAt,omitempty"`
-
-	// Results An array of journal fetch responses, each representing a result from the batch process.
-	Results []JournalFetchResponse `json:"results"`
-
-	// StartedAt The date and time when the batch process started, in ISO 8601 format.
-	StartedAt time.Time `json:"startedAt"`
-
-	// Status The current status of the batch process. Valid values include 'PENDING', 'PROCESSING', 'CANCELED', and 'COMPLETE'.
-	Status BatchResponseJournalFetchResponseWithErrorsStatus `json:"status"`
-}
-
-// BatchResponseJournalFetchResponseWithErrorsStatus The current status of the batch process. Valid values include 'PENDING', 'PROCESSING', 'CANCELED', and 'COMPLETE'.
-type BatchResponseJournalFetchResponseWithErrorsStatus string
-
-// BatchResponseLabelsBetweenObjectPair defines model for BatchResponseLabelsBetweenObjectPair.
-type BatchResponseLabelsBetweenObjectPair struct {
-	// CompletedAt The timestamp when the batch processing was completed, in ISO 8601 format.
-	CompletedAt time.Time `json:"completedAt"`
-
-	// Links An object containing relevant links related to the batch request.
-	Links *map[string]string `json:"links,omitempty"`
-
-	// RequestedAt The timestamp when the batch request was initially made, in ISO 8601 format.
-	RequestedAt *time.Time                `json:"requestedAt,omitempty"`
-	Results     []LabelsBetweenObjectPair `json:"results"`
-
-	// StartedAt The timestamp when the batch processing began, in ISO 8601 format.
-	StartedAt time.Time `json:"startedAt"`
-
-	// Status The status of the batch processing request: "PENDING", "PROCESSING", "CANCELLED", or "COMPLETE".
-	Status BatchResponseLabelsBetweenObjectPairStatus `json:"status"`
-}
-
-// BatchResponseLabelsBetweenObjectPairStatus The status of the batch processing request: "PENDING", "PROCESSING", "CANCELLED", or "COMPLETE".
-type BatchResponseLabelsBetweenObjectPairStatus string
-
-// BatchResponseLabelsBetweenObjectPairWithErrors defines model for BatchResponseLabelsBetweenObjectPairWithErrors.
-type BatchResponseLabelsBetweenObjectPairWithErrors struct {
-	CompletedAt time.Time                                            `json:"completedAt"`
-	Errors      *[]StandardError                                     `json:"errors,omitempty"`
-	Links       *map[string]string                                   `json:"links,omitempty"`
-	NumErrors   *int32                                               `json:"numErrors,omitempty"`
-	RequestedAt *time.Time                                           `json:"requestedAt,omitempty"`
-	Results     []LabelsBetweenObjectPair                            `json:"results"`
-	StartedAt   time.Time                                            `json:"startedAt"`
-	Status      BatchResponseLabelsBetweenObjectPairWithErrorsStatus `json:"status"`
-}
-
-// BatchResponseLabelsBetweenObjectPairWithErrorsStatus defines model for BatchResponseLabelsBetweenObjectPairWithErrors.Status.
-type BatchResponseLabelsBetweenObjectPairWithErrorsStatus string
-
-// BatchResponseMarketingEventPublicDefaultResponse defines model for BatchResponseMarketingEventPublicDefaultResponse.
-type BatchResponseMarketingEventPublicDefaultResponse struct {
-	// CompletedAt Timestamp of when the request was completed.
-	CompletedAt time.Time `json:"completedAt"`
-
-	// Errors An array of errors encountered during the batch operation, each item detailing a specific error.
-	Errors *[]StandardError `json:"errors,omitempty"`
-
-	// Links Result of the request.
-	Links *map[string]string `json:"links,omitempty"`
-
-	// NumErrors The number of errors that occurred during the request.
-	NumErrors *int32 `json:"numErrors,omitempty"`
-
-	// RequestedAt Timestamp of when the request was sent.
-	RequestedAt *time.Time `json:"requestedAt,omitempty"`
-
-	// Results An array of results from the batch operation, each item representing a response for an individual marketing event.
-	Results []MarketingEventPublicDefaultResponse `json:"results"`
-
-	// StartedAt Timestamp of when the request started processing.
-	StartedAt time.Time `json:"startedAt"`
-
-	// Status Status of the response.
-	Status BatchResponseMarketingEventPublicDefaultResponseStatus `json:"status"`
-}
-
-// BatchResponseMarketingEventPublicDefaultResponseStatus Status of the response.
-type BatchResponseMarketingEventPublicDefaultResponseStatus string
-
-// BatchResponseMarketingEventPublicDefaultResponseV2 defines model for BatchResponseMarketingEventPublicDefaultResponseV2.
-type BatchResponseMarketingEventPublicDefaultResponseV2 struct {
-	// CompletedAt Timestamp of when the request was processed.
-	CompletedAt time.Time `json:"completedAt"`
-
-	// Links Result object of the request.
-	Links *map[string]string `json:"links,omitempty"`
-
-	// RequestedAt Timestamp of when the request was sent.
-	RequestedAt *time.Time `json:"requestedAt,omitempty"`
-
-	// Results An array containing the results of the batch operation, with each item representing a marketing event response.
-	Results []MarketingEventPublicDefaultResponseV2 `json:"results"`
-
-	// StartedAt Timestamp of when the request started processing.
-	StartedAt time.Time `json:"startedAt"`
-
-	// Status The status of the response.
-	Status BatchResponseMarketingEventPublicDefaultResponseV2Status `json:"status"`
-}
-
-// BatchResponseMarketingEventPublicDefaultResponseV2Status The status of the response.
-type BatchResponseMarketingEventPublicDefaultResponseV2Status string
-
-// BatchResponseMarketingEventPublicDefaultResponseV2WithErrors defines model for BatchResponseMarketingEventPublicDefaultResponseV2WithErrors.
-type BatchResponseMarketingEventPublicDefaultResponseV2WithErrors struct {
-	// CompletedAt Timestamp that represents when the request finished processing
-	CompletedAt time.Time `json:"completedAt"`
-
-	// Errors An array of errors encountered during the batch operation, each represented as a StandardError object.
-	Errors *[]StandardError `json:"errors,omitempty"`
-
-	// Links Result of the request
-	Links *map[string]string `json:"links,omitempty"`
-
-	// NumErrors The number of errors that occurred during the processing
-	NumErrors *int32 `json:"numErrors,omitempty"`
-
-	// RequestedAt Timestamp that represents when the request was made
-	RequestedAt *time.Time `json:"requestedAt,omitempty"`
-
-	// Results An array containing the results of the batch operation, each represented as a MarketingEventPublicDefaultResponseV2 object.
-	Results []MarketingEventPublicDefaultResponseV2 `json:"results"`
-
-	// StartedAt Timestamp that represents when the request started processing
-	StartedAt time.Time `json:"startedAt"`
-
-	// Status The status of the request processing
-	Status BatchResponseMarketingEventPublicDefaultResponseV2WithErrorsStatus `json:"status"`
-}
-
-// BatchResponseMarketingEventPublicDefaultResponseV2WithErrorsStatus The status of the request processing
-type BatchResponseMarketingEventPublicDefaultResponseV2WithErrorsStatus string
-
-// BatchResponsePage defines model for BatchResponsePage.
-type BatchResponsePage struct {
-	// CompletedAt Time of batch operation completion.
-	CompletedAt time.Time `json:"completedAt"`
-
-	// Links Links associated with batch operation.
-	Links *map[string]string `json:"links,omitempty"`
-
-	// RequestedAt Time of batch operation request.
-	RequestedAt *time.Time `json:"requestedAt,omitempty"`
-
-	// Results Results of batch operation.
-	Results []Page `json:"results"`
-
-	// StartedAt Time of batch operation start.
-	StartedAt time.Time `json:"startedAt"`
-
-	// Status Status of batch operation.
-	Status BatchResponsePageStatus `json:"status"`
-}
-
-// BatchResponsePageStatus Status of batch operation.
-type BatchResponsePageStatus string
-
-// BatchResponsePageWithErrors defines model for BatchResponsePageWithErrors.
-type BatchResponsePageWithErrors struct {
-	// CompletedAt Time of batch operation completion.
-	CompletedAt time.Time `json:"completedAt"`
-
-	// Errors Errors in batch operation.
-	Errors *[]StandardError `json:"errors,omitempty"`
-
-	// Links Links associated with batch operation.
-	Links *map[string]string `json:"links,omitempty"`
-
-	// NumErrors Number of errors.
-	NumErrors *int32 `json:"numErrors,omitempty"`
-
-	// RequestedAt Time of batch operation request.
-	RequestedAt *time.Time `json:"requestedAt,omitempty"`
-
-	// Results Results of batch operation.
-	Results []Page `json:"results"`
-
-	// StartedAt Time of batch operation start.
-	StartedAt time.Time `json:"startedAt"`
-
-	// Status Status of batch operation.
-	Status BatchResponsePageWithErrorsStatus `json:"status"`
-}
-
-// BatchResponsePageWithErrorsStatus Status of batch operation.
-type BatchResponsePageWithErrorsStatus string
-
-// BatchResponseProperty defines model for BatchResponseProperty.
-type BatchResponseProperty struct {
-	// CompletedAt The date and time when the batch operation was completed, in ISO 8601 format.
-	CompletedAt time.Time `json:"completedAt"`
-
-	// Links A collection of links related to the batch operation, typically used for navigation or additional actions.
-	Links *map[string]string `json:"links,omitempty"`
-
-	// RequestedAt The date and time when the batch operation was requested, in ISO 8601 format.
-	RequestedAt *time.Time `json:"requestedAt,omitempty"`
-
-	// Results An array containing the results of the batch operation, detailing the outcome for each property involved.
-	Results []CMSMediaBridgeProperty `json:"results"`
-
-	// StartedAt The date and time when the batch operation began, in ISO 8601 format.
-	StartedAt time.Time `json:"startedAt"`
-
-	// Status The current status of the batch operation, indicating success or failure.
-	Status BatchResponsePropertyStatus `json:"status"`
-}
-
-// BatchResponsePropertyStatus The current status of the batch operation, indicating success or failure.
-type BatchResponsePropertyStatus string
-
-// BatchResponsePropertyWithErrors defines model for BatchResponsePropertyWithErrors.
-type BatchResponsePropertyWithErrors struct {
-	// CompletedAt The date and time when the batch operation was completed, in ISO 8601 format.
-	CompletedAt time.Time `json:"completedAt"`
-
-	// Errors An array containing error details for properties that failed during the batch operation.
-	Errors *[]StandardError `json:"errors,omitempty"`
-
-	// Links A collection of links related to the batch operation, typically used for navigation or further actions.
-	Links *map[string]string `json:"links,omitempty"`
-
-	// NumErrors The number of errors encountered during the batch operation.
-	NumErrors *int32 `json:"numErrors,omitempty"`
-
-	// RequestedAt The date and time when the batch operation was requested, in ISO 8601 format.
-	RequestedAt *time.Time `json:"requestedAt,omitempty"`
-
-	// Results An array containing the results of the batch operation, detailing each property's operation outcome.
-	Results []CMSMediaBridgeProperty `json:"results"`
-
-	// StartedAt The date and time when the batch operation started, in ISO 8601 format.
-	StartedAt time.Time `json:"startedAt"`
-
-	// Status The overall status of the batch operation, indicating success or failure.
-	Status BatchResponsePropertyWithErrorsStatus `json:"status"`
-}
-
-// BatchResponsePropertyWithErrorsStatus The overall status of the batch operation, indicating success or failure.
-type BatchResponsePropertyWithErrorsStatus string
-
-// BatchResponsePublicAssociationDefinitionConfigurationUpdateResult defines model for BatchResponsePublicAssociationDefinitionConfigurationUpdateResult.
-type BatchResponsePublicAssociationDefinitionConfigurationUpdateResult struct {
-	// CompletedAt The date and time when the batch update operation was completed.
-	CompletedAt time.Time `json:"completedAt"`
-
-	// Links URLs linking to documentation or resources associated with the batch update operation.
-	Links *map[string]string `json:"links,omitempty"`
-
-	// RequestedAt The date and time when the batch update operation was requested.
-	RequestedAt *time.Time `json:"requestedAt,omitempty"`
-
-	// Results An array of results from the batch update operation. Each item in the array is a PublicAssociationDefinitionConfigurationUpdateResult object.
-	Results []PublicAssociationDefinitionConfigurationUpdateResult `json:"results"`
-
-	// StartedAt The date and time when the batch update operation started.
-	StartedAt time.Time `json:"startedAt"`
-
-	// Status The current status of the batch update operation, which can be CANCELED, COMPLETE, PENDING, or PROCESSING.
-	Status BatchResponsePublicAssociationDefinitionConfigurationUpdateResultStatus `json:"status"`
-}
-
-// BatchResponsePublicAssociationDefinitionConfigurationUpdateResultStatus The current status of the batch update operation, which can be CANCELED, COMPLETE, PENDING, or PROCESSING.
-type BatchResponsePublicAssociationDefinitionConfigurationUpdateResultStatus string
-
-// BatchResponsePublicAssociationDefinitionConfigurationUpdateResultWithErrors defines model for BatchResponsePublicAssociationDefinitionConfigurationUpdateResultWithErrors.
-type BatchResponsePublicAssociationDefinitionConfigurationUpdateResultWithErrors struct {
-	// CompletedAt The date and time when the batch operation was completed, in ISO 8601 format.
-	CompletedAt time.Time `json:"completedAt"`
-
-	// Errors An array of errors encountered during the batch operation, each detailing a specific issue that occurred.
-	Errors *[]StandardError `json:"errors,omitempty"`
-
-	// Links A map of link names to associated URIs, providing additional information or resources related to the batch operation.
-	Links *map[string]string `json:"links,omitempty"`
-
-	// NumErrors The total number of errors encountered during the batch operation.
-	NumErrors *int32 `json:"numErrors,omitempty"`
-
-	// RequestedAt The date and time when the batch operation was requested, in ISO 8601 format.
-	RequestedAt *time.Time `json:"requestedAt,omitempty"`
-
-	// Results An array of results from the batch operation, each representing an update result for a public association definition configuration.
-	Results []PublicAssociationDefinitionConfigurationUpdateResult `json:"results"`
-
-	// StartedAt The date and time when the batch operation started, in ISO 8601 format.
-	StartedAt time.Time `json:"startedAt"`
-
-	// Status The current status of the batch operation. Valid values include 'PENDING', 'PROCESSING', 'CANCELED', and 'COMPLETE'.
-	Status BatchResponsePublicAssociationDefinitionConfigurationUpdateResultWithErrorsStatus `json:"status"`
-}
-
-// BatchResponsePublicAssociationDefinitionConfigurationUpdateResultWithErrorsStatus The current status of the batch operation. Valid values include 'PENDING', 'PROCESSING', 'CANCELED', and 'COMPLETE'.
-type BatchResponsePublicAssociationDefinitionConfigurationUpdateResultWithErrorsStatus string
-
-// BatchResponsePublicAssociationDefinitionUserConfiguration defines model for BatchResponsePublicAssociationDefinitionUserConfiguration.
-type BatchResponsePublicAssociationDefinitionUserConfiguration struct {
-	// CompletedAt The date and time when the batch operation was completed.
-	CompletedAt time.Time `json:"completedAt"`
-
-	// Links A collection of URLs linking to related documentation or resources associated with the batch operation.
-	Links *map[string]string `json:"links,omitempty"`
-
-	// RequestedAt The date and time when the batch operation was requested.
-	RequestedAt *time.Time `json:"requestedAt,omitempty"`
-
-	// Results An array of user configurations for public association definitions, representing the outcome of the batch operation.
-	Results []PublicAssociationDefinitionUserConfiguration `json:"results"`
-
-	// StartedAt The date and time when the batch operation started.
-	StartedAt time.Time `json:"startedAt"`
-
-	// Status The current status of the batch operation, which can be CANCELED, COMPLETE, PENDING, or PROCESSING.
-	Status BatchResponsePublicAssociationDefinitionUserConfigurationStatus `json:"status"`
-}
-
-// BatchResponsePublicAssociationDefinitionUserConfigurationStatus The current status of the batch operation, which can be CANCELED, COMPLETE, PENDING, or PROCESSING.
-type BatchResponsePublicAssociationDefinitionUserConfigurationStatus string
-
-// BatchResponsePublicAssociationDefinitionUserConfigurationWithErrors defines model for BatchResponsePublicAssociationDefinitionUserConfigurationWithErrors.
-type BatchResponsePublicAssociationDefinitionUserConfigurationWithErrors struct {
-	// CompletedAt The date and time when the batch operation was completed, in ISO 8601 format.
-	CompletedAt time.Time `json:"completedAt"`
-
-	// Errors An array of errors encountered during the batch operation, each item detailing a specific error.
-	Errors *[]StandardError `json:"errors,omitempty"`
-
-	// Links An object containing key-value pairs where each key is a link name and each value is a URI string related to the operation.
-	Links *map[string]string `json:"links,omitempty"`
-
-	// NumErrors The number of errors encountered during the batch operation.
-	NumErrors *int32 `json:"numErrors,omitempty"`
-
-	// RequestedAt The date and time when the batch operation was requested, in ISO 8601 format.
-	RequestedAt *time.Time `json:"requestedAt,omitempty"`
-
-	// Results An array of results from the batch operation, each item representing a public association definition user configuration.
-	Results []PublicAssociationDefinitionUserConfiguration `json:"results"`
-
-	// StartedAt The date and time when the batch operation started, in ISO 8601 format.
-	StartedAt time.Time `json:"startedAt"`
-
-	// Status The current status of the batch operation. Valid values include 'PENDING', 'PROCESSING', 'CANCELED', and 'COMPLETE'.
-	Status BatchResponsePublicAssociationDefinitionUserConfigurationWithErrorsStatus `json:"status"`
-}
-
-// BatchResponsePublicAssociationDefinitionUserConfigurationWithErrorsStatus The current status of the batch operation. Valid values include 'PENDING', 'PROCESSING', 'CANCELED', and 'COMPLETE'.
-type BatchResponsePublicAssociationDefinitionUserConfigurationWithErrorsStatus string
-
-// BatchResponsePublicAssociationMultiWithLabel defines model for BatchResponsePublicAssociationMultiWithLabel.
-type BatchResponsePublicAssociationMultiWithLabel struct {
-	// CompletedAt The timestamp when the batch processing was completed, in ISO 8601 format.
-	CompletedAt time.Time `json:"completedAt"`
-
-	// Links An object containing relevant links related to the batch request.
-	Links *map[string]string `json:"links,omitempty"`
-
-	// RequestedAt The timestamp when the batch request was initially made, in ISO 8601 format.
-	RequestedAt *time.Time                        `json:"requestedAt,omitempty"`
-	Results     []PublicAssociationMultiWithLabel `json:"results"`
-
-	// StartedAt The timestamp when the batch processing began, in ISO 8601 format.
-	StartedAt time.Time `json:"startedAt"`
-
-	// Status The status of the batch processing request: "PENDING", "PROCESSING", "CANCELED", or "COMPLETE".
-	Status BatchResponsePublicAssociationMultiWithLabelStatus `json:"status"`
-}
-
-// BatchResponsePublicAssociationMultiWithLabelStatus The status of the batch processing request: "PENDING", "PROCESSING", "CANCELED", or "COMPLETE".
-type BatchResponsePublicAssociationMultiWithLabelStatus string
-
-// BatchResponsePublicAssociationMultiWithLabelWithErrors defines model for BatchResponsePublicAssociationMultiWithLabelWithErrors.
-type BatchResponsePublicAssociationMultiWithLabelWithErrors struct {
-	CompletedAt time.Time                                                    `json:"completedAt"`
-	Errors      *[]StandardError                                             `json:"errors,omitempty"`
-	Links       *map[string]string                                           `json:"links,omitempty"`
-	NumErrors   *int32                                                       `json:"numErrors,omitempty"`
-	RequestedAt *time.Time                                                   `json:"requestedAt,omitempty"`
-	Results     []PublicAssociationMultiWithLabel                            `json:"results"`
-	StartedAt   time.Time                                                    `json:"startedAt"`
-	Status      BatchResponsePublicAssociationMultiWithLabelWithErrorsStatus `json:"status"`
-}
-
-// BatchResponsePublicAssociationMultiWithLabelWithErrorsStatus defines model for BatchResponsePublicAssociationMultiWithLabelWithErrors.Status.
-type BatchResponsePublicAssociationMultiWithLabelWithErrorsStatus string
-
-// BatchResponsePublicBulkOptOutFromAllResponse defines model for BatchResponsePublicBulkOptOutFromAllResponse.
-type BatchResponsePublicBulkOptOutFromAllResponse struct {
-	// CompletedAt The date and time when the bulk opt-out operation was completed.
-	CompletedAt time.Time `json:"completedAt"`
-
-	// Errors An array of error objects detailing any issues encountered during the bulk opt-out operation.
-	Errors *[]StandardError `json:"errors,omitempty"`
-
-	// Links A collection of URLs linking to related resources or documentation.
-	Links *map[string]string `json:"links,omitempty"`
-
-	// NumErrors The total number of errors encountered during the bulk opt-out operation.
-	NumErrors *int32 `json:"numErrors,omitempty"`
-
-	// RequestedAt The date and time when the bulk opt-out request was made.
-	RequestedAt *time.Time `json:"requestedAt,omitempty"`
-
-	// Results An array containing the results of the bulk opt-out from all communications operation.
-	Results []PublicBulkOptOutFromAllResponse `json:"results"`
-
-	// StartedAt The date and time when the bulk opt-out operation began.
-	StartedAt time.Time `json:"startedAt"`
-
-	// Status The current status of the bulk opt-out operation, which can be PENDING, PROCESSING, CANCELED, or COMPLETE.
-	Status BatchResponsePublicBulkOptOutFromAllResponseStatus `json:"status"`
-}
-
-// BatchResponsePublicBulkOptOutFromAllResponseStatus The current status of the bulk opt-out operation, which can be PENDING, PROCESSING, CANCELED, or COMPLETE.
-type BatchResponsePublicBulkOptOutFromAllResponseStatus string
-
-// BatchResponsePublicCampaign defines model for BatchResponsePublicCampaign.
-type BatchResponsePublicCampaign struct {
-	// CompletedAt The date and time when the batch operation was completed, formatted as a date-time string.
-	CompletedAt time.Time `json:"completedAt"`
-
-	// Links A map of related links associated with the batch operation.
-	Links *map[string]string `json:"links,omitempty"`
-
-	// RequestedAt The date and time when the batch operation was requested, formatted as a date-time string.
-	RequestedAt *time.Time `json:"requestedAt,omitempty"`
-
-	// Results An array of results from the batch operation, each item representing a public campaign.
-	Results []PublicCampaign `json:"results"`
-
-	// StartedAt The date and time when the batch operation started, formatted as a date-time string.
-	StartedAt time.Time `json:"startedAt"`
-
-	// Status The current status of the batch operation, with possible values: CANCELED, COMPLETE, PENDING, PROCESSING.
-	Status BatchResponsePublicCampaignStatus `json:"status"`
-}
-
-// BatchResponsePublicCampaignStatus The current status of the batch operation, with possible values: CANCELED, COMPLETE, PENDING, PROCESSING.
-type BatchResponsePublicCampaignStatus string
-
-// BatchResponsePublicCampaignWithAssets defines model for BatchResponsePublicCampaignWithAssets.
-type BatchResponsePublicCampaignWithAssets struct {
-	// CompletedAt The timestamp when the batch request processing was completed.
-	CompletedAt time.Time `json:"completedAt"`
-
-	// Links A collection of URLs linking to related resources or documentation.
-	Links *map[string]string `json:"links,omitempty"`
-
-	// RequestedAt The timestamp when the batch request was initially made.
-	RequestedAt *time.Time `json:"requestedAt,omitempty"`
-
-	// Results An array of results from the batch operation, each representing a public campaign with assets.
-	Results []PublicCampaignWithAssets `json:"results"`
-
-	// StartedAt The timestamp when the processing of the batch request began.
-	StartedAt time.Time `json:"startedAt"`
-
-	// Status The current processing status of the batch operation, with possible values: CANCELED, COMPLETE, PENDING, PROCESSING.
-	Status BatchResponsePublicCampaignWithAssetsStatus `json:"status"`
-}
-
-// BatchResponsePublicCampaignWithAssetsStatus The current processing status of the batch operation, with possible values: CANCELED, COMPLETE, PENDING, PROCESSING.
-type BatchResponsePublicCampaignWithAssetsStatus string
-
-// BatchResponsePublicCampaignWithAssetsWithErrors defines model for BatchResponsePublicCampaignWithAssetsWithErrors.
-type BatchResponsePublicCampaignWithAssetsWithErrors struct {
-	// CompletedAt The date and time when the batch operation was completed.
-	CompletedAt time.Time `json:"completedAt"`
-
-	// Errors The list of errors for individual campaign reads that failed within the batch (e.g., campaign not found, permission denied). Only included when non-empty.
-	Errors *[]StandardError `json:"errors,omitempty"`
-
-	// Links A collection of links related to the batch operation.
-	Links *map[string]string `json:"links,omitempty"`
-
-	// NumErrors The number of errors that occurred during the batch operation.
-	NumErrors *int32 `json:"numErrors,omitempty"`
-
-	// RequestedAt The date and time when the batch operation was requested.
-	RequestedAt *time.Time `json:"requestedAt,omitempty"`
-
-	// Results The list of successfully retrieved campaigns with their associated assets.
-	Results []PublicCampaignWithAssets `json:"results"`
-
-	// StartedAt The date and time when the batch operation started.
-	StartedAt time.Time `json:"startedAt"`
-
-	// Status The current status of the batch operation, which can be CANCELED, COMPLETE, PENDING, or PROCESSING.
-	Status BatchResponsePublicCampaignWithAssetsWithErrorsStatus `json:"status"`
-}
-
-// BatchResponsePublicCampaignWithAssetsWithErrorsStatus The current status of the batch operation, which can be CANCELED, COMPLETE, PENDING, or PROCESSING.
-type BatchResponsePublicCampaignWithAssetsWithErrorsStatus string
-
-// BatchResponsePublicCampaignWithErrors defines model for BatchResponsePublicCampaignWithErrors.
-type BatchResponsePublicCampaignWithErrors struct {
-	// CompletedAt The date and time when the batch operation was completed.
-	CompletedAt time.Time `json:"completedAt"`
-
-	// Errors The list of errors for individual campaign operations that failed within the batch. Only included when non-empty.
-	Errors *[]StandardError `json:"errors,omitempty"`
-
-	// Links URLs linking to resources or documentation related to the batch operation.
-	Links *map[string]string `json:"links,omitempty"`
-
-	// NumErrors The total number of errors encountered during the batch operation.
-	NumErrors *int32 `json:"numErrors,omitempty"`
-
-	// RequestedAt The date and time when the batch request was made.
-	RequestedAt *time.Time `json:"requestedAt,omitempty"`
-
-	// Results The list of successfully created or updated campaigns.
-	Results []PublicCampaign `json:"results"`
-
-	// StartedAt The date and time when the batch operation began.
-	StartedAt time.Time `json:"startedAt"`
-
-	// Status The current status of the batch operation. Accepted values are: CANCELED, COMPLETE, PENDING, PROCESSING.
-	Status BatchResponsePublicCampaignWithErrorsStatus `json:"status"`
-}
-
-// BatchResponsePublicCampaignWithErrorsStatus The current status of the batch operation. Accepted values are: CANCELED, COMPLETE, PENDING, PROCESSING.
-type BatchResponsePublicCampaignWithErrorsStatus string
-
-// BatchResponsePublicDefaultAssociation The response returned after performing a batch operation on associations.
-type BatchResponsePublicDefaultAssociation struct {
-	// CompletedAt The timestamp when the batch processing was completed, in ISO 8601 format.
-	CompletedAt time.Time `json:"completedAt"`
-
-	// Errors An array of StandardError objects detailing any errors that occurred during the batch operation.
-	Errors *[]StandardError `json:"errors,omitempty"`
-
-	// Links An object containing relevant links related to the batch request.
-	Links *map[string]string `json:"links,omitempty"`
-
-	// NumErrors The number of errors that occurred during the batch operation.
-	NumErrors *int32 `json:"numErrors,omitempty"`
-
-	// RequestedAt The timestamp when the batch request was initially made, in ISO 8601 format.
-	RequestedAt *time.Time `json:"requestedAt,omitempty"`
-
-	// Results An array of PublicDefaultAssociation objects representing the results of the batch operation.
-	Results []PublicDefaultAssociation `json:"results"`
-
-	// StartedAt The timestamp when the batch processing began, in ISO 8601 format.
-	StartedAt time.Time `json:"startedAt"`
-
-	// Status The status of the batch processing request: "PENDING", "PROCESSING", "CANCELLED", or "COMPLETE".
-	Status BatchResponsePublicDefaultAssociationStatus `json:"status"`
-}
-
-// BatchResponsePublicDefaultAssociationStatus The status of the batch processing request: "PENDING", "PROCESSING", "CANCELLED", or "COMPLETE".
-type BatchResponsePublicDefaultAssociationStatus string
-
-// BatchResponsePublicStatus defines model for BatchResponsePublicStatus.
-type BatchResponsePublicStatus struct {
-	// CompletedAt The date and time when the batch operation was completed.
-	CompletedAt time.Time `json:"completedAt"`
-
-	// Errors An array of error objects detailing any issues encountered.
-	Errors *[]StandardError `json:"errors,omitempty"`
-
-	// Links URLs linking to related resources or documentation.
-	Links *map[string]string `json:"links,omitempty"`
-
-	// NumErrors The number of errors encountered during the batch operation.
-	NumErrors *int32 `json:"numErrors,omitempty"`
-
-	// RequestedAt The date and time when the request was made.
-	RequestedAt *time.Time `json:"requestedAt,omitempty"`
-
-	// Results An array containing the results of the batch operation.
-	Results []PublicStatus `json:"results"`
-
-	// StartedAt The date and time when the batch operation started.
-	StartedAt time.Time `json:"startedAt"`
-
-	// Status The current status of the batch operation, which can be PENDING, PROCESSING, CANCELED, or COMPLETE.
-	Status BatchResponsePublicStatusStatus `json:"status"`
-}
-
-// BatchResponsePublicStatusStatus The current status of the batch operation, which can be PENDING, PROCESSING, CANCELED, or COMPLETE.
-type BatchResponsePublicStatusStatus string
-
-// BatchResponsePublicStatusBulkResponse defines model for BatchResponsePublicStatusBulkResponse.
-type BatchResponsePublicStatusBulkResponse struct {
-	// CompletedAt The date and time when the batch process was completed.
-	CompletedAt time.Time `json:"completedAt"`
-
-	// Links A collection of related links associated with the batch response.
-	Links *map[string]string `json:"links,omitempty"`
-
-	// RequestedAt The date and time when the batch request was made.
-	RequestedAt *time.Time `json:"requestedAt,omitempty"`
-
-	// Results The array of results from the batch process, each containing subscription status information.
-	Results []PublicStatusBulkResponse `json:"results"`
-
-	// StartedAt The date and time when the batch process began.
-	StartedAt time.Time `json:"startedAt"`
-
-	// Status The current status of the batch process, with possible values: PENDING, PROCESSING, CANCELED, COMPLETE.
-	Status BatchResponsePublicStatusBulkResponseStatus `json:"status"`
-}
-
-// BatchResponsePublicStatusBulkResponseStatus The current status of the batch process, with possible values: PENDING, PROCESSING, CANCELED, COMPLETE.
-type BatchResponsePublicStatusBulkResponseStatus string
-
-// BatchResponsePublicStatusBulkResponseWithErrors defines model for BatchResponsePublicStatusBulkResponseWithErrors.
-type BatchResponsePublicStatusBulkResponseWithErrors struct {
-	// CompletedAt The date and time when the operation was completed.
-	CompletedAt time.Time `json:"completedAt"`
-
-	// Errors An array of error objects detailing any issues encountered during the operation.
-	Errors *[]StandardError `json:"errors,omitempty"`
-
-	// Links An object containing related links, where each key is a link name and each value is a URL.
-	Links *map[string]string `json:"links,omitempty"`
-
-	// NumErrors The number of errors encountered during the operation.
-	NumErrors *int32 `json:"numErrors,omitempty"`
-
-	// RequestedAt The date and time when the request was made.
-	RequestedAt *time.Time `json:"requestedAt,omitempty"`
-
-	// Results An array containing the results of the operation.
-	Results []PublicStatusBulkResponse `json:"results"`
-
-	// StartedAt The date and time when the operation started.
-	StartedAt time.Time `json:"startedAt"`
-
-	// Status The current status of the operation, which can be PENDING, PROCESSING, CANCELED, or COMPLETE.
-	Status BatchResponsePublicStatusBulkResponseWithErrorsStatus `json:"status"`
-}
-
-// BatchResponsePublicStatusBulkResponseWithErrorsStatus The current status of the operation, which can be PENDING, PROCESSING, CANCELED, or COMPLETE.
-type BatchResponsePublicStatusBulkResponseWithErrorsStatus string
-
-// BatchResponsePublicWideStatusBulkResponse defines model for BatchResponsePublicWideStatusBulkResponse.
-type BatchResponsePublicWideStatusBulkResponse struct {
-	// CompletedAt The date and time when the batch process was completed.
-	CompletedAt time.Time `json:"completedAt"`
-
-	// Links A collection of related links associated with the batch response.
-	Links *map[string]string `json:"links,omitempty"`
-
-	// RequestedAt The date and time when the batch request was made.
-	RequestedAt *time.Time `json:"requestedAt,omitempty"`
-
-	// Results The array of results from the batch process, each containing subscription status information.
-	Results []PublicWideStatusBulkResponse `json:"results"`
-
-	// StartedAt The date and time when the batch process began.
-	StartedAt time.Time `json:"startedAt"`
-
-	// Status The current status of the batch process, with possible values: PENDING, PROCESSING, CANCELED, COMPLETE.
-	Status BatchResponsePublicWideStatusBulkResponseStatus `json:"status"`
-}
-
-// BatchResponsePublicWideStatusBulkResponseStatus The current status of the batch process, with possible values: PENDING, PROCESSING, CANCELED, COMPLETE.
-type BatchResponsePublicWideStatusBulkResponseStatus string
-
-// BatchResponsePublicWideStatusBulkResponseWithErrors defines model for BatchResponsePublicWideStatusBulkResponseWithErrors.
-type BatchResponsePublicWideStatusBulkResponseWithErrors struct {
-	// CompletedAt The date and time when the operation was completed.
-	CompletedAt time.Time `json:"completedAt"`
-
-	// Errors An array of error objects detailing any issues encountered during the operation.
-	Errors *[]StandardError `json:"errors,omitempty"`
-
-	// Links An object containing related links, where each key is a link name and each value is a URL.
-	Links *map[string]string `json:"links,omitempty"`
-
-	// NumErrors The number of errors encountered during the operation.
-	NumErrors *int32 `json:"numErrors,omitempty"`
-
-	// RequestedAt The date and time when the operation was requested.
-	RequestedAt *time.Time `json:"requestedAt,omitempty"`
-
-	// Results An array containing the results of the operation.
-	Results []PublicWideStatusBulkResponse `json:"results"`
-
-	// StartedAt The date and time when the operation started.
-	StartedAt time.Time `json:"startedAt"`
-
-	// Status The current status of the operation, which can be PENDING, PROCESSING, CANCELED, or COMPLETE.
-	Status BatchResponsePublicWideStatusBulkResponseWithErrorsStatus `json:"status"`
-}
-
-// BatchResponsePublicWideStatusBulkResponseWithErrorsStatus The current status of the operation, which can be PENDING, PROCESSING, CANCELED, or COMPLETE.
-type BatchResponsePublicWideStatusBulkResponseWithErrorsStatus string
-
-// BatchResponseRecordIdWithMemberships defines model for BatchResponseRecordIdWithMemberships.
-type BatchResponseRecordIdWithMemberships struct {
-	CompletedAt time.Time                                  `json:"completedAt"`
-	Links       *map[string]string                         `json:"links,omitempty"`
-	RequestedAt *time.Time                                 `json:"requestedAt,omitempty"`
-	Results     []RecordIdWithMemberships                  `json:"results"`
-	StartedAt   time.Time                                  `json:"startedAt"`
-	Status      BatchResponseRecordIdWithMembershipsStatus `json:"status"`
-}
-
-// BatchResponseRecordIdWithMembershipsStatus defines model for BatchResponseRecordIdWithMemberships.Status.
-type BatchResponseRecordIdWithMembershipsStatus string
-
-// BatchResponseRecordIdWithMembershipsWithErrors defines model for BatchResponseRecordIdWithMembershipsWithErrors.
-type BatchResponseRecordIdWithMembershipsWithErrors struct {
-	CompletedAt time.Time                                            `json:"completedAt"`
-	Errors      *[]StandardError                                     `json:"errors,omitempty"`
-	Links       *map[string]string                                   `json:"links,omitempty"`
-	NumErrors   *int32                                               `json:"numErrors,omitempty"`
-	RequestedAt *time.Time                                           `json:"requestedAt,omitempty"`
-	Results     []RecordIdWithMemberships                            `json:"results"`
-	StartedAt   time.Time                                            `json:"startedAt"`
-	Status      BatchResponseRecordIdWithMembershipsWithErrorsStatus `json:"status"`
-}
-
-// BatchResponseRecordIdWithMembershipsWithErrorsStatus defines model for BatchResponseRecordIdWithMembershipsWithErrors.Status.
-type BatchResponseRecordIdWithMembershipsWithErrorsStatus string
-
-// BatchResponseSimplePublicObject A public object batch response object
-type BatchResponseSimplePublicObject struct {
-	// CompletedAt The timestamp when the batch processing was completed, in ISO 8601 format.
-	CompletedAt time.Time `json:"completedAt"`
-
-	// Links A map of link names to associated URIs, providing additional information or actions related to the batch operation.
-	Links *map[string]string `json:"links,omitempty"`
-
-	// RequestedAt The timestamp when the batch request was initially made, in ISO 8601 format.
-	RequestedAt *time.Time `json:"requestedAt,omitempty"`
-
-	// Results An array of SimplePublicObject items representing the results of the batch operation.
-	Results []SimplePublicObject `json:"results"`
-
-	// StartedAt The timestamp when the batch processing began, in ISO 8601 format.
-	StartedAt time.Time `json:"startedAt"`
-
-	// Status The status of the batch processing request: "PENDING", "PROCESSING", "CANCELLED", or "COMPLETE"
-	Status BatchResponseSimplePublicObjectStatus `json:"status"`
-}
-
-// BatchResponseSimplePublicObjectStatus The status of the batch processing request: "PENDING", "PROCESSING", "CANCELLED", or "COMPLETE"
-type BatchResponseSimplePublicObjectStatus string
-
-// BatchResponseSimplePublicObjectWithErrors Represents the result of a batch operation on CRM objects, including the processing status, batch results, timestamps, and a list of any errors encountered during the operation.
-type BatchResponseSimplePublicObjectWithErrors struct {
-	// CompletedAt The timestamp when the batch process was completed, in ISO 8601 format.
-	CompletedAt time.Time        `json:"completedAt"`
-	Errors      *[]StandardError `json:"errors,omitempty"`
-
-	// Links An object containing relevant links related to the batch request.
-	Links *map[string]string `json:"links,omitempty"`
-
-	// NumErrors The number of errors encountered during the batch process.
-	NumErrors *int32 `json:"numErrors,omitempty"`
-
-	// RequestedAt The timestamp when the batch process was initiated, in ISO 8601 format.
-	RequestedAt *time.Time           `json:"requestedAt,omitempty"`
-	Results     []SimplePublicObject `json:"results"`
-
-	// StartedAt The timestamp when the batch process began execution, in ISO 8601 format.
-	StartedAt time.Time `json:"startedAt"`
-
-	// Status The status of the batch processing request - "PENDING", "PROCESSING", "CANCELLED", or "COMPLETE"
-	Status BatchResponseSimplePublicObjectWithErrorsStatus `json:"status"`
-}
-
-// BatchResponseSimplePublicObjectWithErrorsStatus The status of the batch processing request - "PENDING", "PROCESSING", "CANCELLED", or "COMPLETE"
-type BatchResponseSimplePublicObjectWithErrorsStatus string
-
-// BatchResponseSimplePublicUpsertObject Represents the result of a batch upsert operation, including the operation’s status, timestamps, and a list of successfully created or updated objects.
-type BatchResponseSimplePublicUpsertObject struct {
-	// CompletedAt The timestamp when the batch process was completed, in ISO 8601 format.
-	CompletedAt time.Time `json:"completedAt"`
-
-	// Links A map of link names to associated URIs, providing additional information or actions related to the batch operation.
-	Links *map[string]string `json:"links,omitempty"`
-
-	// RequestedAt The timestamp when the batch process was initiated, in ISO 8601 format.
-	RequestedAt *time.Time `json:"requestedAt,omitempty"`
-
-	// Results An array of SimplePublicUpsertObject items representing the results of the batch upsert operation.
-	Results []SimplePublicUpsertObject `json:"results"`
-
-	// StartedAt The timestamp when the batch process began execution, in ISO 8601 format.
-	StartedAt time.Time `json:"startedAt"`
-
-	// Status The status of the batch processing request. Can be: "PENDING", "PROCESSING", "CANCELED", or "COMPLETE".
-	Status BatchResponseSimplePublicUpsertObjectStatus `json:"status"`
-}
-
-// BatchResponseSimplePublicUpsertObjectStatus The status of the batch processing request. Can be: "PENDING", "PROCESSING", "CANCELED", or "COMPLETE".
-type BatchResponseSimplePublicUpsertObjectStatus string
-
-// BatchResponseSimplePublicUpsertObjectWithErrors Represents the response from a batch upsert operation, including the status, timestamps, successfully processed objects, and any errors that occurred during processing.
-type BatchResponseSimplePublicUpsertObjectWithErrors struct {
-	// CompletedAt The timestamp when the batch process was completed, in ISO 8601 format.
-	CompletedAt time.Time        `json:"completedAt"`
-	Errors      *[]StandardError `json:"errors,omitempty"`
-
-	// Links An object containing relevant links related to the batch request.
-	Links *map[string]string `json:"links,omitempty"`
-
-	// NumErrors The number of errors encountered during the batch process.
-	NumErrors *int32 `json:"numErrors,omitempty"`
-
-	// RequestedAt The timestamp when the batch process was initiated, in ISO 8601 format.
-	RequestedAt *time.Time                 `json:"requestedAt,omitempty"`
-	Results     []SimplePublicUpsertObject `json:"results"`
-
-	// StartedAt The timestamp when the batch process began execution, in ISO 8601 format.
-	StartedAt time.Time `json:"startedAt"`
-
-	// Status The status of the batch processing request. Can be: "PENDING", "PROCESSING", "CANCELLED", or "COMPLETE".
-	Status BatchResponseSimplePublicUpsertObjectWithErrorsStatus `json:"status"`
-}
-
-// BatchResponseSimplePublicUpsertObjectWithErrorsStatus The status of the batch processing request. Can be: "PENDING", "PROCESSING", "CANCELLED", or "COMPLETE".
-type BatchResponseSimplePublicUpsertObjectWithErrorsStatus string
-
-// BatchResponseSubscriberEmailResponse defines model for BatchResponseSubscriberEmailResponse.
-type BatchResponseSubscriberEmailResponse struct {
-	// CompletedAt Timestamp that represents when the request finished processing
-	CompletedAt time.Time `json:"completedAt"`
-
-	// Errors An array of errors encountered during the batch operation, each providing details about the error.
-	Errors *[]StandardError `json:"errors,omitempty"`
-
-	// Links Result of the request
-	Links *map[string]string `json:"links,omitempty"`
-
-	// NumErrors The number of errors that occurred during the processing
-	NumErrors *int32 `json:"numErrors,omitempty"`
-
-	// RequestedAt Timestamp that represents when the request was made
-	RequestedAt *time.Time `json:"requestedAt,omitempty"`
-
-	// Results An array of results from the batch operation, each containing details about a subscriber email response.
-	Results []SubscriberEmailResponse `json:"results"`
-
-	// StartedAt Timestamp that represents when the request started processing
-	StartedAt time.Time `json:"startedAt"`
-
-	// Status The status of the request processing
-	Status BatchResponseSubscriberEmailResponseStatus `json:"status"`
-}
-
-// BatchResponseSubscriberEmailResponseStatus The status of the request processing
-type BatchResponseSubscriberEmailResponseStatus string
-
-// BatchResponseSubscriberVidResponse defines model for BatchResponseSubscriberVidResponse.
-type BatchResponseSubscriberVidResponse struct {
-	// CompletedAt Timestamp that represents when the request finished processing
-	CompletedAt time.Time `json:"completedAt"`
-
-	// Errors An array of StandardError objects, each detailing an error encountered during the batch operation.
-	Errors *[]StandardError `json:"errors,omitempty"`
-
-	// Links Result of the request
-	Links *map[string]string `json:"links,omitempty"`
-
-	// NumErrors The number of errors that occurred during the processing
-	NumErrors *int32 `json:"numErrors,omitempty"`
-
-	// RequestedAt Timestamp that represents when the request was made
-	RequestedAt *time.Time `json:"requestedAt,omitempty"`
-
-	// Results An array of SubscriberVidResponse objects, each representing the result of processing an individual subscriber VID.
-	Results []SubscriberVidResponse `json:"results"`
-
-	// StartedAt Timestamp that represents when the request started processing
-	StartedAt time.Time `json:"startedAt"`
-
-	// Status The status of the request processing
-	Status BatchResponseSubscriberVidResponseStatus `json:"status"`
-}
-
-// BatchResponseSubscriberVidResponseStatus The status of the request processing
-type BatchResponseSubscriberVidResponseStatus string
-
-// BatchResponseSubscriptionResponse defines model for BatchResponseSubscriptionResponse.
-type BatchResponseSubscriptionResponse struct {
-	// CompletedAt The date and time when the batch operation was completed, in ISO 8601 format.
-	CompletedAt time.Time `json:"completedAt"`
-
-	// Links A map of link names to associated URIs providing additional information about the batch operation.
-	Links *map[string]string `json:"links,omitempty"`
-
-	// RequestedAt The date and time when the batch operation was requested, in ISO 8601 format.
-	RequestedAt *time.Time `json:"requestedAt,omitempty"`
-
-	// Results An array containing the results of the batch operation, with each item representing an individual subscription response.
-	Results []SubscriptionResponse `json:"results"`
-
-	// StartedAt The date and time when the batch operation started, in ISO 8601 format.
-	StartedAt time.Time `json:"startedAt"`
-
-	// Status The current status of the batch operation. Valid values include 'PENDING', 'PROCESSING', 'CANCELED', and 'COMPLETE'.
-	Status BatchResponseSubscriptionResponseStatus `json:"status"`
-}
-
-// BatchResponseSubscriptionResponseStatus The current status of the batch operation. Valid values include 'PENDING', 'PROCESSING', 'CANCELED', and 'COMPLETE'.
-type BatchResponseSubscriptionResponseStatus string
-
-// BatchResponseSubscriptionResponseWithErrors defines model for BatchResponseSubscriptionResponseWithErrors.
-type BatchResponseSubscriptionResponseWithErrors struct {
-	// CompletedAt The date and time when the batch processing was completed, in ISO 8601 format.
-	CompletedAt time.Time `json:"completedAt"`
-
-	// Errors An array of StandardError objects detailing any errors that occurred during the batch processing.
-	Errors *[]StandardError `json:"errors,omitempty"`
-
-	// Links A map of link names to associated URIs, providing additional resources or documentation related to the batch operation.
-	Links *map[string]string `json:"links,omitempty"`
-
-	// NumErrors The total number of errors encountered during the batch operation.
-	NumErrors *int32 `json:"numErrors,omitempty"`
-
-	// RequestedAt The date and time when the batch request was initially made, in ISO 8601 format.
-	RequestedAt *time.Time `json:"requestedAt,omitempty"`
-
-	// Results An array of SubscriptionResponse objects representing the results of each subscription update processed in the batch.
-	Results []SubscriptionResponse `json:"results"`
-
-	// StartedAt The date and time when the batch processing began, in ISO 8601 format.
-	StartedAt time.Time `json:"startedAt"`
-
-	// Status The current status of the batch operation. Valid values include 'PENDING', 'PROCESSING', 'CANCELED', and 'COMPLETE'.
-	Status BatchResponseSubscriptionResponseWithErrorsStatus `json:"status"`
-}
-
-// BatchResponseSubscriptionResponseWithErrorsStatus The current status of the batch operation. Valid values include 'PENDING', 'PROCESSING', 'CANCELED', and 'COMPLETE'.
-type BatchResponseSubscriptionResponseWithErrorsStatus string
-
-// BatchResponseTag defines model for BatchResponseTag.
-type BatchResponseTag struct {
-	// CompletedAt Time of batch operation completion.
-	CompletedAt time.Time `json:"completedAt"`
-
-	// Links Links associated with batch operation.
-	Links *map[string]string `json:"links,omitempty"`
-
-	// RequestedAt Time of batch operation request.
-	RequestedAt *time.Time `json:"requestedAt,omitempty"`
-
-	// Results Results of batch operation.
-	Results []Tag `json:"results"`
-
-	// StartedAt Time of batch operation start.
-	StartedAt time.Time `json:"startedAt"`
-
-	// Status Status of batch operation.
-	Status BatchResponseTagStatus `json:"status"`
-}
-
-// BatchResponseTagStatus Status of batch operation.
-type BatchResponseTagStatus string
-
-// BatchResponseTagWithErrors defines model for BatchResponseTagWithErrors.
-type BatchResponseTagWithErrors struct {
-	// CompletedAt Time of batch operation completion.
-	CompletedAt time.Time `json:"completedAt"`
-
-	// Errors Errors in batch operation.
-	Errors *[]StandardError `json:"errors,omitempty"`
-
-	// Links Links associated with batch operation.
-	Links *map[string]string `json:"links,omitempty"`
-
-	// NumErrors Number of errors.
-	NumErrors *int32 `json:"numErrors,omitempty"`
-
-	// RequestedAt Time of batch operation request.
-	RequestedAt *time.Time `json:"requestedAt,omitempty"`
-
-	// Results Results of batch operation.
-	Results []Tag `json:"results"`
-
-	// StartedAt Time of batch operation start.
-	StartedAt time.Time `json:"startedAt"`
-
-	// Status Status of batch operation.
-	Status BatchResponseTagWithErrorsStatus `json:"status"`
-}
-
-// BatchResponseTagWithErrorsStatus Status of batch operation.
-type BatchResponseTagWithErrorsStatus string
-
-// BatchedBehavioralEventHttpCompletionRequest defines model for BatchedBehavioralEventHttpCompletionRequest.
-type BatchedBehavioralEventHttpCompletionRequest struct {
-	// Inputs An array of BehavioralEventHttpCompletionRequest objects, representing individual behavioral event completion requests to be processed in a batch.
-	Inputs []BehavioralEventHttpCompletionRequest `json:"inputs"`
-}
-
-// BehavioralEventHttpCompletionRequest defines model for BehavioralEventHttpCompletionRequest.
-type BehavioralEventHttpCompletionRequest struct {
-	// Email Email of visitor
-	Email *string `json:"email,omitempty"`
-
-	// EventName Internal name of the event-type to trigger
-	EventName string `json:"eventName"`
-
-	// ObjectId The object id that this event occurred on. Could be a contact id or a visitor id.
-	ObjectId *string `json:"objectId,omitempty"`
-
-	// OccurredAt The time when this event occurred (if any). If this isn't set, the current time will be used
-	OccurredAt *time.Time `json:"occurredAt,omitempty"`
-
-	// Properties Map of properties for the event in the format property internal name - property value
-	Properties map[string]string `json:"properties"`
-
-	// Utk User token
-	Utk *string `json:"utk,omitempty"`
-
-	// Uuid A string representing the universally unique identifier for the event.
-	Uuid *string `json:"uuid,omitempty"`
-}
-
-// BehavioralEventTypeDefinitionLabels defines model for BehavioralEventTypeDefinitionLabels.
-type BehavioralEventTypeDefinitionLabels struct {
-	// Plural The plural label for the event type. This is a string and is optional.
-	Plural *string `json:"plural,omitempty"`
-
-	// Singular The singular label for the event type. This is a string and is required.
-	Singular string `json:"singular"`
-}
-
-// Blog defines model for Blog.
-type Blog struct {
-	// AbsoluteUrl Blog's root URL
-	AbsoluteUrl string `json:"absoluteUrl"`
-
-	// AllowComments Boolean determining whether or not this blog allows public comments.
-	AllowComments bool `json:"allowComments"`
-
-	// Created The timestamp (ISO8601 format) when this blog was created.
-	Created time.Time `json:"created"`
-
-	// DeletedAt The timestamp (ISO8601 format) when this Blog was deleted.
-	DeletedAt time.Time `json:"deletedAt"`
-
-	// Description The Description of this Blog.
-	Description string `json:"description"`
-
-	// HtmlTitle The html title of this Blog.
-	HtmlTitle string `json:"htmlTitle"`
-
-	// Id The unique ID of the Blog.
-	Id string `json:"id"`
-
-	// Language The explicitly defined language of the Blog. If null, the Blog will default to the language of the Domain.
-	Language BlogLanguage `json:"language"`
-
-	// ListingPageId The ID of the listing page associated with the blog.
-	ListingPageId string `json:"listingPageId"`
-
-	// Name The internal name of the blog.
-	Name string `json:"name"`
-
-	// PublicAccessRules Rules for require member registration to access private content.
-	PublicAccessRules []PublicAccessRule `json:"publicAccessRules"`
-
-	// PublicAccessRulesEnabled Boolean to determine whether or not to respect publicAccessRules.
-	PublicAccessRulesEnabled bool `json:"publicAccessRulesEnabled"`
-
-	// PublicTitle The public title of this Blog.
-	PublicTitle string `json:"publicTitle"`
-
-	// Slug The path of the this blog. This field is appended to the domain to construct the url of this blog.
-	Slug string `json:"slug"`
-
-	// TranslatedFromId ID of the primary Blog this object was translated from.
-	TranslatedFromId string `json:"translatedFromId"`
-
-	// Updated The timestamp (ISO8601 format) when this blog was updated.
-	Updated time.Time `json:"updated"`
-}
-
-// BlogLanguage The explicitly defined language of the Blog. If null, the Blog will default to the language of the Domain.
-type BlogLanguage string
-
-// BlogAuthor defines model for BlogAuthor.
-type BlogAuthor struct {
-	// Avatar URL to the blog author's avatar, if supplying a custom one.
-	Avatar string `json:"avatar"`
-
-	// Bio A short biography of the blog author.
-	Bio string `json:"bio"`
-
-	// Created The timestamp (ISO8601 format) when this Blog Author was created.
-	Created time.Time `json:"created"`
-
-	// DeletedAt The timestamp (ISO8601 format) when this Blog Author was deleted.
-	DeletedAt time.Time `json:"deletedAt"`
-
-	// DisplayName The full name of the Blog Author to be displayed.
-	DisplayName string `json:"displayName"`
-
-	// Email Email address of the Blog Author.
-	Email string `json:"email"`
-
-	// Facebook URL to the Blog Author's Facebook page.
-	Facebook string `json:"facebook"`
-
-	// FullName The full, unabbreviated name of the blog author, typically their first and last name combined.
-	FullName string `json:"fullName"`
-
-	// Id The unique ID of the Blog Author.
-	Id string `json:"id"`
-
-	// Language The explicitly defined ISO 639 language code of the blog author.
-	Language BlogAuthorLanguage `json:"language"`
-
-	// Linkedin URL to the blog author's LinkedIn page.
-	Linkedin string `json:"linkedin"`
-
-	// Name The name field for the blog author. (This appears to be a shorter or alternative name field compared to fullName.)
-	Name string `json:"name"`
-
-	// Slug A URL-friendly identifier for the blog author that can be used to reference the author in URLs. Typically generated from the author's name and contains lowercase letters, hyphens, and underscores.
-	Slug string `json:"slug"`
-
-	// TranslatedFromId ID of the primary blog author this object was translated from.
-	TranslatedFromId int64 `json:"translatedFromId"`
-
-	// Twitter URL or username of the Twitter account associated with the Blog Author. This will be normalized into the Twitter url for said user.
-	Twitter string `json:"twitter"`
-
-	// Updated The timestamp (ISO8601 format) when this Blog Author was updated.
-	Updated time.Time `json:"updated"`
-
-	// Website URL to the website of the Blog Author.
-	Website string `json:"website"`
-}
-
-// BlogAuthorLanguage The explicitly defined ISO 639 language code of the blog author.
-type BlogAuthorLanguage string
-
-// BlogAuthorCloneRequestVNext defines model for BlogAuthorCloneRequestVNext.
-type BlogAuthorCloneRequestVNext struct {
-	BlogAuthor BlogAuthor `json:"blogAuthor"`
-
-	// Id ID of the object to be cloned.
-	Id string `json:"id"`
-
-	// Language Language of newly cloned object.
-	Language *string `json:"language,omitempty"`
-
-	// PrimaryLanguage Primary language in multi-language group.
-	PrimaryLanguage *string `json:"primaryLanguage,omitempty"`
-
-	// UsePublished Specifies whether to use the published version of the blog author for cloning. This is a boolean.
-	UsePublished *bool `json:"usePublished,omitempty"`
-}
-
-// BlogLanguageCloneRequestVNext defines model for BlogLanguageCloneRequestVNext.
-type BlogLanguageCloneRequestVNext struct {
-	// Id ID of blog to clone.
-	Id string `json:"id"`
-
-	// Language Target language of new variant.
-	Language *string `json:"language,omitempty"`
-
-	// PrimaryLanguage Language of primary blog to clone.
-	PrimaryLanguage *string `json:"primaryLanguage,omitempty"`
-
-	// Slug Path to this blog.
-	Slug *string `json:"slug,omitempty"`
-
-	// UsePublished A boolean indicating whether to use the published version of the blog post for cloning.
-	UsePublished *bool `json:"usePublished,omitempty"`
-}
-
-// BlogPost defines model for BlogPost.
-type BlogPost struct {
-	// AbStatus The status of the AB test associated with this blog post, if applicable
-	//
-	// Available options: automated_loser_variant, automated_master, automated_variant, loser_variant, mab_master, mab_variant, master, variant
-	AbStatus BlogPostAbStatus `json:"abStatus"`
-
-	// AbTestId The ID of the AB test associated with this page, if applicable
-	AbTestId string `json:"abTestId"`
-
-	// ArchivedAt The timestamp (ISO8601 format) when this Blog Post was deleted.
-	ArchivedAt int64 `json:"archivedAt"`
-
-	// ArchivedInDashboard If True, the post will not show up in your dashboard, although the post could still be live.
-	ArchivedInDashboard bool `json:"archivedInDashboard"`
-
-	// AttachedStylesheets List of stylesheets to attach to this blog post. These stylesheets are attached to just this page. Order of precedence is bottom to top, just like in the HTML.
-	AttachedStylesheets []map[string]map[string]interface{} `json:"attachedStylesheets"`
-
-	// AuthorName The name of the user that updated this Blog Post.
-	AuthorName string `json:"authorName"`
-
-	// BlogAuthorId The ID of the Blog Author associated with this Blog Post.
-	BlogAuthorId string `json:"blogAuthorId"`
-
-	// Campaign The GUID of the marketing campaign this Blog Post is a part of.
-	Campaign string `json:"campaign"`
-
-	// CategoryId ID of the type of object this is. Should always .
-	CategoryId int32 `json:"categoryId"`
-
-	// ContentGroupId The ID of the parent Blog this Blog Post is associated with.
-	ContentGroupId string `json:"contentGroupId"`
-
-	// ContentTypeCategory An ENUM descibing the type of this object. Should always be BLOG_POST.
-	ContentTypeCategory BlogPostContentTypeCategory `json:"contentTypeCategory"`
-
-	// Created The timestamp (ISO8601 format) when this Blog Post was created.
-	Created time.Time `json:"created"`
-
-	// CreatedById The ID of the user that created this Blog Post.
-	CreatedById string `json:"createdById"`
-
-	// CurrentState A generated ENUM descibing the current state of this Blog Post. Should always match state.
-	CurrentState BlogPostCurrentState `json:"currentState"`
-
-	// CurrentlyPublished Whether the post is published (true or false)
-	CurrentlyPublished bool `json:"currentlyPublished"`
-
-	// Domain The domain this Blog Post will resolve to. If null, the Blog Post will default to the domain of the ParentBlog.
-	Domain string `json:"domain"`
-
-	// DynamicPageDataSourceId The identifier for the data source used by the dynamic page.
-	DynamicPageDataSourceId string `json:"dynamicPageDataSourceId"`
-
-	// DynamicPageDataSourceType The type of data source used by the dynamic page.
-	DynamicPageDataSourceType int32 `json:"dynamicPageDataSourceType"`
-
-	// DynamicPageHubDbTableId The ID of the HubDB table this Blog Post references, if applicable
-	DynamicPageHubDbTableId string `json:"dynamicPageHubDbTableId"`
-
-	// EnableDomainStylesheets Boolean to determine whether or not the styles from the template should be applied.
-	EnableDomainStylesheets bool `json:"enableDomainStylesheets"`
-
-	// EnableGoogleAmpOutputOverride Boolean to allow overriding the AMP settings for the blog.
-	EnableGoogleAmpOutputOverride bool `json:"enableGoogleAmpOutputOverride"`
-
-	// EnableLayoutStylesheets Boolean to determine whether or not the styles from the template should be applied.
-	EnableLayoutStylesheets bool `json:"enableLayoutStylesheets"`
-
-	// FeaturedImage The featuredImage of this Blog Post.
-	FeaturedImage string `json:"featuredImage"`
-
-	// FeaturedImageAltText Alt Text of the featuredImage.
-	FeaturedImageAltText string `json:"featuredImageAltText"`
-
-	// FolderId Unique identifier of associated folder
-	FolderId string `json:"folderId"`
-
-	// FooterHtml Custom HTML for embed codes, javascript that should be placed before the </body> tag of the page.
-	FooterHtml string `json:"footerHtml"`
-
-	// HeadHtml Custom HTML for embed codes, javascript, etc. that goes in the <head> tag of the page.
-	HeadHtml string `json:"headHtml"`
-
-	// HtmlTitle The html title of this Blog Post.
-	HtmlTitle string `json:"htmlTitle"`
-
-	// Id The unique ID of the Blog Post.
-	Id string `json:"id"`
-
-	// IncludeDefaultCustomCss Boolean to determine whether or not the Primary CSS Files should be applied.
-	IncludeDefaultCustomCss bool `json:"includeDefaultCustomCss"`
-
-	// Language The explicitly defined ISO 639 language code of the Blog Post. If null, the Blog Post will default to the language of the ParentBlog.
-	Language BlogPostLanguage `json:"language"`
-
-	// LayoutSections A structure detailing the layout sections of the blog post.
-	LayoutSections map[string]LayoutSection `json:"layoutSections"`
-
-	// LinkRelCanonicalUrl Optional override to set the URL to be used in the rel=canonical link tag on the page.
-	LinkRelCanonicalUrl string `json:"linkRelCanonicalUrl"`
-
-	// MabExperimentId Unique identifier of the MAB Experiment
-	MabExperimentId string `json:"mabExperimentId"`
-
-	// MetaDescription A description that goes in <meta> tag on the page.
-	MetaDescription string `json:"metaDescription"`
-
-	// Name The internal name of the Blog Post.
-	Name string `json:"name"`
-
-	// PageExpiryDate The date at which this blog post should expire and begin redirecting to another url or page.
-	PageExpiryDate int64 `json:"pageExpiryDate"`
-
-	// PageExpiryEnabled Boolean describing if the page expiration feature is enabled for this blog post.
-	PageExpiryEnabled bool `json:"pageExpiryEnabled"`
-
-	// PageExpiryRedirectId The ID of another page this blog post's url should redirect to once this blog post expires. Should only set this or pageExpiryRedirectUrl.
-	PageExpiryRedirectId int64 `json:"pageExpiryRedirectId"`
-
-	// PageExpiryRedirectUrl The URL this blog post's url should redirect to once it expires. Should only set this or pageExpiryRedirectId.
-	PageExpiryRedirectUrl string `json:"pageExpiryRedirectUrl"`
-
-	// Password Set this to create a password protected page. Entering the password will be required to view the page.
-	Password string `json:"password"`
-
-	// PostBody The HTML of the main post body.
-	PostBody string `json:"postBody"`
-
-	// PostSummary The summary of the blog post that will appear on the main listing page.
-	PostSummary string `json:"postSummary"`
-
-	// PublicAccessRules Rules for require member registration to access private content.
-	PublicAccessRules []PublicAccessRule `json:"publicAccessRules"`
-
-	// PublicAccessRulesEnabled Boolean to determine whether or not to respect publicAccessRules.
-	PublicAccessRulesEnabled bool `json:"publicAccessRulesEnabled"`
-
-	// PublishDate The date (ISO8601 format) the blog post is to be published at.
-	PublishDate time.Time `json:"publishDate"`
-
-	// PublishImmediately Set this to true if you want to be published immediately when the schedule publish endpoint is called, and to ignore the publish_date setting.
-	PublishImmediately bool `json:"publishImmediately"`
-
-	// PublishedAt The date and time when the blog post was published, in ISO 8601 format.
-	PublishedAt time.Time `json:"publishedAt"`
-
-	// RssBody The contents of the RSS body for this Blog Post.
-	RssBody string `json:"rssBody"`
-
-	// RssSummary The contents of the RSS summary for this Blog Post.
-	RssSummary string `json:"rssSummary"`
-
-	// Slug The path of the this blog post. This field is appended to the domain to construct the url of this post.
-	Slug string `json:"slug"`
-
-	// State An ENUM descibing the current state of this Blog Post.
-	State string `json:"state"`
-
-	// TagIds List of IDs for the tags associated with this Blog Post.
-	TagIds []int64 `json:"tagIds"`
-
-	// ThemeSettingsValues A collection of settings specific to the theme applied to the blog post.
-	ThemeSettingsValues map[string]map[string]interface{} `json:"themeSettingsValues"`
-
-	// TranslatedFromId ID of the primary blog post this object was translated from.
-	TranslatedFromId string `json:"translatedFromId"`
-
-	// Translations A map of translations for the blog post, each associated with a specific language variation.
-	Translations map[string]ContentLanguageVariation `json:"translations"`
-
-	// Updated The timestamp (ISO8601 format) when this Blog Post was updated.
-	Updated time.Time `json:"updated"`
-
-	// UpdatedById The ID of the user that updated this Blog Post.
-	UpdatedById string `json:"updatedById"`
-
-	// Url A generated field representing the URL of this blog post.
-	Url string `json:"url"`
-
-	// UseFeaturedImage Boolean to determine if this post should use a featuredImage.
-	UseFeaturedImage bool `json:"useFeaturedImage"`
-
-	// WidgetContainers A data structure containing the data for all the modules inside the containers for this post. This will only be populated if the page has widget containers.
-	WidgetContainers map[string]map[string]interface{} `json:"widgetContainers"`
-
-	// Widgets A data structure containing the data for all the modules for this page.
-	Widgets map[string]map[string]interface{} `json:"widgets"`
-}
-
-// BlogPostAbStatus The status of the AB test associated with this blog post, if applicable
-//
-// Available options: automated_loser_variant, automated_master, automated_variant, loser_variant, mab_master, mab_variant, master, variant
-type BlogPostAbStatus string
-
-// BlogPostContentTypeCategory An ENUM descibing the type of this object. Should always be BLOG_POST.
-type BlogPostContentTypeCategory string
-
-// BlogPostCurrentState A generated ENUM descibing the current state of this Blog Post. Should always match state.
-type BlogPostCurrentState string
-
-// BlogPostLanguage The explicitly defined ISO 639 language code of the Blog Post. If null, the Blog Post will default to the language of the ParentBlog.
-type BlogPostLanguage string
-
-// BlogPostLanguageCloneRequestVNext defines model for BlogPostLanguageCloneRequestVNext.
-type BlogPostLanguageCloneRequestVNext struct {
-	// Id ID of blog post to clone.
-	Id string `json:"id"`
-
-	// Language Target language of new variant.
-	Language *string `json:"language,omitempty"`
-
-	// UsePublished A boolean indicating whether the published version of the blog post should be used for cloning. If true, the published version is used; otherwise, the draft version is used.
-	UsePublished *bool `json:"usePublished,omitempty"`
-}
-
-// BlogPostVersion defines model for BlogPostVersion.
-type BlogPostVersion struct {
-	// Id The unique identifier for this specific version of the blog post.
-	Id     string   `json:"id"`
-	Object BlogPost `json:"object"`
-
-	// UpdatedAt The date and time when this version of the blog post was last updated, in ISO 8601 format.
-	UpdatedAt time.Time   `json:"updatedAt"`
-	User      VersionUser `json:"user"`
-}
-
-// BlogVersion defines model for BlogVersion.
-type BlogVersion struct {
-	// Id The unique identifier for this blog version.
-	Id     string `json:"id"`
-	Object Blog   `json:"object"`
-
-	// UpdatedAt The date and time when this version was last updated, in ISO 8601 format.
-	UpdatedAt time.Time   `json:"updatedAt"`
-	User      VersionUser `json:"user"`
-}
-
-// BoolPropertyOperation defines model for BoolPropertyOperation.
-type BoolPropertyOperation struct {
-	// DefaultValue A string representing the default value for the operation.
-	DefaultValue *string `json:"defaultValue,omitempty"`
-
-	// IncludeObjectsWithNoValueSet A boolean indicating whether to include objects that have no value set for the property.
-	IncludeObjectsWithNoValueSet bool `json:"includeObjectsWithNoValueSet"`
-
-	// OperationType A string indicating the type of operation being performed.
-	OperationType string `json:"operationType"`
-
-	// Operator A string representing the operation to be performed. Valid values include 'IS_EQUAL_TO', 'IS_NOT_EQUAL_TO', 'HAS_EVER_BEEN_EQUAL_TO', and 'HAS_NEVER_BEEN_EQUAL_TO'.
-	Operator BoolPropertyOperationOperator `json:"operator"`
-
-	// OperatorName A string representing the name of the operator used in the operation.
-	OperatorName   string          `json:"operatorName"`
-	PropertyAspect *PropertyAspect `json:"propertyAspect,omitempty"`
-
-	// PropertyType A string indicating the type of property, which is 'bool' for this operation.
-	PropertyType BoolPropertyOperationPropertyType `json:"propertyType"`
-
-	// RenderSpec A string specifying the rendering specification for the operation.
-	RenderSpec *string `json:"renderSpec,omitempty"`
-
-	// Value A boolean indicating the value to be used in the operation.
-	Value bool `json:"value"`
-}
-
-// BoolPropertyOperationOperator A string representing the operation to be performed. Valid values include 'IS_EQUAL_TO', 'IS_NOT_EQUAL_TO', 'HAS_EVER_BEEN_EQUAL_TO', and 'HAS_NEVER_BEEN_EQUAL_TO'.
-type BoolPropertyOperationOperator string
-
-// BoolPropertyOperationPropertyType A string indicating the type of property, which is 'bool' for this operation.
-type BoolPropertyOperationPropertyType string
-
-// BooleanFieldSchema defines model for BooleanFieldSchema.
-type BooleanFieldSchema struct {
-	// Type Specifies the field type as BOOLEAN, indicating that the field can hold a true or false value.
-	Type BooleanFieldSchemaType `json:"type"`
-}
-
-// BooleanFieldSchemaType Specifies the field type as BOOLEAN, indicating that the field can hold a true or false value.
-type BooleanFieldSchemaType string
-
-// BoundedNextPage defines model for BoundedNextPage.
-type BoundedNextPage struct {
-	// Link A URL that can be used to retrieve the next set of results.
-	Link *string `json:"link,omitempty"`
-
-	// Offset The offset value indicating the starting point for the next set of results.
-	Offset int32 `json:"offset"`
-}
-
-// BoundedPaging defines model for BoundedPaging.
-type BoundedPaging struct {
-	Next *BoundedNextPage `json:"next,omitempty"`
-}
-
-// BreakpointStyles defines model for BreakpointStyles.
-type BreakpointStyles struct {
-	// Hidden A boolean indicating whether the element should be hidden at this breakpoint. A value of true means the element is not visible.
-	Hidden  bool    `json:"hidden"`
-	Margin  Margin  `json:"margin"`
-	Padding Padding `json:"padding"`
-}
-
-// BulkIntegratorObjectCreationResponse defines model for BulkIntegratorObjectCreationResponse.
-type BulkIntegratorObjectCreationResponse struct {
-	// CreatedObjects An array of objects that have been successfully created. Each object in the array represents a newly created integrator object.
-	CreatedObjects map[string]IntegratorObjectCreationResponse `json:"createdObjects"`
-}
-
-// CMSMediaBridgeProperty A HubSpot property
-type CMSMediaBridgeProperty struct {
-	// AllowedObjectTypes An array of strings representing the object types that are allowed for this property.
-	AllowedObjectTypes []ObjectTypeIdProto `json:"allowedObjectTypes"`
-
-	// Calculated A boolean indicating if the property is calculated.
-	Calculated bool `json:"calculated"`
-
-	// CanArchive A boolean indicating if the property can be archived.
-	CanArchive bool `json:"canArchive"`
-
-	// CanRestore A boolean indicating if the property can be restored.
-	CanRestore bool `json:"canRestore"`
-
-	// CreatedAt A string representing the date and time when the property was created, in ISO 8601 format.
-	CreatedAt int64 `json:"createdAt"`
-
-	// CreatedUserId A string representing the user ID who created the property.
-	CreatedUserId int64 `json:"createdUserId"`
-
-	// CurrencyPropertyName A string representing the name of the currency property associated with this property.
-	CurrencyPropertyName string `json:"currencyPropertyName"`
-
-	// DataSensitivity A string indicating the sensitivity level of the data.
-	DataSensitivity CMSMediaBridgePropertyDataSensitivity `json:"dataSensitivity"`
-
-	// DateDisplayHint A string providing a hint for displaying dates.
-	DateDisplayHint CMSMediaBridgePropertyDateDisplayHint `json:"dateDisplayHint"`
-
-	// Deleted A boolean indicating if the property has been deleted.
-	Deleted bool `json:"deleted"`
-
-	// Description A string providing a description of the property.
-	Description string `json:"description"`
-
-	// DisplayMode A string indicating the display mode of the property.
-	DisplayMode CMSMediaBridgePropertyDisplayMode `json:"displayMode"`
-
-	// DisplayOrder An integer specifying the order in which the property is displayed.
-	DisplayOrder int32 `json:"displayOrder"`
-
-	// EnforceMultivalueUniqueness A boolean indicating if uniqueness is enforced for multivalue properties.
-	EnforceMultivalueUniqueness bool `json:"enforceMultivalueUniqueness"`
-
-	// ExternalOptions A boolean indicating if the property has external options.
-	ExternalOptions bool `json:"externalOptions"`
-
-	// ExternalOptionsReferenceType A string indicating the reference type for external options.
-	ExternalOptionsReferenceType string `json:"externalOptionsReferenceType"`
-
-	// Favorited A boolean indicating if the property is marked as a favorite.
-	Favorited bool `json:"favorited"`
-
-	// FavoritedOrder An integer specifying the order of the property among favorites.
-	FavoritedOrder int32 `json:"favoritedOrder"`
-
-	// FieldType A string indicating the field type of the property, such as 'booleancheckbox', 'calculation_equation', 'checkbox', 'date', 'file', 'html', 'number', 'phonenumber', 'radio', 'select', 'text', or 'textarea'.
-	FieldType string `json:"fieldType"`
-
-	// FormField A boolean indicating whether the property is used as a form field.
-	FormField bool `json:"formField"`
-
-	// FromUserId A string representing the user ID from which the property originates.
-	FromUserId int64 `json:"fromUserId"`
-
-	// GroupName A string representing the name of the group to which the property belongs.
-	GroupName string `json:"groupName"`
-
-	// HasUniqueValue A boolean indicating if the property has a unique value.
-	HasUniqueValue bool `json:"hasUniqueValue"`
-
-	// Hidden A boolean indicating whether the property is hidden.
-	//
-	// Example: false
-	Hidden bool `json:"hidden"`
-
-	// HubspotDefined A boolean indicating if the property is defined by HubSpot.
-	HubspotDefined bool `json:"hubspotDefined"`
-
-	// IsCustomizedDefault A boolean indicating if the property is a customized default.
-	IsCustomizedDefault bool `json:"isCustomizedDefault"`
-
-	// IsMultiValued A boolean indicating if the property can have multiple values.
-	IsMultiValued bool `json:"isMultiValued"`
-
-	// IsPartial A boolean indicating if the property is partial.
-	IsPartial bool `json:"isPartial"`
-
-	// Label A string representing the label of the property, used for display purposes.
-	Label string `json:"label"`
-
-	// MutableDefinitionNotDeletable A boolean indicating if the property definition is mutable but not deletable.
-	MutableDefinitionNotDeletable bool `json:"mutableDefinitionNotDeletable"`
-
-	// Name A string representing the name of the property.
-	Name string `json:"name"`
-
-	// NumberDisplayHint A string providing a hint for displaying numbers, with options like 'unformatted', 'formatted', 'currency', 'percentage', 'duration', or 'probability'.
-	NumberDisplayHint CMSMediaBridgePropertyNumberDisplayHint `json:"numberDisplayHint"`
-
-	// OptionSortStrategy A string indicating the strategy used to sort options.
-	OptionSortStrategy CMSMediaBridgePropertyOptionSortStrategy `json:"optionSortStrategy"`
-
-	// Options An array of options available for the property, applicable if the property type supports options.
-	Options []AutomationActionsV4Option `json:"options"`
-
-	// OptionsAreMutable A boolean indicating if the options for the property are mutable.
-	OptionsAreMutable bool `json:"optionsAreMutable"`
-
-	// OwningAppId An integer representing the ID of the app that owns the property.
-	OwningAppId int64 `json:"owningAppId"`
-
-	// PortalId An integer representing the unique identifier for the portal.
-	PortalId int64 `json:"portalId"`
-
-	// ReadOnlyDefinition A boolean indicating if the property's definition is read-only.
-	ReadOnlyDefinition bool `json:"readOnlyDefinition"`
-
-	// ReadOnlyValue A boolean indicating if the property's value is read-only.
-	ReadOnlyValue bool `json:"readOnlyValue"`
-
-	// ReferencedObjectType A string indicating the type of object referenced by the property.
-	ReferencedObjectType CMSMediaBridgePropertyReferencedObjectType `json:"referencedObjectType"`
-
-	// SearchTextAnalysisMode A string indicating the mode of text analysis for search purposes.
-	SearchTextAnalysisMode CMSMediaBridgePropertySearchTextAnalysisMode `json:"searchTextAnalysisMode"`
-
-	// SearchableInGlobalSearch A boolean indicating if the property is searchable in global search.
-	SearchableInGlobalSearch bool `json:"searchableInGlobalSearch"`
-
-	// SensitiveDataCategories An array of strings representing the categories of sensitive data associated with this property.
-	SensitiveDataCategories []string `json:"sensitiveDataCategories"`
-
-	// ShowCurrencySymbol A boolean indicating if the currency symbol should be displayed for the property.
-	ShowCurrencySymbol bool `json:"showCurrencySymbol"`
-
-	// TextDisplayHint A string providing a hint for displaying text, with options like 'unformatted_single_line', 'multi_line', 'email', 'phone_number', 'domain_name', 'ip_address', 'physical_address', or 'postal_code'.
-	TextDisplayHint CMSMediaBridgePropertyTextDisplayHint `json:"textDisplayHint"`
-
-	// Type A string indicating the type of the property, such as 'bool', 'date', 'datetime', 'enumeration', 'number', 'phone_number', or 'string'.
-	Type CMSMediaBridgePropertyType `json:"type"`
-
-	// UpdatedAt A string representing the date and time when the property was last updated, in ISO 8601 format.
-	UpdatedAt int64 `json:"updatedAt"`
-}
-
-// CMSMediaBridgePropertyDataSensitivity A string indicating the sensitivity level of the data.
-type CMSMediaBridgePropertyDataSensitivity string
-
-// CMSMediaBridgePropertyDateDisplayHint A string providing a hint for displaying dates.
-type CMSMediaBridgePropertyDateDisplayHint string
-
-// CMSMediaBridgePropertyDisplayMode A string indicating the display mode of the property.
-type CMSMediaBridgePropertyDisplayMode string
-
-// CMSMediaBridgePropertyNumberDisplayHint A string providing a hint for displaying numbers, with options like 'unformatted', 'formatted', 'currency', 'percentage', 'duration', or 'probability'.
-type CMSMediaBridgePropertyNumberDisplayHint string
-
-// CMSMediaBridgePropertyOptionSortStrategy A string indicating the strategy used to sort options.
-type CMSMediaBridgePropertyOptionSortStrategy string
-
-// CMSMediaBridgePropertyReferencedObjectType A string indicating the type of object referenced by the property.
-type CMSMediaBridgePropertyReferencedObjectType string
-
-// CMSMediaBridgePropertySearchTextAnalysisMode A string indicating the mode of text analysis for search purposes.
-type CMSMediaBridgePropertySearchTextAnalysisMode string
-
-// CMSMediaBridgePropertyTextDisplayHint A string providing a hint for displaying text, with options like 'unformatted_single_line', 'multi_line', 'email', 'phone_number', 'domain_name', 'ip_address', 'physical_address', or 'postal_code'.
-type CMSMediaBridgePropertyTextDisplayHint string
-
-// CMSMediaBridgePropertyType A string indicating the type of the property, such as 'bool', 'date', 'datetime', 'enumeration', 'number', 'phone_number', or 'string'.
-type CMSMediaBridgePropertyType string
-
-// CRMDealSplitsSimplePublicObject A simple public object.
-type CRMDealSplitsSimplePublicObject struct {
-	// Archived A boolean indicating whether this object is archived.
-	Archived bool `json:"archived"`
-
-	// ArchivedAt The date and time when this object was archived, in ISO 8601 format.
-	ArchivedAt *time.Time `json:"archivedAt,omitempty"`
-
-	// CreatedAt The date and time when this object was created, in ISO 8601 format.
-	CreatedAt time.Time `json:"createdAt"`
-
-	// Id The unique identifier for this object, represented as a string.
-	Id string `json:"id"`
-
-	// ObjectWriteTraceId A string identifier used for tracing write operations on this object.
-	ObjectWriteTraceId *string `json:"objectWriteTraceId,omitempty"`
-
-	// Properties A map of property names to their values, where each value is a string.
-	Properties map[string]string `json:"properties"`
-
-	// PropertiesWithHistory A map of property names to arrays of historical values, each containing a value and its associated timestamp.
-	PropertiesWithHistory *map[string][]ValueWithTimestamp `json:"propertiesWithHistory,omitempty"`
-
-	// UpdatedAt The date and time when this object was last updated, in ISO 8601 format.
-	UpdatedAt time.Time `json:"updatedAt"`
-
-	// Url A string representing the URL associated with this object.
-	Url *string `json:"url,omitempty"`
-}
-
-// CalculatedPropertyLimitResponse defines model for CalculatedPropertyLimitResponse.
-type CalculatedPropertyLimitResponse struct {
-	// ByObjectType An array detailing the usage of calculated properties by object type, with each entry providing specific usage information for an object type.
-	ByObjectType []UsageForObjectType `json:"byObjectType"`
-
-	// OverallLimit The maximum number of calculated properties allowed.
-	OverallLimit int64 `json:"overallLimit"`
-
-	// OverallPercentage The percentage of the overall limit that is currently being used for calculated properties.
-	OverallPercentage float64 `json:"overallPercentage"`
-
-	// OverallUsage The total number of calculated properties currently in use.
-	OverallUsage int64 `json:"overallUsage"`
-}
-
-// CalendarDatePropertyOperation defines model for CalendarDatePropertyOperation.
-type CalendarDatePropertyOperation struct {
-	// DefaultValue A string representing the default value for the operation.
-	DefaultValue *string `json:"defaultValue,omitempty"`
-
-	// FiscalYearStart A string indicating the starting month of the fiscal year, with options like 'JANUARY', 'FEBRUARY', 'MARCH', etc.
-	FiscalYearStart *CalendarDatePropertyOperationFiscalYearStart `json:"fiscalYearStart,omitempty"`
-
-	// IncludeObjectsWithNoValueSet A boolean that determines whether objects with no value set should be included in the operation.
-	IncludeObjectsWithNoValueSet bool `json:"includeObjectsWithNoValueSet"`
-
-	// OperationType A string indicating the type of operation being performed.
-	OperationType string `json:"operationType"`
-
-	// Operator A string that specifies the operation to perform, with valid values including 'IN_THIS_TIME_UNIT', 'IN_THIS_TIME_UNIT_SO_FAR', 'IN_NEXT_TIME_UNIT', 'IN_LAST_TIME_UNIT', and 'IN_LAST_TIME_UNIT_SO_FAR'.
-	Operator CalendarDatePropertyOperationOperator `json:"operator"`
-
-	// OperatorName A string representing the name of the operator used in the operation.
-	OperatorName   string          `json:"operatorName"`
-	PropertyAspect *PropertyAspect `json:"propertyAspect,omitempty"`
-
-	// PropertyType A string indicating the type of property, defaulting to 'calendar-date'.
-	PropertyType CalendarDatePropertyOperationPropertyType `json:"propertyType"`
-
-	// RenderSpec A string used to define the rendering specifications for the operation.
-	RenderSpec *string `json:"renderSpec,omitempty"`
-
-	// TimeUnit A string representing the unit of time for the operation, such as 'DAY', 'WEEK', 'MONTH', 'QUARTER', or 'YEAR'.
-	TimeUnit CalendarDatePropertyOperationTimeUnit `json:"timeUnit"`
-
-	// TimeUnitCount An integer specifying the number of time units to consider in the operation.
-	TimeUnitCount int32 `json:"timeUnitCount"`
-
-	// UseFiscalYear A boolean indicating whether the fiscal year should be used in the operation.
-	UseFiscalYear bool `json:"useFiscalYear"`
-}
-
-// CalendarDatePropertyOperationFiscalYearStart A string indicating the starting month of the fiscal year, with options like 'JANUARY', 'FEBRUARY', 'MARCH', etc.
-type CalendarDatePropertyOperationFiscalYearStart string
-
-// CalendarDatePropertyOperationOperator A string that specifies the operation to perform, with valid values including 'IN_THIS_TIME_UNIT', 'IN_THIS_TIME_UNIT_SO_FAR', 'IN_NEXT_TIME_UNIT', 'IN_LAST_TIME_UNIT', and 'IN_LAST_TIME_UNIT_SO_FAR'.
-type CalendarDatePropertyOperationOperator string
-
-// CalendarDatePropertyOperationPropertyType A string indicating the type of property, defaulting to 'calendar-date'.
-type CalendarDatePropertyOperationPropertyType string
-
-// CalendarDatePropertyOperationTimeUnit A string representing the unit of time for the operation, such as 'DAY', 'WEEK', 'MONTH', 'QUARTER', or 'YEAR'.
-type CalendarDatePropertyOperationTimeUnit string
-
-// CallbackCompletionBatchRequest defines model for CallbackCompletionBatchRequest.
-type CallbackCompletionBatchRequest struct {
-	// CallbackId The unique identifier for the callback.
-	CallbackId string `json:"callbackId"`
-
-	// FailureReasonType Specifies the type of failure reason for the callback completion.
-	FailureReasonType *string `json:"failureReasonType,omitempty"`
-
-	// OutputFields Holds the output fields for the callback completion.
-	OutputFields map[string]string `json:"outputFields"`
-
-	// TypedOutputs Contains the typed outputs for the callback completion.
-	TypedOutputs map[string]interface{} `json:"typedOutputs"`
-}
-
-// CallbackCompletionRequest defines model for CallbackCompletionRequest.
-type CallbackCompletionRequest struct {
-	// FailureReasonType Indicates the reason for the failure of a callback completion.
-	FailureReasonType *string `json:"failureReasonType,omitempty"`
-
-	// OutputFields Contains the output fields associated with the callback, with each field represented as a key-value pair.
-	OutputFields map[string]string `json:"outputFields"`
-
-	// TypedOutputs Holds the typed outputs related to the callback, structured as an object.
-	TypedOutputs map[string]interface{} `json:"typedOutputs"`
-}
-
-// CardActions defines model for CardActions.
-type CardActions struct {
-	// BaseUrls A list of URL prefixes that will be accepted for card action URLs. If your data fetch response includes an action URL that doesn't begin with one of these values, it will result in an error and the card will not be displayed.
-	BaseUrls []string `json:"baseUrls"`
-}
-
-// CardAuditResponse defines model for CardAuditResponse.
-type CardAuditResponse struct {
-	// ActionType The type of action performed, with possible values: CREATE, DELETE, UPDATE.
-	ActionType CardAuditResponseActionType `json:"actionType"`
-
-	// ApplicationId The ID of the application associated with the card.
-	ApplicationId int32 `json:"applicationId"`
-
-	// AuthSource The source of authentication for the action, with possible values: APP, EXTERNAL, INTERNAL.
-	AuthSource CardAuditResponseAuthSource `json:"authSource"`
-
-	// ChangedAt The timestamp indicating when the change occurred.
-	ChangedAt int64 `json:"changedAt"`
-
-	// InitiatingUserId The ID of the user who initiated the action.
-	InitiatingUserId int32 `json:"initiatingUserId"`
-
-	// ObjectTypeId The ID of the card.
-	ObjectTypeId int64 `json:"objectTypeId"`
-}
-
-// CardAuditResponseActionType The type of action performed, with possible values: CREATE, DELETE, UPDATE.
-type CardAuditResponseActionType string
-
-// CardAuditResponseAuthSource The source of authentication for the action, with possible values: APP, EXTERNAL, INTERNAL.
-type CardAuditResponseAuthSource string
-
-// CardCreateRequest defines model for CardCreateRequest.
-type CardCreateRequest struct {
-	Actions CardActions     `json:"actions"`
-	Display CardDisplayBody `json:"display"`
-	Fetch   CardFetchBody   `json:"fetch"`
-
-	// Title The top-level title for this card. Displayed to users in the CRM UI.
-	Title string `json:"title"`
-}
-
-// CardDisplayBody defines model for CardDisplayBody.
-type CardDisplayBody struct {
-	// Properties Card display properties. These will will be rendered as "label : value" pairs in the card UI. See the [example card](#) in the overview docs for more details.
-	Properties []CardDisplayProperty `json:"properties"`
-}
-
-// CardDisplayProperty defines model for CardDisplayProperty.
-type CardDisplayProperty struct {
-	// DataType Type of data represented by this property.
-	DataType CardDisplayPropertyDataType `json:"dataType"`
-
-	// Label The label for this property as you'd like it displayed to users.
-	Label string `json:"label"`
-
-	// Name An internal identifier for this property. This value must be unique TODO.
-	Name string `json:"name"`
-
-	// Options An array of available options that can be displayed. Only used in when `dataType` is `STATUS`.
-	Options []DisplayOption `json:"options"`
-}
-
-// CardDisplayPropertyDataType Type of data represented by this property.
-type CardDisplayPropertyDataType string
-
-// CardFetchBody defines model for CardFetchBody.
-type CardFetchBody struct {
-	// CardType A deprecated field to determine the type of card returned.
-	CardType CardFetchBodyCardType `json:"cardType"`
-
-	// ObjectTypes An array of CRM object types where this card should be displayed. HubSpot will call your data fetch URL whenever a user visits a record page of the types defined here.
-	ObjectTypes []CardObjectTypeBody `json:"objectTypes"`
-
-	// ServerlessFunction A deprecated field to specify serverless functionality with the card
-	ServerlessFunction *string `json:"serverlessFunction,omitempty"`
-
-	// TargetUrl URL to a service endpoints that will respond with card details. HubSpot will call this endpoint each time a user visits a CRM record page where this card should be displayed.
-	TargetUrl string `json:"targetUrl"`
-}
-
-// CardFetchBodyCardType A deprecated field to determine the type of card returned.
-type CardFetchBodyCardType string
-
-// CardFetchBodyPatch defines model for CardFetchBodyPatch.
-type CardFetchBodyPatch struct {
-	// CardType A deprecated field to determine the type of card returned.
-	CardType *CardFetchBodyPatchCardType `json:"cardType,omitempty"`
-
-	// ObjectTypes An array of CRM object types where this card should be displayed. HubSpot will call your target URL whenever a user visits a record page of the types defined here.
-	ObjectTypes []CardObjectTypeBody `json:"objectTypes"`
-
-	// ServerlessFunction A deprecated field to specify serverless functionality with the card
-	ServerlessFunction *string `json:"serverlessFunction,omitempty"`
-
-	// TargetUrl URL to a service endpoint that will respond with details for this card. HubSpot will call this endpoint each time a user visits a CRM record page where this card should be displayed.
-	TargetUrl *string `json:"targetUrl,omitempty"`
-}
-
-// CardFetchBodyPatchCardType A deprecated field to determine the type of card returned.
-type CardFetchBodyPatchCardType string
-
-// CardMigrateViewsRequest defines model for CardMigrateViewsRequest.
-type CardMigrateViewsRequest struct {
-	// AllowDuplicateAppCardIds A boolean flag indicating whether duplicate app card IDs are allowed during the migration process.
-	AllowDuplicateAppCardIds bool `json:"allowDuplicateAppCardIds"`
-
-	// AppCardId The unique identifier for the new app card to which views will be migrated. This is an integer in int64 format.
-	AppCardId int64 `json:"appCardId"`
-
-	// HelpdeskAppCardId The unique identifier for the helpdesk app card, if applicable. This is an integer in int64 format.
-	HelpdeskAppCardId *int64 `json:"helpdeskAppCardId,omitempty"`
-
-	// LegacyCrmCardId The unique identifier for the legacy CRM card. This is an integer in int64 format.
-	LegacyCrmCardId int64  `json:"legacyCrmCardId"`
-	TabAppCardId    *int64 `json:"tabAppCardId,omitempty"`
-}
-
-// CardMigrateViewsResponse defines model for CardMigrateViewsResponse.
-type CardMigrateViewsResponse struct {
-	// EndedAt The timestamp for when the migration ended.
-	EndedAt *int64 `json:"endedAt,omitempty"`
-
-	// Message A human readable message describing the progress of the migration.
-	Message string `json:"message"`
-
-	// RemainingPortalCount The number of portals that remain to be swapped from the Legacy CRM Card to the App Card
-	RemainingPortalCount *int64 `json:"remainingPortalCount,omitempty"`
-
-	// StartedAt The timestamp for when the migration started.
-	StartedAt *int64 `json:"startedAt,omitempty"`
-
-	// TotalPortalCount The total number of portals that have access to the Legacy CRM Card
-	TotalPortalCount *int64 `json:"totalPortalCount,omitempty"`
-}
-
-// CardObjectTypeBody defines model for CardObjectTypeBody.
-type CardObjectTypeBody struct {
-	// Name A CRM object type where this card should be displayed.
-	Name CardObjectTypeBodyName `json:"name"`
-
-	// PropertiesToSend An array of properties that should be sent to this card's target URL when the data fetch request is made. Must be valid properties for the corresponding CRM object type.
-	PropertiesToSend []string `json:"propertiesToSend"`
-}
-
-// CardObjectTypeBodyName A CRM object type where this card should be displayed.
-type CardObjectTypeBodyName string
-
-// CardPatchRequest defines model for CardPatchRequest.
-type CardPatchRequest struct {
-	Actions *CardActions        `json:"actions,omitempty"`
-	Display *CardDisplayBody    `json:"display,omitempty"`
-	Fetch   *CardFetchBodyPatch `json:"fetch,omitempty"`
-
-	// Title The top-level title for this card. Displayed to users in the CRM UI.
-	Title *string `json:"title,omitempty"`
-}
-
-// CaseChangeTestExtensionData defines model for CaseChangeTestExtensionData.
-type CaseChangeTestExtensionData struct {
-	// Mood A property representing the mood, typically used for testing case changes in text. The data type and constraints are not specified in the provided schema.
-	Mood CaseChangeTestExtensionDataMood `json:"mood"`
-}
-
-// CaseChangeTestExtensionDataMood A property representing the mood, typically used for testing case changes in text. The data type and constraints are not specified in the provided schema.
-type CaseChangeTestExtensionDataMood string
-
-// CentralExchangeRatesInformation defines model for CentralExchangeRatesInformation.
-type CentralExchangeRatesInformation struct {
-	// CentralExchangeRatesEnabled Indicates if central exchange rates is enabled for the portal or not.
-	CentralExchangeRatesEnabled bool `json:"centralExchangeRatesEnabled"`
-}
-
-// ChannelConnectionSettingsPatchRequest defines model for ChannelConnectionSettingsPatchRequest.
-type ChannelConnectionSettingsPatchRequest struct {
-	// IsReady Indicates whether the channel connection settings are ready.
-	IsReady *bool `json:"isReady,omitempty"`
-
-	// Url The URL for the channel connection settings.
-	Url *string `json:"url,omitempty"`
-}
-
-// ChannelConnectionSettingsRequest defines model for ChannelConnectionSettingsRequest.
-type ChannelConnectionSettingsRequest struct {
-	// IsReady Indicates whether the channel connection settings are ready.
-	IsReady bool `json:"isReady"`
-
-	// Url The URL associated with the channel connection settings.
-	Url string `json:"url"`
-}
-
-// ChannelConnectionSettingsResponse defines model for ChannelConnectionSettingsResponse.
-type ChannelConnectionSettingsResponse struct {
-	// CreatedAt The date and time when the channel connection settings were created.
-	CreatedAt time.Time `json:"createdAt"`
-
-	// IsReady Indicates whether the channel connection settings are ready for use.
-	IsReady bool `json:"isReady"`
-
-	// UpdatedAt The date and time when the channel connection settings were last updated.
-	UpdatedAt time.Time `json:"updatedAt"`
-
-	// Url The URL associated with the channel connection settings.
-	Url string `json:"url"`
-}
-
-// ChannelIntegrationMessageEgg defines model for ChannelIntegrationMessageEgg.
-type ChannelIntegrationMessageEgg struct {
-	// AssociateWithContactId The ID of the contact with which this message should be associated.
-	AssociateWithContactId *int64 `json:"associateWithContactId,omitempty"`
-
-	// Attachments An array of attachments included with the message, which can be files, locations, contacts, or other supported types.
-	Attachments []ChannelIntegrationMessageEgg_Attachments_Item `json:"attachments"`
-
-	// ChannelAccountId The ID of the channel account through which the message is sent.
-	ChannelAccountId string `json:"channelAccountId"`
-
-	// InReplyToId The ID of the message this message is replying to.
-	InReplyToId *string `json:"inReplyToId,omitempty"`
-
-	// IntegrationIdempotencyId A unique identifier to ensure idempotency of the message within the integration.
-	IntegrationIdempotencyId *string `json:"integrationIdempotencyId,omitempty"`
-
-	// IntegrationThreadId A unique identifier for the thread within the integration.
-	IntegrationThreadId *string `json:"integrationThreadId,omitempty"`
-
-	// MessageDirection The direction of the message, indicating whether it is 'INCOMING' or 'OUTGOING'.
-	MessageDirection    ChannelIntegrationMessageEggMessageDirection `json:"messageDirection"`
-	PreResolvedContacts *PreResolvedContacts                         `json:"preResolvedContacts,omitempty"`
-
-	// Recipients An array of participants representing the recipients of the message.
-	Recipients []ChannelIntegrationParticipant `json:"recipients"`
-
-	// RichText The rich text content of the message, allowing for formatting.
-	RichText *string `json:"richText,omitempty"`
-
-	// Senders An array of participants representing the senders of the message.
-	Senders []ChannelIntegrationParticipant `json:"senders"`
-
-	// Text The plain text content of the message.
-	Text string `json:"text"`
-
-	// Timestamp The date and time when the message was created, in ISO 8601 format.
-	Timestamp time.Time `json:"timestamp"`
-}
-
-// ChannelIntegrationMessageEgg_Attachments_Item defines model for ChannelIntegrationMessageEgg.attachments.Item.
-type ChannelIntegrationMessageEgg_Attachments_Item struct {
-	union json.RawMessage
-}
-
-// ChannelIntegrationMessageEggMessageDirection The direction of the message, indicating whether it is 'INCOMING' or 'OUTGOING'.
-type ChannelIntegrationMessageEggMessageDirection string
-
-// ChannelIntegrationParticipant defines model for ChannelIntegrationParticipant.
-type ChannelIntegrationParticipant struct {
-	DeliveryIdentifier PublicDeliveryIdentifier `json:"deliveryIdentifier"`
-
-	// Name The name of the participant. It is a string that can be used to identify the participant within the channel.
-	Name *string `json:"name,omitempty"`
-
-	// SenderActorId A string representing the unique identifier of the sender actor. This is used to distinguish the sender within the channel integration.
-	SenderActorId *string `json:"senderActorId,omitempty"`
-}
-
-// ClientCredentialsTokenResponse defines model for ClientCredentialsTokenResponse.
-type ClientCredentialsTokenResponse struct {
-	// AccessToken A string representing the access token issued.
-	AccessToken string `json:"access_token"`
-
-	// ExpiresIn An integer indicating the number of seconds until the token expires, in int64 format.
-	ExpiresIn int64 `json:"expires_in"`
-
-	// HubId An integer representing the HubSpot account ID associated with the token.
-	HubId *int32 `json:"hub_id,omitempty"`
-
-	// IdToken A string representing the ID token, if applicable.
-	IdToken *string `json:"id_token,omitempty"`
-
-	// Scopes An array of strings representing the scopes granted by the token.
-	Scopes *[]string `json:"scopes,omitempty"`
-
-	// TokenType A string indicating the type of the token.
-	TokenType string `json:"token_type"`
-
-	// TokenUse Indicates the usage of the token, which is 'client_credentials' by default.
-	TokenUse ClientCredentialsTokenResponseTokenUse `json:"token_use"`
-
-	// UserId An integer representing the user ID associated with the token.
-	UserId *int32 `json:"user_id,omitempty"`
-}
-
-// ClientCredentialsTokenResponseTokenUse Indicates the usage of the token, which is 'client_credentials' by default.
-type ClientCredentialsTokenResponseTokenUse string
-
-// CmsAuditLoggingExportFilters defines model for CmsAuditLoggingExportFilters.
-type CmsAuditLoggingExportFilters struct {
-	// ObjectType An array of strings representing the types of objects to filter by during the export. Valid object types include 'BLOG', 'BLOG_POST', 'LANDING_PAGE', 'WEBSITE_PAGE', 'TEMPLATE', 'MODULE', 'GLOBAL_MODULE', 'SERVERLESS_FUNCTION', 'DOMAIN', 'URL_MAPPING', 'EMAIL', 'CONTENT_SETTINGS', 'HUBDB_TABLE', 'KNOWLEDGE_BASE_ARTICLE', 'KNOWLEDGE_BASE', 'THEME', 'CSS', 'JS', 'CTA', 'FILE', 'WEB_INTERACTIVE', 'PODCAST', 'CASE_STUDY', and 'QUOTE'.
-	ObjectType []string `json:"objectType"`
-}
-
-// CmsAuditLoggingExportSettings defines model for CmsAuditLoggingExportSettings.
-type CmsAuditLoggingExportSettings struct {
-	// Email A string specifying the email address to which notifications about the export should be sent.
-	Email   string                        `json:"email"`
-	Filters *CmsAuditLoggingExportFilters `json:"filters,omitempty"`
-
-	// Format A string specifying the format of the export file. Valid values include 'XLS', 'XLSX', and 'CSV'.
-	Format CmsAuditLoggingExportSettingsFormat `json:"format"`
-
-	// Partition An integer used for partitioning the export data, if applicable.
-	Partition *int32 `json:"partition,omitempty"`
-
-	// PortalId An integer representing the ID of the portal from which the audit logs are being exported.
-	PortalId int32 `json:"portalId"`
-
-	// RecipientUserIds An array of integers specifying the IDs of users who should receive the exported file.
-	RecipientUserIds []int32 `json:"recipientUserIds"`
-
-	// ShouldMarkExportFileAsSensitive A boolean indicating whether the export file should be marked as sensitive.
-	ShouldMarkExportFileAsSensitive bool `json:"shouldMarkExportFileAsSensitive"`
-
-	// Type A string indicating the type of export being performed.
-	Type string `json:"type"`
-
-	// UserId An integer representing the ID of the user initiating the export.
-	UserId *int32 `json:"userId,omitempty"`
-
-	// UserTimeZone A string representing the time zone of the user initiating the export.
-	UserTimeZone *string `json:"userTimeZone,omitempty"`
-}
-
-// CmsAuditLoggingExportSettingsFormat A string specifying the format of the export file. Valid values include 'XLS', 'XLSX', and 'CSV'.
-type CmsAuditLoggingExportSettingsFormat string
-
-// CollectionResponseApiUsageNoPaging defines model for CollectionResponseApiUsageNoPaging.
-type CollectionResponseApiUsageNoPaging struct {
-	Results []ApiUsage `json:"results"`
-}
-
-// CollectionResponseAssociatedId Represents a collection of associated IDs returned by an API request, including pagination details for navigating through the results.
-type CollectionResponseAssociatedId struct {
-	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
-	Paging *Paging `json:"paging,omitempty"`
-
-	// Results A list of associated IDs retrieved from the API request.
-	Results []AssociatedId `json:"results"`
-}
-
-// CollectionResponseAssociationLabelLimitResponseNoPaging defines model for CollectionResponseAssociationLabelLimitResponseNoPaging.
-type CollectionResponseAssociationLabelLimitResponseNoPaging struct {
-	// Results An array of AssociationLabelLimitResponse objects, each detailing the limits and usage of association labels between object types.
-	Results []AssociationLabelLimitResponse `json:"results"`
-}
-
-// CollectionResponseAssociationSpecWithLabelNoPaging defines model for CollectionResponseAssociationSpecWithLabelNoPaging.
-type CollectionResponseAssociationSpecWithLabelNoPaging struct {
-	// Results An array of association specifications with labels, where each item defines a specific association type between two object types. Each specification includes details such as category, typeId, and labels.
-	Results []AssociationSpecWithLabel `json:"results"`
-}
-
-// CollectionResponseContactReferenceForwardPaging defines model for CollectionResponseContactReferenceForwardPaging.
-type CollectionResponseContactReferenceForwardPaging struct {
-	// Paging Paging information for forward-only pagination. Contains the next page reference when more results are available; omitted or empty on the last page.
-	Paging *ForwardPaging `json:"paging,omitempty"`
-
-	// Results An array of contact references, each containing an identifier for a contact.
-	Results []ContactReference `json:"results"`
-}
-
-// CollectionResponseCurrencyCodeInfoNoPaging defines model for CollectionResponseCurrencyCodeInfoNoPaging.
-type CollectionResponseCurrencyCodeInfoNoPaging struct {
-	// Results An array of currency code information objects, each containing details about a specific currency code and its name.
-	Results []CurrencyCodeInfo `json:"results"`
-}
-
-// CollectionResponseExchangeRateForwardPaging defines model for CollectionResponseExchangeRateForwardPaging.
-type CollectionResponseExchangeRateForwardPaging struct {
-	// Paging Paging information for forward-only pagination. Contains the next page reference when more results are available; omitted or empty on the last page.
-	Paging *ForwardPaging `json:"paging,omitempty"`
-
-	// Results An array of exchange rate objects, each representing a specific currency conversion rate.
-	Results []ExchangeRate `json:"results"`
-}
-
-// CollectionResponseExchangeRateNoPaging defines model for CollectionResponseExchangeRateNoPaging.
-type CollectionResponseExchangeRateNoPaging struct {
-	// Results An array of exchange rate objects, each representing the conversion rate details between two currencies.
-	Results []ExchangeRate `json:"results"`
-}
-
-// CollectionResponseExternalUnifiedEvent defines model for CollectionResponseExternalUnifiedEvent.
-type CollectionResponseExternalUnifiedEvent struct {
-	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
-	Paging *Paging `json:"paging,omitempty"`
-
-	// Results An array of ExternalUnifiedEvent objects, each representing an individual event with its associated details.
-	Results []ExternalUnifiedEvent `json:"results"`
-}
-
-// CollectionResponseFile defines model for CollectionResponseFile.
-type CollectionResponseFile struct {
-	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
-	Paging  *Paging `json:"paging,omitempty"`
-	Results []File  `json:"results"`
-}
-
-// CollectionResponseFolder defines model for CollectionResponseFolder.
-type CollectionResponseFolder struct {
-	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
-	Paging  *Paging  `json:"paging,omitempty"`
-	Results []Folder `json:"results"`
-}
-
-// CollectionResponseHydratedCriticalActionForwardPaging defines model for CollectionResponseHydratedCriticalActionForwardPaging.
-type CollectionResponseHydratedCriticalActionForwardPaging struct {
-	// Paging Paging information for forward-only pagination. Contains the next page reference when more results are available; omitted or empty on the last page.
-	Paging *ForwardPaging `json:"paging,omitempty"`
-
-	// Results An array of hydrated critical actions, each containing detailed information about a specific critical action.
-	Results []HydratedCriticalAction `json:"results"`
-}
-
-// CollectionResponseIpRangeNoPaging defines model for CollectionResponseIpRangeNoPaging.
-type CollectionResponseIpRangeNoPaging struct {
-	// Results An array of IpRange objects, each representing a specific IP range with associated details such as CIDR, direction, service, and description.
-	Results []IpRange `json:"results"`
-}
-
-// CollectionResponseMarketingEventPublicReadResponseV2ForwardPaging defines model for CollectionResponseMarketingEventPublicReadResponseV2ForwardPaging.
-type CollectionResponseMarketingEventPublicReadResponseV2ForwardPaging struct {
-	// Paging Paging information for forward-only pagination. Contains the next page reference when more results are available; omitted or empty on the last page.
-	Paging *ForwardPaging `json:"paging,omitempty"`
-
-	// Results An array of marketing event public read responses, each containing details about a specific marketing event.
-	Results []MarketingEventPublicReadResponseV2 `json:"results"`
-}
-
-// CollectionResponseMultiAssociatedObjectWithLabelForwardPaging Represents a paginated collection of objects that are associated with multiple labels, including the results and pagination details. This component is used when retrieving associated objects with specific labels in a forward-paging manner.
-type CollectionResponseMultiAssociatedObjectWithLabelForwardPaging struct {
-	// Paging Paging information for forward-only pagination. Contains the next page reference when more results are available; omitted or empty on the last page.
-	Paging *ForwardPaging `json:"paging,omitempty"`
-
-	// Results The list of objects that are associated with multiple labels, returned as part of the collection.
-	Results []MultiAssociatedObjectWithLabel `json:"results"`
-}
-
-// CollectionResponseObjectSchemaNoPaging defines model for CollectionResponseObjectSchemaNoPaging.
-type CollectionResponseObjectSchemaNoPaging struct {
-	// Results An array of object schemas included in the response. Each item in the array is an object schema.
-	Results []ObjectSchema `json:"results"`
-}
-
-// CollectionResponseObjectTypeNearOrAtAssociationLimitNoPaging defines model for CollectionResponseObjectTypeNearOrAtAssociationLimitNoPaging.
-type CollectionResponseObjectTypeNearOrAtAssociationLimitNoPaging struct {
-	// Results An array containing details of object types that are near or at their association limits. Each item in the array is an ObjectTypeNearOrAtAssociationLimit object.
-	Results []ObjectTypeNearOrAtAssociationLimit `json:"results"`
-}
-
-// CollectionResponsePipelineNoPaging defines model for CollectionResponsePipelineNoPaging.
-type CollectionResponsePipelineNoPaging struct {
-	Results []Pipeline `json:"results"`
-}
-
-// CollectionResponsePipelineStageNoPaging defines model for CollectionResponsePipelineStageNoPaging.
-type CollectionResponsePipelineStageNoPaging struct {
-	Results []PipelineStage `json:"results"`
-}
-
-// CollectionResponsePropertyGroupNoPaging defines model for CollectionResponsePropertyGroupNoPaging.
-type CollectionResponsePropertyGroupNoPaging struct {
-	// Results An array of PropertyGroup objects. Each PropertyGroup contains details such as name, label, display order, and archived status.
-	Results []PropertyGroup `json:"results"`
-}
-
-// CollectionResponsePropertyNoPaging defines model for CollectionResponsePropertyNoPaging.
-type CollectionResponsePropertyNoPaging struct {
-	// Results An array of Property objects, each representing a property associated with the specified object type.
-	Results []Property1 `json:"results"`
-}
-
-// CollectionResponsePublicActionDefinitionForwardPaging defines model for CollectionResponsePublicActionDefinitionForwardPaging.
-type CollectionResponsePublicActionDefinitionForwardPaging struct {
-	// Paging Paging information for forward-only pagination. Contains the next page reference when more results are available; omitted or empty on the last page.
-	Paging *ForwardPaging `json:"paging,omitempty"`
-
-	// Results An array of public action definitions, each represented by a PublicActionDefinition object.
-	Results []PublicActionDefinition `json:"results"`
-}
-
-// CollectionResponsePublicActionFunctionIdentifierNoPaging defines model for CollectionResponsePublicActionFunctionIdentifierNoPaging.
-type CollectionResponsePublicActionFunctionIdentifierNoPaging struct {
-	// Results An array of PublicActionFunctionIdentifier objects, each representing a specific function associated with an automation action definition.
-	Results []PublicActionFunctionIdentifier `json:"results"`
-}
-
-// CollectionResponsePublicActionRevisionForwardPaging defines model for CollectionResponsePublicActionRevisionForwardPaging.
-type CollectionResponsePublicActionRevisionForwardPaging struct {
-	// Paging Paging information for forward-only pagination. Contains the next page reference when more results are available; omitted or empty on the last page.
-	Paging *ForwardPaging `json:"paging,omitempty"`
-
-	// Results An array of PublicActionRevision objects, each representing a specific revision of a public action definition.
-	Results []PublicActionRevision `json:"results"`
-}
-
-// CollectionResponsePublicApiUserActionEventForwardPaging defines model for CollectionResponsePublicApiUserActionEventForwardPaging.
-type CollectionResponsePublicApiUserActionEventForwardPaging struct {
-	// Paging Paging information for forward-only pagination. Contains the next page reference when more results are available; omitted or empty on the last page.
-	Paging *ForwardPaging `json:"paging,omitempty"`
-
-	// Results An array of user action events, each represented by a PublicApiUserActionEvent object.
-	Results []PublicApiUserActionEvent `json:"results"`
-}
-
-// CollectionResponsePublicAssociationDefinitionUserConfigurationNoPaging defines model for CollectionResponsePublicAssociationDefinitionUserConfigurationNoPaging.
-type CollectionResponsePublicAssociationDefinitionUserConfigurationNoPaging struct {
-	// Results An array of PublicAssociationDefinitionUserConfiguration objects, each representing a user configuration for an association definition.
-	Results []PublicAssociationDefinitionUserConfiguration `json:"results"`
-}
-
-// CollectionResponsePublicAuditInfoNoPaging defines model for CollectionResponsePublicAuditInfoNoPaging.
-type CollectionResponsePublicAuditInfoNoPaging struct {
-	Results []PublicAuditInfo `json:"results"`
-}
-
-// CollectionResponsePublicAuditLog defines model for CollectionResponsePublicAuditLog.
-type CollectionResponsePublicAuditLog struct {
-	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
-	Paging *Paging `json:"paging,omitempty"`
-
-	// Results An array of PublicAuditLog objects, each representing a single audit log entry.
-	Results []PublicAuditLog `json:"results"`
-}
-
-// CollectionResponsePublicBusinessUnitNoPaging defines model for CollectionResponsePublicBusinessUnitNoPaging.
-type CollectionResponsePublicBusinessUnitNoPaging struct {
-	// Results The collection of Business Units
-	Results []PublicBusinessUnit `json:"results"`
-}
-
-// CollectionResponsePublicCampaignAsset defines model for CollectionResponsePublicCampaignAsset.
-type CollectionResponsePublicCampaignAsset struct {
-	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
-	Paging *Paging `json:"paging,omitempty"`
-
-	// Results An array of public campaign assets. Each item in the array is an object representing a campaign asset.
-	Results []PublicCampaignAsset `json:"results"`
-}
-
-// CollectionResponsePublicCampaignAssetForwardPaging defines model for CollectionResponsePublicCampaignAssetForwardPaging.
-type CollectionResponsePublicCampaignAssetForwardPaging struct {
-	// Paging Paging information for forward-only pagination. Contains the next page reference when more results are available; omitted or empty on the last page.
-	Paging *ForwardPaging `json:"paging,omitempty"`
-
-	// Results An array of public campaign assets. Each item in the array is a reference to a PublicCampaignAsset object.
-	Results []PublicCampaignAsset `json:"results"`
-}
-
-// CollectionResponsePublicImportErrorForwardPaging defines model for CollectionResponsePublicImportErrorForwardPaging.
-type CollectionResponsePublicImportErrorForwardPaging struct {
-	// Paging Paging information for forward-only pagination. Contains the next page reference when more results are available; omitted or empty on the last page.
-	Paging *ForwardPaging `json:"paging,omitempty"`
-
-	// Results An array of public import errors, each represented by a PublicImportError object.
-	Results []PublicImportError `json:"results"`
-}
-
-// CollectionResponsePublicImportResponseForwardPaging defines model for CollectionResponsePublicImportResponseForwardPaging.
-type CollectionResponsePublicImportResponseForwardPaging struct {
-	// Paging Paging information for forward-only pagination. Contains the next page reference when more results are available; omitted or empty on the last page.
-	Paging *ForwardPaging `json:"paging,omitempty"`
-
-	// Results An array of PublicImportResponse objects, each representing an individual import response.
-	Results []PublicImportResponse `json:"results"`
-}
-
-// CollectionResponsePublicLoginAuditForwardPaging defines model for CollectionResponsePublicLoginAuditForwardPaging.
-type CollectionResponsePublicLoginAuditForwardPaging struct {
-	// Paging Paging information for forward-only pagination. Contains the next page reference when more results are available; omitted or empty on the last page.
-	Paging *ForwardPaging `json:"paging,omitempty"`
-
-	// Results An array of PublicLoginAudit objects, each representing a single login audit event.
-	Results []PublicLoginAudit `json:"results"`
-}
-
-// CollectionResponsePublicOwnerForwardPaging defines model for CollectionResponsePublicOwnerForwardPaging.
-type CollectionResponsePublicOwnerForwardPaging struct {
-	// Paging Paging information for forward-only pagination. Contains the next page reference when more results are available; omitted or empty on the last page.
-	Paging *ForwardPaging `json:"paging,omitempty"`
-
-	// Results An array of PublicOwner objects, each representing an individual owner with their specific details.
-	Results []PublicOwner `json:"results"`
-}
-
-// CollectionResponsePublicPermissionSetNoPaging defines model for CollectionResponsePublicPermissionSetNoPaging.
-type CollectionResponsePublicPermissionSetNoPaging struct {
-	Results []PublicPermissionSet `json:"results"`
-}
-
-// CollectionResponsePublicPropertyValidationRuleMapNoPaging defines model for CollectionResponsePublicPropertyValidationRuleMapNoPaging.
-type CollectionResponsePublicPropertyValidationRuleMapNoPaging struct {
-	// Results Collection of properties with their validation rules. Each item maps a property name to its configured validation rules for the specified object type.
-	Results []PublicPropertyValidationRuleMap `json:"results"`
-}
-
-// CollectionResponsePublicPropertyValidationRuleNoPaging defines model for CollectionResponsePublicPropertyValidationRuleNoPaging.
-type CollectionResponsePublicPropertyValidationRuleNoPaging struct {
-	// Results Collection of validation rules configured for the specified property. Each rule defines a constraint that property values must satisfy (e.g., format requirements, length limits, allowed values).
-	Results []PublicPropertyValidationRule `json:"results"`
-}
-
-// CollectionResponsePublicTaxRateGroupForwardPaging defines model for CollectionResponsePublicTaxRateGroupForwardPaging.
-type CollectionResponsePublicTaxRateGroupForwardPaging struct {
-	// Paging Paging information for forward-only pagination. Contains the next page reference when more results are available; omitted or empty on the last page.
-	Paging *ForwardPaging `json:"paging,omitempty"`
-
-	// Results An array of PublicTaxRateGroup objects, each representing a tax rate group with its properties.
-	Results []PublicTaxRateGroup `json:"results"`
-}
-
-// CollectionResponsePublicTeamNoPaging defines model for CollectionResponsePublicTeamNoPaging.
-type CollectionResponsePublicTeamNoPaging struct {
-	Results []UserProvisioningPublicTeam `json:"results"`
-}
-
-// CollectionResponsePublicUserForwardPaging defines model for CollectionResponsePublicUserForwardPaging.
-type CollectionResponsePublicUserForwardPaging struct {
-	// Paging Paging information for forward-only pagination. Contains the next page reference when more results are available; omitted or empty on the last page.
-	Paging  *ForwardPaging `json:"paging,omitempty"`
-	Results []PublicUser   `json:"results"`
-}
-
-// CollectionResponseSearchPublicResponseWrapperNoPaging defines model for CollectionResponseSearchPublicResponseWrapperNoPaging.
-type CollectionResponseSearchPublicResponseWrapperNoPaging struct {
-	// Results An array of search result objects, each represented by a SearchPublicResponseWrapper. This property contains the search results returned by the API.
-	Results []SearchPublicResponseWrapper `json:"results"`
-}
-
-// CollectionResponseSimplePublicObjectWithAssociationsForwardPaging Represents a paginated collection response that includes simple public objects with their associations. This component is used to handle the results and pagination details when retrieving a list of objects from the API.
-type CollectionResponseSimplePublicObjectWithAssociationsForwardPaging struct {
-	// Paging Paging information for forward-only pagination. Contains the next page reference when more results are available; omitted or empty on the last page.
-	Paging *ForwardPaging `json:"paging,omitempty"`
-
-	// Results An array of simple public objects that are included in the current page of the response. Each object may include its associated data.
-	Results []SimplePublicObjectWithAssociations `json:"results"`
-}
-
-// CollectionResponseSmtpApiTokenViewForwardPaging defines model for CollectionResponseSmtpApiTokenViewForwardPaging.
-type CollectionResponseSmtpApiTokenViewForwardPaging struct {
-	// Paging Paging information for forward-only pagination. Contains the next page reference when more results are available; omitted or empty on the last page.
-	Paging *ForwardPaging `json:"paging,omitempty"`
-
-	// Results An array of SMTP API token objects, each representing a token with its associated details.
-	Results []SmtpApiTokenView `json:"results"`
-}
-
-// CollectionResponseSubscriptionResponseMarch2027NoPaging defines model for CollectionResponseSubscriptionResponseMarch2027NoPaging.
-type CollectionResponseSubscriptionResponseMarch2027NoPaging struct {
-	Results []SubscriptionResponseMarch2027 `json:"results"`
-}
-
-// CollectionResponseWithTotalBlog defines model for CollectionResponseWithTotalBlog.
-type CollectionResponseWithTotalBlog struct {
-	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
-	Paging *Paging `json:"paging,omitempty"`
-
-	// Results An array of blog objects, each represented by the Blog schema.
-	Results []Blog `json:"results"`
-
-	// Total The total number of blog objects in the collection. It is an integer value.
-	Total int32 `json:"total"`
-}
-
-// CollectionResponseWithTotalBlogAuthorForwardPaging defines model for CollectionResponseWithTotalBlogAuthorForwardPaging.
-type CollectionResponseWithTotalBlogAuthorForwardPaging struct {
-	// Paging Paging information for forward-only pagination. Contains the next page reference when more results are available; omitted or empty on the last page.
-	Paging *ForwardPaging `json:"paging,omitempty"`
-
-	// Results Collection of blog authors.
-	Results []BlogAuthor `json:"results"`
-
-	// Total Total number of blog authors.
-	Total int32 `json:"total"`
-}
-
-// CollectionResponseWithTotalBlogPostForwardPaging defines model for CollectionResponseWithTotalBlogPostForwardPaging.
-type CollectionResponseWithTotalBlogPostForwardPaging struct {
-	// Paging Paging information for forward-only pagination. Contains the next page reference when more results are available; omitted or empty on the last page.
-	Paging *ForwardPaging `json:"paging,omitempty"`
-
-	// Results Collection of blog posts.
-	Results []BlogPost `json:"results"`
-
-	// Total Total number of blog posts.
-	Total int32 `json:"total"`
-}
-
-// CollectionResponseWithTotalBlogPostVersion defines model for CollectionResponseWithTotalBlogPostVersion.
-type CollectionResponseWithTotalBlogPostVersion struct {
-	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
-	Paging *Paging `json:"paging,omitempty"`
-
-	// Results An array containing the individual blog post versions. Each item in the array represents a specific version of a blog post.
-	Results []VersionBlogPost `json:"results"`
-
-	// Total The total number of blog post versions available. This is an integer value.
-	Total int32 `json:"total"`
-}
-
-// CollectionResponseWithTotalBlogVersion defines model for CollectionResponseWithTotalBlogVersion.
-type CollectionResponseWithTotalBlogVersion struct {
-	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
-	Paging *Paging `json:"paging,omitempty"`
-
-	// Results An array of VersionBlog objects, each representing a specific version of a blog.
-	Results []VersionBlog `json:"results"`
-
-	// Total An integer representing the total number of blog versions available.
-	Total int32 `json:"total"`
-}
-
-// CollectionResponseWithTotalContentFolderForwardPaging defines model for CollectionResponseWithTotalContentFolderForwardPaging.
-type CollectionResponseWithTotalContentFolderForwardPaging struct {
-	// Paging Paging information for forward-only pagination. Contains the next page reference when more results are available; omitted or empty on the last page.
-	Paging *ForwardPaging `json:"paging,omitempty"`
-
-	// Results Collection of content folders.
-	Results []ContentFolder `json:"results"`
-
-	// Total Total number of content folders.
-	Total int32 `json:"total"`
-}
-
-// CollectionResponseWithTotalContentFolderVersion defines model for CollectionResponseWithTotalContentFolderVersion.
-type CollectionResponseWithTotalContentFolderVersion struct {
-	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
-	Paging *Paging `json:"paging,omitempty"`
-
-	// Results An array containing the content folder version objects returned in the current response.
-	Results []ContentFolderVersion `json:"results"`
-
-	// Total An integer representing the total number of content folder versions available.
-	Total int32 `json:"total"`
-}
-
-// CollectionResponseWithTotalDomain defines model for CollectionResponseWithTotalDomain.
-type CollectionResponseWithTotalDomain struct {
-	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
-	Paging *Paging `json:"paging,omitempty"`
-
-	// Results The results of the query.
-	Results []Domain `json:"results"`
-
-	// Total The number of available results.
-	Total int32 `json:"total"`
-}
-
-// CollectionResponseWithTotalEmailStatisticInterval defines model for CollectionResponseWithTotalEmailStatisticInterval.
-type CollectionResponseWithTotalEmailStatisticInterval struct {
-	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
-	Paging *Paging `json:"paging,omitempty"`
-
-	// Results An array of EmailStatisticInterval objects, each representing statistics for a specific time interval.
-	Results []EmailStatisticInterval `json:"results"`
-
-	// Total An integer representing the total number of email statistic intervals available.
-	Total int32 `json:"total"`
-}
-
-// CollectionResponseWithTotalExternalBehavioralEventTypeDefinition defines model for CollectionResponseWithTotalExternalBehavioralEventTypeDefinition.
-type CollectionResponseWithTotalExternalBehavioralEventTypeDefinition struct {
-	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
-	Paging *Paging `json:"paging,omitempty"`
-
-	// Results An array containing the external behavioral event type definitions returned in the current page of results.
-	Results []ExternalBehavioralEventTypeDefinition `json:"results"`
-
-	// Total An integer representing the total number of external behavioral event type definitions available.
-	Total int32 `json:"total"`
-}
-
-// CollectionResponseWithTotalExternalLinkMetadata defines model for CollectionResponseWithTotalExternalLinkMetadata.
-type CollectionResponseWithTotalExternalLinkMetadata struct {
-	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
-	Paging *Paging `json:"paging,omitempty"`
-
-	// Results An array of external link metadata objects. Each object contains details about an external meeting link.
-	Results []ExternalLinkMetadata `json:"results"`
-
-	// Total The total number of external link metadata entries available. This is an integer value.
-	Total int32 `json:"total"`
-}
-
-// CollectionResponseWithTotalHubDbTableV3 defines model for CollectionResponseWithTotalHubDbTableV3.
-type CollectionResponseWithTotalHubDbTableV3 struct {
-	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
-	Paging *Paging `json:"paging,omitempty"`
-
-	// Results An array of HubDbTableV3 objects, each representing the details of a HubDB table.
-	Results []HubDbTableV3 `json:"results"`
-
-	// Total An integer representing the total number of HubDB tables available.
-	Total int32 `json:"total"`
-}
-
-// CollectionResponseWithTotalMarketingEventIdentifiersResponse defines model for CollectionResponseWithTotalMarketingEventIdentifiersResponse.
-type CollectionResponseWithTotalMarketingEventIdentifiersResponse struct {
-	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
-	Paging *Paging `json:"paging,omitempty"`
-
-	// Results An array containing the marketing event identifiers. Each item in the array is a MarketingEventIdentifiersResponse object.
-	Results []MarketingEventIdentifiersResponse `json:"results"`
-
-	// Total An integer representing the total number of marketing event identifiers.
-	Total int32 `json:"total"`
-}
-
-// CollectionResponseWithTotalPageForwardPaging defines model for CollectionResponseWithTotalPageForwardPaging.
-type CollectionResponseWithTotalPageForwardPaging struct {
-	// Paging Paging information for forward-only pagination. Contains the next page reference when more results are available; omitted or empty on the last page.
-	Paging *ForwardPaging `json:"paging,omitempty"`
-
-	// Results Collection of pages.
-	Results []Page `json:"results"`
-
-	// Total Total number of pages.
-	Total int32 `json:"total"`
-}
-
-// CollectionResponseWithTotalPageVersion defines model for CollectionResponseWithTotalPageVersion.
-type CollectionResponseWithTotalPageVersion struct {
-	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
-	Paging *Paging `json:"paging,omitempty"`
-
-	// Results An array containing the individual items or results of the collection.
-	Results []PageVersion `json:"results"`
-
-	// Total An integer representing the total number of items in the collection.
-	Total int32 `json:"total"`
-}
-
-// CollectionResponseWithTotalParticipationBreakdown defines model for CollectionResponseWithTotalParticipationBreakdown.
-type CollectionResponseWithTotalParticipationBreakdown struct {
-	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
-	Paging *Paging `json:"paging,omitempty"`
-
-	// Results An array of participation breakdown objects, each detailing a specific participation instance.
-	Results []ParticipationBreakdown `json:"results"`
-
-	// Total An integer representing the total number of participation breakdowns available.
-	Total int32 `json:"total"`
-}
-
-// CollectionResponseWithTotalPublicCampaign defines model for CollectionResponseWithTotalPublicCampaign.
-type CollectionResponseWithTotalPublicCampaign struct {
-	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
-	Paging *Paging `json:"paging,omitempty"`
-
-	// Results An array of PublicCampaign objects, each representing a campaign with its associated properties.
-	Results []PublicCampaign `json:"results"`
-
-	// Total An integer representing the total number of public campaigns available.
-	Total int32 `json:"total"`
-}
-
-// CollectionResponseWithTotalPublicChannelAccount defines model for CollectionResponseWithTotalPublicChannelAccount.
-type CollectionResponseWithTotalPublicChannelAccount struct {
-	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
-	Paging *Paging `json:"paging,omitempty"`
-
-	// Results An array of PublicChannelAccount objects, each representing a public channel account with its details.
-	Results []PublicChannelAccount `json:"results"`
-
-	// Total An integer representing the total number of public channel accounts available.
-	Total int32 `json:"total"`
-}
-
-// CollectionResponseWithTotalPublicChannelIntegrationChannel defines model for CollectionResponseWithTotalPublicChannelIntegrationChannel.
-type CollectionResponseWithTotalPublicChannelIntegrationChannel struct {
-	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
-	Paging *Paging `json:"paging,omitempty"`
-
-	// Results An array of public channel integration channels. Each item in the array is a PublicChannelIntegrationChannel object.
-	Results []PublicChannelIntegrationChannel `json:"results"`
-
-	// Total The total number of public channel integration channels available. This is an integer value.
-	Total int32 `json:"total"`
-}
-
-// CollectionResponseWithTotalPublicEmail defines model for CollectionResponseWithTotalPublicEmail.
-type CollectionResponseWithTotalPublicEmail struct {
-	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
-	Paging *Paging `json:"paging,omitempty"`
-
-	// Results An array containing the public email objects retrieved in the current page of results.
-	Results []PublicEmail `json:"results"`
-
-	// Total An integer representing the total number of public emails available.
-	Total int32 `json:"total"`
-}
-
-// CollectionResponseWithTotalPublicEmailVersion defines model for CollectionResponseWithTotalPublicEmailVersion.
-type CollectionResponseWithTotalPublicEmailVersion struct {
-	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
-	Paging *Paging `json:"paging,omitempty"`
-
-	// Results An array of email version objects, each conforming to the VersionPublicEmail schema.
-	Results []VersionPublicEmail `json:"results"`
-
-	// Total An integer representing the total number of email version results available.
-	Total int32 `json:"total"`
-}
-
-// CollectionResponseWithTotalPublicList defines model for CollectionResponseWithTotalPublicList.
-type CollectionResponseWithTotalPublicList struct {
-	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
-	Paging *Paging `json:"paging,omitempty"`
-
-	// Results An array of public lists, where each list contains details such as list ID, version, name, and processing status.
-	Results []PublicList `json:"results"`
-
-	// Total The total number of public lists available. It is an integer value.
-	Total int32 `json:"total"`
-}
-
-// CollectionResponseWithTotalPublicSequenceLiteResponse defines model for CollectionResponseWithTotalPublicSequenceLiteResponse.
-type CollectionResponseWithTotalPublicSequenceLiteResponse struct {
-	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
-	Paging *Paging `json:"paging,omitempty"`
-
-	// Results An array of PublicSequenceLiteResponse objects, each representing a lightweight version of a sequence.
-	Results []PublicSequenceLiteResponse `json:"results"`
-
-	// Total An integer representing the total number of sequence items available.
-	Total int32 `json:"total"`
-}
-
-// CollectionResponseWithTotalSimplePublicObject Represents a list of simple objects returned from an API request, along with the total count of objects available.
-type CollectionResponseWithTotalSimplePublicObject struct {
-	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
-	Paging *Paging `json:"paging,omitempty"`
-
-	// Results An array containing the simple public objects returned in the current page of the response. This property is required.
-	Results []SimplePublicObject `json:"results"`
-
-	// Total The number of available results
-	Total int32 `json:"total"`
-}
-
-// CollectionResponseWithTotalTagForwardPaging defines model for CollectionResponseWithTotalTagForwardPaging.
-type CollectionResponseWithTotalTagForwardPaging struct {
-	// Paging Paging information for forward-only pagination. Contains the next page reference when more results are available; omitted or empty on the last page.
-	Paging *ForwardPaging `json:"paging,omitempty"`
-
-	// Results Collection of blog tags.
-	Results []Tag `json:"results"`
-
-	// Total Total number of blog tags.
-	Total int32 `json:"total"`
-}
-
-// CollectionResponseWithTotalUrlMappingForwardPaging defines model for CollectionResponseWithTotalUrlMappingForwardPaging.
-type CollectionResponseWithTotalUrlMappingForwardPaging struct {
-	// Paging Paging information for forward-only pagination. Contains the next page reference when more results are available; omitted or empty on the last page.
-	Paging *ForwardPaging `json:"paging,omitempty"`
-
-	// Results An array of UrlMapping objects, each representing a specific URL mapping.
-	Results []UrlRedirectsUrlMapping `json:"results"`
-
-	// Total The total number of URL mappings available.
-	Total int32 `json:"total"`
-}
-
-// ColorStop defines model for ColorStop.
-type ColorStop struct {
-	Color RGBAColor `json:"color"`
-}
-
-// Column defines model for Column.
-type Column struct {
-	// CreatedAt The timestamp when the column was created.
-	CreatedAt *time.Time  `json:"createdAt,omitempty"`
-	CreatedBy *SimpleUser `json:"createdBy,omitempty"`
-
-	// CreatedByUserId The ID of the user who created the column.
-	CreatedByUserId *int32 `json:"createdByUserId,omitempty"`
-
-	// Deleted Indicates whether the column has been deleted.
-	Deleted bool `json:"deleted"`
-
-	// Description The description of the column.
-	Description string `json:"description"`
-
-	// ForeignColumnId Foreign Column id
-	ForeignColumnId *int32 `json:"foreignColumnId,omitempty"`
-
-	// ForeignIds Foreign Ids
-	ForeignIds *[]ForeignId `json:"foreignIds,omitempty"`
-
-	// ForeignIdsById Foreign ids
-	ForeignIdsById *map[string]ForeignId `json:"foreignIdsById,omitempty"`
-
-	// ForeignIdsByName Foreign ids by name
-	ForeignIdsByName *map[string]ForeignId `json:"foreignIdsByName,omitempty"`
-
-	// ForeignTableId Foreign table id referenced
-	ForeignTableId *int64 `json:"foreignTableId,omitempty"`
-
-	// Id Column Id
-	Id string `json:"id"`
-
-	// Label Label of the column
-	Label string `json:"label"`
-
-	// Name Name of the column
-	Name string `json:"name"`
-
-	// OptionCount Number of options available
-	OptionCount *int32 `json:"optionCount,omitempty"`
-
-	// Options Options to choose for select and multi-select columns
-	Options *[]HubdbOption `json:"options,omitempty"`
-
-	// Type Type of the column
-	Type ColumnType `json:"type"`
-
-	// UpdatedAt The timestamp when the column was last updated.
-	UpdatedAt *time.Time  `json:"updatedAt,omitempty"`
-	UpdatedBy *SimpleUser `json:"updatedBy,omitempty"`
-
-	// UpdatedByUserId The ID of the user who last updated the column.
-	UpdatedByUserId *int32 `json:"updatedByUserId,omitempty"`
-
-	// Width Column width for HubDB UI
-	Width *int32 `json:"width,omitempty"`
-}
-
-// ColumnType Type of the column
-type ColumnType string
-
-// ColumnRequest defines model for ColumnRequest.
-type ColumnRequest struct {
-	// ForeignColumnId The id of the column from another table to which the column refers/points to.
-	ForeignColumnId *int32 `json:"foreignColumnId,omitempty"`
-
-	// ForeignTableId The id of another table to which the column refers/points to.
-	ForeignTableId *int64 `json:"foreignTableId,omitempty"`
-
-	// Id Column Id
-	Id int32 `json:"id"`
-
-	// Label Label of the column
-	Label string `json:"label"`
-
-	// MaxNumberOfCharacters Defines the maximum number of characters allowed in the column.
-	MaxNumberOfCharacters *int32 `json:"maxNumberOfCharacters,omitempty"`
-
-	// MaxNumberOfOptions Specifies the maximum number of options that can be set for select and multi-select columns.
-	MaxNumberOfOptions *int32 `json:"maxNumberOfOptions,omitempty"`
-
-	// Name Name of the column
-	Name string `json:"name"`
-
-	// Options Options to choose for select and multi-select columns
-	Options []HubdbOption `json:"options"`
-
-	// Type Type of the column
-	Type ColumnRequestType `json:"type"`
-}
-
-// ColumnRequestType Type of the column
-type ColumnRequestType string
-
-// ComboEventRule defines model for ComboEventRule.
-type ComboEventRule struct {
-	// Count An integer specifying the number of occurrences required for the event rule to be satisfied.
-	Count int32 `json:"count"`
-
-	// EventTypeId The unique identifier for the type of event. It is a string.
-	EventTypeId string `json:"eventTypeId"`
-
-	// LookbackWindowDays An integer representing the number of days to look back when evaluating the event rule.
-	LookbackWindowDays *int32 `json:"lookbackWindowDays,omitempty"`
-
-	// PropertyFilters An array of property filters that define additional criteria for the event. Each filter specifies a property and the operation to apply.
-	PropertyFilters []PropertyFilter `json:"propertyFilters"`
-}
-
-// ComboEventRuleBranch defines model for ComboEventRuleBranch.
-type ComboEventRuleBranch struct {
-	// ComposingRules An array of ComboEventRule objects that define the individual rules composing this branch of the combo event.
-	ComposingRules []ComboEventRule `json:"composingRules"`
-
-	// OperationType A string indicating the type of logical operation to be applied between the rules in this branch. Valid values are 'AND' and 'OR'.
-	OperationType ComboEventRuleBranchOperationType `json:"operationType"`
-
-	// RuleBranches An array of ComboEventRuleBranch objects, allowing for nested branching logic within the combo event rules.
-	RuleBranches []ComboEventRuleBranch `json:"ruleBranches"`
-}
-
-// ComboEventRuleBranchOperationType A string indicating the type of logical operation to be applied between the rules in this branch. Valid values are 'AND' and 'OR'.
-type ComboEventRuleBranchOperationType string
-
-// CompanyCallerId defines model for CompanyCallerId.
-type CompanyCallerId struct {
-	// CallerIdType Specifies the type of caller ID, which is set to 'COMPANY' by default.
-	CallerIdType CompanyCallerIdCallerIdType `json:"callerIdType"`
-
-	// Name The name associated with the company caller ID.
-	Name              *string           `json:"name,omitempty"`
-	ObjectCoordinates ObjectCoordinates `json:"objectCoordinates"`
-}
-
-// CompanyCallerIdCallerIdType Specifies the type of caller ID, which is set to 'COMPANY' by default.
-type CompanyCallerIdCallerIdType string
-
-// CompanyCurrency defines model for CompanyCurrency.
-type CompanyCurrency struct {
-	// CreatedAt The date the company currency was created.
-	CreatedAt time.Time `json:"createdAt"`
-
-	// Id The currency code for the company currency
-	Id string `json:"id"`
-}
-
-// CompanyCurrencyUpdateRequest defines model for CompanyCurrencyUpdateRequest.
-type CompanyCurrencyUpdateRequest struct {
-	// CurrencyCode The three-letter code representing a specific currency (ex. USD).
-	CurrencyCode CompanyCurrencyUpdateRequestCurrencyCode `json:"currencyCode"`
-}
-
-// CompanyCurrencyUpdateRequestCurrencyCode The three-letter code representing a specific currency (ex. USD).
-type CompanyCurrencyUpdateRequestCurrencyCode string
-
-// ComparativeBoolPropertyOperation defines model for ComparativeBoolPropertyOperation.
-type ComparativeBoolPropertyOperation struct {
-	// ComparisonPropertyName A string specifying the name of the property to be compared.
-	ComparisonPropertyName string `json:"comparisonPropertyName"`
-
-	// DefaultValue A string representing the default value to use if no value is set.
-	DefaultValue *string `json:"defaultValue,omitempty"`
-
-	// IncludeObjectsWithNoValueSet A boolean indicating whether objects with no value set should be included in the operation.
-	IncludeObjectsWithNoValueSet bool `json:"includeObjectsWithNoValueSet"`
-
-	// OperationType A string that specifies the type of operation being performed.
-	OperationType string `json:"operationType"`
-
-	// Operator A string representing the comparison operator. Valid values are 'IS_EQUAL_TO' and 'IS_NOT_EQUAL_TO'.
-	Operator ComparativeBoolPropertyOperationOperator `json:"operator"`
-
-	// OperatorName A string representing the name of the operator used in the operation.
-	OperatorName   string          `json:"operatorName"`
-	PropertyAspect *PropertyAspect `json:"propertyAspect,omitempty"`
-
-	// PropertyType A string indicating the type of property operation, which is 'bool-comparative' for this component.
-	PropertyType ComparativeBoolPropertyOperationPropertyType `json:"propertyType"`
-
-	// RenderSpec A string that defines the rendering specification for the operation.
-	RenderSpec *string `json:"renderSpec,omitempty"`
-}
-
-// ComparativeBoolPropertyOperationOperator A string representing the comparison operator. Valid values are 'IS_EQUAL_TO' and 'IS_NOT_EQUAL_TO'.
-type ComparativeBoolPropertyOperationOperator string
-
-// ComparativeBoolPropertyOperationPropertyType A string indicating the type of property operation, which is 'bool-comparative' for this component.
-type ComparativeBoolPropertyOperationPropertyType string
-
-// ComparativeDatePropertyOperation defines model for ComparativeDatePropertyOperation.
-type ComparativeDatePropertyOperation struct {
-	// ComparisonPropertyName A string representing the name of the property to compare against.
-	ComparisonPropertyName string `json:"comparisonPropertyName"`
-
-	// DefaultComparisonValue A string specifying the default value for comparison if the comparison property is not set.
-	DefaultComparisonValue *string `json:"defaultComparisonValue,omitempty"`
-
-	// DefaultValue A string providing the default value for the operation if no specific value is set.
-	DefaultValue *string `json:"defaultValue,omitempty"`
-
-	// IncludeObjectsWithNoValueSet A boolean indicating whether objects with no value set for the property should be included in the operation.
-	IncludeObjectsWithNoValueSet bool `json:"includeObjectsWithNoValueSet"`
-
-	// OperationType A string representing the type of operation being performed.
-	OperationType string `json:"operationType"`
-
-	// Operator A string specifying the comparison operator to use, with valid values being 'IS_BEFORE' and 'IS_AFTER'.
-	Operator ComparativeDatePropertyOperationOperator `json:"operator"`
-
-	// OperatorName A string that provides a human-readable name for the operator being used.
-	OperatorName   string          `json:"operatorName"`
-	PropertyAspect *PropertyAspect `json:"propertyAspect,omitempty"`
-
-	// PropertyType A string indicating the type of property operation, which is 'datetime-comparative' for this component.
-	PropertyType ComparativeDatePropertyOperationPropertyType `json:"propertyType"`
-
-	// RenderSpec A string used to define how the operation should be rendered, though specifics are not detailed in the schema.
-	RenderSpec *string `json:"renderSpec,omitempty"`
-}
-
-// ComparativeDatePropertyOperationOperator A string specifying the comparison operator to use, with valid values being 'IS_BEFORE' and 'IS_AFTER'.
-type ComparativeDatePropertyOperationOperator string
-
-// ComparativeDatePropertyOperationPropertyType A string indicating the type of property operation, which is 'datetime-comparative' for this component.
-type ComparativeDatePropertyOperationPropertyType string
-
-// ComparativeNumberPropertyOperation defines model for ComparativeNumberPropertyOperation.
-type ComparativeNumberPropertyOperation struct {
-	// ComparisonPropertyName A string representing the name of the property to which the comparison is made.
-	ComparisonPropertyName string `json:"comparisonPropertyName"`
-
-	// DefaultValue A string specifying the default value to use if no value is set for the property being compared.
-	DefaultValue *string `json:"defaultValue,omitempty"`
-
-	// IncludeObjectsWithNoValueSet A boolean indicating whether to include objects that have no value set for the property being compared.
-	IncludeObjectsWithNoValueSet bool `json:"includeObjectsWithNoValueSet"`
-
-	// OperationType A string representing the type of operation being performed.
-	OperationType string `json:"operationType"`
-
-	// Operator A string indicating the comparison operator to be used. Valid values include 'IS_EQUAL_TO', 'IS_NOT_EQUAL_TO', 'IS_GREATER_THAN', 'IS_GREATER_THAN_OR_EQUAL_TO', 'IS_LESS_THAN', and 'IS_LESS_THAN_OR_EQUAL_TO'.
-	Operator ComparativeNumberPropertyOperationOperator `json:"operator"`
-
-	// OperatorName A string representing the name of the operator used in the operation.
-	OperatorName   string          `json:"operatorName"`
-	PropertyAspect *PropertyAspect `json:"propertyAspect,omitempty"`
-
-	// PropertyType A string representing the type of property operation, with a default value of 'number-comparative'.
-	PropertyType ComparativeNumberPropertyOperationPropertyType `json:"propertyType"`
-
-	// RenderSpec A string that provides rendering specifications for the operation.
-	RenderSpec *string `json:"renderSpec,omitempty"`
-}
-
-// ComparativeNumberPropertyOperationOperator A string indicating the comparison operator to be used. Valid values include 'IS_EQUAL_TO', 'IS_NOT_EQUAL_TO', 'IS_GREATER_THAN', 'IS_GREATER_THAN_OR_EQUAL_TO', 'IS_LESS_THAN', and 'IS_LESS_THAN_OR_EQUAL_TO'.
-type ComparativeNumberPropertyOperationOperator string
-
-// ComparativeNumberPropertyOperationPropertyType A string representing the type of property operation, with a default value of 'number-comparative'.
-type ComparativeNumberPropertyOperationPropertyType string
-
-// ComparativePropertyUpdatedOperation defines model for ComparativePropertyUpdatedOperation.
-type ComparativePropertyUpdatedOperation struct {
-	// ComparisonPropertyName A string specifying the name of the property to compare against.
-	ComparisonPropertyName string `json:"comparisonPropertyName"`
-
-	// DefaultComparisonValue A string representing the default value to use for comparison if no other value is set.
-	DefaultComparisonValue *string `json:"defaultComparisonValue,omitempty"`
-
-	// DefaultValue A string representing the default value to use if no other value is set.
-	DefaultValue *string `json:"defaultValue,omitempty"`
-
-	// IncludeObjectsWithNoValueSet A boolean indicating whether to include objects that have no value set for the property.
-	IncludeObjectsWithNoValueSet bool `json:"includeObjectsWithNoValueSet"`
-
-	// OperationType A string indicating the type of operation being performed.
-	OperationType string `json:"operationType"`
-
-	// Operator A string indicating the comparison operator to use, with valid values being 'IS_BEFORE' and 'IS_AFTER'.
-	Operator ComparativePropertyUpdatedOperationOperator `json:"operator"`
-
-	// OperatorName A string representing the name of the operator used in the operation.
-	OperatorName   string          `json:"operatorName"`
-	PropertyAspect *PropertyAspect `json:"propertyAspect,omitempty"`
-
-	// PropertyType A string representing the type of property operation, defaulting to 'property-updated-comparative'.
-	PropertyType ComparativePropertyUpdatedOperationPropertyType `json:"propertyType"`
-
-	// RenderSpec A string providing specifications for rendering the operation.
-	RenderSpec *string `json:"renderSpec,omitempty"`
-}
-
-// ComparativePropertyUpdatedOperationOperator A string indicating the comparison operator to use, with valid values being 'IS_BEFORE' and 'IS_AFTER'.
-type ComparativePropertyUpdatedOperationOperator string
-
-// ComparativePropertyUpdatedOperationPropertyType A string representing the type of property operation, defaulting to 'property-updated-comparative'.
-type ComparativePropertyUpdatedOperationPropertyType string
-
-// ComparativeStringPropertyOperation defines model for ComparativeStringPropertyOperation.
-type ComparativeStringPropertyOperation struct {
-	// ComparisonPropertyName A string specifying the name of the property to be compared against.
-	ComparisonPropertyName string `json:"comparisonPropertyName"`
-
-	// DefaultValue A string representing the default value to be used if the property value is not set.
-	DefaultValue *string `json:"defaultValue,omitempty"`
-
-	// IncludeObjectsWithNoValueSet A boolean indicating whether objects with no value set for the property should be included in the operation.
-	IncludeObjectsWithNoValueSet bool `json:"includeObjectsWithNoValueSet"`
-
-	// OperationType A string representing the type of operation being performed.
-	OperationType string `json:"operationType"`
-
-	// Operator A string representing the comparison operator used in the operation. Valid values include 'IS_EQUAL_TO', 'IS_NOT_EQUAL_TO', 'CONTAINS', 'DOES_NOT_CONTAIN', 'STARTS_WITH', and 'ENDS_WITH'.
-	Operator ComparativeStringPropertyOperationOperator `json:"operator"`
-
-	// OperatorName A string that provides a human-readable name for the operator used in the operation.
-	OperatorName   string          `json:"operatorName"`
-	PropertyAspect *PropertyAspect `json:"propertyAspect,omitempty"`
-
-	// PropertyType A string indicating the type of property operation, which is 'string-comparative' for this component.
-	PropertyType ComparativeStringPropertyOperationPropertyType `json:"propertyType"`
-
-	// RenderSpec A string that provides rendering specifications for the operation, though its specific use is not detailed in the spec.
-	RenderSpec *string `json:"renderSpec,omitempty"`
-}
-
-// ComparativeStringPropertyOperationOperator A string representing the comparison operator used in the operation. Valid values include 'IS_EQUAL_TO', 'IS_NOT_EQUAL_TO', 'CONTAINS', 'DOES_NOT_CONTAIN', 'STARTS_WITH', and 'ENDS_WITH'.
-type ComparativeStringPropertyOperationOperator string
-
-// ComparativeStringPropertyOperationPropertyType A string indicating the type of property operation, which is 'string-comparative' for this component.
-type ComparativeStringPropertyOperationPropertyType string
-
-// CompletedThirdPartyCallRequest defines model for CompletedThirdPartyCallRequest.
-type CompletedThirdPartyCallRequest struct {
-	// CallStartedTimestamp The timestamp indicating when the call started, formatted as a date-time string.
-	CallStartedTimestamp *time.Time `json:"callStartedTimestamp,omitempty"`
-
-	// CreateEngagement Indicates whether an engagement should be created for the call.
-	CreateEngagement bool `json:"createEngagement"`
-
-	// DurationSeconds The duration of the call in seconds.
-	DurationSeconds *int32 `json:"durationSeconds,omitempty"`
-
-	// EngagementProperties Contains additional properties related to the engagement.
-	EngagementProperties map[string]string `json:"engagementProperties"`
-
-	// ExternalCallId The unique identifier for the call from an external system.
-	ExternalCallId string `json:"externalCallId"`
-
-	// FinalCallStatus The final status of the call, with accepted values including: BUSY, CALLING_CRM_USER, CANCELED, COMPLETED, CONNECTING, FAILED, HOLD, IN_PROGRESS, MISSED, NO_ANSWER, QUEUED, RINGING, UNKNOWN.
-	FinalCallStatus           CompletedThirdPartyCallRequestFinalCallStatus `json:"finalCallStatus"`
-	FromNumber                FormattedPhoneNumber                          `json:"fromNumber"`
-	PotentialRecipientUserIds []int32                                       `json:"potentialRecipientUserIds"`
-	ToNumber                  FormattedPhoneNumber                          `json:"toNumber"`
-
-	// UserId The ID of the user associated with the call.
-	UserId *int32 `json:"userId,omitempty"`
-}
-
-// CompletedThirdPartyCallRequestFinalCallStatus The final status of the call, with accepted values including: BUSY, CALLING_CRM_USER, CANCELED, COMPLETED, CONNECTING, FAILED, HOLD, IN_PROGRESS, MISSED, NO_ANSWER, QUEUED, RINGING, UNKNOWN.
-type CompletedThirdPartyCallRequestFinalCallStatus string
-
-// CompletedThirdPartyCallResponse defines model for CompletedThirdPartyCallResponse.
-type CompletedThirdPartyCallResponse struct {
-	CallerIdMatches []CompletedThirdPartyCallResponse_CallerIdMatches_Item `json:"callerIdMatches"`
-}
-
-// CompletedThirdPartyCallResponse_CallerIdMatches_Item defines model for CompletedThirdPartyCallResponse.callerIdMatches.Item.
-type CompletedThirdPartyCallResponse_CallerIdMatches_Item struct {
-	union json.RawMessage
-}
-
-// Condition defines model for Condition.
-type Condition struct {
-	// FilterType A string indicating the type of filter being applied. Valid value is 'CRM_OBJECT_PROPERTY'.
-	FilterType ConditionFilterType `json:"filterType"`
-
-	// Operator A string specifying the operation to be performed in the condition. Valid values include 'EQ', 'N_EQ', 'LT', 'GT', 'LTE', 'GTE', 'CONTAINS', 'STARTS_WITH', 'ENDS_WITH', 'IN', 'NOT_IN', 'IS_EMPTY', and 'IS_NOT_EMPTY'.
-	Operator ConditionOperator `json:"operator"`
-
-	// Property A string representing the specific property of the CRM object that the condition applies to.
-	Property string `json:"property"`
-
-	// Value A string representing the value to be compared against the specified property when using single-value operators.
-	Value *string `json:"value,omitempty"`
-
-	// Values An array of strings used to specify multiple values for comparison when using operators that support multiple values, such as 'IN' or 'NOT_IN'.
-	Values *[]string `json:"values,omitempty"`
-}
-
-// ConditionFilterType A string indicating the type of filter being applied. Valid value is 'CRM_OBJECT_PROPERTY'.
-type ConditionFilterType string
-
-// ConditionOperator A string specifying the operation to be performed in the condition. Valid values include 'EQ', 'N_EQ', 'LT', 'GT', 'LTE', 'GTE', 'CONTAINS', 'STARTS_WITH', 'ENDS_WITH', 'IN', 'NOT_IN', 'IS_EMPTY', and 'IS_NOT_EMPTY'.
-type ConditionOperator string
-
-// ContactAddress defines model for ContactAddress.
-type ContactAddress struct {
-	// City The city where the contact is located. It is a string value.
-	City *string `json:"city,omitempty"`
-
-	// Country The country where the contact is located. It is a string value.
-	Country *string `json:"country,omitempty"`
-
-	// CountryCode The code representing the country of the contact's address. It is a string value.
-	CountryCode *string `json:"countryCode,omitempty"`
-
-	// State The state where the contact is located. It is a string value.
-	State *string `json:"state,omitempty"`
-
-	// Street The street address of the contact. It is a string value.
-	Street *string `json:"street,omitempty"`
-
-	// Type The type of address, which can be either 'HOME' or 'WORK'.
-	Type *ContactAddressType `json:"type,omitempty"`
-
-	// Zip The postal code of the contact's address. It is a string value.
-	Zip *string `json:"zip,omitempty"`
-}
-
-// ContactAddressType The type of address, which can be either 'HOME' or 'WORK'.
-type ContactAddressType string
-
-// ContactAssociation defines model for ContactAssociation.
-type ContactAssociation struct {
-	// ContactId The internal ID of the contact in HubSpot
-	ContactId string `json:"contactId"`
-
-	// Email The email of the contact in HubSpot
-	Email string `json:"email"`
-
-	// Firstname The first name of the contact in HubSpot
-	Firstname *string `json:"firstname,omitempty"`
-
-	// Lastname The last name of the contact in HubSpot
-	Lastname *string `json:"lastname,omitempty"`
-}
-
-// ContactAttachment defines model for ContactAttachment.
-type ContactAttachment struct {
-	ContactProfile ContactProfile `json:"contactProfile"`
-
-	// Type A string indicating the type of attachment. The default value is 'CONTACT'.
-	Type ContactAttachmentType `json:"type"`
-}
-
-// ContactAttachmentType A string indicating the type of attachment. The default value is 'CONTACT'.
-type ContactAttachmentType string
-
-// ContactCallerId defines model for ContactCallerId.
-type ContactCallerId struct {
-	// CallerIdType Specifies the type of caller ID, with the default value being CONTACT.
-	CallerIdType ContactCallerIdCallerIdType `json:"callerIdType"`
-
-	// Email The email address of the contact.
-	Email *string `json:"email,omitempty"`
-
-	// FirstName The first name of the contact.
-	FirstName *string `json:"firstName,omitempty"`
-
-	// LastName The last name of the contact.
-	LastName          *string           `json:"lastName,omitempty"`
-	ObjectCoordinates ObjectCoordinates `json:"objectCoordinates"`
-}
-
-// ContactCallerIdCallerIdType Specifies the type of caller ID, with the default value being CONTACT.
-type ContactCallerIdCallerIdType string
-
-// ContactEmail defines model for ContactEmail.
-type ContactEmail struct {
-	// Email The actual email address of the contact, represented as a string.
-	Email string `json:"email"`
-
-	// Type The type of email address, which can be either 'HOME' or 'WORK'.
-	Type *ContactEmailType `json:"type,omitempty"`
-}
-
-// ContactEmailType The type of email address, which can be either 'HOME' or 'WORK'.
-type ContactEmailType string
-
-// ContactName defines model for ContactName.
-type ContactName struct {
-	// FirstName A string representing the first name of the contact.
-	FirstName *string `json:"firstName,omitempty"`
-
-	// LastName A string representing the last name of the contact.
-	LastName *string `json:"lastName,omitempty"`
-
-	// MiddleName A string representing the middle name of the contact.
-	MiddleName *string `json:"middleName,omitempty"`
-
-	// Prefix A string representing the prefix of the contact's name, such as 'Mr.', 'Ms.', or 'Dr.'.
-	Prefix *string `json:"prefix,omitempty"`
-
-	// Suffix A string representing the suffix of the contact's name, such as 'Jr.', 'Sr.', or 'III'.
-	Suffix *string `json:"suffix,omitempty"`
-}
-
-// ContactOrg defines model for ContactOrg.
-type ContactOrg struct {
-	// Company The name of the company the contact is associated with. It is a string value.
-	Company *string `json:"company,omitempty"`
-
-	// Department The department within the company where the contact works. It is a string value.
-	Department *string `json:"department,omitempty"`
-
-	// Title The job title of the contact within their company. It is a string value.
-	Title *string `json:"title,omitempty"`
-}
-
-// ContactPhone defines model for ContactPhone.
-type ContactPhone struct {
-	// Phone The phone number associated with the contact. This is a string representing the contact's phone number.
-	Phone string `json:"phone"`
-
-	// Type The type of phone, which can be one of the following: 'CELL', 'MAIN', 'HOME', or 'WORK'.
-	Type *ContactPhoneType `json:"type,omitempty"`
-}
-
-// ContactPhoneType The type of phone, which can be one of the following: 'CELL', 'MAIN', 'HOME', or 'WORK'.
-type ContactPhoneType string
-
-// ContactProfile defines model for ContactProfile.
-type ContactProfile struct {
-	// Addresses An array of addresses associated with the contact, where each address includes details such as type (e.g., HOME, WORK), street, city, state, zip, country, and country code.
-	Addresses []ContactAddress `json:"addresses"`
-
-	// Emails An array of email addresses for the contact, with each email having a type (e.g., HOME, WORK) and the email address itself.
-	Emails []ContactEmail `json:"emails"`
-	Name   *ContactName   `json:"name,omitempty"`
-	Org    *ContactOrg    `json:"org,omitempty"`
-
-	// Phones An array of phone numbers for the contact, with each phone number including a type (e.g., CELL, MAIN, HOME, WORK) and the phone number.
-	Phones []ContactPhone `json:"phones"`
-
-	// Urls An array of URLs related to the contact, where each URL includes a type (e.g., HOME, WORK) and the URL itself.
-	Urls []ContactUrl `json:"urls"`
-}
-
-// ContactReference defines model for ContactReference.
-type ContactReference struct {
-	// Id Unique identifier for the contact.
-	Id string `json:"id"`
-}
-
-// ContactUrl defines model for ContactUrl.
-type ContactUrl struct {
-	// Type The category of the URL, indicating its purpose. Valid values include 'HOME' and 'WORK'.
-	Type *ContactUrlType `json:"type,omitempty"`
-
-	// Url The actual URL string associated with the contact.
-	Url string `json:"url"`
-}
-
-// ContactUrlType The category of the URL, indicating its purpose. Valid values include 'HOME' and 'WORK'.
-type ContactUrlType string
-
-// ContentCloneRequestVNext defines model for ContentCloneRequestVNext.
-type ContentCloneRequestVNext struct {
-	// CloneName Name of the cloned object.
-	CloneName *string `json:"cloneName,omitempty"`
-
-	// Id ID of the object to be cloned.
-	Id string `json:"id"`
-}
-
-// ContentFolder defines model for ContentFolder.
-type ContentFolder struct {
-	// Category The type of object this folder applies to. Should always be LANDING_PAGE.
-	Category int32 `json:"category"`
-
-	// Created The timestamp indicating when the content folder was created.
-	Created time.Time `json:"created"`
-
-	// DeletedAt The timestamp (ISO8601 format) when this content folder was deleted.
-	DeletedAt time.Time `json:"deletedAt"`
-
-	// Id The unique ID of the content folder.
-	Id string `json:"id"`
-
-	// Name The name of the folder which will show up in the app dashboard
-	Name string `json:"name"`
-
-	// ParentFolderId The ID of the content folder this folder is nested under
-	ParentFolderId int64 `json:"parentFolderId"`
-
-	// Updated The timestamp indicating when the content folder was last updated.
-	Updated time.Time `json:"updated"`
-}
-
-// ContentFolderVersion defines model for ContentFolderVersion.
-type ContentFolderVersion struct {
-	// Id The unique identifier for this version of the content folder.
-	Id     string        `json:"id"`
-	Object ContentFolder `json:"object"`
-
-	// UpdatedAt The date and time when this version was last updated, in ISO 8601 format.
-	UpdatedAt time.Time   `json:"updatedAt"`
-	User      VersionUser `json:"user"`
-}
-
-// ContentLanguageCloneRequestVNext defines model for ContentLanguageCloneRequestVNext.
-type ContentLanguageCloneRequestVNext struct {
-	// Id ID of content to clone.
-	Id string `json:"id"`
-
-	// Language Target language of new variant.
-	Language *string `json:"language,omitempty"`
-
-	// PrimaryLanguage Language of primary content to clone.
-	PrimaryLanguage *string `json:"primaryLanguage,omitempty"`
-
-	// UsePublished A boolean indicating whether the published version of the page should be used for creating the language variation. If true, the published version is used; otherwise, the draft version is used.
-	UsePublished *bool `json:"usePublished,omitempty"`
-}
-
-// ContentLanguageVariation defines model for ContentLanguageVariation.
-type ContentLanguageVariation struct {
-	// ArchivedInDashboard Indicates if the page is hidden from the dashboard, though it may still be live.
-	ArchivedInDashboard bool `json:"archivedInDashboard"`
-
-	// AuthorName The name of the user that updated this page.
-	AuthorName string `json:"authorName"`
-
-	// Campaign The GUID of the marketing campaign this page is a part of.
-	Campaign string `json:"campaign"`
-
-	// CampaignName The name of the campaign associated with this language variation.
-	CampaignName string `json:"campaignName"`
-
-	// Created The date and time when the content language variation was created.
-	Created time.Time `json:"created"`
-
-	// Id ID of object to set as primary in multi-language group.
-	Id int64 `json:"id"`
-
-	// Name The internal name of the page.
-	Name string `json:"name"`
-
-	// Password A password required to view the page, if set.
-	Password string `json:"password"`
-
-	// PublicAccessRules A list of rules defining public access permissions for this language variation.
-	PublicAccessRules []PublicAccessRule `json:"publicAccessRules"`
-
-	// PublicAccessRulesEnabled Determines if public access rules should be respected.
-	PublicAccessRulesEnabled bool `json:"publicAccessRulesEnabled"`
-
-	// PublishDate The date and time when the page is scheduled to be published.
-	PublishDate time.Time `json:"publishDate"`
-
-	// Slug The path of this page, appended to the domain to construct the URL.
-	Slug string `json:"slug"`
-
-	// State An ENUM descibing the current state of this page.
-	State string `json:"state"`
-
-	// TagIds A list of tag IDs associated with this language variation.
-	TagIds *[]int64 `json:"tagIds,omitempty"`
-
-	// Updated The date and time when the content language variation was last updated.
-	Updated time.Time `json:"updated"`
-}
-
-// ContentScheduleRequestVNext defines model for ContentScheduleRequestVNext.
-type ContentScheduleRequestVNext struct {
-	// Id The ID of the object to be scheduled.
-	Id string `json:"id"`
-
-	// PublishDate The date the object should transition from scheduled to published.
-	PublishDate time.Time `json:"publishDate"`
-}
-
-// ContentSearchResult defines model for ContentSearchResult.
-type ContentSearchResult struct {
-	// AuthorFullName Name of the author.
-	AuthorFullName *string `json:"authorFullName,omitempty"`
-
-	// Category The error category
-	Category *string `json:"category,omitempty"`
-
-	// CombinedId The ID of the document in HubSpot.
-	CombinedId *string `json:"combinedId,omitempty"`
-
-	// ContentType The content type, which provides additional information about the nature of the content.
-	ContentType *string `json:"contentType,omitempty"`
-
-	// Description The result's description. The content will be determined by the value of `length` in the request.
-	Description *string `json:"description,omitempty"`
-
-	// Domain The domain the document is hosted on.
-	Domain string `json:"domain"`
-
-	// FeaturedImageUrl URL of the featured image.
-	FeaturedImageUrl *string `json:"featuredImageUrl,omitempty"`
-
-	// Id The ID of the content.
-	Id int64 `json:"id"`
-
-	// InBeta A boolean indicating whether the content is in beta.
-	InBeta *bool `json:"inBeta,omitempty"`
-
-	// IsPrivate A boolean indicating whether the content is private.
-	IsPrivate *bool `json:"isPrivate,omitempty"`
-
-	// Language The document's language.
-	Language *ContentSearchResultLanguage `json:"language,omitempty"`
-
-	// PublishedDate The date the content was published.
-	PublishedDate *int64 `json:"publishedDate,omitempty"`
-
-	// RowId If a dynamic page, the row ID in the HubDB table.
-	RowId *int64 `json:"rowId,omitempty"`
-
-	// Score The matching score of the document.
-	Score float64 `json:"score"`
-
-	// Subcategory For knowledge articles, the subcategory of the article.
-	Subcategory *string `json:"subcategory,omitempty"`
-
-	// TableId If a dynamic page, the ID of the HubDB table.
-	TableId *int64 `json:"tableId,omitempty"`
-
-	// Tags If a blog post, the tags associated with it.
-	Tags *[]string `json:"tags,omitempty"`
-
-	// Title The title of the returned document.
-	Title *string `json:"title,omitempty"`
-
-	// Type The type of document. Can be `SITE_PAGE`, `LANDING_PAGE`, `BLOG_POST`, `LISTING_PAGE`, or `KNOWLEDGE_ARTICLE`.
-	Type ContentSearchResultType `json:"type"`
-
-	// Url The url of the document.
-	Url string `json:"url"`
-}
-
-// ContentSearchResultLanguage The document's language.
-type ContentSearchResultLanguage string
-
-// ContentSearchResultType The type of document. Can be `SITE_PAGE`, `LANDING_PAGE`, `BLOG_POST`, `LISTING_PAGE`, or `KNOWLEDGE_ARTICLE`.
-type ContentSearchResultType string
-
-// CrmObjectSnapshotBatchRequest defines model for CrmObjectSnapshotBatchRequest.
-type CrmObjectSnapshotBatchRequest struct {
-	// SnapshotRequests An array of CrmObjectSnapshotRequest objects, each representing a request to create a snapshot for a specific CRM object. This property is required.
-	SnapshotRequests []CrmObjectSnapshotRequest `json:"snapshotRequests"`
-}
-
-// CrmObjectSnapshotBatchResponse defines model for CrmObjectSnapshotBatchResponse.
-type CrmObjectSnapshotBatchResponse struct {
-	// SnapshotResponses An array of CrmObjectSnapshotResponse objects, each representing the result of a snapshot operation for a specific CRM object. This property is required.
-	SnapshotResponses []CrmObjectSnapshotResponse `json:"snapshotResponses"`
-}
-
-// CrmObjectSnapshotRequest defines model for CrmObjectSnapshotRequest.
-type CrmObjectSnapshotRequest struct {
-	// ObjectId An integer representing the unique identifier of the CRM object for which the snapshot is requested.
-	ObjectId int64 `json:"objectId"`
-
-	// ObjectTypeId A string representing the type identifier of the CRM object, specifying what kind of object it is within HubSpot.
-	ObjectTypeId string `json:"objectTypeId"`
-
-	// PortalId An integer representing the unique identifier of the HubSpot account (portal) where the CRM object resides.
-	PortalId int64 `json:"portalId"`
-
-	// Properties An array of strings, each representing a property of the CRM object that should be included in the snapshot.
-	Properties []string `json:"properties"`
-}
-
-// CrmObjectSnapshotResponse defines model for CrmObjectSnapshotResponse.
-type CrmObjectSnapshotResponse struct {
-	// ObjectId An integer representing the unique identifier of the CRM object for which the snapshot is taken.
-	ObjectId int64 `json:"objectId"`
-
-	// ObjectTypeId A string indicating the type of the CRM object, such as contact, company, or deal.
-	ObjectTypeId string `json:"objectTypeId"`
-
-	// PortalId An integer representing the unique identifier of the HubSpot portal associated with the CRM object.
-	PortalId int64 `json:"portalId"`
-
-	// SnapshotStatusId A UUID string representing the status identifier of the snapshot request, indicating the current state of the snapshot process.
-	SnapshotStatusId openapi_types.UUID `json:"snapshotStatusId"`
-}
-
-// CrmPropertyWrapper defines model for CrmPropertyWrapper.
-type CrmPropertyWrapper struct {
-	// Name The name of the property in the CRM
-	Name string `json:"name"`
-
-	// Value The value of the property in the CRM
-	Value string `json:"value"`
-}
-
-// CurrencyCodeInfo defines model for CurrencyCodeInfo.
-type CurrencyCodeInfo struct {
-	// CurrencyCode The three-letter code representing a specific currency (ex. USD).
-	CurrencyCode string `json:"currencyCode"`
-
-	// CurrencyName The full name of the currency (ex. US Dollar).
-	CurrencyName string `json:"currencyName"`
-}
-
-// CurrencyCreateRequest defines model for CurrencyCreateRequest.
-type CurrencyCreateRequest struct {
-	// CurrencyCode The currency code being added to the HubSpot portal for use with central exchange rates.
-	CurrencyCode CurrencyCreateRequestCurrencyCode `json:"currencyCode"`
-}
-
-// CurrencyCreateRequestCurrencyCode The currency code being added to the HubSpot portal for use with central exchange rates.
-type CurrencyCreateRequestCurrencyCode string
-
-// CurrencyPairUpdate defines model for CurrencyPairUpdate.
-type CurrencyPairUpdate struct {
-	// FromCurrencyCode This represents the three-letter currency code (such as USD for US Dollar) of the currency you want to convert from.
-	FromCurrencyCode CurrencyPairUpdateFromCurrencyCode `json:"fromCurrencyCode"`
-
-	// ToCurrencyCode This represents the three-letter currency code (such as USD for US Dollar) of the currency you want to convert to.
-	ToCurrencyCode CurrencyPairUpdateToCurrencyCode `json:"toCurrencyCode"`
-
-	// VisibleInUI This indicates if the currency pair is shown in the MultiCurrency settings page. Setting this to false will remove the currency pair from the settings page.
-	VisibleInUI bool `json:"visibleInUI"`
-}
-
-// CurrencyPairUpdateFromCurrencyCode This represents the three-letter currency code (such as USD for US Dollar) of the currency you want to convert from.
-type CurrencyPairUpdateFromCurrencyCode string
-
-// CurrencyPairUpdateToCurrencyCode This represents the three-letter currency code (such as USD for US Dollar) of the currency you want to convert to.
-type CurrencyPairUpdateToCurrencyCode string
-
-// CursorPagedResultBlogAuthorLong defines model for CursorPagedResultBlogAuthorLong.
-type CursorPagedResultBlogAuthorLong = map[string]interface{}
-
-// CursorPagedResultBlogPostLong defines model for CursorPagedResultBlogPostLong.
-type CursorPagedResultBlogPostLong = map[string]interface{}
-
-// CursorPagedResultTagLong defines model for CursorPagedResultTagLong.
-type CursorPagedResultTagLong = map[string]interface{}
-
-// CustomObjectLimitResponse defines model for CustomObjectLimitResponse.
-type CustomObjectLimitResponse struct {
-	// Limit The maximum number of custom objects allowed.
-	Limit int64 `json:"limit"`
-
-	// Percentage The percentage of the custom object limit that is currently used.
-	Percentage float64 `json:"percentage"`
-
-	// Usage The current number of custom objects used.
-	Usage int64 `json:"usage"`
-}
-
-// CustomObjectRecordLimitResponse defines model for CustomObjectRecordLimitResponse.
-type CustomObjectRecordLimitResponse struct {
-	// ByObjectType An array containing usage details for each object type, with each entry providing specific usage information for a particular object type.
-	ByObjectType []UsageForObjectType `json:"byObjectType"`
-
-	// OverallLimit The maximum number of custom object records allowed.
-	OverallLimit int64 `json:"overallLimit"`
-
-	// OverallPercentage The percentage of the overall custom object record limit that has been used.
-	OverallPercentage float64 `json:"overallPercentage"`
-
-	// OverallUsage The total number of custom object records currently in use.
-	OverallUsage int64 `json:"overallUsage"`
-}
-
-// CustomPropertyLimitResponse defines model for CustomPropertyLimitResponse.
-type CustomPropertyLimitResponse struct {
-	// ByObjectType An array detailing the limit and usage of custom properties for each specific object type.
-	ByObjectType []LimitAndUsageForObjectType `json:"byObjectType"`
-
-	// OverallLimit The total limit for custom properties across all objects.
-	OverallLimit int64 `json:"overallLimit"`
-
-	// OverallPercentage The percentage of the overall custom property limit that has been used.
-	OverallPercentage float64 `json:"overallPercentage"`
-
-	// OverallUsage The total number of custom properties currently in use across all objects.
-	OverallUsage int64 `json:"overallUsage"`
-}
-
-// DatePoint defines model for DatePoint.
-type DatePoint struct {
-	// Day An integer representing the day component of the date.
-	Day int32 `json:"day"`
-
-	// Hour An integer representing the hour component of the time.
-	Hour *int32 `json:"hour,omitempty"`
-
-	// Millisecond An integer representing the millisecond component of the time.
-	Millisecond *int32 `json:"millisecond,omitempty"`
-
-	// Minute An integer representing the minute component of the time.
-	Minute *int32 `json:"minute,omitempty"`
-
-	// Month An integer representing the month component of the date.
-	Month int32 `json:"month"`
-
-	// Second An integer representing the second component of the time.
-	Second *int32 `json:"second,omitempty"`
-
-	// TimeType A string indicating the type of time representation, defaulting to 'DATE'.
-	TimeType DatePointTimeType `json:"timeType"`
-
-	// TimezoneSource A string specifying the source of the timezone, with valid values including 'CUSTOM', 'USER', and 'PORTAL'.
-	TimezoneSource DatePointTimezoneSource `json:"timezoneSource"`
-
-	// Year An integer representing the year component of the date.
-	Year int32 `json:"year"`
-
-	// ZoneId A string representing the identifier for the timezone.
-	ZoneId string `json:"zoneId"`
-}
-
-// DatePointTimeType A string indicating the type of time representation, defaulting to 'DATE'.
-type DatePointTimeType string
-
-// DatePointTimezoneSource A string specifying the source of the timezone, with valid values including 'CUSTOM', 'USER', and 'PORTAL'.
-type DatePointTimezoneSource string
-
-// DatePropertyOperation defines model for DatePropertyOperation.
-type DatePropertyOperation struct {
-	// Day An integer specifying the day component of the date.
-	Day int32 `json:"day"`
-
-	// DefaultValue A string representing the default value to be used if no other value is set.
-	DefaultValue *string `json:"defaultValue,omitempty"`
-
-	// IncludeObjectsWithNoValueSet A boolean indicating whether to include objects that have no value set for the property.
-	IncludeObjectsWithNoValueSet bool `json:"includeObjectsWithNoValueSet"`
-
-	// Month An integer specifying the month component of the date.
-	Month DatePropertyOperationMonth `json:"month"`
-
-	// OperationType A string indicating the type of operation being performed.
-	OperationType string `json:"operationType"`
-
-	// Operator A string representing the operation to be performed on the date property, such as comparison operations.
-	Operator DatePropertyOperationOperator `json:"operator"`
-
-	// OperatorName A string representing the name of the operator used in the operation.
-	OperatorName   string          `json:"operatorName"`
-	PropertyAspect *PropertyAspect `json:"propertyAspect,omitempty"`
-
-	// PropertyType A string indicating the type of property operation, with a default value of 'date'.
-	PropertyType DatePropertyOperationPropertyType `json:"propertyType"`
-
-	// RenderSpec A string that provides specifications for rendering the operation.
-	RenderSpec *string `json:"renderSpec,omitempty"`
-
-	// Year An integer specifying the year component of the date.
-	Year int32 `json:"year"`
-}
-
-// DatePropertyOperationMonth An integer specifying the month component of the date.
-type DatePropertyOperationMonth string
-
-// DatePropertyOperationOperator A string representing the operation to be performed on the date property, such as comparison operations.
-type DatePropertyOperationOperator string
-
-// DatePropertyOperationPropertyType A string indicating the type of property operation, with a default value of 'date'.
-type DatePropertyOperationPropertyType string
-
-// DateTime defines model for DateTime.
-type DateTime struct {
-	// DateOnly Indicates whether the DateTime value represents only a date without a time component.
-	DateOnly bool `json:"dateOnly"`
-
-	// TimeZoneShift The integer value representing the shift in minutes from UTC for the DateTime value.
-	TimeZoneShift int32 `json:"timeZoneShift"`
-
-	// Value The integer value representing a specific point in time.
-	Value int64 `json:"value"`
-}
-
-// DateTimePropertyOperation defines model for DateTimePropertyOperation.
-type DateTimePropertyOperation struct {
-	// DefaultValue A string that specifies the default value to be used if no other value is set.
-	DefaultValue *string `json:"defaultValue,omitempty"`
-
-	// IncludeObjectsWithNoValueSet A boolean indicating whether objects with no value set for this property should be included in the operation.
-	IncludeObjectsWithNoValueSet bool `json:"includeObjectsWithNoValueSet"`
-
-	// OperationType A string that specifies the type of operation being performed.
-	OperationType string `json:"operationType"`
-
-	// Operator A string representing the operation to be performed, with valid values including 'IS_BEFORE', 'IS_AFTER', 'IS_EQUAL_TO', 'IS_BEFORE_DATE', and 'IS_AFTER_DATE'.
-	Operator DateTimePropertyOperationOperator `json:"operator"`
-
-	// OperatorName A string representing the name of the operator used in the operation.
-	OperatorName   string          `json:"operatorName"`
-	PropertyAspect *PropertyAspect `json:"propertyAspect,omitempty"`
-
-	// PropertyType A string indicating the type of property, defaulting to 'datetime'.
-	PropertyType DateTimePropertyOperationPropertyType `json:"propertyType"`
-
-	// RenderSpec A string that defines how the operation should be rendered or displayed.
-	RenderSpec *string `json:"renderSpec,omitempty"`
-
-	// RequiresTimeZoneConversion A boolean indicating whether the operation requires conversion based on time zones.
-	RequiresTimeZoneConversion bool `json:"requiresTimeZoneConversion"`
-
-	// Timestamp An integer representing a Unix timestamp in milliseconds, used for datetime comparisons.
-	Timestamp int64 `json:"timestamp"`
-}
-
-// DateTimePropertyOperationOperator A string representing the operation to be performed, with valid values including 'IS_BEFORE', 'IS_AFTER', 'IS_EQUAL_TO', 'IS_BEFORE_DATE', and 'IS_AFTER_DATE'.
-type DateTimePropertyOperationOperator string
-
-// DateTimePropertyOperationPropertyType A string indicating the type of property, defaulting to 'datetime'.
-type DateTimePropertyOperationPropertyType string
-
-// DealToDealSplits defines model for DealToDealSplits.
-type DealToDealSplits struct {
-	// Id The unique identifier for the deal associated with the deal splits.
-	Id string `json:"id"`
-
-	// Splits An array of deal split objects, each representing a portion of the deal assigned to an owner.
-	Splits []CRMDealSplitsSimplePublicObject `json:"splits"`
-}
-
-// DefaultRequirements defines model for DefaultRequirements.
-type DefaultRequirements struct {
-	// Gates An array of conditions or constraints that must be satisfied. Each element in the array represents a specific gate or requirement.
-	Gates []string `json:"gates"`
-
-	// Operator A string representing the logical operator used to evaluate the requirements. Common operators include 'AND' and 'OR'.
-	Operator DefaultRequirementsOperator `json:"operator"`
-
-	// ScopeNames An array of scope names that define the permissions or access levels required. Each scope name corresponds to a specific permission.
-	ScopeNames []string `json:"scopeNames"`
-
-	// Settings A collection of configuration settings that influence the behavior of the operation. These settings may include various options and parameters.
-	Settings []string `json:"settings"`
-}
-
-// DefaultRequirementsOperator A string representing the logical operator used to evaluate the requirements. Common operators include 'AND' and 'OR'.
-type DefaultRequirementsOperator string
-
-// DefinitionSource defines model for DefinitionSource.
-type DefinitionSource struct {
-	// Name A string representing the name of the definition source.
-	Name *string `json:"name,omitempty"`
-
-	// Type A string indicating the type of definition source. Valid values include 'GLOBAL', 'OBJECT_TYPE', 'HAVEN_BRANCH', and 'PORTAL'.
-	Type DefinitionSourceType `json:"type"`
-}
-
-// DefinitionSourceType A string indicating the type of definition source. Valid values include 'GLOBAL', 'OBJECT_TYPE', 'HAVEN_BRANCH', and 'PORTAL'.
-type DefinitionSourceType string
-
-// DetachFromLangGroupRequestVNext defines model for DetachFromLangGroupRequestVNext.
-type DetachFromLangGroupRequestVNext struct {
-	// Id ID of the object to remove from a multi-language group.
-	Id string `json:"id"`
-}
-
-// DeveloperQualifiedSymbol defines model for DeveloperQualifiedSymbol.
-type DeveloperQualifiedSymbol struct {
-	// DeveloperSymbol A string representing the developer's unique symbol or identifier within the project. This symbol is used in conjunction with the project name to resolve the fully qualified name of an App Event Type.
-	DeveloperSymbol string `json:"developerSymbol"`
-
-	// ProjectName The name of the project associated with the developer. It is a string that identifies the project within the developer's scope.
-	ProjectName string `json:"projectName"`
-}
-
-// DisplayOption defines model for DisplayOption.
-type DisplayOption struct {
-	// Label The text that will be displayed to users for this option.
-	Label string `json:"label"`
-
-	// Name JSON-friendly unique name for option.
-	Name string `json:"name"`
-
-	// Type The type of status.
-	Type DisplayOptionType `json:"type"`
-}
-
-// DisplayOptionType The type of status.
-type DisplayOptionType string
-
-// Domain defines model for Domain.
-type Domain struct {
-	// CorrectCname The expected CNAME record for the domain.
-	CorrectCname string `json:"correctCname"`
-
-	// Created The date and time when the domain was created.
-	Created time.Time `json:"created"`
-
-	// Domain The actual domain or sub-domain. e.g. www.hubspot.com
-	Domain string `json:"domain"`
-
-	// Id The unique ID of this domain.
-	Id string `json:"id"`
-
-	// IsResolving Whether the DNS for this domain is optimally configured for use with HubSpot.
-	IsResolving bool `json:"isResolving"`
-
-	// IsSslEnabled Indicates whether SSL is enabled for the domain.
-	IsSslEnabled bool `json:"isSslEnabled"`
-
-	// IsSslOnly Indicates whether the domain is accessible only via SSL.
-	IsSslOnly bool `json:"isSslOnly"`
-
-	// IsUsedForBlogPost Whether the domain is used for CMS blog posts.
-	IsUsedForBlogPost bool `json:"isUsedForBlogPost"`
-
-	// IsUsedForEmail Whether the domain is used for CMS email web pages.
-	IsUsedForEmail bool `json:"isUsedForEmail"`
-
-	// IsUsedForKnowledge Whether the domain is used for CMS knowledge pages.
-	IsUsedForKnowledge bool `json:"isUsedForKnowledge"`
-
-	// IsUsedForLandingPage Whether the domain is used for CMS landing pages.
-	IsUsedForLandingPage bool `json:"isUsedForLandingPage"`
-
-	// IsUsedForSitePage Whether the domain is used for CMS site pages.
-	IsUsedForSitePage bool `json:"isUsedForSitePage"`
-
-	// ManuallyMarkedAsResolving Indicates whether the domain has been manually marked as resolving.
-	ManuallyMarkedAsResolving bool `json:"manuallyMarkedAsResolving"`
-
-	// PrimaryBlogPost Indicates whether the domain is the primary domain for blog posts.
-	PrimaryBlogPost bool `json:"primaryBlogPost"`
-
-	// PrimaryEmail Indicates whether the domain is the primary domain for email pages.
-	PrimaryEmail bool `json:"primaryEmail"`
-
-	// PrimaryKnowledge Indicates whether the domain is the primary domain for knowledge pages.
-	PrimaryKnowledge bool `json:"primaryKnowledge"`
-
-	// PrimaryLandingPage Indicates whether the domain is the primary domain for landing pages.
-	PrimaryLandingPage bool `json:"primaryLandingPage"`
-
-	// PrimarySitePage Indicates whether the domain is the primary domain for site pages.
-	PrimarySitePage bool `json:"primarySitePage"`
-
-	// SecondaryToDomain Specifies the domain to which this domain is secondary.
-	SecondaryToDomain string `json:"secondaryToDomain"`
-
-	// Updated The date and time when the domain was last updated.
-	Updated time.Time `json:"updated"`
-}
-
-// DoubleFieldSchema defines model for DoubleFieldSchema.
-type DoubleFieldSchema struct {
-	// Maximum The maximum allowable value for the double field.
-	Maximum *float64 `json:"maximum,omitempty"`
-
-	// Minimum The minimum allowable value for the double field.
-	Minimum *float64 `json:"minimum,omitempty"`
-
-	// Type Indicates the field type as DOUBLE.
-	Type DoubleFieldSchemaType `json:"type"`
-}
-
-// DoubleFieldSchemaType Indicates the field type as DOUBLE.
-type DoubleFieldSchemaType string
-
-// EmailCloneRequestVNext defines model for EmailCloneRequestVNext.
-type EmailCloneRequestVNext struct {
-	// CloneName The name to assign to the cloned email.
-	CloneName *string `json:"cloneName,omitempty"`
-
-	// Id The email ID.
-	Id string `json:"id"`
-
-	// Language The language code for the cloned email, such as 'en' for English.
-	Language *string `json:"language,omitempty"`
-}
-
-// EmailCreateRequest defines model for EmailCreateRequest.
-type EmailCreateRequest struct {
-	// ActiveDomain The active domain of the email.
-	ActiveDomain *string `json:"activeDomain,omitempty"`
-
-	// Archived Determines if the email is archived or not.
-	Archived *bool `json:"archived,omitempty"`
-
-	// BusinessUnitId The ID of the business unit associated with the email.
-	BusinessUnitId *int64 `json:"businessUnitId,omitempty"`
-
-	// Campaign The ID of the campaign this email is associated to.
-	Campaign *string             `json:"campaign,omitempty"`
-	Content  *PublicEmailContent `json:"content,omitempty"`
-
-	// FeedbackSurveyId The ID of the feedback survey linked to the email.
-	FeedbackSurveyId *string `json:"feedbackSurveyId,omitempty"`
-
-	// FolderIdV2 The ID of the folder where the email will be stored.
-	FolderIdV2 *int64                  `json:"folderIdV2,omitempty"`
-	From       *PublicEmailFromDetails `json:"from,omitempty"`
-
-	// JitterSendTime Determines whether the email send time should be randomized to avoid sending all emails at the exact same time.
-	JitterSendTime *bool `json:"jitterSendTime,omitempty"`
-
-	// Language The language code for the email, such as 'en' for English.
-	Language *EmailCreateRequestLanguage `json:"language,omitempty"`
-
-	// Name The name of the email, as displayed on the email dashboard.
-	Name *string `json:"name,omitempty"`
-
-	// PublishDate The date and time the email is scheduled for, in ISO8601 representation. This is only used in local time or scheduled emails.
-	PublishDate *time.Time             `json:"publishDate,omitempty"`
-	RssData     *PublicRssEmailDetails `json:"rssData,omitempty"`
-
-	// SendOnPublish Determines whether the email will be sent immediately on publish.
-	SendOnPublish *bool `json:"sendOnPublish,omitempty"`
-
-	// State The email state.
-	State *EmailCreateRequestState `json:"state,omitempty"`
-
-	// Subcategory The email subcategory.
-	Subcategory *EmailCreateRequestSubcategory `json:"subcategory,omitempty"`
-
-	// Subject The subject of the email.
-	Subject             *string                         `json:"subject,omitempty"`
-	SubscriptionDetails *PublicEmailSubscriptionDetails `json:"subscriptionDetails,omitempty"`
-	Testing             *PublicEmailTestingDetails      `json:"testing,omitempty"`
-	To                  *PublicEmailToDetails           `json:"to,omitempty"`
-	Webversion          *PublicWebversionDetails        `json:"webversion,omitempty"`
-}
-
-// EmailCreateRequestLanguage The language code for the email, such as 'en' for English.
-type EmailCreateRequestLanguage string
-
-// EmailCreateRequestState The email state.
-type EmailCreateRequestState string
-
-// EmailCreateRequestSubcategory The email subcategory.
-type EmailCreateRequestSubcategory string
-
-// EmailSendStatusView defines model for EmailSendStatusView.
-type EmailSendStatusView struct {
-	// CompletedAt Time when the send was completed.
-	CompletedAt *time.Time   `json:"completedAt,omitempty"`
-	EventId     *EventIdView `json:"eventId,omitempty"`
-
-	// Message A human readable message describing the error along with remediation steps where appropriate
-	Message *string `json:"message,omitempty"`
-
-	// RequestedAt Time when the send was requested.
-	RequestedAt *time.Time `json:"requestedAt,omitempty"`
-
-	// SendResult Result of the send.
-	SendResult *EmailSendStatusViewSendResult `json:"sendResult,omitempty"`
-
-	// StartedAt Time when the send began processing.
-	StartedAt *time.Time `json:"startedAt,omitempty"`
-
-	// Status Status of the send request.
-	Status EmailSendStatusViewStatus `json:"status"`
-
-	// StatusId Identifier used to query the status of the send.
-	StatusId string `json:"statusId"`
-}
-
-// EmailSendStatusViewSendResult Result of the send.
-type EmailSendStatusViewSendResult string
-
-// EmailSendStatusViewStatus Status of the send request.
-type EmailSendStatusViewStatus string
-
-// EmailStatisticInterval defines model for EmailStatisticInterval.
-type EmailStatisticInterval struct {
-	Aggregations EmailStatisticsData `json:"aggregations"`
-	Interval     Interval            `json:"interval"`
-}
-
-// EmailStatisticsData defines model for EmailStatisticsData.
-type EmailStatisticsData struct {
-	// Counters Counters like number of `sent`, `open` or `delivered`.
-	Counters map[string]int64 `json:"counters"`
-
-	// DeviceBreakdown Statistics by device.
-	DeviceBreakdown map[string]map[string]int64 `json:"deviceBreakdown"`
-
-	// QualifierStats Number of emails that were dropped and bounced.
-	QualifierStats map[string]map[string]int64 `json:"qualifierStats"`
-
-	// Ratios Ratios like `openratio` or `clickratio`
-	Ratios map[string]float64 `json:"ratios"`
-}
-
-// EmailUpdateRequest defines model for EmailUpdateRequest.
-type EmailUpdateRequest struct {
-	// ActiveDomain The active domain of the email.
-	ActiveDomain *string `json:"activeDomain,omitempty"`
-
-	// Archived Determines if the email is archived or not.
-	Archived *bool `json:"archived,omitempty"`
-
-	// BusinessUnitId The ID of the business unit associated with the email.
-	BusinessUnitId *int64 `json:"businessUnitId,omitempty"`
-
-	// Campaign The ID of the campaign this email is associated to.
-	Campaign *string             `json:"campaign,omitempty"`
-	Content  *PublicEmailContent `json:"content,omitempty"`
-
-	// FolderIdV2 The ID of the folder where the email will be stored.
-	FolderIdV2 *int64                  `json:"folderIdV2,omitempty"`
-	From       *PublicEmailFromDetails `json:"from,omitempty"`
-
-	// JitterSendTime Determines whether the email send time should be randomized to avoid sending all emails at the exact same time.
-	JitterSendTime *bool `json:"jitterSendTime,omitempty"`
-
-	// Language The language code for the email, such as 'en' for English.
-	Language *EmailUpdateRequestLanguage `json:"language,omitempty"`
-
-	// Name The name of the email, as displayed on the email dashboard.
-	Name *string `json:"name,omitempty"`
-
-	// PublishDate The date and time the email is scheduled for, in ISO8601 representation. This is only used in local time or scheduled emails.
-	PublishDate *time.Time             `json:"publishDate,omitempty"`
-	RssData     *PublicRssEmailDetails `json:"rssData,omitempty"`
-
-	// SendOnPublish Determines whether the email will be sent immediately on publish.
-	SendOnPublish *bool `json:"sendOnPublish,omitempty"`
-
-	// State The email state.
-	State *EmailUpdateRequestState `json:"state,omitempty"`
-
-	// Subcategory The email subcategory.
-	Subcategory *EmailUpdateRequestSubcategory `json:"subcategory,omitempty"`
-
-	// Subject The subject of the email.
-	Subject             *string                         `json:"subject,omitempty"`
-	SubscriptionDetails *PublicEmailSubscriptionDetails `json:"subscriptionDetails,omitempty"`
-	Testing             *PublicEmailTestingDetails      `json:"testing,omitempty"`
-	To                  *PublicEmailToDetails           `json:"to,omitempty"`
-	Webversion          *PublicWebversionDetails        `json:"webversion,omitempty"`
-}
-
-// EmailUpdateRequestLanguage The language code for the email, such as 'en' for English.
-type EmailUpdateRequestLanguage string
-
-// EmailUpdateRequestState The email state.
-type EmailUpdateRequestState string
-
-// EmailUpdateRequestSubcategory The email subcategory.
-type EmailUpdateRequestSubcategory string
-
-// Endpoints defines model for Endpoints.
-type Endpoints struct {
-	// Discovery Information related to the discovery of the endpoint, which may include metadata or additional details for client integration.
-	Discovery bool `json:"discovery"`
-
-	// Schemes An array of supported schemes for the endpoint, such as 'http' or 'https'.
-	Schemes []string `json:"schemes"`
-
-	// Url The URL of the endpoint, specifying where the API can be accessed.
-	Url string `json:"url"`
-}
-
-// EnumerationPropertyOperation defines model for EnumerationPropertyOperation.
-type EnumerationPropertyOperation struct {
-	// DefaultValue A string representing the default value for the operation.
-	DefaultValue *string `json:"defaultValue,omitempty"`
-
-	// IncludeObjectsWithNoValueSet A boolean indicating whether to include objects that have no value set for this property.
-	IncludeObjectsWithNoValueSet bool `json:"includeObjectsWithNoValueSet"`
-
-	// OperationType A string indicating the type of operation being performed.
-	OperationType string `json:"operationType"`
-
-	// Operator A string representing the operation to be performed, with valid values including 'IS_ANY_OF', 'IS_NONE_OF', 'IS_EXACTLY', 'IS_NOT_EXACTLY', 'CONTAINS_ALL', 'DOES_NOT_CONTAIN_ALL', 'HAS_EVER_BEEN_ANY_OF', 'HAS_NEVER_BEEN_ANY_OF', 'HAS_EVER_BEEN_EXACTLY', 'HAS_NEVER_BEEN_EXACTLY', 'HAS_EVER_CONTAINED_ALL', and 'HAS_NEVER_CONTAINED_ALL'.
-	Operator EnumerationPropertyOperationOperator `json:"operator"`
-
-	// OperatorName A string representing the name of the operator used in the operation.
-	OperatorName   string          `json:"operatorName"`
-	PropertyAspect *PropertyAspect `json:"propertyAspect,omitempty"`
-
-	// PropertyType A string indicating the type of property, which is 'enumeration' by default.
-	PropertyType EnumerationPropertyOperationPropertyType `json:"propertyType"`
-
-	// RenderSpec A string specifying how the operation should be rendered.
-	RenderSpec *string `json:"renderSpec,omitempty"`
-
-	// Values An array of strings representing the values to be used in the operation.
-	Values []string `json:"values"`
-}
-
-// EnumerationPropertyOperationOperator A string representing the operation to be performed, with valid values including 'IS_ANY_OF', 'IS_NONE_OF', 'IS_EXACTLY', 'IS_NOT_EXACTLY', 'CONTAINS_ALL', 'DOES_NOT_CONTAIN_ALL', 'HAS_EVER_BEEN_ANY_OF', 'HAS_NEVER_BEEN_ANY_OF', 'HAS_EVER_BEEN_EXACTLY', 'HAS_NEVER_BEEN_EXACTLY', 'HAS_EVER_CONTAINED_ALL', and 'HAS_NEVER_CONTAINED_ALL'.
-type EnumerationPropertyOperationOperator string
-
-// EnumerationPropertyOperationPropertyType A string indicating the type of property, which is 'enumeration' by default.
-type EnumerationPropertyOperationPropertyType string
-
-// Error Represents an error response returned by the API when an operation fails. This component is used in various endpoints to provide detailed information about the error encountered.
-//
-// Example: {"category":"VALIDATION_ERROR","correlationId":"aeb5f871-7f07-4993-9211-075dc63e7cbf","links":{"knowledge-base":"https://www.hubspot.com/products/service/knowledge-base"},"message":"Invalid input (details will vary based on the error)"}
-type Error struct {
-	// Category The error category
-	Category string `json:"category"`
-
-	// Context Context about the error condition
-	//
-	// Example: {invalidPropertyName=[propertyValue], missingScopes=[scope1, scope2]}
-	Context *map[string][]string `json:"context,omitempty"`
-
-	// CorrelationId A unique identifier for the request. Include this value with any error reports or support tickets
-	//
-	// Example: aeb5f871-7f07-4993-9211-075dc63e7cbf
-	CorrelationId openapi_types.UUID `json:"correlationId"`
-
-	// Errors further information about the error
-	Errors *[]ErrorDetail `json:"errors,omitempty"`
-
-	// Links A map of link names to associated URIs containing documentation about the error or recommended remediation steps
-	Links *map[string]string `json:"links,omitempty"`
-
-	// Message A human readable message describing the error along with remediation steps where appropriate
-	//
-	// Example: An error occurred
-	Message string `json:"message"`
-
-	// SubCategory A specific category that contains more specific detail about the error
-	SubCategory *string `json:"subCategory,omitempty"`
-}
-
-// ErrorDetail Represents detailed information about an error that occurred in the API. This component is used to provide additional context and specifics about errors, typically as part of an error response.
-type ErrorDetail struct {
-	// Code The status code associated with the error detail
-	Code *string `json:"code,omitempty"`
-
-	// Context Context about the error condition
-	//
-	// Example: {missingScopes=[scope1, scope2]}
-	Context *map[string][]string `json:"context,omitempty"`
-
-	// In The name of the field or parameter in which the error was found.
-	In *string `json:"in,omitempty"`
-
-	// Message A human readable message describing the error along with remediation steps where appropriate
-	Message string `json:"message"`
-
-	// SubCategory A specific category that contains more specific detail about the error
-	SubCategory *string `json:"subCategory,omitempty"`
-}
-
-// EventDetailSettings defines model for EventDetailSettings.
-type EventDetailSettings struct {
-	// AppId The id of the application the settings are for
-	AppId int32 `json:"appId"`
-
-	// EventDetailsUrl The url that will be used to fetch marketing event details by id
-	EventDetailsUrl string `json:"eventDetailsUrl"`
-}
-
-// EventDetailSettingsUrl defines model for EventDetailSettingsUrl.
-type EventDetailSettingsUrl struct {
-	// EventDetailsUrl The url that will be used to fetch marketing event details by id. Must contain a `%s` character sequence that will be substituted with the event id. For example: `https://my.event.app/events/%s`
-	EventDetailsUrl string `json:"eventDetailsUrl"`
-}
-
-// EventIdView defines model for EventIdView.
-type EventIdView struct {
-	// Created Time of event creation.
-	Created time.Time `json:"created"`
-
-	// Id Identifier of event.
-	Id openapi_types.UUID `json:"id"`
-}
-
-// EventVisibilityChange defines model for EventVisibilityChange.
-type EventVisibilityChange struct {
-	// EventType A string representing the type of event whose visibility settings are being changed.
-	EventType EventVisibilityChangeEventType `json:"eventType"`
-
-	// ShowInReporting A boolean indicating whether the event should be included in reporting.
-	ShowInReporting *bool `json:"showInReporting,omitempty"`
-
-	// ShowInTimeline A boolean indicating whether the event should be displayed in the timeline.
-	ShowInTimeline *bool `json:"showInTimeline,omitempty"`
-
-	// ShowInWorkflows A boolean indicating whether the event should be available for use in workflows.
-	ShowInWorkflows *bool `json:"showInWorkflows,omitempty"`
-
-	// UpdatedAt A string representing the date and time when the visibility settings were last updated, in ISO 8601 format.
-	UpdatedAt int64 `json:"updatedAt"`
-}
-
-// EventVisibilityChangeEventType A string representing the type of event whose visibility settings are being changed.
-type EventVisibilityChangeEventType string
-
-// EventVisibilityResponse defines model for EventVisibilityResponse.
-type EventVisibilityResponse struct {
-	// CreatedAt The date and time when the visibility settings were created, in ISO 8601 format.
-	CreatedAt time.Time `json:"createdAt"`
-
-	// VisibilitySettings An object containing the visibility settings for events. The specific structure and properties of this object are not detailed in the provided specification.
-	VisibilitySettings []EventVisibilityChange `json:"visibilitySettings"`
-}
-
-// EventsManageEventDefinitionsAssociationDefinition The definition of an association
-type EventsManageEventDefinitionsAssociationDefinition struct {
-	// AllowsCustomLabels Indicates whether custom labels are allowed for this association.
-	AllowsCustomLabels bool `json:"allowsCustomLabels"`
-
-	// Cardinality Defines the nature of the association in terms of quantity. Valid values are 'ONE_TO_ONE' and 'ONE_TO_MANY'.
-	Cardinality EventsManageEventDefinitionsAssociationDefinitionCardinality `json:"cardinality"`
-
-	// Category The error category
-	Category EventsManageEventDefinitionsAssociationDefinitionCategory `json:"category"`
-
-	// FromObjectType The type of object from which the association originates. Valid values include various HubSpot object types such as 'CONTACT', 'COMPANY', 'DEAL', etc.
-	FromObjectType *EventsManageEventDefinitionsAssociationDefinitionFromObjectType `json:"fromObjectType,omitempty"`
-
-	// FromObjectTypeId The object type ID from which the association originates.
-	FromObjectTypeId string `json:"fromObjectTypeId"`
-
-	// HasAllAssociatedObjects Indicates whether all associated objects are included in the association.
-	HasAllAssociatedObjects bool `json:"hasAllAssociatedObjects"`
-
-	// HasCascadingDeletes Indicates if the association supports cascading deletes.
-	HasCascadingDeletes bool `json:"hasCascadingDeletes"`
-
-	// HasUserEnforcedMaxFromObjectIds Indicates if there is a user-enforced maximum number of object IDs for the source object type.
-	HasUserEnforcedMaxFromObjectIds bool `json:"hasUserEnforcedMaxFromObjectIds"`
-
-	// HasUserEnforcedMaxToObjectIds Indicates if there is a user-enforced maximum number of object IDs for the target object type.
-	HasUserEnforcedMaxToObjectIds bool `json:"hasUserEnforcedMaxToObjectIds"`
-
-	// Hidden Indicates if the association is hidden.
-	Hidden bool `json:"hidden"`
-
-	// HiddenReason The reason why the association is hidden. Valid values include 'DEFAULT', 'INTERNAL', and 'USER_CONFIGURED'.
-	HiddenReason *EventsManageEventDefinitionsAssociationDefinitionHiddenReason `json:"hiddenReason,omitempty"`
-
-	// Id The unique identifier for the association definition.
-	Id int32 `json:"id"`
-
-	// InverseAllowsCustomLabels Indicates whether custom labels are allowed for the inverse association.
-	InverseAllowsCustomLabels bool `json:"inverseAllowsCustomLabels"`
-
-	// InverseCardinality Defines the inverse nature of the association in terms of quantity. Valid values are 'ONE_TO_ONE' and 'ONE_TO_MANY'.
-	InverseCardinality EventsManageEventDefinitionsAssociationDefinitionInverseCardinality `json:"inverseCardinality"`
-
-	// InverseHasAllAssociatedObjects Indicates whether all associated objects are included in the inverse association.
-	InverseHasAllAssociatedObjects bool `json:"inverseHasAllAssociatedObjects"`
-
-	// InverseId The unique identifier for the inverse association definition.
-	InverseId int32 `json:"inverseId"`
-
-	// InverseLabel A human-readable label for the inverse association.
-	InverseLabel *string `json:"inverseLabel,omitempty"`
-
-	// InverseName The name of the inverse association.
-	InverseName string `json:"inverseName"`
-
-	// IsDefault Indicates if this association is the default association.
-	IsDefault bool `json:"isDefault"`
-
-	// IsInversePrimary Indicates if the inverse association is the primary association.
-	IsInversePrimary bool `json:"isInversePrimary"`
-
-	// IsPrimary Indicates if this association is the primary association.
-	IsPrimary bool `json:"isPrimary"`
-
-	// Label A human-readable label for the association.
-	Label *string `json:"label,omitempty"`
-
-	// MaxFromObjectIds The maximum number of object IDs that can be associated from the source object type.
-	MaxFromObjectIds int32 `json:"maxFromObjectIds"`
-
-	// MaxToObjectIds The maximum number of object IDs that can be associated to the target object type.
-	MaxToObjectIds int32 `json:"maxToObjectIds"`
-
-	// Name The name of the association.
-	Name string `json:"name"`
-
-	// PortalUniqueIdentifier A unique identifier for the association within the portal.
-	PortalUniqueIdentifier string `json:"portalUniqueIdentifier"`
-
-	// ReadOnly Indicates if the association is read-only.
-	ReadOnly bool `json:"readOnly"`
-
-	// ToObjectType The type of object to which the association points. Valid values include various HubSpot object types such as 'CONTACT', 'COMPANY', 'DEAL', etc.
-	ToObjectType *EventsManageEventDefinitionsAssociationDefinitionToObjectType `json:"toObjectType,omitempty"`
-
-	// ToObjectTypeId The object type ID to which the association points.
-	ToObjectTypeId string `json:"toObjectTypeId"`
-}
-
-// EventsManageEventDefinitionsAssociationDefinitionCardinality Defines the nature of the association in terms of quantity. Valid values are 'ONE_TO_ONE' and 'ONE_TO_MANY'.
-type EventsManageEventDefinitionsAssociationDefinitionCardinality string
-
-// EventsManageEventDefinitionsAssociationDefinitionCategory The error category
-type EventsManageEventDefinitionsAssociationDefinitionCategory string
-
-// EventsManageEventDefinitionsAssociationDefinitionFromObjectType The type of object from which the association originates. Valid values include various HubSpot object types such as 'CONTACT', 'COMPANY', 'DEAL', etc.
-type EventsManageEventDefinitionsAssociationDefinitionFromObjectType string
-
-// EventsManageEventDefinitionsAssociationDefinitionHiddenReason The reason why the association is hidden. Valid values include 'DEFAULT', 'INTERNAL', and 'USER_CONFIGURED'.
-type EventsManageEventDefinitionsAssociationDefinitionHiddenReason string
-
-// EventsManageEventDefinitionsAssociationDefinitionInverseCardinality Defines the inverse nature of the association in terms of quantity. Valid values are 'ONE_TO_ONE' and 'ONE_TO_MANY'.
-type EventsManageEventDefinitionsAssociationDefinitionInverseCardinality string
-
-// EventsManageEventDefinitionsAssociationDefinitionToObjectType The type of object to which the association points. Valid values include various HubSpot object types such as 'CONTACT', 'COMPANY', 'DEAL', etc.
-type EventsManageEventDefinitionsAssociationDefinitionToObjectType string
-
-// ExchangeRate defines model for ExchangeRate.
-type ExchangeRate struct {
-	// ConversionRate The conversion rate between the to and from currency code of this exchange rate.
-	ConversionRate float64 `json:"conversionRate"`
-
-	// CreatedAt The date the exchange rate was created.
-	CreatedAt time.Time `json:"createdAt"`
-
-	// EffectiveAt The date the exchange rate is in effect.
-	EffectiveAt time.Time `json:"effectiveAt"`
-
-	// FromCurrencyCode This represents the three-letter currency code (such as USD for US Dollar) of the currency you are converting from.
-	FromCurrencyCode ExchangeRateFromCurrencyCode `json:"fromCurrencyCode"`
-
-	// Id A unique identifier for the exchange rate
-	Id string `json:"id"`
-
-	// ToCurrencyCode This represents the three-letter currency code (such as USD for US Dollar) of the currency you are converting to.
-	ToCurrencyCode ExchangeRateToCurrencyCode `json:"toCurrencyCode"`
-
-	// UpdatedAt The date the exchange rate was last updated.
-	UpdatedAt time.Time `json:"updatedAt"`
-
-	// VisibleInUI This indicates if the exchange rate is shown in the MultiCurrency settings page.
-	VisibleInUI bool `json:"visibleInUI"`
-}
-
-// ExchangeRateFromCurrencyCode This represents the three-letter currency code (such as USD for US Dollar) of the currency you are converting from.
-type ExchangeRateFromCurrencyCode string
-
-// ExchangeRateToCurrencyCode This represents the three-letter currency code (such as USD for US Dollar) of the currency you are converting to.
-type ExchangeRateToCurrencyCode string
-
-// ExchangeRateCreateRequest defines model for ExchangeRateCreateRequest.
-type ExchangeRateCreateRequest struct {
-	// ConversionRate The conversion rate between the to and from currency code of this exchange rate.
-	ConversionRate float64 `json:"conversionRate"`
-
-	// EffectiveAt The date the exchange rate is in effect.
-	EffectiveAt *time.Time `json:"effectiveAt,omitempty"`
-
-	// FromCurrencyCode This represents the three-letter currency code (such as USD for US Dollar) of the currency you want to convert from.
-	FromCurrencyCode ExchangeRateCreateRequestFromCurrencyCode `json:"fromCurrencyCode"`
-}
-
-// ExchangeRateCreateRequestFromCurrencyCode This represents the three-letter currency code (such as USD for US Dollar) of the currency you want to convert from.
-type ExchangeRateCreateRequestFromCurrencyCode string
-
-// ExchangeRateMultiplier defines model for ExchangeRateMultiplier.
-type ExchangeRateMultiplier struct {
-	// ConversionRate The updated conversion rate between the to and from currency code of this exchange rate.
-	ConversionRate float64 `json:"conversionRate"`
-
-	// EffectiveAt The date the exchange rate is in effect.
-	EffectiveAt *time.Time `json:"effectiveAt,omitempty"`
-}
-
-// ExchangeRateUpdateRequest defines model for ExchangeRateUpdateRequest.
-type ExchangeRateUpdateRequest struct {
-	// ConversionRate The updated conversion rate between the to and from currency code of this exchange rate.
-	ConversionRate float64 `json:"conversionRate"`
-
-	// EffectiveAt The date the exchange rate will be in effect.
-	EffectiveAt *time.Time `json:"effectiveAt,omitempty"`
-
-	// Id A unique identifier for the exchange rate being updated
-	Id string `json:"id"`
-}
-
-// ExtensionData defines model for ExtensionData.
-type ExtensionData struct {
-	CaseChangeTestExtensionData *CaseChangeTestExtensionData `json:"caseChangeTestExtensionData,omitempty"`
-
-	// ExtensionStatusMap A map that holds the status of various extensions. The keys are extension identifiers, and the values represent the status of each extension.
-	ExtensionStatusMap                  map[string]ExtensionDataExtensionStatusMap `json:"extensionStatusMap"`
-	OptionDecoratorsExtensionData       *OptionDecoratorsExtensionData             `json:"optionDecoratorsExtensionData,omitempty"`
-	RequiredPropertiesExtensionData     *RequiredPropertiesExtensionData           `json:"requiredPropertiesExtensionData,omitempty"`
-	SoftRequiredPropertiesExtensionData *SoftRequiredPropertiesExtensionData       `json:"softRequiredPropertiesExtensionData,omitempty"`
-
-	// Tags An array of tags associated with the extension data. Each tag is a string that categorizes or describes the extension.
-	Tags []string `json:"tags"`
-}
-
-// ExtensionDataExtensionStatusMap defines model for ExtensionData.ExtensionStatusMap.
-type ExtensionDataExtensionStatusMap string
-
-// ExternalAppEventResolutionRequest defines model for ExternalAppEventResolutionRequest.
-type ExternalAppEventResolutionRequest struct {
-	// DeveloperSymbol The developer symbol used to identify the App Event Type. It is a string.
-	DeveloperSymbol string `json:"developerSymbol"`
-
-	// ProjectName The name of the project associated with the App Event Type. It is a string.
-	ProjectName string `json:"projectName"`
-}
-
-// ExternalAssociationCreateRequest defines model for ExternalAssociationCreateRequest.
-type ExternalAssociationCreateRequest struct {
-	// To Contains the Id of a Public Object
-	To PublicObjectId `json:"to"`
-
-	// Types An array of association specifications, detailing the types of associations to be created. Each item in the array is an object that defines the association type.
-	Types []AssociationSpec `json:"types"`
-}
-
-// ExternalBehavioralEventPropertyCreate defines model for ExternalBehavioralEventPropertyCreate.
-type ExternalBehavioralEventPropertyCreate struct {
-	// Description A description of the property that will be shown as help text in HubSpot.
-	Description *string `json:"description,omitempty"`
-
-	// Label Human readable label for the property. Used in HubSpot UI
-	Label string `json:"label"`
-
-	// Name Internal property name, which must be used when referencing the property from the API
-	Name *string `json:"name,omitempty"`
-
-	// Options A list of available options for the property if it is an enumeration. NOTE: This field is only applicable for enumerated properties.
-	Options *[]OptionInput `json:"options,omitempty"`
-
-	// Type The data type of the property. Can be one of the following: [string, number, enumeration, datetime]
-	Type string `json:"type"`
-}
-
-// ExternalBehavioralEventPropertyDefinitionPatch defines model for ExternalBehavioralEventPropertyDefinitionPatch.
-type ExternalBehavioralEventPropertyDefinitionPatch struct {
-	// Description A description of the property that will be shown as help text in HubSpot.
-	Description *string `json:"description,omitempty"`
-
-	// Label Human readable label for the property. Used in HubSpot UI
-	Label *string `json:"label,omitempty"`
-
-	// Options A list of available options for the property if it is an enumeration. NOTE: This field is only applicable for enumerated properties.
-	Options *[]OptionInput `json:"options,omitempty"`
-}
-
-// ExternalBehavioralEventTypeDefinition defines model for ExternalBehavioralEventTypeDefinition.
-type ExternalBehavioralEventTypeDefinition struct {
-	// Archived A boolean indicating whether the event type is archived.
-	Archived bool `json:"archived"`
-
-	// Associations An array of association definitions that define the associations related to the event type.
-	Associations    []EventsManageEventDefinitionsAssociationDefinition `json:"associations"`
-	ComboEventRules *ComboEventRuleBranch                               `json:"comboEventRules,omitempty"`
-
-	// CreatedAt A string representing the date and time when the event type was created, in ISO 8601 format.
-	CreatedAt *time.Time `json:"createdAt,omitempty"`
-
-	// CreatedUserId An integer representing the ID of the user who created the event type.
-	CreatedUserId    *int32                                   `json:"createdUserId,omitempty"`
-	CustomMatchingId *ExternalObjectResolutionMappingResponse `json:"customMatchingId,omitempty"`
-
-	// Description A string providing a description of the event type.
-	Description *string `json:"description,omitempty"`
-
-	// DetailTemplate A string used as a template for the details of the event type.
-	DetailTemplate *string `json:"detailTemplate,omitempty"`
-
-	// FullyQualifiedName A string representing the fully qualified name of the event type.
-	FullyQualifiedName string `json:"fullyQualifiedName"`
-
-	// HeaderTemplate A string used as a template for the header of the event type.
-	HeaderTemplate *string `json:"headerTemplate,omitempty"`
-
-	// Id A string representing the unique identifier of the event type.
-	Id     string                              `json:"id"`
-	Labels BehavioralEventTypeDefinitionLabels `json:"labels"`
-
-	// Name A string representing the name of the event type.
-	Name string `json:"name"`
-
-	// ObjectTypeId A string representing the object type ID of the event type.
-	ObjectTypeId string `json:"objectTypeId"`
-
-	// PrimaryObject A string representing the primary object associated with the event type.
-	PrimaryObject *string `json:"primaryObject,omitempty"`
-
-	// PrimaryObjectId A string representing the ID of the primary object associated with the event type.
-	PrimaryObjectId *string `json:"primaryObjectId,omitempty"`
-
-	// Properties An array of property objects that define the properties of the event type.
-	Properties []Property `json:"properties"`
-
-	// TrackingType A string specifying the tracking type of the event. Valid values include 'VISITED_URL', 'CLICKED_ELEMENT', 'CUSTOM_SCRIPT', and others.
-	TrackingType *ExternalBehavioralEventTypeDefinitionTrackingType `json:"trackingType,omitempty"`
-
-	// UpdatedAt A string representing the date and time when the event type was last updated, in ISO 8601 format.
-	UpdatedAt *time.Time `json:"updatedAt,omitempty"`
-
-	// UpdatedUserId An integer representing the ID of the user who last updated the event type.
-	UpdatedUserId *int32 `json:"updatedUserId,omitempty"`
-}
-
-// ExternalBehavioralEventTypeDefinitionTrackingType A string specifying the tracking type of the event. Valid values include 'VISITED_URL', 'CLICKED_ELEMENT', 'CUSTOM_SCRIPT', and others.
-type ExternalBehavioralEventTypeDefinitionTrackingType string
-
-// ExternalBehavioralEventTypeDefinitionEgg defines model for ExternalBehavioralEventTypeDefinitionEgg.
-type ExternalBehavioralEventTypeDefinitionEgg struct {
-	CustomMatchingId *ExternalObjectResolutionMappingRequest `json:"customMatchingId,omitempty"`
-
-	// Description A description of the event that will be shown as help text in HubSpot.
-	Description *string `json:"description,omitempty"`
-
-	// IncludeDefaultProperties A boolean indicating whether to include default properties in the event type definition.
-	IncludeDefaultProperties bool `json:"includeDefaultProperties"`
-
-	// Label Human readable label for the event. Used in HubSpot UI
-	Label string `json:"label"`
-
-	// Name Internal event name, which must be used when referencing the event from this event definitions API. If a name is not supplied, one will be generated based on the label. The `name` value will also be used to automatically generate a `fullyQualifiedName` for the event definition, which you'll use when sending event completions to this event.
-	Name *string `json:"name,omitempty"`
-
-	// PrimaryObject The object type to associate this event to. Can be one of CONTACT, COMPANY, DEAL, TICKET. If no primaryObject is supplied, we will default to associating the event to CONTACT objects.
-	PrimaryObject *string `json:"primaryObject,omitempty"`
-
-	// PropertyDefinitions List of custom properties on event
-	PropertyDefinitions []ExternalBehavioralEventPropertyCreate `json:"propertyDefinitions"`
-}
-
-// ExternalBehavioralEventTypeDefinitionPatch defines model for ExternalBehavioralEventTypeDefinitionPatch.
-type ExternalBehavioralEventTypeDefinitionPatch struct {
-	// Description A description of the event that will be shown as help text in HubSpot.
-	Description *string `json:"description,omitempty"`
-
-	// Label Human readable label for the event. Used in HubSpot UI
-	Label *string `json:"label,omitempty"`
-}
-
-// ExternalBookingFormField defines model for ExternalBookingFormField.
-type ExternalBookingFormField struct {
-	// Name The name of the form field, represented as a string.
-	Name string `json:"name"`
-
-	// Value The value associated with the form field, represented as a string.
-	Value string `json:"value"`
-}
-
-// ExternalBookingInfo defines model for ExternalBookingInfo.
-type ExternalBookingInfo struct {
-	// AllUsersBusyTimes An array of objects representing the busy times for all users associated with the meeting link.
-	AllUsersBusyTimes []ExternalUserBusyTimes      `json:"allUsersBusyTimes"`
-	BrandingMetadata  *ExternalBrandingMetadata    `json:"brandingMetadata,omitempty"`
-	CustomParams      ExternalMeetingsLinkSettings `json:"customParams"`
-
-	// IsOffline A boolean indicating whether the meeting link is offline.
-	IsOffline        bool                      `json:"isOffline"`
-	LinkAvailability *ExternalLinkAvailability `json:"linkAvailability,omitempty"`
-
-	// LinkId The unique identifier for the meeting link.
-	LinkId string `json:"linkId"`
-
-	// LinkType The type of meeting link. Valid values include 'PERSONAL_LINK', 'GROUP_CALENDAR', and 'ROUND_ROBIN_CALENDAR'.
-	LinkType ExternalBookingInfoLinkType `json:"linkType"`
-}
-
-// ExternalBookingInfoLinkType The type of meeting link. Valid values include 'PERSONAL_LINK', 'GROUP_CALENDAR', and 'ROUND_ROBIN_CALENDAR'.
-type ExternalBookingInfoLinkType string
-
-// ExternalBrandingMetadata defines model for ExternalBrandingMetadata.
-type ExternalBrandingMetadata struct {
-	// Accent2Color The second accent color used for branding, represented as a string.
-	Accent2Color *string `json:"accent2Color,omitempty"`
-
-	// AccentColor The accent color used for branding, represented as a string.
-	AccentColor *string `json:"accentColor,omitempty"`
-
-	// CompanyAddressLine1 The first line of the company's address.
-	CompanyAddressLine1 *string `json:"companyAddressLine1,omitempty"`
-
-	// CompanyAddressLine2 The second line of the company's address, if applicable.
-	CompanyAddressLine2 *string `json:"companyAddressLine2,omitempty"`
-
-	// CompanyAvatar The URL of the company's avatar image.
-	CompanyAvatar *string `json:"companyAvatar,omitempty"`
-
-	// CompanyCity The city where the company is located.
-	CompanyCity *string `json:"companyCity,omitempty"`
-
-	// CompanyCountry The country where the company is located.
-	CompanyCountry *string `json:"companyCountry,omitempty"`
-
-	// CompanyDomain The domain of the company, typically used in URLs.
-	CompanyDomain *string `json:"companyDomain,omitempty"`
-
-	// CompanyName The name of the company.
-	CompanyName *string `json:"companyName,omitempty"`
-
-	// CompanyState The state or region where the company is located.
-	CompanyState *string `json:"companyState,omitempty"`
-
-	// CompanyZip The postal or ZIP code of the company's location.
-	CompanyZip *string `json:"companyZip,omitempty"`
-
-	// LogoAltText The alternative text for the company logo, used for accessibility.
-	LogoAltText string `json:"logoAltText"`
-
-	// LogoHeight The height of the company logo in pixels.
-	LogoHeight *int32 `json:"logoHeight,omitempty"`
-
-	// LogoUrl The URL of the company logo image.
-	LogoUrl *string `json:"logoUrl,omitempty"`
-
-	// LogoWidth The width of the company logo in pixels.
-	LogoWidth *int32 `json:"logoWidth,omitempty"`
-
-	// PrimaryColor The primary color used for branding, represented as a string.
-	PrimaryColor *string `json:"primaryColor,omitempty"`
-
-	// SecondaryColor The secondary color used for branding, represented as a string.
-	SecondaryColor *string `json:"secondaryColor,omitempty"`
-
-	// ShowMarketingAd Indicates whether a marketing advertisement should be displayed. This is a boolean value.
-	ShowMarketingAd bool `json:"showMarketingAd"`
-
-	// ShowSalesAd Indicates whether a sales advertisement should be displayed. This is a boolean value.
-	ShowSalesAd bool `json:"showSalesAd"`
-}
-
-// ExternalCalendarMeetingEventCreateProperties defines model for ExternalCalendarMeetingEventCreateProperties.
-type ExternalCalendarMeetingEventCreateProperties struct {
-	// HsActivityType The type of activity for the meeting. This is a string value.
-	HsActivityType *string `json:"hs_activity_type,omitempty"`
-
-	// HsAttachmentIds An array of strings representing the IDs of attachments associated with the meeting.
-	HsAttachmentIds *[]string `json:"hs_attachment_ids,omitempty"`
-
-	// HsAttendeeOwnerIds An array of strings representing the IDs of the owners of the attendees for the meeting.
-	HsAttendeeOwnerIds *[]string `json:"hs_attendee_owner_ids,omitempty"`
-
-	// HsInternalMeetingNotes Internal notes for the meeting. This is a string value.
-	HsInternalMeetingNotes *string `json:"hs_internal_meeting_notes,omitempty"`
-
-	// HsMeetingBody The body content or description of the meeting. This is a string value.
-	HsMeetingBody *string `json:"hs_meeting_body,omitempty"`
-
-	// HsMeetingEndTime The end time of the meeting, in ISO 8601 format.
-	HsMeetingEndTime time.Time `json:"hs_meeting_end_time"`
-
-	// HsMeetingLocation The location of the meeting. This is a string value.
-	HsMeetingLocation *string `json:"hs_meeting_location,omitempty"`
-
-	// HsMeetingLocationType The type of location for the meeting. Valid values include 'PHONE', 'ADDRESS', and 'CUSTOM'.
-	HsMeetingLocationType *ExternalCalendarMeetingEventCreatePropertiesHsMeetingLocationType `json:"hs_meeting_location_type,omitempty"`
-
-	// HsMeetingOutcome A string representing the outcome of the meeting.
-	HsMeetingOutcome string `json:"hs_meeting_outcome"`
-
-	// HsMeetingStartTime The start time of the meeting, in ISO 8601 format.
-	HsMeetingStartTime time.Time `json:"hs_meeting_start_time"`
-
-	// HsMeetingTitle The title of the meeting. This is a string value.
-	HsMeetingTitle string `json:"hs_meeting_title"`
-
-	// HsTimestamp A timestamp indicating when the meeting event was created, in ISO 8601 format.
-	HsTimestamp time.Time `json:"hs_timestamp"`
-
-	// HubspotOwnerId The unique identifier of the HubSpot owner associated with the meeting.
-	HubspotOwnerId string `json:"hubspot_owner_id"`
-}
-
-// ExternalCalendarMeetingEventCreatePropertiesHsMeetingLocationType The type of location for the meeting. Valid values include 'PHONE', 'ADDRESS', and 'CUSTOM'.
-type ExternalCalendarMeetingEventCreatePropertiesHsMeetingLocationType string
-
-// ExternalCalendarMeetingEventCreateRequest defines model for ExternalCalendarMeetingEventCreateRequest.
-type ExternalCalendarMeetingEventCreateRequest struct {
-	// Associations An array of associations related to the meeting event, each represented by an ExternalAssociationCreateRequest object.
-	Associations          []ExternalAssociationCreateRequest           `json:"associations"`
-	EmailReminderSchedule ExternalEmailReminderSchedule                `json:"emailReminderSchedule"`
-	Properties            ExternalCalendarMeetingEventCreateProperties `json:"properties"`
-
-	// Timezone A string representing the timezone in which the meeting event is scheduled.
-	Timezone string `json:"timezone"`
-}
-
-// ExternalCalendarMeetingEventResponseProperties defines model for ExternalCalendarMeetingEventResponseProperties.
-type ExternalCalendarMeetingEventResponseProperties struct {
-	// HsActivityType The type of activity associated with the meeting.
-	HsActivityType *string `json:"hs_activity_type,omitempty"`
-
-	// HsAttachmentIds An array of unique identifiers for attachments associated with the meeting.
-	HsAttachmentIds *[]string `json:"hs_attachment_ids,omitempty"`
-
-	// HsAttendeeOwnerIds An array of unique identifiers for the owners of the attendees.
-	HsAttendeeOwnerIds *[]string `json:"hs_attendee_owner_ids,omitempty"`
-
-	// HsEngagementSource The source of the engagement. Valid values include a wide range of sources such as 'UNKNOWN', 'IMPORT', 'API', 'FORM', and many others.
-	HsEngagementSource ExternalCalendarMeetingEventResponsePropertiesHsEngagementSource `json:"hs_engagement_source"`
-
-	// HsEngagementSourceId The unique identifier for the source of the engagement.
-	HsEngagementSourceId string `json:"hs_engagement_source_id"`
-
-	// HsIncludeDescriptionInReminder Indicates whether the meeting description should be included in reminders.
-	HsIncludeDescriptionInReminder *string `json:"hs_include_description_in_reminder,omitempty"`
-
-	// HsInternalMeetingNotes Internal notes related to the meeting.
-	HsInternalMeetingNotes *string `json:"hs_internal_meeting_notes,omitempty"`
-
-	// HsMeetingBody The body or description of the meeting.
-	HsMeetingBody *string `json:"hs_meeting_body,omitempty"`
-
-	// HsMeetingEndTime The end time of the meeting, in ISO 8601 format.
-	HsMeetingEndTime time.Time `json:"hs_meeting_end_time"`
-
-	// HsMeetingExternalUrl The external URL associated with the meeting.
-	HsMeetingExternalUrl *string `json:"hs_meeting_external_url,omitempty"`
-
-	// HsMeetingLocation The location where the meeting is held.
-	HsMeetingLocation *string `json:"hs_meeting_location,omitempty"`
-
-	// HsMeetingLocationType The type of location for the meeting. Valid values include 'PHONE', 'ADDRESS', and 'CUSTOM'.
-	HsMeetingLocationType *ExternalCalendarMeetingEventResponsePropertiesHsMeetingLocationType `json:"hs_meeting_location_type,omitempty"`
-
-	// HsMeetingOutcome The outcome of the meeting.
-	HsMeetingOutcome string `json:"hs_meeting_outcome"`
-
-	// HsMeetingStartTime The start time of the meeting, in ISO 8601 format.
-	HsMeetingStartTime time.Time `json:"hs_meeting_start_time"`
-
-	// HsMeetingTitle The title of the meeting.
-	HsMeetingTitle string `json:"hs_meeting_title"`
-
-	// HsTimestamp A timestamp indicating when the meeting event was recorded, in ISO 8601 format.
-	HsTimestamp time.Time `json:"hs_timestamp"`
-
-	// HsUniqueId A unique identifier for the meeting event.
-	HsUniqueId *string `json:"hs_unique_id,omitempty"`
-
-	// HubspotOwnerId The unique identifier of the HubSpot owner associated with the meeting.
-	HubspotOwnerId *string `json:"hubspot_owner_id,omitempty"`
-}
-
-// ExternalCalendarMeetingEventResponsePropertiesHsEngagementSource The source of the engagement. Valid values include a wide range of sources such as 'UNKNOWN', 'IMPORT', 'API', 'FORM', and many others.
-type ExternalCalendarMeetingEventResponsePropertiesHsEngagementSource string
-
-// ExternalCalendarMeetingEventResponsePropertiesHsMeetingLocationType The type of location for the meeting. Valid values include 'PHONE', 'ADDRESS', and 'CUSTOM'.
-type ExternalCalendarMeetingEventResponsePropertiesHsMeetingLocationType string
-
-// ExternalCalenderMeetingEventResponse defines model for ExternalCalenderMeetingEventResponse.
-type ExternalCalenderMeetingEventResponse struct {
-	// CreatedAt The date and time when the calendar meeting event was created, in ISO 8601 format.
-	CreatedAt time.Time `json:"createdAt"`
-
-	// Id The unique identifier for the calendar meeting event.
-	Id string `json:"id"`
-
-	// LastUpdatedAt The date and time when the calendar meeting event was last updated, in ISO 8601 format.
-	LastUpdatedAt time.Time                                      `json:"lastUpdatedAt"`
-	Properties    ExternalCalendarMeetingEventResponseProperties `json:"properties"`
-}
-
-// ExternalClosedRange defines model for ExternalClosedRange.
-type ExternalClosedRange struct {
-	// End The ending point of the range, represented as an integer in int64 format.
-	End int64 `json:"end"`
-
-	// Start The starting point of the range, represented as an integer in int64 format.
-	Start int64 `json:"start"`
-}
-
-// ExternalCommunicationConsentCheckbox defines model for ExternalCommunicationConsentCheckbox.
-type ExternalCommunicationConsentCheckbox struct {
-	// CommunicationTypeId A string representing the unique identifier for the type of communication this checkbox pertains to.
-	CommunicationTypeId string `json:"communicationTypeId"`
-
-	// Label A string that contains the text label displayed next to the checkbox, describing the communication type or purpose.
-	Label string `json:"label"`
-
-	// Required A boolean indicating whether this checkbox must be checked by the user to proceed, signifying mandatory consent.
-	Required bool `json:"required"`
-}
-
-// ExternalEmailReminderSchedule defines model for ExternalEmailReminderSchedule.
-type ExternalEmailReminderSchedule struct {
-	// Reminders An array of ExternalReminder objects that specify the timing and frequency of the email reminders.
-	Reminders []ExternalReminder `json:"reminders"`
-
-	// ShouldIncludeInviteDescription A boolean indicating whether the invite description should be included in the email reminder.
-	ShouldIncludeInviteDescription bool `json:"shouldIncludeInviteDescription"`
-}
-
-// ExternalGuestSettings defines model for ExternalGuestSettings.
-type ExternalGuestSettings struct {
-	// CanAddGuests A boolean indicating whether guests can be added to the meeting.
-	CanAddGuests bool `json:"canAddGuests"`
-
-	// MaxGuestCount An integer specifying the maximum number of guests that can be added to the meeting.
-	MaxGuestCount int32 `json:"maxGuestCount"`
-}
-
-// ExternalLegalConsentOptions defines model for ExternalLegalConsentOptions.
-type ExternalLegalConsentOptions struct {
-	// CommunicationConsentCheckboxes An array of communication consent checkboxes, each defined by an ExternalCommunicationConsentCheckbox object.
-	CommunicationConsentCheckboxes []ExternalCommunicationConsentCheckbox `json:"communicationConsentCheckboxes"`
-
-	// CommunicationConsentText A string containing the text for communication consent.
-	CommunicationConsentText string `json:"communicationConsentText"`
-
-	// IsLegitimateInterest A boolean indicating whether legitimate interest is applicable.
-	IsLegitimateInterest bool `json:"isLegitimateInterest"`
-
-	// LegitimateInterestLegalBasis A string indicating the legal basis for legitimate interest. Valid values include 'LEGITIMATE_INTEREST_PQL', 'LEGITIMATE_INTEREST_CLIENT', 'PERFORMANCE_OF_CONTRACT', 'CONSENT_WITH_NOTICE', 'NON_GDPR', 'PROCESS_AND_STORE', and 'LEGITIMATE_INTEREST_OTHER'.
-	LegitimateInterestLegalBasis *ExternalLegalConsentOptionsLegitimateInterestLegalBasis `json:"legitimateInterestLegalBasis,omitempty"`
-
-	// LegitimateInterestSubscriptionTypes An array of integers representing the subscription types that fall under legitimate interest.
-	LegitimateInterestSubscriptionTypes []int64 `json:"legitimateInterestSubscriptionTypes"`
-
-	// PrivacyPolicyText A string containing the text for the privacy policy.
-	PrivacyPolicyText string `json:"privacyPolicyText"`
-
-	// ProcessingConsentCheckboxLabel A string representing the label for the processing consent checkbox.
-	ProcessingConsentCheckboxLabel string `json:"processingConsentCheckboxLabel"`
-
-	// ProcessingConsentFooterText A string containing the footer text for processing consent.
-	ProcessingConsentFooterText string `json:"processingConsentFooterText"`
-
-	// ProcessingConsentText A string containing the text for processing consent.
-	ProcessingConsentText string `json:"processingConsentText"`
-
-	// ProcessingConsentType A string indicating the type of processing consent. Valid values are 'IMPLICIT' and 'REQUIRED_CHECKBOX'.
-	ProcessingConsentType ExternalLegalConsentOptionsProcessingConsentType `json:"processingConsentType"`
-}
-
-// ExternalLegalConsentOptionsLegitimateInterestLegalBasis A string indicating the legal basis for legitimate interest. Valid values include 'LEGITIMATE_INTEREST_PQL', 'LEGITIMATE_INTEREST_CLIENT', 'PERFORMANCE_OF_CONTRACT', 'CONSENT_WITH_NOTICE', 'NON_GDPR', 'PROCESS_AND_STORE', and 'LEGITIMATE_INTEREST_OTHER'.
-type ExternalLegalConsentOptionsLegitimateInterestLegalBasis string
-
-// ExternalLegalConsentOptionsProcessingConsentType A string indicating the type of processing consent. Valid values are 'IMPLICIT' and 'REQUIRED_CHECKBOX'.
-type ExternalLegalConsentOptionsProcessingConsentType string
-
-// ExternalLegalConsentResponse defines model for ExternalLegalConsentResponse.
-type ExternalLegalConsentResponse struct {
-	// CommunicationTypeId A string representing the unique identifier for the type of communication for which consent is being recorded.
-	CommunicationTypeId string `json:"communicationTypeId"`
-
-	// Consented A boolean indicating whether the user has given consent for the communication type. It is true if consent is given, otherwise false.
-	Consented bool `json:"consented"`
-}
-
-// ExternalLinkAvailability defines model for ExternalLinkAvailability.
-type ExternalLinkAvailability struct {
-	// HasMore A boolean indicating whether there are more available meeting times beyond those currently provided.
-	HasMore bool `json:"hasMore"`
-
-	// LinkAvailabilityByDuration An object where each key is a duration and the value is an availability object for that duration. This provides detailed availability information for each specified meeting duration.
-	LinkAvailabilityByDuration map[string]ExternalLinkAvailabilityForDuration `json:"linkAvailabilityByDuration"`
-}
-
-// ExternalLinkAvailabilityAndBusyTimes defines model for ExternalLinkAvailabilityAndBusyTimes.
-type ExternalLinkAvailabilityAndBusyTimes struct {
-	// AllUsersBusyTimes An array of objects representing the busy times for all users associated with the meeting link. Each object includes the user's busy time ranges.
-	AllUsersBusyTimes []ExternalUserBusyTimes   `json:"allUsersBusyTimes"`
-	LinkAvailability  *ExternalLinkAvailability `json:"linkAvailability,omitempty"`
-}
-
-// ExternalLinkAvailabilityForDuration defines model for ExternalLinkAvailabilityForDuration.
-type ExternalLinkAvailabilityForDuration struct {
-	// Availabilities An array of available time slots for the specified meeting duration. Each item in the array is an object representing a time slot's start and end times.
-	Availabilities []ExternalMeetingAvailability `json:"availabilities"`
-
-	// MeetingDurationMillis The duration of the meeting in milliseconds. This is an integer value representing the length of the meeting.
-	MeetingDurationMillis int64 `json:"meetingDurationMillis"`
-}
-
-// ExternalLinkDisplayInfo defines model for ExternalLinkDisplayInfo.
-type ExternalLinkDisplayInfo struct {
-	// Avatar A string representing the URL of the avatar image to be displayed.
-	Avatar *string `json:"avatar,omitempty"`
-
-	// CompanyAvatar A string representing the URL of the company avatar image to be displayed.
-	CompanyAvatar *string `json:"companyAvatar,omitempty"`
-
-	// Headline A string representing the headline text to be displayed with the meeting link.
-	Headline *string `json:"headline,omitempty"`
-
-	// PublicDisplayAvatarOption A string indicating the avatar display option, with valid values including 'PROFILE_IMAGE', 'COMPANY_LOGO', and 'CUSTOM_AVATAR'.
-	PublicDisplayAvatarOption *ExternalLinkDisplayInfoPublicDisplayAvatarOption `json:"publicDisplayAvatarOption,omitempty"`
-}
-
-// ExternalLinkDisplayInfoPublicDisplayAvatarOption A string indicating the avatar display option, with valid values including 'PROFILE_IMAGE', 'COMPANY_LOGO', and 'CUSTOM_AVATAR'.
-type ExternalLinkDisplayInfoPublicDisplayAvatarOption string
-
-// ExternalLinkFormField defines model for ExternalLinkFormField.
-type ExternalLinkFormField struct {
-	// FieldType The type of the form field, represented as a string, indicating the kind of input expected.
-	FieldType string `json:"fieldType"`
-
-	// IsCustom A boolean indicating whether the form field is a custom field defined by the user.
-	IsCustom bool `json:"isCustom"`
-
-	// IsRequired A boolean indicating whether the form field is mandatory for the user to fill out.
-	IsRequired bool `json:"isRequired"`
-
-	// Label The display label for the form field, shown to users, represented as a string.
-	Label string `json:"label"`
-
-	// Name The unique name identifier for the form field, represented as a string.
-	Name string `json:"name"`
-
-	// Options An array of options available for the form field, applicable if the field type supports multiple choices.
-	Options []ExternalOption `json:"options"`
-
-	// Type The specific data type of the form field, represented as a string.
-	Type string `json:"type"`
-}
-
-// ExternalLinkMetadata defines model for ExternalLinkMetadata.
-type ExternalLinkMetadata struct {
-	// CreatedAt The date and time when the meeting link was created, in ISO 8601 format.
-	CreatedAt time.Time `json:"createdAt"`
-
-	// DefaultLink A boolean indicating whether this is the default meeting link.
-	DefaultLink bool `json:"defaultLink"`
-
-	// Id The unique identifier for the meeting link.
-	Id string `json:"id"`
-
-	// Link The full URL of the meeting link.
-	Link string `json:"link"`
-
-	// Name The name of the meeting link.
-	Name *string `json:"name,omitempty"`
-
-	// OrganizerUserId The unique identifier of the user who organized the meeting.
-	OrganizerUserId string `json:"organizerUserId"`
-
-	// PaymentLinkId An integer representing the identifier for the payment link associated with the meeting.
-	PaymentLinkId *string `json:"paymentLinkId,omitempty"`
-
-	// Slug A string representing the unique part of the URL for the meeting link.
-	Slug string `json:"slug"`
-
-	// Type The type of meeting link. Valid values include 'PERSONAL_LINK', 'GROUP_CALENDAR', and 'ROUND_ROBIN_CALENDAR'.
-	Type ExternalLinkMetadataType `json:"type"`
-
-	// UpdatedAt The date and time when the meeting link was last updated, in ISO 8601 format.
-	UpdatedAt *time.Time `json:"updatedAt,omitempty"`
-
-	// UserIdsOfLinkMembers An array of user IDs representing the members associated with the meeting link.
-	UserIdsOfLinkMembers []string `json:"userIdsOfLinkMembers"`
-}
-
-// ExternalLinkMetadataType The type of meeting link. Valid values include 'PERSONAL_LINK', 'GROUP_CALENDAR', and 'ROUND_ROBIN_CALENDAR'.
-type ExternalLinkMetadataType string
-
-// ExternalMeetingAvailability defines model for ExternalMeetingAvailability.
-type ExternalMeetingAvailability struct {
-	// EndMillisUtc The end time of the meeting availability, represented as a Unix timestamp in milliseconds.
-	EndMillisUtc int64 `json:"endMillisUtc"`
-
-	// StartMillisUtc The start time of the meeting availability, represented as a Unix timestamp in milliseconds.
-	StartMillisUtc int64 `json:"startMillisUtc"`
-}
-
-// ExternalMeetingBooking defines model for ExternalMeetingBooking.
-type ExternalMeetingBooking struct {
-	// Duration An integer representing the duration of the meeting in minutes.
-	Duration int64 `json:"duration"`
-
-	// Email The email address of the person booking the meeting.
-	Email string `json:"email"`
-
-	// FirstName The first name of the person booking the meeting.
-	FirstName string `json:"firstName"`
-
-	// FormFields An array of form fields filled out by the participant, each containing a name and value.
-	FormFields []ExternalBookingFormField `json:"formFields"`
-
-	// LastName The last name of the person booking the meeting.
-	LastName string `json:"lastName"`
-
-	// LegalConsentResponses An array of legal consent responses, each detailing the consent given by the participant.
-	LegalConsentResponses []ExternalLegalConsentResponse `json:"legalConsentResponses"`
-
-	// LikelyAvailableUserIds An array of strings representing the user IDs of those likely available for the meeting.
-	LikelyAvailableUserIds []string `json:"likelyAvailableUserIds"`
-
-	// Locale A string representing the locale of the person booking the meeting.
-	Locale *string `json:"locale,omitempty"`
-
-	// Slug A string representing the unique identifier for the meeting link.
-	Slug string `json:"slug"`
-
-	// StartTime The start time of the meeting in ISO 8601 date-time format.
-	StartTime time.Time `json:"startTime"`
-
-	// Timezone A string representing the timezone of the person booking the meeting.
-	Timezone *string `json:"timezone,omitempty"`
-}
-
-// ExternalMeetingBookingResponse defines model for ExternalMeetingBookingResponse.
-type ExternalMeetingBookingResponse struct {
-	// BookingTimezone The timezone in which the meeting was booked, represented as a string.
-	BookingTimezone string `json:"bookingTimezone"`
-
-	// CalendarEventId The unique identifier for the calendar event associated with this meeting.
-	CalendarEventId string `json:"calendarEventId"`
-
-	// ContactId The unique identifier for the contact associated with this meeting.
-	ContactId string `json:"contactId"`
-
-	// Duration The duration of the meeting in minutes, represented as an integer.
-	Duration int64 `json:"duration"`
-
-	// End The end date and time of the meeting, in ISO 8601 format.
-	End time.Time `json:"end"`
-
-	// FormFields An array of validated form fields submitted during the booking process, each represented by an ExternalValidatedFormField object.
-	FormFields []ExternalValidatedFormField `json:"formFields"`
-
-	// GuestEmails An array of email addresses for the guests invited to the meeting.
-	GuestEmails []string `json:"guestEmails"`
-
-	// IsOffline A boolean indicating whether the meeting is offline (true) or online (false).
-	IsOffline bool `json:"isOffline"`
-
-	// LegalConsentResponses An array of legal consent responses associated with the meeting, each represented by an ExternalLegalConsentResponse object.
-	LegalConsentResponses []ExternalLegalConsentResponse `json:"legalConsentResponses"`
-
-	// Locale The locale setting for the meeting, represented as a string.
-	Locale *string `json:"locale,omitempty"`
-
-	// Location The location of the meeting, represented as a string.
-	Location *string `json:"location,omitempty"`
-
-	// Start The start date and time of the meeting, in ISO 8601 format.
-	Start time.Time `json:"start"`
-
-	// Subject The subject or title of the meeting, represented as a string.
-	Subject string `json:"subject"`
-
-	// WebConferenceMeetingId The unique identifier for the web conference meeting, if applicable.
-	WebConferenceMeetingId *string `json:"webConferenceMeetingId,omitempty"`
-
-	// WebConferenceUrl The URL for the web conference associated with the meeting, if applicable.
-	WebConferenceUrl *string `json:"webConferenceUrl,omitempty"`
-}
-
-// ExternalMeetingsLinkSettings defines model for ExternalMeetingsLinkSettings.
-type ExternalMeetingsLinkSettings struct {
-	// Availability An object representing the availability settings for the meeting link, with additional properties for closed ranges.
-	Availability map[string]ExternalClosedRange `json:"availability"`
-
-	// CustomAvailabilityEndDate An integer representing the custom availability end date as a Unix timestamp in milliseconds.
-	CustomAvailabilityEndDate *int64 `json:"customAvailabilityEndDate,omitempty"`
-
-	// CustomAvailabilityStartDate An integer representing the custom availability start date as a Unix timestamp in milliseconds.
-	CustomAvailabilityStartDate *int64                   `json:"customAvailabilityStartDate,omitempty"`
-	DisplayInfo                 *ExternalLinkDisplayInfo `json:"displayInfo,omitempty"`
-
-	// Durations An array of integers representing the possible durations for meetings in milliseconds.
-	Durations []int64 `json:"durations"`
-
-	// FormFields An array of form fields that are included in the meeting link form.
-	FormFields    []ExternalLinkFormField `json:"formFields"`
-	GuestSettings *ExternalGuestSettings  `json:"guestSettings,omitempty"`
-
-	// Language A string representing the language setting for the meeting link.
-	Language *string `json:"language,omitempty"`
-
-	// LegalConsentEnabled A boolean indicating whether legal consent is required for the meeting link.
-	LegalConsentEnabled bool                         `json:"legalConsentEnabled"`
-	LegalConsentOptions *ExternalLegalConsentOptions `json:"legalConsentOptions,omitempty"`
-
-	// Locale A string representing the locale setting for the meeting link.
-	Locale *string `json:"locale,omitempty"`
-
-	// Location A string representing the location information for the meeting.
-	Location *string `json:"location,omitempty"`
-
-	// MeetingBufferTime An integer representing the buffer time between meetings in milliseconds.
-	MeetingBufferTime int64 `json:"meetingBufferTime"`
-
-	// OwnerPrioritized A boolean indicating whether the meeting owner is prioritized in scheduling.
-	OwnerPrioritized bool `json:"ownerPrioritized"`
-
-	// RedirectUrl A string representing the URL to which users are redirected after booking a meeting.
-	RedirectUrl *string `json:"redirectUrl,omitempty"`
-
-	// StartTimeIncrementMinutes A string indicating the increment for start times, with valid values including 'MEETING_DURATION', 'FIVE', 'TEN', 'FIFTEEN', 'TWENTY', 'THIRTY', 'FORTY_FIVE', 'SIXTY', 'NINETY', and 'ONE_HUNDRED_TWENTY'.
-	StartTimeIncrementMinutes ExternalMeetingsLinkSettingsStartTimeIncrementMinutes `json:"startTimeIncrementMinutes"`
-
-	// WeeksToAdvertise An integer representing the number of weeks to advertise the meeting link.
-	WeeksToAdvertise  int32                              `json:"weeksToAdvertise"`
-	WelcomeScreenInfo *ExternalMeetingsWelcomeScreenInfo `json:"welcomeScreenInfo,omitempty"`
-}
-
-// ExternalMeetingsLinkSettingsStartTimeIncrementMinutes A string indicating the increment for start times, with valid values including 'MEETING_DURATION', 'FIVE', 'TEN', 'FIFTEEN', 'TWENTY', 'THIRTY', 'FORTY_FIVE', 'SIXTY', 'NINETY', and 'ONE_HUNDRED_TWENTY'.
-type ExternalMeetingsLinkSettingsStartTimeIncrementMinutes string
-
-// ExternalMeetingsUser defines model for ExternalMeetingsUser.
-type ExternalMeetingsUser struct {
-	// CalendarProvider The calendar service provider used by the user. Valid values include 'GOOGLE', 'OFFICE365', 'EXCHANGE', and 'UNKNOWN'.
-	CalendarProvider ExternalMeetingsUserCalendarProvider `json:"calendarProvider"`
-
-	// Id The unique identifier for the meetings user.
-	Id string `json:"id"`
-
-	// IsSalesStarter A boolean indicating whether the user is a sales starter.
-	IsSalesStarter bool `json:"isSalesStarter"`
-
-	// UserId The unique identifier for the user associated with the meetings service.
-	UserId      string              `json:"userId"`
-	UserProfile ExternalUserProfile `json:"userProfile"`
-}
-
-// ExternalMeetingsUserCalendarProvider The calendar service provider used by the user. Valid values include 'GOOGLE', 'OFFICE365', 'EXCHANGE', and 'UNKNOWN'.
-type ExternalMeetingsUserCalendarProvider string
-
-// ExternalMeetingsWelcomeScreenInfo defines model for ExternalMeetingsWelcomeScreenInfo.
-type ExternalMeetingsWelcomeScreenInfo struct {
-	// Description A descriptive text shown on the welcome screen. It is a string value.
-	Description *string `json:"description,omitempty"`
-
-	// LogoUrl The URL of the logo image displayed on the welcome screen. It is a string value.
-	LogoUrl *string `json:"logoUrl,omitempty"`
-
-	// ShowWelcomeScreen A boolean indicating whether the welcome screen should be displayed to users.
-	ShowWelcomeScreen *bool `json:"showWelcomeScreen,omitempty"`
-
-	// Title The title displayed on the welcome screen. It is a string value.
-	Title *string `json:"title,omitempty"`
-
-	// UseCompanyLogo A boolean indicating whether the company's logo should be used on the welcome screen.
-	UseCompanyLogo *bool `json:"useCompanyLogo,omitempty"`
-}
-
-// ExternalObjectResolutionMappingRequest defines model for ExternalObjectResolutionMappingRequest.
-type ExternalObjectResolutionMappingRequest struct {
-	PrimaryObjectRule ExternalPrimaryObjectResolutionRule `json:"primaryObjectRule"`
-}
-
-// ExternalObjectResolutionMappingResponse defines model for ExternalObjectResolutionMappingResponse.
-type ExternalObjectResolutionMappingResponse struct {
-	PrimaryObjectRule ExternalPrimaryObjectResolutionRule `json:"primaryObjectRule"`
-}
-
-// ExternalOption defines model for ExternalOption.
-type ExternalOption struct {
-	// Description A string providing a detailed description of the option.
-	Description string `json:"description"`
-
-	// DisplayOrder An integer indicating the order in which the option should be displayed relative to other options.
-	DisplayOrder int32 `json:"displayOrder"`
-
-	// DoubleData A number that may hold additional data associated with the option.
-	DoubleData float64 `json:"doubleData"`
-
-	// Hidden A boolean indicating whether the option is hidden from display.
-	Hidden bool `json:"hidden"`
-
-	// Label A string representing the display name of the option.
-	Label string `json:"label"`
-
-	// ReadOnly A boolean indicating whether the option is read-only and cannot be modified.
-	ReadOnly bool `json:"readOnly"`
-
-	// Value A string representing the internal value associated with the option.
-	Value string `json:"value"`
-}
-
-// ExternalOptionsMetaData defines model for ExternalOptionsMetaData.
-type ExternalOptionsMetaData struct {
-	Filter *FilteringMetaData `json:"filter,omitempty"`
-
-	// FromObjectId A string representing the identifier of the object from which the external options are derived or related.
-	FromObjectId *int64 `json:"fromObjectId,omitempty"`
-
-	// PropertyName A string indicating the name of the property for which the external options metadata is being defined.
-	PropertyName *string `json:"propertyName,omitempty"`
-
-	// RelatedObjectTypeId A string representing the identifier of the related object type. This is used to specify which type of object the external options are associated with.
-	RelatedObjectTypeId *string `json:"relatedObjectTypeId,omitempty"`
-}
-
-// ExternalPrimaryObjectResolutionRule defines model for ExternalPrimaryObjectResolutionRule.
-type ExternalPrimaryObjectResolutionRule struct {
-	// EventPropertyName The name of the property on the event. This is a string that identifies which property of the event is being used in the resolution rule.
-	EventPropertyName string `json:"eventPropertyName"`
-
-	// TargetObjectPropertyName The name of the property on the target object. This is a string that identifies which property of the target object is being referred to.
-	TargetObjectPropertyName string `json:"targetObjectPropertyName"`
-}
-
-// ExternalReminder defines model for ExternalReminder.
-type ExternalReminder struct {
-	// NumberOfTimeUnits The number of time units before the meeting when the reminder should be sent. This is an integer value.
-	NumberOfTimeUnits int32 `json:"numberOfTimeUnits"`
-
-	// TimeUnit The unit of time for the reminder. Valid values include 'WEEKS', 'DAYS', 'HOURS', and 'MINUTES'.
-	TimeUnit ExternalReminderTimeUnit `json:"timeUnit"`
-}
-
-// ExternalReminderTimeUnit The unit of time for the reminder. Valid values include 'WEEKS', 'DAYS', 'HOURS', and 'MINUTES'.
-type ExternalReminderTimeUnit string
-
-// ExternalSettings defines model for ExternalSettings.
-type ExternalSettings struct {
-	// CreateMeetingUrl A string representing the URL used to create a new meeting. This property is required.
-	CreateMeetingUrl string `json:"createMeetingUrl"`
-
-	// DeleteMeetingUrl A string representing the URL used to delete a meeting.
-	DeleteMeetingUrl *string `json:"deleteMeetingUrl,omitempty"`
-
-	// FetchAccountsUri A string representing the URI used to fetch account information.
-	FetchAccountsUri *string `json:"fetchAccountsUri,omitempty"`
-
-	// UpdateMeetingUrl A string representing the URL used to update an existing meeting.
-	UpdateMeetingUrl *string `json:"updateMeetingUrl,omitempty"`
-
-	// UserVerifyUrl A string representing the URL used to verify a user's identity.
-	UserVerifyUrl *string `json:"userVerifyUrl,omitempty"`
-}
-
-// ExternalTimeRange defines model for ExternalTimeRange.
-type ExternalTimeRange struct {
-	// End The end of the time range, represented as an integer in int64 format.
-	End int64 `json:"end"`
-
-	// Start The start of the time range, represented as an integer in int64 format.
-	Start int64 `json:"start"`
-}
-
-// ExternalUnifiedEvent defines model for ExternalUnifiedEvent.
-type ExternalUnifiedEvent struct {
-	// EventType The format of the `eventType` string is `ae{appId}_{eventTypeLabel}`, `pe{portalId}_{eventTypeLabel}`, or just `e_{eventTypeLabel}` for HubSpot events.
-	EventType string `json:"eventType"`
-
-	// Id A unique identifier for the event.
-	Id string `json:"id"`
-
-	// ObjectId The objectId of the object which did the event.
-	ObjectId string `json:"objectId"`
-
-	// ObjectType The objectType for the object which did the event.
-	ObjectType string `json:"objectType"`
-
-	// OccurredAt An ISO 8601 timestamp when the event occurred.
-	OccurredAt time.Time `json:"occurredAt"`
-
-	// Properties A key-value map of event-specific properties. The available properties depend on the event type definition.
-	Properties map[string]string `json:"properties"`
-}
-
-// ExternalUserBusyTimes defines model for ExternalUserBusyTimes.
-type ExternalUserBusyTimes struct {
-	// BusyTimes An array of time ranges during which the user is busy. Each time range is represented by an object with start and end times.
-	BusyTimes []ExternalTimeRange `json:"busyTimes"`
-
-	// IsOffline A boolean indicating whether the user is currently offline.
-	IsOffline    bool                 `json:"isOffline"`
-	MeetingsUser ExternalMeetingsUser `json:"meetingsUser"`
-}
-
-// ExternalUserProfile defines model for ExternalUserProfile.
-type ExternalUserProfile struct {
-	// Email The email address of the user. This is a required string property.
-	Email string `json:"email"`
-
-	// FirstName The first name of the user. It is a string.
-	FirstName *string `json:"firstName,omitempty"`
-
-	// FullName The full name of the user, combining first and last names. It is a string.
-	FullName *string `json:"fullName,omitempty"`
-
-	// LastName The last name of the user. It is a string.
-	LastName *string `json:"lastName,omitempty"`
-}
-
-// ExternalValidatedFormField defines model for ExternalValidatedFormField.
-type ExternalValidatedFormField struct {
-	// FieldType The type of the form field, represented as a string.
-	FieldType *string `json:"fieldType,omitempty"`
-
-	// IsCustom A boolean indicating whether the form field is custom-defined.
-	IsCustom bool `json:"isCustom"`
-
-	// Label The display label for the form field, represented as a string.
-	Label string `json:"label"`
-
-	// Name The name of the form field, represented as a string.
-	Name string `json:"name"`
-
-	// TranslatedLabel The translated label for the form field, represented as a string.
-	TranslatedLabel *string `json:"translatedLabel,omitempty"`
-
-	// Value The value assigned to the form field, represented as a string.
-	Value string `json:"value"`
-
-	// ValueLabel A label for the field's value, represented as a string.
-	ValueLabel *string `json:"valueLabel,omitempty"`
-}
-
-// FieldLevelPermission defines model for FieldLevelPermission.
-type FieldLevelPermission struct {
-	// AccessLevel The level of access granted for the field. This is a string value that specifies the permission level.
-	AccessLevel string `json:"accessLevel"`
-}
-
-// FieldTypeDefinition defines model for FieldTypeDefinition.
-type FieldTypeDefinition struct {
-	// Description A detailed explanation of the field's purpose and usage.
-	Description *string `json:"description,omitempty"`
-
-	// ExternalOptions Indicates whether the field's options are sourced externally.
-	ExternalOptions bool `json:"externalOptions"`
-
-	// ExternalOptionsReferenceType Specifies the type of external reference for options.
-	ExternalOptionsReferenceType *string `json:"externalOptionsReferenceType,omitempty"`
-
-	// FieldType Describes the field's type in the UI, with accepted values like booleancheckbox, calculation_equation, checkbox, date, file, html, number, phonenumber, radio, select, text, textarea, unknown.
-	FieldType *FieldTypeDefinitionFieldType `json:"fieldType,omitempty"`
-
-	// HelpText Additional information or guidance about the field.
-	HelpText *string `json:"helpText,omitempty"`
-
-	// Label The user-friendly label for the field.
-	Label *string `json:"label,omitempty"`
-
-	// Name The unique identifier for the field.
-	Name string `json:"name"`
-
-	// Options An array of options available for the field, each represented by an Option object.
-	Options []AutomationActionsV4Option `json:"options"`
-
-	// OptionsUrl A URL that provides options for the field.
-	OptionsUrl *string `json:"optionsUrl,omitempty"`
-
-	// ReferencedObjectType Indicates the type of object that the field references, with accepted values like OWNER.
-	ReferencedObjectType *FieldTypeDefinitionReferencedObjectType `json:"referencedObjectType,omitempty"`
-
-	// Schema Defines the structure and constraints of the field.
-	Schema FieldTypeDefinition_Schema `json:"schema"`
-
-	// Type Specifies the data type of the field, with accepted values like bool, date, datetime, enumeration, json, number, object_coordinates, phone_number, string.
-	Type FieldTypeDefinitionType `json:"type"`
-
-	// UseChirp Specifies whether the field uses the Chirp feature.
-	UseChirp bool `json:"useChirp"`
-}
-
-// FieldTypeDefinitionFieldType Describes the field's type in the UI, with accepted values like booleancheckbox, calculation_equation, checkbox, date, file, html, number, phonenumber, radio, select, text, textarea, unknown.
-type FieldTypeDefinitionFieldType string
-
-// FieldTypeDefinitionReferencedObjectType Indicates the type of object that the field references, with accepted values like OWNER.
-type FieldTypeDefinitionReferencedObjectType string
-
-// FieldTypeDefinition_Schema Defines the structure and constraints of the field.
-type FieldTypeDefinition_Schema struct {
-	union json.RawMessage
-}
-
-// FieldTypeDefinitionType Specifies the data type of the field, with accepted values like bool, date, datetime, enumeration, json, number, object_coordinates, phone_number, string.
-type FieldTypeDefinitionType string
-
-// File defines model for File.
-type File struct {
-	// Access File access. Can be PUBLIC_INDEXABLE, PUBLIC_NOT_INDEXABLE, PRIVATE.
-	Access *FileAccess `json:"access,omitempty"`
-
-	// Archived If the file is deleted.
-	Archived bool `json:"archived"`
-
-	// ArchivedAt Deletion time of the file object.
-	ArchivedAt *time.Time `json:"archivedAt,omitempty"`
-
-	// CreatedAt Creation time of the file object.
-	CreatedAt time.Time `json:"createdAt"`
-
-	// DefaultHostingUrl Default hosting URL of the file. This will use one of HubSpot's provided URLs to serve the file.
-	DefaultHostingUrl *string `json:"defaultHostingUrl,omitempty"`
-
-	// Encoding Encoding of the file.
-	Encoding  *string `json:"encoding,omitempty"`
-	ExpiresAt *int64  `json:"expiresAt,omitempty"`
-
-	// Extension Extension of the file. ex: .jpg, .png, .gif, .pdf, etc.
-	Extension *string `json:"extension,omitempty"`
-
-	// FileMd5 The MD5 hash of the file.
-	FileMd5 *string `json:"fileMd5,omitempty"`
-
-	// Height For image and video files, the height of the content.
-	Height *int32 `json:"height,omitempty"`
-
-	// Id File ID.
-	Id string `json:"id"`
-
-	// IsUsableInContent Previously "archied". Indicates if the file should be used when creating new content like web pages.
-	IsUsableInContent *bool `json:"isUsableInContent,omitempty"`
-
-	// Name Name of the file.
-	Name *string `json:"name,omitempty"`
-
-	// ParentFolderId ID of the folder the file is in.
-	ParentFolderId *string `json:"parentFolderId,omitempty"`
-
-	// Path Path of the file in the file manager.
-	Path *string `json:"path,omitempty"`
-
-	// Size Size of the file in bytes.
-	Size        *int64           `json:"size,omitempty"`
-	SourceGroup *FileSourceGroup `json:"sourceGroup,omitempty"`
-
-	// Type Type of the file. Can be IMG, DOCUMENT, AUDIO, MOVIE, or OTHER.
-	Type *string `json:"type,omitempty"`
-
-	// UpdatedAt Timestamp of the latest update to the file.
-	UpdatedAt time.Time `json:"updatedAt"`
-
-	// Url URL of the given file. This URL can change depending on the domain settings of the account. Will use the select file hosting domain.
-	Url *string `json:"url,omitempty"`
-
-	// Width For image and video files, the width of the content.
-	Width *int32 `json:"width,omitempty"`
-}
-
-// FileAccess File access. Can be PUBLIC_INDEXABLE, PUBLIC_NOT_INDEXABLE, PRIVATE.
-type FileAccess string
-
-// FileSourceGroup defines model for File.SourceGroup.
-type FileSourceGroup string
-
-// FileActionResponse defines model for FileActionResponse.
-type FileActionResponse struct {
-	// CompletedAt Time of completion of task.
-	CompletedAt time.Time `json:"completedAt"`
-
-	// Errors Descriptive error messages.
-	Errors *[]StandardError `json:"errors,omitempty"`
-
-	// Links Link to check the status of the requested task.
-	Links *map[string]string `json:"links,omitempty"`
-
-	// NumErrors Number of errors resulting from the task.
-	NumErrors *int32 `json:"numErrors,omitempty"`
-
-	// RequestedAt Timestamp of when the task was requested.
-	RequestedAt *time.Time `json:"requestedAt,omitempty"`
-	Result      *File      `json:"result,omitempty"`
-
-	// StartedAt Timestamp of when the task was started.
-	StartedAt time.Time `json:"startedAt"`
-
-	// Status Current status of the task.
-	Status FileActionResponseStatus `json:"status"`
-
-	// TaskId ID of the requested task.
-	TaskId string `json:"taskId"`
-}
 
 // FileActionResponseStatus Current status of the task.
 type FileActionResponseStatus string
@@ -14723,27 +7907,6 @@ type PublicRssEmailDetails struct {
 // PublicRssEmailDetailsBlogLayout The layout of the blog in the email. Valid values include 'SUMMARY_NO_FEATURED_IMAGE', 'SUMMARY_WITH_FEATURED_IMAGE', and 'FULL_POST'.
 type PublicRssEmailDetailsBlogLayout string
 
-// PublicSearchResults defines model for PublicSearchResults.
-type PublicSearchResults struct {
-	// Limit The number of results returned in a single response.
-	Limit int32 `json:"limit"`
-
-	// Offset The starting point for the next set of results in pagination.
-	Offset int32 `json:"offset"`
-
-	// Page The current page number in the paginated results.
-	Page int32 `json:"page"`
-
-	// Results An array of search results, each represented by a ContentSearchResult object.
-	Results []ContentSearchResult `json:"results"`
-
-	// SearchTerm The term used in the search query.
-	SearchTerm *string `json:"searchTerm,omitempty"`
-
-	// Total The total number of results found for the search term.
-	Total int64 `json:"total"`
-}
-
 // PublicSender defines model for PublicSender.
 type PublicSender struct {
 	// ActorId The unique identifier for the sender, represented as a string.
@@ -18888,40 +12051,6 @@ type GetcmssiteSearch202603indexedDataContentIdGetByIdParams struct {
 	Type *string `form:"type,omitempty" json:"type,omitempty"`
 }
 
-// GetcmssiteSearch202603searchcmssiteSearch202603searchParams defines parameters for GetcmssiteSearch202603searchcmssiteSearch202603search.
-type GetcmssiteSearch202603searchcmssiteSearch202603searchParams struct {
-	Analytics    *bool                                                                `form:"analytics,omitempty" json:"analytics,omitempty"`
-	Autocomplete *bool                                                                `form:"autocomplete,omitempty" json:"autocomplete,omitempty"`
-	BoostLimit   *float64                                                             `form:"boostLimit,omitempty" json:"boostLimit,omitempty"`
-	BoostRecent  *string                                                              `form:"boostRecent,omitempty" json:"boostRecent,omitempty"`
-	Domain       *[]string                                                            `form:"domain,omitempty" json:"domain,omitempty"`
-	GroupId      *[]int64                                                             `form:"groupId,omitempty" json:"groupId,omitempty"`
-	HubdbQuery   *string                                                              `form:"hubdbQuery,omitempty" json:"hubdbQuery,omitempty"`
-	Language     *GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage `form:"language,omitempty" json:"language,omitempty"`
-	Length       *GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLength   `form:"length,omitempty" json:"length,omitempty"`
-
-	// Limit The maximum number of results to display per page.
-	Limit           *int32                                                              `form:"limit,omitempty" json:"limit,omitempty"`
-	MatchPrefix     *bool                                                               `form:"matchPrefix,omitempty" json:"matchPrefix,omitempty"`
-	Offset          *int32                                                              `form:"offset,omitempty" json:"offset,omitempty"`
-	PathPrefix      *[]string                                                           `form:"pathPrefix,omitempty" json:"pathPrefix,omitempty"`
-	PopularityBoost *float64                                                            `form:"popularityBoost,omitempty" json:"popularityBoost,omitempty"`
-	Property        *[]string                                                           `form:"property,omitempty" json:"property,omitempty"`
-	Q               *string                                                             `form:"q,omitempty" json:"q,omitempty"`
-	TableId         *int64                                                              `form:"tableId,omitempty" json:"tableId,omitempty"`
-	Type            *[]string                                                           `form:"type,omitempty" json:"type,omitempty"`
-	Types           *[]GetcmssiteSearch202603searchcmssiteSearch202603searchParamsTypes `form:"types,omitempty" json:"types,omitempty"`
-}
-
-// GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage defines parameters for GetcmssiteSearch202603searchcmssiteSearch202603search.
-type GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage string
-
-// GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLength defines parameters for GetcmssiteSearch202603searchcmssiteSearch202603search.
-type GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLength string
-
-// GetcmssiteSearch202603searchcmssiteSearch202603searchParamsTypes defines parameters for GetcmssiteSearch202603searchcmssiteSearch202603search.
-type GetcmssiteSearch202603searchcmssiteSearch202603searchParamsTypes string
-
 // PostcmssourceCode202603EnvironmentcontentPathCreateMultipartBody defines parameters for PostcmssourceCode202603EnvironmentcontentPathCreate.
 type PostcmssourceCode202603EnvironmentcontentPathCreateMultipartBody struct {
 	File *openapi_types.File `json:"file,omitempty"`
@@ -20017,4 +13146,6873 @@ type Getcrmobjects202603feesParams struct {
 
 	// PropertiesWithHistory A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored. Usage of this parameter will reduce the maximum number of objects that can be read by a single request.
 	PropertiesWithHistory *[]string `form:"propertiesWithHistory,omitempty" json:"propertiesWithHistory,omitempty"`
+}
+
+// Postcrmobjects202603feesbatchreadParams defines parameters for Postcrmobjects202603feesbatchread.
+type Postcrmobjects202603feesbatchreadParams struct {
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+}
+
+// Getcrmobjects202603feesFeeIdParams defines parameters for Getcrmobjects202603feesFeeId.
+type Getcrmobjects202603feesFeeIdParams struct {
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+
+	// Associations A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored.
+	Associations *[]string `form:"associations,omitempty" json:"associations,omitempty"`
+
+	// IdProperty The name of a property whose values are unique for this object type
+	IdProperty *string `form:"idProperty,omitempty" json:"idProperty,omitempty"`
+
+	// Properties A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
+
+	// PropertiesWithHistory A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	PropertiesWithHistory *[]string `form:"propertiesWithHistory,omitempty" json:"propertiesWithHistory,omitempty"`
+}
+
+// Patchcrmobjects202603feesFeeIdParams defines parameters for Patchcrmobjects202603feesFeeId.
+type Patchcrmobjects202603feesFeeIdParams struct {
+	// IdProperty The name of a property whose values are unique for this object type
+	IdProperty *string `form:"idProperty,omitempty" json:"idProperty,omitempty"`
+}
+
+// Getcrmobjects202603goalTargetsGetPageParams defines parameters for Getcrmobjects202603goalTargetsGetPage.
+type Getcrmobjects202603goalTargetsGetPageParams struct {
+	// After The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.
+	After *string `form:"after,omitempty" json:"after,omitempty"`
+
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+
+	// Associations A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored.
+	Associations *[]string `form:"associations,omitempty" json:"associations,omitempty"`
+
+	// Limit The maximum number of results to display per page.
+	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// Properties A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
+
+	// PropertiesWithHistory A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored. Usage of this parameter will reduce the maximum number of objects that can be read by a single request.
+	PropertiesWithHistory *[]string `form:"propertiesWithHistory,omitempty" json:"propertiesWithHistory,omitempty"`
+}
+
+// Postcrmobjects202603goalTargetsbatchreadReadParams defines parameters for Postcrmobjects202603goalTargetsbatchreadRead.
+type Postcrmobjects202603goalTargetsbatchreadReadParams struct {
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+}
+
+// Getcrmobjects202603goalTargetsGoalTargetIdGetByIdParams defines parameters for Getcrmobjects202603goalTargetsGoalTargetIdGetById.
+type Getcrmobjects202603goalTargetsGoalTargetIdGetByIdParams struct {
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+
+	// Associations A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored.
+	Associations *[]string `form:"associations,omitempty" json:"associations,omitempty"`
+
+	// IdProperty The name of a property whose values are unique for this object type
+	IdProperty *string `form:"idProperty,omitempty" json:"idProperty,omitempty"`
+
+	// Properties A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
+
+	// PropertiesWithHistory A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	PropertiesWithHistory *[]string `form:"propertiesWithHistory,omitempty" json:"propertiesWithHistory,omitempty"`
+}
+
+// Patchcrmobjects202603goalTargetsGoalTargetIdUpdateParams defines parameters for Patchcrmobjects202603goalTargetsGoalTargetIdUpdate.
+type Patchcrmobjects202603goalTargetsGoalTargetIdUpdateParams struct {
+	// IdProperty The name of a property whose values are unique for this object type
+	IdProperty *string `form:"idProperty,omitempty" json:"idProperty,omitempty"`
+}
+
+// Getcrmobjects202603invoicesGetPageParams defines parameters for Getcrmobjects202603invoicesGetPage.
+type Getcrmobjects202603invoicesGetPageParams struct {
+	// After The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.
+	After *string `form:"after,omitempty" json:"after,omitempty"`
+
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+
+	// Associations A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored.
+	Associations *[]string `form:"associations,omitempty" json:"associations,omitempty"`
+
+	// Limit The maximum number of results to display per page.
+	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// Properties A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
+
+	// PropertiesWithHistory A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored. Usage of this parameter will reduce the maximum number of objects that can be read by a single request.
+	PropertiesWithHistory *[]string `form:"propertiesWithHistory,omitempty" json:"propertiesWithHistory,omitempty"`
+}
+
+// Postcrmobjects202603invoicesbatchreadReadParams defines parameters for Postcrmobjects202603invoicesbatchreadRead.
+type Postcrmobjects202603invoicesbatchreadReadParams struct {
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+}
+
+// Getcrmobjects202603invoicesInvoiceIdGetByIdParams defines parameters for Getcrmobjects202603invoicesInvoiceIdGetById.
+type Getcrmobjects202603invoicesInvoiceIdGetByIdParams struct {
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+
+	// Associations A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored.
+	Associations *[]string `form:"associations,omitempty" json:"associations,omitempty"`
+
+	// IdProperty The name of a property whose values are unique for this object type
+	IdProperty *string `form:"idProperty,omitempty" json:"idProperty,omitempty"`
+
+	// Properties A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
+
+	// PropertiesWithHistory A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	PropertiesWithHistory *[]string `form:"propertiesWithHistory,omitempty" json:"propertiesWithHistory,omitempty"`
+}
+
+// Patchcrmobjects202603invoicesInvoiceIdUpdateParams defines parameters for Patchcrmobjects202603invoicesInvoiceIdUpdate.
+type Patchcrmobjects202603invoicesInvoiceIdUpdateParams struct {
+	// IdProperty The name of a property whose values are unique for this object type
+	IdProperty *string `form:"idProperty,omitempty" json:"idProperty,omitempty"`
+}
+
+// Getcrmobjects202603leadsGetPageParams defines parameters for Getcrmobjects202603leadsGetPage.
+type Getcrmobjects202603leadsGetPageParams struct {
+	// After The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.
+	After *string `form:"after,omitempty" json:"after,omitempty"`
+
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+
+	// Associations A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored.
+	Associations *[]string `form:"associations,omitempty" json:"associations,omitempty"`
+
+	// Limit The maximum number of results to display per page.
+	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// Properties A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
+
+	// PropertiesWithHistory A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored. Usage of this parameter will reduce the maximum number of objects that can be read by a single request.
+	PropertiesWithHistory *[]string `form:"propertiesWithHistory,omitempty" json:"propertiesWithHistory,omitempty"`
+}
+
+// Postcrmobjects202603leadsbatchreadReadParams defines parameters for Postcrmobjects202603leadsbatchreadRead.
+type Postcrmobjects202603leadsbatchreadReadParams struct {
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+}
+
+// Getcrmobjects202603leadsLeadsIdGetByIdParams defines parameters for Getcrmobjects202603leadsLeadsIdGetById.
+type Getcrmobjects202603leadsLeadsIdGetByIdParams struct {
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+
+	// Associations A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored.
+	Associations *[]string `form:"associations,omitempty" json:"associations,omitempty"`
+
+	// IdProperty The name of a property whose values are unique for this object type
+	IdProperty *string `form:"idProperty,omitempty" json:"idProperty,omitempty"`
+
+	// Properties A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
+
+	// PropertiesWithHistory A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	PropertiesWithHistory *[]string `form:"propertiesWithHistory,omitempty" json:"propertiesWithHistory,omitempty"`
+}
+
+// Patchcrmobjects202603leadsLeadsIdUpdateParams defines parameters for Patchcrmobjects202603leadsLeadsIdUpdate.
+type Patchcrmobjects202603leadsLeadsIdUpdateParams struct {
+	// IdProperty The name of a property whose values are unique for this object type
+	IdProperty *string `form:"idProperty,omitempty" json:"idProperty,omitempty"`
+}
+
+// Getcrmobjects202603lineItemsGetPageParams defines parameters for Getcrmobjects202603lineItemsGetPage.
+type Getcrmobjects202603lineItemsGetPageParams struct {
+	// After The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.
+	After *string `form:"after,omitempty" json:"after,omitempty"`
+
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+
+	// Associations A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored.
+	Associations *[]string `form:"associations,omitempty" json:"associations,omitempty"`
+
+	// Limit The maximum number of results to display per page.
+	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// Properties A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
+
+	// PropertiesWithHistory A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored. Usage of this parameter will reduce the maximum number of objects that can be read by a single request.
+	PropertiesWithHistory *[]string `form:"propertiesWithHistory,omitempty" json:"propertiesWithHistory,omitempty"`
+}
+
+// Postcrmobjects202603lineItemsbatchreadReadParams defines parameters for Postcrmobjects202603lineItemsbatchreadRead.
+type Postcrmobjects202603lineItemsbatchreadReadParams struct {
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+}
+
+// Getcrmobjects202603lineItemsLineItemIdGetByIdParams defines parameters for Getcrmobjects202603lineItemsLineItemIdGetById.
+type Getcrmobjects202603lineItemsLineItemIdGetByIdParams struct {
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+
+	// Associations A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored.
+	Associations *[]string `form:"associations,omitempty" json:"associations,omitempty"`
+
+	// IdProperty The name of a property whose values are unique for this object type
+	IdProperty *string `form:"idProperty,omitempty" json:"idProperty,omitempty"`
+
+	// Properties A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
+
+	// PropertiesWithHistory A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	PropertiesWithHistory *[]string `form:"propertiesWithHistory,omitempty" json:"propertiesWithHistory,omitempty"`
+}
+
+// Patchcrmobjects202603lineItemsLineItemIdUpdateParams defines parameters for Patchcrmobjects202603lineItemsLineItemIdUpdate.
+type Patchcrmobjects202603lineItemsLineItemIdUpdateParams struct {
+	// IdProperty The name of a property whose values are unique for this object type
+	IdProperty *string `form:"idProperty,omitempty" json:"idProperty,omitempty"`
+}
+
+// Getcrmobjects202603meetingsGetPageParams defines parameters for Getcrmobjects202603meetingsGetPage.
+type Getcrmobjects202603meetingsGetPageParams struct {
+	// After The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.
+	After *string `form:"after,omitempty" json:"after,omitempty"`
+
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+
+	// Associations A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored.
+	Associations *[]string `form:"associations,omitempty" json:"associations,omitempty"`
+
+	// Limit The maximum number of results to display per page.
+	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// Properties A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
+
+	// PropertiesWithHistory A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored. Usage of this parameter will reduce the maximum number of objects that can be read by a single request.
+	PropertiesWithHistory *[]string `form:"propertiesWithHistory,omitempty" json:"propertiesWithHistory,omitempty"`
+}
+
+// Postcrmobjects202603meetingsbatchreadReadParams defines parameters for Postcrmobjects202603meetingsbatchreadRead.
+type Postcrmobjects202603meetingsbatchreadReadParams struct {
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+}
+
+// Getcrmobjects202603meetingsMeetingIdGetByIdParams defines parameters for Getcrmobjects202603meetingsMeetingIdGetById.
+type Getcrmobjects202603meetingsMeetingIdGetByIdParams struct {
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+
+	// Associations A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored.
+	Associations *[]string `form:"associations,omitempty" json:"associations,omitempty"`
+
+	// IdProperty The name of a property whose values are unique for this object type
+	IdProperty *string `form:"idProperty,omitempty" json:"idProperty,omitempty"`
+
+	// Properties A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
+
+	// PropertiesWithHistory A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	PropertiesWithHistory *[]string `form:"propertiesWithHistory,omitempty" json:"propertiesWithHistory,omitempty"`
+}
+
+// Patchcrmobjects202603meetingsMeetingIdUpdateParams defines parameters for Patchcrmobjects202603meetingsMeetingIdUpdate.
+type Patchcrmobjects202603meetingsMeetingIdUpdateParams struct {
+	// IdProperty The name of a property whose values are unique for this object type
+	IdProperty *string `form:"idProperty,omitempty" json:"idProperty,omitempty"`
+}
+
+// Getcrmobjects202603notesGetPageParams defines parameters for Getcrmobjects202603notesGetPage.
+type Getcrmobjects202603notesGetPageParams struct {
+	// After The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.
+	After *string `form:"after,omitempty" json:"after,omitempty"`
+
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+
+	// Associations A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored.
+	Associations *[]string `form:"associations,omitempty" json:"associations,omitempty"`
+
+	// Limit The maximum number of results to display per page.
+	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// Properties A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
+
+	// PropertiesWithHistory A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored. Usage of this parameter will reduce the maximum number of objects that can be read by a single request.
+	PropertiesWithHistory *[]string `form:"propertiesWithHistory,omitempty" json:"propertiesWithHistory,omitempty"`
+}
+
+// Postcrmobjects202603notesbatchreadReadParams defines parameters for Postcrmobjects202603notesbatchreadRead.
+type Postcrmobjects202603notesbatchreadReadParams struct {
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+}
+
+// Getcrmobjects202603notesNoteIdGetByIdParams defines parameters for Getcrmobjects202603notesNoteIdGetById.
+type Getcrmobjects202603notesNoteIdGetByIdParams struct {
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+
+	// Associations A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored.
+	Associations *[]string `form:"associations,omitempty" json:"associations,omitempty"`
+
+	// IdProperty The name of a property whose values are unique for this object type
+	IdProperty *string `form:"idProperty,omitempty" json:"idProperty,omitempty"`
+
+	// Properties A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
+
+	// PropertiesWithHistory A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	PropertiesWithHistory *[]string `form:"propertiesWithHistory,omitempty" json:"propertiesWithHistory,omitempty"`
+}
+
+// Patchcrmobjects202603notesNoteIdUpdateParams defines parameters for Patchcrmobjects202603notesNoteIdUpdate.
+type Patchcrmobjects202603notesNoteIdUpdateParams struct {
+	// IdProperty The name of a property whose values are unique for this object type
+	IdProperty *string `form:"idProperty,omitempty" json:"idProperty,omitempty"`
+}
+
+// Getcrmobjects202603ordersParams defines parameters for Getcrmobjects202603orders.
+type Getcrmobjects202603ordersParams struct {
+	// After The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.
+	After *string `form:"after,omitempty" json:"after,omitempty"`
+
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+
+	// Associations A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored.
+	Associations *[]string `form:"associations,omitempty" json:"associations,omitempty"`
+
+	// Limit The maximum number of results to display per page.
+	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// Properties A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
+
+	// PropertiesWithHistory A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored. Usage of this parameter will reduce the maximum number of objects that can be read by a single request.
+	PropertiesWithHistory *[]string `form:"propertiesWithHistory,omitempty" json:"propertiesWithHistory,omitempty"`
+}
+
+// Postcrmobjects202603ordersbatchreadParams defines parameters for Postcrmobjects202603ordersbatchread.
+type Postcrmobjects202603ordersbatchreadParams struct {
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+}
+
+// Getcrmobjects202603ordersOrderIdParams defines parameters for Getcrmobjects202603ordersOrderId.
+type Getcrmobjects202603ordersOrderIdParams struct {
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+
+	// Associations A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored.
+	Associations *[]string `form:"associations,omitempty" json:"associations,omitempty"`
+
+	// IdProperty The name of a property whose values are unique for this object type
+	IdProperty *string `form:"idProperty,omitempty" json:"idProperty,omitempty"`
+
+	// Properties A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
+
+	// PropertiesWithHistory A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	PropertiesWithHistory *[]string `form:"propertiesWithHistory,omitempty" json:"propertiesWithHistory,omitempty"`
+}
+
+// Patchcrmobjects202603ordersOrderIdParams defines parameters for Patchcrmobjects202603ordersOrderId.
+type Patchcrmobjects202603ordersOrderIdParams struct {
+	// IdProperty The name of a property whose values are unique for this object type
+	IdProperty *string `form:"idProperty,omitempty" json:"idProperty,omitempty"`
+}
+
+// Getcrmobjects202603partnerClientsParams defines parameters for Getcrmobjects202603partnerClients.
+type Getcrmobjects202603partnerClientsParams struct {
+	// After The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.
+	After *string `form:"after,omitempty" json:"after,omitempty"`
+
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+
+	// Associations A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored.
+	Associations *[]string `form:"associations,omitempty" json:"associations,omitempty"`
+
+	// Limit The maximum number of results to display per page.
+	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// Properties A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
+
+	// PropertiesWithHistory A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored. Usage of this parameter will reduce the maximum number of objects that can be read by a single request.
+	PropertiesWithHistory *[]string `form:"propertiesWithHistory,omitempty" json:"propertiesWithHistory,omitempty"`
+}
+
+// Postcrmobjects202603partnerClientsbatchreadParams defines parameters for Postcrmobjects202603partnerClientsbatchread.
+type Postcrmobjects202603partnerClientsbatchreadParams struct {
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+}
+
+// Getcrmobjects202603partnerClientsPartnerClientIdParams defines parameters for Getcrmobjects202603partnerClientsPartnerClientId.
+type Getcrmobjects202603partnerClientsPartnerClientIdParams struct {
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+
+	// Associations A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored.
+	Associations *[]string `form:"associations,omitempty" json:"associations,omitempty"`
+
+	// IdProperty The name of a property whose values are unique for this object type
+	IdProperty *string `form:"idProperty,omitempty" json:"idProperty,omitempty"`
+
+	// Properties A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
+
+	// PropertiesWithHistory A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	PropertiesWithHistory *[]string `form:"propertiesWithHistory,omitempty" json:"propertiesWithHistory,omitempty"`
+}
+
+// Patchcrmobjects202603partnerClientsPartnerClientIdParams defines parameters for Patchcrmobjects202603partnerClientsPartnerClientId.
+type Patchcrmobjects202603partnerClientsPartnerClientIdParams struct {
+	// IdProperty The name of a property whose values are unique for this object type
+	IdProperty *string `form:"idProperty,omitempty" json:"idProperty,omitempty"`
+}
+
+// Getcrmobjects202603partnerClientsPartnerClientIdassociationsToObjectTypeParams defines parameters for Getcrmobjects202603partnerClientsPartnerClientIdassociationsToObjectType.
+type Getcrmobjects202603partnerClientsPartnerClientIdassociationsToObjectTypeParams struct {
+	// After The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.
+	After *string `form:"after,omitempty" json:"after,omitempty"`
+
+	// Limit The maximum number of results to display per page.
+	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
+}
+
+// Getcrmobjects202603partnerServicesParams defines parameters for Getcrmobjects202603partnerServices.
+type Getcrmobjects202603partnerServicesParams struct {
+	// After The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.
+	After *string `form:"after,omitempty" json:"after,omitempty"`
+
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+
+	// Associations A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored.
+	Associations *[]string `form:"associations,omitempty" json:"associations,omitempty"`
+
+	// Limit The maximum number of results to display per page.
+	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// Properties A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
+
+	// PropertiesWithHistory A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored. Usage of this parameter will reduce the maximum number of objects that can be read by a single request.
+	PropertiesWithHistory *[]string `form:"propertiesWithHistory,omitempty" json:"propertiesWithHistory,omitempty"`
+}
+
+// Postcrmobjects202603partnerServicesbatchreadParams defines parameters for Postcrmobjects202603partnerServicesbatchread.
+type Postcrmobjects202603partnerServicesbatchreadParams struct {
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+}
+
+// Getcrmobjects202603partnerServicesPartnerServiceIdParams defines parameters for Getcrmobjects202603partnerServicesPartnerServiceId.
+type Getcrmobjects202603partnerServicesPartnerServiceIdParams struct {
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+
+	// Associations A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored.
+	Associations *[]string `form:"associations,omitempty" json:"associations,omitempty"`
+
+	// IdProperty The name of a property whose values are unique for this object type
+	IdProperty *string `form:"idProperty,omitempty" json:"idProperty,omitempty"`
+
+	// Properties A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
+
+	// PropertiesWithHistory A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	PropertiesWithHistory *[]string `form:"propertiesWithHistory,omitempty" json:"propertiesWithHistory,omitempty"`
+}
+
+// Patchcrmobjects202603partnerServicesPartnerServiceIdParams defines parameters for Patchcrmobjects202603partnerServicesPartnerServiceId.
+type Patchcrmobjects202603partnerServicesPartnerServiceIdParams struct {
+	// IdProperty The name of a property whose values are unique for this object type
+	IdProperty *string `form:"idProperty,omitempty" json:"idProperty,omitempty"`
+}
+
+// Getcrmobjects202603postalMailGetPageParams defines parameters for Getcrmobjects202603postalMailGetPage.
+type Getcrmobjects202603postalMailGetPageParams struct {
+	// After The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.
+	After *string `form:"after,omitempty" json:"after,omitempty"`
+
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+
+	// Associations A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored.
+	Associations *[]string `form:"associations,omitempty" json:"associations,omitempty"`
+
+	// Limit The maximum number of results to display per page.
+	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// Properties A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
+
+	// PropertiesWithHistory A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored. Usage of this parameter will reduce the maximum number of objects that can be read by a single request.
+	PropertiesWithHistory *[]string `form:"propertiesWithHistory,omitempty" json:"propertiesWithHistory,omitempty"`
+}
+
+// Postcrmobjects202603postalMailbatchreadReadParams defines parameters for Postcrmobjects202603postalMailbatchreadRead.
+type Postcrmobjects202603postalMailbatchreadReadParams struct {
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+}
+
+// Getcrmobjects202603postalMailPostalMailIdGetByIdParams defines parameters for Getcrmobjects202603postalMailPostalMailIdGetById.
+type Getcrmobjects202603postalMailPostalMailIdGetByIdParams struct {
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+
+	// Associations A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored.
+	Associations *[]string `form:"associations,omitempty" json:"associations,omitempty"`
+
+	// IdProperty The name of a property whose values are unique for this object type
+	IdProperty *string `form:"idProperty,omitempty" json:"idProperty,omitempty"`
+
+	// Properties A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
+
+	// PropertiesWithHistory A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	PropertiesWithHistory *[]string `form:"propertiesWithHistory,omitempty" json:"propertiesWithHistory,omitempty"`
+}
+
+// Patchcrmobjects202603postalMailPostalMailIdUpdateParams defines parameters for Patchcrmobjects202603postalMailPostalMailIdUpdate.
+type Patchcrmobjects202603postalMailPostalMailIdUpdateParams struct {
+	// IdProperty The name of a property whose values are unique for this object type
+	IdProperty *string `form:"idProperty,omitempty" json:"idProperty,omitempty"`
+}
+
+// Getcrmobjects202603productsGetPageParams defines parameters for Getcrmobjects202603productsGetPage.
+type Getcrmobjects202603productsGetPageParams struct {
+	// After The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.
+	After *string `form:"after,omitempty" json:"after,omitempty"`
+
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+
+	// Associations A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored.
+	Associations *[]string `form:"associations,omitempty" json:"associations,omitempty"`
+
+	// Limit The maximum number of results to display per page.
+	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// Properties A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
+
+	// PropertiesWithHistory A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored. Usage of this parameter will reduce the maximum number of objects that can be read by a single request.
+	PropertiesWithHistory *[]string `form:"propertiesWithHistory,omitempty" json:"propertiesWithHistory,omitempty"`
+}
+
+// Postcrmobjects202603productsbatchreadReadParams defines parameters for Postcrmobjects202603productsbatchreadRead.
+type Postcrmobjects202603productsbatchreadReadParams struct {
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+}
+
+// Getcrmobjects202603productsProductIdGetByIdParams defines parameters for Getcrmobjects202603productsProductIdGetById.
+type Getcrmobjects202603productsProductIdGetByIdParams struct {
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+
+	// Associations A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored.
+	Associations *[]string `form:"associations,omitempty" json:"associations,omitempty"`
+
+	// IdProperty The name of a property whose values are unique for this object type
+	IdProperty *string `form:"idProperty,omitempty" json:"idProperty,omitempty"`
+
+	// Properties A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
+
+	// PropertiesWithHistory A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	PropertiesWithHistory *[]string `form:"propertiesWithHistory,omitempty" json:"propertiesWithHistory,omitempty"`
+}
+
+// Patchcrmobjects202603productsProductIdUpdateParams defines parameters for Patchcrmobjects202603productsProductIdUpdate.
+type Patchcrmobjects202603productsProductIdUpdateParams struct {
+	// IdProperty The name of a property whose values are unique for this object type
+	IdProperty *string `form:"idProperty,omitempty" json:"idProperty,omitempty"`
+}
+
+// Getcrmobjects202603projectsParams defines parameters for Getcrmobjects202603projects.
+type Getcrmobjects202603projectsParams struct {
+	// After The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.
+	After *string `form:"after,omitempty" json:"after,omitempty"`
+
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+
+	// Associations A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored.
+	Associations *[]string `form:"associations,omitempty" json:"associations,omitempty"`
+
+	// Limit The maximum number of results to display per page.
+	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// Properties A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
+
+	// PropertiesWithHistory A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored. Usage of this parameter will reduce the maximum number of objects that can be read by a single request.
+	PropertiesWithHistory *[]string `form:"propertiesWithHistory,omitempty" json:"propertiesWithHistory,omitempty"`
+}
+
+// Postcrmobjects202603projectsbatchreadParams defines parameters for Postcrmobjects202603projectsbatchread.
+type Postcrmobjects202603projectsbatchreadParams struct {
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+}
+
+// Getcrmobjects202603projectsProjectIdParams defines parameters for Getcrmobjects202603projectsProjectId.
+type Getcrmobjects202603projectsProjectIdParams struct {
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+
+	// Associations A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored.
+	Associations *[]string `form:"associations,omitempty" json:"associations,omitempty"`
+
+	// IdProperty The name of a property whose values are unique for this object type
+	IdProperty *string `form:"idProperty,omitempty" json:"idProperty,omitempty"`
+
+	// Properties A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
+
+	// PropertiesWithHistory A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	PropertiesWithHistory *[]string `form:"propertiesWithHistory,omitempty" json:"propertiesWithHistory,omitempty"`
+}
+
+// Patchcrmobjects202603projectsProjectIdParams defines parameters for Patchcrmobjects202603projectsProjectId.
+type Patchcrmobjects202603projectsProjectIdParams struct {
+	// IdProperty The name of a property whose values are unique for this object type
+	IdProperty *string `form:"idProperty,omitempty" json:"idProperty,omitempty"`
+}
+
+// Getcrmobjects202603quotesGetPageParams defines parameters for Getcrmobjects202603quotesGetPage.
+type Getcrmobjects202603quotesGetPageParams struct {
+	// After The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.
+	After *string `form:"after,omitempty" json:"after,omitempty"`
+
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+
+	// Associations A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored.
+	Associations *[]string `form:"associations,omitempty" json:"associations,omitempty"`
+
+	// Limit The maximum number of results to display per page.
+	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// Properties A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
+
+	// PropertiesWithHistory A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored. Usage of this parameter will reduce the maximum number of objects that can be read by a single request.
+	PropertiesWithHistory *[]string `form:"propertiesWithHistory,omitempty" json:"propertiesWithHistory,omitempty"`
+}
+
+// Postcrmobjects202603quotesbatchreadReadParams defines parameters for Postcrmobjects202603quotesbatchreadRead.
+type Postcrmobjects202603quotesbatchreadReadParams struct {
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+}
+
+// Getcrmobjects202603quotesQuoteIdGetByIdParams defines parameters for Getcrmobjects202603quotesQuoteIdGetById.
+type Getcrmobjects202603quotesQuoteIdGetByIdParams struct {
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+
+	// Associations A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored.
+	Associations *[]string `form:"associations,omitempty" json:"associations,omitempty"`
+
+	// IdProperty The name of a property whose values are unique for this object type
+	IdProperty *string `form:"idProperty,omitempty" json:"idProperty,omitempty"`
+
+	// Properties A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
+
+	// PropertiesWithHistory A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	PropertiesWithHistory *[]string `form:"propertiesWithHistory,omitempty" json:"propertiesWithHistory,omitempty"`
+}
+
+// Patchcrmobjects202603quotesQuoteIdUpdateParams defines parameters for Patchcrmobjects202603quotesQuoteIdUpdate.
+type Patchcrmobjects202603quotesQuoteIdUpdateParams struct {
+	// IdProperty The name of a property whose values are unique for this object type
+	IdProperty *string `form:"idProperty,omitempty" json:"idProperty,omitempty"`
+}
+
+// Getcrmobjects202603subscriptionsParams defines parameters for Getcrmobjects202603subscriptions.
+type Getcrmobjects202603subscriptionsParams struct {
+	// After The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.
+	After *string `form:"after,omitempty" json:"after,omitempty"`
+
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+
+	// Associations A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored.
+	Associations *[]string `form:"associations,omitempty" json:"associations,omitempty"`
+
+	// Limit The maximum number of results to display per page.
+	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// Properties A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
+
+	// PropertiesWithHistory A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored. Usage of this parameter will reduce the maximum number of objects that can be read by a single request.
+	PropertiesWithHistory *[]string `form:"propertiesWithHistory,omitempty" json:"propertiesWithHistory,omitempty"`
+}
+
+// Postcrmobjects202603subscriptionsbatchreadParams defines parameters for Postcrmobjects202603subscriptionsbatchread.
+type Postcrmobjects202603subscriptionsbatchreadParams struct {
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+}
+
+// Getcrmobjects202603subscriptionsSubscriptionIdParams defines parameters for Getcrmobjects202603subscriptionsSubscriptionId.
+type Getcrmobjects202603subscriptionsSubscriptionIdParams struct {
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+
+	// Associations A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored.
+	Associations *[]string `form:"associations,omitempty" json:"associations,omitempty"`
+
+	// IdProperty The name of a property whose values are unique for this object type
+	IdProperty *string `form:"idProperty,omitempty" json:"idProperty,omitempty"`
+
+	// Properties A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
+
+	// PropertiesWithHistory A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	PropertiesWithHistory *[]string `form:"propertiesWithHistory,omitempty" json:"propertiesWithHistory,omitempty"`
+}
+
+// Patchcrmobjects202603subscriptionsSubscriptionIdParams defines parameters for Patchcrmobjects202603subscriptionsSubscriptionId.
+type Patchcrmobjects202603subscriptionsSubscriptionIdParams struct {
+	// IdProperty The name of a property whose values are unique for this object type
+	IdProperty *string `form:"idProperty,omitempty" json:"idProperty,omitempty"`
+}
+
+// Getcrmobjects202603tasksGetPageParams defines parameters for Getcrmobjects202603tasksGetPage.
+type Getcrmobjects202603tasksGetPageParams struct {
+	// After The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.
+	After *string `form:"after,omitempty" json:"after,omitempty"`
+
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+
+	// Associations A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored.
+	Associations *[]string `form:"associations,omitempty" json:"associations,omitempty"`
+
+	// Limit The maximum number of results to display per page.
+	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// Properties A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
+
+	// PropertiesWithHistory A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored. Usage of this parameter will reduce the maximum number of objects that can be read by a single request.
+	PropertiesWithHistory *[]string `form:"propertiesWithHistory,omitempty" json:"propertiesWithHistory,omitempty"`
+}
+
+// Postcrmobjects202603tasksbatchreadReadParams defines parameters for Postcrmobjects202603tasksbatchreadRead.
+type Postcrmobjects202603tasksbatchreadReadParams struct {
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+}
+
+// Getcrmobjects202603tasksTaskIdGetByIdParams defines parameters for Getcrmobjects202603tasksTaskIdGetById.
+type Getcrmobjects202603tasksTaskIdGetByIdParams struct {
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+
+	// Associations A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored.
+	Associations *[]string `form:"associations,omitempty" json:"associations,omitempty"`
+
+	// IdProperty The name of a property whose values are unique for this object type
+	IdProperty *string `form:"idProperty,omitempty" json:"idProperty,omitempty"`
+
+	// Properties A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
+
+	// PropertiesWithHistory A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	PropertiesWithHistory *[]string `form:"propertiesWithHistory,omitempty" json:"propertiesWithHistory,omitempty"`
+}
+
+// Patchcrmobjects202603tasksTaskIdUpdateParams defines parameters for Patchcrmobjects202603tasksTaskIdUpdate.
+type Patchcrmobjects202603tasksTaskIdUpdateParams struct {
+	// IdProperty The name of a property whose values are unique for this object type
+	IdProperty *string `form:"idProperty,omitempty" json:"idProperty,omitempty"`
+}
+
+// Getcrmobjects202603taxesGetPageParams defines parameters for Getcrmobjects202603taxesGetPage.
+type Getcrmobjects202603taxesGetPageParams struct {
+	// After The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.
+	After *string `form:"after,omitempty" json:"after,omitempty"`
+
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+
+	// Associations A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored.
+	Associations *[]string `form:"associations,omitempty" json:"associations,omitempty"`
+
+	// Limit The maximum number of results to display per page.
+	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// Properties A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
+
+	// PropertiesWithHistory A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored. Usage of this parameter will reduce the maximum number of objects that can be read by a single request.
+	PropertiesWithHistory *[]string `form:"propertiesWithHistory,omitempty" json:"propertiesWithHistory,omitempty"`
+}
+
+// Postcrmobjects202603taxesbatchreadReadParams defines parameters for Postcrmobjects202603taxesbatchreadRead.
+type Postcrmobjects202603taxesbatchreadReadParams struct {
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+}
+
+// Getcrmobjects202603taxesTaxIdGetByIdParams defines parameters for Getcrmobjects202603taxesTaxIdGetById.
+type Getcrmobjects202603taxesTaxIdGetByIdParams struct {
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+
+	// Associations A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored.
+	Associations *[]string `form:"associations,omitempty" json:"associations,omitempty"`
+
+	// IdProperty The name of a property whose values are unique for this object type
+	IdProperty *string `form:"idProperty,omitempty" json:"idProperty,omitempty"`
+
+	// Properties A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
+
+	// PropertiesWithHistory A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	PropertiesWithHistory *[]string `form:"propertiesWithHistory,omitempty" json:"propertiesWithHistory,omitempty"`
+}
+
+// Patchcrmobjects202603taxesTaxIdUpdateParams defines parameters for Patchcrmobjects202603taxesTaxIdUpdate.
+type Patchcrmobjects202603taxesTaxIdUpdateParams struct {
+	// IdProperty The name of a property whose values are unique for this object type
+	IdProperty *string `form:"idProperty,omitempty" json:"idProperty,omitempty"`
+}
+
+// Getcrmobjects202603ticketsGetPageParams defines parameters for Getcrmobjects202603ticketsGetPage.
+type Getcrmobjects202603ticketsGetPageParams struct {
+	// After The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.
+	After *string `form:"after,omitempty" json:"after,omitempty"`
+
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+
+	// Associations A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored.
+	Associations *[]string `form:"associations,omitempty" json:"associations,omitempty"`
+
+	// Limit The maximum number of results to display per page.
+	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// Properties A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
+
+	// PropertiesWithHistory A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored. Usage of this parameter will reduce the maximum number of objects that can be read by a single request.
+	PropertiesWithHistory *[]string `form:"propertiesWithHistory,omitempty" json:"propertiesWithHistory,omitempty"`
+}
+
+// Postcrmobjects202603ticketsbatchreadReadParams defines parameters for Postcrmobjects202603ticketsbatchreadRead.
+type Postcrmobjects202603ticketsbatchreadReadParams struct {
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+}
+
+// Getcrmobjects202603ticketsTicketIdGetByIdParams defines parameters for Getcrmobjects202603ticketsTicketIdGetById.
+type Getcrmobjects202603ticketsTicketIdGetByIdParams struct {
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+
+	// Associations A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored.
+	Associations *[]string `form:"associations,omitempty" json:"associations,omitempty"`
+
+	// IdProperty The name of a property whose values are unique for this object type
+	IdProperty *string `form:"idProperty,omitempty" json:"idProperty,omitempty"`
+
+	// Properties A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
+
+	// PropertiesWithHistory A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	PropertiesWithHistory *[]string `form:"propertiesWithHistory,omitempty" json:"propertiesWithHistory,omitempty"`
+}
+
+// Patchcrmobjects202603ticketsTicketIdUpdateParams defines parameters for Patchcrmobjects202603ticketsTicketIdUpdate.
+type Patchcrmobjects202603ticketsTicketIdUpdateParams struct {
+	// IdProperty The name of a property whose values are unique for this object type
+	IdProperty *string `form:"idProperty,omitempty" json:"idProperty,omitempty"`
+}
+
+// Getcrmobjects202603usersParams defines parameters for Getcrmobjects202603users.
+type Getcrmobjects202603usersParams struct {
+	// After The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.
+	After *string `form:"after,omitempty" json:"after,omitempty"`
+
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+
+	// Associations A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored.
+	Associations *[]string `form:"associations,omitempty" json:"associations,omitempty"`
+
+	// Limit The maximum number of results to display per page.
+	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// Properties A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
+
+	// PropertiesWithHistory A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored. Usage of this parameter will reduce the maximum number of objects that can be read by a single request.
+	PropertiesWithHistory *[]string `form:"propertiesWithHistory,omitempty" json:"propertiesWithHistory,omitempty"`
+}
+
+// Postcrmobjects202603usersbatchreadParams defines parameters for Postcrmobjects202603usersbatchread.
+type Postcrmobjects202603usersbatchreadParams struct {
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+}
+
+// Getcrmobjects202603usersUserIdParams defines parameters for Getcrmobjects202603usersUserId.
+type Getcrmobjects202603usersUserIdParams struct {
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+
+	// Associations A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored.
+	Associations *[]string `form:"associations,omitempty" json:"associations,omitempty"`
+
+	// IdProperty The name of a property whose values are unique for this object type
+	IdProperty *string `form:"idProperty,omitempty" json:"idProperty,omitempty"`
+
+	// Properties A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
+
+	// PropertiesWithHistory A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	PropertiesWithHistory *[]string `form:"propertiesWithHistory,omitempty" json:"propertiesWithHistory,omitempty"`
+}
+
+// Patchcrmobjects202603usersUserIdParams defines parameters for Patchcrmobjects202603usersUserId.
+type Patchcrmobjects202603usersUserIdParams struct {
+	// IdProperty The name of a property whose values are unique for this object type
+	IdProperty *string `form:"idProperty,omitempty" json:"idProperty,omitempty"`
+}
+
+// Getcrmobjects202603ObjectTypeParams defines parameters for Getcrmobjects202603ObjectType.
+type Getcrmobjects202603ObjectTypeParams struct {
+	// After The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.
+	After *string `form:"after,omitempty" json:"after,omitempty"`
+
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+
+	// Associations A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored.
+	Associations *[]string `form:"associations,omitempty" json:"associations,omitempty"`
+
+	// Limit The maximum number of results to display per page.
+	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// Properties A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
+
+	// PropertiesWithHistory A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored. Usage of this parameter will reduce the maximum number of objects that can be read by a single request.
+	PropertiesWithHistory *[]string `form:"propertiesWithHistory,omitempty" json:"propertiesWithHistory,omitempty"`
+}
+
+// Postcrmobjects202603ObjectTypebatchreadParams defines parameters for Postcrmobjects202603ObjectTypebatchread.
+type Postcrmobjects202603ObjectTypebatchreadParams struct {
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+}
+
+// Getcrmobjects202603ObjectTypeObjectIdParams defines parameters for Getcrmobjects202603ObjectTypeObjectId.
+type Getcrmobjects202603ObjectTypeObjectIdParams struct {
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+
+	// Associations A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored.
+	Associations *[]string `form:"associations,omitempty" json:"associations,omitempty"`
+
+	// IdProperty The name of a property whose values are unique for this object type
+	IdProperty *string `form:"idProperty,omitempty" json:"idProperty,omitempty"`
+
+	// Properties A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
+
+	// PropertiesWithHistory A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	PropertiesWithHistory *[]string `form:"propertiesWithHistory,omitempty" json:"propertiesWithHistory,omitempty"`
+}
+
+// Patchcrmobjects202603ObjectTypeObjectIdParams defines parameters for Patchcrmobjects202603ObjectTypeObjectId.
+type Patchcrmobjects202603ObjectTypeObjectIdParams struct {
+	// IdProperty The name of a property whose values are unique for this object type
+	IdProperty *string `form:"idProperty,omitempty" json:"idProperty,omitempty"`
+}
+
+// Getcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeParams defines parameters for Getcrmobjects202603ObjectTypeObjectIdassociationsToObjectType.
+type Getcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeParams struct {
+	// After The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.
+	After *string `form:"after,omitempty" json:"after,omitempty"`
+
+	// Limit The maximum number of results to display per page.
+	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
+}
+
+// Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdJSONBody defines parameters for Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectId.
+type Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdJSONBody = []AssociationSpec
+
+// Getcrmowners202603crmownersv3Params defines parameters for Getcrmowners202603crmownersv3.
+type Getcrmowners202603crmownersv3Params struct {
+	// After The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.
+	After *string `form:"after,omitempty" json:"after,omitempty"`
+
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+
+	// Email Filter by email address (optional)
+	Email *string `form:"email,omitempty" json:"email,omitempty"`
+
+	// Limit The maximum number of results to display per page.
+	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
+}
+
+// Getcrmowners202603OwnerIdGetByIdParams defines parameters for Getcrmowners202603OwnerIdGetById.
+type Getcrmowners202603OwnerIdGetByIdParams struct {
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+
+	// IdProperty Specifies which property to use for identifying the owner. Valid values are 'id' or 'userId'. Defaults to 'id'.
+	IdProperty *Getcrmowners202603OwnerIdGetByIdParamsIdProperty `form:"idProperty,omitempty" json:"idProperty,omitempty"`
+}
+
+// Getcrmowners202603OwnerIdGetByIdParamsIdProperty defines parameters for Getcrmowners202603OwnerIdGetById.
+type Getcrmowners202603OwnerIdGetByIdParamsIdProperty string
+
+// Deletecrmpipelines202603ObjectTypePipelineIdArchiveParams defines parameters for Deletecrmpipelines202603ObjectTypePipelineIdArchive.
+type Deletecrmpipelines202603ObjectTypePipelineIdArchiveParams struct {
+	ValidateDealStageUsagesBeforeDelete *bool `form:"validateDealStageUsagesBeforeDelete,omitempty" json:"validateDealStageUsagesBeforeDelete,omitempty"`
+	ValidateReferencesBeforeDelete      *bool `form:"validateReferencesBeforeDelete,omitempty" json:"validateReferencesBeforeDelete,omitempty"`
+}
+
+// Patchcrmpipelines202603ObjectTypePipelineIdUpdateParams defines parameters for Patchcrmpipelines202603ObjectTypePipelineIdUpdate.
+type Patchcrmpipelines202603ObjectTypePipelineIdUpdateParams struct {
+	ValidateDealStageUsagesBeforeDelete *bool `form:"validateDealStageUsagesBeforeDelete,omitempty" json:"validateDealStageUsagesBeforeDelete,omitempty"`
+	ValidateReferencesBeforeDelete      *bool `form:"validateReferencesBeforeDelete,omitempty" json:"validateReferencesBeforeDelete,omitempty"`
+}
+
+// Putcrmpipelines202603ObjectTypePipelineIdReplaceParams defines parameters for Putcrmpipelines202603ObjectTypePipelineIdReplace.
+type Putcrmpipelines202603ObjectTypePipelineIdReplaceParams struct {
+	ValidateDealStageUsagesBeforeDelete *bool `form:"validateDealStageUsagesBeforeDelete,omitempty" json:"validateDealStageUsagesBeforeDelete,omitempty"`
+	ValidateReferencesBeforeDelete      *bool `form:"validateReferencesBeforeDelete,omitempty" json:"validateReferencesBeforeDelete,omitempty"`
+}
+
+// Deletecrmpipelines202603ObjectTypePipelineIdstagesStageIdArchiveParams defines parameters for Deletecrmpipelines202603ObjectTypePipelineIdstagesStageIdArchive.
+type Deletecrmpipelines202603ObjectTypePipelineIdstagesStageIdArchiveParams struct {
+	ValidateReferencesBeforeDelete *bool `form:"validateReferencesBeforeDelete,omitempty" json:"validateReferencesBeforeDelete,omitempty"`
+}
+
+// Getcrmproperties202603ObjectTypecrmproperties202509ObjectTypeParams defines parameters for Getcrmproperties202603ObjectTypecrmproperties202509ObjectType.
+type Getcrmproperties202603ObjectTypecrmproperties202509ObjectTypeParams struct {
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+
+	// DataSensitivity Filter properties based on data sensitivity level. Valid values are 'non_sensitive', 'sensitive', and 'highly_sensitive'. Defaults to 'non_sensitive'.
+	DataSensitivity *Getcrmproperties202603ObjectTypecrmproperties202509ObjectTypeParamsDataSensitivity `form:"dataSensitivity,omitempty" json:"dataSensitivity,omitempty"`
+
+	// Locale Specify the locale to retrieve properties in a particular language or regional format.
+	Locale *string `form:"locale,omitempty" json:"locale,omitempty"`
+
+	// Properties A comma-separated list of property names to include in the response.
+	Properties *string `form:"properties,omitempty" json:"properties,omitempty"`
+}
+
+// Getcrmproperties202603ObjectTypecrmproperties202509ObjectTypeParamsDataSensitivity defines parameters for Getcrmproperties202603ObjectTypecrmproperties202509ObjectType.
+type Getcrmproperties202603ObjectTypecrmproperties202509ObjectTypeParamsDataSensitivity string
+
+// Postcrmproperties202603ObjectTypebatchreadcrmproperties202509ObjectTypebatchreadParams defines parameters for Postcrmproperties202603ObjectTypebatchreadcrmproperties202509ObjectTypebatchread.
+type Postcrmproperties202603ObjectTypebatchreadcrmproperties202509ObjectTypebatchreadParams struct {
+	// Locale A string specifying the locale to use for the response. This can be used to tailor the response to a specific language or region.
+	Locale *string `form:"locale,omitempty" json:"locale,omitempty"`
+}
+
+// Getcrmproperties202603ObjectTypegroupscrmproperties202509ObjectTypegroupsParams defines parameters for Getcrmproperties202603ObjectTypegroupscrmproperties202509ObjectTypegroups.
+type Getcrmproperties202603ObjectTypegroupscrmproperties202509ObjectTypegroupsParams struct {
+	// Locale The language locale to use for property group labels. This can help in displaying labels in the preferred language.
+	Locale *string `form:"locale,omitempty" json:"locale,omitempty"`
+}
+
+// Getcrmproperties202603ObjectTypegroupsGroupNamecrmproperties202509ObjectTypegroupsGroupNameParams defines parameters for Getcrmproperties202603ObjectTypegroupsGroupNamecrmproperties202509ObjectTypegroupsGroupName.
+type Getcrmproperties202603ObjectTypegroupsGroupNamecrmproperties202509ObjectTypegroupsGroupNameParams struct {
+	// Locale The language locale to use for the response. This can affect the language of the labels and descriptions returned.
+	Locale *string `form:"locale,omitempty" json:"locale,omitempty"`
+}
+
+// Getcrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyNameParams defines parameters for Getcrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyName.
+type Getcrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyNameParams struct {
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+
+	// DataSensitivity The level of data sensitivity to filter properties by. Valid values are 'non_sensitive', 'sensitive', and 'highly_sensitive'. Defaults to 'non_sensitive'.
+	DataSensitivity *Getcrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyNameParamsDataSensitivity `form:"dataSensitivity,omitempty" json:"dataSensitivity,omitempty"`
+
+	// Locale The locale to use for property labels and descriptions.
+	Locale *string `form:"locale,omitempty" json:"locale,omitempty"`
+
+	// Properties A comma-separated list of property names to include in the response.
+	Properties *string `form:"properties,omitempty" json:"properties,omitempty"`
+}
+
+// Getcrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyNameParamsDataSensitivity defines parameters for Getcrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyName.
+type Getcrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyNameParamsDataSensitivity string
+
+// GetcrmpropertyValidations202603ObjectTypeIdPropertyNameruleTypeRuleTypecrmv3propertyValidationsObjectTypeIdPropertyNameruleTypeRuleTypeParamsRuleType defines parameters for GetcrmpropertyValidations202603ObjectTypeIdPropertyNameruleTypeRuleTypecrmv3propertyValidationsObjectTypeIdPropertyNameruleTypeRuleType.
+type GetcrmpropertyValidations202603ObjectTypeIdPropertyNameruleTypeRuleTypecrmv3propertyValidationsObjectTypeIdPropertyNameruleTypeRuleTypeParamsRuleType string
+
+// PutcrmpropertyValidations202603ObjectTypeIdPropertyNameruleTypeRuleTypecrmv3propertyValidationsObjectTypeIdPropertyNameruleTypeRuleTypeParamsRuleType defines parameters for PutcrmpropertyValidations202603ObjectTypeIdPropertyNameruleTypeRuleTypecrmv3propertyValidationsObjectTypeIdPropertyNameruleTypeRuleType.
+type PutcrmpropertyValidations202603ObjectTypeIdPropertyNameruleTypeRuleTypecrmv3propertyValidationsObjectTypeIdPropertyNameruleTypeRuleTypeParamsRuleType string
+
+// Getevents202603eventDefinitionsParams defines parameters for Getevents202603eventDefinitions.
+type Getevents202603eventDefinitionsParams struct {
+	// After The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.
+	After *string `form:"after,omitempty" json:"after,omitempty"`
+
+	// IncludeProperties A boolean indicating whether to include properties of the event definitions in the response.
+	IncludeProperties *bool `form:"includeProperties,omitempty" json:"includeProperties,omitempty"`
+
+	// Limit The maximum number of results to display per page.
+	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// SearchString A string used to search for event definitions by name or other attributes.
+	SearchString *string `form:"searchString,omitempty" json:"searchString,omitempty"`
+
+	// SortOrder A string specifying the order in which results should be sorted.
+	SortOrder *string `form:"sortOrder,omitempty" json:"sortOrder,omitempty"`
+}
+
+// GeteventseventOccurrences202603eventseventOccurrences202603Params defines parameters for GeteventseventOccurrences202603eventseventOccurrences202603.
+type GeteventseventOccurrences202603eventseventOccurrences202603Params struct {
+	// After The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.
+	After *string `form:"after,omitempty" json:"after,omitempty"`
+
+	// Before A cursor token for pagination. Use the value from the previous response's paging.prev.before field.
+	Before *string `form:"before,omitempty" json:"before,omitempty"`
+
+	// EventType The type of events to retrieve.
+	EventType *string `form:"eventType,omitempty" json:"eventType,omitempty"`
+
+	// Id An array of event IDs to retrieve.
+	Id *[]string `form:"id,omitempty" json:"id,omitempty"`
+
+	// Limit The maximum number of results to display per page.
+	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// ObjectId The unique identifier of the object associated with the events.
+	ObjectId *int64 `form:"objectId,omitempty" json:"objectId,omitempty"`
+
+	// ObjectPropertyPropname Filter events based on specific object properties.
+	ObjectPropertyPropname *map[string]interface{} `form:"objectProperty.{propname},omitempty" json:"objectProperty.{propname},omitempty"`
+
+	// ObjectType The type of object associated with the events.
+	ObjectType *string `form:"objectType,omitempty" json:"objectType,omitempty"`
+
+	// OccurredAfter Filter events that occurred after this date-time.
+	OccurredAfter *time.Time `form:"occurredAfter,omitempty" json:"occurredAfter,omitempty"`
+
+	// OccurredBefore Filter events that occurred before this date-time.
+	OccurredBefore *time.Time `form:"occurredBefore,omitempty" json:"occurredBefore,omitempty"`
+
+	// Properties An array of property names to include in the response.
+	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
+
+	// PropertyPropname Filter events based on specific event properties.
+	PropertyPropname *map[string]interface{} `form:"property.{propname},omitempty" json:"property.{propname},omitempty"`
+
+	// Sort An array of fields to sort the results by.
+	Sort *[]string `form:"sort,omitempty" json:"sort,omitempty"`
+}
+
+// GetfeatureFlags202603AppIdflagsFlagNameportalsParams defines parameters for GetfeatureFlags202603AppIdflagsFlagNameportals.
+type GetfeatureFlags202603AppIdflagsFlagNameportalsParams struct {
+	// Limit The maximum number of results to display per page.
+	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// StartPortalId The ID of the portal to start the list from. Useful for pagination.
+	StartPortalId *int32 `form:"startPortalId,omitempty" json:"startPortalId,omitempty"`
+}
+
+// Postfiles202603filesUploadMultipartBody defines parameters for Postfiles202603filesUpload.
+type Postfiles202603filesUploadMultipartBody struct {
+	CharsetHunch *string             `json:"charsetHunch,omitempty"`
+	File         *openapi_types.File `json:"file,omitempty"`
+	FileName     *string             `json:"fileName,omitempty"`
+	FolderId     *string             `json:"folderId,omitempty"`
+	FolderPath   *string             `json:"folderPath,omitempty"`
+	Options      *string             `json:"options,omitempty"`
+}
+
+// Getfiles202603filessearchDoSearchParams defines parameters for Getfiles202603filessearchDoSearch.
+type Getfiles202603filessearchDoSearchParams struct {
+	// After The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.
+	After                 *string    `form:"after,omitempty" json:"after,omitempty"`
+	AllowsAnonymousAccess *bool      `form:"allowsAnonymousAccess,omitempty" json:"allowsAnonymousAccess,omitempty"`
+	Before                *string    `form:"before,omitempty" json:"before,omitempty"`
+	CreatedAt             *time.Time `form:"createdAt,omitempty" json:"createdAt,omitempty"`
+	CreatedAtGte          *time.Time `form:"createdAtGte,omitempty" json:"createdAtGte,omitempty"`
+	CreatedAtLte          *time.Time `form:"createdAtLte,omitempty" json:"createdAtLte,omitempty"`
+	Encoding              *string    `form:"encoding,omitempty" json:"encoding,omitempty"`
+	ExpiresAt             *time.Time `form:"expiresAt,omitempty" json:"expiresAt,omitempty"`
+	ExpiresAtGte          *time.Time `form:"expiresAtGte,omitempty" json:"expiresAtGte,omitempty"`
+	ExpiresAtLte          *time.Time `form:"expiresAtLte,omitempty" json:"expiresAtLte,omitempty"`
+	Extension             *string    `form:"extension,omitempty" json:"extension,omitempty"`
+	FileMd5               *string    `form:"fileMd5,omitempty" json:"fileMd5,omitempty"`
+	Height                *int32     `form:"height,omitempty" json:"height,omitempty"`
+	HeightGte             *int32     `form:"heightGte,omitempty" json:"heightGte,omitempty"`
+	HeightLte             *int32     `form:"heightLte,omitempty" json:"heightLte,omitempty"`
+	IdGte                 *int64     `form:"idGte,omitempty" json:"idGte,omitempty"`
+	IdLte                 *int64     `form:"idLte,omitempty" json:"idLte,omitempty"`
+	Ids                   *[]int64   `form:"ids,omitempty" json:"ids,omitempty"`
+	IsUsableInContent     *bool      `form:"isUsableInContent,omitempty" json:"isUsableInContent,omitempty"`
+
+	// Limit The maximum number of results to display per page.
+	Limit           *int32     `form:"limit,omitempty" json:"limit,omitempty"`
+	Name            *string    `form:"name,omitempty" json:"name,omitempty"`
+	ParentFolderIds *[]int64   `form:"parentFolderIds,omitempty" json:"parentFolderIds,omitempty"`
+	Path            *string    `form:"path,omitempty" json:"path,omitempty"`
+	Properties      *[]string  `form:"properties,omitempty" json:"properties,omitempty"`
+	Size            *int64     `form:"size,omitempty" json:"size,omitempty"`
+	SizeGte         *int64     `form:"sizeGte,omitempty" json:"sizeGte,omitempty"`
+	SizeLte         *int64     `form:"sizeLte,omitempty" json:"sizeLte,omitempty"`
+	Sort            *[]string  `form:"sort,omitempty" json:"sort,omitempty"`
+	Type            *string    `form:"type,omitempty" json:"type,omitempty"`
+	UpdatedAt       *time.Time `form:"updatedAt,omitempty" json:"updatedAt,omitempty"`
+	UpdatedAtGte    *time.Time `form:"updatedAtGte,omitempty" json:"updatedAtGte,omitempty"`
+	UpdatedAtLte    *time.Time `form:"updatedAtLte,omitempty" json:"updatedAtLte,omitempty"`
+	Url             *string    `form:"url,omitempty" json:"url,omitempty"`
+	Width           *int32     `form:"width,omitempty" json:"width,omitempty"`
+	WidthGte        *int32     `form:"widthGte,omitempty" json:"widthGte,omitempty"`
+	WidthLte        *int32     `form:"widthLte,omitempty" json:"widthLte,omitempty"`
+}
+
+// Getfiles202603filesstatPathGetMetadataParams defines parameters for Getfiles202603filesstatPathGetMetadata.
+type Getfiles202603filesstatPathGetMetadataParams struct {
+	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
+}
+
+// Getfiles202603filesFileIdGetByIdParams defines parameters for Getfiles202603filesFileIdGetById.
+type Getfiles202603filesFileIdGetByIdParams struct {
+	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
+}
+
+// Putfiles202603filesFileIdReplaceMultipartBody defines parameters for Putfiles202603filesFileIdReplace.
+type Putfiles202603filesFileIdReplaceMultipartBody struct {
+	CharsetHunch *string             `json:"charsetHunch,omitempty"`
+	File         *openapi_types.File `json:"file,omitempty"`
+	Options      *string             `json:"options,omitempty"`
+}
+
+// Getfiles202603filesFileIdsignedUrlGetSignedUrlParams defines parameters for Getfiles202603filesFileIdsignedUrlGetSignedUrl.
+type Getfiles202603filesFileIdsignedUrlGetSignedUrlParams struct {
+	ExpirationSeconds *int64                                                    `form:"expirationSeconds,omitempty" json:"expirationSeconds,omitempty"`
+	Size              *Getfiles202603filesFileIdsignedUrlGetSignedUrlParamsSize `form:"size,omitempty" json:"size,omitempty"`
+	Upscale           *bool                                                     `form:"upscale,omitempty" json:"upscale,omitempty"`
+}
+
+// Getfiles202603filesFileIdsignedUrlGetSignedUrlParamsSize defines parameters for Getfiles202603filesFileIdsignedUrlGetSignedUrl.
+type Getfiles202603filesFileIdsignedUrlGetSignedUrlParamsSize string
+
+// Getfiles202603folderssearchDoSearchParams defines parameters for Getfiles202603folderssearchDoSearch.
+type Getfiles202603folderssearchDoSearchParams struct {
+	// After The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.
+	After        *string    `form:"after,omitempty" json:"after,omitempty"`
+	Before       *string    `form:"before,omitempty" json:"before,omitempty"`
+	CreatedAt    *time.Time `form:"createdAt,omitempty" json:"createdAt,omitempty"`
+	CreatedAtGte *time.Time `form:"createdAtGte,omitempty" json:"createdAtGte,omitempty"`
+	CreatedAtLte *time.Time `form:"createdAtLte,omitempty" json:"createdAtLte,omitempty"`
+	IdGte        *int64     `form:"idGte,omitempty" json:"idGte,omitempty"`
+	IdLte        *int64     `form:"idLte,omitempty" json:"idLte,omitempty"`
+	Ids          *[]int64   `form:"ids,omitempty" json:"ids,omitempty"`
+
+	// Limit The maximum number of results to display per page.
+	Limit           *int32     `form:"limit,omitempty" json:"limit,omitempty"`
+	Name            *string    `form:"name,omitempty" json:"name,omitempty"`
+	ParentFolderIds *[]int64   `form:"parentFolderIds,omitempty" json:"parentFolderIds,omitempty"`
+	Path            *string    `form:"path,omitempty" json:"path,omitempty"`
+	Properties      *[]string  `form:"properties,omitempty" json:"properties,omitempty"`
+	Sort            *[]string  `form:"sort,omitempty" json:"sort,omitempty"`
+	UpdatedAt       *time.Time `form:"updatedAt,omitempty" json:"updatedAt,omitempty"`
+	UpdatedAtGte    *time.Time `form:"updatedAtGte,omitempty" json:"updatedAtGte,omitempty"`
+	UpdatedAtLte    *time.Time `form:"updatedAtLte,omitempty" json:"updatedAtLte,omitempty"`
+}
+
+// Getfiles202603foldersFolderIdGetByIdParams defines parameters for Getfiles202603foldersFolderIdGetById.
+type Getfiles202603foldersFolderIdGetByIdParams struct {
+	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
+}
+
+// Getfiles202603foldersFolderPathGetByPathParams defines parameters for Getfiles202603foldersFolderPathGetByPath.
+type Getfiles202603foldersFolderPathGetByPathParams struct {
+	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
+}
+
+// Getmarketingcampaigns202603marketingcampaignsv3Params defines parameters for Getmarketingcampaigns202603marketingcampaignsv3.
+type Getmarketingcampaigns202603marketingcampaignsv3Params struct {
+	After      *string   `form:"after,omitempty" json:"after,omitempty"`
+	Limit      *int32    `form:"limit,omitempty" json:"limit,omitempty"`
+	Name       *string   `form:"name,omitempty" json:"name,omitempty"`
+	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
+	Sort       *string   `form:"sort,omitempty" json:"sort,omitempty"`
+}
+
+// Postmarketingcampaigns202603batchreadParams defines parameters for Postmarketingcampaigns202603batchread.
+type Postmarketingcampaigns202603batchreadParams struct {
+	// EndDate End date to fetch asset metrics, formatted as YYYY-MM-DD. This date is used to fetch the metrics associated with the assets for a specified period.  If not provided, no asset metrics will be fetched.
+	// Example: 2024-01-27
+	EndDate *string `form:"endDate,omitempty" json:"endDate,omitempty"`
+
+	// Properties A comma-separated list of the properties to be returned in the response. If any of the specified properties has empty value on the requested object(s), they will be ignored and not returned in response. If this parameter is empty, the response will include an empty properties map.
+	// Example: hs_name, hs_campaign_status, hs_notes
+	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
+
+	// StartDate Start date to fetch asset metrics, formatted as YYYY-MM-DD. This date is used to fetch the metrics associated with the assets for a specified period.  If not provided, no asset metrics will be fetched.
+	// Example: 2023-01-20
+	StartDate *string `form:"startDate,omitempty" json:"startDate,omitempty"`
+}
+
+// Getmarketingcampaigns202603CampaignGuidParams defines parameters for Getmarketingcampaigns202603CampaignGuid.
+type Getmarketingcampaigns202603CampaignGuidParams struct {
+	// EndDate The end date for fetching asset metrics, in YYYY-MM-DD format.
+	// Optional. Example: 2000-01-27
+	EndDate *string `form:"endDate,omitempty" json:"endDate,omitempty"`
+
+	// Properties A comma-separated list of properties to include in the response.
+	//   Unrecognized properties are ignored. Optional. Example: hs_name,hs_budget, hs_notes
+	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
+
+	// StartDate The start date for fetching asset metrics, in YYYY-MM-DD format.
+	// Optional. Example: 2000-01-20
+	StartDate *string `form:"startDate,omitempty" json:"startDate,omitempty"`
+}
+
+// Getmarketingcampaigns202603CampaignGuidassetsAssetTypeParams defines parameters for Getmarketingcampaigns202603CampaignGuidassetsAssetType.
+type Getmarketingcampaigns202603CampaignGuidassetsAssetTypeParams struct {
+	// After The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.
+	After *string `form:"after,omitempty" json:"after,omitempty"`
+
+	// EndDate End date to fetch asset metrics, formatted as YYYY-MM-DD. This date is used to fetch the metrics associated with the assets for a specified period.  If not provided, no asset metrics will be fetched.
+	// Example: 2024-01-27
+	EndDate *string `form:"endDate,omitempty" json:"endDate,omitempty"`
+
+	// Limit The maximum number of results to display per page.
+	Limit *string `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// StartDate Start date to fetch asset metrics, formatted as YYYY-MM-DD. This date is used to fetch the metrics associated with the assets for a specified period.  If not provided, no asset metrics will be fetched.
+	// Example: 2023-01-20
+	StartDate *string `form:"startDate,omitempty" json:"startDate,omitempty"`
+}
+
+// Getmarketingcampaigns202603CampaignGuidreportscontactsContactTypeParams defines parameters for Getmarketingcampaigns202603CampaignGuidreportscontactsContactType.
+type Getmarketingcampaigns202603CampaignGuidreportscontactsContactTypeParams struct {
+	// After The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.
+	After *string `form:"after,omitempty" json:"after,omitempty"`
+
+	// EndDate The end date for fetching contact data, in YYYY-MM-DD format.
+	// Optional. Example: 2000-01-27
+	EndDate *string `form:"endDate,omitempty" json:"endDate,omitempty"`
+
+	// Limit The maximum number of results to display per page.
+	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// StartDate The start date for fetching contact data, in YYYY-MM-DD format.
+	// Optional. Example: 2000-01-20
+	StartDate *string `form:"startDate,omitempty" json:"startDate,omitempty"`
+}
+
+// Getmarketingcampaigns202603CampaignGuidreportsmetricsParams defines parameters for Getmarketingcampaigns202603CampaignGuidreportsmetrics.
+type Getmarketingcampaigns202603CampaignGuidreportsmetricsParams struct {
+	// EndDate The end date for fetching attribution data, in YYYY-MM-DD format.
+	// Optional. Example: 2000-01-27
+	EndDate *string `form:"endDate,omitempty" json:"endDate,omitempty"`
+
+	// StartDate The start date for fetching attribution data, in YYYY-MM-DD format.
+	// Optional. Example: 2000-01-20
+	StartDate *string `form:"startDate,omitempty" json:"startDate,omitempty"`
+}
+
+// Getmarketingcampaigns202603CampaignGuidreportsrevenueParams defines parameters for Getmarketingcampaigns202603CampaignGuidreportsrevenue.
+type Getmarketingcampaigns202603CampaignGuidreportsrevenueParams struct {
+	// AttributionModel The revenue attribution model used to calculate deal revenue credit. Defaults to LINEAR if not specified. Enum values: LINEAR,            FIRST_INTERACTION, LAST_INTERACTION, FULL_PATH, U_SHAPED, W_SHAPED,          TIME_DECAY, J_SHAPED, INVERSE_J_SHAPED
+	AttributionModel *string `form:"attributionModel,omitempty" json:"attributionModel,omitempty"`
+
+	// EndDate End date to fetch attribution data, YYYY-MM-DD
+	EndDate *string `form:"endDate,omitempty" json:"endDate,omitempty"`
+
+	// StartDate Start date to fetch attribution data, YYYY-MM-DD
+	StartDate *string `form:"startDate,omitempty" json:"startDate,omitempty"`
+}
+
+// Getmarketingemails202603marketingemailsv3Params defines parameters for Getmarketingemails202603marketingemailsv3.
+type Getmarketingemails202603marketingemailsv3Params struct {
+	// After The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.
+	After *string `form:"after,omitempty" json:"after,omitempty"`
+
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+
+	// Campaign Filter emails by campaign name.
+	Campaign *string `form:"campaign,omitempty" json:"campaign,omitempty"`
+
+	// CreatedAfter Filter emails created after a specific date. Format should be date-time.
+	CreatedAfter *time.Time `form:"createdAfter,omitempty" json:"createdAfter,omitempty"`
+
+	// CreatedAt Filter emails by the exact creation date. Format should be date-time.
+	CreatedAt *time.Time `form:"createdAt,omitempty" json:"createdAt,omitempty"`
+
+	// CreatedBefore Filter emails created before a specific date. Format should be date-time.
+	CreatedBefore *time.Time `form:"createdBefore,omitempty" json:"createdBefore,omitempty"`
+
+	// IncludedProperties Specify additional properties to include in the response. Accepts an array of strings.
+	IncludedProperties *[]string `form:"includedProperties,omitempty" json:"includedProperties,omitempty"`
+
+	// IncludeStats Include statistics in the response. Accepts a boolean value.
+	IncludeStats *bool `form:"includeStats,omitempty" json:"includeStats,omitempty"`
+
+	// IsPublished Filter emails by their published status. Accepts a boolean value.
+	IsPublished *bool `form:"isPublished,omitempty" json:"isPublished,omitempty"`
+
+	// Limit The maximum number of results to display per page.
+	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// MarketingCampaignNames Include marketing campaign names in the response. Accepts a boolean value.
+	MarketingCampaignNames *bool `form:"marketingCampaignNames,omitempty" json:"marketingCampaignNames,omitempty"`
+
+	// PublishedAfter Filter emails published after a specific date. Format should be date-time.
+	PublishedAfter *time.Time `form:"publishedAfter,omitempty" json:"publishedAfter,omitempty"`
+
+	// PublishedAt Filter emails by the exact publication date. Format should be date-time.
+	PublishedAt *time.Time `form:"publishedAt,omitempty" json:"publishedAt,omitempty"`
+
+	// PublishedBefore Filter emails published before a specific date. Format should be date-time.
+	PublishedBefore *time.Time `form:"publishedBefore,omitempty" json:"publishedBefore,omitempty"`
+
+	// Sort Specify the sorting order for the results. Accepts an array of strings.
+	Sort *[]string `form:"sort,omitempty" json:"sort,omitempty"`
+
+	// Type Filter emails by type. Accepts specific email types such as AB_EMAIL, BATCH_EMAIL, etc.
+	Type *Getmarketingemails202603marketingemailsv3ParamsType `form:"type,omitempty" json:"type,omitempty"`
+
+	// UpdatedAfter Filter emails updated after a specific date. Format should be date-time.
+	UpdatedAfter *time.Time `form:"updatedAfter,omitempty" json:"updatedAfter,omitempty"`
+
+	// UpdatedAt Filter emails by the exact update date. Format should be date-time.
+	UpdatedAt *time.Time `form:"updatedAt,omitempty" json:"updatedAt,omitempty"`
+
+	// UpdatedBefore Filter emails updated before a specific date. Format should be date-time.
+	UpdatedBefore *time.Time `form:"updatedBefore,omitempty" json:"updatedBefore,omitempty"`
+
+	// VariantStats Include variant statistics in the response. Accepts a boolean value.
+	VariantStats *bool `form:"variantStats,omitempty" json:"variantStats,omitempty"`
+
+	// WorkflowNames Include workflow names in the response. Accepts a boolean value.
+	WorkflowNames *bool `form:"workflowNames,omitempty" json:"workflowNames,omitempty"`
+}
+
+// Getmarketingemails202603marketingemailsv3ParamsType defines parameters for Getmarketingemails202603marketingemailsv3.
+type Getmarketingemails202603marketingemailsv3ParamsType string
+
+// Getmarketingemails202603statisticshistogramGetHistogramParams defines parameters for Getmarketingemails202603statisticshistogramGetHistogram.
+type Getmarketingemails202603statisticshistogramGetHistogramParams struct {
+	// EmailIds A list of email IDs to filter the statistics. This is a form-style parameter that can include multiple IDs.
+	EmailIds *[]int64 `form:"emailIds,omitempty" json:"emailIds,omitempty"`
+
+	// EndTimestamp The end timestamp for the statistics data range. Must be in date-time format.
+	EndTimestamp *time.Time `form:"endTimestamp,omitempty" json:"endTimestamp,omitempty"`
+
+	// Interval The time interval for the histogram. Valid values are YEAR, QUARTER, MONTH, WEEK, DAY, HOUR, QUARTER_HOUR, MINUTE, and SECOND.
+	Interval *Getmarketingemails202603statisticshistogramGetHistogramParamsInterval `form:"interval,omitempty" json:"interval,omitempty"`
+
+	// StartTimestamp The start timestamp for the statistics data range. Must be in date-time format.
+	StartTimestamp *time.Time `form:"startTimestamp,omitempty" json:"startTimestamp,omitempty"`
+}
+
+// Getmarketingemails202603statisticshistogramGetHistogramParamsInterval defines parameters for Getmarketingemails202603statisticshistogramGetHistogram.
+type Getmarketingemails202603statisticshistogramGetHistogramParamsInterval string
+
+// Getmarketingemails202603statisticslistGetEmailsListParams defines parameters for Getmarketingemails202603statisticslistGetEmailsList.
+type Getmarketingemails202603statisticslistGetEmailsListParams struct {
+	// EmailIds A list of email IDs to filter the statistics. This should be a comma-separated list of integer IDs.
+	EmailIds *[]int64 `form:"emailIds,omitempty" json:"emailIds,omitempty"`
+
+	// EndTimestamp The end of the time range for the statistics, in ISO 8601 date-time format.
+	EndTimestamp *time.Time `form:"endTimestamp,omitempty" json:"endTimestamp,omitempty"`
+
+	// Property The specific property of the email statistics to retrieve.
+	Property *string `form:"property,omitempty" json:"property,omitempty"`
+
+	// StartTimestamp The start of the time range for the statistics, in ISO 8601 date-time format.
+	StartTimestamp *time.Time `form:"startTimestamp,omitempty" json:"startTimestamp,omitempty"`
+}
+
+// Deletemarketingemails202603EmailIdArchiveParams defines parameters for Deletemarketingemails202603EmailIdArchive.
+type Deletemarketingemails202603EmailIdArchiveParams struct {
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+}
+
+// Getmarketingemails202603EmailIdGetByIdParams defines parameters for Getmarketingemails202603EmailIdGetById.
+type Getmarketingemails202603EmailIdGetByIdParams struct {
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+
+	// IncludedProperties A list of specific properties to include in the response.
+	IncludedProperties *[]string `form:"includedProperties,omitempty" json:"includedProperties,omitempty"`
+
+	// IncludeStats Whether to include statistics in the response.
+	IncludeStats *bool `form:"includeStats,omitempty" json:"includeStats,omitempty"`
+
+	// MarketingCampaignNames Whether to include marketing campaign names in the response.
+	MarketingCampaignNames *bool `form:"marketingCampaignNames,omitempty" json:"marketingCampaignNames,omitempty"`
+
+	// VariantStats Whether to include variant statistics in the response.
+	VariantStats *bool `form:"variantStats,omitempty" json:"variantStats,omitempty"`
+
+	// WorkflowNames Whether to include workflow names in the response.
+	WorkflowNames *bool `form:"workflowNames,omitempty" json:"workflowNames,omitempty"`
+}
+
+// Patchmarketingemails202603EmailIdUpdateParams defines parameters for Patchmarketingemails202603EmailIdUpdate.
+type Patchmarketingemails202603EmailIdUpdateParams struct {
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+}
+
+// Getmarketingemails202603EmailIdabTestgetVariationGetAbTestVariationParams defines parameters for Getmarketingemails202603EmailIdabTestgetVariationGetAbTestVariation.
+type Getmarketingemails202603EmailIdabTestgetVariationGetAbTestVariationParams struct {
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+
+	// IncludedProperties An array of property names to include in the response.
+	IncludedProperties *[]string `form:"includedProperties,omitempty" json:"includedProperties,omitempty"`
+
+	// IncludeStats Whether to include statistics in the response. Accepts a boolean value.
+	IncludeStats *bool `form:"includeStats,omitempty" json:"includeStats,omitempty"`
+
+	// MarketingCampaignNames Whether to include marketing campaign names in the response. Accepts a boolean value.
+	MarketingCampaignNames *bool `form:"marketingCampaignNames,omitempty" json:"marketingCampaignNames,omitempty"`
+
+	// VariantStats Whether to include variant-specific statistics. Accepts a boolean value.
+	VariantStats *bool `form:"variantStats,omitempty" json:"variantStats,omitempty"`
+
+	// WorkflowNames Whether to include workflow names in the response. Accepts a boolean value.
+	WorkflowNames *bool `form:"workflowNames,omitempty" json:"workflowNames,omitempty"`
+}
+
+// Getmarketingemails202603EmailIdrevisionsGetRevisionsParams defines parameters for Getmarketingemails202603EmailIdrevisionsGetRevisions.
+type Getmarketingemails202603EmailIdrevisionsGetRevisionsParams struct {
+	// After The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.
+	After *string `form:"after,omitempty" json:"after,omitempty"`
+
+	// Before A cursor token for pagination to retrieve results before a specific point.
+	Before *string `form:"before,omitempty" json:"before,omitempty"`
+
+	// Limit The maximum number of results to display per page.
+	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
+}
+
+// GetmarketingmarketingEvents202603marketingmarketingEventsv3Params defines parameters for GetmarketingmarketingEvents202603marketingmarketingEventsv3.
+type GetmarketingmarketingEvents202603marketingmarketingEventsv3Params struct {
+	// After The cursor indicating the position of the last retrieved item.
+	After *string `form:"after,omitempty" json:"after,omitempty"`
+
+	// Limit The limit for response size. The default value is 10, the max number is 100
+	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
+}
+
+// PostmarketingmarketingEvents202603attendanceExternalEventIdSubscriberStatecreateRecordByContactIdsParams defines parameters for PostmarketingmarketingEvents202603attendanceExternalEventIdSubscriberStatecreateRecordByContactIds.
+type PostmarketingmarketingEvents202603attendanceExternalEventIdSubscriberStatecreateRecordByContactIdsParams struct {
+	// ExternalAccountId The account ID associated with the marketing event in the external event application.
+	ExternalAccountId *string `form:"externalAccountId,omitempty" json:"externalAccountId,omitempty"`
+}
+
+// PostmarketingmarketingEvents202603attendanceExternalEventIdSubscriberStateemailCreateRecordByContactEmailsParams defines parameters for PostmarketingmarketingEvents202603attendanceExternalEventIdSubscriberStateemailCreateRecordByContactEmails.
+type PostmarketingmarketingEvents202603attendanceExternalEventIdSubscriberStateemailCreateRecordByContactEmailsParams struct {
+	// ExternalAccountId The account ID associated with the marketing event in the external event application.
+	ExternalAccountId *string `form:"externalAccountId,omitempty" json:"externalAccountId,omitempty"`
+}
+
+// GetmarketingmarketingEvents202603eventssearchDoSearchParams defines parameters for GetmarketingmarketingEvents202603eventssearchDoSearch.
+type GetmarketingmarketingEvents202603eventssearchDoSearchParams struct {
+	// Q The search query string used to filter marketing events.
+	Q string `form:"q" json:"q"`
+}
+
+// DeletemarketingmarketingEvents202603eventsExternalEventIdArchiveParams defines parameters for DeletemarketingmarketingEvents202603eventsExternalEventIdArchive.
+type DeletemarketingmarketingEvents202603eventsExternalEventIdArchiveParams struct {
+	// ExternalAccountId The account ID associated with the marketing event in the external event application. This parameter is required.
+	ExternalAccountId string `form:"externalAccountId" json:"externalAccountId"`
+}
+
+// GetmarketingmarketingEvents202603eventsExternalEventIdGetDetailsParams defines parameters for GetmarketingmarketingEvents202603eventsExternalEventIdGetDetails.
+type GetmarketingmarketingEvents202603eventsExternalEventIdGetDetailsParams struct {
+	// ExternalAccountId The accountId associated with the marketing event in the external event application.
+	ExternalAccountId string `form:"externalAccountId" json:"externalAccountId"`
+}
+
+// PatchmarketingmarketingEvents202603eventsExternalEventIdUpdateParams defines parameters for PatchmarketingmarketingEvents202603eventsExternalEventIdUpdate.
+type PatchmarketingmarketingEvents202603eventsExternalEventIdUpdateParams struct {
+	// ExternalAccountId The account ID associated with this marketing event in the external event application.
+	ExternalAccountId string `form:"externalAccountId" json:"externalAccountId"`
+}
+
+// PostmarketingmarketingEvents202603eventsExternalEventIdcancelCancelParams defines parameters for PostmarketingmarketingEvents202603eventsExternalEventIdcancelCancel.
+type PostmarketingmarketingEvents202603eventsExternalEventIdcancelCancelParams struct {
+	// ExternalAccountId The unique identifier for the account associated with the marketing event in the external event application.
+	ExternalAccountId string `form:"externalAccountId" json:"externalAccountId"`
+}
+
+// PostmarketingmarketingEvents202603eventsExternalEventIdcompleteCompleteParams defines parameters for PostmarketingmarketingEvents202603eventsExternalEventIdcompleteComplete.
+type PostmarketingmarketingEvents202603eventsExternalEventIdcompleteCompleteParams struct {
+	// ExternalAccountId The ID of the external account associated with the marketing event.
+	ExternalAccountId string `form:"externalAccountId" json:"externalAccountId"`
+}
+
+// PostmarketingmarketingEvents202603eventsExternalEventIdSubscriberStateemailUpsertUpsertByContactEmailParams defines parameters for PostmarketingmarketingEvents202603eventsExternalEventIdSubscriberStateemailUpsertUpsertByContactEmail.
+type PostmarketingmarketingEvents202603eventsExternalEventIdSubscriberStateemailUpsertUpsertByContactEmailParams struct {
+	// ExternalAccountId The account ID associated with the marketing event in the external event application. This parameter is required.
+	ExternalAccountId string `form:"externalAccountId" json:"externalAccountId"`
+}
+
+// PostmarketingmarketingEvents202603eventsExternalEventIdSubscriberStateupsertUpsertByContactIdParams defines parameters for PostmarketingmarketingEvents202603eventsExternalEventIdSubscriberStateupsertUpsertByContactId.
+type PostmarketingmarketingEvents202603eventsExternalEventIdSubscriberStateupsertUpsertByContactIdParams struct {
+	// ExternalAccountId The account ID associated with the marketing event in the external event application.
+	ExternalAccountId string `form:"externalAccountId" json:"externalAccountId"`
+}
+
+// GetmarketingmarketingEvents202603participationscontactsContactIdentifierbreakdownGetParticipationsBreakdownByContactIdParams defines parameters for GetmarketingmarketingEvents202603participationscontactsContactIdentifierbreakdownGetParticipationsBreakdownByContactId.
+type GetmarketingmarketingEvents202603participationscontactsContactIdentifierbreakdownGetParticipationsBreakdownByContactIdParams struct {
+	// After The cursor indicating the position of the last retrieved item.
+	After *string `form:"after,omitempty" json:"after,omitempty"`
+
+	// Limit The limit for response size. The default value is 10, the max number is 100
+	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// State The participation state value. It may be REGISTERED, CANCELLED, ATTENDED, NO_SHOW
+	State *string `form:"state,omitempty" json:"state,omitempty"`
+}
+
+// GetmarketingmarketingEvents202603participationsExternalAccountIdExternalEventIdbreakdownGetParticipationsBreakdownByExternalEventIdParams defines parameters for GetmarketingmarketingEvents202603participationsExternalAccountIdExternalEventIdbreakdownGetParticipationsBreakdownByExternalEventId.
+type GetmarketingmarketingEvents202603participationsExternalAccountIdExternalEventIdbreakdownGetParticipationsBreakdownByExternalEventIdParams struct {
+	// After The cursor indicating the position of the last retrieved item.
+	After *string `form:"after,omitempty" json:"after,omitempty"`
+
+	// ContactIdentifier The identifier of the Contact. It may be email or internal id.
+	ContactIdentifier *string `form:"contactIdentifier,omitempty" json:"contactIdentifier,omitempty"`
+
+	// Limit The limit for response size. The default value is 10, the max number is 100
+	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// State The participation state value. It may be REGISTERED, CANCELLED, ATTENDED, NO_SHOW
+	State *string `form:"state,omitempty" json:"state,omitempty"`
+}
+
+// GetmarketingmarketingEvents202603participationsMarketingEventIdbreakdownGetParticipationsBreakdownByMarketingEventIdParams defines parameters for GetmarketingmarketingEvents202603participationsMarketingEventIdbreakdownGetParticipationsBreakdownByMarketingEventId.
+type GetmarketingmarketingEvents202603participationsMarketingEventIdbreakdownGetParticipationsBreakdownByMarketingEventIdParams struct {
+	// After The cursor indicating the position of the last retrieved item.
+	After *string `form:"after,omitempty" json:"after,omitempty"`
+
+	// ContactIdentifier The identifier of the Contact. It may be email or internal id.
+	ContactIdentifier *string `form:"contactIdentifier,omitempty" json:"contactIdentifier,omitempty"`
+
+	// Limit The limit for response size. The default value is 10, the max number is 100
+	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// State The participation state value. It may be REGISTERED, CANCELLED, ATTENDED, NO_SHOW
+	State *string `form:"state,omitempty" json:"state,omitempty"`
+}
+
+// Getmarketingtransactional202603smtpTokensGetTokensPageParams defines parameters for Getmarketingtransactional202603smtpTokensGetTokensPage.
+type Getmarketingtransactional202603smtpTokensGetTokensPageParams struct {
+	// After The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.
+	After *string `form:"after,omitempty" json:"after,omitempty"`
+
+	// CampaignName Filter the results by the name of the campaign. This is a string parameter.
+	CampaignName *string `form:"campaignName,omitempty" json:"campaignName,omitempty"`
+
+	// EmailCampaignId Filter the results by the unique identifier of the email campaign. This is a string parameter.
+	EmailCampaignId *string `form:"emailCampaignId,omitempty" json:"emailCampaignId,omitempty"`
+
+	// Limit The maximum number of results to display per page.
+	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
+}
+
+// GetmediaBridge202603AppIdpropertiesObjectTypeParams defines parameters for GetmediaBridge202603AppIdpropertiesObjectType.
+type GetmediaBridge202603AppIdpropertiesObjectTypeParams struct {
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+
+	// Properties A comma-separated list of property names to include in the response.
+	Properties *string `form:"properties,omitempty" json:"properties,omitempty"`
+}
+
+// GetmediaBridge202603AppIdpropertiesObjectTypePropertyNameParams defines parameters for GetmediaBridge202603AppIdpropertiesObjectTypePropertyName.
+type GetmediaBridge202603AppIdpropertiesObjectTypePropertyNameParams struct {
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+
+	// Properties A comma-separated list of property names to include in the response.
+	Properties *string `form:"properties,omitempty" json:"properties,omitempty"`
+}
+
+// GetmediaBridge202603AppIdschemasParams defines parameters for GetmediaBridge202603AppIdschemas.
+type GetmediaBridge202603AppIdschemasParams struct {
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+}
+
+// GetmediaBridge202603AppIdsettingsobjectDefinitionsMediaTypeParams defines parameters for GetmediaBridge202603AppIdsettingsobjectDefinitionsMediaType.
+type GetmediaBridge202603AppIdsettingsobjectDefinitionsMediaTypeParams struct {
+	// IncludeFullDefinition A boolean indicating whether to include the full definition of the object. If not specified, the default behavior is to return a partial definition.
+	IncludeFullDefinition *bool `form:"includeFullDefinition,omitempty" json:"includeFullDefinition,omitempty"`
+}
+
+// GetmediaBridge202603AppIdsettingsobjectDefinitionsMediaTypeParamsMediaType defines parameters for GetmediaBridge202603AppIdsettingsobjectDefinitionsMediaType.
+type GetmediaBridge202603AppIdsettingsobjectDefinitionsMediaTypeParamsMediaType string
+
+// DeletemediaBridge202603AppIdsettingsoembedDomainsParams defines parameters for DeletemediaBridge202603AppIdsettingsoembedDomains.
+type DeletemediaBridge202603AppIdsettingsoembedDomainsParams struct {
+	// DomainPortalId The portal ID associated with the domain. Defaults to -1.
+	DomainPortalId *int32 `form:"domainPortalId,omitempty" json:"domainPortalId,omitempty"`
+
+	// Id The unique identifier of the oEmbed domain to delete.
+	Id *int64 `form:"id,omitempty" json:"id,omitempty"`
+}
+
+// GetmediaBridge202603AppIdsettingsoembedDomainsParams defines parameters for GetmediaBridge202603AppIdsettingsoembedDomains.
+type GetmediaBridge202603AppIdsettingsoembedDomainsParams struct {
+	// DomainPortalId The ID of the domain portal to filter the oEmbed domains. Defaults to -1.
+	DomainPortalId *int32 `form:"domainPortalId,omitempty" json:"domainPortalId,omitempty"`
+}
+
+// GetmetanetworkOrigins202603ipRangesmetanetworkOrigins202509ipRangesParams defines parameters for GetmetanetworkOrigins202603ipRangesmetanetworkOrigins202509ipRanges.
+type GetmetanetworkOrigins202603ipRangesmetanetworkOrigins202509ipRangesParams struct {
+	Direction *[]GetmetanetworkOrigins202603ipRangesmetanetworkOrigins202509ipRangesParamsDirection `form:"direction,omitempty" json:"direction,omitempty"`
+	Service   *[]GetmetanetworkOrigins202603ipRangesmetanetworkOrigins202509ipRangesParamsService   `form:"service,omitempty" json:"service,omitempty"`
+}
+
+// GetmetanetworkOrigins202603ipRangesmetanetworkOrigins202509ipRangesParamsDirection defines parameters for GetmetanetworkOrigins202603ipRangesmetanetworkOrigins202509ipRanges.
+type GetmetanetworkOrigins202603ipRangesmetanetworkOrigins202509ipRangesParamsDirection string
+
+// GetmetanetworkOrigins202603ipRangesmetanetworkOrigins202509ipRangesParamsService defines parameters for GetmetanetworkOrigins202603ipRangesmetanetworkOrigins202509ipRanges.
+type GetmetanetworkOrigins202603ipRangesmetanetworkOrigins202509ipRangesParamsService string
+
+// GetmetanetworkOrigins202603ipRangessimplemetanetworkOrigins202509ipRangessimpleParams defines parameters for GetmetanetworkOrigins202603ipRangessimplemetanetworkOrigins202509ipRangessimple.
+type GetmetanetworkOrigins202603ipRangessimplemetanetworkOrigins202509ipRangessimpleParams struct {
+	Direction *[]GetmetanetworkOrigins202603ipRangessimplemetanetworkOrigins202509ipRangessimpleParamsDirection `form:"direction,omitempty" json:"direction,omitempty"`
+	Service   *[]GetmetanetworkOrigins202603ipRangessimplemetanetworkOrigins202509ipRangessimpleParamsService   `form:"service,omitempty" json:"service,omitempty"`
+}
+
+// GetmetanetworkOrigins202603ipRangessimplemetanetworkOrigins202509ipRangessimpleParamsDirection defines parameters for GetmetanetworkOrigins202603ipRangessimplemetanetworkOrigins202509ipRangessimple.
+type GetmetanetworkOrigins202603ipRangessimplemetanetworkOrigins202509ipRangessimpleParamsDirection string
+
+// GetmetanetworkOrigins202603ipRangessimplemetanetworkOrigins202509ipRangessimpleParamsService defines parameters for GetmetanetworkOrigins202603ipRangessimplemetanetworkOrigins202509ipRangessimple.
+type GetmetanetworkOrigins202603ipRangessimplemetanetworkOrigins202509ipRangessimpleParamsService string
+
+// Postoauth202603tokenoauthv3tokenFormdataBody defines parameters for Postoauth202603tokenoauthv3token.
+type Postoauth202603tokenoauthv3tokenFormdataBody struct {
+	Assertion           *string                                                `form:"assertion,omitempty" json:"assertion,omitempty"`
+	ClientAssertion     *string                                                `form:"client_assertion,omitempty" json:"client_assertion,omitempty"`
+	ClientAssertionType *string                                                `form:"client_assertion_type,omitempty" json:"client_assertion_type,omitempty"`
+	ClientId            *string                                                `form:"client_id,omitempty" json:"client_id,omitempty"`
+	ClientSecret        *string                                                `form:"client_secret,omitempty" json:"client_secret,omitempty"`
+	Code                *string                                                `form:"code,omitempty" json:"code,omitempty"`
+	CodeVerifier        *string                                                `form:"code_verifier,omitempty" json:"code_verifier,omitempty"`
+	GrantType           *Postoauth202603tokenoauthv3tokenFormdataBodyGrantType `form:"grant_type,omitempty" json:"grant_type,omitempty"`
+	RedirectUri         *string                                                `form:"redirect_uri,omitempty" json:"redirect_uri,omitempty"`
+	RefreshToken        *string                                                `form:"refresh_token,omitempty" json:"refresh_token,omitempty"`
+	Scope               *string                                                `form:"scope,omitempty" json:"scope,omitempty"`
+}
+
+// Postoauth202603tokenoauthv3tokenFormdataBodyGrantType defines parameters for Postoauth202603tokenoauthv3token.
+type Postoauth202603tokenoauthv3tokenFormdataBodyGrantType string
+
+// Postoauth202603tokenintrospectoauthv3tokenintrospectFormdataBody defines parameters for Postoauth202603tokenintrospectoauthv3tokenintrospect.
+type Postoauth202603tokenintrospectoauthv3tokenintrospectFormdataBody struct {
+	ClientId      *string `form:"client_id,omitempty" json:"client_id,omitempty"`
+	ClientSecret  *string `form:"client_secret,omitempty" json:"client_secret,omitempty"`
+	Token         *string `form:"token,omitempty" json:"token,omitempty"`
+	TokenTypeHint *string `form:"token_type_hint,omitempty" json:"token_type_hint,omitempty"`
+}
+
+// Postoauth202603tokenrevokeoauthv3tokenrevokeFormdataBody defines parameters for Postoauth202603tokenrevokeoauthv3tokenrevoke.
+type Postoauth202603tokenrevokeoauthv3tokenrevokeFormdataBody struct {
+	ClientId      *string `form:"client_id,omitempty" json:"client_id,omitempty"`
+	ClientSecret  *string `form:"client_secret,omitempty" json:"client_secret,omitempty"`
+	Token         *string `form:"token,omitempty" json:"token,omitempty"`
+	TokenTypeHint *string `form:"token_type_hint,omitempty" json:"token_type_hint,omitempty"`
+}
+
+// Postscheduler202603meetingscalendarParams defines parameters for Postscheduler202603meetingscalendar.
+type Postscheduler202603meetingscalendarParams struct {
+	OrganizerUserId string `form:"organizerUserId" json:"organizerUserId"`
+}
+
+// Getscheduler202603meetingsmeetingLinksParams defines parameters for Getscheduler202603meetingsmeetingLinks.
+type Getscheduler202603meetingsmeetingLinksParams struct {
+	// After The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.
+	After *string `form:"after,omitempty" json:"after,omitempty"`
+
+	// Limit The maximum number of results to display per page.
+	Limit           *int32                                            `form:"limit,omitempty" json:"limit,omitempty"`
+	Name            *string                                           `form:"name,omitempty" json:"name,omitempty"`
+	OrganizerUserId *string                                           `form:"organizerUserId,omitempty" json:"organizerUserId,omitempty"`
+	Type            *Getscheduler202603meetingsmeetingLinksParamsType `form:"type,omitempty" json:"type,omitempty"`
+}
+
+// Getscheduler202603meetingsmeetingLinksParamsType defines parameters for Getscheduler202603meetingsmeetingLinks.
+type Getscheduler202603meetingsmeetingLinksParamsType string
+
+// Getscheduler202603meetingsmeetingLinksbookavailabilityPageSlugParams defines parameters for Getscheduler202603meetingsmeetingLinksbookavailabilityPageSlug.
+type Getscheduler202603meetingsmeetingLinksbookavailabilityPageSlugParams struct {
+	Timezone    string `form:"timezone" json:"timezone"`
+	MonthOffset *int32 `form:"monthOffset,omitempty" json:"monthOffset,omitempty"`
+}
+
+// Getscheduler202603meetingsmeetingLinksbookSlugParams defines parameters for Getscheduler202603meetingsmeetingLinksbookSlug.
+type Getscheduler202603meetingsmeetingLinksbookSlugParams struct {
+	Timezone string `form:"timezone" json:"timezone"`
+}
+
+// Getsettingscurrencies202603exchangeRatesParams defines parameters for Getsettingscurrencies202603exchangeRates.
+type Getsettingscurrencies202603exchangeRatesParams struct {
+	// After The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.
+	After *string `form:"after,omitempty" json:"after,omitempty"`
+
+	// FromCurrencyCode Filter results by the source currency code. Valid values include standard currency codes such as 'USD', 'EUR', etc.
+	FromCurrencyCode *Getsettingscurrencies202603exchangeRatesParamsFromCurrencyCode `form:"fromCurrencyCode,omitempty" json:"fromCurrencyCode,omitempty"`
+
+	// Limit The maximum number of results to display per page.
+	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// ToCurrencyCode Filter results by the target currency code. Valid values include standard currency codes such as 'USD', 'EUR', etc.
+	ToCurrencyCode *Getsettingscurrencies202603exchangeRatesParamsToCurrencyCode `form:"toCurrencyCode,omitempty" json:"toCurrencyCode,omitempty"`
+}
+
+// Getsettingscurrencies202603exchangeRatesParamsFromCurrencyCode defines parameters for Getsettingscurrencies202603exchangeRates.
+type Getsettingscurrencies202603exchangeRatesParamsFromCurrencyCode string
+
+// Getsettingscurrencies202603exchangeRatesParamsToCurrencyCode defines parameters for Getsettingscurrencies202603exchangeRates.
+type Getsettingscurrencies202603exchangeRatesParamsToCurrencyCode string
+
+// Getsettingsusers202603settingsusersv3Params defines parameters for Getsettingsusers202603settingsusersv3.
+type Getsettingsusers202603settingsusersv3Params struct {
+	After *string `form:"after,omitempty" json:"after,omitempty"`
+	Limit *int32  `form:"limit,omitempty" json:"limit,omitempty"`
+}
+
+// Deletesettingsusers202603UserIdArchiveParams defines parameters for Deletesettingsusers202603UserIdArchive.
+type Deletesettingsusers202603UserIdArchiveParams struct {
+	IdProperty *Deletesettingsusers202603UserIdArchiveParamsIdProperty `form:"idProperty,omitempty" json:"idProperty,omitempty"`
+}
+
+// Deletesettingsusers202603UserIdArchiveParamsIdProperty defines parameters for Deletesettingsusers202603UserIdArchive.
+type Deletesettingsusers202603UserIdArchiveParamsIdProperty string
+
+// Getsettingsusers202603UserIdGetByIdParams defines parameters for Getsettingsusers202603UserIdGetById.
+type Getsettingsusers202603UserIdGetByIdParams struct {
+	IdProperty *Getsettingsusers202603UserIdGetByIdParamsIdProperty `form:"idProperty,omitempty" json:"idProperty,omitempty"`
+}
+
+// Getsettingsusers202603UserIdGetByIdParamsIdProperty defines parameters for Getsettingsusers202603UserIdGetById.
+type Getsettingsusers202603UserIdGetByIdParamsIdProperty string
+
+// Putsettingsusers202603UserIdUpdateParams defines parameters for Putsettingsusers202603UserIdUpdate.
+type Putsettingsusers202603UserIdUpdateParams struct {
+	IdProperty *Putsettingsusers202603UserIdUpdateParamsIdProperty `form:"idProperty,omitempty" json:"idProperty,omitempty"`
+}
+
+// Putsettingsusers202603UserIdUpdateParamsIdProperty defines parameters for Putsettingsusers202603UserIdUpdate.
+type Putsettingsusers202603UserIdUpdateParamsIdProperty string
+
+// GettaxRates202603taxRatesParams defines parameters for GettaxRates202603taxRates.
+type GettaxRates202603taxRatesParams struct {
+	// Active A boolean to filter results by their active status.
+	Active *bool `form:"active,omitempty" json:"active,omitempty"`
+
+	// After The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.
+	After *string `form:"after,omitempty" json:"after,omitempty"`
+
+	// Limit The maximum number of results to display per page.
+	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
+}
+
+// GetwebhooksJournaljournalLocal202603batchearliestCountParams defines parameters for GetwebhooksJournaljournalLocal202603batchearliestCount.
+type GetwebhooksJournaljournalLocal202603batchearliestCountParams struct {
+	// InstallPortalId The ID of the installation portal for which to retrieve the webhook journal entries.
+	InstallPortalId *int32 `form:"installPortalId,omitempty" json:"installPortalId,omitempty"`
+}
+
+// GetwebhooksJournaljournalLocal202603batchlatestCountParams defines parameters for GetwebhooksJournaljournalLocal202603batchlatestCount.
+type GetwebhooksJournaljournalLocal202603batchlatestCountParams struct {
+	// InstallPortalId The ID of the portal installation. This parameter is optional and can be used to filter results by a specific portal.
+	InstallPortalId *int32 `form:"installPortalId,omitempty" json:"installPortalId,omitempty"`
+}
+
+// PostwebhooksJournaljournalLocal202603batchreadParams defines parameters for PostwebhooksJournaljournalLocal202603batchread.
+type PostwebhooksJournaljournalLocal202603batchreadParams struct {
+	// InstallPortalId An integer representing the ID of the portal where the installation occurred. This parameter is optional.
+	InstallPortalId *int32 `form:"installPortalId,omitempty" json:"installPortalId,omitempty"`
+}
+
+// GetwebhooksJournaljournalLocal202603batchOffsetnextCountParams defines parameters for GetwebhooksJournaljournalLocal202603batchOffsetnextCount.
+type GetwebhooksJournaljournalLocal202603batchOffsetnextCountParams struct {
+	// InstallPortalId An integer representing the ID of the portal installation to filter the webhook journal entries.
+	InstallPortalId *int32 `form:"installPortalId,omitempty" json:"installPortalId,omitempty"`
+}
+
+// GetwebhooksJournaljournalLocal202603earliestParams defines parameters for GetwebhooksJournaljournalLocal202603earliest.
+type GetwebhooksJournaljournalLocal202603earliestParams struct {
+	// InstallPortalId The ID of the installation portal to filter the journal entries by. This is an integer value.
+	InstallPortalId *int32 `form:"installPortalId,omitempty" json:"installPortalId,omitempty"`
+}
+
+// GetwebhooksJournaljournalLocal202603latestParams defines parameters for GetwebhooksJournaljournalLocal202603latest.
+type GetwebhooksJournaljournalLocal202603latestParams struct {
+	// InstallPortalId The ID of the portal for which to retrieve the latest webhook journal entries. It is an integer value.
+	InstallPortalId *int32 `form:"installPortalId,omitempty" json:"installPortalId,omitempty"`
+}
+
+// GetwebhooksJournaljournalLocal202603offsetOffsetnextParams defines parameters for GetwebhooksJournaljournalLocal202603offsetOffsetnext.
+type GetwebhooksJournaljournalLocal202603offsetOffsetnextParams struct {
+	// InstallPortalId The ID of the portal installation. This is an integer value used to identify the specific portal installation for which the webhook journal entries are being retrieved.
+	InstallPortalId *int32 `form:"installPortalId,omitempty" json:"installPortalId,omitempty"`
+}
+
+// GetwebhooksJournaljournal202603batchearliestCountParams defines parameters for GetwebhooksJournaljournal202603batchearliestCount.
+type GetwebhooksJournaljournal202603batchearliestCountParams struct {
+	// InstallPortalId The ID of the portal installation to filter the webhook journal entries.
+	InstallPortalId *int32 `form:"installPortalId,omitempty" json:"installPortalId,omitempty"`
+}
+
+// GetwebhooksJournaljournal202603batchlatestCountParams defines parameters for GetwebhooksJournaljournal202603batchlatestCount.
+type GetwebhooksJournaljournal202603batchlatestCountParams struct {
+	// InstallPortalId The ID of the portal installation. This parameter is optional and used to filter the results by a specific portal.
+	InstallPortalId *int32 `form:"installPortalId,omitempty" json:"installPortalId,omitempty"`
+}
+
+// PostwebhooksJournaljournal202603batchreadParams defines parameters for PostwebhooksJournaljournal202603batchread.
+type PostwebhooksJournaljournal202603batchreadParams struct {
+	// InstallPortalId An integer representing the ID of the portal installation to filter the webhook journal entries.
+	InstallPortalId *int32 `form:"installPortalId,omitempty" json:"installPortalId,omitempty"`
+}
+
+// GetwebhooksJournaljournal202603batchOffsetnextCountParams defines parameters for GetwebhooksJournaljournal202603batchOffsetnextCount.
+type GetwebhooksJournaljournal202603batchOffsetnextCountParams struct {
+	// InstallPortalId The ID of the portal where the webhook is installed. This is an integer value.
+	InstallPortalId *int32 `form:"installPortalId,omitempty" json:"installPortalId,omitempty"`
+}
+
+// GetwebhooksJournaljournal202603earliestParams defines parameters for GetwebhooksJournaljournal202603earliest.
+type GetwebhooksJournaljournal202603earliestParams struct {
+	// InstallPortalId The ID of the portal for which to retrieve the earliest webhook journal entry. This is an integer value.
+	InstallPortalId *int32 `form:"installPortalId,omitempty" json:"installPortalId,omitempty"`
+}
+
+// GetwebhooksJournaljournal202603latestParams defines parameters for GetwebhooksJournaljournal202603latest.
+type GetwebhooksJournaljournal202603latestParams struct {
+	// InstallPortalId The ID of the portal for which the latest journal entries are to be retrieved. This parameter is optional and should be an integer.
+	InstallPortalId *int32 `form:"installPortalId,omitempty" json:"installPortalId,omitempty"`
+}
+
+// GetwebhooksJournaljournal202603offsetOffsetnextParams defines parameters for GetwebhooksJournaljournal202603offsetOffsetnext.
+type GetwebhooksJournaljournal202603offsetOffsetnextParams struct {
+	// InstallPortalId The ID of the portal where the webhook is installed. This is an integer value.
+	InstallPortalId *int32 `form:"installPortalId,omitempty" json:"installPortalId,omitempty"`
+}
+
+// Postautomationactions202603AppIdCreateJSONRequestBody defines body for Postautomationactions202603AppIdCreate for application/json ContentType.
+type Postautomationactions202603AppIdCreateJSONRequestBody = PublicActionDefinitionEgg
+
+// Patchautomationactions202603AppIdDefinitionIdUpdateJSONRequestBody defines body for Patchautomationactions202603AppIdDefinitionIdUpdate for application/json ContentType.
+type Patchautomationactions202603AppIdDefinitionIdUpdateJSONRequestBody = PublicActionDefinitionPatch
+
+// Putautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeCreateOrReplaceByFunctionTypeTextRequestBody defines body for Putautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeCreateOrReplaceByFunctionType for text/plain ContentType.
+type Putautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeCreateOrReplaceByFunctionTypeTextRequestBody = Putautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeCreateOrReplaceByFunctionTypeTextBody
+
+// Putautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeFunctionIdCreateOrReplaceTextRequestBody defines body for Putautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeFunctionIdCreateOrReplace for text/plain ContentType.
+type Putautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeFunctionIdCreateOrReplaceTextRequestBody = Putautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeFunctionIdCreateOrReplaceTextBody
+
+// Postautomationactions202603AppIdDefinitionIdrequiresObjectautomationv4actionsAppIdDefinitionIdrequiresObjectJSONRequestBody defines body for Postautomationactions202603AppIdDefinitionIdrequiresObjectautomationv4actionsAppIdDefinitionIdrequiresObject for application/json ContentType.
+type Postautomationactions202603AppIdDefinitionIdrequiresObjectautomationv4actionsAppIdDefinitionIdrequiresObjectJSONRequestBody = PublicActionDefinitionRequiresObjectRequest
+
+// Postautomationactionscallbacks202603completeCompleteBatchJSONRequestBody defines body for Postautomationactionscallbacks202603completeCompleteBatch for application/json ContentType.
+type Postautomationactionscallbacks202603completeCompleteBatchJSONRequestBody = BatchInputCallbackCompletionBatchRequest
+
+// Postautomationactionscallbacks202603CallbackIdcompleteCompleteJSONRequestBody defines body for Postautomationactionscallbacks202603CallbackIdcompleteComplete for application/json ContentType.
+type Postautomationactionscallbacks202603CallbackIdcompleteCompleteJSONRequestBody = CallbackCompletionRequest
+
+// Postautomationsequences202603enrollmentsJSONRequestBody defines body for Postautomationsequences202603enrollments for application/json ContentType.
+type Postautomationsequences202603enrollmentsJSONRequestBody = PublicSequenceEnrollmentRequest
+
+// PostcmsauditLogs202603exportcmsauditLogs202603exportJSONRequestBody defines body for PostcmsauditLogs202603exportcmsauditLogs202603export for application/json ContentType.
+type PostcmsauditLogs202603exportcmsauditLogs202603exportJSONRequestBody = CmsAuditLoggingExportSettings
+
+// PostcmsblogSettings202603settingsmultiLanguageattachToLangGroupJSONRequestBody defines body for PostcmsblogSettings202603settingsmultiLanguageattachToLangGroup for application/json ContentType.
+type PostcmsblogSettings202603settingsmultiLanguageattachToLangGroupJSONRequestBody = AttachToLangPrimaryRequestVNext
+
+// PostcmsblogSettings202603settingsmultiLanguagecreateLanguageVariationJSONRequestBody defines body for PostcmsblogSettings202603settingsmultiLanguagecreateLanguageVariation for application/json ContentType.
+type PostcmsblogSettings202603settingsmultiLanguagecreateLanguageVariationJSONRequestBody = BlogLanguageCloneRequestVNext
+
+// PostcmsblogSettings202603settingsmultiLanguagedetachFromLangGroupJSONRequestBody defines body for PostcmsblogSettings202603settingsmultiLanguagedetachFromLangGroup for application/json ContentType.
+type PostcmsblogSettings202603settingsmultiLanguagedetachFromLangGroupJSONRequestBody = DetachFromLangGroupRequestVNext
+
+// PutcmsblogSettings202603settingsmultiLanguagesetNewLangPrimaryJSONRequestBody defines body for PutcmsblogSettings202603settingsmultiLanguagesetNewLangPrimary for application/json ContentType.
+type PutcmsblogSettings202603settingsmultiLanguagesetNewLangPrimaryJSONRequestBody = SetNewLanguagePrimaryRequestVNext
+
+// PostcmsblogSettings202603settingsmultiLanguageupdateLanguagesJSONRequestBody defines body for PostcmsblogSettings202603settingsmultiLanguageupdateLanguages for application/json ContentType.
+type PostcmsblogSettings202603settingsmultiLanguageupdateLanguagesJSONRequestBody = UpdateLanguagesRequestVNext
+
+// Postcmshubdb202603tablesCreateTableJSONRequestBody defines body for Postcmshubdb202603tablesCreateTable for application/json ContentType.
+type Postcmshubdb202603tablesCreateTableJSONRequestBody = HubDbTableV3Request
+
+// Patchcmshubdb202603tablesTableIdOrNamedraftUpdateDraftTableJSONRequestBody defines body for Patchcmshubdb202603tablesTableIdOrNamedraftUpdateDraftTable for application/json ContentType.
+type Patchcmshubdb202603tablesTableIdOrNamedraftUpdateDraftTableJSONRequestBody = HubDbTableV3Request
+
+// Postcmshubdb202603tablesTableIdOrNamedraftcloneCloneDraftTableJSONRequestBody defines body for Postcmshubdb202603tablesTableIdOrNamedraftcloneCloneDraftTable for application/json ContentType.
+type Postcmshubdb202603tablesTableIdOrNamedraftcloneCloneDraftTableJSONRequestBody = HubDbTableCloneRequest
+
+// Postcmshubdb202603tablesTableIdOrNamedraftimportImportDraftTableMultipartRequestBody defines body for Postcmshubdb202603tablesTableIdOrNamedraftimportImportDraftTable for multipart/form-data ContentType.
+type Postcmshubdb202603tablesTableIdOrNamedraftimportImportDraftTableMultipartRequestBody Postcmshubdb202603tablesTableIdOrNamedraftimportImportDraftTableMultipartBody
+
+// Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowJSONRequestBody defines body for Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRow for application/json ContentType.
+type Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowJSONRequestBody = HubDbTableRowV3Request
+
+// Postcmshubdb202603tablesTableIdOrNamerowsbatchreadReadTableRowsJSONRequestBody defines body for Postcmshubdb202603tablesTableIdOrNamerowsbatchreadReadTableRows for application/json ContentType.
+type Postcmshubdb202603tablesTableIdOrNamerowsbatchreadReadTableRowsJSONRequestBody = BatchInputString
+
+// Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcloneCloneDraftTableRowsJSONRequestBody defines body for Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcloneCloneDraftTableRows for application/json ContentType.
+type Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcloneCloneDraftTableRowsJSONRequestBody = BatchInputHubDbTableRowBatchCloneRequest
+
+// Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcreateCreateDraftTableRowsJSONRequestBody defines body for Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcreateCreateDraftTableRows for application/json ContentType.
+type Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcreateCreateDraftTableRowsJSONRequestBody = BatchInputHubDbTableRowV3Request
+
+// Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchpurgePurgeDraftTableRowsJSONRequestBody defines body for Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchpurgePurgeDraftTableRows for application/json ContentType.
+type Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchpurgePurgeDraftTableRowsJSONRequestBody = BatchInputString
+
+// Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreadReadDraftTableRowsJSONRequestBody defines body for Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreadReadDraftTableRows for application/json ContentType.
+type Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreadReadDraftTableRowsJSONRequestBody = BatchInputString
+
+// Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreplaceReplaceDraftTableRowsJSONRequestBody defines body for Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreplaceReplaceDraftTableRows for application/json ContentType.
+type Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreplaceReplaceDraftTableRowsJSONRequestBody = BatchInputHubDbTableRowV3BatchUpdateRequest
+
+// Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchupdateUpdateDraftTableRowsJSONRequestBody defines body for Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchupdateUpdateDraftTableRows for application/json ContentType.
+type Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchupdateUpdateDraftTableRowsJSONRequestBody = BatchInputHubDbTableRowV3BatchUpdateRequest
+
+// Patchcmshubdb202603tablesTableIdOrNamerowsRowIddraftUpdateDraftTableRowJSONRequestBody defines body for Patchcmshubdb202603tablesTableIdOrNamerowsRowIddraftUpdateDraftTableRow for application/json ContentType.
+type Patchcmshubdb202603tablesTableIdOrNamerowsRowIddraftUpdateDraftTableRowJSONRequestBody = HubDbTableRowV3Request
+
+// Putcmshubdb202603tablesTableIdOrNamerowsRowIddraftReplaceDraftTableRowJSONRequestBody defines body for Putcmshubdb202603tablesTableIdOrNamerowsRowIddraftReplaceDraftTableRow for application/json ContentType.
+type Putcmshubdb202603tablesTableIdOrNamerowsRowIddraftReplaceDraftTableRowJSONRequestBody = HubDbTableRowV3Request
+
+// PostcmssourceCode202603extractasyncDoAsyncJSONRequestBody defines body for PostcmssourceCode202603extractasyncDoAsync for application/json ContentType.
+type PostcmssourceCode202603extractasyncDoAsyncJSONRequestBody = FileExtractRequest
+
+// PostcmssourceCode202603EnvironmentcontentPathCreateMultipartRequestBody defines body for PostcmssourceCode202603EnvironmentcontentPathCreate for multipart/form-data ContentType.
+//
+// Deprecated: this type has been marked as deprecated upstream, but no `x-deprecated-reason` was set
+type PostcmssourceCode202603EnvironmentcontentPathCreateMultipartRequestBody PostcmssourceCode202603EnvironmentcontentPathCreateMultipartBody
+
+// PutcmssourceCode202603EnvironmentcontentPathCreateOrUpdateMultipartRequestBody defines body for PutcmssourceCode202603EnvironmentcontentPathCreateOrUpdate for multipart/form-data ContentType.
+type PutcmssourceCode202603EnvironmentcontentPathCreateOrUpdateMultipartRequestBody PutcmssourceCode202603EnvironmentcontentPathCreateOrUpdateMultipartBody
+
+// PostcmssourceCode202603EnvironmentvalidatePathDoValidateMultipartRequestBody defines body for PostcmssourceCode202603EnvironmentvalidatePathDoValidate for multipart/form-data ContentType.
+type PostcmssourceCode202603EnvironmentvalidatePathDoValidateMultipartRequestBody PostcmssourceCode202603EnvironmentvalidatePathDoValidateMultipartBody
+
+// PostcmsurlRedirects202603cmsurlRedirectsv3JSONRequestBody defines body for PostcmsurlRedirects202603cmsurlRedirectsv3 for application/json ContentType.
+type PostcmsurlRedirects202603cmsurlRedirectsv3JSONRequestBody = UrlMappingCreateRequestBody
+
+// PatchcmsurlRedirects202603UrlRedirectIdUpdateJSONRequestBody defines body for PatchcmsurlRedirects202603UrlRedirectIdUpdate for application/json ContentType.
+type PatchcmsurlRedirects202603UrlRedirectIdUpdateJSONRequestBody = UrlRedirectsUrlMapping
+
+// PostcommunicationPreferences202603linksgeneratecommunicationPreferencesv4linksgenerateJSONRequestBody defines body for PostcommunicationPreferences202603linksgeneratecommunicationPreferencesv4linksgenerate for application/json ContentType.
+type PostcommunicationPreferences202603linksgeneratecommunicationPreferencesv4linksgenerateJSONRequestBody = LinkGenerationRequest
+
+// PostcommunicationPreferences202603statusesbatchreadJSONRequestBody defines body for PostcommunicationPreferences202603statusesbatchread for application/json ContentType.
+type PostcommunicationPreferences202603statusesbatchreadJSONRequestBody = BatchInputString
+
+// PostcommunicationPreferences202603statusesbatchunsubscribeAllJSONRequestBody defines body for PostcommunicationPreferences202603statusesbatchunsubscribeAll for application/json ContentType.
+type PostcommunicationPreferences202603statusesbatchunsubscribeAllJSONRequestBody = BatchInputString
+
+// PostcommunicationPreferences202603statusesbatchunsubscribeAllreadJSONRequestBody defines body for PostcommunicationPreferences202603statusesbatchunsubscribeAllread for application/json ContentType.
+type PostcommunicationPreferences202603statusesbatchunsubscribeAllreadJSONRequestBody = BatchInputString
+
+// PostcommunicationPreferences202603statusesbatchwriteJSONRequestBody defines body for PostcommunicationPreferences202603statusesbatchwrite for application/json ContentType.
+type PostcommunicationPreferences202603statusesbatchwriteJSONRequestBody = BatchInputPublicStatusRequest
+
+// PostcommunicationPreferences202603statusesSubscriberIdStringJSONRequestBody defines body for PostcommunicationPreferences202603statusesSubscriberIdString for application/json ContentType.
+type PostcommunicationPreferences202603statusesSubscriberIdStringJSONRequestBody = PartialPublicStatusRequest
+
+// PostconversationscustomChannels202603conversationscustomChannelsv3JSONRequestBody defines body for PostconversationscustomChannels202603conversationscustomChannelsv3 for application/json ContentType.
+type PostconversationscustomChannels202603conversationscustomChannelsv3JSONRequestBody = PublicChannelIntegrationChannelCreate
+
+// PatchconversationscustomChannels202603ChannelIdJSONRequestBody defines body for PatchconversationscustomChannels202603ChannelId for application/json ContentType.
+type PatchconversationscustomChannels202603ChannelIdJSONRequestBody = PublicChannelIntegrationChannelPatch
+
+// PatchconversationscustomChannels202603ChannelIdchannelAccountStagingTokensAccountTokenJSONRequestBody defines body for PatchconversationscustomChannels202603ChannelIdchannelAccountStagingTokensAccountToken for application/json ContentType.
+type PatchconversationscustomChannels202603ChannelIdchannelAccountStagingTokensAccountTokenJSONRequestBody = PublicChannelAccountStagingTokenUpdateRequest
+
+// PostconversationscustomChannels202603ChannelIdchannelAccountsJSONRequestBody defines body for PostconversationscustomChannels202603ChannelIdchannelAccounts for application/json ContentType.
+type PostconversationscustomChannels202603ChannelIdchannelAccountsJSONRequestBody = PublicChannelAccountEgg
+
+// PatchconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountIdJSONRequestBody defines body for PatchconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountId for application/json ContentType.
+type PatchconversationscustomChannels202603ChannelIdchannelAccountsChannelAccountIdJSONRequestBody = PublicChannelAccountUpdateRequest
+
+// PostconversationscustomChannels202603ChannelIdmessagesJSONRequestBody defines body for PostconversationscustomChannels202603ChannelIdmessages for application/json ContentType.
+type PostconversationscustomChannels202603ChannelIdmessagesJSONRequestBody = ChannelIntegrationMessageEgg
+
+// PatchconversationscustomChannels202603ChannelIdmessagesMessageIdJSONRequestBody defines body for PatchconversationscustomChannels202603ChannelIdmessagesMessageId for application/json ContentType.
+type PatchconversationscustomChannels202603ChannelIdmessagesMessageIdJSONRequestBody = PublicChannelIntegrationMessageUpdateRequest
+
+// PostcrmObjectSchemas202603schemasCreateJSONRequestBody defines body for PostcrmObjectSchemas202603schemasCreate for application/json ContentType.
+type PostcrmObjectSchemas202603schemasCreateJSONRequestBody = ObjectSchemaEgg
+
+// PostcrmObjectSchemas202603schemasbatchreadcrmObjectSchemasv3schemasbatchreadJSONRequestBody defines body for PostcrmObjectSchemas202603schemasbatchreadcrmObjectSchemasv3schemasbatchread for application/json ContentType.
+type PostcrmObjectSchemas202603schemasbatchreadcrmObjectSchemasv3schemasbatchreadJSONRequestBody = ObjectSchemaBatchReadRequest
+
+// PatchcrmObjectSchemas202603schemasObjectTypeUpdateJSONRequestBody defines body for PatchcrmObjectSchemas202603schemasObjectTypeUpdate for application/json ContentType.
+type PatchcrmObjectSchemas202603schemasObjectTypeUpdateJSONRequestBody = ObjectTypeDefinitionPatch
+
+// PostcrmObjectSchemas202603schemasObjectTypeassociationsCreateAssociationJSONRequestBody defines body for PostcrmObjectSchemas202603schemasObjectTypeassociationsCreateAssociation for application/json ContentType.
+type PostcrmObjectSchemas202603schemasObjectTypeassociationsCreateAssociationJSONRequestBody = AssociationDefinitionEgg
+
+// Postcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchcreateBatchCreateJSONRequestBody defines body for Postcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchcreateBatchCreate for application/json ContentType.
+type Postcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchcreateBatchCreateJSONRequestBody = BatchInputPublicAssociationDefinitionConfigurationCreateRequest
+
+// Postcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchpurgeBatchRemoveJSONRequestBody defines body for Postcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchpurgeBatchRemove for application/json ContentType.
+type Postcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchpurgeBatchRemoveJSONRequestBody = BatchInputPublicAssociationSpec
+
+// Postcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchupdateBatchUpdateJSONRequestBody defines body for Postcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchupdateBatchUpdate for application/json ContentType.
+type Postcrmassociations202603definitionsconfigurationsFromObjectTypeToObjectTypebatchupdateBatchUpdateJSONRequestBody = BatchInputPublicAssociationDefinitionConfigurationUpdateRequest
+
+// Postcrmassociations202603FromObjectTypeToObjectTypebatcharchivecrmassociations202509FromObjectTypeToObjectTypebatcharchiveJSONRequestBody defines body for Postcrmassociations202603FromObjectTypeToObjectTypebatcharchivecrmassociations202509FromObjectTypeToObjectTypebatcharchive for application/json ContentType.
+type Postcrmassociations202603FromObjectTypeToObjectTypebatcharchivecrmassociations202509FromObjectTypeToObjectTypebatcharchiveJSONRequestBody = BatchInputPublicAssociationMultiArchive
+
+// Postcrmassociations202603FromObjectTypeToObjectTypebatchassociatedefaultcrmassociations202509FromObjectTypeToObjectTypebatchassociatedefaultJSONRequestBody defines body for Postcrmassociations202603FromObjectTypeToObjectTypebatchassociatedefaultcrmassociations202509FromObjectTypeToObjectTypebatchassociatedefault for application/json ContentType.
+type Postcrmassociations202603FromObjectTypeToObjectTypebatchassociatedefaultcrmassociations202509FromObjectTypeToObjectTypebatchassociatedefaultJSONRequestBody = BatchInputPublicDefaultAssociationMultiPost
+
+// Postcrmassociations202603FromObjectTypeToObjectTypebatchcreatecrmassociations202509FromObjectTypeToObjectTypebatchcreateJSONRequestBody defines body for Postcrmassociations202603FromObjectTypeToObjectTypebatchcreatecrmassociations202509FromObjectTypeToObjectTypebatchcreate for application/json ContentType.
+type Postcrmassociations202603FromObjectTypeToObjectTypebatchcreatecrmassociations202509FromObjectTypeToObjectTypebatchcreateJSONRequestBody = BatchInputPublicAssociationMultiPost
+
+// Postcrmassociations202603FromObjectTypeToObjectTypebatchlabelsarchivecrmassociations202509FromObjectTypeToObjectTypebatchlabelsarchiveJSONRequestBody defines body for Postcrmassociations202603FromObjectTypeToObjectTypebatchlabelsarchivecrmassociations202509FromObjectTypeToObjectTypebatchlabelsarchive for application/json ContentType.
+type Postcrmassociations202603FromObjectTypeToObjectTypebatchlabelsarchivecrmassociations202509FromObjectTypeToObjectTypebatchlabelsarchiveJSONRequestBody = BatchInputPublicAssociationMultiPost
+
+// Postcrmassociations202603FromObjectTypeToObjectTypebatchreadcrmassociations202509FromObjectTypeToObjectTypebatchreadJSONRequestBody defines body for Postcrmassociations202603FromObjectTypeToObjectTypebatchreadcrmassociations202509FromObjectTypeToObjectTypebatchread for application/json ContentType.
+type Postcrmassociations202603FromObjectTypeToObjectTypebatchreadcrmassociations202509FromObjectTypeToObjectTypebatchreadJSONRequestBody = BatchInputPublicFetchAssociationsBatchRequest
+
+// Postcrmassociations202603FromObjectTypeToObjectTypelabelsCreateJSONRequestBody defines body for Postcrmassociations202603FromObjectTypeToObjectTypelabelsCreate for application/json ContentType.
+type Postcrmassociations202603FromObjectTypeToObjectTypelabelsCreateJSONRequestBody = PublicAssociationDefinitionCreateRequest
+
+// Putcrmassociations202603FromObjectTypeToObjectTypelabelsUpdateJSONRequestBody defines body for Putcrmassociations202603FromObjectTypeToObjectTypelabelsUpdate for application/json ContentType.
+type Putcrmassociations202603FromObjectTypeToObjectTypelabelsUpdateJSONRequestBody = PublicAssociationDefinitionUpdateRequest
+
+// Postcrmexports202603exportasyncStartJSONRequestBody defines body for Postcrmexports202603exportasyncStart for application/json ContentType.
+type Postcrmexports202603exportasyncStartJSONRequestBody = PublicExportRequest
+
+// Postcrmextensionscalling202603inboundCallcrmv3extensionscallinginboundCallJSONRequestBody defines body for Postcrmextensionscalling202603inboundCallcrmv3extensionscallinginboundCall for application/json ContentType.
+type Postcrmextensionscalling202603inboundCallcrmv3extensionscallinginboundCallJSONRequestBody = CompletedThirdPartyCallRequest
+
+// Postcrmextensionscalling202603recordingsreadyMarkAsReadyJSONRequestBody defines body for Postcrmextensionscalling202603recordingsreadyMarkAsReady for application/json ContentType.
+type Postcrmextensionscalling202603recordingsreadyMarkAsReadyJSONRequestBody = MarkRecordingAsReadyRequest
+
+// Postcrmextensionscalling202603transcriptscrmextensionscalling202603transcriptsJSONRequestBody defines body for Postcrmextensionscalling202603transcriptscrmextensionscalling202603transcripts for application/json ContentType.
+type Postcrmextensionscalling202603transcriptscrmextensionscalling202603transcriptsJSONRequestBody = TranscriptCreateRequest
+
+// Patchcrmextensionscalling202603AppIdsettingsUpdateJSONRequestBody defines body for Patchcrmextensionscalling202603AppIdsettingsUpdate for application/json ContentType.
+type Patchcrmextensionscalling202603AppIdsettingsUpdateJSONRequestBody = SettingsPatchRequest
+
+// Postcrmextensionscalling202603AppIdsettingsCreateJSONRequestBody defines body for Postcrmextensionscalling202603AppIdsettingsCreate for application/json ContentType.
+type Postcrmextensionscalling202603AppIdsettingsCreateJSONRequestBody = SettingsRequest
+
+// Patchcrmextensionscalling202603AppIdsettingschannelConnectionUpdateJSONRequestBody defines body for Patchcrmextensionscalling202603AppIdsettingschannelConnectionUpdate for application/json ContentType.
+type Patchcrmextensionscalling202603AppIdsettingschannelConnectionUpdateJSONRequestBody = ChannelConnectionSettingsPatchRequest
+
+// Postcrmextensionscalling202603AppIdsettingschannelConnectionCreateJSONRequestBody defines body for Postcrmextensionscalling202603AppIdsettingschannelConnectionCreate for application/json ContentType.
+type Postcrmextensionscalling202603AppIdsettingschannelConnectionCreateJSONRequestBody = ChannelConnectionSettingsRequest
+
+// Patchcrmextensionscalling202603AppIdsettingsrecordingUpdateJSONRequestBody defines body for Patchcrmextensionscalling202603AppIdsettingsrecordingUpdate for application/json ContentType.
+type Patchcrmextensionscalling202603AppIdsettingsrecordingUpdateJSONRequestBody = RecordingSettingsPatchRequest
+
+// Postcrmextensionscalling202603AppIdsettingsrecordingCreateJSONRequestBody defines body for Postcrmextensionscalling202603AppIdsettingsrecordingCreate for application/json ContentType.
+type Postcrmextensionscalling202603AppIdsettingsrecordingCreateJSONRequestBody = RecordingSettingsRequest
+
+// PostcrmextensionscardsDev202603AppIdCreateJSONRequestBody defines body for PostcrmextensionscardsDev202603AppIdCreate for application/json ContentType.
+type PostcrmextensionscardsDev202603AppIdCreateJSONRequestBody = CardCreateRequest
+
+// PostcrmextensionscardsDev202603AppIdviewsmigratecrmv3extensionscardsDevAppIdviewsmigrateJSONRequestBody defines body for PostcrmextensionscardsDev202603AppIdviewsmigratecrmv3extensionscardsDevAppIdviewsmigrate for application/json ContentType.
+type PostcrmextensionscardsDev202603AppIdviewsmigratecrmv3extensionscardsDevAppIdviewsmigrateJSONRequestBody = CardMigrateViewsRequest
+
+// PatchcrmextensionscardsDev202603AppIdCardIdUpdateJSONRequestBody defines body for PatchcrmextensionscardsDev202603AppIdCardIdUpdate for application/json ContentType.
+type PatchcrmextensionscardsDev202603AppIdCardIdUpdateJSONRequestBody = CardPatchRequest
+
+// Putcrmextensionsvideoconferencing202603settingsAppIdReplaceJSONRequestBody defines body for Putcrmextensionsvideoconferencing202603settingsAppIdReplace for application/json ContentType.
+type Putcrmextensionsvideoconferencing202603settingsAppIdReplaceJSONRequestBody = ExternalSettings
+
+// Postcrmimports202603crmimportsv3MultipartRequestBody defines body for Postcrmimports202603crmimportsv3 for multipart/form-data ContentType.
+type Postcrmimports202603crmimportsv3MultipartRequestBody Postcrmimports202603crmimportsv3MultipartBody
+
+// Postcrmlists202603crmlistsv3JSONRequestBody defines body for Postcrmlists202603crmlistsv3 for application/json ContentType.
+type Postcrmlists202603crmlistsv3JSONRequestBody = ListCreateRequest
+
+// Postcrmlists202603folderscrmlistsv3foldersJSONRequestBody defines body for Postcrmlists202603folderscrmlistsv3folders for application/json ContentType.
+type Postcrmlists202603folderscrmlistsv3foldersJSONRequestBody = ListFolderCreateRequest
+
+// Putcrmlists202603foldersmoveListcrmlistsv3foldersmoveListJSONRequestBody defines body for Putcrmlists202603foldersmoveListcrmlistsv3foldersmoveList for application/json ContentType.
+type Putcrmlists202603foldersmoveListcrmlistsv3foldersmoveListJSONRequestBody = ListMoveRequest
+
+// Postcrmlists202603idmappingcrmlistsv3idmappingJSONRequestBody defines body for Postcrmlists202603idmappingcrmlistsv3idmapping for application/json ContentType.
+type Postcrmlists202603idmappingcrmlistsv3idmappingJSONRequestBody = Postcrmlists202603idmappingcrmlistsv3idmappingJSONBody
+
+// Postcrmlists202603recordsmembershipsbatchreadcrmlistsv3recordsmembershipsbatchreadJSONRequestBody defines body for Postcrmlists202603recordsmembershipsbatchreadcrmlistsv3recordsmembershipsbatchread for application/json ContentType.
+type Postcrmlists202603recordsmembershipsbatchreadcrmlistsv3recordsmembershipsbatchreadJSONRequestBody = BatchInputRecordIdInput
+
+// Postcrmlists202603searchcrmlistsv3searchJSONRequestBody defines body for Postcrmlists202603searchcrmlistsv3search for application/json ContentType.
+type Postcrmlists202603searchcrmlistsv3searchJSONRequestBody = ListSearchRequest
+
+// Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsaddJSONRequestBody defines body for Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsadd for application/json ContentType.
+type Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsaddJSONRequestBody = Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsaddJSONBody
+
+// Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemoveJSONRequestBody defines body for Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemove for application/json ContentType.
+type Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemoveJSONRequestBody = MembershipChangeRequest
+
+// Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremoveJSONRequestBody defines body for Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremove for application/json ContentType.
+type Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremoveJSONRequestBody = Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremoveJSONBody
+
+// Putcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionJSONRequestBody defines body for Putcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversion for application/json ContentType.
+type Putcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionJSONRequestBody = PublicListConversionTime
+
+// Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersJSONRequestBody defines body for Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFilters for application/json ContentType.
+type Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersJSONRequestBody = ListFilterUpdateRequest
+
+// Postcrmobjects2026030162JSONRequestBody defines body for Postcrmobjects2026030162 for application/json ContentType.
+type Postcrmobjects2026030162JSONRequestBody = SimplePublicObjectInputForCreate
+
+// Postcrmobjects2026030162batcharchiveJSONRequestBody defines body for Postcrmobjects2026030162batcharchive for application/json ContentType.
+type Postcrmobjects2026030162batcharchiveJSONRequestBody = BatchInputSimplePublicObjectId
+
+// Postcrmobjects2026030162batchcreateJSONRequestBody defines body for Postcrmobjects2026030162batchcreate for application/json ContentType.
+type Postcrmobjects2026030162batchcreateJSONRequestBody = BatchInputSimplePublicObjectBatchInputForCreate
+
+// Postcrmobjects2026030162batchreadJSONRequestBody defines body for Postcrmobjects2026030162batchread for application/json ContentType.
+type Postcrmobjects2026030162batchreadJSONRequestBody = BatchReadInputSimplePublicObjectId
+
+// Postcrmobjects2026030162batchupdateJSONRequestBody defines body for Postcrmobjects2026030162batchupdate for application/json ContentType.
+type Postcrmobjects2026030162batchupdateJSONRequestBody = BatchInputSimplePublicObjectBatchInput
+
+// Postcrmobjects2026030162batchupsertJSONRequestBody defines body for Postcrmobjects2026030162batchupsert for application/json ContentType.
+type Postcrmobjects2026030162batchupsertJSONRequestBody = BatchInputSimplePublicObjectBatchInputUpsert
+
+// Postcrmobjects2026030162searchJSONRequestBody defines body for Postcrmobjects2026030162search for application/json ContentType.
+type Postcrmobjects2026030162searchJSONRequestBody = PublicObjectSearchRequest
+
+// Patchcrmobjects2026030162ServiceIdJSONRequestBody defines body for Patchcrmobjects2026030162ServiceId for application/json ContentType.
+type Patchcrmobjects2026030162ServiceIdJSONRequestBody = SimplePublicObjectInput
+
+// Postcrmobjects20260303CreateJSONRequestBody defines body for Postcrmobjects20260303Create for application/json ContentType.
+type Postcrmobjects20260303CreateJSONRequestBody = SimplePublicObjectInputForCreate
+
+// Postcrmobjects20260303batcharchiveArchiveJSONRequestBody defines body for Postcrmobjects20260303batcharchiveArchive for application/json ContentType.
+type Postcrmobjects20260303batcharchiveArchiveJSONRequestBody = BatchInputSimplePublicObjectId
+
+// Postcrmobjects20260303batchcreateCreateJSONRequestBody defines body for Postcrmobjects20260303batchcreateCreate for application/json ContentType.
+type Postcrmobjects20260303batchcreateCreateJSONRequestBody = BatchInputSimplePublicObjectBatchInputForCreate
+
+// Postcrmobjects20260303batchreadReadJSONRequestBody defines body for Postcrmobjects20260303batchreadRead for application/json ContentType.
+type Postcrmobjects20260303batchreadReadJSONRequestBody = BatchReadInputSimplePublicObjectId
+
+// Postcrmobjects20260303batchupdateUpdateJSONRequestBody defines body for Postcrmobjects20260303batchupdateUpdate for application/json ContentType.
+type Postcrmobjects20260303batchupdateUpdateJSONRequestBody = BatchInputSimplePublicObjectBatchInput
+
+// Postcrmobjects20260303batchupsertUpsertJSONRequestBody defines body for Postcrmobjects20260303batchupsertUpsert for application/json ContentType.
+type Postcrmobjects20260303batchupsertUpsertJSONRequestBody = BatchInputSimplePublicObjectBatchInputUpsert
+
+// Postcrmobjects20260303mergeMergeJSONRequestBody defines body for Postcrmobjects20260303mergeMerge for application/json ContentType.
+type Postcrmobjects20260303mergeMergeJSONRequestBody = PublicMergeInput
+
+// Postcrmobjects20260303searchDoSearchJSONRequestBody defines body for Postcrmobjects20260303searchDoSearch for application/json ContentType.
+type Postcrmobjects20260303searchDoSearchJSONRequestBody = PublicObjectSearchRequest
+
+// Patchcrmobjects20260303DealIdUpdateJSONRequestBody defines body for Patchcrmobjects20260303DealIdUpdate for application/json ContentType.
+type Patchcrmobjects20260303DealIdUpdateJSONRequestBody = SimplePublicObjectInput
+
+// Postcrmobjects2026030410JSONRequestBody defines body for Postcrmobjects2026030410 for application/json ContentType.
+type Postcrmobjects2026030410JSONRequestBody = SimplePublicObjectInputForCreate
+
+// Postcrmobjects2026030410batcharchiveJSONRequestBody defines body for Postcrmobjects2026030410batcharchive for application/json ContentType.
+type Postcrmobjects2026030410batcharchiveJSONRequestBody = BatchInputSimplePublicObjectId
+
+// Postcrmobjects2026030410batchcreateJSONRequestBody defines body for Postcrmobjects2026030410batchcreate for application/json ContentType.
+type Postcrmobjects2026030410batchcreateJSONRequestBody = BatchInputSimplePublicObjectBatchInputForCreate
+
+// Postcrmobjects2026030410batchreadJSONRequestBody defines body for Postcrmobjects2026030410batchread for application/json ContentType.
+type Postcrmobjects2026030410batchreadJSONRequestBody = BatchReadInputSimplePublicObjectId
+
+// Postcrmobjects2026030410batchupdateJSONRequestBody defines body for Postcrmobjects2026030410batchupdate for application/json ContentType.
+type Postcrmobjects2026030410batchupdateJSONRequestBody = BatchInputSimplePublicObjectBatchInput
+
+// Postcrmobjects2026030410batchupsertJSONRequestBody defines body for Postcrmobjects2026030410batchupsert for application/json ContentType.
+type Postcrmobjects2026030410batchupsertJSONRequestBody = BatchInputSimplePublicObjectBatchInputUpsert
+
+// Postcrmobjects2026030410searchJSONRequestBody defines body for Postcrmobjects2026030410search for application/json ContentType.
+type Postcrmobjects2026030410searchJSONRequestBody = PublicObjectSearchRequest
+
+// Patchcrmobjects2026030410CourseIdJSONRequestBody defines body for Patchcrmobjects2026030410CourseId for application/json ContentType.
+type Patchcrmobjects2026030410CourseIdJSONRequestBody = SimplePublicObjectInput
+
+// Postcrmobjects2026030420JSONRequestBody defines body for Postcrmobjects2026030420 for application/json ContentType.
+type Postcrmobjects2026030420JSONRequestBody = SimplePublicObjectInputForCreate
+
+// Postcrmobjects2026030420batcharchiveJSONRequestBody defines body for Postcrmobjects2026030420batcharchive for application/json ContentType.
+type Postcrmobjects2026030420batcharchiveJSONRequestBody = BatchInputSimplePublicObjectId
+
+// Postcrmobjects2026030420batchcreateJSONRequestBody defines body for Postcrmobjects2026030420batchcreate for application/json ContentType.
+type Postcrmobjects2026030420batchcreateJSONRequestBody = BatchInputSimplePublicObjectBatchInputForCreate
+
+// Postcrmobjects2026030420batchreadJSONRequestBody defines body for Postcrmobjects2026030420batchread for application/json ContentType.
+type Postcrmobjects2026030420batchreadJSONRequestBody = BatchReadInputSimplePublicObjectId
+
+// Postcrmobjects2026030420batchupdateJSONRequestBody defines body for Postcrmobjects2026030420batchupdate for application/json ContentType.
+type Postcrmobjects2026030420batchupdateJSONRequestBody = BatchInputSimplePublicObjectBatchInput
+
+// Postcrmobjects2026030420batchupsertJSONRequestBody defines body for Postcrmobjects2026030420batchupsert for application/json ContentType.
+type Postcrmobjects2026030420batchupsertJSONRequestBody = BatchInputSimplePublicObjectBatchInputUpsert
+
+// Postcrmobjects2026030420searchJSONRequestBody defines body for Postcrmobjects2026030420search for application/json ContentType.
+type Postcrmobjects2026030420searchJSONRequestBody = PublicObjectSearchRequest
+
+// Patchcrmobjects2026030420ListingIdJSONRequestBody defines body for Patchcrmobjects2026030420ListingId for application/json ContentType.
+type Patchcrmobjects2026030420ListingIdJSONRequestBody = SimplePublicObjectInput
+
+// Postcrmobjects202603callsCreateJSONRequestBody defines body for Postcrmobjects202603callsCreate for application/json ContentType.
+type Postcrmobjects202603callsCreateJSONRequestBody = SimplePublicObjectInputForCreate
+
+// Postcrmobjects202603callsbatcharchiveArchiveJSONRequestBody defines body for Postcrmobjects202603callsbatcharchiveArchive for application/json ContentType.
+type Postcrmobjects202603callsbatcharchiveArchiveJSONRequestBody = BatchInputSimplePublicObjectId
+
+// Postcrmobjects202603callsbatchcreateCreateJSONRequestBody defines body for Postcrmobjects202603callsbatchcreateCreate for application/json ContentType.
+type Postcrmobjects202603callsbatchcreateCreateJSONRequestBody = BatchInputSimplePublicObjectBatchInputForCreate
+
+// Postcrmobjects202603callsbatchreadReadJSONRequestBody defines body for Postcrmobjects202603callsbatchreadRead for application/json ContentType.
+type Postcrmobjects202603callsbatchreadReadJSONRequestBody = BatchReadInputSimplePublicObjectId
+
+// Postcrmobjects202603callsbatchupdateUpdateJSONRequestBody defines body for Postcrmobjects202603callsbatchupdateUpdate for application/json ContentType.
+type Postcrmobjects202603callsbatchupdateUpdateJSONRequestBody = BatchInputSimplePublicObjectBatchInput
+
+// Postcrmobjects202603callsbatchupsertUpsertJSONRequestBody defines body for Postcrmobjects202603callsbatchupsertUpsert for application/json ContentType.
+type Postcrmobjects202603callsbatchupsertUpsertJSONRequestBody = BatchInputSimplePublicObjectBatchInputUpsert
+
+// Postcrmobjects202603callssearchDoSearchJSONRequestBody defines body for Postcrmobjects202603callssearchDoSearch for application/json ContentType.
+type Postcrmobjects202603callssearchDoSearchJSONRequestBody = PublicObjectSearchRequest
+
+// Patchcrmobjects202603callsCallIdUpdateJSONRequestBody defines body for Patchcrmobjects202603callsCallIdUpdate for application/json ContentType.
+type Patchcrmobjects202603callsCallIdUpdateJSONRequestBody = SimplePublicObjectInput
+
+// Postcrmobjects202603cartsJSONRequestBody defines body for Postcrmobjects202603carts for application/json ContentType.
+type Postcrmobjects202603cartsJSONRequestBody = SimplePublicObjectInputForCreate
+
+// Postcrmobjects202603cartsbatcharchiveJSONRequestBody defines body for Postcrmobjects202603cartsbatcharchive for application/json ContentType.
+type Postcrmobjects202603cartsbatcharchiveJSONRequestBody = BatchInputSimplePublicObjectId
+
+// Postcrmobjects202603cartsbatchcreateJSONRequestBody defines body for Postcrmobjects202603cartsbatchcreate for application/json ContentType.
+type Postcrmobjects202603cartsbatchcreateJSONRequestBody = BatchInputSimplePublicObjectBatchInputForCreate
+
+// Postcrmobjects202603cartsbatchreadJSONRequestBody defines body for Postcrmobjects202603cartsbatchread for application/json ContentType.
+type Postcrmobjects202603cartsbatchreadJSONRequestBody = BatchReadInputSimplePublicObjectId
+
+// Postcrmobjects202603cartsbatchupdateJSONRequestBody defines body for Postcrmobjects202603cartsbatchupdate for application/json ContentType.
+type Postcrmobjects202603cartsbatchupdateJSONRequestBody = BatchInputSimplePublicObjectBatchInput
+
+// Postcrmobjects202603cartsbatchupsertJSONRequestBody defines body for Postcrmobjects202603cartsbatchupsert for application/json ContentType.
+type Postcrmobjects202603cartsbatchupsertJSONRequestBody = BatchInputSimplePublicObjectBatchInputUpsert
+
+// Postcrmobjects202603cartssearchJSONRequestBody defines body for Postcrmobjects202603cartssearch for application/json ContentType.
+type Postcrmobjects202603cartssearchJSONRequestBody = PublicObjectSearchRequest
+
+// Patchcrmobjects202603cartsCartIdJSONRequestBody defines body for Patchcrmobjects202603cartsCartId for application/json ContentType.
+type Patchcrmobjects202603cartsCartIdJSONRequestBody = SimplePublicObjectInput
+
+// Postcrmobjects202603commercePaymentsJSONRequestBody defines body for Postcrmobjects202603commercePayments for application/json ContentType.
+type Postcrmobjects202603commercePaymentsJSONRequestBody = SimplePublicObjectInputForCreate
+
+// Postcrmobjects202603commercePaymentsbatcharchiveJSONRequestBody defines body for Postcrmobjects202603commercePaymentsbatcharchive for application/json ContentType.
+type Postcrmobjects202603commercePaymentsbatcharchiveJSONRequestBody = BatchInputSimplePublicObjectId
+
+// Postcrmobjects202603commercePaymentsbatchcreateJSONRequestBody defines body for Postcrmobjects202603commercePaymentsbatchcreate for application/json ContentType.
+type Postcrmobjects202603commercePaymentsbatchcreateJSONRequestBody = BatchInputSimplePublicObjectBatchInputForCreate
+
+// Postcrmobjects202603commercePaymentsbatchreadJSONRequestBody defines body for Postcrmobjects202603commercePaymentsbatchread for application/json ContentType.
+type Postcrmobjects202603commercePaymentsbatchreadJSONRequestBody = BatchReadInputSimplePublicObjectId
+
+// Postcrmobjects202603commercePaymentsbatchupdateJSONRequestBody defines body for Postcrmobjects202603commercePaymentsbatchupdate for application/json ContentType.
+type Postcrmobjects202603commercePaymentsbatchupdateJSONRequestBody = BatchInputSimplePublicObjectBatchInput
+
+// Postcrmobjects202603commercePaymentsbatchupsertJSONRequestBody defines body for Postcrmobjects202603commercePaymentsbatchupsert for application/json ContentType.
+type Postcrmobjects202603commercePaymentsbatchupsertJSONRequestBody = BatchInputSimplePublicObjectBatchInputUpsert
+
+// Postcrmobjects202603commercePaymentssearchJSONRequestBody defines body for Postcrmobjects202603commercePaymentssearch for application/json ContentType.
+type Postcrmobjects202603commercePaymentssearchJSONRequestBody = PublicObjectSearchRequest
+
+// Patchcrmobjects202603commercePaymentsCommercePaymentIdJSONRequestBody defines body for Patchcrmobjects202603commercePaymentsCommercePaymentId for application/json ContentType.
+type Patchcrmobjects202603commercePaymentsCommercePaymentIdJSONRequestBody = SimplePublicObjectInput
+
+// Postcrmobjects202603communicationsCreateJSONRequestBody defines body for Postcrmobjects202603communicationsCreate for application/json ContentType.
+type Postcrmobjects202603communicationsCreateJSONRequestBody = SimplePublicObjectInputForCreate
+
+// Postcrmobjects202603communicationsbatcharchiveArchiveJSONRequestBody defines body for Postcrmobjects202603communicationsbatcharchiveArchive for application/json ContentType.
+type Postcrmobjects202603communicationsbatcharchiveArchiveJSONRequestBody = BatchInputSimplePublicObjectId
+
+// Postcrmobjects202603communicationsbatchcreateCreateJSONRequestBody defines body for Postcrmobjects202603communicationsbatchcreateCreate for application/json ContentType.
+type Postcrmobjects202603communicationsbatchcreateCreateJSONRequestBody = BatchInputSimplePublicObjectBatchInputForCreate
+
+// Postcrmobjects202603communicationsbatchreadReadJSONRequestBody defines body for Postcrmobjects202603communicationsbatchreadRead for application/json ContentType.
+type Postcrmobjects202603communicationsbatchreadReadJSONRequestBody = BatchReadInputSimplePublicObjectId
+
+// Postcrmobjects202603communicationsbatchupdateUpdateJSONRequestBody defines body for Postcrmobjects202603communicationsbatchupdateUpdate for application/json ContentType.
+type Postcrmobjects202603communicationsbatchupdateUpdateJSONRequestBody = BatchInputSimplePublicObjectBatchInput
+
+// Postcrmobjects202603communicationsbatchupsertUpsertJSONRequestBody defines body for Postcrmobjects202603communicationsbatchupsertUpsert for application/json ContentType.
+type Postcrmobjects202603communicationsbatchupsertUpsertJSONRequestBody = BatchInputSimplePublicObjectBatchInputUpsert
+
+// Postcrmobjects202603communicationssearchDoSearchJSONRequestBody defines body for Postcrmobjects202603communicationssearchDoSearch for application/json ContentType.
+type Postcrmobjects202603communicationssearchDoSearchJSONRequestBody = PublicObjectSearchRequest
+
+// Patchcrmobjects202603communicationsCommunicationIdUpdateJSONRequestBody defines body for Patchcrmobjects202603communicationsCommunicationIdUpdate for application/json ContentType.
+type Patchcrmobjects202603communicationsCommunicationIdUpdateJSONRequestBody = SimplePublicObjectInput
+
+// Postcrmobjects202603companiesCreateJSONRequestBody defines body for Postcrmobjects202603companiesCreate for application/json ContentType.
+type Postcrmobjects202603companiesCreateJSONRequestBody = SimplePublicObjectInputForCreate
+
+// Postcrmobjects202603companiesbatcharchiveArchiveJSONRequestBody defines body for Postcrmobjects202603companiesbatcharchiveArchive for application/json ContentType.
+type Postcrmobjects202603companiesbatcharchiveArchiveJSONRequestBody = BatchInputSimplePublicObjectId
+
+// Postcrmobjects202603companiesbatchcreateCreateJSONRequestBody defines body for Postcrmobjects202603companiesbatchcreateCreate for application/json ContentType.
+type Postcrmobjects202603companiesbatchcreateCreateJSONRequestBody = BatchInputSimplePublicObjectBatchInputForCreate
+
+// Postcrmobjects202603companiesbatchreadReadJSONRequestBody defines body for Postcrmobjects202603companiesbatchreadRead for application/json ContentType.
+type Postcrmobjects202603companiesbatchreadReadJSONRequestBody = BatchReadInputSimplePublicObjectId
+
+// Postcrmobjects202603companiesbatchupdateUpdateJSONRequestBody defines body for Postcrmobjects202603companiesbatchupdateUpdate for application/json ContentType.
+type Postcrmobjects202603companiesbatchupdateUpdateJSONRequestBody = BatchInputSimplePublicObjectBatchInput
+
+// Postcrmobjects202603companiesbatchupsertUpsertJSONRequestBody defines body for Postcrmobjects202603companiesbatchupsertUpsert for application/json ContentType.
+type Postcrmobjects202603companiesbatchupsertUpsertJSONRequestBody = BatchInputSimplePublicObjectBatchInputUpsert
+
+// Postcrmobjects202603companiesmergeMergeJSONRequestBody defines body for Postcrmobjects202603companiesmergeMerge for application/json ContentType.
+type Postcrmobjects202603companiesmergeMergeJSONRequestBody = PublicMergeInput
+
+// Postcrmobjects202603companiessearchDoSearchJSONRequestBody defines body for Postcrmobjects202603companiessearchDoSearch for application/json ContentType.
+type Postcrmobjects202603companiessearchDoSearchJSONRequestBody = PublicObjectSearchRequest
+
+// Patchcrmobjects202603companiesCompanyIdUpdateJSONRequestBody defines body for Patchcrmobjects202603companiesCompanyIdUpdate for application/json ContentType.
+type Patchcrmobjects202603companiesCompanyIdUpdateJSONRequestBody = SimplePublicObjectInput
+
+// Postcrmobjects202603contactsCreateJSONRequestBody defines body for Postcrmobjects202603contactsCreate for application/json ContentType.
+type Postcrmobjects202603contactsCreateJSONRequestBody = SimplePublicObjectInputForCreate
+
+// Postcrmobjects202603contactsbatcharchiveArchiveJSONRequestBody defines body for Postcrmobjects202603contactsbatcharchiveArchive for application/json ContentType.
+type Postcrmobjects202603contactsbatcharchiveArchiveJSONRequestBody = BatchInputSimplePublicObjectId
+
+// Postcrmobjects202603contactsbatchcreateCreateJSONRequestBody defines body for Postcrmobjects202603contactsbatchcreateCreate for application/json ContentType.
+type Postcrmobjects202603contactsbatchcreateCreateJSONRequestBody = BatchInputSimplePublicObjectBatchInputForCreate
+
+// Postcrmobjects202603contactsbatchreadReadJSONRequestBody defines body for Postcrmobjects202603contactsbatchreadRead for application/json ContentType.
+type Postcrmobjects202603contactsbatchreadReadJSONRequestBody = BatchReadInputSimplePublicObjectId
+
+// Postcrmobjects202603contactsbatchupdateUpdateJSONRequestBody defines body for Postcrmobjects202603contactsbatchupdateUpdate for application/json ContentType.
+type Postcrmobjects202603contactsbatchupdateUpdateJSONRequestBody = BatchInputSimplePublicObjectBatchInput
+
+// Postcrmobjects202603contactsbatchupsertUpsertJSONRequestBody defines body for Postcrmobjects202603contactsbatchupsertUpsert for application/json ContentType.
+type Postcrmobjects202603contactsbatchupsertUpsertJSONRequestBody = BatchInputSimplePublicObjectBatchInputUpsert
+
+// Postcrmobjects202603contactsgdprDeletePurgeJSONRequestBody defines body for Postcrmobjects202603contactsgdprDeletePurge for application/json ContentType.
+type Postcrmobjects202603contactsgdprDeletePurgeJSONRequestBody = PublicGdprDeleteInput
+
+// Postcrmobjects202603contactsmergeMergeJSONRequestBody defines body for Postcrmobjects202603contactsmergeMerge for application/json ContentType.
+type Postcrmobjects202603contactsmergeMergeJSONRequestBody = PublicMergeInput
+
+// Postcrmobjects202603contactssearchDoSearchJSONRequestBody defines body for Postcrmobjects202603contactssearchDoSearch for application/json ContentType.
+type Postcrmobjects202603contactssearchDoSearchJSONRequestBody = PublicObjectSearchRequest
+
+// Patchcrmobjects202603contactsContactIdUpdateJSONRequestBody defines body for Patchcrmobjects202603contactsContactIdUpdate for application/json ContentType.
+type Patchcrmobjects202603contactsContactIdUpdateJSONRequestBody = SimplePublicObjectInput
+
+// Postcrmobjects202603contractsbatchreadReadJSONRequestBody defines body for Postcrmobjects202603contractsbatchreadRead for application/json ContentType.
+type Postcrmobjects202603contractsbatchreadReadJSONRequestBody = BatchReadInputSimplePublicObjectId
+
+// Postcrmobjects202603coursesmergeJSONRequestBody defines body for Postcrmobjects202603coursesmerge for application/json ContentType.
+type Postcrmobjects202603coursesmergeJSONRequestBody = PublicMergeInput
+
+// Postcrmobjects202603discountsJSONRequestBody defines body for Postcrmobjects202603discounts for application/json ContentType.
+type Postcrmobjects202603discountsJSONRequestBody = SimplePublicObjectInputForCreate
+
+// Postcrmobjects202603discountsbatcharchiveJSONRequestBody defines body for Postcrmobjects202603discountsbatcharchive for application/json ContentType.
+type Postcrmobjects202603discountsbatcharchiveJSONRequestBody = BatchInputSimplePublicObjectId
+
+// Postcrmobjects202603discountsbatchcreateJSONRequestBody defines body for Postcrmobjects202603discountsbatchcreate for application/json ContentType.
+type Postcrmobjects202603discountsbatchcreateJSONRequestBody = BatchInputSimplePublicObjectBatchInputForCreate
+
+// Postcrmobjects202603discountsbatchreadJSONRequestBody defines body for Postcrmobjects202603discountsbatchread for application/json ContentType.
+type Postcrmobjects202603discountsbatchreadJSONRequestBody = BatchReadInputSimplePublicObjectId
+
+// Postcrmobjects202603discountsbatchupdateJSONRequestBody defines body for Postcrmobjects202603discountsbatchupdate for application/json ContentType.
+type Postcrmobjects202603discountsbatchupdateJSONRequestBody = BatchInputSimplePublicObjectBatchInput
+
+// Postcrmobjects202603discountsbatchupsertJSONRequestBody defines body for Postcrmobjects202603discountsbatchupsert for application/json ContentType.
+type Postcrmobjects202603discountsbatchupsertJSONRequestBody = BatchInputSimplePublicObjectBatchInputUpsert
+
+// Postcrmobjects202603discountssearchJSONRequestBody defines body for Postcrmobjects202603discountssearch for application/json ContentType.
+type Postcrmobjects202603discountssearchJSONRequestBody = PublicObjectSearchRequest
+
+// Patchcrmobjects202603discountsDiscountIdJSONRequestBody defines body for Patchcrmobjects202603discountsDiscountId for application/json ContentType.
+type Patchcrmobjects202603discountsDiscountIdJSONRequestBody = SimplePublicObjectInput
+
+// Postcrmobjects202603emailsCreateJSONRequestBody defines body for Postcrmobjects202603emailsCreate for application/json ContentType.
+type Postcrmobjects202603emailsCreateJSONRequestBody = SimplePublicObjectInputForCreate
+
+// Postcrmobjects202603emailsbatcharchiveArchiveJSONRequestBody defines body for Postcrmobjects202603emailsbatcharchiveArchive for application/json ContentType.
+type Postcrmobjects202603emailsbatcharchiveArchiveJSONRequestBody = BatchInputSimplePublicObjectId
+
+// Postcrmobjects202603emailsbatchcreateCreateJSONRequestBody defines body for Postcrmobjects202603emailsbatchcreateCreate for application/json ContentType.
+type Postcrmobjects202603emailsbatchcreateCreateJSONRequestBody = BatchInputSimplePublicObjectBatchInputForCreate
+
+// Postcrmobjects202603emailsbatchreadReadJSONRequestBody defines body for Postcrmobjects202603emailsbatchreadRead for application/json ContentType.
+type Postcrmobjects202603emailsbatchreadReadJSONRequestBody = BatchReadInputSimplePublicObjectId
+
+// Postcrmobjects202603emailsbatchupdateUpdateJSONRequestBody defines body for Postcrmobjects202603emailsbatchupdateUpdate for application/json ContentType.
+type Postcrmobjects202603emailsbatchupdateUpdateJSONRequestBody = BatchInputSimplePublicObjectBatchInput
+
+// Postcrmobjects202603emailsbatchupsertUpsertJSONRequestBody defines body for Postcrmobjects202603emailsbatchupsertUpsert for application/json ContentType.
+type Postcrmobjects202603emailsbatchupsertUpsertJSONRequestBody = BatchInputSimplePublicObjectBatchInputUpsert
+
+// Postcrmobjects202603emailssearchDoSearchJSONRequestBody defines body for Postcrmobjects202603emailssearchDoSearch for application/json ContentType.
+type Postcrmobjects202603emailssearchDoSearchJSONRequestBody = PublicObjectSearchRequest
+
+// Patchcrmobjects202603emailsEmailIdUpdateJSONRequestBody defines body for Patchcrmobjects202603emailsEmailIdUpdate for application/json ContentType.
+type Patchcrmobjects202603emailsEmailIdUpdateJSONRequestBody = SimplePublicObjectInput
+
+// Postcrmobjects202603feedbackSubmissionsbatchreadReadJSONRequestBody defines body for Postcrmobjects202603feedbackSubmissionsbatchreadRead for application/json ContentType.
+type Postcrmobjects202603feedbackSubmissionsbatchreadReadJSONRequestBody = BatchReadInputSimplePublicObjectId
+
+// Postcrmobjects202603feedbackSubmissionssearchDoSearchJSONRequestBody defines body for Postcrmobjects202603feedbackSubmissionssearchDoSearch for application/json ContentType.
+type Postcrmobjects202603feedbackSubmissionssearchDoSearchJSONRequestBody = PublicObjectSearchRequest
+
+// Postcrmobjects202603feesJSONRequestBody defines body for Postcrmobjects202603fees for application/json ContentType.
+type Postcrmobjects202603feesJSONRequestBody = SimplePublicObjectInputForCreate
+
+// Postcrmobjects202603feesbatcharchiveJSONRequestBody defines body for Postcrmobjects202603feesbatcharchive for application/json ContentType.
+type Postcrmobjects202603feesbatcharchiveJSONRequestBody = BatchInputSimplePublicObjectId
+
+// Postcrmobjects202603feesbatchcreateJSONRequestBody defines body for Postcrmobjects202603feesbatchcreate for application/json ContentType.
+type Postcrmobjects202603feesbatchcreateJSONRequestBody = BatchInputSimplePublicObjectBatchInputForCreate
+
+// Postcrmobjects202603feesbatchreadJSONRequestBody defines body for Postcrmobjects202603feesbatchread for application/json ContentType.
+type Postcrmobjects202603feesbatchreadJSONRequestBody = BatchReadInputSimplePublicObjectId
+
+// Postcrmobjects202603feesbatchupdateJSONRequestBody defines body for Postcrmobjects202603feesbatchupdate for application/json ContentType.
+type Postcrmobjects202603feesbatchupdateJSONRequestBody = BatchInputSimplePublicObjectBatchInput
+
+// Postcrmobjects202603feesbatchupsertJSONRequestBody defines body for Postcrmobjects202603feesbatchupsert for application/json ContentType.
+type Postcrmobjects202603feesbatchupsertJSONRequestBody = BatchInputSimplePublicObjectBatchInputUpsert
+
+// Postcrmobjects202603feessearchJSONRequestBody defines body for Postcrmobjects202603feessearch for application/json ContentType.
+type Postcrmobjects202603feessearchJSONRequestBody = PublicObjectSearchRequest
+
+// Patchcrmobjects202603feesFeeIdJSONRequestBody defines body for Patchcrmobjects202603feesFeeId for application/json ContentType.
+type Patchcrmobjects202603feesFeeIdJSONRequestBody = SimplePublicObjectInput
+
+// Postcrmobjects202603goalTargetsCreateJSONRequestBody defines body for Postcrmobjects202603goalTargetsCreate for application/json ContentType.
+type Postcrmobjects202603goalTargetsCreateJSONRequestBody = SimplePublicObjectInputForCreate
+
+// Postcrmobjects202603goalTargetsbatcharchiveArchiveJSONRequestBody defines body for Postcrmobjects202603goalTargetsbatcharchiveArchive for application/json ContentType.
+type Postcrmobjects202603goalTargetsbatcharchiveArchiveJSONRequestBody = BatchInputSimplePublicObjectId
+
+// Postcrmobjects202603goalTargetsbatchcreateCreateJSONRequestBody defines body for Postcrmobjects202603goalTargetsbatchcreateCreate for application/json ContentType.
+type Postcrmobjects202603goalTargetsbatchcreateCreateJSONRequestBody = BatchInputSimplePublicObjectBatchInputForCreate
+
+// Postcrmobjects202603goalTargetsbatchreadReadJSONRequestBody defines body for Postcrmobjects202603goalTargetsbatchreadRead for application/json ContentType.
+type Postcrmobjects202603goalTargetsbatchreadReadJSONRequestBody = BatchReadInputSimplePublicObjectId
+
+// Postcrmobjects202603goalTargetsbatchupdateUpdateJSONRequestBody defines body for Postcrmobjects202603goalTargetsbatchupdateUpdate for application/json ContentType.
+type Postcrmobjects202603goalTargetsbatchupdateUpdateJSONRequestBody = BatchInputSimplePublicObjectBatchInput
+
+// Postcrmobjects202603goalTargetsbatchupsertUpsertJSONRequestBody defines body for Postcrmobjects202603goalTargetsbatchupsertUpsert for application/json ContentType.
+type Postcrmobjects202603goalTargetsbatchupsertUpsertJSONRequestBody = BatchInputSimplePublicObjectBatchInputUpsert
+
+// Postcrmobjects202603goalTargetssearchDoSearchJSONRequestBody defines body for Postcrmobjects202603goalTargetssearchDoSearch for application/json ContentType.
+type Postcrmobjects202603goalTargetssearchDoSearchJSONRequestBody = PublicObjectSearchRequest
+
+// Patchcrmobjects202603goalTargetsGoalTargetIdUpdateJSONRequestBody defines body for Patchcrmobjects202603goalTargetsGoalTargetIdUpdate for application/json ContentType.
+type Patchcrmobjects202603goalTargetsGoalTargetIdUpdateJSONRequestBody = SimplePublicObjectInput
+
+// Postcrmobjects202603invoicesCreateJSONRequestBody defines body for Postcrmobjects202603invoicesCreate for application/json ContentType.
+type Postcrmobjects202603invoicesCreateJSONRequestBody = SimplePublicObjectInputForCreate
+
+// Postcrmobjects202603invoicesbatcharchiveArchiveJSONRequestBody defines body for Postcrmobjects202603invoicesbatcharchiveArchive for application/json ContentType.
+type Postcrmobjects202603invoicesbatcharchiveArchiveJSONRequestBody = BatchInputSimplePublicObjectId
+
+// Postcrmobjects202603invoicesbatchcreateCreateJSONRequestBody defines body for Postcrmobjects202603invoicesbatchcreateCreate for application/json ContentType.
+type Postcrmobjects202603invoicesbatchcreateCreateJSONRequestBody = BatchInputSimplePublicObjectBatchInputForCreate
+
+// Postcrmobjects202603invoicesbatchreadReadJSONRequestBody defines body for Postcrmobjects202603invoicesbatchreadRead for application/json ContentType.
+type Postcrmobjects202603invoicesbatchreadReadJSONRequestBody = BatchReadInputSimplePublicObjectId
+
+// Postcrmobjects202603invoicesbatchupdateUpdateJSONRequestBody defines body for Postcrmobjects202603invoicesbatchupdateUpdate for application/json ContentType.
+type Postcrmobjects202603invoicesbatchupdateUpdateJSONRequestBody = BatchInputSimplePublicObjectBatchInput
+
+// Postcrmobjects202603invoicesbatchupsertUpsertJSONRequestBody defines body for Postcrmobjects202603invoicesbatchupsertUpsert for application/json ContentType.
+type Postcrmobjects202603invoicesbatchupsertUpsertJSONRequestBody = BatchInputSimplePublicObjectBatchInputUpsert
+
+// Postcrmobjects202603invoicessearchDoSearchJSONRequestBody defines body for Postcrmobjects202603invoicessearchDoSearch for application/json ContentType.
+type Postcrmobjects202603invoicessearchDoSearchJSONRequestBody = PublicObjectSearchRequest
+
+// Patchcrmobjects202603invoicesInvoiceIdUpdateJSONRequestBody defines body for Patchcrmobjects202603invoicesInvoiceIdUpdate for application/json ContentType.
+type Patchcrmobjects202603invoicesInvoiceIdUpdateJSONRequestBody = SimplePublicObjectInput
+
+// Postcrmobjects202603leadsCreateJSONRequestBody defines body for Postcrmobjects202603leadsCreate for application/json ContentType.
+type Postcrmobjects202603leadsCreateJSONRequestBody = SimplePublicObjectInputForCreate
+
+// Postcrmobjects202603leadsbatcharchiveArchiveJSONRequestBody defines body for Postcrmobjects202603leadsbatcharchiveArchive for application/json ContentType.
+type Postcrmobjects202603leadsbatcharchiveArchiveJSONRequestBody = BatchInputSimplePublicObjectId
+
+// Postcrmobjects202603leadsbatchcreateCreateJSONRequestBody defines body for Postcrmobjects202603leadsbatchcreateCreate for application/json ContentType.
+type Postcrmobjects202603leadsbatchcreateCreateJSONRequestBody = BatchInputSimplePublicObjectBatchInputForCreate
+
+// Postcrmobjects202603leadsbatchreadReadJSONRequestBody defines body for Postcrmobjects202603leadsbatchreadRead for application/json ContentType.
+type Postcrmobjects202603leadsbatchreadReadJSONRequestBody = BatchReadInputSimplePublicObjectId
+
+// Postcrmobjects202603leadsbatchupdateUpdateJSONRequestBody defines body for Postcrmobjects202603leadsbatchupdateUpdate for application/json ContentType.
+type Postcrmobjects202603leadsbatchupdateUpdateJSONRequestBody = BatchInputSimplePublicObjectBatchInput
+
+// Postcrmobjects202603leadsbatchupsertUpsertJSONRequestBody defines body for Postcrmobjects202603leadsbatchupsertUpsert for application/json ContentType.
+type Postcrmobjects202603leadsbatchupsertUpsertJSONRequestBody = BatchInputSimplePublicObjectBatchInputUpsert
+
+// Postcrmobjects202603leadssearchDoSearchJSONRequestBody defines body for Postcrmobjects202603leadssearchDoSearch for application/json ContentType.
+type Postcrmobjects202603leadssearchDoSearchJSONRequestBody = PublicObjectSearchRequest
+
+// Patchcrmobjects202603leadsLeadsIdUpdateJSONRequestBody defines body for Patchcrmobjects202603leadsLeadsIdUpdate for application/json ContentType.
+type Patchcrmobjects202603leadsLeadsIdUpdateJSONRequestBody = SimplePublicObjectInput
+
+// Postcrmobjects202603lineItemsCreateJSONRequestBody defines body for Postcrmobjects202603lineItemsCreate for application/json ContentType.
+type Postcrmobjects202603lineItemsCreateJSONRequestBody = SimplePublicObjectInputForCreate
+
+// Postcrmobjects202603lineItemsbatcharchiveArchiveJSONRequestBody defines body for Postcrmobjects202603lineItemsbatcharchiveArchive for application/json ContentType.
+type Postcrmobjects202603lineItemsbatcharchiveArchiveJSONRequestBody = BatchInputSimplePublicObjectId
+
+// Postcrmobjects202603lineItemsbatchcreateCreateJSONRequestBody defines body for Postcrmobjects202603lineItemsbatchcreateCreate for application/json ContentType.
+type Postcrmobjects202603lineItemsbatchcreateCreateJSONRequestBody = BatchInputSimplePublicObjectBatchInputForCreate
+
+// Postcrmobjects202603lineItemsbatchreadReadJSONRequestBody defines body for Postcrmobjects202603lineItemsbatchreadRead for application/json ContentType.
+type Postcrmobjects202603lineItemsbatchreadReadJSONRequestBody = BatchReadInputSimplePublicObjectId
+
+// Postcrmobjects202603lineItemsbatchupdateUpdateJSONRequestBody defines body for Postcrmobjects202603lineItemsbatchupdateUpdate for application/json ContentType.
+type Postcrmobjects202603lineItemsbatchupdateUpdateJSONRequestBody = BatchInputSimplePublicObjectBatchInput
+
+// Postcrmobjects202603lineItemsbatchupsertUpsertJSONRequestBody defines body for Postcrmobjects202603lineItemsbatchupsertUpsert for application/json ContentType.
+type Postcrmobjects202603lineItemsbatchupsertUpsertJSONRequestBody = BatchInputSimplePublicObjectBatchInputUpsert
+
+// Postcrmobjects202603lineItemssearchDoSearchJSONRequestBody defines body for Postcrmobjects202603lineItemssearchDoSearch for application/json ContentType.
+type Postcrmobjects202603lineItemssearchDoSearchJSONRequestBody = PublicObjectSearchRequest
+
+// Patchcrmobjects202603lineItemsLineItemIdUpdateJSONRequestBody defines body for Patchcrmobjects202603lineItemsLineItemIdUpdate for application/json ContentType.
+type Patchcrmobjects202603lineItemsLineItemIdUpdateJSONRequestBody = SimplePublicObjectInput
+
+// Postcrmobjects202603meetingsCreateJSONRequestBody defines body for Postcrmobjects202603meetingsCreate for application/json ContentType.
+type Postcrmobjects202603meetingsCreateJSONRequestBody = SimplePublicObjectInputForCreate
+
+// Postcrmobjects202603meetingsbatcharchiveArchiveJSONRequestBody defines body for Postcrmobjects202603meetingsbatcharchiveArchive for application/json ContentType.
+type Postcrmobjects202603meetingsbatcharchiveArchiveJSONRequestBody = BatchInputSimplePublicObjectId
+
+// Postcrmobjects202603meetingsbatchcreateCreateJSONRequestBody defines body for Postcrmobjects202603meetingsbatchcreateCreate for application/json ContentType.
+type Postcrmobjects202603meetingsbatchcreateCreateJSONRequestBody = BatchInputSimplePublicObjectBatchInputForCreate
+
+// Postcrmobjects202603meetingsbatchreadReadJSONRequestBody defines body for Postcrmobjects202603meetingsbatchreadRead for application/json ContentType.
+type Postcrmobjects202603meetingsbatchreadReadJSONRequestBody = BatchReadInputSimplePublicObjectId
+
+// Postcrmobjects202603meetingsbatchupdateUpdateJSONRequestBody defines body for Postcrmobjects202603meetingsbatchupdateUpdate for application/json ContentType.
+type Postcrmobjects202603meetingsbatchupdateUpdateJSONRequestBody = BatchInputSimplePublicObjectBatchInput
+
+// Postcrmobjects202603meetingsbatchupsertUpsertJSONRequestBody defines body for Postcrmobjects202603meetingsbatchupsertUpsert for application/json ContentType.
+type Postcrmobjects202603meetingsbatchupsertUpsertJSONRequestBody = BatchInputSimplePublicObjectBatchInputUpsert
+
+// Postcrmobjects202603meetingssearchDoSearchJSONRequestBody defines body for Postcrmobjects202603meetingssearchDoSearch for application/json ContentType.
+type Postcrmobjects202603meetingssearchDoSearchJSONRequestBody = PublicObjectSearchRequest
+
+// Patchcrmobjects202603meetingsMeetingIdUpdateJSONRequestBody defines body for Patchcrmobjects202603meetingsMeetingIdUpdate for application/json ContentType.
+type Patchcrmobjects202603meetingsMeetingIdUpdateJSONRequestBody = SimplePublicObjectInput
+
+// Postcrmobjects202603notesCreateJSONRequestBody defines body for Postcrmobjects202603notesCreate for application/json ContentType.
+type Postcrmobjects202603notesCreateJSONRequestBody = SimplePublicObjectInputForCreate
+
+// Postcrmobjects202603notesbatcharchiveArchiveJSONRequestBody defines body for Postcrmobjects202603notesbatcharchiveArchive for application/json ContentType.
+type Postcrmobjects202603notesbatcharchiveArchiveJSONRequestBody = BatchInputSimplePublicObjectId
+
+// Postcrmobjects202603notesbatchcreateCreateJSONRequestBody defines body for Postcrmobjects202603notesbatchcreateCreate for application/json ContentType.
+type Postcrmobjects202603notesbatchcreateCreateJSONRequestBody = BatchInputSimplePublicObjectBatchInputForCreate
+
+// Postcrmobjects202603notesbatchreadReadJSONRequestBody defines body for Postcrmobjects202603notesbatchreadRead for application/json ContentType.
+type Postcrmobjects202603notesbatchreadReadJSONRequestBody = BatchReadInputSimplePublicObjectId
+
+// Postcrmobjects202603notesbatchupdateUpdateJSONRequestBody defines body for Postcrmobjects202603notesbatchupdateUpdate for application/json ContentType.
+type Postcrmobjects202603notesbatchupdateUpdateJSONRequestBody = BatchInputSimplePublicObjectBatchInput
+
+// Postcrmobjects202603notesbatchupsertUpsertJSONRequestBody defines body for Postcrmobjects202603notesbatchupsertUpsert for application/json ContentType.
+type Postcrmobjects202603notesbatchupsertUpsertJSONRequestBody = BatchInputSimplePublicObjectBatchInputUpsert
+
+// Postcrmobjects202603notessearchDoSearchJSONRequestBody defines body for Postcrmobjects202603notessearchDoSearch for application/json ContentType.
+type Postcrmobjects202603notessearchDoSearchJSONRequestBody = PublicObjectSearchRequest
+
+// Patchcrmobjects202603notesNoteIdUpdateJSONRequestBody defines body for Patchcrmobjects202603notesNoteIdUpdate for application/json ContentType.
+type Patchcrmobjects202603notesNoteIdUpdateJSONRequestBody = SimplePublicObjectInput
+
+// Postcrmobjects202603ordersJSONRequestBody defines body for Postcrmobjects202603orders for application/json ContentType.
+type Postcrmobjects202603ordersJSONRequestBody = SimplePublicObjectInputForCreate
+
+// Postcrmobjects202603ordersbatcharchiveJSONRequestBody defines body for Postcrmobjects202603ordersbatcharchive for application/json ContentType.
+type Postcrmobjects202603ordersbatcharchiveJSONRequestBody = BatchInputSimplePublicObjectId
+
+// Postcrmobjects202603ordersbatchcreateJSONRequestBody defines body for Postcrmobjects202603ordersbatchcreate for application/json ContentType.
+type Postcrmobjects202603ordersbatchcreateJSONRequestBody = BatchInputSimplePublicObjectBatchInputForCreate
+
+// Postcrmobjects202603ordersbatchreadJSONRequestBody defines body for Postcrmobjects202603ordersbatchread for application/json ContentType.
+type Postcrmobjects202603ordersbatchreadJSONRequestBody = BatchReadInputSimplePublicObjectId
+
+// Postcrmobjects202603ordersbatchupdateJSONRequestBody defines body for Postcrmobjects202603ordersbatchupdate for application/json ContentType.
+type Postcrmobjects202603ordersbatchupdateJSONRequestBody = BatchInputSimplePublicObjectBatchInput
+
+// Postcrmobjects202603ordersbatchupsertJSONRequestBody defines body for Postcrmobjects202603ordersbatchupsert for application/json ContentType.
+type Postcrmobjects202603ordersbatchupsertJSONRequestBody = BatchInputSimplePublicObjectBatchInputUpsert
+
+// Postcrmobjects202603ordersmergeJSONRequestBody defines body for Postcrmobjects202603ordersmerge for application/json ContentType.
+type Postcrmobjects202603ordersmergeJSONRequestBody = PublicMergeInput
+
+// Postcrmobjects202603orderssearchJSONRequestBody defines body for Postcrmobjects202603orderssearch for application/json ContentType.
+type Postcrmobjects202603orderssearchJSONRequestBody = PublicObjectSearchRequest
+
+// Patchcrmobjects202603ordersOrderIdJSONRequestBody defines body for Patchcrmobjects202603ordersOrderId for application/json ContentType.
+type Patchcrmobjects202603ordersOrderIdJSONRequestBody = SimplePublicObjectInput
+
+// Postcrmobjects202603partnerClientsbatchreadJSONRequestBody defines body for Postcrmobjects202603partnerClientsbatchread for application/json ContentType.
+type Postcrmobjects202603partnerClientsbatchreadJSONRequestBody = BatchReadInputSimplePublicObjectId
+
+// Postcrmobjects202603partnerClientsbatchupdateJSONRequestBody defines body for Postcrmobjects202603partnerClientsbatchupdate for application/json ContentType.
+type Postcrmobjects202603partnerClientsbatchupdateJSONRequestBody = BatchInputSimplePublicObjectBatchInput
+
+// Postcrmobjects202603partnerClientssearchJSONRequestBody defines body for Postcrmobjects202603partnerClientssearch for application/json ContentType.
+type Postcrmobjects202603partnerClientssearchJSONRequestBody = PublicObjectSearchRequest
+
+// Patchcrmobjects202603partnerClientsPartnerClientIdJSONRequestBody defines body for Patchcrmobjects202603partnerClientsPartnerClientId for application/json ContentType.
+type Patchcrmobjects202603partnerClientsPartnerClientIdJSONRequestBody = SimplePublicObjectInput
+
+// Postcrmobjects202603partnerServicesbatchreadJSONRequestBody defines body for Postcrmobjects202603partnerServicesbatchread for application/json ContentType.
+type Postcrmobjects202603partnerServicesbatchreadJSONRequestBody = BatchReadInputSimplePublicObjectId
+
+// Postcrmobjects202603partnerServicesbatchupdateJSONRequestBody defines body for Postcrmobjects202603partnerServicesbatchupdate for application/json ContentType.
+type Postcrmobjects202603partnerServicesbatchupdateJSONRequestBody = BatchInputSimplePublicObjectBatchInput
+
+// Postcrmobjects202603partnerServicessearchJSONRequestBody defines body for Postcrmobjects202603partnerServicessearch for application/json ContentType.
+type Postcrmobjects202603partnerServicessearchJSONRequestBody = PublicObjectSearchRequest
+
+// Patchcrmobjects202603partnerServicesPartnerServiceIdJSONRequestBody defines body for Patchcrmobjects202603partnerServicesPartnerServiceId for application/json ContentType.
+type Patchcrmobjects202603partnerServicesPartnerServiceIdJSONRequestBody = SimplePublicObjectInput
+
+// Postcrmobjects202603postalMailCreateJSONRequestBody defines body for Postcrmobjects202603postalMailCreate for application/json ContentType.
+type Postcrmobjects202603postalMailCreateJSONRequestBody = SimplePublicObjectInputForCreate
+
+// Postcrmobjects202603postalMailbatcharchiveArchiveJSONRequestBody defines body for Postcrmobjects202603postalMailbatcharchiveArchive for application/json ContentType.
+type Postcrmobjects202603postalMailbatcharchiveArchiveJSONRequestBody = BatchInputSimplePublicObjectId
+
+// Postcrmobjects202603postalMailbatchcreateCreateJSONRequestBody defines body for Postcrmobjects202603postalMailbatchcreateCreate for application/json ContentType.
+type Postcrmobjects202603postalMailbatchcreateCreateJSONRequestBody = BatchInputSimplePublicObjectBatchInputForCreate
+
+// Postcrmobjects202603postalMailbatchreadReadJSONRequestBody defines body for Postcrmobjects202603postalMailbatchreadRead for application/json ContentType.
+type Postcrmobjects202603postalMailbatchreadReadJSONRequestBody = BatchReadInputSimplePublicObjectId
+
+// Postcrmobjects202603postalMailbatchupdateUpdateJSONRequestBody defines body for Postcrmobjects202603postalMailbatchupdateUpdate for application/json ContentType.
+type Postcrmobjects202603postalMailbatchupdateUpdateJSONRequestBody = BatchInputSimplePublicObjectBatchInput
+
+// Postcrmobjects202603postalMailbatchupsertUpsertJSONRequestBody defines body for Postcrmobjects202603postalMailbatchupsertUpsert for application/json ContentType.
+type Postcrmobjects202603postalMailbatchupsertUpsertJSONRequestBody = BatchInputSimplePublicObjectBatchInputUpsert
+
+// Postcrmobjects202603postalMailsearchDoSearchJSONRequestBody defines body for Postcrmobjects202603postalMailsearchDoSearch for application/json ContentType.
+type Postcrmobjects202603postalMailsearchDoSearchJSONRequestBody = PublicObjectSearchRequest
+
+// Patchcrmobjects202603postalMailPostalMailIdUpdateJSONRequestBody defines body for Patchcrmobjects202603postalMailPostalMailIdUpdate for application/json ContentType.
+type Patchcrmobjects202603postalMailPostalMailIdUpdateJSONRequestBody = SimplePublicObjectInput
+
+// Postcrmobjects202603productsCreateJSONRequestBody defines body for Postcrmobjects202603productsCreate for application/json ContentType.
+type Postcrmobjects202603productsCreateJSONRequestBody = SimplePublicObjectInputForCreate
+
+// Postcrmobjects202603productsbatcharchiveArchiveJSONRequestBody defines body for Postcrmobjects202603productsbatcharchiveArchive for application/json ContentType.
+type Postcrmobjects202603productsbatcharchiveArchiveJSONRequestBody = BatchInputSimplePublicObjectId
+
+// Postcrmobjects202603productsbatchcreateCreateJSONRequestBody defines body for Postcrmobjects202603productsbatchcreateCreate for application/json ContentType.
+type Postcrmobjects202603productsbatchcreateCreateJSONRequestBody = BatchInputSimplePublicObjectBatchInputForCreate
+
+// Postcrmobjects202603productsbatchreadReadJSONRequestBody defines body for Postcrmobjects202603productsbatchreadRead for application/json ContentType.
+type Postcrmobjects202603productsbatchreadReadJSONRequestBody = BatchReadInputSimplePublicObjectId
+
+// Postcrmobjects202603productsbatchupdateUpdateJSONRequestBody defines body for Postcrmobjects202603productsbatchupdateUpdate for application/json ContentType.
+type Postcrmobjects202603productsbatchupdateUpdateJSONRequestBody = BatchInputSimplePublicObjectBatchInput
+
+// Postcrmobjects202603productsbatchupsertUpsertJSONRequestBody defines body for Postcrmobjects202603productsbatchupsertUpsert for application/json ContentType.
+type Postcrmobjects202603productsbatchupsertUpsertJSONRequestBody = BatchInputSimplePublicObjectBatchInputUpsert
+
+// Postcrmobjects202603productssearchDoSearchJSONRequestBody defines body for Postcrmobjects202603productssearchDoSearch for application/json ContentType.
+type Postcrmobjects202603productssearchDoSearchJSONRequestBody = PublicObjectSearchRequest
+
+// Patchcrmobjects202603productsProductIdUpdateJSONRequestBody defines body for Patchcrmobjects202603productsProductIdUpdate for application/json ContentType.
+type Patchcrmobjects202603productsProductIdUpdateJSONRequestBody = SimplePublicObjectInput
+
+// Postcrmobjects202603projectsJSONRequestBody defines body for Postcrmobjects202603projects for application/json ContentType.
+type Postcrmobjects202603projectsJSONRequestBody = SimplePublicObjectInputForCreate
+
+// Postcrmobjects202603projectsbatcharchiveJSONRequestBody defines body for Postcrmobjects202603projectsbatcharchive for application/json ContentType.
+type Postcrmobjects202603projectsbatcharchiveJSONRequestBody = BatchInputSimplePublicObjectId
+
+// Postcrmobjects202603projectsbatchcreateJSONRequestBody defines body for Postcrmobjects202603projectsbatchcreate for application/json ContentType.
+type Postcrmobjects202603projectsbatchcreateJSONRequestBody = BatchInputSimplePublicObjectBatchInputForCreate
+
+// Postcrmobjects202603projectsbatchreadJSONRequestBody defines body for Postcrmobjects202603projectsbatchread for application/json ContentType.
+type Postcrmobjects202603projectsbatchreadJSONRequestBody = BatchReadInputSimplePublicObjectId
+
+// Postcrmobjects202603projectsbatchupdateJSONRequestBody defines body for Postcrmobjects202603projectsbatchupdate for application/json ContentType.
+type Postcrmobjects202603projectsbatchupdateJSONRequestBody = BatchInputSimplePublicObjectBatchInput
+
+// Postcrmobjects202603projectsbatchupsertJSONRequestBody defines body for Postcrmobjects202603projectsbatchupsert for application/json ContentType.
+type Postcrmobjects202603projectsbatchupsertJSONRequestBody = BatchInputSimplePublicObjectBatchInputUpsert
+
+// Postcrmobjects202603projectsmergeJSONRequestBody defines body for Postcrmobjects202603projectsmerge for application/json ContentType.
+type Postcrmobjects202603projectsmergeJSONRequestBody = PublicMergeInput
+
+// Postcrmobjects202603projectssearchJSONRequestBody defines body for Postcrmobjects202603projectssearch for application/json ContentType.
+type Postcrmobjects202603projectssearchJSONRequestBody = PublicObjectSearchRequest
+
+// Patchcrmobjects202603projectsProjectIdJSONRequestBody defines body for Patchcrmobjects202603projectsProjectId for application/json ContentType.
+type Patchcrmobjects202603projectsProjectIdJSONRequestBody = SimplePublicObjectInput
+
+// Postcrmobjects202603quotesCreateJSONRequestBody defines body for Postcrmobjects202603quotesCreate for application/json ContentType.
+type Postcrmobjects202603quotesCreateJSONRequestBody = SimplePublicObjectInputForCreate
+
+// Postcrmobjects202603quotesbatcharchiveArchiveJSONRequestBody defines body for Postcrmobjects202603quotesbatcharchiveArchive for application/json ContentType.
+type Postcrmobjects202603quotesbatcharchiveArchiveJSONRequestBody = BatchInputSimplePublicObjectId
+
+// Postcrmobjects202603quotesbatchcreateCreateJSONRequestBody defines body for Postcrmobjects202603quotesbatchcreateCreate for application/json ContentType.
+type Postcrmobjects202603quotesbatchcreateCreateJSONRequestBody = BatchInputSimplePublicObjectBatchInputForCreate
+
+// Postcrmobjects202603quotesbatchreadReadJSONRequestBody defines body for Postcrmobjects202603quotesbatchreadRead for application/json ContentType.
+type Postcrmobjects202603quotesbatchreadReadJSONRequestBody = BatchReadInputSimplePublicObjectId
+
+// Postcrmobjects202603quotesbatchupdateUpdateJSONRequestBody defines body for Postcrmobjects202603quotesbatchupdateUpdate for application/json ContentType.
+type Postcrmobjects202603quotesbatchupdateUpdateJSONRequestBody = BatchInputSimplePublicObjectBatchInput
+
+// Postcrmobjects202603quotesbatchupsertUpsertJSONRequestBody defines body for Postcrmobjects202603quotesbatchupsertUpsert for application/json ContentType.
+type Postcrmobjects202603quotesbatchupsertUpsertJSONRequestBody = BatchInputSimplePublicObjectBatchInputUpsert
+
+// Postcrmobjects202603quotessearchDoSearchJSONRequestBody defines body for Postcrmobjects202603quotessearchDoSearch for application/json ContentType.
+type Postcrmobjects202603quotessearchDoSearchJSONRequestBody = PublicObjectSearchRequest
+
+// Patchcrmobjects202603quotesQuoteIdUpdateJSONRequestBody defines body for Patchcrmobjects202603quotesQuoteIdUpdate for application/json ContentType.
+type Patchcrmobjects202603quotesQuoteIdUpdateJSONRequestBody = SimplePublicObjectInput
+
+// Postcrmobjects202603servicesmergeJSONRequestBody defines body for Postcrmobjects202603servicesmerge for application/json ContentType.
+type Postcrmobjects202603servicesmergeJSONRequestBody = PublicMergeInput
+
+// Postcrmobjects202603subscriptionsJSONRequestBody defines body for Postcrmobjects202603subscriptions for application/json ContentType.
+type Postcrmobjects202603subscriptionsJSONRequestBody = SimplePublicObjectInputForCreate
+
+// Postcrmobjects202603subscriptionsbatcharchiveJSONRequestBody defines body for Postcrmobjects202603subscriptionsbatcharchive for application/json ContentType.
+type Postcrmobjects202603subscriptionsbatcharchiveJSONRequestBody = BatchInputSimplePublicObjectId
+
+// Postcrmobjects202603subscriptionsbatchcreateJSONRequestBody defines body for Postcrmobjects202603subscriptionsbatchcreate for application/json ContentType.
+type Postcrmobjects202603subscriptionsbatchcreateJSONRequestBody = BatchInputSimplePublicObjectBatchInputForCreate
+
+// Postcrmobjects202603subscriptionsbatchreadJSONRequestBody defines body for Postcrmobjects202603subscriptionsbatchread for application/json ContentType.
+type Postcrmobjects202603subscriptionsbatchreadJSONRequestBody = BatchReadInputSimplePublicObjectId
+
+// Postcrmobjects202603subscriptionsbatchupdateJSONRequestBody defines body for Postcrmobjects202603subscriptionsbatchupdate for application/json ContentType.
+type Postcrmobjects202603subscriptionsbatchupdateJSONRequestBody = BatchInputSimplePublicObjectBatchInput
+
+// Postcrmobjects202603subscriptionsbatchupsertJSONRequestBody defines body for Postcrmobjects202603subscriptionsbatchupsert for application/json ContentType.
+type Postcrmobjects202603subscriptionsbatchupsertJSONRequestBody = BatchInputSimplePublicObjectBatchInputUpsert
+
+// Postcrmobjects202603subscriptionssearchJSONRequestBody defines body for Postcrmobjects202603subscriptionssearch for application/json ContentType.
+type Postcrmobjects202603subscriptionssearchJSONRequestBody = PublicObjectSearchRequest
+
+// Patchcrmobjects202603subscriptionsSubscriptionIdJSONRequestBody defines body for Patchcrmobjects202603subscriptionsSubscriptionId for application/json ContentType.
+type Patchcrmobjects202603subscriptionsSubscriptionIdJSONRequestBody = SimplePublicObjectInput
+
+// Postcrmobjects202603tasksCreateJSONRequestBody defines body for Postcrmobjects202603tasksCreate for application/json ContentType.
+type Postcrmobjects202603tasksCreateJSONRequestBody = SimplePublicObjectInputForCreate
+
+// Postcrmobjects202603tasksbatcharchiveArchiveJSONRequestBody defines body for Postcrmobjects202603tasksbatcharchiveArchive for application/json ContentType.
+type Postcrmobjects202603tasksbatcharchiveArchiveJSONRequestBody = BatchInputSimplePublicObjectId
+
+// Postcrmobjects202603tasksbatchcreateCreateJSONRequestBody defines body for Postcrmobjects202603tasksbatchcreateCreate for application/json ContentType.
+type Postcrmobjects202603tasksbatchcreateCreateJSONRequestBody = BatchInputSimplePublicObjectBatchInputForCreate
+
+// Postcrmobjects202603tasksbatchreadReadJSONRequestBody defines body for Postcrmobjects202603tasksbatchreadRead for application/json ContentType.
+type Postcrmobjects202603tasksbatchreadReadJSONRequestBody = BatchReadInputSimplePublicObjectId
+
+// Postcrmobjects202603tasksbatchupdateUpdateJSONRequestBody defines body for Postcrmobjects202603tasksbatchupdateUpdate for application/json ContentType.
+type Postcrmobjects202603tasksbatchupdateUpdateJSONRequestBody = BatchInputSimplePublicObjectBatchInput
+
+// Postcrmobjects202603tasksbatchupsertUpsertJSONRequestBody defines body for Postcrmobjects202603tasksbatchupsertUpsert for application/json ContentType.
+type Postcrmobjects202603tasksbatchupsertUpsertJSONRequestBody = BatchInputSimplePublicObjectBatchInputUpsert
+
+// Postcrmobjects202603taskssearchDoSearchJSONRequestBody defines body for Postcrmobjects202603taskssearchDoSearch for application/json ContentType.
+type Postcrmobjects202603taskssearchDoSearchJSONRequestBody = PublicObjectSearchRequest
+
+// Patchcrmobjects202603tasksTaskIdUpdateJSONRequestBody defines body for Patchcrmobjects202603tasksTaskIdUpdate for application/json ContentType.
+type Patchcrmobjects202603tasksTaskIdUpdateJSONRequestBody = SimplePublicObjectInput
+
+// Postcrmobjects202603taxesCreateJSONRequestBody defines body for Postcrmobjects202603taxesCreate for application/json ContentType.
+type Postcrmobjects202603taxesCreateJSONRequestBody = SimplePublicObjectInputForCreate
+
+// Postcrmobjects202603taxesbatcharchiveArchiveJSONRequestBody defines body for Postcrmobjects202603taxesbatcharchiveArchive for application/json ContentType.
+type Postcrmobjects202603taxesbatcharchiveArchiveJSONRequestBody = BatchInputSimplePublicObjectId
+
+// Postcrmobjects202603taxesbatchcreateCreateJSONRequestBody defines body for Postcrmobjects202603taxesbatchcreateCreate for application/json ContentType.
+type Postcrmobjects202603taxesbatchcreateCreateJSONRequestBody = BatchInputSimplePublicObjectBatchInputForCreate
+
+// Postcrmobjects202603taxesbatchreadReadJSONRequestBody defines body for Postcrmobjects202603taxesbatchreadRead for application/json ContentType.
+type Postcrmobjects202603taxesbatchreadReadJSONRequestBody = BatchReadInputSimplePublicObjectId
+
+// Postcrmobjects202603taxesbatchupdateUpdateJSONRequestBody defines body for Postcrmobjects202603taxesbatchupdateUpdate for application/json ContentType.
+type Postcrmobjects202603taxesbatchupdateUpdateJSONRequestBody = BatchInputSimplePublicObjectBatchInput
+
+// Postcrmobjects202603taxesbatchupsertUpsertJSONRequestBody defines body for Postcrmobjects202603taxesbatchupsertUpsert for application/json ContentType.
+type Postcrmobjects202603taxesbatchupsertUpsertJSONRequestBody = BatchInputSimplePublicObjectBatchInputUpsert
+
+// Postcrmobjects202603taxessearchDoSearchJSONRequestBody defines body for Postcrmobjects202603taxessearchDoSearch for application/json ContentType.
+type Postcrmobjects202603taxessearchDoSearchJSONRequestBody = PublicObjectSearchRequest
+
+// Patchcrmobjects202603taxesTaxIdUpdateJSONRequestBody defines body for Patchcrmobjects202603taxesTaxIdUpdate for application/json ContentType.
+type Patchcrmobjects202603taxesTaxIdUpdateJSONRequestBody = SimplePublicObjectInput
+
+// Postcrmobjects202603ticketsCreateJSONRequestBody defines body for Postcrmobjects202603ticketsCreate for application/json ContentType.
+type Postcrmobjects202603ticketsCreateJSONRequestBody = SimplePublicObjectInputForCreate
+
+// Postcrmobjects202603ticketsbatcharchiveArchiveJSONRequestBody defines body for Postcrmobjects202603ticketsbatcharchiveArchive for application/json ContentType.
+type Postcrmobjects202603ticketsbatcharchiveArchiveJSONRequestBody = BatchInputSimplePublicObjectId
+
+// Postcrmobjects202603ticketsbatchcreateCreateJSONRequestBody defines body for Postcrmobjects202603ticketsbatchcreateCreate for application/json ContentType.
+type Postcrmobjects202603ticketsbatchcreateCreateJSONRequestBody = BatchInputSimplePublicObjectBatchInputForCreate
+
+// Postcrmobjects202603ticketsbatchreadReadJSONRequestBody defines body for Postcrmobjects202603ticketsbatchreadRead for application/json ContentType.
+type Postcrmobjects202603ticketsbatchreadReadJSONRequestBody = BatchReadInputSimplePublicObjectId
+
+// Postcrmobjects202603ticketsbatchupdateUpdateJSONRequestBody defines body for Postcrmobjects202603ticketsbatchupdateUpdate for application/json ContentType.
+type Postcrmobjects202603ticketsbatchupdateUpdateJSONRequestBody = BatchInputSimplePublicObjectBatchInput
+
+// Postcrmobjects202603ticketsbatchupsertUpsertJSONRequestBody defines body for Postcrmobjects202603ticketsbatchupsertUpsert for application/json ContentType.
+type Postcrmobjects202603ticketsbatchupsertUpsertJSONRequestBody = BatchInputSimplePublicObjectBatchInputUpsert
+
+// Postcrmobjects202603ticketsmergeMergeJSONRequestBody defines body for Postcrmobjects202603ticketsmergeMerge for application/json ContentType.
+type Postcrmobjects202603ticketsmergeMergeJSONRequestBody = PublicMergeInput
+
+// Postcrmobjects202603ticketssearchDoSearchJSONRequestBody defines body for Postcrmobjects202603ticketssearchDoSearch for application/json ContentType.
+type Postcrmobjects202603ticketssearchDoSearchJSONRequestBody = PublicObjectSearchRequest
+
+// Patchcrmobjects202603ticketsTicketIdUpdateJSONRequestBody defines body for Patchcrmobjects202603ticketsTicketIdUpdate for application/json ContentType.
+type Patchcrmobjects202603ticketsTicketIdUpdateJSONRequestBody = SimplePublicObjectInput
+
+// Postcrmobjects202603usersJSONRequestBody defines body for Postcrmobjects202603users for application/json ContentType.
+type Postcrmobjects202603usersJSONRequestBody = SimplePublicObjectInputForCreate
+
+// Postcrmobjects202603usersbatcharchiveJSONRequestBody defines body for Postcrmobjects202603usersbatcharchive for application/json ContentType.
+type Postcrmobjects202603usersbatcharchiveJSONRequestBody = BatchInputSimplePublicObjectId
+
+// Postcrmobjects202603usersbatchcreateJSONRequestBody defines body for Postcrmobjects202603usersbatchcreate for application/json ContentType.
+type Postcrmobjects202603usersbatchcreateJSONRequestBody = BatchInputSimplePublicObjectBatchInputForCreate
+
+// Postcrmobjects202603usersbatchreadJSONRequestBody defines body for Postcrmobjects202603usersbatchread for application/json ContentType.
+type Postcrmobjects202603usersbatchreadJSONRequestBody = BatchReadInputSimplePublicObjectId
+
+// Postcrmobjects202603usersbatchupdateJSONRequestBody defines body for Postcrmobjects202603usersbatchupdate for application/json ContentType.
+type Postcrmobjects202603usersbatchupdateJSONRequestBody = BatchInputSimplePublicObjectBatchInput
+
+// Postcrmobjects202603usersbatchupsertJSONRequestBody defines body for Postcrmobjects202603usersbatchupsert for application/json ContentType.
+type Postcrmobjects202603usersbatchupsertJSONRequestBody = BatchInputSimplePublicObjectBatchInputUpsert
+
+// Postcrmobjects202603userssearchJSONRequestBody defines body for Postcrmobjects202603userssearch for application/json ContentType.
+type Postcrmobjects202603userssearchJSONRequestBody = PublicObjectSearchRequest
+
+// Patchcrmobjects202603usersUserIdJSONRequestBody defines body for Patchcrmobjects202603usersUserId for application/json ContentType.
+type Patchcrmobjects202603usersUserIdJSONRequestBody = SimplePublicObjectInput
+
+// Postcrmobjects202603ObjectTypeJSONRequestBody defines body for Postcrmobjects202603ObjectType for application/json ContentType.
+type Postcrmobjects202603ObjectTypeJSONRequestBody = SimplePublicObjectInputForCreate
+
+// Postcrmobjects202603ObjectTypebatcharchiveJSONRequestBody defines body for Postcrmobjects202603ObjectTypebatcharchive for application/json ContentType.
+type Postcrmobjects202603ObjectTypebatcharchiveJSONRequestBody = BatchInputSimplePublicObjectId
+
+// Postcrmobjects202603ObjectTypebatchcreateJSONRequestBody defines body for Postcrmobjects202603ObjectTypebatchcreate for application/json ContentType.
+type Postcrmobjects202603ObjectTypebatchcreateJSONRequestBody = BatchInputSimplePublicObjectBatchInputForCreate
+
+// Postcrmobjects202603ObjectTypebatchreadJSONRequestBody defines body for Postcrmobjects202603ObjectTypebatchread for application/json ContentType.
+type Postcrmobjects202603ObjectTypebatchreadJSONRequestBody = BatchReadInputSimplePublicObjectId
+
+// Postcrmobjects202603ObjectTypebatchupdateJSONRequestBody defines body for Postcrmobjects202603ObjectTypebatchupdate for application/json ContentType.
+type Postcrmobjects202603ObjectTypebatchupdateJSONRequestBody = BatchInputSimplePublicObjectBatchInput
+
+// Postcrmobjects202603ObjectTypebatchupsertJSONRequestBody defines body for Postcrmobjects202603ObjectTypebatchupsert for application/json ContentType.
+type Postcrmobjects202603ObjectTypebatchupsertJSONRequestBody = BatchInputSimplePublicObjectBatchInputUpsert
+
+// Postcrmobjects202603ObjectTypegdprDeleteJSONRequestBody defines body for Postcrmobjects202603ObjectTypegdprDelete for application/json ContentType.
+type Postcrmobjects202603ObjectTypegdprDeleteJSONRequestBody = PublicGdprDeleteInput
+
+// Postcrmobjects202603ObjectTypemergeJSONRequestBody defines body for Postcrmobjects202603ObjectTypemerge for application/json ContentType.
+type Postcrmobjects202603ObjectTypemergeJSONRequestBody = PublicMergeInput
+
+// Postcrmobjects202603ObjectTypesearchJSONRequestBody defines body for Postcrmobjects202603ObjectTypesearch for application/json ContentType.
+type Postcrmobjects202603ObjectTypesearchJSONRequestBody = PublicObjectSearchRequest
+
+// Patchcrmobjects202603ObjectTypeObjectIdJSONRequestBody defines body for Patchcrmobjects202603ObjectTypeObjectId for application/json ContentType.
+type Patchcrmobjects202603ObjectTypeObjectIdJSONRequestBody = SimplePublicObjectInput
+
+// Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdJSONRequestBody defines body for Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectId for application/json ContentType.
+type Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdJSONRequestBody = Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdJSONBody
+
+// Postcrmpipelines202603ObjectTypeCreateJSONRequestBody defines body for Postcrmpipelines202603ObjectTypeCreate for application/json ContentType.
+type Postcrmpipelines202603ObjectTypeCreateJSONRequestBody = PipelineInput
+
+// Patchcrmpipelines202603ObjectTypePipelineIdUpdateJSONRequestBody defines body for Patchcrmpipelines202603ObjectTypePipelineIdUpdate for application/json ContentType.
+type Patchcrmpipelines202603ObjectTypePipelineIdUpdateJSONRequestBody = PipelinePatchInput
+
+// Putcrmpipelines202603ObjectTypePipelineIdReplaceJSONRequestBody defines body for Putcrmpipelines202603ObjectTypePipelineIdReplace for application/json ContentType.
+type Putcrmpipelines202603ObjectTypePipelineIdReplaceJSONRequestBody = PipelineReplaceInput
+
+// Postcrmpipelines202603ObjectTypePipelineIdstagesCreateJSONRequestBody defines body for Postcrmpipelines202603ObjectTypePipelineIdstagesCreate for application/json ContentType.
+type Postcrmpipelines202603ObjectTypePipelineIdstagesCreateJSONRequestBody = PipelineStageInput
+
+// Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdateJSONRequestBody defines body for Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdate for application/json ContentType.
+type Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdateJSONRequestBody = PipelineStagePatchInput
+
+// Putcrmpipelines202603ObjectTypePipelineIdstagesStageIdReplaceJSONRequestBody defines body for Putcrmpipelines202603ObjectTypePipelineIdstagesStageIdReplace for application/json ContentType.
+type Putcrmpipelines202603ObjectTypePipelineIdstagesStageIdReplaceJSONRequestBody = PipelineStageReplaceInput
+
+// Postcrmproperties202603ObjectTypecrmproperties202509ObjectTypeJSONRequestBody defines body for Postcrmproperties202603ObjectTypecrmproperties202509ObjectType for application/json ContentType.
+type Postcrmproperties202603ObjectTypecrmproperties202509ObjectTypeJSONRequestBody = PropertyCreate
+
+// Postcrmproperties202603ObjectTypebatcharchivecrmproperties202509ObjectTypebatcharchiveJSONRequestBody defines body for Postcrmproperties202603ObjectTypebatcharchivecrmproperties202509ObjectTypebatcharchive for application/json ContentType.
+type Postcrmproperties202603ObjectTypebatcharchivecrmproperties202509ObjectTypebatcharchiveJSONRequestBody = BatchInputPropertyName
+
+// Postcrmproperties202603ObjectTypebatchcreatecrmproperties202509ObjectTypebatchcreateJSONRequestBody defines body for Postcrmproperties202603ObjectTypebatchcreatecrmproperties202509ObjectTypebatchcreate for application/json ContentType.
+type Postcrmproperties202603ObjectTypebatchcreatecrmproperties202509ObjectTypebatchcreateJSONRequestBody = BatchInputPropertyCreate
+
+// Postcrmproperties202603ObjectTypebatchreadcrmproperties202509ObjectTypebatchreadJSONRequestBody defines body for Postcrmproperties202603ObjectTypebatchreadcrmproperties202509ObjectTypebatchread for application/json ContentType.
+type Postcrmproperties202603ObjectTypebatchreadcrmproperties202509ObjectTypebatchreadJSONRequestBody = BatchReadInputPropertyName
+
+// Postcrmproperties202603ObjectTypegroupscrmproperties202509ObjectTypegroupsJSONRequestBody defines body for Postcrmproperties202603ObjectTypegroupscrmproperties202509ObjectTypegroups for application/json ContentType.
+type Postcrmproperties202603ObjectTypegroupscrmproperties202509ObjectTypegroupsJSONRequestBody = PropertyGroupCreate
+
+// Patchcrmproperties202603ObjectTypegroupsGroupNamecrmproperties202509ObjectTypegroupsGroupNameJSONRequestBody defines body for Patchcrmproperties202603ObjectTypegroupsGroupNamecrmproperties202509ObjectTypegroupsGroupName for application/json ContentType.
+type Patchcrmproperties202603ObjectTypegroupsGroupNamecrmproperties202509ObjectTypegroupsGroupNameJSONRequestBody = PropertyGroupUpdate
+
+// Patchcrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyNameJSONRequestBody defines body for Patchcrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyName for application/json ContentType.
+type Patchcrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyNameJSONRequestBody = PropertyUpdate
+
+// PutcrmpropertyValidations202603ObjectTypeIdPropertyNameruleTypeRuleTypecrmv3propertyValidationsObjectTypeIdPropertyNameruleTypeRuleTypeJSONRequestBody defines body for PutcrmpropertyValidations202603ObjectTypeIdPropertyNameruleTypeRuleTypecrmv3propertyValidationsObjectTypeIdPropertyNameruleTypeRuleType for application/json ContentType.
+type PutcrmpropertyValidations202603ObjectTypeIdPropertyNameruleTypeRuleTypecrmv3propertyValidationsObjectTypeIdPropertyNameruleTypeRuleTypeJSONRequestBody = PublicPropertyValidationRuleUpdate
+
+// PostdealSplits202603batchreadcrmobjectsv3dealssplitsbatchreadJSONRequestBody defines body for PostdealSplits202603batchreadcrmobjectsv3dealssplitsbatchread for application/json ContentType.
+type PostdealSplits202603batchreadcrmobjectsv3dealssplitsbatchreadJSONRequestBody = BatchInputPublicObjectId
+
+// PostdealSplits202603batchupsertcrmobjectsv3dealssplitsbatchupsertJSONRequestBody defines body for PostdealSplits202603batchupsertcrmobjectsv3dealssplitsbatchupsert for application/json ContentType.
+type PostdealSplits202603batchupsertcrmobjectsv3dealssplitsbatchupsertJSONRequestBody = PublicDealSplitsBatchCreateRequest
+
+// Postevents202603eventDefinitionsJSONRequestBody defines body for Postevents202603eventDefinitions for application/json ContentType.
+type Postevents202603eventDefinitionsJSONRequestBody = ExternalBehavioralEventTypeDefinitionEgg
+
+// Patchevents202603eventDefinitionsEventNameJSONRequestBody defines body for Patchevents202603eventDefinitionsEventName for application/json ContentType.
+type Patchevents202603eventDefinitionsEventNameJSONRequestBody = ExternalBehavioralEventTypeDefinitionPatch
+
+// Postevents202603eventDefinitionsEventNamepropertyJSONRequestBody defines body for Postevents202603eventDefinitionsEventNameproperty for application/json ContentType.
+type Postevents202603eventDefinitionsEventNamepropertyJSONRequestBody = ExternalBehavioralEventPropertyCreate
+
+// Patchevents202603eventDefinitionsEventNamepropertyPropertyNameJSONRequestBody defines body for Patchevents202603eventDefinitionsEventNamepropertyPropertyName for application/json ContentType.
+type Patchevents202603eventDefinitionsEventNamepropertyPropertyNameJSONRequestBody = ExternalBehavioralEventPropertyDefinitionPatch
+
+// Postevents202603sendSendJSONRequestBody defines body for Postevents202603sendSend for application/json ContentType.
+type Postevents202603sendSendJSONRequestBody = BehavioralEventHttpCompletionRequest
+
+// Postevents202603sendbatchSendJSONRequestBody defines body for Postevents202603sendbatchSend for application/json ContentType.
+type Postevents202603sendbatchSendJSONRequestBody = BatchedBehavioralEventHttpCompletionRequest
+
+// PutfeatureFlags202603AppIdflagsFlagNameJSONRequestBody defines body for PutfeatureFlags202603AppIdflagsFlagName for application/json ContentType.
+type PutfeatureFlags202603AppIdflagsFlagNameJSONRequestBody = FlagPutRequest
+
+// PostfeatureFlags202603AppIdflagsFlagNameportalsbatchdeleteJSONRequestBody defines body for PostfeatureFlags202603AppIdflagsFlagNameportalsbatchdelete for application/json ContentType.
+type PostfeatureFlags202603AppIdflagsFlagNameportalsbatchdeleteJSONRequestBody = PortalFlagStateBatchDeleteRequest
+
+// PostfeatureFlags202603AppIdflagsFlagNameportalsbatchupsertJSONRequestBody defines body for PostfeatureFlags202603AppIdflagsFlagNameportalsbatchupsert for application/json ContentType.
+type PostfeatureFlags202603AppIdflagsFlagNameportalsbatchupsertJSONRequestBody = PortalFlagStateBatchPutRequest
+
+// PutfeatureFlags202603AppIdflagsFlagNameportalsPortalIdJSONRequestBody defines body for PutfeatureFlags202603AppIdflagsFlagNameportalsPortalId for application/json ContentType.
+type PutfeatureFlags202603AppIdflagsFlagNameportalsPortalIdJSONRequestBody = PortalFlagStatePutRequest
+
+// Postfiles202603filesUploadMultipartRequestBody defines body for Postfiles202603filesUpload for multipart/form-data ContentType.
+type Postfiles202603filesUploadMultipartRequestBody Postfiles202603filesUploadMultipartBody
+
+// Postfiles202603filesimportFromUrlasyncImportFromUrlJSONRequestBody defines body for Postfiles202603filesimportFromUrlasyncImportFromUrl for application/json ContentType.
+type Postfiles202603filesimportFromUrlasyncImportFromUrlJSONRequestBody = ImportFromUrlInput
+
+// Patchfiles202603filesFileIdUpdatePropertiesJSONRequestBody defines body for Patchfiles202603filesFileIdUpdateProperties for application/json ContentType.
+type Patchfiles202603filesFileIdUpdatePropertiesJSONRequestBody = FileUpdateInput
+
+// Putfiles202603filesFileIdReplaceMultipartRequestBody defines body for Putfiles202603filesFileIdReplace for multipart/form-data ContentType.
+type Putfiles202603filesFileIdReplaceMultipartRequestBody Putfiles202603filesFileIdReplaceMultipartBody
+
+// Postfiles202603foldersCreateJSONRequestBody defines body for Postfiles202603foldersCreate for application/json ContentType.
+type Postfiles202603foldersCreateJSONRequestBody = FolderInput
+
+// Postfiles202603foldersupdateasyncUpdatePropertiesRecursivelyJSONRequestBody defines body for Postfiles202603foldersupdateasyncUpdatePropertiesRecursively for application/json ContentType.
+type Postfiles202603foldersupdateasyncUpdatePropertiesRecursivelyJSONRequestBody = FolderUpdateInputWithId
+
+// Patchfiles202603foldersFolderIdUpdatePropertiesJSONRequestBody defines body for Patchfiles202603foldersFolderIdUpdateProperties for application/json ContentType.
+type Patchfiles202603foldersFolderIdUpdatePropertiesJSONRequestBody = FolderUpdateInput
+
+// Postintegratorstimeline202603eventsCreateJSONRequestBody defines body for Postintegratorstimeline202603eventsCreate for application/json ContentType.
+type Postintegratorstimeline202603eventsCreateJSONRequestBody = AppEventOccurrence
+
+// Postintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatchJSONRequestBody defines body for Postintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatch for application/json ContentType.
+type Postintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatchJSONRequestBody = BatchInputAppEventOccurrence
+
+// Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojectsJSONRequestBody defines body for Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojects for application/json ContentType.
+type Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojectsJSONRequestBody = ExternalAppEventResolutionRequest
+
+// Postmarketingcampaigns202603marketingcampaignsv3JSONRequestBody defines body for Postmarketingcampaigns202603marketingcampaignsv3 for application/json ContentType.
+type Postmarketingcampaigns202603marketingcampaignsv3JSONRequestBody = PublicCampaignInput
+
+// Postmarketingcampaigns202603batcharchiveJSONRequestBody defines body for Postmarketingcampaigns202603batcharchive for application/json ContentType.
+type Postmarketingcampaigns202603batcharchiveJSONRequestBody = BatchInputPublicCampaignDeleteInput
+
+// Postmarketingcampaigns202603batchcreateJSONRequestBody defines body for Postmarketingcampaigns202603batchcreate for application/json ContentType.
+type Postmarketingcampaigns202603batchcreateJSONRequestBody = BatchInputPublicCampaignInput
+
+// Postmarketingcampaigns202603batchreadJSONRequestBody defines body for Postmarketingcampaigns202603batchread for application/json ContentType.
+type Postmarketingcampaigns202603batchreadJSONRequestBody = BatchInputPublicCampaignReadInput
+
+// Postmarketingcampaigns202603batchupdateJSONRequestBody defines body for Postmarketingcampaigns202603batchupdate for application/json ContentType.
+type Postmarketingcampaigns202603batchupdateJSONRequestBody = BatchInputPublicCampaignBatchUpdateItem
+
+// Patchmarketingcampaigns202603CampaignGuidJSONRequestBody defines body for Patchmarketingcampaigns202603CampaignGuid for application/json ContentType.
+type Patchmarketingcampaigns202603CampaignGuidJSONRequestBody = PublicCampaignInput
+
+// Postmarketingcampaigns202603CampaignGuidbudgetJSONRequestBody defines body for Postmarketingcampaigns202603CampaignGuidbudget for application/json ContentType.
+type Postmarketingcampaigns202603CampaignGuidbudgetJSONRequestBody = PublicBudgetItemInput
+
+// Putmarketingcampaigns202603CampaignGuidbudgetBudgetIdJSONRequestBody defines body for Putmarketingcampaigns202603CampaignGuidbudgetBudgetId for application/json ContentType.
+type Putmarketingcampaigns202603CampaignGuidbudgetBudgetIdJSONRequestBody = PublicBudgetItemInput
+
+// Postmarketingcampaigns202603CampaignGuidspendJSONRequestBody defines body for Postmarketingcampaigns202603CampaignGuidspend for application/json ContentType.
+type Postmarketingcampaigns202603CampaignGuidspendJSONRequestBody = PublicSpendItemInput
+
+// Putmarketingcampaigns202603CampaignGuidspendSpendIdJSONRequestBody defines body for Putmarketingcampaigns202603CampaignGuidspendSpendId for application/json ContentType.
+type Putmarketingcampaigns202603CampaignGuidspendSpendIdJSONRequestBody = PublicSpendItemInput
+
+// PostmarketingemailCampaigns202603singleSendmarketingv4emailsingleSendJSONRequestBody defines body for PostmarketingemailCampaigns202603singleSendmarketingv4emailsingleSend for application/json ContentType.
+type PostmarketingemailCampaigns202603singleSendmarketingv4emailsingleSendJSONRequestBody = PublicSingleSendRequestEgg
+
+// Postmarketingemails202603marketingemailsv3JSONRequestBody defines body for Postmarketingemails202603marketingemailsv3 for application/json ContentType.
+type Postmarketingemails202603marketingemailsv3JSONRequestBody = EmailCreateRequest
+
+// Postmarketingemails202603abTestcreateVariationCreateAbTestVariationJSONRequestBody defines body for Postmarketingemails202603abTestcreateVariationCreateAbTestVariation for application/json ContentType.
+type Postmarketingemails202603abTestcreateVariationCreateAbTestVariationJSONRequestBody = AbTestCreateRequestVNext
+
+// Postmarketingemails202603cloneCloneJSONRequestBody defines body for Postmarketingemails202603cloneClone for application/json ContentType.
+type Postmarketingemails202603cloneCloneJSONRequestBody = EmailCloneRequestVNext
+
+// Patchmarketingemails202603EmailIdUpdateJSONRequestBody defines body for Patchmarketingemails202603EmailIdUpdate for application/json ContentType.
+type Patchmarketingemails202603EmailIdUpdateJSONRequestBody = EmailUpdateRequest
+
+// Patchmarketingemails202603EmailIddraftUpsertDraftJSONRequestBody defines body for Patchmarketingemails202603EmailIddraftUpsertDraft for application/json ContentType.
+type Patchmarketingemails202603EmailIddraftUpsertDraftJSONRequestBody = EmailUpdateRequest
+
+// PostmarketingmarketingEvents202603attendanceExternalEventIdSubscriberStatecreateRecordByContactIdsJSONRequestBody defines body for PostmarketingmarketingEvents202603attendanceExternalEventIdSubscriberStatecreateRecordByContactIds for application/json ContentType.
+type PostmarketingmarketingEvents202603attendanceExternalEventIdSubscriberStatecreateRecordByContactIdsJSONRequestBody = BatchInputMarketingEventSubscriber
+
+// PostmarketingmarketingEvents202603attendanceExternalEventIdSubscriberStateemailCreateRecordByContactEmailsJSONRequestBody defines body for PostmarketingmarketingEvents202603attendanceExternalEventIdSubscriberStateemailCreateRecordByContactEmails for application/json ContentType.
+type PostmarketingmarketingEvents202603attendanceExternalEventIdSubscriberStateemailCreateRecordByContactEmailsJSONRequestBody = BatchInputMarketingEventEmailSubscriber
+
+// PostmarketingmarketingEvents202603batcharchiveArchiveByObjectIdJSONRequestBody defines body for PostmarketingmarketingEvents202603batcharchiveArchiveByObjectId for application/json ContentType.
+type PostmarketingmarketingEvents202603batcharchiveArchiveByObjectIdJSONRequestBody = BatchInputMarketingEventPublicObjectIdDeleteRequest
+
+// PostmarketingmarketingEvents202603batchupdateUpdateByObjectIdJSONRequestBody defines body for PostmarketingmarketingEvents202603batchupdateUpdateByObjectId for application/json ContentType.
+type PostmarketingmarketingEvents202603batchupdateUpdateByObjectIdJSONRequestBody = BatchInputMarketingEventPublicUpdateRequestFullV2
+
+// PostmarketingmarketingEvents202603eventsCreateJSONRequestBody defines body for PostmarketingmarketingEvents202603eventsCreate for application/json ContentType.
+type PostmarketingmarketingEvents202603eventsCreateJSONRequestBody = MarketingEventCreateRequestParams
+
+// PostmarketingmarketingEvents202603eventsdeleteArchiveJSONRequestBody defines body for PostmarketingmarketingEvents202603eventsdeleteArchive for application/json ContentType.
+type PostmarketingmarketingEvents202603eventsdeleteArchiveJSONRequestBody = BatchInputMarketingEventExternalUniqueIdentifier
+
+// PostmarketingmarketingEvents202603eventsupsertUpsertJSONRequestBody defines body for PostmarketingmarketingEvents202603eventsupsertUpsert for application/json ContentType.
+type PostmarketingmarketingEvents202603eventsupsertUpsertJSONRequestBody = BatchInputMarketingEventCreateRequestParams
+
+// PatchmarketingmarketingEvents202603eventsExternalEventIdUpdateJSONRequestBody defines body for PatchmarketingmarketingEvents202603eventsExternalEventIdUpdate for application/json ContentType.
+type PatchmarketingmarketingEvents202603eventsExternalEventIdUpdateJSONRequestBody = MarketingEventUpdateRequestParams
+
+// PutmarketingmarketingEvents202603eventsExternalEventIdUpsertJSONRequestBody defines body for PutmarketingmarketingEvents202603eventsExternalEventIdUpsert for application/json ContentType.
+type PutmarketingmarketingEvents202603eventsExternalEventIdUpsertJSONRequestBody = MarketingEventCreateRequestParams
+
+// PostmarketingmarketingEvents202603eventsExternalEventIdcompleteCompleteJSONRequestBody defines body for PostmarketingmarketingEvents202603eventsExternalEventIdcompleteComplete for application/json ContentType.
+type PostmarketingmarketingEvents202603eventsExternalEventIdcompleteCompleteJSONRequestBody = MarketingEventCompleteRequestParams
+
+// PostmarketingmarketingEvents202603eventsExternalEventIdSubscriberStateemailUpsertUpsertByContactEmailJSONRequestBody defines body for PostmarketingmarketingEvents202603eventsExternalEventIdSubscriberStateemailUpsertUpsertByContactEmail for application/json ContentType.
+type PostmarketingmarketingEvents202603eventsExternalEventIdSubscriberStateemailUpsertUpsertByContactEmailJSONRequestBody = BatchInputMarketingEventEmailSubscriber
+
+// PostmarketingmarketingEvents202603eventsExternalEventIdSubscriberStateupsertUpsertByContactIdJSONRequestBody defines body for PostmarketingmarketingEvents202603eventsExternalEventIdSubscriberStateupsertUpsertByContactId for application/json ContentType.
+type PostmarketingmarketingEvents202603eventsExternalEventIdSubscriberStateupsertUpsertByContactIdJSONRequestBody = BatchInputMarketingEventSubscriber
+
+// PostmarketingmarketingEvents202603AppIdsettingsUpdateJSONRequestBody defines body for PostmarketingmarketingEvents202603AppIdsettingsUpdate for application/json ContentType.
+type PostmarketingmarketingEvents202603AppIdsettingsUpdateJSONRequestBody = EventDetailSettingsUrl
+
+// PatchmarketingmarketingEvents202603ObjectIdUpdateByObjectIdJSONRequestBody defines body for PatchmarketingmarketingEvents202603ObjectIdUpdateByObjectId for application/json ContentType.
+type PatchmarketingmarketingEvents202603ObjectIdUpdateByObjectIdJSONRequestBody = MarketingEventPublicUpdateRequestV2
+
+// PostmarketingmarketingEvents202603ObjectIdattendanceSubscriberStatecreateRecordByContactIdJSONRequestBody defines body for PostmarketingmarketingEvents202603ObjectIdattendanceSubscriberStatecreateRecordByContactId for application/json ContentType.
+type PostmarketingmarketingEvents202603ObjectIdattendanceSubscriberStatecreateRecordByContactIdJSONRequestBody = BatchInputMarketingEventSubscriber
+
+// PostmarketingmarketingEvents202603ObjectIdattendanceSubscriberStateemailCreateRecordByEmailJSONRequestBody defines body for PostmarketingmarketingEvents202603ObjectIdattendanceSubscriberStateemailCreateRecordByEmail for application/json ContentType.
+type PostmarketingmarketingEvents202603ObjectIdattendanceSubscriberStateemailCreateRecordByEmailJSONRequestBody = BatchInputMarketingEventEmailSubscriber
+
+// Postmarketingtransactional202603singleEmailsendSendEmailJSONRequestBody defines body for Postmarketingtransactional202603singleEmailsendSendEmail for application/json ContentType.
+type Postmarketingtransactional202603singleEmailsendSendEmailJSONRequestBody = PublicSingleSendRequestEgg
+
+// Postmarketingtransactional202603smtpTokensCreateTokenJSONRequestBody defines body for Postmarketingtransactional202603smtpTokensCreateToken for application/json ContentType.
+type Postmarketingtransactional202603smtpTokensCreateTokenJSONRequestBody = SmtpApiTokenRequestEgg
+
+// PostmediaBridge202603eventsattentionSpanJSONRequestBody defines body for PostmediaBridge202603eventsattentionSpan for application/json ContentType.
+type PostmediaBridge202603eventsattentionSpanJSONRequestBody = AttentionSpanEventRequest
+
+// PostmediaBridge202603eventsmediaPlayedJSONRequestBody defines body for PostmediaBridge202603eventsmediaPlayed for application/json ContentType.
+type PostmediaBridge202603eventsmediaPlayedJSONRequestBody = MediaPlayedEventRequest
+
+// PostmediaBridge202603eventsmediaPlayedPercentJSONRequestBody defines body for PostmediaBridge202603eventsmediaPlayedPercent for application/json ContentType.
+type PostmediaBridge202603eventsmediaPlayedPercentJSONRequestBody = MediaPlayedPercentageEventRequest
+
+// PostmediaBridge202603AppIdpropertiesObjectTypeJSONRequestBody defines body for PostmediaBridge202603AppIdpropertiesObjectType for application/json ContentType.
+type PostmediaBridge202603AppIdpropertiesObjectTypeJSONRequestBody = PropertyCreate
+
+// PostmediaBridge202603AppIdpropertiesObjectTypebatcharchiveJSONRequestBody defines body for PostmediaBridge202603AppIdpropertiesObjectTypebatcharchive for application/json ContentType.
+type PostmediaBridge202603AppIdpropertiesObjectTypebatcharchiveJSONRequestBody = BatchInputPropertyName
+
+// PostmediaBridge202603AppIdpropertiesObjectTypebatchcreateJSONRequestBody defines body for PostmediaBridge202603AppIdpropertiesObjectTypebatchcreate for application/json ContentType.
+type PostmediaBridge202603AppIdpropertiesObjectTypebatchcreateJSONRequestBody = BatchInputPropertyCreate
+
+// PostmediaBridge202603AppIdpropertiesObjectTypebatchreadJSONRequestBody defines body for PostmediaBridge202603AppIdpropertiesObjectTypebatchread for application/json ContentType.
+type PostmediaBridge202603AppIdpropertiesObjectTypebatchreadJSONRequestBody = BatchReadInputPropertyName
+
+// PostmediaBridge202603AppIdpropertiesObjectTypegroupsJSONRequestBody defines body for PostmediaBridge202603AppIdpropertiesObjectTypegroups for application/json ContentType.
+type PostmediaBridge202603AppIdpropertiesObjectTypegroupsJSONRequestBody = PropertyGroupCreate
+
+// PatchmediaBridge202603AppIdpropertiesObjectTypegroupsGroupNameJSONRequestBody defines body for PatchmediaBridge202603AppIdpropertiesObjectTypegroupsGroupName for application/json ContentType.
+type PatchmediaBridge202603AppIdpropertiesObjectTypegroupsGroupNameJSONRequestBody = PropertyGroupUpdate
+
+// PatchmediaBridge202603AppIdpropertiesObjectTypePropertyNameJSONRequestBody defines body for PatchmediaBridge202603AppIdpropertiesObjectTypePropertyName for application/json ContentType.
+type PatchmediaBridge202603AppIdpropertiesObjectTypePropertyNameJSONRequestBody = MediaBridgePropertyUpdate
+
+// PatchmediaBridge202603AppIdschemasObjectTypeJSONRequestBody defines body for PatchmediaBridge202603AppIdschemasObjectType for application/json ContentType.
+type PatchmediaBridge202603AppIdschemasObjectTypeJSONRequestBody = ObjectTypeDefinitionPatch
+
+// PostmediaBridge202603AppIdschemasObjectTypeassociationsJSONRequestBody defines body for PostmediaBridge202603AppIdschemasObjectTypeassociations for application/json ContentType.
+type PostmediaBridge202603AppIdschemasObjectTypeassociationsJSONRequestBody = AssociationDefinitionEgg
+
+// PutmediaBridge202603AppIdsettingsJSONRequestBody defines body for PutmediaBridge202603AppIdsettings for application/json ContentType.
+type PutmediaBridge202603AppIdsettingsJSONRequestBody = MediaBridgeProviderPartial
+
+// PatchmediaBridge202603AppIdsettingseventVisibilityJSONRequestBody defines body for PatchmediaBridge202603AppIdsettingseventVisibility for application/json ContentType.
+type PatchmediaBridge202603AppIdsettingseventVisibilityJSONRequestBody = EventVisibilityChange
+
+// PostmediaBridge202603AppIdsettingsobjectDefinitionsJSONRequestBody defines body for PostmediaBridge202603AppIdsettingsobjectDefinitions for application/json ContentType.
+type PostmediaBridge202603AppIdsettingsobjectDefinitionsJSONRequestBody = IntegratorObjectCreationRequest
+
+// PostmediaBridge202603AppIdsettingsoembedDomainsJSONRequestBody defines body for PostmediaBridge202603AppIdsettingsoembedDomains for application/json ContentType.
+type PostmediaBridge202603AppIdsettingsoembedDomainsJSONRequestBody = IntegratorOEmbedDomainRequest
+
+// PatchmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainIdJSONRequestBody defines body for PatchmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainId for application/json ContentType.
+type PatchmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainIdJSONRequestBody = IntegratorOEmbedDomainRequest
+
+// PostmediaBridge202603AppIdsettingsregisterJSONRequestBody defines body for PostmediaBridge202603AppIdsettingsregister for application/json ContentType.
+//
+// Deprecated: this type has been marked as deprecated upstream, but no `x-deprecated-reason` was set
+type PostmediaBridge202603AppIdsettingsregisterJSONRequestBody = MediaBridgeProviderPartial
+
+// Postoauth202603tokenoauthv3tokenFormdataRequestBody defines body for Postoauth202603tokenoauthv3token for application/x-www-form-urlencoded ContentType.
+type Postoauth202603tokenoauthv3tokenFormdataRequestBody Postoauth202603tokenoauthv3tokenFormdataBody
+
+// Postoauth202603tokenintrospectoauthv3tokenintrospectFormdataRequestBody defines body for Postoauth202603tokenintrospectoauthv3tokenintrospect for application/x-www-form-urlencoded ContentType.
+type Postoauth202603tokenintrospectoauthv3tokenintrospectFormdataRequestBody Postoauth202603tokenintrospectoauthv3tokenintrospectFormdataBody
+
+// Postoauth202603tokenrevokeoauthv3tokenrevokeFormdataRequestBody defines body for Postoauth202603tokenrevokeoauthv3tokenrevoke for application/x-www-form-urlencoded ContentType.
+type Postoauth202603tokenrevokeoauthv3tokenrevokeFormdataRequestBody Postoauth202603tokenrevokeoauthv3tokenrevokeFormdataBody
+
+// Postscheduler202603meetingscalendarJSONRequestBody defines body for Postscheduler202603meetingscalendar for application/json ContentType.
+type Postscheduler202603meetingscalendarJSONRequestBody = ExternalCalendarMeetingEventCreateRequest
+
+// Postscheduler202603meetingsmeetingLinksbookJSONRequestBody defines body for Postscheduler202603meetingsmeetingLinksbook for application/json ContentType.
+type Postscheduler202603meetingsmeetingLinksbookJSONRequestBody = ExternalMeetingBooking
+
+// Postsettingscurrencies202603centralFxRatesaddCurrencysettingsv3currenciescentralFxRatesaddCurrencyJSONRequestBody defines body for Postsettingscurrencies202603centralFxRatesaddCurrencysettingsv3currenciescentralFxRatesaddCurrency for application/json ContentType.
+type Postsettingscurrencies202603centralFxRatesaddCurrencysettingsv3currenciescentralFxRatesaddCurrencyJSONRequestBody = CurrencyCreateRequest
+
+// Putsettingscurrencies202603companyCurrencyJSONRequestBody defines body for Putsettingscurrencies202603companyCurrency for application/json ContentType.
+type Putsettingscurrencies202603companyCurrencyJSONRequestBody = CompanyCurrencyUpdateRequest
+
+// Postsettingscurrencies202603exchangeRatesJSONRequestBody defines body for Postsettingscurrencies202603exchangeRates for application/json ContentType.
+type Postsettingscurrencies202603exchangeRatesJSONRequestBody = ExchangeRateCreateRequest
+
+// Postsettingscurrencies202603exchangeRatesbatchcreateJSONRequestBody defines body for Postsettingscurrencies202603exchangeRatesbatchcreate for application/json ContentType.
+type Postsettingscurrencies202603exchangeRatesbatchcreateJSONRequestBody = BatchInputExchangeRateCreateRequest
+
+// Postsettingscurrencies202603exchangeRatesbatchreadJSONRequestBody defines body for Postsettingscurrencies202603exchangeRatesbatchread for application/json ContentType.
+type Postsettingscurrencies202603exchangeRatesbatchreadJSONRequestBody = BatchInputPublicObjectId
+
+// Postsettingscurrencies202603exchangeRatesbatchupdateJSONRequestBody defines body for Postsettingscurrencies202603exchangeRatesbatchupdate for application/json ContentType.
+type Postsettingscurrencies202603exchangeRatesbatchupdateJSONRequestBody = BatchInputExchangeRateUpdateRequest
+
+// Postsettingscurrencies202603exchangeRatesupdateVisibilityJSONRequestBody defines body for Postsettingscurrencies202603exchangeRatesupdateVisibility for application/json ContentType.
+type Postsettingscurrencies202603exchangeRatesupdateVisibilityJSONRequestBody = CurrencyPairUpdate
+
+// Patchsettingscurrencies202603exchangeRatesExchangeRateIdJSONRequestBody defines body for Patchsettingscurrencies202603exchangeRatesExchangeRateId for application/json ContentType.
+type Patchsettingscurrencies202603exchangeRatesExchangeRateIdJSONRequestBody = ExchangeRateMultiplier
+
+// Postsettingsusers202603settingsusersv3JSONRequestBody defines body for Postsettingsusers202603settingsusersv3 for application/json ContentType.
+type Postsettingsusers202603settingsusersv3JSONRequestBody = UserProvisionRequestMarch2026
+
+// Putsettingsusers202603UserIdUpdateJSONRequestBody defines body for Putsettingsusers202603UserIdUpdate for application/json ContentType.
+type Putsettingsusers202603UserIdUpdateJSONRequestBody = PublicUserUpdateMarch2026
+
+// PostvisitorIdentification202603tokenscreateGenerateTokenJSONRequestBody defines body for PostvisitorIdentification202603tokenscreateGenerateToken for application/json ContentType.
+type PostvisitorIdentification202603tokenscreateGenerateTokenJSONRequestBody = IdentificationTokenGenerationRequest
+
+// PostwebhooksJournaljournalLocal202603batchreadJSONRequestBody defines body for PostwebhooksJournaljournalLocal202603batchread for application/json ContentType.
+type PostwebhooksJournaljournalLocal202603batchreadJSONRequestBody = BatchInputString
+
+// PostwebhooksJournaljournal202603batchreadJSONRequestBody defines body for PostwebhooksJournaljournal202603batchread for application/json ContentType.
+type PostwebhooksJournaljournal202603batchreadJSONRequestBody = BatchInputString
+
+// PostwebhooksJournalsnapshots202603crmJSONRequestBody defines body for PostwebhooksJournalsnapshots202603crm for application/json ContentType.
+type PostwebhooksJournalsnapshots202603crmJSONRequestBody = CrmObjectSnapshotBatchRequest
+
+// PostwebhooksJournalsubscriptions202603JSONRequestBody defines body for PostwebhooksJournalsubscriptions202603 for application/json ContentType.
+type PostwebhooksJournalsubscriptions202603JSONRequestBody = SubscriptionUpsertRequest
+
+// PostwebhooksJournalsubscriptions202603filtersJSONRequestBody defines body for PostwebhooksJournalsubscriptions202603filters for application/json ContentType.
+type PostwebhooksJournalsubscriptions202603filtersJSONRequestBody = FilterCreateRequest
+
+// Putwebhooks202603AppIdsettingsConfigureJSONRequestBody defines body for Putwebhooks202603AppIdsettingsConfigure for application/json ContentType.
+type Putwebhooks202603AppIdsettingsConfigureJSONRequestBody = SettingsChangeRequest
+
+// Postwebhooks202603AppIdsubscriptionsCreateJSONRequestBody defines body for Postwebhooks202603AppIdsubscriptionsCreate for application/json ContentType.
+type Postwebhooks202603AppIdsubscriptionsCreateJSONRequestBody = SubscriptionCreateRequest
+
+// Postwebhooks202603AppIdsubscriptionsbatchupdateUpdateBatchJSONRequestBody defines body for Postwebhooks202603AppIdsubscriptionsbatchupdateUpdateBatch for application/json ContentType.
+type Postwebhooks202603AppIdsubscriptionsbatchupdateUpdateBatchJSONRequestBody = BatchInputSubscriptionBatchUpdateRequest
+
+// Patchwebhooks202603AppIdsubscriptionsSubscriptionIdUpdateJSONRequestBody defines body for Patchwebhooks202603AppIdsubscriptionsSubscriptionIdUpdate for application/json ContentType.
+type Patchwebhooks202603AppIdsubscriptionsSubscriptionIdUpdateJSONRequestBody = SubscriptionPatchRequest
+
+// AsNumOccurrencesRefineBy returns the union data inside the AllPropertyTypesOperation_CoalescingRefineBy as a NumOccurrencesRefineBy
+func (t AllPropertyTypesOperation_CoalescingRefineBy) AsNumOccurrencesRefineBy() (NumOccurrencesRefineBy, error) {
+	var body NumOccurrencesRefineBy
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromNumOccurrencesRefineBy overwrites any union data inside the AllPropertyTypesOperation_CoalescingRefineBy as the provided NumOccurrencesRefineBy
+func (t *AllPropertyTypesOperation_CoalescingRefineBy) FromNumOccurrencesRefineBy(v NumOccurrencesRefineBy) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeNumOccurrencesRefineBy performs a merge with any union data inside the AllPropertyTypesOperation_CoalescingRefineBy, using the provided NumOccurrencesRefineBy
+func (t *AllPropertyTypesOperation_CoalescingRefineBy) MergeNumOccurrencesRefineBy(v NumOccurrencesRefineBy) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsSetOccurrencesRefineBy returns the union data inside the AllPropertyTypesOperation_CoalescingRefineBy as a SetOccurrencesRefineBy
+func (t AllPropertyTypesOperation_CoalescingRefineBy) AsSetOccurrencesRefineBy() (SetOccurrencesRefineBy, error) {
+	var body SetOccurrencesRefineBy
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromSetOccurrencesRefineBy overwrites any union data inside the AllPropertyTypesOperation_CoalescingRefineBy as the provided SetOccurrencesRefineBy
+func (t *AllPropertyTypesOperation_CoalescingRefineBy) FromSetOccurrencesRefineBy(v SetOccurrencesRefineBy) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeSetOccurrencesRefineBy performs a merge with any union data inside the AllPropertyTypesOperation_CoalescingRefineBy, using the provided SetOccurrencesRefineBy
+func (t *AllPropertyTypesOperation_CoalescingRefineBy) MergeSetOccurrencesRefineBy(v SetOccurrencesRefineBy) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t AllPropertyTypesOperation_CoalescingRefineBy) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *AllPropertyTypesOperation_CoalescingRefineBy) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsRelativeComparativeTimestampRefineBy returns the union data inside the AllPropertyTypesOperation_PruningRefineBy as a RelativeComparativeTimestampRefineBy
+func (t AllPropertyTypesOperation_PruningRefineBy) AsRelativeComparativeTimestampRefineBy() (RelativeComparativeTimestampRefineBy, error) {
+	var body RelativeComparativeTimestampRefineBy
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromRelativeComparativeTimestampRefineBy overwrites any union data inside the AllPropertyTypesOperation_PruningRefineBy as the provided RelativeComparativeTimestampRefineBy
+func (t *AllPropertyTypesOperation_PruningRefineBy) FromRelativeComparativeTimestampRefineBy(v RelativeComparativeTimestampRefineBy) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeRelativeComparativeTimestampRefineBy performs a merge with any union data inside the AllPropertyTypesOperation_PruningRefineBy, using the provided RelativeComparativeTimestampRefineBy
+func (t *AllPropertyTypesOperation_PruningRefineBy) MergeRelativeComparativeTimestampRefineBy(v RelativeComparativeTimestampRefineBy) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsRelativeRangedTimestampRefineBy returns the union data inside the AllPropertyTypesOperation_PruningRefineBy as a RelativeRangedTimestampRefineBy
+func (t AllPropertyTypesOperation_PruningRefineBy) AsRelativeRangedTimestampRefineBy() (RelativeRangedTimestampRefineBy, error) {
+	var body RelativeRangedTimestampRefineBy
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromRelativeRangedTimestampRefineBy overwrites any union data inside the AllPropertyTypesOperation_PruningRefineBy as the provided RelativeRangedTimestampRefineBy
+func (t *AllPropertyTypesOperation_PruningRefineBy) FromRelativeRangedTimestampRefineBy(v RelativeRangedTimestampRefineBy) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeRelativeRangedTimestampRefineBy performs a merge with any union data inside the AllPropertyTypesOperation_PruningRefineBy, using the provided RelativeRangedTimestampRefineBy
+func (t *AllPropertyTypesOperation_PruningRefineBy) MergeRelativeRangedTimestampRefineBy(v RelativeRangedTimestampRefineBy) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsAbsoluteComparativeTimestampRefineBy returns the union data inside the AllPropertyTypesOperation_PruningRefineBy as a AbsoluteComparativeTimestampRefineBy
+func (t AllPropertyTypesOperation_PruningRefineBy) AsAbsoluteComparativeTimestampRefineBy() (AbsoluteComparativeTimestampRefineBy, error) {
+	var body AbsoluteComparativeTimestampRefineBy
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromAbsoluteComparativeTimestampRefineBy overwrites any union data inside the AllPropertyTypesOperation_PruningRefineBy as the provided AbsoluteComparativeTimestampRefineBy
+func (t *AllPropertyTypesOperation_PruningRefineBy) FromAbsoluteComparativeTimestampRefineBy(v AbsoluteComparativeTimestampRefineBy) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeAbsoluteComparativeTimestampRefineBy performs a merge with any union data inside the AllPropertyTypesOperation_PruningRefineBy, using the provided AbsoluteComparativeTimestampRefineBy
+func (t *AllPropertyTypesOperation_PruningRefineBy) MergeAbsoluteComparativeTimestampRefineBy(v AbsoluteComparativeTimestampRefineBy) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsAbsoluteRangedTimestampRefineBy returns the union data inside the AllPropertyTypesOperation_PruningRefineBy as a AbsoluteRangedTimestampRefineBy
+func (t AllPropertyTypesOperation_PruningRefineBy) AsAbsoluteRangedTimestampRefineBy() (AbsoluteRangedTimestampRefineBy, error) {
+	var body AbsoluteRangedTimestampRefineBy
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromAbsoluteRangedTimestampRefineBy overwrites any union data inside the AllPropertyTypesOperation_PruningRefineBy as the provided AbsoluteRangedTimestampRefineBy
+func (t *AllPropertyTypesOperation_PruningRefineBy) FromAbsoluteRangedTimestampRefineBy(v AbsoluteRangedTimestampRefineBy) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeAbsoluteRangedTimestampRefineBy performs a merge with any union data inside the AllPropertyTypesOperation_PruningRefineBy, using the provided AbsoluteRangedTimestampRefineBy
+func (t *AllPropertyTypesOperation_PruningRefineBy) MergeAbsoluteRangedTimestampRefineBy(v AbsoluteRangedTimestampRefineBy) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsAllHistoryRefineBy returns the union data inside the AllPropertyTypesOperation_PruningRefineBy as a AllHistoryRefineBy
+func (t AllPropertyTypesOperation_PruningRefineBy) AsAllHistoryRefineBy() (AllHistoryRefineBy, error) {
+	var body AllHistoryRefineBy
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromAllHistoryRefineBy overwrites any union data inside the AllPropertyTypesOperation_PruningRefineBy as the provided AllHistoryRefineBy
+func (t *AllPropertyTypesOperation_PruningRefineBy) FromAllHistoryRefineBy(v AllHistoryRefineBy) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeAllHistoryRefineBy performs a merge with any union data inside the AllPropertyTypesOperation_PruningRefineBy, using the provided AllHistoryRefineBy
+func (t *AllPropertyTypesOperation_PruningRefineBy) MergeAllHistoryRefineBy(v AllHistoryRefineBy) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsTimePointOperation returns the union data inside the AllPropertyTypesOperation_PruningRefineBy as a TimePointOperation
+func (t AllPropertyTypesOperation_PruningRefineBy) AsTimePointOperation() (TimePointOperation, error) {
+	var body TimePointOperation
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromTimePointOperation overwrites any union data inside the AllPropertyTypesOperation_PruningRefineBy as the provided TimePointOperation
+func (t *AllPropertyTypesOperation_PruningRefineBy) FromTimePointOperation(v TimePointOperation) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeTimePointOperation performs a merge with any union data inside the AllPropertyTypesOperation_PruningRefineBy, using the provided TimePointOperation
+func (t *AllPropertyTypesOperation_PruningRefineBy) MergeTimePointOperation(v TimePointOperation) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsRangedTimeOperation returns the union data inside the AllPropertyTypesOperation_PruningRefineBy as a RangedTimeOperation
+func (t AllPropertyTypesOperation_PruningRefineBy) AsRangedTimeOperation() (RangedTimeOperation, error) {
+	var body RangedTimeOperation
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromRangedTimeOperation overwrites any union data inside the AllPropertyTypesOperation_PruningRefineBy as the provided RangedTimeOperation
+func (t *AllPropertyTypesOperation_PruningRefineBy) FromRangedTimeOperation(v RangedTimeOperation) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeRangedTimeOperation performs a merge with any union data inside the AllPropertyTypesOperation_PruningRefineBy, using the provided RangedTimeOperation
+func (t *AllPropertyTypesOperation_PruningRefineBy) MergeRangedTimeOperation(v RangedTimeOperation) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t AllPropertyTypesOperation_PruningRefineBy) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *AllPropertyTypesOperation_PruningRefineBy) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsIntegerFieldSchema returns the union data inside the ArrayFieldSchema_Items as a IntegerFieldSchema
+func (t ArrayFieldSchema_Items) AsIntegerFieldSchema() (IntegerFieldSchema, error) {
+	var body IntegerFieldSchema
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromIntegerFieldSchema overwrites any union data inside the ArrayFieldSchema_Items as the provided IntegerFieldSchema
+func (t *ArrayFieldSchema_Items) FromIntegerFieldSchema(v IntegerFieldSchema) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeIntegerFieldSchema performs a merge with any union data inside the ArrayFieldSchema_Items, using the provided IntegerFieldSchema
+func (t *ArrayFieldSchema_Items) MergeIntegerFieldSchema(v IntegerFieldSchema) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsLongFieldSchema returns the union data inside the ArrayFieldSchema_Items as a LongFieldSchema
+func (t ArrayFieldSchema_Items) AsLongFieldSchema() (LongFieldSchema, error) {
+	var body LongFieldSchema
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromLongFieldSchema overwrites any union data inside the ArrayFieldSchema_Items as the provided LongFieldSchema
+func (t *ArrayFieldSchema_Items) FromLongFieldSchema(v LongFieldSchema) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeLongFieldSchema performs a merge with any union data inside the ArrayFieldSchema_Items, using the provided LongFieldSchema
+func (t *ArrayFieldSchema_Items) MergeLongFieldSchema(v LongFieldSchema) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsDoubleFieldSchema returns the union data inside the ArrayFieldSchema_Items as a DoubleFieldSchema
+func (t ArrayFieldSchema_Items) AsDoubleFieldSchema() (DoubleFieldSchema, error) {
+	var body DoubleFieldSchema
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromDoubleFieldSchema overwrites any union data inside the ArrayFieldSchema_Items as the provided DoubleFieldSchema
+func (t *ArrayFieldSchema_Items) FromDoubleFieldSchema(v DoubleFieldSchema) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeDoubleFieldSchema performs a merge with any union data inside the ArrayFieldSchema_Items, using the provided DoubleFieldSchema
+func (t *ArrayFieldSchema_Items) MergeDoubleFieldSchema(v DoubleFieldSchema) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsStringFieldSchema returns the union data inside the ArrayFieldSchema_Items as a StringFieldSchema
+func (t ArrayFieldSchema_Items) AsStringFieldSchema() (StringFieldSchema, error) {
+	var body StringFieldSchema
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromStringFieldSchema overwrites any union data inside the ArrayFieldSchema_Items as the provided StringFieldSchema
+func (t *ArrayFieldSchema_Items) FromStringFieldSchema(v StringFieldSchema) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeStringFieldSchema performs a merge with any union data inside the ArrayFieldSchema_Items, using the provided StringFieldSchema
+func (t *ArrayFieldSchema_Items) MergeStringFieldSchema(v StringFieldSchema) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBooleanFieldSchema returns the union data inside the ArrayFieldSchema_Items as a BooleanFieldSchema
+func (t ArrayFieldSchema_Items) AsBooleanFieldSchema() (BooleanFieldSchema, error) {
+	var body BooleanFieldSchema
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBooleanFieldSchema overwrites any union data inside the ArrayFieldSchema_Items as the provided BooleanFieldSchema
+func (t *ArrayFieldSchema_Items) FromBooleanFieldSchema(v BooleanFieldSchema) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBooleanFieldSchema performs a merge with any union data inside the ArrayFieldSchema_Items, using the provided BooleanFieldSchema
+func (t *ArrayFieldSchema_Items) MergeBooleanFieldSchema(v BooleanFieldSchema) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsArrayFieldSchema returns the union data inside the ArrayFieldSchema_Items as a ArrayFieldSchema
+func (t ArrayFieldSchema_Items) AsArrayFieldSchema() (ArrayFieldSchema, error) {
+	var body ArrayFieldSchema
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromArrayFieldSchema overwrites any union data inside the ArrayFieldSchema_Items as the provided ArrayFieldSchema
+func (t *ArrayFieldSchema_Items) FromArrayFieldSchema(v ArrayFieldSchema) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeArrayFieldSchema performs a merge with any union data inside the ArrayFieldSchema_Items, using the provided ArrayFieldSchema
+func (t *ArrayFieldSchema_Items) MergeArrayFieldSchema(v ArrayFieldSchema) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsObjectFieldSchema returns the union data inside the ArrayFieldSchema_Items as a ObjectFieldSchema
+func (t ArrayFieldSchema_Items) AsObjectFieldSchema() (ObjectFieldSchema, error) {
+	var body ObjectFieldSchema
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromObjectFieldSchema overwrites any union data inside the ArrayFieldSchema_Items as the provided ObjectFieldSchema
+func (t *ArrayFieldSchema_Items) FromObjectFieldSchema(v ObjectFieldSchema) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeObjectFieldSchema performs a merge with any union data inside the ArrayFieldSchema_Items, using the provided ObjectFieldSchema
+func (t *ArrayFieldSchema_Items) MergeObjectFieldSchema(v ObjectFieldSchema) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsUnknownFieldSchema returns the union data inside the ArrayFieldSchema_Items as a UnknownFieldSchema
+func (t ArrayFieldSchema_Items) AsUnknownFieldSchema() (UnknownFieldSchema, error) {
+	var body UnknownFieldSchema
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromUnknownFieldSchema overwrites any union data inside the ArrayFieldSchema_Items as the provided UnknownFieldSchema
+func (t *ArrayFieldSchema_Items) FromUnknownFieldSchema(v UnknownFieldSchema) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeUnknownFieldSchema performs a merge with any union data inside the ArrayFieldSchema_Items, using the provided UnknownFieldSchema
+func (t *ArrayFieldSchema_Items) MergeUnknownFieldSchema(v UnknownFieldSchema) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t ArrayFieldSchema_Items) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *ArrayFieldSchema_Items) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsFileAttachment returns the union data inside the ChannelIntegrationMessageEgg_Attachments_Item as a FileAttachment
+func (t ChannelIntegrationMessageEgg_Attachments_Item) AsFileAttachment() (FileAttachment, error) {
+	var body FileAttachment
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromFileAttachment overwrites any union data inside the ChannelIntegrationMessageEgg_Attachments_Item as the provided FileAttachment
+func (t *ChannelIntegrationMessageEgg_Attachments_Item) FromFileAttachment(v FileAttachment) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeFileAttachment performs a merge with any union data inside the ChannelIntegrationMessageEgg_Attachments_Item, using the provided FileAttachment
+func (t *ChannelIntegrationMessageEgg_Attachments_Item) MergeFileAttachment(v FileAttachment) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsLocationAttachment returns the union data inside the ChannelIntegrationMessageEgg_Attachments_Item as a LocationAttachment
+func (t ChannelIntegrationMessageEgg_Attachments_Item) AsLocationAttachment() (LocationAttachment, error) {
+	var body LocationAttachment
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromLocationAttachment overwrites any union data inside the ChannelIntegrationMessageEgg_Attachments_Item as the provided LocationAttachment
+func (t *ChannelIntegrationMessageEgg_Attachments_Item) FromLocationAttachment(v LocationAttachment) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeLocationAttachment performs a merge with any union data inside the ChannelIntegrationMessageEgg_Attachments_Item, using the provided LocationAttachment
+func (t *ChannelIntegrationMessageEgg_Attachments_Item) MergeLocationAttachment(v LocationAttachment) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsContactAttachment returns the union data inside the ChannelIntegrationMessageEgg_Attachments_Item as a ContactAttachment
+func (t ChannelIntegrationMessageEgg_Attachments_Item) AsContactAttachment() (ContactAttachment, error) {
+	var body ContactAttachment
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromContactAttachment overwrites any union data inside the ChannelIntegrationMessageEgg_Attachments_Item as the provided ContactAttachment
+func (t *ChannelIntegrationMessageEgg_Attachments_Item) FromContactAttachment(v ContactAttachment) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeContactAttachment performs a merge with any union data inside the ChannelIntegrationMessageEgg_Attachments_Item, using the provided ContactAttachment
+func (t *ChannelIntegrationMessageEgg_Attachments_Item) MergeContactAttachment(v ContactAttachment) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsUnsupportedContentAttachment returns the union data inside the ChannelIntegrationMessageEgg_Attachments_Item as a UnsupportedContentAttachment
+func (t ChannelIntegrationMessageEgg_Attachments_Item) AsUnsupportedContentAttachment() (UnsupportedContentAttachment, error) {
+	var body UnsupportedContentAttachment
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromUnsupportedContentAttachment overwrites any union data inside the ChannelIntegrationMessageEgg_Attachments_Item as the provided UnsupportedContentAttachment
+func (t *ChannelIntegrationMessageEgg_Attachments_Item) FromUnsupportedContentAttachment(v UnsupportedContentAttachment) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeUnsupportedContentAttachment performs a merge with any union data inside the ChannelIntegrationMessageEgg_Attachments_Item, using the provided UnsupportedContentAttachment
+func (t *ChannelIntegrationMessageEgg_Attachments_Item) MergeUnsupportedContentAttachment(v UnsupportedContentAttachment) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsMessageHeaderAttachment returns the union data inside the ChannelIntegrationMessageEgg_Attachments_Item as a MessageHeaderAttachment
+func (t ChannelIntegrationMessageEgg_Attachments_Item) AsMessageHeaderAttachment() (MessageHeaderAttachment, error) {
+	var body MessageHeaderAttachment
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromMessageHeaderAttachment overwrites any union data inside the ChannelIntegrationMessageEgg_Attachments_Item as the provided MessageHeaderAttachment
+func (t *ChannelIntegrationMessageEgg_Attachments_Item) FromMessageHeaderAttachment(v MessageHeaderAttachment) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeMessageHeaderAttachment performs a merge with any union data inside the ChannelIntegrationMessageEgg_Attachments_Item, using the provided MessageHeaderAttachment
+func (t *ChannelIntegrationMessageEgg_Attachments_Item) MergeMessageHeaderAttachment(v MessageHeaderAttachment) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsQuickRepliesAttachment returns the union data inside the ChannelIntegrationMessageEgg_Attachments_Item as a QuickRepliesAttachment
+func (t ChannelIntegrationMessageEgg_Attachments_Item) AsQuickRepliesAttachment() (QuickRepliesAttachment, error) {
+	var body QuickRepliesAttachment
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromQuickRepliesAttachment overwrites any union data inside the ChannelIntegrationMessageEgg_Attachments_Item as the provided QuickRepliesAttachment
+func (t *ChannelIntegrationMessageEgg_Attachments_Item) FromQuickRepliesAttachment(v QuickRepliesAttachment) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeQuickRepliesAttachment performs a merge with any union data inside the ChannelIntegrationMessageEgg_Attachments_Item, using the provided QuickRepliesAttachment
+func (t *ChannelIntegrationMessageEgg_Attachments_Item) MergeQuickRepliesAttachment(v QuickRepliesAttachment) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsSocialMetadataIntegrationAttachment returns the union data inside the ChannelIntegrationMessageEgg_Attachments_Item as a SocialMetadataIntegrationAttachment
+func (t ChannelIntegrationMessageEgg_Attachments_Item) AsSocialMetadataIntegrationAttachment() (SocialMetadataIntegrationAttachment, error) {
+	var body SocialMetadataIntegrationAttachment
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromSocialMetadataIntegrationAttachment overwrites any union data inside the ChannelIntegrationMessageEgg_Attachments_Item as the provided SocialMetadataIntegrationAttachment
+func (t *ChannelIntegrationMessageEgg_Attachments_Item) FromSocialMetadataIntegrationAttachment(v SocialMetadataIntegrationAttachment) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeSocialMetadataIntegrationAttachment performs a merge with any union data inside the ChannelIntegrationMessageEgg_Attachments_Item, using the provided SocialMetadataIntegrationAttachment
+func (t *ChannelIntegrationMessageEgg_Attachments_Item) MergeSocialMetadataIntegrationAttachment(v SocialMetadataIntegrationAttachment) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t ChannelIntegrationMessageEgg_Attachments_Item) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *ChannelIntegrationMessageEgg_Attachments_Item) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsContactCallerId returns the union data inside the CompletedThirdPartyCallResponse_CallerIdMatches_Item as a ContactCallerId
+func (t CompletedThirdPartyCallResponse_CallerIdMatches_Item) AsContactCallerId() (ContactCallerId, error) {
+	var body ContactCallerId
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromContactCallerId overwrites any union data inside the CompletedThirdPartyCallResponse_CallerIdMatches_Item as the provided ContactCallerId
+func (t *CompletedThirdPartyCallResponse_CallerIdMatches_Item) FromContactCallerId(v ContactCallerId) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeContactCallerId performs a merge with any union data inside the CompletedThirdPartyCallResponse_CallerIdMatches_Item, using the provided ContactCallerId
+func (t *CompletedThirdPartyCallResponse_CallerIdMatches_Item) MergeContactCallerId(v ContactCallerId) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsCompanyCallerId returns the union data inside the CompletedThirdPartyCallResponse_CallerIdMatches_Item as a CompanyCallerId
+func (t CompletedThirdPartyCallResponse_CallerIdMatches_Item) AsCompanyCallerId() (CompanyCallerId, error) {
+	var body CompanyCallerId
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromCompanyCallerId overwrites any union data inside the CompletedThirdPartyCallResponse_CallerIdMatches_Item as the provided CompanyCallerId
+func (t *CompletedThirdPartyCallResponse_CallerIdMatches_Item) FromCompanyCallerId(v CompanyCallerId) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeCompanyCallerId performs a merge with any union data inside the CompletedThirdPartyCallResponse_CallerIdMatches_Item, using the provided CompanyCallerId
+func (t *CompletedThirdPartyCallResponse_CallerIdMatches_Item) MergeCompanyCallerId(v CompanyCallerId) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t CompletedThirdPartyCallResponse_CallerIdMatches_Item) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *CompletedThirdPartyCallResponse_CallerIdMatches_Item) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsIntegerFieldSchema returns the union data inside the FieldTypeDefinition_Schema as a IntegerFieldSchema
+func (t FieldTypeDefinition_Schema) AsIntegerFieldSchema() (IntegerFieldSchema, error) {
+	var body IntegerFieldSchema
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromIntegerFieldSchema overwrites any union data inside the FieldTypeDefinition_Schema as the provided IntegerFieldSchema
+func (t *FieldTypeDefinition_Schema) FromIntegerFieldSchema(v IntegerFieldSchema) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeIntegerFieldSchema performs a merge with any union data inside the FieldTypeDefinition_Schema, using the provided IntegerFieldSchema
+func (t *FieldTypeDefinition_Schema) MergeIntegerFieldSchema(v IntegerFieldSchema) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsLongFieldSchema returns the union data inside the FieldTypeDefinition_Schema as a LongFieldSchema
+func (t FieldTypeDefinition_Schema) AsLongFieldSchema() (LongFieldSchema, error) {
+	var body LongFieldSchema
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromLongFieldSchema overwrites any union data inside the FieldTypeDefinition_Schema as the provided LongFieldSchema
+func (t *FieldTypeDefinition_Schema) FromLongFieldSchema(v LongFieldSchema) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeLongFieldSchema performs a merge with any union data inside the FieldTypeDefinition_Schema, using the provided LongFieldSchema
+func (t *FieldTypeDefinition_Schema) MergeLongFieldSchema(v LongFieldSchema) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsDoubleFieldSchema returns the union data inside the FieldTypeDefinition_Schema as a DoubleFieldSchema
+func (t FieldTypeDefinition_Schema) AsDoubleFieldSchema() (DoubleFieldSchema, error) {
+	var body DoubleFieldSchema
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromDoubleFieldSchema overwrites any union data inside the FieldTypeDefinition_Schema as the provided DoubleFieldSchema
+func (t *FieldTypeDefinition_Schema) FromDoubleFieldSchema(v DoubleFieldSchema) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeDoubleFieldSchema performs a merge with any union data inside the FieldTypeDefinition_Schema, using the provided DoubleFieldSchema
+func (t *FieldTypeDefinition_Schema) MergeDoubleFieldSchema(v DoubleFieldSchema) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsStringFieldSchema returns the union data inside the FieldTypeDefinition_Schema as a StringFieldSchema
+func (t FieldTypeDefinition_Schema) AsStringFieldSchema() (StringFieldSchema, error) {
+	var body StringFieldSchema
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromStringFieldSchema overwrites any union data inside the FieldTypeDefinition_Schema as the provided StringFieldSchema
+func (t *FieldTypeDefinition_Schema) FromStringFieldSchema(v StringFieldSchema) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeStringFieldSchema performs a merge with any union data inside the FieldTypeDefinition_Schema, using the provided StringFieldSchema
+func (t *FieldTypeDefinition_Schema) MergeStringFieldSchema(v StringFieldSchema) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBooleanFieldSchema returns the union data inside the FieldTypeDefinition_Schema as a BooleanFieldSchema
+func (t FieldTypeDefinition_Schema) AsBooleanFieldSchema() (BooleanFieldSchema, error) {
+	var body BooleanFieldSchema
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBooleanFieldSchema overwrites any union data inside the FieldTypeDefinition_Schema as the provided BooleanFieldSchema
+func (t *FieldTypeDefinition_Schema) FromBooleanFieldSchema(v BooleanFieldSchema) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBooleanFieldSchema performs a merge with any union data inside the FieldTypeDefinition_Schema, using the provided BooleanFieldSchema
+func (t *FieldTypeDefinition_Schema) MergeBooleanFieldSchema(v BooleanFieldSchema) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsArrayFieldSchema returns the union data inside the FieldTypeDefinition_Schema as a ArrayFieldSchema
+func (t FieldTypeDefinition_Schema) AsArrayFieldSchema() (ArrayFieldSchema, error) {
+	var body ArrayFieldSchema
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromArrayFieldSchema overwrites any union data inside the FieldTypeDefinition_Schema as the provided ArrayFieldSchema
+func (t *FieldTypeDefinition_Schema) FromArrayFieldSchema(v ArrayFieldSchema) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeArrayFieldSchema performs a merge with any union data inside the FieldTypeDefinition_Schema, using the provided ArrayFieldSchema
+func (t *FieldTypeDefinition_Schema) MergeArrayFieldSchema(v ArrayFieldSchema) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsObjectFieldSchema returns the union data inside the FieldTypeDefinition_Schema as a ObjectFieldSchema
+func (t FieldTypeDefinition_Schema) AsObjectFieldSchema() (ObjectFieldSchema, error) {
+	var body ObjectFieldSchema
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromObjectFieldSchema overwrites any union data inside the FieldTypeDefinition_Schema as the provided ObjectFieldSchema
+func (t *FieldTypeDefinition_Schema) FromObjectFieldSchema(v ObjectFieldSchema) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeObjectFieldSchema performs a merge with any union data inside the FieldTypeDefinition_Schema, using the provided ObjectFieldSchema
+func (t *FieldTypeDefinition_Schema) MergeObjectFieldSchema(v ObjectFieldSchema) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsUnknownFieldSchema returns the union data inside the FieldTypeDefinition_Schema as a UnknownFieldSchema
+func (t FieldTypeDefinition_Schema) AsUnknownFieldSchema() (UnknownFieldSchema, error) {
+	var body UnknownFieldSchema
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromUnknownFieldSchema overwrites any union data inside the FieldTypeDefinition_Schema as the provided UnknownFieldSchema
+func (t *FieldTypeDefinition_Schema) FromUnknownFieldSchema(v UnknownFieldSchema) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeUnknownFieldSchema performs a merge with any union data inside the FieldTypeDefinition_Schema, using the provided UnknownFieldSchema
+func (t *FieldTypeDefinition_Schema) MergeUnknownFieldSchema(v UnknownFieldSchema) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t FieldTypeDefinition_Schema) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *FieldTypeDefinition_Schema) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsNowReference returns the union data inside the IndexedTimePoint_IndexReference as a NowReference
+func (t IndexedTimePoint_IndexReference) AsNowReference() (NowReference, error) {
+	var body NowReference
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromNowReference overwrites any union data inside the IndexedTimePoint_IndexReference as the provided NowReference
+func (t *IndexedTimePoint_IndexReference) FromNowReference(v NowReference) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeNowReference performs a merge with any union data inside the IndexedTimePoint_IndexReference, using the provided NowReference
+func (t *IndexedTimePoint_IndexReference) MergeNowReference(v NowReference) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsTodayReference returns the union data inside the IndexedTimePoint_IndexReference as a TodayReference
+func (t IndexedTimePoint_IndexReference) AsTodayReference() (TodayReference, error) {
+	var body TodayReference
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromTodayReference overwrites any union data inside the IndexedTimePoint_IndexReference as the provided TodayReference
+func (t *IndexedTimePoint_IndexReference) FromTodayReference(v TodayReference) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeTodayReference performs a merge with any union data inside the IndexedTimePoint_IndexReference, using the provided TodayReference
+func (t *IndexedTimePoint_IndexReference) MergeTodayReference(v TodayReference) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsWeekReference returns the union data inside the IndexedTimePoint_IndexReference as a WeekReference
+func (t IndexedTimePoint_IndexReference) AsWeekReference() (WeekReference, error) {
+	var body WeekReference
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromWeekReference overwrites any union data inside the IndexedTimePoint_IndexReference as the provided WeekReference
+func (t *IndexedTimePoint_IndexReference) FromWeekReference(v WeekReference) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeWeekReference performs a merge with any union data inside the IndexedTimePoint_IndexReference, using the provided WeekReference
+func (t *IndexedTimePoint_IndexReference) MergeWeekReference(v WeekReference) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsMonthReference returns the union data inside the IndexedTimePoint_IndexReference as a MonthReference
+func (t IndexedTimePoint_IndexReference) AsMonthReference() (MonthReference, error) {
+	var body MonthReference
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromMonthReference overwrites any union data inside the IndexedTimePoint_IndexReference as the provided MonthReference
+func (t *IndexedTimePoint_IndexReference) FromMonthReference(v MonthReference) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeMonthReference performs a merge with any union data inside the IndexedTimePoint_IndexReference, using the provided MonthReference
+func (t *IndexedTimePoint_IndexReference) MergeMonthReference(v MonthReference) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsQuarterReference returns the union data inside the IndexedTimePoint_IndexReference as a QuarterReference
+func (t IndexedTimePoint_IndexReference) AsQuarterReference() (QuarterReference, error) {
+	var body QuarterReference
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromQuarterReference overwrites any union data inside the IndexedTimePoint_IndexReference as the provided QuarterReference
+func (t *IndexedTimePoint_IndexReference) FromQuarterReference(v QuarterReference) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeQuarterReference performs a merge with any union data inside the IndexedTimePoint_IndexReference, using the provided QuarterReference
+func (t *IndexedTimePoint_IndexReference) MergeQuarterReference(v QuarterReference) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsFiscalQuarter returns the union data inside the IndexedTimePoint_IndexReference as a FiscalQuarter
+func (t IndexedTimePoint_IndexReference) AsFiscalQuarter() (FiscalQuarter, error) {
+	var body FiscalQuarter
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromFiscalQuarter overwrites any union data inside the IndexedTimePoint_IndexReference as the provided FiscalQuarter
+func (t *IndexedTimePoint_IndexReference) FromFiscalQuarter(v FiscalQuarter) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeFiscalQuarter performs a merge with any union data inside the IndexedTimePoint_IndexReference, using the provided FiscalQuarter
+func (t *IndexedTimePoint_IndexReference) MergeFiscalQuarter(v FiscalQuarter) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsYearReference returns the union data inside the IndexedTimePoint_IndexReference as a YearReference
+func (t IndexedTimePoint_IndexReference) AsYearReference() (YearReference, error) {
+	var body YearReference
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromYearReference overwrites any union data inside the IndexedTimePoint_IndexReference as the provided YearReference
+func (t *IndexedTimePoint_IndexReference) FromYearReference(v YearReference) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeYearReference performs a merge with any union data inside the IndexedTimePoint_IndexReference, using the provided YearReference
+func (t *IndexedTimePoint_IndexReference) MergeYearReference(v YearReference) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsFiscalYear returns the union data inside the IndexedTimePoint_IndexReference as a FiscalYear
+func (t IndexedTimePoint_IndexReference) AsFiscalYear() (FiscalYear, error) {
+	var body FiscalYear
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromFiscalYear overwrites any union data inside the IndexedTimePoint_IndexReference as the provided FiscalYear
+func (t *IndexedTimePoint_IndexReference) FromFiscalYear(v FiscalYear) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeFiscalYear performs a merge with any union data inside the IndexedTimePoint_IndexReference, using the provided FiscalYear
+func (t *IndexedTimePoint_IndexReference) MergeFiscalYear(v FiscalYear) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t IndexedTimePoint_IndexReference) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *IndexedTimePoint_IndexReference) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsActionHookActionBody returns the union data inside the IntegratorObjectResult_Actions_Item as a ActionHookActionBody
+func (t IntegratorObjectResult_Actions_Item) AsActionHookActionBody() (ActionHookActionBody, error) {
+	var body ActionHookActionBody
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromActionHookActionBody overwrites any union data inside the IntegratorObjectResult_Actions_Item as the provided ActionHookActionBody
+func (t *IntegratorObjectResult_Actions_Item) FromActionHookActionBody(v ActionHookActionBody) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeActionHookActionBody performs a merge with any union data inside the IntegratorObjectResult_Actions_Item, using the provided ActionHookActionBody
+func (t *IntegratorObjectResult_Actions_Item) MergeActionHookActionBody(v ActionHookActionBody) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsIFrameActionBody returns the union data inside the IntegratorObjectResult_Actions_Item as a IFrameActionBody
+func (t IntegratorObjectResult_Actions_Item) AsIFrameActionBody() (IFrameActionBody, error) {
+	var body IFrameActionBody
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromIFrameActionBody overwrites any union data inside the IntegratorObjectResult_Actions_Item as the provided IFrameActionBody
+func (t *IntegratorObjectResult_Actions_Item) FromIFrameActionBody(v IFrameActionBody) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeIFrameActionBody performs a merge with any union data inside the IntegratorObjectResult_Actions_Item, using the provided IFrameActionBody
+func (t *IntegratorObjectResult_Actions_Item) MergeIFrameActionBody(v IFrameActionBody) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t IntegratorObjectResult_Actions_Item) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *IntegratorObjectResult_Actions_Item) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsPublicOrFilterBranch returns the union data inside the ListCreateRequest_FilterBranch as a PublicOrFilterBranch
+func (t ListCreateRequest_FilterBranch) AsPublicOrFilterBranch() (PublicOrFilterBranch, error) {
+	var body PublicOrFilterBranch
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPublicOrFilterBranch overwrites any union data inside the ListCreateRequest_FilterBranch as the provided PublicOrFilterBranch
+func (t *ListCreateRequest_FilterBranch) FromPublicOrFilterBranch(v PublicOrFilterBranch) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePublicOrFilterBranch performs a merge with any union data inside the ListCreateRequest_FilterBranch, using the provided PublicOrFilterBranch
+func (t *ListCreateRequest_FilterBranch) MergePublicOrFilterBranch(v PublicOrFilterBranch) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPublicAndFilterBranch returns the union data inside the ListCreateRequest_FilterBranch as a PublicAndFilterBranch
+func (t ListCreateRequest_FilterBranch) AsPublicAndFilterBranch() (PublicAndFilterBranch, error) {
+	var body PublicAndFilterBranch
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPublicAndFilterBranch overwrites any union data inside the ListCreateRequest_FilterBranch as the provided PublicAndFilterBranch
+func (t *ListCreateRequest_FilterBranch) FromPublicAndFilterBranch(v PublicAndFilterBranch) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePublicAndFilterBranch performs a merge with any union data inside the ListCreateRequest_FilterBranch, using the provided PublicAndFilterBranch
+func (t *ListCreateRequest_FilterBranch) MergePublicAndFilterBranch(v PublicAndFilterBranch) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPublicNotAllFilterBranch returns the union data inside the ListCreateRequest_FilterBranch as a PublicNotAllFilterBranch
+func (t ListCreateRequest_FilterBranch) AsPublicNotAllFilterBranch() (PublicNotAllFilterBranch, error) {
+	var body PublicNotAllFilterBranch
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPublicNotAllFilterBranch overwrites any union data inside the ListCreateRequest_FilterBranch as the provided PublicNotAllFilterBranch
+func (t *ListCreateRequest_FilterBranch) FromPublicNotAllFilterBranch(v PublicNotAllFilterBranch) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePublicNotAllFilterBranch performs a merge with any union data inside the ListCreateRequest_FilterBranch, using the provided PublicNotAllFilterBranch
+func (t *ListCreateRequest_FilterBranch) MergePublicNotAllFilterBranch(v PublicNotAllFilterBranch) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPublicNotAnyFilterBranch returns the union data inside the ListCreateRequest_FilterBranch as a PublicNotAnyFilterBranch
+func (t ListCreateRequest_FilterBranch) AsPublicNotAnyFilterBranch() (PublicNotAnyFilterBranch, error) {
+	var body PublicNotAnyFilterBranch
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPublicNotAnyFilterBranch overwrites any union data inside the ListCreateRequest_FilterBranch as the provided PublicNotAnyFilterBranch
+func (t *ListCreateRequest_FilterBranch) FromPublicNotAnyFilterBranch(v PublicNotAnyFilterBranch) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePublicNotAnyFilterBranch performs a merge with any union data inside the ListCreateRequest_FilterBranch, using the provided PublicNotAnyFilterBranch
+func (t *ListCreateRequest_FilterBranch) MergePublicNotAnyFilterBranch(v PublicNotAnyFilterBranch) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPublicRestrictedFilterBranch returns the union data inside the ListCreateRequest_FilterBranch as a PublicRestrictedFilterBranch
+func (t ListCreateRequest_FilterBranch) AsPublicRestrictedFilterBranch() (PublicRestrictedFilterBranch, error) {
+	var body PublicRestrictedFilterBranch
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPublicRestrictedFilterBranch overwrites any union data inside the ListCreateRequest_FilterBranch as the provided PublicRestrictedFilterBranch
+func (t *ListCreateRequest_FilterBranch) FromPublicRestrictedFilterBranch(v PublicRestrictedFilterBranch) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePublicRestrictedFilterBranch performs a merge with any union data inside the ListCreateRequest_FilterBranch, using the provided PublicRestrictedFilterBranch
+func (t *ListCreateRequest_FilterBranch) MergePublicRestrictedFilterBranch(v PublicRestrictedFilterBranch) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPublicUnifiedEventsFilterBranch returns the union data inside the ListCreateRequest_FilterBranch as a PublicUnifiedEventsFilterBranch
+func (t ListCreateRequest_FilterBranch) AsPublicUnifiedEventsFilterBranch() (PublicUnifiedEventsFilterBranch, error) {
+	var body PublicUnifiedEventsFilterBranch
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPublicUnifiedEventsFilterBranch overwrites any union data inside the ListCreateRequest_FilterBranch as the provided PublicUnifiedEventsFilterBranch
+func (t *ListCreateRequest_FilterBranch) FromPublicUnifiedEventsFilterBranch(v PublicUnifiedEventsFilterBranch) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePublicUnifiedEventsFilterBranch performs a merge with any union data inside the ListCreateRequest_FilterBranch, using the provided PublicUnifiedEventsFilterBranch
+func (t *ListCreateRequest_FilterBranch) MergePublicUnifiedEventsFilterBranch(v PublicUnifiedEventsFilterBranch) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPublicAssociationFilterBranch returns the union data inside the ListCreateRequest_FilterBranch as a PublicAssociationFilterBranch
+func (t ListCreateRequest_FilterBranch) AsPublicAssociationFilterBranch() (PublicAssociationFilterBranch, error) {
+	var body PublicAssociationFilterBranch
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPublicAssociationFilterBranch overwrites any union data inside the ListCreateRequest_FilterBranch as the provided PublicAssociationFilterBranch
+func (t *ListCreateRequest_FilterBranch) FromPublicAssociationFilterBranch(v PublicAssociationFilterBranch) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePublicAssociationFilterBranch performs a merge with any union data inside the ListCreateRequest_FilterBranch, using the provided PublicAssociationFilterBranch
+func (t *ListCreateRequest_FilterBranch) MergePublicAssociationFilterBranch(v PublicAssociationFilterBranch) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t ListCreateRequest_FilterBranch) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *ListCreateRequest_FilterBranch) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsPublicOrFilterBranch returns the union data inside the ListFilterUpdateRequest_FilterBranch as a PublicOrFilterBranch
+func (t ListFilterUpdateRequest_FilterBranch) AsPublicOrFilterBranch() (PublicOrFilterBranch, error) {
+	var body PublicOrFilterBranch
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPublicOrFilterBranch overwrites any union data inside the ListFilterUpdateRequest_FilterBranch as the provided PublicOrFilterBranch
+func (t *ListFilterUpdateRequest_FilterBranch) FromPublicOrFilterBranch(v PublicOrFilterBranch) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePublicOrFilterBranch performs a merge with any union data inside the ListFilterUpdateRequest_FilterBranch, using the provided PublicOrFilterBranch
+func (t *ListFilterUpdateRequest_FilterBranch) MergePublicOrFilterBranch(v PublicOrFilterBranch) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPublicAndFilterBranch returns the union data inside the ListFilterUpdateRequest_FilterBranch as a PublicAndFilterBranch
+func (t ListFilterUpdateRequest_FilterBranch) AsPublicAndFilterBranch() (PublicAndFilterBranch, error) {
+	var body PublicAndFilterBranch
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPublicAndFilterBranch overwrites any union data inside the ListFilterUpdateRequest_FilterBranch as the provided PublicAndFilterBranch
+func (t *ListFilterUpdateRequest_FilterBranch) FromPublicAndFilterBranch(v PublicAndFilterBranch) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePublicAndFilterBranch performs a merge with any union data inside the ListFilterUpdateRequest_FilterBranch, using the provided PublicAndFilterBranch
+func (t *ListFilterUpdateRequest_FilterBranch) MergePublicAndFilterBranch(v PublicAndFilterBranch) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPublicNotAllFilterBranch returns the union data inside the ListFilterUpdateRequest_FilterBranch as a PublicNotAllFilterBranch
+func (t ListFilterUpdateRequest_FilterBranch) AsPublicNotAllFilterBranch() (PublicNotAllFilterBranch, error) {
+	var body PublicNotAllFilterBranch
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPublicNotAllFilterBranch overwrites any union data inside the ListFilterUpdateRequest_FilterBranch as the provided PublicNotAllFilterBranch
+func (t *ListFilterUpdateRequest_FilterBranch) FromPublicNotAllFilterBranch(v PublicNotAllFilterBranch) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePublicNotAllFilterBranch performs a merge with any union data inside the ListFilterUpdateRequest_FilterBranch, using the provided PublicNotAllFilterBranch
+func (t *ListFilterUpdateRequest_FilterBranch) MergePublicNotAllFilterBranch(v PublicNotAllFilterBranch) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPublicNotAnyFilterBranch returns the union data inside the ListFilterUpdateRequest_FilterBranch as a PublicNotAnyFilterBranch
+func (t ListFilterUpdateRequest_FilterBranch) AsPublicNotAnyFilterBranch() (PublicNotAnyFilterBranch, error) {
+	var body PublicNotAnyFilterBranch
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPublicNotAnyFilterBranch overwrites any union data inside the ListFilterUpdateRequest_FilterBranch as the provided PublicNotAnyFilterBranch
+func (t *ListFilterUpdateRequest_FilterBranch) FromPublicNotAnyFilterBranch(v PublicNotAnyFilterBranch) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePublicNotAnyFilterBranch performs a merge with any union data inside the ListFilterUpdateRequest_FilterBranch, using the provided PublicNotAnyFilterBranch
+func (t *ListFilterUpdateRequest_FilterBranch) MergePublicNotAnyFilterBranch(v PublicNotAnyFilterBranch) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPublicRestrictedFilterBranch returns the union data inside the ListFilterUpdateRequest_FilterBranch as a PublicRestrictedFilterBranch
+func (t ListFilterUpdateRequest_FilterBranch) AsPublicRestrictedFilterBranch() (PublicRestrictedFilterBranch, error) {
+	var body PublicRestrictedFilterBranch
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPublicRestrictedFilterBranch overwrites any union data inside the ListFilterUpdateRequest_FilterBranch as the provided PublicRestrictedFilterBranch
+func (t *ListFilterUpdateRequest_FilterBranch) FromPublicRestrictedFilterBranch(v PublicRestrictedFilterBranch) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePublicRestrictedFilterBranch performs a merge with any union data inside the ListFilterUpdateRequest_FilterBranch, using the provided PublicRestrictedFilterBranch
+func (t *ListFilterUpdateRequest_FilterBranch) MergePublicRestrictedFilterBranch(v PublicRestrictedFilterBranch) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPublicUnifiedEventsFilterBranch returns the union data inside the ListFilterUpdateRequest_FilterBranch as a PublicUnifiedEventsFilterBranch
+func (t ListFilterUpdateRequest_FilterBranch) AsPublicUnifiedEventsFilterBranch() (PublicUnifiedEventsFilterBranch, error) {
+	var body PublicUnifiedEventsFilterBranch
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPublicUnifiedEventsFilterBranch overwrites any union data inside the ListFilterUpdateRequest_FilterBranch as the provided PublicUnifiedEventsFilterBranch
+func (t *ListFilterUpdateRequest_FilterBranch) FromPublicUnifiedEventsFilterBranch(v PublicUnifiedEventsFilterBranch) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePublicUnifiedEventsFilterBranch performs a merge with any union data inside the ListFilterUpdateRequest_FilterBranch, using the provided PublicUnifiedEventsFilterBranch
+func (t *ListFilterUpdateRequest_FilterBranch) MergePublicUnifiedEventsFilterBranch(v PublicUnifiedEventsFilterBranch) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPublicAssociationFilterBranch returns the union data inside the ListFilterUpdateRequest_FilterBranch as a PublicAssociationFilterBranch
+func (t ListFilterUpdateRequest_FilterBranch) AsPublicAssociationFilterBranch() (PublicAssociationFilterBranch, error) {
+	var body PublicAssociationFilterBranch
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPublicAssociationFilterBranch overwrites any union data inside the ListFilterUpdateRequest_FilterBranch as the provided PublicAssociationFilterBranch
+func (t *ListFilterUpdateRequest_FilterBranch) FromPublicAssociationFilterBranch(v PublicAssociationFilterBranch) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePublicAssociationFilterBranch performs a merge with any union data inside the ListFilterUpdateRequest_FilterBranch, using the provided PublicAssociationFilterBranch
+func (t *ListFilterUpdateRequest_FilterBranch) MergePublicAssociationFilterBranch(v PublicAssociationFilterBranch) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t ListFilterUpdateRequest_FilterBranch) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *ListFilterUpdateRequest_FilterBranch) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsNumOccurrencesRefineBy returns the union data inside the MultiStringPropertyOperation_CoalescingRefineBy as a NumOccurrencesRefineBy
+func (t MultiStringPropertyOperation_CoalescingRefineBy) AsNumOccurrencesRefineBy() (NumOccurrencesRefineBy, error) {
+	var body NumOccurrencesRefineBy
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromNumOccurrencesRefineBy overwrites any union data inside the MultiStringPropertyOperation_CoalescingRefineBy as the provided NumOccurrencesRefineBy
+func (t *MultiStringPropertyOperation_CoalescingRefineBy) FromNumOccurrencesRefineBy(v NumOccurrencesRefineBy) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeNumOccurrencesRefineBy performs a merge with any union data inside the MultiStringPropertyOperation_CoalescingRefineBy, using the provided NumOccurrencesRefineBy
+func (t *MultiStringPropertyOperation_CoalescingRefineBy) MergeNumOccurrencesRefineBy(v NumOccurrencesRefineBy) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsSetOccurrencesRefineBy returns the union data inside the MultiStringPropertyOperation_CoalescingRefineBy as a SetOccurrencesRefineBy
+func (t MultiStringPropertyOperation_CoalescingRefineBy) AsSetOccurrencesRefineBy() (SetOccurrencesRefineBy, error) {
+	var body SetOccurrencesRefineBy
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromSetOccurrencesRefineBy overwrites any union data inside the MultiStringPropertyOperation_CoalescingRefineBy as the provided SetOccurrencesRefineBy
+func (t *MultiStringPropertyOperation_CoalescingRefineBy) FromSetOccurrencesRefineBy(v SetOccurrencesRefineBy) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeSetOccurrencesRefineBy performs a merge with any union data inside the MultiStringPropertyOperation_CoalescingRefineBy, using the provided SetOccurrencesRefineBy
+func (t *MultiStringPropertyOperation_CoalescingRefineBy) MergeSetOccurrencesRefineBy(v SetOccurrencesRefineBy) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t MultiStringPropertyOperation_CoalescingRefineBy) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *MultiStringPropertyOperation_CoalescingRefineBy) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsRelativeComparativeTimestampRefineBy returns the union data inside the MultiStringPropertyOperation_PruningRefineBy as a RelativeComparativeTimestampRefineBy
+func (t MultiStringPropertyOperation_PruningRefineBy) AsRelativeComparativeTimestampRefineBy() (RelativeComparativeTimestampRefineBy, error) {
+	var body RelativeComparativeTimestampRefineBy
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromRelativeComparativeTimestampRefineBy overwrites any union data inside the MultiStringPropertyOperation_PruningRefineBy as the provided RelativeComparativeTimestampRefineBy
+func (t *MultiStringPropertyOperation_PruningRefineBy) FromRelativeComparativeTimestampRefineBy(v RelativeComparativeTimestampRefineBy) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeRelativeComparativeTimestampRefineBy performs a merge with any union data inside the MultiStringPropertyOperation_PruningRefineBy, using the provided RelativeComparativeTimestampRefineBy
+func (t *MultiStringPropertyOperation_PruningRefineBy) MergeRelativeComparativeTimestampRefineBy(v RelativeComparativeTimestampRefineBy) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsRelativeRangedTimestampRefineBy returns the union data inside the MultiStringPropertyOperation_PruningRefineBy as a RelativeRangedTimestampRefineBy
+func (t MultiStringPropertyOperation_PruningRefineBy) AsRelativeRangedTimestampRefineBy() (RelativeRangedTimestampRefineBy, error) {
+	var body RelativeRangedTimestampRefineBy
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromRelativeRangedTimestampRefineBy overwrites any union data inside the MultiStringPropertyOperation_PruningRefineBy as the provided RelativeRangedTimestampRefineBy
+func (t *MultiStringPropertyOperation_PruningRefineBy) FromRelativeRangedTimestampRefineBy(v RelativeRangedTimestampRefineBy) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeRelativeRangedTimestampRefineBy performs a merge with any union data inside the MultiStringPropertyOperation_PruningRefineBy, using the provided RelativeRangedTimestampRefineBy
+func (t *MultiStringPropertyOperation_PruningRefineBy) MergeRelativeRangedTimestampRefineBy(v RelativeRangedTimestampRefineBy) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsAbsoluteComparativeTimestampRefineBy returns the union data inside the MultiStringPropertyOperation_PruningRefineBy as a AbsoluteComparativeTimestampRefineBy
+func (t MultiStringPropertyOperation_PruningRefineBy) AsAbsoluteComparativeTimestampRefineBy() (AbsoluteComparativeTimestampRefineBy, error) {
+	var body AbsoluteComparativeTimestampRefineBy
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromAbsoluteComparativeTimestampRefineBy overwrites any union data inside the MultiStringPropertyOperation_PruningRefineBy as the provided AbsoluteComparativeTimestampRefineBy
+func (t *MultiStringPropertyOperation_PruningRefineBy) FromAbsoluteComparativeTimestampRefineBy(v AbsoluteComparativeTimestampRefineBy) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeAbsoluteComparativeTimestampRefineBy performs a merge with any union data inside the MultiStringPropertyOperation_PruningRefineBy, using the provided AbsoluteComparativeTimestampRefineBy
+func (t *MultiStringPropertyOperation_PruningRefineBy) MergeAbsoluteComparativeTimestampRefineBy(v AbsoluteComparativeTimestampRefineBy) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsAbsoluteRangedTimestampRefineBy returns the union data inside the MultiStringPropertyOperation_PruningRefineBy as a AbsoluteRangedTimestampRefineBy
+func (t MultiStringPropertyOperation_PruningRefineBy) AsAbsoluteRangedTimestampRefineBy() (AbsoluteRangedTimestampRefineBy, error) {
+	var body AbsoluteRangedTimestampRefineBy
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromAbsoluteRangedTimestampRefineBy overwrites any union data inside the MultiStringPropertyOperation_PruningRefineBy as the provided AbsoluteRangedTimestampRefineBy
+func (t *MultiStringPropertyOperation_PruningRefineBy) FromAbsoluteRangedTimestampRefineBy(v AbsoluteRangedTimestampRefineBy) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeAbsoluteRangedTimestampRefineBy performs a merge with any union data inside the MultiStringPropertyOperation_PruningRefineBy, using the provided AbsoluteRangedTimestampRefineBy
+func (t *MultiStringPropertyOperation_PruningRefineBy) MergeAbsoluteRangedTimestampRefineBy(v AbsoluteRangedTimestampRefineBy) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsAllHistoryRefineBy returns the union data inside the MultiStringPropertyOperation_PruningRefineBy as a AllHistoryRefineBy
+func (t MultiStringPropertyOperation_PruningRefineBy) AsAllHistoryRefineBy() (AllHistoryRefineBy, error) {
+	var body AllHistoryRefineBy
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromAllHistoryRefineBy overwrites any union data inside the MultiStringPropertyOperation_PruningRefineBy as the provided AllHistoryRefineBy
+func (t *MultiStringPropertyOperation_PruningRefineBy) FromAllHistoryRefineBy(v AllHistoryRefineBy) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeAllHistoryRefineBy performs a merge with any union data inside the MultiStringPropertyOperation_PruningRefineBy, using the provided AllHistoryRefineBy
+func (t *MultiStringPropertyOperation_PruningRefineBy) MergeAllHistoryRefineBy(v AllHistoryRefineBy) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsTimePointOperation returns the union data inside the MultiStringPropertyOperation_PruningRefineBy as a TimePointOperation
+func (t MultiStringPropertyOperation_PruningRefineBy) AsTimePointOperation() (TimePointOperation, error) {
+	var body TimePointOperation
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromTimePointOperation overwrites any union data inside the MultiStringPropertyOperation_PruningRefineBy as the provided TimePointOperation
+func (t *MultiStringPropertyOperation_PruningRefineBy) FromTimePointOperation(v TimePointOperation) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeTimePointOperation performs a merge with any union data inside the MultiStringPropertyOperation_PruningRefineBy, using the provided TimePointOperation
+func (t *MultiStringPropertyOperation_PruningRefineBy) MergeTimePointOperation(v TimePointOperation) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsRangedTimeOperation returns the union data inside the MultiStringPropertyOperation_PruningRefineBy as a RangedTimeOperation
+func (t MultiStringPropertyOperation_PruningRefineBy) AsRangedTimeOperation() (RangedTimeOperation, error) {
+	var body RangedTimeOperation
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromRangedTimeOperation overwrites any union data inside the MultiStringPropertyOperation_PruningRefineBy as the provided RangedTimeOperation
+func (t *MultiStringPropertyOperation_PruningRefineBy) FromRangedTimeOperation(v RangedTimeOperation) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeRangedTimeOperation performs a merge with any union data inside the MultiStringPropertyOperation_PruningRefineBy, using the provided RangedTimeOperation
+func (t *MultiStringPropertyOperation_PruningRefineBy) MergeRangedTimeOperation(v RangedTimeOperation) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t MultiStringPropertyOperation_PruningRefineBy) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *MultiStringPropertyOperation_PruningRefineBy) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsBoolPropertyOperation returns the union data inside the PropertyFilter_Operation as a BoolPropertyOperation
+func (t PropertyFilter_Operation) AsBoolPropertyOperation() (BoolPropertyOperation, error) {
+	var body BoolPropertyOperation
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBoolPropertyOperation overwrites any union data inside the PropertyFilter_Operation as the provided BoolPropertyOperation
+func (t *PropertyFilter_Operation) FromBoolPropertyOperation(v BoolPropertyOperation) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBoolPropertyOperation performs a merge with any union data inside the PropertyFilter_Operation, using the provided BoolPropertyOperation
+func (t *PropertyFilter_Operation) MergeBoolPropertyOperation(v BoolPropertyOperation) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsNumberPropertyOperation returns the union data inside the PropertyFilter_Operation as a NumberPropertyOperation
+func (t PropertyFilter_Operation) AsNumberPropertyOperation() (NumberPropertyOperation, error) {
+	var body NumberPropertyOperation
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromNumberPropertyOperation overwrites any union data inside the PropertyFilter_Operation as the provided NumberPropertyOperation
+func (t *PropertyFilter_Operation) FromNumberPropertyOperation(v NumberPropertyOperation) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeNumberPropertyOperation performs a merge with any union data inside the PropertyFilter_Operation, using the provided NumberPropertyOperation
+func (t *PropertyFilter_Operation) MergeNumberPropertyOperation(v NumberPropertyOperation) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsStringPropertyOperation returns the union data inside the PropertyFilter_Operation as a StringPropertyOperation
+func (t PropertyFilter_Operation) AsStringPropertyOperation() (StringPropertyOperation, error) {
+	var body StringPropertyOperation
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromStringPropertyOperation overwrites any union data inside the PropertyFilter_Operation as the provided StringPropertyOperation
+func (t *PropertyFilter_Operation) FromStringPropertyOperation(v StringPropertyOperation) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeStringPropertyOperation performs a merge with any union data inside the PropertyFilter_Operation, using the provided StringPropertyOperation
+func (t *PropertyFilter_Operation) MergeStringPropertyOperation(v StringPropertyOperation) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsDateTimePropertyOperation returns the union data inside the PropertyFilter_Operation as a DateTimePropertyOperation
+func (t PropertyFilter_Operation) AsDateTimePropertyOperation() (DateTimePropertyOperation, error) {
+	var body DateTimePropertyOperation
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromDateTimePropertyOperation overwrites any union data inside the PropertyFilter_Operation as the provided DateTimePropertyOperation
+func (t *PropertyFilter_Operation) FromDateTimePropertyOperation(v DateTimePropertyOperation) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeDateTimePropertyOperation performs a merge with any union data inside the PropertyFilter_Operation, using the provided DateTimePropertyOperation
+func (t *PropertyFilter_Operation) MergeDateTimePropertyOperation(v DateTimePropertyOperation) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsRangedDatePropertyOperation returns the union data inside the PropertyFilter_Operation as a RangedDatePropertyOperation
+func (t PropertyFilter_Operation) AsRangedDatePropertyOperation() (RangedDatePropertyOperation, error) {
+	var body RangedDatePropertyOperation
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromRangedDatePropertyOperation overwrites any union data inside the PropertyFilter_Operation as the provided RangedDatePropertyOperation
+func (t *PropertyFilter_Operation) FromRangedDatePropertyOperation(v RangedDatePropertyOperation) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeRangedDatePropertyOperation performs a merge with any union data inside the PropertyFilter_Operation, using the provided RangedDatePropertyOperation
+func (t *PropertyFilter_Operation) MergeRangedDatePropertyOperation(v RangedDatePropertyOperation) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsComparativeDatePropertyOperation returns the union data inside the PropertyFilter_Operation as a ComparativeDatePropertyOperation
+func (t PropertyFilter_Operation) AsComparativeDatePropertyOperation() (ComparativeDatePropertyOperation, error) {
+	var body ComparativeDatePropertyOperation
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromComparativeDatePropertyOperation overwrites any union data inside the PropertyFilter_Operation as the provided ComparativeDatePropertyOperation
+func (t *PropertyFilter_Operation) FromComparativeDatePropertyOperation(v ComparativeDatePropertyOperation) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeComparativeDatePropertyOperation performs a merge with any union data inside the PropertyFilter_Operation, using the provided ComparativeDatePropertyOperation
+func (t *PropertyFilter_Operation) MergeComparativeDatePropertyOperation(v ComparativeDatePropertyOperation) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsComparativeBoolPropertyOperation returns the union data inside the PropertyFilter_Operation as a ComparativeBoolPropertyOperation
+func (t PropertyFilter_Operation) AsComparativeBoolPropertyOperation() (ComparativeBoolPropertyOperation, error) {
+	var body ComparativeBoolPropertyOperation
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromComparativeBoolPropertyOperation overwrites any union data inside the PropertyFilter_Operation as the provided ComparativeBoolPropertyOperation
+func (t *PropertyFilter_Operation) FromComparativeBoolPropertyOperation(v ComparativeBoolPropertyOperation) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeComparativeBoolPropertyOperation performs a merge with any union data inside the PropertyFilter_Operation, using the provided ComparativeBoolPropertyOperation
+func (t *PropertyFilter_Operation) MergeComparativeBoolPropertyOperation(v ComparativeBoolPropertyOperation) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsComparativeNumberPropertyOperation returns the union data inside the PropertyFilter_Operation as a ComparativeNumberPropertyOperation
+func (t PropertyFilter_Operation) AsComparativeNumberPropertyOperation() (ComparativeNumberPropertyOperation, error) {
+	var body ComparativeNumberPropertyOperation
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromComparativeNumberPropertyOperation overwrites any union data inside the PropertyFilter_Operation as the provided ComparativeNumberPropertyOperation
+func (t *PropertyFilter_Operation) FromComparativeNumberPropertyOperation(v ComparativeNumberPropertyOperation) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeComparativeNumberPropertyOperation performs a merge with any union data inside the PropertyFilter_Operation, using the provided ComparativeNumberPropertyOperation
+func (t *PropertyFilter_Operation) MergeComparativeNumberPropertyOperation(v ComparativeNumberPropertyOperation) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsComparativeStringPropertyOperation returns the union data inside the PropertyFilter_Operation as a ComparativeStringPropertyOperation
+func (t PropertyFilter_Operation) AsComparativeStringPropertyOperation() (ComparativeStringPropertyOperation, error) {
+	var body ComparativeStringPropertyOperation
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromComparativeStringPropertyOperation overwrites any union data inside the PropertyFilter_Operation as the provided ComparativeStringPropertyOperation
+func (t *PropertyFilter_Operation) FromComparativeStringPropertyOperation(v ComparativeStringPropertyOperation) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeComparativeStringPropertyOperation performs a merge with any union data inside the PropertyFilter_Operation, using the provided ComparativeStringPropertyOperation
+func (t *PropertyFilter_Operation) MergeComparativeStringPropertyOperation(v ComparativeStringPropertyOperation) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsComparativePropertyUpdatedOperation returns the union data inside the PropertyFilter_Operation as a ComparativePropertyUpdatedOperation
+func (t PropertyFilter_Operation) AsComparativePropertyUpdatedOperation() (ComparativePropertyUpdatedOperation, error) {
+	var body ComparativePropertyUpdatedOperation
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromComparativePropertyUpdatedOperation overwrites any union data inside the PropertyFilter_Operation as the provided ComparativePropertyUpdatedOperation
+func (t *PropertyFilter_Operation) FromComparativePropertyUpdatedOperation(v ComparativePropertyUpdatedOperation) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeComparativePropertyUpdatedOperation performs a merge with any union data inside the PropertyFilter_Operation, using the provided ComparativePropertyUpdatedOperation
+func (t *PropertyFilter_Operation) MergeComparativePropertyUpdatedOperation(v ComparativePropertyUpdatedOperation) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsRollingDateRangePropertyOperation returns the union data inside the PropertyFilter_Operation as a RollingDateRangePropertyOperation
+func (t PropertyFilter_Operation) AsRollingDateRangePropertyOperation() (RollingDateRangePropertyOperation, error) {
+	var body RollingDateRangePropertyOperation
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromRollingDateRangePropertyOperation overwrites any union data inside the PropertyFilter_Operation as the provided RollingDateRangePropertyOperation
+func (t *PropertyFilter_Operation) FromRollingDateRangePropertyOperation(v RollingDateRangePropertyOperation) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeRollingDateRangePropertyOperation performs a merge with any union data inside the PropertyFilter_Operation, using the provided RollingDateRangePropertyOperation
+func (t *PropertyFilter_Operation) MergeRollingDateRangePropertyOperation(v RollingDateRangePropertyOperation) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsRollingPropertyUpdatedOperation returns the union data inside the PropertyFilter_Operation as a RollingPropertyUpdatedOperation
+func (t PropertyFilter_Operation) AsRollingPropertyUpdatedOperation() (RollingPropertyUpdatedOperation, error) {
+	var body RollingPropertyUpdatedOperation
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromRollingPropertyUpdatedOperation overwrites any union data inside the PropertyFilter_Operation as the provided RollingPropertyUpdatedOperation
+func (t *PropertyFilter_Operation) FromRollingPropertyUpdatedOperation(v RollingPropertyUpdatedOperation) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeRollingPropertyUpdatedOperation performs a merge with any union data inside the PropertyFilter_Operation, using the provided RollingPropertyUpdatedOperation
+func (t *PropertyFilter_Operation) MergeRollingPropertyUpdatedOperation(v RollingPropertyUpdatedOperation) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsEnumerationPropertyOperation returns the union data inside the PropertyFilter_Operation as a EnumerationPropertyOperation
+func (t PropertyFilter_Operation) AsEnumerationPropertyOperation() (EnumerationPropertyOperation, error) {
+	var body EnumerationPropertyOperation
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromEnumerationPropertyOperation overwrites any union data inside the PropertyFilter_Operation as the provided EnumerationPropertyOperation
+func (t *PropertyFilter_Operation) FromEnumerationPropertyOperation(v EnumerationPropertyOperation) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeEnumerationPropertyOperation performs a merge with any union data inside the PropertyFilter_Operation, using the provided EnumerationPropertyOperation
+func (t *PropertyFilter_Operation) MergeEnumerationPropertyOperation(v EnumerationPropertyOperation) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsAllPropertyTypesOperation returns the union data inside the PropertyFilter_Operation as a AllPropertyTypesOperation
+func (t PropertyFilter_Operation) AsAllPropertyTypesOperation() (AllPropertyTypesOperation, error) {
+	var body AllPropertyTypesOperation
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromAllPropertyTypesOperation overwrites any union data inside the PropertyFilter_Operation as the provided AllPropertyTypesOperation
+func (t *PropertyFilter_Operation) FromAllPropertyTypesOperation(v AllPropertyTypesOperation) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeAllPropertyTypesOperation performs a merge with any union data inside the PropertyFilter_Operation, using the provided AllPropertyTypesOperation
+func (t *PropertyFilter_Operation) MergeAllPropertyTypesOperation(v AllPropertyTypesOperation) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsRangedNumberPropertyOperation returns the union data inside the PropertyFilter_Operation as a RangedNumberPropertyOperation
+func (t PropertyFilter_Operation) AsRangedNumberPropertyOperation() (RangedNumberPropertyOperation, error) {
+	var body RangedNumberPropertyOperation
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromRangedNumberPropertyOperation overwrites any union data inside the PropertyFilter_Operation as the provided RangedNumberPropertyOperation
+func (t *PropertyFilter_Operation) FromRangedNumberPropertyOperation(v RangedNumberPropertyOperation) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeRangedNumberPropertyOperation performs a merge with any union data inside the PropertyFilter_Operation, using the provided RangedNumberPropertyOperation
+func (t *PropertyFilter_Operation) MergeRangedNumberPropertyOperation(v RangedNumberPropertyOperation) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsMultiStringPropertyOperation returns the union data inside the PropertyFilter_Operation as a MultiStringPropertyOperation
+func (t PropertyFilter_Operation) AsMultiStringPropertyOperation() (MultiStringPropertyOperation, error) {
+	var body MultiStringPropertyOperation
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromMultiStringPropertyOperation overwrites any union data inside the PropertyFilter_Operation as the provided MultiStringPropertyOperation
+func (t *PropertyFilter_Operation) FromMultiStringPropertyOperation(v MultiStringPropertyOperation) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeMultiStringPropertyOperation performs a merge with any union data inside the PropertyFilter_Operation, using the provided MultiStringPropertyOperation
+func (t *PropertyFilter_Operation) MergeMultiStringPropertyOperation(v MultiStringPropertyOperation) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsDatePropertyOperation returns the union data inside the PropertyFilter_Operation as a DatePropertyOperation
+func (t PropertyFilter_Operation) AsDatePropertyOperation() (DatePropertyOperation, error) {
+	var body DatePropertyOperation
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromDatePropertyOperation overwrites any union data inside the PropertyFilter_Operation as the provided DatePropertyOperation
+func (t *PropertyFilter_Operation) FromDatePropertyOperation(v DatePropertyOperation) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeDatePropertyOperation performs a merge with any union data inside the PropertyFilter_Operation, using the provided DatePropertyOperation
+func (t *PropertyFilter_Operation) MergeDatePropertyOperation(v DatePropertyOperation) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsCalendarDatePropertyOperation returns the union data inside the PropertyFilter_Operation as a CalendarDatePropertyOperation
+func (t PropertyFilter_Operation) AsCalendarDatePropertyOperation() (CalendarDatePropertyOperation, error) {
+	var body CalendarDatePropertyOperation
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromCalendarDatePropertyOperation overwrites any union data inside the PropertyFilter_Operation as the provided CalendarDatePropertyOperation
+func (t *PropertyFilter_Operation) FromCalendarDatePropertyOperation(v CalendarDatePropertyOperation) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeCalendarDatePropertyOperation performs a merge with any union data inside the PropertyFilter_Operation, using the provided CalendarDatePropertyOperation
+func (t *PropertyFilter_Operation) MergeCalendarDatePropertyOperation(v CalendarDatePropertyOperation) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsTimePointOperation returns the union data inside the PropertyFilter_Operation as a TimePointOperation
+func (t PropertyFilter_Operation) AsTimePointOperation() (TimePointOperation, error) {
+	var body TimePointOperation
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromTimePointOperation overwrites any union data inside the PropertyFilter_Operation as the provided TimePointOperation
+func (t *PropertyFilter_Operation) FromTimePointOperation(v TimePointOperation) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeTimePointOperation performs a merge with any union data inside the PropertyFilter_Operation, using the provided TimePointOperation
+func (t *PropertyFilter_Operation) MergeTimePointOperation(v TimePointOperation) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsRangedTimeOperation returns the union data inside the PropertyFilter_Operation as a RangedTimeOperation
+func (t PropertyFilter_Operation) AsRangedTimeOperation() (RangedTimeOperation, error) {
+	var body RangedTimeOperation
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromRangedTimeOperation overwrites any union data inside the PropertyFilter_Operation as the provided RangedTimeOperation
+func (t *PropertyFilter_Operation) FromRangedTimeOperation(v RangedTimeOperation) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeRangedTimeOperation performs a merge with any union data inside the PropertyFilter_Operation, using the provided RangedTimeOperation
+func (t *PropertyFilter_Operation) MergeRangedTimeOperation(v RangedTimeOperation) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsRegexPropertyOperation returns the union data inside the PropertyFilter_Operation as a RegexPropertyOperation
+func (t PropertyFilter_Operation) AsRegexPropertyOperation() (RegexPropertyOperation, error) {
+	var body RegexPropertyOperation
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromRegexPropertyOperation overwrites any union data inside the PropertyFilter_Operation as the provided RegexPropertyOperation
+func (t *PropertyFilter_Operation) FromRegexPropertyOperation(v RegexPropertyOperation) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeRegexPropertyOperation performs a merge with any union data inside the PropertyFilter_Operation, using the provided RegexPropertyOperation
+func (t *PropertyFilter_Operation) MergeRegexPropertyOperation(v RegexPropertyOperation) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PropertyFilter_Operation) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PropertyFilter_Operation) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsPublicSingleFieldDependency returns the union data inside the PublicActionDefinition_InputFieldDependencies_Item as a PublicSingleFieldDependency
+func (t PublicActionDefinition_InputFieldDependencies_Item) AsPublicSingleFieldDependency() (PublicSingleFieldDependency, error) {
+	var body PublicSingleFieldDependency
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPublicSingleFieldDependency overwrites any union data inside the PublicActionDefinition_InputFieldDependencies_Item as the provided PublicSingleFieldDependency
+func (t *PublicActionDefinition_InputFieldDependencies_Item) FromPublicSingleFieldDependency(v PublicSingleFieldDependency) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePublicSingleFieldDependency performs a merge with any union data inside the PublicActionDefinition_InputFieldDependencies_Item, using the provided PublicSingleFieldDependency
+func (t *PublicActionDefinition_InputFieldDependencies_Item) MergePublicSingleFieldDependency(v PublicSingleFieldDependency) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPublicConditionalSingleFieldDependency returns the union data inside the PublicActionDefinition_InputFieldDependencies_Item as a PublicConditionalSingleFieldDependency
+func (t PublicActionDefinition_InputFieldDependencies_Item) AsPublicConditionalSingleFieldDependency() (PublicConditionalSingleFieldDependency, error) {
+	var body PublicConditionalSingleFieldDependency
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPublicConditionalSingleFieldDependency overwrites any union data inside the PublicActionDefinition_InputFieldDependencies_Item as the provided PublicConditionalSingleFieldDependency
+func (t *PublicActionDefinition_InputFieldDependencies_Item) FromPublicConditionalSingleFieldDependency(v PublicConditionalSingleFieldDependency) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePublicConditionalSingleFieldDependency performs a merge with any union data inside the PublicActionDefinition_InputFieldDependencies_Item, using the provided PublicConditionalSingleFieldDependency
+func (t *PublicActionDefinition_InputFieldDependencies_Item) MergePublicConditionalSingleFieldDependency(v PublicConditionalSingleFieldDependency) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PublicActionDefinition_InputFieldDependencies_Item) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PublicActionDefinition_InputFieldDependencies_Item) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsPublicSingleFieldDependency returns the union data inside the PublicActionDefinitionEgg_InputFieldDependencies_Item as a PublicSingleFieldDependency
+func (t PublicActionDefinitionEgg_InputFieldDependencies_Item) AsPublicSingleFieldDependency() (PublicSingleFieldDependency, error) {
+	var body PublicSingleFieldDependency
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPublicSingleFieldDependency overwrites any union data inside the PublicActionDefinitionEgg_InputFieldDependencies_Item as the provided PublicSingleFieldDependency
+func (t *PublicActionDefinitionEgg_InputFieldDependencies_Item) FromPublicSingleFieldDependency(v PublicSingleFieldDependency) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePublicSingleFieldDependency performs a merge with any union data inside the PublicActionDefinitionEgg_InputFieldDependencies_Item, using the provided PublicSingleFieldDependency
+func (t *PublicActionDefinitionEgg_InputFieldDependencies_Item) MergePublicSingleFieldDependency(v PublicSingleFieldDependency) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPublicConditionalSingleFieldDependency returns the union data inside the PublicActionDefinitionEgg_InputFieldDependencies_Item as a PublicConditionalSingleFieldDependency
+func (t PublicActionDefinitionEgg_InputFieldDependencies_Item) AsPublicConditionalSingleFieldDependency() (PublicConditionalSingleFieldDependency, error) {
+	var body PublicConditionalSingleFieldDependency
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPublicConditionalSingleFieldDependency overwrites any union data inside the PublicActionDefinitionEgg_InputFieldDependencies_Item as the provided PublicConditionalSingleFieldDependency
+func (t *PublicActionDefinitionEgg_InputFieldDependencies_Item) FromPublicConditionalSingleFieldDependency(v PublicConditionalSingleFieldDependency) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePublicConditionalSingleFieldDependency performs a merge with any union data inside the PublicActionDefinitionEgg_InputFieldDependencies_Item, using the provided PublicConditionalSingleFieldDependency
+func (t *PublicActionDefinitionEgg_InputFieldDependencies_Item) MergePublicConditionalSingleFieldDependency(v PublicConditionalSingleFieldDependency) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PublicActionDefinitionEgg_InputFieldDependencies_Item) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PublicActionDefinitionEgg_InputFieldDependencies_Item) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsPublicSingleFieldDependency returns the union data inside the PublicActionDefinitionPatch_InputFieldDependencies_Item as a PublicSingleFieldDependency
+func (t PublicActionDefinitionPatch_InputFieldDependencies_Item) AsPublicSingleFieldDependency() (PublicSingleFieldDependency, error) {
+	var body PublicSingleFieldDependency
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPublicSingleFieldDependency overwrites any union data inside the PublicActionDefinitionPatch_InputFieldDependencies_Item as the provided PublicSingleFieldDependency
+func (t *PublicActionDefinitionPatch_InputFieldDependencies_Item) FromPublicSingleFieldDependency(v PublicSingleFieldDependency) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePublicSingleFieldDependency performs a merge with any union data inside the PublicActionDefinitionPatch_InputFieldDependencies_Item, using the provided PublicSingleFieldDependency
+func (t *PublicActionDefinitionPatch_InputFieldDependencies_Item) MergePublicSingleFieldDependency(v PublicSingleFieldDependency) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPublicConditionalSingleFieldDependency returns the union data inside the PublicActionDefinitionPatch_InputFieldDependencies_Item as a PublicConditionalSingleFieldDependency
+func (t PublicActionDefinitionPatch_InputFieldDependencies_Item) AsPublicConditionalSingleFieldDependency() (PublicConditionalSingleFieldDependency, error) {
+	var body PublicConditionalSingleFieldDependency
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPublicConditionalSingleFieldDependency overwrites any union data inside the PublicActionDefinitionPatch_InputFieldDependencies_Item as the provided PublicConditionalSingleFieldDependency
+func (t *PublicActionDefinitionPatch_InputFieldDependencies_Item) FromPublicConditionalSingleFieldDependency(v PublicConditionalSingleFieldDependency) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePublicConditionalSingleFieldDependency performs a merge with any union data inside the PublicActionDefinitionPatch_InputFieldDependencies_Item, using the provided PublicConditionalSingleFieldDependency
+func (t *PublicActionDefinitionPatch_InputFieldDependencies_Item) MergePublicConditionalSingleFieldDependency(v PublicConditionalSingleFieldDependency) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PublicActionDefinitionPatch_InputFieldDependencies_Item) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PublicActionDefinitionPatch_InputFieldDependencies_Item) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsPublicNumOccurrencesRefineBy returns the union data inside the PublicAdsTimeFilter_PruningRefineBy as a PublicNumOccurrencesRefineBy
+func (t PublicAdsTimeFilter_PruningRefineBy) AsPublicNumOccurrencesRefineBy() (PublicNumOccurrencesRefineBy, error) {
+	var body PublicNumOccurrencesRefineBy
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPublicNumOccurrencesRefineBy overwrites any union data inside the PublicAdsTimeFilter_PruningRefineBy as the provided PublicNumOccurrencesRefineBy
+func (t *PublicAdsTimeFilter_PruningRefineBy) FromPublicNumOccurrencesRefineBy(v PublicNumOccurrencesRefineBy) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePublicNumOccurrencesRefineBy performs a merge with any union data inside the PublicAdsTimeFilter_PruningRefineBy, using the provided PublicNumOccurrencesRefineBy
+func (t *PublicAdsTimeFilter_PruningRefineBy) MergePublicNumOccurrencesRefineBy(v PublicNumOccurrencesRefineBy) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPublicSetOccurrencesRefineBy returns the union data inside the PublicAdsTimeFilter_PruningRefineBy as a PublicSetOccurrencesRefineBy
+func (t PublicAdsTimeFilter_PruningRefineBy) AsPublicSetOccurrencesRefineBy() (PublicSetOccurrencesRefineBy, error) {
+	var body PublicSetOccurrencesRefineBy
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPublicSetOccurrencesRefineBy overwrites any union data inside the PublicAdsTimeFilter_PruningRefineBy as the provided PublicSetOccurrencesRefineBy
+func (t *PublicAdsTimeFilter_PruningRefineBy) FromPublicSetOccurrencesRefineBy(v PublicSetOccurrencesRefineBy) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePublicSetOccurrencesRefineBy performs a merge with any union data inside the PublicAdsTimeFilter_PruningRefineBy, using the provided PublicSetOccurrencesRefineBy
+func (t *PublicAdsTimeFilter_PruningRefineBy) MergePublicSetOccurrencesRefineBy(v PublicSetOccurrencesRefineBy) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPublicRelativeComparativeTimestampRefineBy returns the union data inside the PublicAdsTimeFilter_PruningRefineBy as a PublicRelativeComparativeTimestampRefineBy
+func (t PublicAdsTimeFilter_PruningRefineBy) AsPublicRelativeComparativeTimestampRefineBy() (PublicRelativeComparativeTimestampRefineBy, error) {
+	var body PublicRelativeComparativeTimestampRefineBy
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPublicRelativeComparativeTimestampRefineBy overwrites any union data inside the PublicAdsTimeFilter_PruningRefineBy as the provided PublicRelativeComparativeTimestampRefineBy
+func (t *PublicAdsTimeFilter_PruningRefineBy) FromPublicRelativeComparativeTimestampRefineBy(v PublicRelativeComparativeTimestampRefineBy) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePublicRelativeComparativeTimestampRefineBy performs a merge with any union data inside the PublicAdsTimeFilter_PruningRefineBy, using the provided PublicRelativeComparativeTimestampRefineBy
+func (t *PublicAdsTimeFilter_PruningRefineBy) MergePublicRelativeComparativeTimestampRefineBy(v PublicRelativeComparativeTimestampRefineBy) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPublicRelativeRangedTimestampRefineBy returns the union data inside the PublicAdsTimeFilter_PruningRefineBy as a PublicRelativeRangedTimestampRefineBy
+func (t PublicAdsTimeFilter_PruningRefineBy) AsPublicRelativeRangedTimestampRefineBy() (PublicRelativeRangedTimestampRefineBy, error) {
+	var body PublicRelativeRangedTimestampRefineBy
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPublicRelativeRangedTimestampRefineBy overwrites any union data inside the PublicAdsTimeFilter_PruningRefineBy as the provided PublicRelativeRangedTimestampRefineBy
+func (t *PublicAdsTimeFilter_PruningRefineBy) FromPublicRelativeRangedTimestampRefineBy(v PublicRelativeRangedTimestampRefineBy) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePublicRelativeRangedTimestampRefineBy performs a merge with any union data inside the PublicAdsTimeFilter_PruningRefineBy, using the provided PublicRelativeRangedTimestampRefineBy
+func (t *PublicAdsTimeFilter_PruningRefineBy) MergePublicRelativeRangedTimestampRefineBy(v PublicRelativeRangedTimestampRefineBy) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPublicAbsoluteComparativeTimestampRefineBy returns the union data inside the PublicAdsTimeFilter_PruningRefineBy as a PublicAbsoluteComparativeTimestampRefineBy
+func (t PublicAdsTimeFilter_PruningRefineBy) AsPublicAbsoluteComparativeTimestampRefineBy() (PublicAbsoluteComparativeTimestampRefineBy, error) {
+	var body PublicAbsoluteComparativeTimestampRefineBy
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPublicAbsoluteComparativeTimestampRefineBy overwrites any union data inside the PublicAdsTimeFilter_PruningRefineBy as the provided PublicAbsoluteComparativeTimestampRefineBy
+func (t *PublicAdsTimeFilter_PruningRefineBy) FromPublicAbsoluteComparativeTimestampRefineBy(v PublicAbsoluteComparativeTimestampRefineBy) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePublicAbsoluteComparativeTimestampRefineBy performs a merge with any union data inside the PublicAdsTimeFilter_PruningRefineBy, using the provided PublicAbsoluteComparativeTimestampRefineBy
+func (t *PublicAdsTimeFilter_PruningRefineBy) MergePublicAbsoluteComparativeTimestampRefineBy(v PublicAbsoluteComparativeTimestampRefineBy) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPublicAbsoluteRangedTimestampRefineBy returns the union data inside the PublicAdsTimeFilter_PruningRefineBy as a PublicAbsoluteRangedTimestampRefineBy
+func (t PublicAdsTimeFilter_PruningRefineBy) AsPublicAbsoluteRangedTimestampRefineBy() (PublicAbsoluteRangedTimestampRefineBy, error) {
+	var body PublicAbsoluteRangedTimestampRefineBy
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPublicAbsoluteRangedTimestampRefineBy overwrites any union data inside the PublicAdsTimeFilter_PruningRefineBy as the provided PublicAbsoluteRangedTimestampRefineBy
+func (t *PublicAdsTimeFilter_PruningRefineBy) FromPublicAbsoluteRangedTimestampRefineBy(v PublicAbsoluteRangedTimestampRefineBy) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePublicAbsoluteRangedTimestampRefineBy performs a merge with any union data inside the PublicAdsTimeFilter_PruningRefineBy, using the provided PublicAbsoluteRangedTimestampRefineBy
+func (t *PublicAdsTimeFilter_PruningRefineBy) MergePublicAbsoluteRangedTimestampRefineBy(v PublicAbsoluteRangedTimestampRefineBy) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPublicAllHistoryRefineBy returns the union data inside the PublicAdsTimeFilter_PruningRefineBy as a PublicAllHistoryRefineBy
+func (t PublicAdsTimeFilter_PruningRefineBy) AsPublicAllHistoryRefineBy() (PublicAllHistoryRefineBy, error) {
+	var body PublicAllHistoryRefineBy
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPublicAllHistoryRefineBy overwrites any union data inside the PublicAdsTimeFilter_PruningRefineBy as the provided PublicAllHistoryRefineBy
+func (t *PublicAdsTimeFilter_PruningRefineBy) FromPublicAllHistoryRefineBy(v PublicAllHistoryRefineBy) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePublicAllHistoryRefineBy performs a merge with any union data inside the PublicAdsTimeFilter_PruningRefineBy, using the provided PublicAllHistoryRefineBy
+func (t *PublicAdsTimeFilter_PruningRefineBy) MergePublicAllHistoryRefineBy(v PublicAllHistoryRefineBy) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPublicTimePointOperation returns the union data inside the PublicAdsTimeFilter_PruningRefineBy as a PublicTimePointOperation
+func (t PublicAdsTimeFilter_PruningRefineBy) AsPublicTimePointOperation() (PublicTimePointOperation, error) {
+	var body PublicTimePointOperation
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPublicTimePointOperation overwrites any union data inside the PublicAdsTimeFilter_PruningRefineBy as the provided PublicTimePointOperation
+func (t *PublicAdsTimeFilter_PruningRefineBy) FromPublicTimePointOperation(v PublicTimePointOperation) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePublicTimePointOperation performs a merge with any union data inside the PublicAdsTimeFilter_PruningRefineBy, using the provided PublicTimePointOperation
+func (t *PublicAdsTimeFilter_PruningRefineBy) MergePublicTimePointOperation(v PublicTimePointOperation) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPublicRangedTimeOperation returns the union data inside the PublicAdsTimeFilter_PruningRefineBy as a PublicRangedTimeOperation
+func (t PublicAdsTimeFilter_PruningRefineBy) AsPublicRangedTimeOperation() (PublicRangedTimeOperation, error) {
+	var body PublicRangedTimeOperation
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPublicRangedTimeOperation overwrites any union data inside the PublicAdsTimeFilter_PruningRefineBy as the provided PublicRangedTimeOperation
+func (t *PublicAdsTimeFilter_PruningRefineBy) FromPublicRangedTimeOperation(v PublicRangedTimeOperation) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePublicRangedTimeOperation performs a merge with any union data inside the PublicAdsTimeFilter_PruningRefineBy, using the provided PublicRangedTimeOperation
+func (t *PublicAdsTimeFilter_PruningRefineBy) MergePublicRangedTimeOperation(v PublicRangedTimeOperation) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PublicAdsTimeFilter_PruningRefineBy) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PublicAdsTimeFilter_PruningRefineBy) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsPublicOrFilterBranch returns the union data inside the PublicAndFilterBranch_FilterBranches_Item as a PublicOrFilterBranch
+func (t PublicAndFilterBranch_FilterBranches_Item) AsPublicOrFilterBranch() (PublicOrFilterBranch, error) {
+	var body PublicOrFilterBranch
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPublicOrFilterBranch overwrites any union data inside the PublicAndFilterBranch_FilterBranches_Item as the provided PublicOrFilterBranch
+func (t *PublicAndFilterBranch_FilterBranches_Item) FromPublicOrFilterBranch(v PublicOrFilterBranch) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePublicOrFilterBranch performs a merge with any union data inside the PublicAndFilterBranch_FilterBranches_Item, using the provided PublicOrFilterBranch
+func (t *PublicAndFilterBranch_FilterBranches_Item) MergePublicOrFilterBranch(v PublicOrFilterBranch) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPublicAndFilterBranch returns the union data inside the PublicAndFilterBranch_FilterBranches_Item as a PublicAndFilterBranch
+func (t PublicAndFilterBranch_FilterBranches_Item) AsPublicAndFilterBranch() (PublicAndFilterBranch, error) {
+	var body PublicAndFilterBranch
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPublicAndFilterBranch overwrites any union data inside the PublicAndFilterBranch_FilterBranches_Item as the provided PublicAndFilterBranch
+func (t *PublicAndFilterBranch_FilterBranches_Item) FromPublicAndFilterBranch(v PublicAndFilterBranch) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePublicAndFilterBranch performs a merge with any union data inside the PublicAndFilterBranch_FilterBranches_Item, using the provided PublicAndFilterBranch
+func (t *PublicAndFilterBranch_FilterBranches_Item) MergePublicAndFilterBranch(v PublicAndFilterBranch) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPublicNotAllFilterBranch returns the union data inside the PublicAndFilterBranch_FilterBranches_Item as a PublicNotAllFilterBranch
+func (t PublicAndFilterBranch_FilterBranches_Item) AsPublicNotAllFilterBranch() (PublicNotAllFilterBranch, error) {
+	var body PublicNotAllFilterBranch
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPublicNotAllFilterBranch overwrites any union data inside the PublicAndFilterBranch_FilterBranches_Item as the provided PublicNotAllFilterBranch
+func (t *PublicAndFilterBranch_FilterBranches_Item) FromPublicNotAllFilterBranch(v PublicNotAllFilterBranch) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePublicNotAllFilterBranch performs a merge with any union data inside the PublicAndFilterBranch_FilterBranches_Item, using the provided PublicNotAllFilterBranch
+func (t *PublicAndFilterBranch_FilterBranches_Item) MergePublicNotAllFilterBranch(v PublicNotAllFilterBranch) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPublicNotAnyFilterBranch returns the union data inside the PublicAndFilterBranch_FilterBranches_Item as a PublicNotAnyFilterBranch
+func (t PublicAndFilterBranch_FilterBranches_Item) AsPublicNotAnyFilterBranch() (PublicNotAnyFilterBranch, error) {
+	var body PublicNotAnyFilterBranch
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPublicNotAnyFilterBranch overwrites any union data inside the PublicAndFilterBranch_FilterBranches_Item as the provided PublicNotAnyFilterBranch
+func (t *PublicAndFilterBranch_FilterBranches_Item) FromPublicNotAnyFilterBranch(v PublicNotAnyFilterBranch) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePublicNotAnyFilterBranch performs a merge with any union data inside the PublicAndFilterBranch_FilterBranches_Item, using the provided PublicNotAnyFilterBranch
+func (t *PublicAndFilterBranch_FilterBranches_Item) MergePublicNotAnyFilterBranch(v PublicNotAnyFilterBranch) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPublicRestrictedFilterBranch returns the union data inside the PublicAndFilterBranch_FilterBranches_Item as a PublicRestrictedFilterBranch
+func (t PublicAndFilterBranch_FilterBranches_Item) AsPublicRestrictedFilterBranch() (PublicRestrictedFilterBranch, error) {
+	var body PublicRestrictedFilterBranch
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPublicRestrictedFilterBranch overwrites any union data inside the PublicAndFilterBranch_FilterBranches_Item as the provided PublicRestrictedFilterBranch
+func (t *PublicAndFilterBranch_FilterBranches_Item) FromPublicRestrictedFilterBranch(v PublicRestrictedFilterBranch) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePublicRestrictedFilterBranch performs a merge with any union data inside the PublicAndFilterBranch_FilterBranches_Item, using the provided PublicRestrictedFilterBranch
+func (t *PublicAndFilterBranch_FilterBranches_Item) MergePublicRestrictedFilterBranch(v PublicRestrictedFilterBranch) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPublicUnifiedEventsFilterBranch returns the union data inside the PublicAndFilterBranch_FilterBranches_Item as a PublicUnifiedEventsFilterBranch
+func (t PublicAndFilterBranch_FilterBranches_Item) AsPublicUnifiedEventsFilterBranch() (PublicUnifiedEventsFilterBranch, error) {
+	var body PublicUnifiedEventsFilterBranch
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPublicUnifiedEventsFilterBranch overwrites any union data inside the PublicAndFilterBranch_FilterBranches_Item as the provided PublicUnifiedEventsFilterBranch
+func (t *PublicAndFilterBranch_FilterBranches_Item) FromPublicUnifiedEventsFilterBranch(v PublicUnifiedEventsFilterBranch) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePublicUnifiedEventsFilterBranch performs a merge with any union data inside the PublicAndFilterBranch_FilterBranches_Item, using the provided PublicUnifiedEventsFilterBranch
+func (t *PublicAndFilterBranch_FilterBranches_Item) MergePublicUnifiedEventsFilterBranch(v PublicUnifiedEventsFilterBranch) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPublicAssociationFilterBranch returns the union data inside the PublicAndFilterBranch_FilterBranches_Item as a PublicAssociationFilterBranch
+func (t PublicAndFilterBranch_FilterBranches_Item) AsPublicAssociationFilterBranch() (PublicAssociationFilterBranch, error) {
+	var body PublicAssociationFilterBranch
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPublicAssociationFilterBranch overwrites any union data inside the PublicAndFilterBranch_FilterBranches_Item as the provided PublicAssociationFilterBranch
+func (t *PublicAndFilterBranch_FilterBranches_Item) FromPublicAssociationFilterBranch(v PublicAssociationFilterBranch) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePublicAssociationFilterBranch performs a merge with any union data inside the PublicAndFilterBranch_FilterBranches_Item, using the provided PublicAssociationFilterBranch
+func (t *PublicAndFilterBranch_FilterBranches_Item) MergePublicAssociationFilterBranch(v PublicAssociationFilterBranch) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PublicAndFilterBranch_FilterBranches_Item) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PublicAndFilterBranch_FilterBranches_Item) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsPublicPropertyFilter returns the union data inside the PublicAndFilterBranch_Filters_Item as a PublicPropertyFilter
+func (t PublicAndFilterBranch_Filters_Item) AsPublicPropertyFilter() (PublicPropertyFilter, error) {
+	var body PublicPropertyFilter
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPublicPropertyFilter overwrites any union data inside the PublicAndFilterBranch_Filters_Item as the provided PublicPropertyFilter
+func (t *PublicAndFilterBranch_Filters_Item) FromPublicPropertyFilter(v PublicPropertyFilter) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePublicPropertyFilter performs a merge with any union data inside the PublicAndFilterBranch_Filters_Item, using the provided PublicPropertyFilter
+func (t *PublicAndFilterBranch_Filters_Item) MergePublicPropertyFilter(v PublicPropertyFilter) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPublicAssociationInListFilter returns the union data inside the PublicAndFilterBranch_Filters_Item as a PublicAssociationInListFilter
+func (t PublicAndFilterBranch_Filters_Item) AsPublicAssociationInListFilter() (PublicAssociationInListFilter, error) {
+	var body PublicAssociationInListFilter
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPublicAssociationInListFilter overwrites any union data inside the PublicAndFilterBranch_Filters_Item as the provided PublicAssociationInListFilter
+func (t *PublicAndFilterBranch_Filters_Item) FromPublicAssociationInListFilter(v PublicAssociationInListFilter) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePublicAssociationInListFilter performs a merge with any union data inside the PublicAndFilterBranch_Filters_Item, using the provided PublicAssociationInListFilter
+func (t *PublicAndFilterBranch_Filters_Item) MergePublicAssociationInListFilter(v PublicAssociationInListFilter) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPublicPageViewAnalyticsFilter returns the union data inside the PublicAndFilterBranch_Filters_Item as a PublicPageViewAnalyticsFilter
+func (t PublicAndFilterBranch_Filters_Item) AsPublicPageViewAnalyticsFilter() (PublicPageViewAnalyticsFilter, error) {
+	var body PublicPageViewAnalyticsFilter
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPublicPageViewAnalyticsFilter overwrites any union data inside the PublicAndFilterBranch_Filters_Item as the provided PublicPageViewAnalyticsFilter
+func (t *PublicAndFilterBranch_Filters_Item) FromPublicPageViewAnalyticsFilter(v PublicPageViewAnalyticsFilter) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePublicPageViewAnalyticsFilter performs a merge with any union data inside the PublicAndFilterBranch_Filters_Item, using the provided PublicPageViewAnalyticsFilter
+func (t *PublicAndFilterBranch_Filters_Item) MergePublicPageViewAnalyticsFilter(v PublicPageViewAnalyticsFilter) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPublicCtaAnalyticsFilter returns the union data inside the PublicAndFilterBranch_Filters_Item as a PublicCtaAnalyticsFilter
+func (t PublicAndFilterBranch_Filters_Item) AsPublicCtaAnalyticsFilter() (PublicCtaAnalyticsFilter, error) {
+	var body PublicCtaAnalyticsFilter
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPublicCtaAnalyticsFilter overwrites any union data inside the PublicAndFilterBranch_Filters_Item as the provided PublicCtaAnalyticsFilter
+func (t *PublicAndFilterBranch_Filters_Item) FromPublicCtaAnalyticsFilter(v PublicCtaAnalyticsFilter) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePublicCtaAnalyticsFilter performs a merge with any union data inside the PublicAndFilterBranch_Filters_Item, using the provided PublicCtaAnalyticsFilter
+func (t *PublicAndFilterBranch_Filters_Item) MergePublicCtaAnalyticsFilter(v PublicCtaAnalyticsFilter) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPublicEventAnalyticsFilter returns the union data inside the PublicAndFilterBranch_Filters_Item as a PublicEventAnalyticsFilter
+func (t PublicAndFilterBranch_Filters_Item) AsPublicEventAnalyticsFilter() (PublicEventAnalyticsFilter, error) {
+	var body PublicEventAnalyticsFilter
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPublicEventAnalyticsFilter overwrites any union data inside the PublicAndFilterBranch_Filters_Item as the provided PublicEventAnalyticsFilter
+func (t *PublicAndFilterBranch_Filters_Item) FromPublicEventAnalyticsFilter(v PublicEventAnalyticsFilter) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePublicEventAnalyticsFilter performs a merge with any union data inside the PublicAndFilterBranch_Filters_Item, using the provided PublicEventAnalyticsFilter
+func (t *PublicAndFilterBranch_Filters_Item) MergePublicEventAnalyticsFilter(v PublicEventAnalyticsFilter) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPublicFormSubmissionFilter returns the union data inside the PublicAndFilterBranch_Filters_Item as a PublicFormSubmissionFilter
+func (t PublicAndFilterBranch_Filters_Item) AsPublicFormSubmissionFilter() (PublicFormSubmissionFilter, error) {
+	var body PublicFormSubmissionFilter
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPublicFormSubmissionFilter overwrites any union data inside the PublicAndFilterBranch_Filters_Item as the provided PublicFormSubmissionFilter
+func (t *PublicAndFilterBranch_Filters_Item) FromPublicFormSubmissionFilter(v PublicFormSubmissionFilter) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePublicFormSubmissionFilter performs a merge with any union data inside the PublicAndFilterBranch_Filters_Item, using the provided PublicFormSubmissionFilter
+func (t *PublicAndFilterBranch_Filters_Item) MergePublicFormSubmissionFilter(v PublicFormSubmissionFilter) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPublicFormSubmissionOnPageFilter returns the union data inside the PublicAndFilterBranch_Filters_Item as a PublicFormSubmissionOnPageFilter
+func (t PublicAndFilterBranch_Filters_Item) AsPublicFormSubmissionOnPageFilter() (PublicFormSubmissionOnPageFilter, error) {
+	var body PublicFormSubmissionOnPageFilter
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPublicFormSubmissionOnPageFilter overwrites any union data inside the PublicAndFilterBranch_Filters_Item as the provided PublicFormSubmissionOnPageFilter
+func (t *PublicAndFilterBranch_Filters_Item) FromPublicFormSubmissionOnPageFilter(v PublicFormSubmissionOnPageFilter) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePublicFormSubmissionOnPageFilter performs a merge with any union data inside the PublicAndFilterBranch_Filters_Item, using the provided PublicFormSubmissionOnPageFilter
+func (t *PublicAndFilterBranch_Filters_Item) MergePublicFormSubmissionOnPageFilter(v PublicFormSubmissionOnPageFilter) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPublicIntegrationEventFilter returns the union data inside the PublicAndFilterBranch_Filters_Item as a PublicIntegrationEventFilter
+func (t PublicAndFilterBranch_Filters_Item) AsPublicIntegrationEventFilter() (PublicIntegrationEventFilter, error) {
+	var body PublicIntegrationEventFilter
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPublicIntegrationEventFilter overwrites any union data inside the PublicAndFilterBranch_Filters_Item as the provided PublicIntegrationEventFilter
+func (t *PublicAndFilterBranch_Filters_Item) FromPublicIntegrationEventFilter(v PublicIntegrationEventFilter) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePublicIntegrationEventFilter performs a merge with any union data inside the PublicAndFilterBranch_Filters_Item, using the provided PublicIntegrationEventFilter
+func (t *PublicAndFilterBranch_Filters_Item) MergePublicIntegrationEventFilter(v PublicIntegrationEventFilter) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPublicEmailSubscriptionFilter returns the union data inside the PublicAndFilterBranch_Filters_Item as a PublicEmailSubscriptionFilter
+func (t PublicAndFilterBranch_Filters_Item) AsPublicEmailSubscriptionFilter() (PublicEmailSubscriptionFilter, error) {
+	var body PublicEmailSubscriptionFilter
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPublicEmailSubscriptionFilter overwrites any union data inside the PublicAndFilterBranch_Filters_Item as the provided PublicEmailSubscriptionFilter
+func (t *PublicAndFilterBranch_Filters_Item) FromPublicEmailSubscriptionFilter(v PublicEmailSubscriptionFilter) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePublicEmailSubscriptionFilter performs a merge with any union data inside the PublicAndFilterBranch_Filters_Item, using the provided PublicEmailSubscriptionFilter
+func (t *PublicAndFilterBranch_Filters_Item) MergePublicEmailSubscriptionFilter(v PublicEmailSubscriptionFilter) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPublicCommunicationSubscriptionFilter returns the union data inside the PublicAndFilterBranch_Filters_Item as a PublicCommunicationSubscriptionFilter
+func (t PublicAndFilterBranch_Filters_Item) AsPublicCommunicationSubscriptionFilter() (PublicCommunicationSubscriptionFilter, error) {
+	var body PublicCommunicationSubscriptionFilter
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPublicCommunicationSubscriptionFilter overwrites any union data inside the PublicAndFilterBranch_Filters_Item as the provided PublicCommunicationSubscriptionFilter
+func (t *PublicAndFilterBranch_Filters_Item) FromPublicCommunicationSubscriptionFilter(v PublicCommunicationSubscriptionFilter) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePublicCommunicationSubscriptionFilter performs a merge with any union data inside the PublicAndFilterBranch_Filters_Item, using the provided PublicCommunicationSubscriptionFilter
+func (t *PublicAndFilterBranch_Filters_Item) MergePublicCommunicationSubscriptionFilter(v PublicCommunicationSubscriptionFilter) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPublicSurveyMonkeyFilter returns the union data inside the PublicAndFilterBranch_Filters_Item as a PublicSurveyMonkeyFilter
+func (t PublicAndFilterBranch_Filters_Item) AsPublicSurveyMonkeyFilter() (PublicSurveyMonkeyFilter, error) {
+	var body PublicSurveyMonkeyFilter
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPublicSurveyMonkeyFilter overwrites any union data inside the PublicAndFilterBranch_Filters_Item as the provided PublicSurveyMonkeyFilter
+func (t *PublicAndFilterBranch_Filters_Item) FromPublicSurveyMonkeyFilter(v PublicSurveyMonkeyFilter) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePublicSurveyMonkeyFilter performs a merge with any union data inside the PublicAndFilterBranch_Filters_Item, using the provided PublicSurveyMonkeyFilter
+func (t *PublicAndFilterBranch_Filters_Item) MergePublicSurveyMonkeyFilter(v PublicSurveyMonkeyFilter) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPublicSurveyMonkeyValueFilter returns the union data inside the PublicAndFilterBranch_Filters_Item as a PublicSurveyMonkeyValueFilter
+func (t PublicAndFilterBranch_Filters_Item) AsPublicSurveyMonkeyValueFilter() (PublicSurveyMonkeyValueFilter, error) {
+	var body PublicSurveyMonkeyValueFilter
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPublicSurveyMonkeyValueFilter overwrites any union data inside the PublicAndFilterBranch_Filters_Item as the provided PublicSurveyMonkeyValueFilter
+func (t *PublicAndFilterBranch_Filters_Item) FromPublicSurveyMonkeyValueFilter(v PublicSurveyMonkeyValueFilter) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePublicSurveyMonkeyValueFilter performs a merge with any union data inside the PublicAndFilterBranch_Filters_Item, using the provided PublicSurveyMonkeyValueFilter
+func (t *PublicAndFilterBranch_Filters_Item) MergePublicSurveyMonkeyValueFilter(v PublicSurveyMonkeyValueFilter) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPublicWebinarFilter returns the union data inside the PublicAndFilterBranch_Filters_Item as a PublicWebinarFilter
+func (t PublicAndFilterBranch_Filters_Item) AsPublicWebinarFilter() (PublicWebinarFilter, error) {
+	var body PublicWebinarFilter
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPublicWebinarFilter overwrites any union data inside the PublicAndFilterBranch_Filters_Item as the provided PublicWebinarFilter
+func (t *PublicAndFilterBranch_Filters_Item) FromPublicWebinarFilter(v PublicWebinarFilter) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePublicWebinarFilter performs a merge with any union data inside the PublicAndFilterBranch_Filters_Item, using the provided PublicWebinarFilter
+func (t *PublicAndFilterBranch_Filters_Item) MergePublicWebinarFilter(v PublicWebinarFilter) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPublicEmailEventFilter returns the union data inside the PublicAndFilterBranch_Filters_Item as a PublicEmailEventFilter
+func (t PublicAndFilterBranch_Filters_Item) AsPublicEmailEventFilter() (PublicEmailEventFilter, error) {
+	var body PublicEmailEventFilter
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPublicEmailEventFilter overwrites any union data inside the PublicAndFilterBranch_Filters_Item as the provided PublicEmailEventFilter
+func (t *PublicAndFilterBranch_Filters_Item) FromPublicEmailEventFilter(v PublicEmailEventFilter) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePublicEmailEventFilter performs a merge with any union data inside the PublicAndFilterBranch_Filters_Item, using the provided PublicEmailEventFilter
+func (t *PublicAndFilterBranch_Filters_Item) MergePublicEmailEventFilter(v PublicEmailEventFilter) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPublicPrivacyAnalyticsFilter returns the union data inside the PublicAndFilterBranch_Filters_Item as a PublicPrivacyAnalyticsFilter
+func (t PublicAndFilterBranch_Filters_Item) AsPublicPrivacyAnalyticsFilter() (PublicPrivacyAnalyticsFilter, error) {
+	var body PublicPrivacyAnalyticsFilter
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPublicPrivacyAnalyticsFilter overwrites any union data inside the PublicAndFilterBranch_Filters_Item as the provided PublicPrivacyAnalyticsFilter
+func (t *PublicAndFilterBranch_Filters_Item) FromPublicPrivacyAnalyticsFilter(v PublicPrivacyAnalyticsFilter) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePublicPrivacyAnalyticsFilter performs a merge with any union data inside the PublicAndFilterBranch_Filters_Item, using the provided PublicPrivacyAnalyticsFilter
+func (t *PublicAndFilterBranch_Filters_Item) MergePublicPrivacyAnalyticsFilter(v PublicPrivacyAnalyticsFilter) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPublicAdsSearchFilter returns the union data inside the PublicAndFilterBranch_Filters_Item as a PublicAdsSearchFilter
+func (t PublicAndFilterBranch_Filters_Item) AsPublicAdsSearchFilter() (PublicAdsSearchFilter, error) {
+	var body PublicAdsSearchFilter
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPublicAdsSearchFilter overwrites any union data inside the PublicAndFilterBranch_Filters_Item as the provided PublicAdsSearchFilter
+func (t *PublicAndFilterBranch_Filters_Item) FromPublicAdsSearchFilter(v PublicAdsSearchFilter) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePublicAdsSearchFilter performs a merge with any union data inside the PublicAndFilterBranch_Filters_Item, using the provided PublicAdsSearchFilter
+func (t *PublicAndFilterBranch_Filters_Item) MergePublicAdsSearchFilter(v PublicAdsSearchFilter) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPublicAdsTimeFilter returns the union data inside the PublicAndFilterBranch_Filters_Item as a PublicAdsTimeFilter
+func (t PublicAndFilterBranch_Filters_Item) AsPublicAdsTimeFilter() (PublicAdsTimeFilter, error) {
+	var body PublicAdsTimeFilter
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPublicAdsTimeFilter overwrites any union data inside the PublicAndFilterBranch_Filters_Item as the provided PublicAdsTimeFilter
+func (t *PublicAndFilterBranch_Filters_Item) FromPublicAdsTimeFilter(v PublicAdsTimeFilter) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePublicAdsTimeFilter performs a merge with any union data inside the PublicAndFilterBranch_Filters_Item, using the provided PublicAdsTimeFilter
+func (t *PublicAndFilterBranch_Filters_Item) MergePublicAdsTimeFilter(v PublicAdsTimeFilter) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPublicInListFilter returns the union data inside the PublicAndFilterBranch_Filters_Item as a PublicInListFilter
+func (t PublicAndFilterBranch_Filters_Item) AsPublicInListFilter() (PublicInListFilter, error) {
+	var body PublicInListFilter
+	err := json.Unmarshal(t.union, &body)
+	return body, err
 }

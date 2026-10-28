@@ -2,6 +2,13 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.3.0, 2026-10-28
+
+- Breaking: removed the CMS site search operation `GetcmssiteSearch202603searchcmssiteSearch202603search`, along with `(*ClientWithResponses).GetcmssiteSearch202603searchcmssiteSearch202603searchWithResponse` and the matching methods on `ClientInterface` and `ClientWithResponsesInterface`. The spec for API version 2026-03 no longer has this endpoint.
+- Breaking: removed the types that belonged to that operation: `GetcmssiteSearch202603searchcmssiteSearch202603searchParams`, its `Language` type and constants, `ContentSearchResult`, its `Type` type and constants (`ContentSearchResultTypeBLOGPOST` and the others), and `PublicSearchResults`.
+- Added the types `PreResolvedContactContactPropertiesLeadingToMatchHsCrossAccountDataMirroringSourceAccountIds`, `PreResolvedContactContactPropertiesLeadingToMatchHsWhatsappCommunicationSubscriptionsOptedIn` and `PreResolvedContactContactPropertiesLeadingToMatchHsWhatsappCommunicationSubscriptionsOptedOut` for new contact properties.
+- The generated client files are split differently, so `client_005.gen.go` and `client_015.gen.go` no longer exist and the other `client_NNN.gen.go` files changed. This has no effect on callers.
+
 ## v0.2.0, 2026-10-28
 
 - The client is generated from HubSpot's public spec index at `https://api.hubspot.com/public/api/spec/v1/specs`. The Stainless-hosted copy of the spec it used before is no longer publicly readable, so scheduled regeneration had stopped. `scripts/fetch-spec.sh` downloads every document for API version 2026-03 and merges them with `scripts/merge-specs.jq`. Schemas that share a name but differ in shape get their API's title as a prefix, such as `CMSMediaBridgeProperty`, and the merge fails on any conflict it cannot resolve.

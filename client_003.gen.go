@@ -4,4020 +4,11 @@
 package hubspot
 
 import (
+	"encoding/json"
 	"time"
+
+	openapi_types "github.com/oapi-codegen/runtime/types"
 )
-
-// Valid indicates whether the value is a known member of the PublicAbsoluteRangedTimestampRefineByType enum.
-func (e PublicAbsoluteRangedTimestampRefineByType) Valid() bool {
-	switch e {
-	case PublicAbsoluteRangedTimestampRefineByTypeABSOLUTERANGED:
-		return true
-	default:
-		return false
-	}
-}
-
-// Defines values for PublicAccessTokenInfoResponseTokenUse.
-const (
-	PublicAccessTokenInfoResponseTokenUseAccessToken PublicAccessTokenInfoResponseTokenUse = "access_token"
-)
-
-// Valid indicates whether the value is a known member of the PublicAccessTokenInfoResponseTokenUse enum.
-func (e PublicAccessTokenInfoResponseTokenUse) Valid() bool {
-	switch e {
-	case PublicAccessTokenInfoResponseTokenUseAccessToken:
-		return true
-	default:
-		return false
-	}
-}
-
-// Defines values for PublicActionFunctionFunctionType.
-const (
-	PublicActionFunctionFunctionTypePOSTACTIONEXECUTION PublicActionFunctionFunctionType = "POST_ACTION_EXECUTION"
-	PublicActionFunctionFunctionTypePOSTFETCHOPTIONS    PublicActionFunctionFunctionType = "POST_FETCH_OPTIONS"
-	PublicActionFunctionFunctionTypePREACTIONEXECUTION  PublicActionFunctionFunctionType = "PRE_ACTION_EXECUTION"
-	PublicActionFunctionFunctionTypePREFETCHOPTIONS     PublicActionFunctionFunctionType = "PRE_FETCH_OPTIONS"
-)
-
-// Valid indicates whether the value is a known member of the PublicActionFunctionFunctionType enum.
-func (e PublicActionFunctionFunctionType) Valid() bool {
-	switch e {
-	case PublicActionFunctionFunctionTypePOSTACTIONEXECUTION:
-		return true
-	case PublicActionFunctionFunctionTypePOSTFETCHOPTIONS:
-		return true
-	case PublicActionFunctionFunctionTypePREACTIONEXECUTION:
-		return true
-	case PublicActionFunctionFunctionTypePREFETCHOPTIONS:
-		return true
-	default:
-		return false
-	}
-}
-
-// Defines values for PublicActionFunctionIdentifierFunctionType.
-const (
-	PublicActionFunctionIdentifierFunctionTypePOSTACTIONEXECUTION PublicActionFunctionIdentifierFunctionType = "POST_ACTION_EXECUTION"
-	PublicActionFunctionIdentifierFunctionTypePOSTFETCHOPTIONS    PublicActionFunctionIdentifierFunctionType = "POST_FETCH_OPTIONS"
-	PublicActionFunctionIdentifierFunctionTypePREACTIONEXECUTION  PublicActionFunctionIdentifierFunctionType = "PRE_ACTION_EXECUTION"
-	PublicActionFunctionIdentifierFunctionTypePREFETCHOPTIONS     PublicActionFunctionIdentifierFunctionType = "PRE_FETCH_OPTIONS"
-)
-
-// Valid indicates whether the value is a known member of the PublicActionFunctionIdentifierFunctionType enum.
-func (e PublicActionFunctionIdentifierFunctionType) Valid() bool {
-	switch e {
-	case PublicActionFunctionIdentifierFunctionTypePOSTACTIONEXECUTION:
-		return true
-	case PublicActionFunctionIdentifierFunctionTypePOSTFETCHOPTIONS:
-		return true
-	case PublicActionFunctionIdentifierFunctionTypePREACTIONEXECUTION:
-		return true
-	case PublicActionFunctionIdentifierFunctionTypePREFETCHOPTIONS:
-		return true
-	default:
-		return false
-	}
-}
-
-// Defines values for PublicAdsSearchFilterFilterType.
-const (
-	PublicAdsSearchFilterFilterTypeADSSEARCH PublicAdsSearchFilterFilterType = "ADS_SEARCH"
-)
-
-// Valid indicates whether the value is a known member of the PublicAdsSearchFilterFilterType enum.
-func (e PublicAdsSearchFilterFilterType) Valid() bool {
-	switch e {
-	case PublicAdsSearchFilterFilterTypeADSSEARCH:
-		return true
-	default:
-		return false
-	}
-}
-
-// Defines values for PublicAdsTimeFilterFilterType.
-const (
-	PublicAdsTimeFilterFilterTypeADSTIME PublicAdsTimeFilterFilterType = "ADS_TIME"
-)
-
-// Valid indicates whether the value is a known member of the PublicAdsTimeFilterFilterType enum.
-func (e PublicAdsTimeFilterFilterType) Valid() bool {
-	switch e {
-	case PublicAdsTimeFilterFilterTypeADSTIME:
-		return true
-	default:
-		return false
-	}
-}
-
-// Defines values for PublicAllHistoryRefineByType.
-const (
-	PublicAllHistoryRefineByTypeALLHISTORY PublicAllHistoryRefineByType = "ALL_HISTORY"
-)
-
-// Valid indicates whether the value is a known member of the PublicAllHistoryRefineByType enum.
-func (e PublicAllHistoryRefineByType) Valid() bool {
-	switch e {
-	case PublicAllHistoryRefineByTypeALLHISTORY:
-		return true
-	default:
-		return false
-	}
-}
-
-// Defines values for PublicAllPropertyTypesOperationOperationType.
-const (
-	PublicAllPropertyTypesOperationOperationTypeALLPROPERTY PublicAllPropertyTypesOperationOperationType = "ALL_PROPERTY"
-)
-
-// Valid indicates whether the value is a known member of the PublicAllPropertyTypesOperationOperationType enum.
-func (e PublicAllPropertyTypesOperationOperationType) Valid() bool {
-	switch e {
-	case PublicAllPropertyTypesOperationOperationTypeALLPROPERTY:
-		return true
-	default:
-		return false
-	}
-}
-
-// Defines values for PublicAndFilterBranchFilterBranchType.
-const (
-	PublicAndFilterBranchFilterBranchTypeAND PublicAndFilterBranchFilterBranchType = "AND"
-)
-
-// Valid indicates whether the value is a known member of the PublicAndFilterBranchFilterBranchType enum.
-func (e PublicAndFilterBranchFilterBranchType) Valid() bool {
-	switch e {
-	case PublicAndFilterBranchFilterBranchTypeAND:
-		return true
-	default:
-		return false
-	}
-}
-
-// Defines values for PublicAssociationDefinitionConfigurationCreateRequestCategory.
-const (
-	PublicAssociationDefinitionConfigurationCreateRequestCategoryHUBSPOTDEFINED    PublicAssociationDefinitionConfigurationCreateRequestCategory = "HUBSPOT_DEFINED"
-	PublicAssociationDefinitionConfigurationCreateRequestCategoryINTEGRATORDEFINED PublicAssociationDefinitionConfigurationCreateRequestCategory = "INTEGRATOR_DEFINED"
-	PublicAssociationDefinitionConfigurationCreateRequestCategoryUSERDEFINED       PublicAssociationDefinitionConfigurationCreateRequestCategory = "USER_DEFINED"
-	PublicAssociationDefinitionConfigurationCreateRequestCategoryWORK              PublicAssociationDefinitionConfigurationCreateRequestCategory = "WORK"
-)
-
-// Valid indicates whether the value is a known member of the PublicAssociationDefinitionConfigurationCreateRequestCategory enum.
-func (e PublicAssociationDefinitionConfigurationCreateRequestCategory) Valid() bool {
-	switch e {
-	case PublicAssociationDefinitionConfigurationCreateRequestCategoryHUBSPOTDEFINED:
-		return true
-	case PublicAssociationDefinitionConfigurationCreateRequestCategoryINTEGRATORDEFINED:
-		return true
-	case PublicAssociationDefinitionConfigurationCreateRequestCategoryUSERDEFINED:
-		return true
-	case PublicAssociationDefinitionConfigurationCreateRequestCategoryWORK:
-		return true
-	default:
-		return false
-	}
-}
-
-// Defines values for PublicAssociationDefinitionConfigurationUpdateRequestCategory.
-const (
-	PublicAssociationDefinitionConfigurationUpdateRequestCategoryHUBSPOTDEFINED    PublicAssociationDefinitionConfigurationUpdateRequestCategory = "HUBSPOT_DEFINED"
-	PublicAssociationDefinitionConfigurationUpdateRequestCategoryINTEGRATORDEFINED PublicAssociationDefinitionConfigurationUpdateRequestCategory = "INTEGRATOR_DEFINED"
-	PublicAssociationDefinitionConfigurationUpdateRequestCategoryUSERDEFINED       PublicAssociationDefinitionConfigurationUpdateRequestCategory = "USER_DEFINED"
-	PublicAssociationDefinitionConfigurationUpdateRequestCategoryWORK              PublicAssociationDefinitionConfigurationUpdateRequestCategory = "WORK"
-)
-
-// Valid indicates whether the value is a known member of the PublicAssociationDefinitionConfigurationUpdateRequestCategory enum.
-func (e PublicAssociationDefinitionConfigurationUpdateRequestCategory) Valid() bool {
-	switch e {
-	case PublicAssociationDefinitionConfigurationUpdateRequestCategoryHUBSPOTDEFINED:
-		return true
-	case PublicAssociationDefinitionConfigurationUpdateRequestCategoryINTEGRATORDEFINED:
-		return true
-	case PublicAssociationDefinitionConfigurationUpdateRequestCategoryUSERDEFINED:
-		return true
-	case PublicAssociationDefinitionConfigurationUpdateRequestCategoryWORK:
-		return true
-	default:
-		return false
-	}
-}
-
-// Defines values for PublicAssociationDefinitionConfigurationUpdateResultCategory.
-const (
-	PublicAssociationDefinitionConfigurationUpdateResultCategoryHUBSPOTDEFINED    PublicAssociationDefinitionConfigurationUpdateResultCategory = "HUBSPOT_DEFINED"
-	PublicAssociationDefinitionConfigurationUpdateResultCategoryINTEGRATORDEFINED PublicAssociationDefinitionConfigurationUpdateResultCategory = "INTEGRATOR_DEFINED"
-	PublicAssociationDefinitionConfigurationUpdateResultCategoryUSERDEFINED       PublicAssociationDefinitionConfigurationUpdateResultCategory = "USER_DEFINED"
-	PublicAssociationDefinitionConfigurationUpdateResultCategoryWORK              PublicAssociationDefinitionConfigurationUpdateResultCategory = "WORK"
-)
-
-// Valid indicates whether the value is a known member of the PublicAssociationDefinitionConfigurationUpdateResultCategory enum.
-func (e PublicAssociationDefinitionConfigurationUpdateResultCategory) Valid() bool {
-	switch e {
-	case PublicAssociationDefinitionConfigurationUpdateResultCategoryHUBSPOTDEFINED:
-		return true
-	case PublicAssociationDefinitionConfigurationUpdateResultCategoryINTEGRATORDEFINED:
-		return true
-	case PublicAssociationDefinitionConfigurationUpdateResultCategoryUSERDEFINED:
-		return true
-	case PublicAssociationDefinitionConfigurationUpdateResultCategoryWORK:
-		return true
-	default:
-		return false
-	}
-}
-
-// Defines values for PublicAssociationDefinitionUserConfigurationCategory.
-const (
-	PublicAssociationDefinitionUserConfigurationCategoryHUBSPOTDEFINED    PublicAssociationDefinitionUserConfigurationCategory = "HUBSPOT_DEFINED"
-	PublicAssociationDefinitionUserConfigurationCategoryINTEGRATORDEFINED PublicAssociationDefinitionUserConfigurationCategory = "INTEGRATOR_DEFINED"
-	PublicAssociationDefinitionUserConfigurationCategoryUSERDEFINED       PublicAssociationDefinitionUserConfigurationCategory = "USER_DEFINED"
-	PublicAssociationDefinitionUserConfigurationCategoryWORK              PublicAssociationDefinitionUserConfigurationCategory = "WORK"
-)
-
-// Valid indicates whether the value is a known member of the PublicAssociationDefinitionUserConfigurationCategory enum.
-func (e PublicAssociationDefinitionUserConfigurationCategory) Valid() bool {
-	switch e {
-	case PublicAssociationDefinitionUserConfigurationCategoryHUBSPOTDEFINED:
-		return true
-	case PublicAssociationDefinitionUserConfigurationCategoryINTEGRATORDEFINED:
-		return true
-	case PublicAssociationDefinitionUserConfigurationCategoryUSERDEFINED:
-		return true
-	case PublicAssociationDefinitionUserConfigurationCategoryWORK:
-		return true
-	default:
-		return false
-	}
-}
-
-// Defines values for PublicAssociationFilterBranchFilterBranchType.
-const (
-	PublicAssociationFilterBranchFilterBranchTypeASSOCIATION PublicAssociationFilterBranchFilterBranchType = "ASSOCIATION"
-)
-
-// Valid indicates whether the value is a known member of the PublicAssociationFilterBranchFilterBranchType enum.
-func (e PublicAssociationFilterBranchFilterBranchType) Valid() bool {
-	switch e {
-	case PublicAssociationFilterBranchFilterBranchTypeASSOCIATION:
-		return true
-	default:
-		return false
-	}
-}
-
-// Defines values for PublicAssociationInListFilterFilterType.
-const (
-	PublicAssociationInListFilterFilterTypeASSOCIATION PublicAssociationInListFilterFilterType = "ASSOCIATION"
-)
-
-// Valid indicates whether the value is a known member of the PublicAssociationInListFilterFilterType enum.
-func (e PublicAssociationInListFilterFilterType) Valid() bool {
-	switch e {
-	case PublicAssociationInListFilterFilterTypeASSOCIATION:
-		return true
-	default:
-		return false
-	}
-}
-
-// Defines values for PublicAuditLogEvent.
-const (
-	PublicAuditLogEventCREATED     PublicAuditLogEvent = "CREATED"
-	PublicAuditLogEventDELETED     PublicAuditLogEvent = "DELETED"
-	PublicAuditLogEventPUBLISHED   PublicAuditLogEvent = "PUBLISHED"
-	PublicAuditLogEventRESTORE     PublicAuditLogEvent = "RESTORE"
-	PublicAuditLogEventUNPUBLISHED PublicAuditLogEvent = "UNPUBLISHED"
-	PublicAuditLogEventUPDATED     PublicAuditLogEvent = "UPDATED"
-)
-
-// Valid indicates whether the value is a known member of the PublicAuditLogEvent enum.
-func (e PublicAuditLogEvent) Valid() bool {
-	switch e {
-	case PublicAuditLogEventCREATED:
-		return true
-	case PublicAuditLogEventDELETED:
-		return true
-	case PublicAuditLogEventPUBLISHED:
-		return true
-	case PublicAuditLogEventRESTORE:
-		return true
-	case PublicAuditLogEventUNPUBLISHED:
-		return true
-	case PublicAuditLogEventUPDATED:
-		return true
-	default:
-		return false
-	}
-}
-
-// Defines values for PublicAuditLogObjectType.
-const (
-	PublicAuditLogObjectTypeBLOG                 PublicAuditLogObjectType = "BLOG"
-	PublicAuditLogObjectTypeBLOGPOST             PublicAuditLogObjectType = "BLOG_POST"
-	PublicAuditLogObjectTypeCASESTUDY            PublicAuditLogObjectType = "CASE_STUDY"
-	PublicAuditLogObjectTypeCONTENTSETTINGS      PublicAuditLogObjectType = "CONTENT_SETTINGS"
-	PublicAuditLogObjectTypeCSS                  PublicAuditLogObjectType = "CSS"
-	PublicAuditLogObjectTypeCTA                  PublicAuditLogObjectType = "CTA"
-	PublicAuditLogObjectTypeDOMAIN               PublicAuditLogObjectType = "DOMAIN"
-	PublicAuditLogObjectTypeEMAIL                PublicAuditLogObjectType = "EMAIL"
-	PublicAuditLogObjectTypeFILE                 PublicAuditLogObjectType = "FILE"
-	PublicAuditLogObjectTypeGLOBALMODULE         PublicAuditLogObjectType = "GLOBAL_MODULE"
-	PublicAuditLogObjectTypeHUBDBTABLE           PublicAuditLogObjectType = "HUBDB_TABLE"
-	PublicAuditLogObjectTypeJS                   PublicAuditLogObjectType = "JS"
-	PublicAuditLogObjectTypeKNOWLEDGEBASE        PublicAuditLogObjectType = "KNOWLEDGE_BASE"
-	PublicAuditLogObjectTypeKNOWLEDGEBASEARTICLE PublicAuditLogObjectType = "KNOWLEDGE_BASE_ARTICLE"
-	PublicAuditLogObjectTypeLANDINGPAGE          PublicAuditLogObjectType = "LANDING_PAGE"
-	PublicAuditLogObjectTypeMODULE               PublicAuditLogObjectType = "MODULE"
-	PublicAuditLogObjectTypePODCAST              PublicAuditLogObjectType = "PODCAST"
-	PublicAuditLogObjectTypeQUOTE                PublicAuditLogObjectType = "QUOTE"
-	PublicAuditLogObjectTypeSERVERLESSFUNCTION   PublicAuditLogObjectType = "SERVERLESS_FUNCTION"
-	PublicAuditLogObjectTypeTEMPLATE             PublicAuditLogObjectType = "TEMPLATE"
-	PublicAuditLogObjectTypeTHEME                PublicAuditLogObjectType = "THEME"
-	PublicAuditLogObjectTypeURLMAPPING           PublicAuditLogObjectType = "URL_MAPPING"
-	PublicAuditLogObjectTypeWEBINTERACTIVE       PublicAuditLogObjectType = "WEB_INTERACTIVE"
-	PublicAuditLogObjectTypeWEBSITEPAGE          PublicAuditLogObjectType = "WEBSITE_PAGE"
-)
-
-// Valid indicates whether the value is a known member of the PublicAuditLogObjectType enum.
-func (e PublicAuditLogObjectType) Valid() bool {
-	switch e {
-	case PublicAuditLogObjectTypeBLOG:
-		return true
-	case PublicAuditLogObjectTypeBLOGPOST:
-		return true
-	case PublicAuditLogObjectTypeCASESTUDY:
-		return true
-	case PublicAuditLogObjectTypeCONTENTSETTINGS:
-		return true
-	case PublicAuditLogObjectTypeCSS:
-		return true
-	case PublicAuditLogObjectTypeCTA:
-		return true
-	case PublicAuditLogObjectTypeDOMAIN:
-		return true
-	case PublicAuditLogObjectTypeEMAIL:
-		return true
-	case PublicAuditLogObjectTypeFILE:
-		return true
-	case PublicAuditLogObjectTypeGLOBALMODULE:
-		return true
-	case PublicAuditLogObjectTypeHUBDBTABLE:
-		return true
-	case PublicAuditLogObjectTypeJS:
-		return true
-	case PublicAuditLogObjectTypeKNOWLEDGEBASE:
-		return true
-	case PublicAuditLogObjectTypeKNOWLEDGEBASEARTICLE:
-		return true
-	case PublicAuditLogObjectTypeLANDINGPAGE:
-		return true
-	case PublicAuditLogObjectTypeMODULE:
-		return true
-	case PublicAuditLogObjectTypePODCAST:
-		return true
-	case PublicAuditLogObjectTypeQUOTE:
-		return true
-	case PublicAuditLogObjectTypeSERVERLESSFUNCTION:
-		return true
-	case PublicAuditLogObjectTypeTEMPLATE:
-		return true
-	case PublicAuditLogObjectTypeTHEME:
-		return true
-	case PublicAuditLogObjectTypeURLMAPPING:
-		return true
-	case PublicAuditLogObjectTypeWEBINTERACTIVE:
-		return true
-	case PublicAuditLogObjectTypeWEBSITEPAGE:
-		return true
-	default:
-		return false
-	}
-}
-
-// Defines values for PublicBoolPropertyOperationOperationType.
-const (
-	PublicBoolPropertyOperationOperationTypeBOOL PublicBoolPropertyOperationOperationType = "BOOL"
-)
-
-// Valid indicates whether the value is a known member of the PublicBoolPropertyOperationOperationType enum.
-func (e PublicBoolPropertyOperationOperationType) Valid() bool {
-	switch e {
-	case PublicBoolPropertyOperationOperationTypeBOOL:
-		return true
-	default:
-		return false
-	}
-}
-
-// Defines values for PublicBudgetTotalsCurrencyCode.
-const (
-	PublicBudgetTotalsCurrencyCodeAED PublicBudgetTotalsCurrencyCode = "AED"
-	PublicBudgetTotalsCurrencyCodeAFN PublicBudgetTotalsCurrencyCode = "AFN"
-	PublicBudgetTotalsCurrencyCodeALL PublicBudgetTotalsCurrencyCode = "ALL"
-	PublicBudgetTotalsCurrencyCodeAMD PublicBudgetTotalsCurrencyCode = "AMD"
-	PublicBudgetTotalsCurrencyCodeANG PublicBudgetTotalsCurrencyCode = "ANG"
-	PublicBudgetTotalsCurrencyCodeAOA PublicBudgetTotalsCurrencyCode = "AOA"
-	PublicBudgetTotalsCurrencyCodeARS PublicBudgetTotalsCurrencyCode = "ARS"
-	PublicBudgetTotalsCurrencyCodeAUD PublicBudgetTotalsCurrencyCode = "AUD"
-	PublicBudgetTotalsCurrencyCodeAWG PublicBudgetTotalsCurrencyCode = "AWG"
-	PublicBudgetTotalsCurrencyCodeAZN PublicBudgetTotalsCurrencyCode = "AZN"
-	PublicBudgetTotalsCurrencyCodeBAM PublicBudgetTotalsCurrencyCode = "BAM"
-	PublicBudgetTotalsCurrencyCodeBBD PublicBudgetTotalsCurrencyCode = "BBD"
-	PublicBudgetTotalsCurrencyCodeBDT PublicBudgetTotalsCurrencyCode = "BDT"
-	PublicBudgetTotalsCurrencyCodeBGN PublicBudgetTotalsCurrencyCode = "BGN"
-	PublicBudgetTotalsCurrencyCodeBHD PublicBudgetTotalsCurrencyCode = "BHD"
-	PublicBudgetTotalsCurrencyCodeBIF PublicBudgetTotalsCurrencyCode = "BIF"
-	PublicBudgetTotalsCurrencyCodeBMD PublicBudgetTotalsCurrencyCode = "BMD"
-	PublicBudgetTotalsCurrencyCodeBND PublicBudgetTotalsCurrencyCode = "BND"
-	PublicBudgetTotalsCurrencyCodeBOB PublicBudgetTotalsCurrencyCode = "BOB"
-	PublicBudgetTotalsCurrencyCodeBOV PublicBudgetTotalsCurrencyCode = "BOV"
-	PublicBudgetTotalsCurrencyCodeBRL PublicBudgetTotalsCurrencyCode = "BRL"
-	PublicBudgetTotalsCurrencyCodeBSD PublicBudgetTotalsCurrencyCode = "BSD"
-	PublicBudgetTotalsCurrencyCodeBTN PublicBudgetTotalsCurrencyCode = "BTN"
-	PublicBudgetTotalsCurrencyCodeBWP PublicBudgetTotalsCurrencyCode = "BWP"
-	PublicBudgetTotalsCurrencyCodeBYN PublicBudgetTotalsCurrencyCode = "BYN"
-	PublicBudgetTotalsCurrencyCodeBZD PublicBudgetTotalsCurrencyCode = "BZD"
-	PublicBudgetTotalsCurrencyCodeCAD PublicBudgetTotalsCurrencyCode = "CAD"
-	PublicBudgetTotalsCurrencyCodeCDF PublicBudgetTotalsCurrencyCode = "CDF"
-	PublicBudgetTotalsCurrencyCodeCHE PublicBudgetTotalsCurrencyCode = "CHE"
-	PublicBudgetTotalsCurrencyCodeCHF PublicBudgetTotalsCurrencyCode = "CHF"
-	PublicBudgetTotalsCurrencyCodeCHW PublicBudgetTotalsCurrencyCode = "CHW"
-	PublicBudgetTotalsCurrencyCodeCLF PublicBudgetTotalsCurrencyCode = "CLF"
-	PublicBudgetTotalsCurrencyCodeCLP PublicBudgetTotalsCurrencyCode = "CLP"
-	PublicBudgetTotalsCurrencyCodeCNY PublicBudgetTotalsCurrencyCode = "CNY"
-	PublicBudgetTotalsCurrencyCodeCOP PublicBudgetTotalsCurrencyCode = "COP"
-	PublicBudgetTotalsCurrencyCodeCOU PublicBudgetTotalsCurrencyCode = "COU"
-	PublicBudgetTotalsCurrencyCodeCRC PublicBudgetTotalsCurrencyCode = "CRC"
-	PublicBudgetTotalsCurrencyCodeCUC PublicBudgetTotalsCurrencyCode = "CUC"
-	PublicBudgetTotalsCurrencyCodeCUP PublicBudgetTotalsCurrencyCode = "CUP"
-	PublicBudgetTotalsCurrencyCodeCVE PublicBudgetTotalsCurrencyCode = "CVE"
-	PublicBudgetTotalsCurrencyCodeCZK PublicBudgetTotalsCurrencyCode = "CZK"
-	PublicBudgetTotalsCurrencyCodeDJF PublicBudgetTotalsCurrencyCode = "DJF"
-	PublicBudgetTotalsCurrencyCodeDKK PublicBudgetTotalsCurrencyCode = "DKK"
-	PublicBudgetTotalsCurrencyCodeDOP PublicBudgetTotalsCurrencyCode = "DOP"
-	PublicBudgetTotalsCurrencyCodeDZD PublicBudgetTotalsCurrencyCode = "DZD"
-	PublicBudgetTotalsCurrencyCodeEGP PublicBudgetTotalsCurrencyCode = "EGP"
-	PublicBudgetTotalsCurrencyCodeERN PublicBudgetTotalsCurrencyCode = "ERN"
-	PublicBudgetTotalsCurrencyCodeETB PublicBudgetTotalsCurrencyCode = "ETB"
-	PublicBudgetTotalsCurrencyCodeEUR PublicBudgetTotalsCurrencyCode = "EUR"
-	PublicBudgetTotalsCurrencyCodeFJD PublicBudgetTotalsCurrencyCode = "FJD"
-	PublicBudgetTotalsCurrencyCodeFKP PublicBudgetTotalsCurrencyCode = "FKP"
-	PublicBudgetTotalsCurrencyCodeGBP PublicBudgetTotalsCurrencyCode = "GBP"
-	PublicBudgetTotalsCurrencyCodeGEL PublicBudgetTotalsCurrencyCode = "GEL"
-	PublicBudgetTotalsCurrencyCodeGHS PublicBudgetTotalsCurrencyCode = "GHS"
-	PublicBudgetTotalsCurrencyCodeGIP PublicBudgetTotalsCurrencyCode = "GIP"
-	PublicBudgetTotalsCurrencyCodeGMD PublicBudgetTotalsCurrencyCode = "GMD"
-	PublicBudgetTotalsCurrencyCodeGNF PublicBudgetTotalsCurrencyCode = "GNF"
-	PublicBudgetTotalsCurrencyCodeGTQ PublicBudgetTotalsCurrencyCode = "GTQ"
-	PublicBudgetTotalsCurrencyCodeGYD PublicBudgetTotalsCurrencyCode = "GYD"
-	PublicBudgetTotalsCurrencyCodeHKD PublicBudgetTotalsCurrencyCode = "HKD"
-	PublicBudgetTotalsCurrencyCodeHNL PublicBudgetTotalsCurrencyCode = "HNL"
-	PublicBudgetTotalsCurrencyCodeHRK PublicBudgetTotalsCurrencyCode = "HRK"
-	PublicBudgetTotalsCurrencyCodeHTG PublicBudgetTotalsCurrencyCode = "HTG"
-	PublicBudgetTotalsCurrencyCodeHUF PublicBudgetTotalsCurrencyCode = "HUF"
-	PublicBudgetTotalsCurrencyCodeIDR PublicBudgetTotalsCurrencyCode = "IDR"
-	PublicBudgetTotalsCurrencyCodeILS PublicBudgetTotalsCurrencyCode = "ILS"
-	PublicBudgetTotalsCurrencyCodeINR PublicBudgetTotalsCurrencyCode = "INR"
-	PublicBudgetTotalsCurrencyCodeIQD PublicBudgetTotalsCurrencyCode = "IQD"
-	PublicBudgetTotalsCurrencyCodeIRR PublicBudgetTotalsCurrencyCode = "IRR"
-	PublicBudgetTotalsCurrencyCodeISK PublicBudgetTotalsCurrencyCode = "ISK"
-	PublicBudgetTotalsCurrencyCodeJMD PublicBudgetTotalsCurrencyCode = "JMD"
-	PublicBudgetTotalsCurrencyCodeJOD PublicBudgetTotalsCurrencyCode = "JOD"
-	PublicBudgetTotalsCurrencyCodeJPY PublicBudgetTotalsCurrencyCode = "JPY"
-	PublicBudgetTotalsCurrencyCodeKES PublicBudgetTotalsCurrencyCode = "KES"
-	PublicBudgetTotalsCurrencyCodeKGS PublicBudgetTotalsCurrencyCode = "KGS"
-	PublicBudgetTotalsCurrencyCodeKHR PublicBudgetTotalsCurrencyCode = "KHR"
-	PublicBudgetTotalsCurrencyCodeKMF PublicBudgetTotalsCurrencyCode = "KMF"
-	PublicBudgetTotalsCurrencyCodeKPW PublicBudgetTotalsCurrencyCode = "KPW"
-	PublicBudgetTotalsCurrencyCodeKRW PublicBudgetTotalsCurrencyCode = "KRW"
-	PublicBudgetTotalsCurrencyCodeKWD PublicBudgetTotalsCurrencyCode = "KWD"
-	PublicBudgetTotalsCurrencyCodeKYD PublicBudgetTotalsCurrencyCode = "KYD"
-	PublicBudgetTotalsCurrencyCodeKZT PublicBudgetTotalsCurrencyCode = "KZT"
-	PublicBudgetTotalsCurrencyCodeLAK PublicBudgetTotalsCurrencyCode = "LAK"
-	PublicBudgetTotalsCurrencyCodeLBP PublicBudgetTotalsCurrencyCode = "LBP"
-	PublicBudgetTotalsCurrencyCodeLKR PublicBudgetTotalsCurrencyCode = "LKR"
-	PublicBudgetTotalsCurrencyCodeLRD PublicBudgetTotalsCurrencyCode = "LRD"
-	PublicBudgetTotalsCurrencyCodeLSL PublicBudgetTotalsCurrencyCode = "LSL"
-	PublicBudgetTotalsCurrencyCodeLYD PublicBudgetTotalsCurrencyCode = "LYD"
-	PublicBudgetTotalsCurrencyCodeMAD PublicBudgetTotalsCurrencyCode = "MAD"
-	PublicBudgetTotalsCurrencyCodeMDL PublicBudgetTotalsCurrencyCode = "MDL"
-	PublicBudgetTotalsCurrencyCodeMGA PublicBudgetTotalsCurrencyCode = "MGA"
-	PublicBudgetTotalsCurrencyCodeMKD PublicBudgetTotalsCurrencyCode = "MKD"
-	PublicBudgetTotalsCurrencyCodeMMK PublicBudgetTotalsCurrencyCode = "MMK"
-	PublicBudgetTotalsCurrencyCodeMNT PublicBudgetTotalsCurrencyCode = "MNT"
-	PublicBudgetTotalsCurrencyCodeMOP PublicBudgetTotalsCurrencyCode = "MOP"
-	PublicBudgetTotalsCurrencyCodeMRU PublicBudgetTotalsCurrencyCode = "MRU"
-	PublicBudgetTotalsCurrencyCodeMUR PublicBudgetTotalsCurrencyCode = "MUR"
-	PublicBudgetTotalsCurrencyCodeMVR PublicBudgetTotalsCurrencyCode = "MVR"
-	PublicBudgetTotalsCurrencyCodeMWK PublicBudgetTotalsCurrencyCode = "MWK"
-	PublicBudgetTotalsCurrencyCodeMXN PublicBudgetTotalsCurrencyCode = "MXN"
-	PublicBudgetTotalsCurrencyCodeMXV PublicBudgetTotalsCurrencyCode = "MXV"
-	PublicBudgetTotalsCurrencyCodeMYR PublicBudgetTotalsCurrencyCode = "MYR"
-	PublicBudgetTotalsCurrencyCodeMZN PublicBudgetTotalsCurrencyCode = "MZN"
-	PublicBudgetTotalsCurrencyCodeNAD PublicBudgetTotalsCurrencyCode = "NAD"
-	PublicBudgetTotalsCurrencyCodeNGN PublicBudgetTotalsCurrencyCode = "NGN"
-	PublicBudgetTotalsCurrencyCodeNIO PublicBudgetTotalsCurrencyCode = "NIO"
-	PublicBudgetTotalsCurrencyCodeNOK PublicBudgetTotalsCurrencyCode = "NOK"
-	PublicBudgetTotalsCurrencyCodeNPR PublicBudgetTotalsCurrencyCode = "NPR"
-	PublicBudgetTotalsCurrencyCodeNZD PublicBudgetTotalsCurrencyCode = "NZD"
-	PublicBudgetTotalsCurrencyCodeOMR PublicBudgetTotalsCurrencyCode = "OMR"
-	PublicBudgetTotalsCurrencyCodePAB PublicBudgetTotalsCurrencyCode = "PAB"
-	PublicBudgetTotalsCurrencyCodePEN PublicBudgetTotalsCurrencyCode = "PEN"
-	PublicBudgetTotalsCurrencyCodePGK PublicBudgetTotalsCurrencyCode = "PGK"
-	PublicBudgetTotalsCurrencyCodePHP PublicBudgetTotalsCurrencyCode = "PHP"
-	PublicBudgetTotalsCurrencyCodePKR PublicBudgetTotalsCurrencyCode = "PKR"
-	PublicBudgetTotalsCurrencyCodePLN PublicBudgetTotalsCurrencyCode = "PLN"
-	PublicBudgetTotalsCurrencyCodePYG PublicBudgetTotalsCurrencyCode = "PYG"
-	PublicBudgetTotalsCurrencyCodeQAR PublicBudgetTotalsCurrencyCode = "QAR"
-	PublicBudgetTotalsCurrencyCodeRON PublicBudgetTotalsCurrencyCode = "RON"
-	PublicBudgetTotalsCurrencyCodeRSD PublicBudgetTotalsCurrencyCode = "RSD"
-	PublicBudgetTotalsCurrencyCodeRUB PublicBudgetTotalsCurrencyCode = "RUB"
-	PublicBudgetTotalsCurrencyCodeRWF PublicBudgetTotalsCurrencyCode = "RWF"
-	PublicBudgetTotalsCurrencyCodeSAR PublicBudgetTotalsCurrencyCode = "SAR"
-	PublicBudgetTotalsCurrencyCodeSBD PublicBudgetTotalsCurrencyCode = "SBD"
-	PublicBudgetTotalsCurrencyCodeSCR PublicBudgetTotalsCurrencyCode = "SCR"
-	PublicBudgetTotalsCurrencyCodeSDG PublicBudgetTotalsCurrencyCode = "SDG"
-	PublicBudgetTotalsCurrencyCodeSEK PublicBudgetTotalsCurrencyCode = "SEK"
-	PublicBudgetTotalsCurrencyCodeSGD PublicBudgetTotalsCurrencyCode = "SGD"
-	PublicBudgetTotalsCurrencyCodeSHP PublicBudgetTotalsCurrencyCode = "SHP"
-	PublicBudgetTotalsCurrencyCodeSLL PublicBudgetTotalsCurrencyCode = "SLL"
-	PublicBudgetTotalsCurrencyCodeSOS PublicBudgetTotalsCurrencyCode = "SOS"
-	PublicBudgetTotalsCurrencyCodeSRD PublicBudgetTotalsCurrencyCode = "SRD"
-	PublicBudgetTotalsCurrencyCodeSSP PublicBudgetTotalsCurrencyCode = "SSP"
-	PublicBudgetTotalsCurrencyCodeSTN PublicBudgetTotalsCurrencyCode = "STN"
-	PublicBudgetTotalsCurrencyCodeSVC PublicBudgetTotalsCurrencyCode = "SVC"
-	PublicBudgetTotalsCurrencyCodeSYP PublicBudgetTotalsCurrencyCode = "SYP"
-	PublicBudgetTotalsCurrencyCodeSZL PublicBudgetTotalsCurrencyCode = "SZL"
-	PublicBudgetTotalsCurrencyCodeTHB PublicBudgetTotalsCurrencyCode = "THB"
-	PublicBudgetTotalsCurrencyCodeTJS PublicBudgetTotalsCurrencyCode = "TJS"
-	PublicBudgetTotalsCurrencyCodeTMT PublicBudgetTotalsCurrencyCode = "TMT"
-	PublicBudgetTotalsCurrencyCodeTND PublicBudgetTotalsCurrencyCode = "TND"
-	PublicBudgetTotalsCurrencyCodeTOP PublicBudgetTotalsCurrencyCode = "TOP"
-	PublicBudgetTotalsCurrencyCodeTRY PublicBudgetTotalsCurrencyCode = "TRY"
-	PublicBudgetTotalsCurrencyCodeTTD PublicBudgetTotalsCurrencyCode = "TTD"
-	PublicBudgetTotalsCurrencyCodeTWD PublicBudgetTotalsCurrencyCode = "TWD"
-	PublicBudgetTotalsCurrencyCodeTZS PublicBudgetTotalsCurrencyCode = "TZS"
-	PublicBudgetTotalsCurrencyCodeUAH PublicBudgetTotalsCurrencyCode = "UAH"
-	PublicBudgetTotalsCurrencyCodeUGX PublicBudgetTotalsCurrencyCode = "UGX"
-	PublicBudgetTotalsCurrencyCodeUSD PublicBudgetTotalsCurrencyCode = "USD"
-	PublicBudgetTotalsCurrencyCodeUSN PublicBudgetTotalsCurrencyCode = "USN"
-	PublicBudgetTotalsCurrencyCodeUYI PublicBudgetTotalsCurrencyCode = "UYI"
-	PublicBudgetTotalsCurrencyCodeUYU PublicBudgetTotalsCurrencyCode = "UYU"
-	PublicBudgetTotalsCurrencyCodeUZS PublicBudgetTotalsCurrencyCode = "UZS"
-	PublicBudgetTotalsCurrencyCodeVEF PublicBudgetTotalsCurrencyCode = "VEF"
-	PublicBudgetTotalsCurrencyCodeVND PublicBudgetTotalsCurrencyCode = "VND"
-	PublicBudgetTotalsCurrencyCodeVUV PublicBudgetTotalsCurrencyCode = "VUV"
-	PublicBudgetTotalsCurrencyCodeWST PublicBudgetTotalsCurrencyCode = "WST"
-	PublicBudgetTotalsCurrencyCodeXAF PublicBudgetTotalsCurrencyCode = "XAF"
-	PublicBudgetTotalsCurrencyCodeXAG PublicBudgetTotalsCurrencyCode = "XAG"
-	PublicBudgetTotalsCurrencyCodeXAU PublicBudgetTotalsCurrencyCode = "XAU"
-	PublicBudgetTotalsCurrencyCodeXBA PublicBudgetTotalsCurrencyCode = "XBA"
-	PublicBudgetTotalsCurrencyCodeXBB PublicBudgetTotalsCurrencyCode = "XBB"
-	PublicBudgetTotalsCurrencyCodeXBC PublicBudgetTotalsCurrencyCode = "XBC"
-	PublicBudgetTotalsCurrencyCodeXBD PublicBudgetTotalsCurrencyCode = "XBD"
-	PublicBudgetTotalsCurrencyCodeXCD PublicBudgetTotalsCurrencyCode = "XCD"
-	PublicBudgetTotalsCurrencyCodeXDR PublicBudgetTotalsCurrencyCode = "XDR"
-	PublicBudgetTotalsCurrencyCodeXOF PublicBudgetTotalsCurrencyCode = "XOF"
-	PublicBudgetTotalsCurrencyCodeXPD PublicBudgetTotalsCurrencyCode = "XPD"
-	PublicBudgetTotalsCurrencyCodeXPF PublicBudgetTotalsCurrencyCode = "XPF"
-	PublicBudgetTotalsCurrencyCodeXPT PublicBudgetTotalsCurrencyCode = "XPT"
-	PublicBudgetTotalsCurrencyCodeXSU PublicBudgetTotalsCurrencyCode = "XSU"
-	PublicBudgetTotalsCurrencyCodeXUA PublicBudgetTotalsCurrencyCode = "XUA"
-	PublicBudgetTotalsCurrencyCodeYER PublicBudgetTotalsCurrencyCode = "YER"
-	PublicBudgetTotalsCurrencyCodeZAR PublicBudgetTotalsCurrencyCode = "ZAR"
-	PublicBudgetTotalsCurrencyCodeZMW PublicBudgetTotalsCurrencyCode = "ZMW"
-	PublicBudgetTotalsCurrencyCodeZWL PublicBudgetTotalsCurrencyCode = "ZWL"
-)
-
-// Valid indicates whether the value is a known member of the PublicBudgetTotalsCurrencyCode enum.
-func (e PublicBudgetTotalsCurrencyCode) Valid() bool {
-	switch e {
-	case PublicBudgetTotalsCurrencyCodeAED:
-		return true
-	case PublicBudgetTotalsCurrencyCodeAFN:
-		return true
-	case PublicBudgetTotalsCurrencyCodeALL:
-		return true
-	case PublicBudgetTotalsCurrencyCodeAMD:
-		return true
-	case PublicBudgetTotalsCurrencyCodeANG:
-		return true
-	case PublicBudgetTotalsCurrencyCodeAOA:
-		return true
-	case PublicBudgetTotalsCurrencyCodeARS:
-		return true
-	case PublicBudgetTotalsCurrencyCodeAUD:
-		return true
-	case PublicBudgetTotalsCurrencyCodeAWG:
-		return true
-	case PublicBudgetTotalsCurrencyCodeAZN:
-		return true
-	case PublicBudgetTotalsCurrencyCodeBAM:
-		return true
-	case PublicBudgetTotalsCurrencyCodeBBD:
-		return true
-	case PublicBudgetTotalsCurrencyCodeBDT:
-		return true
-	case PublicBudgetTotalsCurrencyCodeBGN:
-		return true
-	case PublicBudgetTotalsCurrencyCodeBHD:
-		return true
-	case PublicBudgetTotalsCurrencyCodeBIF:
-		return true
-	case PublicBudgetTotalsCurrencyCodeBMD:
-		return true
-	case PublicBudgetTotalsCurrencyCodeBND:
-		return true
-	case PublicBudgetTotalsCurrencyCodeBOB:
-		return true
-	case PublicBudgetTotalsCurrencyCodeBOV:
-		return true
-	case PublicBudgetTotalsCurrencyCodeBRL:
-		return true
-	case PublicBudgetTotalsCurrencyCodeBSD:
-		return true
-	case PublicBudgetTotalsCurrencyCodeBTN:
-		return true
-	case PublicBudgetTotalsCurrencyCodeBWP:
-		return true
-	case PublicBudgetTotalsCurrencyCodeBYN:
-		return true
-	case PublicBudgetTotalsCurrencyCodeBZD:
-		return true
-	case PublicBudgetTotalsCurrencyCodeCAD:
-		return true
-	case PublicBudgetTotalsCurrencyCodeCDF:
-		return true
-	case PublicBudgetTotalsCurrencyCodeCHE:
-		return true
-	case PublicBudgetTotalsCurrencyCodeCHF:
-		return true
-	case PublicBudgetTotalsCurrencyCodeCHW:
-		return true
-	case PublicBudgetTotalsCurrencyCodeCLF:
-		return true
-	case PublicBudgetTotalsCurrencyCodeCLP:
-		return true
-	case PublicBudgetTotalsCurrencyCodeCNY:
-		return true
-	case PublicBudgetTotalsCurrencyCodeCOP:
-		return true
-	case PublicBudgetTotalsCurrencyCodeCOU:
-		return true
-	case PublicBudgetTotalsCurrencyCodeCRC:
-		return true
-	case PublicBudgetTotalsCurrencyCodeCUC:
-		return true
-	case PublicBudgetTotalsCurrencyCodeCUP:
-		return true
-	case PublicBudgetTotalsCurrencyCodeCVE:
-		return true
-	case PublicBudgetTotalsCurrencyCodeCZK:
-		return true
-	case PublicBudgetTotalsCurrencyCodeDJF:
-		return true
-	case PublicBudgetTotalsCurrencyCodeDKK:
-		return true
-	case PublicBudgetTotalsCurrencyCodeDOP:
-		return true
-	case PublicBudgetTotalsCurrencyCodeDZD:
-		return true
-	case PublicBudgetTotalsCurrencyCodeEGP:
-		return true
-	case PublicBudgetTotalsCurrencyCodeERN:
-		return true
-	case PublicBudgetTotalsCurrencyCodeETB:
-		return true
-	case PublicBudgetTotalsCurrencyCodeEUR:
-		return true
-	case PublicBudgetTotalsCurrencyCodeFJD:
-		return true
-	case PublicBudgetTotalsCurrencyCodeFKP:
-		return true
-	case PublicBudgetTotalsCurrencyCodeGBP:
-		return true
-	case PublicBudgetTotalsCurrencyCodeGEL:
-		return true
-	case PublicBudgetTotalsCurrencyCodeGHS:
-		return true
-	case PublicBudgetTotalsCurrencyCodeGIP:
-		return true
-	case PublicBudgetTotalsCurrencyCodeGMD:
-		return true
-	case PublicBudgetTotalsCurrencyCodeGNF:
-		return true
-	case PublicBudgetTotalsCurrencyCodeGTQ:
-		return true
-	case PublicBudgetTotalsCurrencyCodeGYD:
-		return true
-	case PublicBudgetTotalsCurrencyCodeHKD:
-		return true
-	case PublicBudgetTotalsCurrencyCodeHNL:
-		return true
-	case PublicBudgetTotalsCurrencyCodeHRK:
-		return true
-	case PublicBudgetTotalsCurrencyCodeHTG:
-		return true
-	case PublicBudgetTotalsCurrencyCodeHUF:
-		return true
-	case PublicBudgetTotalsCurrencyCodeIDR:
-		return true
-	case PublicBudgetTotalsCurrencyCodeILS:
-		return true
-	case PublicBudgetTotalsCurrencyCodeINR:
-		return true
-	case PublicBudgetTotalsCurrencyCodeIQD:
-		return true
-	case PublicBudgetTotalsCurrencyCodeIRR:
-		return true
-	case PublicBudgetTotalsCurrencyCodeISK:
-		return true
-	case PublicBudgetTotalsCurrencyCodeJMD:
-		return true
-	case PublicBudgetTotalsCurrencyCodeJOD:
-		return true
-	case PublicBudgetTotalsCurrencyCodeJPY:
-		return true
-	case PublicBudgetTotalsCurrencyCodeKES:
-		return true
-	case PublicBudgetTotalsCurrencyCodeKGS:
-		return true
-	case PublicBudgetTotalsCurrencyCodeKHR:
-		return true
-	case PublicBudgetTotalsCurrencyCodeKMF:
-		return true
-	case PublicBudgetTotalsCurrencyCodeKPW:
-		return true
-	case PublicBudgetTotalsCurrencyCodeKRW:
-		return true
-	case PublicBudgetTotalsCurrencyCodeKWD:
-		return true
-	case PublicBudgetTotalsCurrencyCodeKYD:
-		return true
-	case PublicBudgetTotalsCurrencyCodeKZT:
-		return true
-	case PublicBudgetTotalsCurrencyCodeLAK:
-		return true
-	case PublicBudgetTotalsCurrencyCodeLBP:
-		return true
-	case PublicBudgetTotalsCurrencyCodeLKR:
-		return true
-	case PublicBudgetTotalsCurrencyCodeLRD:
-		return true
-	case PublicBudgetTotalsCurrencyCodeLSL:
-		return true
-	case PublicBudgetTotalsCurrencyCodeLYD:
-		return true
-	case PublicBudgetTotalsCurrencyCodeMAD:
-		return true
-	case PublicBudgetTotalsCurrencyCodeMDL:
-		return true
-	case PublicBudgetTotalsCurrencyCodeMGA:
-		return true
-	case PublicBudgetTotalsCurrencyCodeMKD:
-		return true
-	case PublicBudgetTotalsCurrencyCodeMMK:
-		return true
-	case PublicBudgetTotalsCurrencyCodeMNT:
-		return true
-	case PublicBudgetTotalsCurrencyCodeMOP:
-		return true
-	case PublicBudgetTotalsCurrencyCodeMRU:
-		return true
-	case PublicBudgetTotalsCurrencyCodeMUR:
-		return true
-	case PublicBudgetTotalsCurrencyCodeMVR:
-		return true
-	case PublicBudgetTotalsCurrencyCodeMWK:
-		return true
-	case PublicBudgetTotalsCurrencyCodeMXN:
-		return true
-	case PublicBudgetTotalsCurrencyCodeMXV:
-		return true
-	case PublicBudgetTotalsCurrencyCodeMYR:
-		return true
-	case PublicBudgetTotalsCurrencyCodeMZN:
-		return true
-	case PublicBudgetTotalsCurrencyCodeNAD:
-		return true
-	case PublicBudgetTotalsCurrencyCodeNGN:
-		return true
-	case PublicBudgetTotalsCurrencyCodeNIO:
-		return true
-	case PublicBudgetTotalsCurrencyCodeNOK:
-		return true
-	case PublicBudgetTotalsCurrencyCodeNPR:
-		return true
-	case PublicBudgetTotalsCurrencyCodeNZD:
-		return true
-	case PublicBudgetTotalsCurrencyCodeOMR:
-		return true
-	case PublicBudgetTotalsCurrencyCodePAB:
-		return true
-	case PublicBudgetTotalsCurrencyCodePEN:
-		return true
-	case PublicBudgetTotalsCurrencyCodePGK:
-		return true
-	case PublicBudgetTotalsCurrencyCodePHP:
-		return true
-	case PublicBudgetTotalsCurrencyCodePKR:
-		return true
-	case PublicBudgetTotalsCurrencyCodePLN:
-		return true
-	case PublicBudgetTotalsCurrencyCodePYG:
-		return true
-	case PublicBudgetTotalsCurrencyCodeQAR:
-		return true
-	case PublicBudgetTotalsCurrencyCodeRON:
-		return true
-	case PublicBudgetTotalsCurrencyCodeRSD:
-		return true
-	case PublicBudgetTotalsCurrencyCodeRUB:
-		return true
-	case PublicBudgetTotalsCurrencyCodeRWF:
-		return true
-	case PublicBudgetTotalsCurrencyCodeSAR:
-		return true
-	case PublicBudgetTotalsCurrencyCodeSBD:
-		return true
-	case PublicBudgetTotalsCurrencyCodeSCR:
-		return true
-	case PublicBudgetTotalsCurrencyCodeSDG:
-		return true
-	case PublicBudgetTotalsCurrencyCodeSEK:
-		return true
-	case PublicBudgetTotalsCurrencyCodeSGD:
-		return true
-	case PublicBudgetTotalsCurrencyCodeSHP:
-		return true
-	case PublicBudgetTotalsCurrencyCodeSLL:
-		return true
-	case PublicBudgetTotalsCurrencyCodeSOS:
-		return true
-	case PublicBudgetTotalsCurrencyCodeSRD:
-		return true
-	case PublicBudgetTotalsCurrencyCodeSSP:
-		return true
-	case PublicBudgetTotalsCurrencyCodeSTN:
-		return true
-	case PublicBudgetTotalsCurrencyCodeSVC:
-		return true
-	case PublicBudgetTotalsCurrencyCodeSYP:
-		return true
-	case PublicBudgetTotalsCurrencyCodeSZL:
-		return true
-	case PublicBudgetTotalsCurrencyCodeTHB:
-		return true
-	case PublicBudgetTotalsCurrencyCodeTJS:
-		return true
-	case PublicBudgetTotalsCurrencyCodeTMT:
-		return true
-	case PublicBudgetTotalsCurrencyCodeTND:
-		return true
-	case PublicBudgetTotalsCurrencyCodeTOP:
-		return true
-	case PublicBudgetTotalsCurrencyCodeTRY:
-		return true
-	case PublicBudgetTotalsCurrencyCodeTTD:
-		return true
-	case PublicBudgetTotalsCurrencyCodeTWD:
-		return true
-	case PublicBudgetTotalsCurrencyCodeTZS:
-		return true
-	case PublicBudgetTotalsCurrencyCodeUAH:
-		return true
-	case PublicBudgetTotalsCurrencyCodeUGX:
-		return true
-	case PublicBudgetTotalsCurrencyCodeUSD:
-		return true
-	case PublicBudgetTotalsCurrencyCodeUSN:
-		return true
-	case PublicBudgetTotalsCurrencyCodeUYI:
-		return true
-	case PublicBudgetTotalsCurrencyCodeUYU:
-		return true
-	case PublicBudgetTotalsCurrencyCodeUZS:
-		return true
-	case PublicBudgetTotalsCurrencyCodeVEF:
-		return true
-	case PublicBudgetTotalsCurrencyCodeVND:
-		return true
-	case PublicBudgetTotalsCurrencyCodeVUV:
-		return true
-	case PublicBudgetTotalsCurrencyCodeWST:
-		return true
-	case PublicBudgetTotalsCurrencyCodeXAF:
-		return true
-	case PublicBudgetTotalsCurrencyCodeXAG:
-		return true
-	case PublicBudgetTotalsCurrencyCodeXAU:
-		return true
-	case PublicBudgetTotalsCurrencyCodeXBA:
-		return true
-	case PublicBudgetTotalsCurrencyCodeXBB:
-		return true
-	case PublicBudgetTotalsCurrencyCodeXBC:
-		return true
-	case PublicBudgetTotalsCurrencyCodeXBD:
-		return true
-	case PublicBudgetTotalsCurrencyCodeXCD:
-		return true
-	case PublicBudgetTotalsCurrencyCodeXDR:
-		return true
-	case PublicBudgetTotalsCurrencyCodeXOF:
-		return true
-	case PublicBudgetTotalsCurrencyCodeXPD:
-		return true
-	case PublicBudgetTotalsCurrencyCodeXPF:
-		return true
-	case PublicBudgetTotalsCurrencyCodeXPT:
-		return true
-	case PublicBudgetTotalsCurrencyCodeXSU:
-		return true
-	case PublicBudgetTotalsCurrencyCodeXUA:
-		return true
-	case PublicBudgetTotalsCurrencyCodeYER:
-		return true
-	case PublicBudgetTotalsCurrencyCodeZAR:
-		return true
-	case PublicBudgetTotalsCurrencyCodeZMW:
-		return true
-	case PublicBudgetTotalsCurrencyCodeZWL:
-		return true
-	default:
-		return false
-	}
-}
-
-// Defines values for PublicCalendarDatePropertyOperationFiscalYearStart.
-const (
-	PublicCalendarDatePropertyOperationFiscalYearStartAPRIL     PublicCalendarDatePropertyOperationFiscalYearStart = "APRIL"
-	PublicCalendarDatePropertyOperationFiscalYearStartAUGUST    PublicCalendarDatePropertyOperationFiscalYearStart = "AUGUST"
-	PublicCalendarDatePropertyOperationFiscalYearStartDECEMBER  PublicCalendarDatePropertyOperationFiscalYearStart = "DECEMBER"
-	PublicCalendarDatePropertyOperationFiscalYearStartFEBRUARY  PublicCalendarDatePropertyOperationFiscalYearStart = "FEBRUARY"
-	PublicCalendarDatePropertyOperationFiscalYearStartJANUARY   PublicCalendarDatePropertyOperationFiscalYearStart = "JANUARY"
-	PublicCalendarDatePropertyOperationFiscalYearStartJULY      PublicCalendarDatePropertyOperationFiscalYearStart = "JULY"
-	PublicCalendarDatePropertyOperationFiscalYearStartJUNE      PublicCalendarDatePropertyOperationFiscalYearStart = "JUNE"
-	PublicCalendarDatePropertyOperationFiscalYearStartMARCH     PublicCalendarDatePropertyOperationFiscalYearStart = "MARCH"
-	PublicCalendarDatePropertyOperationFiscalYearStartMAY       PublicCalendarDatePropertyOperationFiscalYearStart = "MAY"
-	PublicCalendarDatePropertyOperationFiscalYearStartNOVEMBER  PublicCalendarDatePropertyOperationFiscalYearStart = "NOVEMBER"
-	PublicCalendarDatePropertyOperationFiscalYearStartOCTOBER   PublicCalendarDatePropertyOperationFiscalYearStart = "OCTOBER"
-	PublicCalendarDatePropertyOperationFiscalYearStartSEPTEMBER PublicCalendarDatePropertyOperationFiscalYearStart = "SEPTEMBER"
-)
-
-// Valid indicates whether the value is a known member of the PublicCalendarDatePropertyOperationFiscalYearStart enum.
-func (e PublicCalendarDatePropertyOperationFiscalYearStart) Valid() bool {
-	switch e {
-	case PublicCalendarDatePropertyOperationFiscalYearStartAPRIL:
-		return true
-	case PublicCalendarDatePropertyOperationFiscalYearStartAUGUST:
-		return true
-	case PublicCalendarDatePropertyOperationFiscalYearStartDECEMBER:
-		return true
-	case PublicCalendarDatePropertyOperationFiscalYearStartFEBRUARY:
-		return true
-	case PublicCalendarDatePropertyOperationFiscalYearStartJANUARY:
-		return true
-	case PublicCalendarDatePropertyOperationFiscalYearStartJULY:
-		return true
-	case PublicCalendarDatePropertyOperationFiscalYearStartJUNE:
-		return true
-	case PublicCalendarDatePropertyOperationFiscalYearStartMARCH:
-		return true
-	case PublicCalendarDatePropertyOperationFiscalYearStartMAY:
-		return true
-	case PublicCalendarDatePropertyOperationFiscalYearStartNOVEMBER:
-		return true
-	case PublicCalendarDatePropertyOperationFiscalYearStartOCTOBER:
-		return true
-	case PublicCalendarDatePropertyOperationFiscalYearStartSEPTEMBER:
-		return true
-	default:
-		return false
-	}
-}
-
-// Defines values for PublicCalendarDatePropertyOperationOperationType.
-const (
-	PublicCalendarDatePropertyOperationOperationTypeCALENDARDATE PublicCalendarDatePropertyOperationOperationType = "CALENDAR_DATE"
-)
-
-// Valid indicates whether the value is a known member of the PublicCalendarDatePropertyOperationOperationType enum.
-func (e PublicCalendarDatePropertyOperationOperationType) Valid() bool {
-	switch e {
-	case PublicCalendarDatePropertyOperationOperationTypeCALENDARDATE:
-		return true
-	default:
-		return false
-	}
-}
-
-// Defines values for PublicChannelIntegrationMessageUpdateRequestStatusType.
-const (
-	PublicChannelIntegrationMessageUpdateRequestStatusTypeFAILED PublicChannelIntegrationMessageUpdateRequestStatusType = "FAILED"
-	PublicChannelIntegrationMessageUpdateRequestStatusTypeREAD   PublicChannelIntegrationMessageUpdateRequestStatusType = "READ"
-	PublicChannelIntegrationMessageUpdateRequestStatusTypeSENT   PublicChannelIntegrationMessageUpdateRequestStatusType = "SENT"
-)
-
-// Valid indicates whether the value is a known member of the PublicChannelIntegrationMessageUpdateRequestStatusType enum.
-func (e PublicChannelIntegrationMessageUpdateRequestStatusType) Valid() bool {
-	switch e {
-	case PublicChannelIntegrationMessageUpdateRequestStatusTypeFAILED:
-		return true
-	case PublicChannelIntegrationMessageUpdateRequestStatusTypeREAD:
-		return true
-	case PublicChannelIntegrationMessageUpdateRequestStatusTypeSENT:
-		return true
-	default:
-		return false
-	}
-}
-
-// Defines values for PublicClientClientType.
-const (
-	PublicClientClientTypeHUBSPOT     PublicClientClientType = "HUBSPOT"
-	PublicClientClientTypeINTEGRATION PublicClientClientType = "INTEGRATION"
-	PublicClientClientTypeSYSTEM      PublicClientClientType = "SYSTEM"
-	PublicClientClientTypeUNKNOWN     PublicClientClientType = "UNKNOWN"
-)
-
-// Valid indicates whether the value is a known member of the PublicClientClientType enum.
-func (e PublicClientClientType) Valid() bool {
-	switch e {
-	case PublicClientClientTypeHUBSPOT:
-		return true
-	case PublicClientClientTypeINTEGRATION:
-		return true
-	case PublicClientClientTypeSYSTEM:
-		return true
-	case PublicClientClientTypeUNKNOWN:
-		return true
-	default:
-		return false
-	}
-}
-
-// Defines values for PublicCommunicationSubscriptionFilterFilterType.
-const (
-	PublicCommunicationSubscriptionFilterFilterTypeCOMMUNICATIONSUBSCRIPTION PublicCommunicationSubscriptionFilterFilterType = "COMMUNICATION_SUBSCRIPTION"
-)
-
-// Valid indicates whether the value is a known member of the PublicCommunicationSubscriptionFilterFilterType enum.
-func (e PublicCommunicationSubscriptionFilterFilterType) Valid() bool {
-	switch e {
-	case PublicCommunicationSubscriptionFilterFilterTypeCOMMUNICATIONSUBSCRIPTION:
-		return true
-	default:
-		return false
-	}
-}
-
-// Defines values for PublicComparativeDatePropertyOperationOperationType.
-const (
-	PublicComparativeDatePropertyOperationOperationTypeCOMPARATIVEDATE PublicComparativeDatePropertyOperationOperationType = "COMPARATIVE_DATE"
-)
-
-// Valid indicates whether the value is a known member of the PublicComparativeDatePropertyOperationOperationType enum.
-func (e PublicComparativeDatePropertyOperationOperationType) Valid() bool {
-	switch e {
-	case PublicComparativeDatePropertyOperationOperationTypeCOMPARATIVEDATE:
-		return true
-	default:
-		return false
-	}
-}
-
-// Defines values for PublicComparativeNumberPropertyOperationOperationType.
-const (
-	PublicComparativeNumberPropertyOperationOperationTypeCOMPARATIVENUMBER PublicComparativeNumberPropertyOperationOperationType = "COMPARATIVE_NUMBER"
-)
-
-// Valid indicates whether the value is a known member of the PublicComparativeNumberPropertyOperationOperationType enum.
-func (e PublicComparativeNumberPropertyOperationOperationType) Valid() bool {
-	switch e {
-	case PublicComparativeNumberPropertyOperationOperationTypeCOMPARATIVENUMBER:
-		return true
-	default:
-		return false
-	}
-}
-
-// Defines values for PublicComparativePropertyUpdatedOperationOperationType.
-const (
-	PublicComparativePropertyUpdatedOperationOperationTypeCOMPARATIVEPROPERTYUPDATED PublicComparativePropertyUpdatedOperationOperationType = "COMPARATIVE_PROPERTY_UPDATED"
-)
-
-// Valid indicates whether the value is a known member of the PublicComparativePropertyUpdatedOperationOperationType enum.
-func (e PublicComparativePropertyUpdatedOperationOperationType) Valid() bool {
-	switch e {
-	case PublicComparativePropertyUpdatedOperationOperationTypeCOMPARATIVEPROPERTYUPDATED:
-		return true
-	default:
-		return false
-	}
-}
-
-// Defines values for PublicComparativeStringPropertyOperationOperationType.
-const (
-	PublicComparativeStringPropertyOperationOperationTypeCOMPARATIVESTRING PublicComparativeStringPropertyOperationOperationType = "COMPARATIVE_STRING"
-)
-
-// Valid indicates whether the value is a known member of the PublicComparativeStringPropertyOperationOperationType enum.
-func (e PublicComparativeStringPropertyOperationOperationType) Valid() bool {
-	switch e {
-	case PublicComparativeStringPropertyOperationOperationTypeCOMPARATIVESTRING:
-		return true
-	default:
-		return false
-	}
-}
-
-// Defines values for PublicConditionalSingleFieldDependencyDependencyType.
-const (
-	PublicConditionalSingleFieldDependencyDependencyTypeCONDITIONALSINGLEFIELD PublicConditionalSingleFieldDependencyDependencyType = "CONDITIONAL_SINGLE_FIELD"
-)
-
-// Valid indicates whether the value is a known member of the PublicConditionalSingleFieldDependencyDependencyType enum.
-func (e PublicConditionalSingleFieldDependencyDependencyType) Valid() bool {
-	switch e {
-	case PublicConditionalSingleFieldDependencyDependencyTypeCONDITIONALSINGLEFIELD:
-		return true
-	default:
-		return false
-	}
-}
-
-// Defines values for PublicConstantFilterFilterType.
-const (
-	PublicConstantFilterFilterTypeCONSTANT PublicConstantFilterFilterType = "CONSTANT"
-)
-
-// Valid indicates whether the value is a known member of the PublicConstantFilterFilterType enum.
-func (e PublicConstantFilterFilterType) Valid() bool {
-	switch e {
-	case PublicConstantFilterFilterTypeCONSTANT:
-		return true
-	default:
-		return false
-	}
-}
-
-// Defines values for PublicContactType.
-const (
-	PublicContactTypeCONTACT PublicContactType = "CONTACT"
-)
-
-// Valid indicates whether the value is a known member of the PublicContactType enum.
-func (e PublicContactType) Valid() bool {
-	switch e {
-	case PublicContactTypeCONTACT:
-		return true
-	default:
-		return false
-	}
-}
-
-// Defines values for PublicConversationsMessageDirection.
-const (
-	PublicConversationsMessageDirectionINCOMING PublicConversationsMessageDirection = "INCOMING"
-	PublicConversationsMessageDirectionOUTGOING PublicConversationsMessageDirection = "OUTGOING"
-)
-
-// Valid indicates whether the value is a known member of the PublicConversationsMessageDirection enum.
-func (e PublicConversationsMessageDirection) Valid() bool {
-	switch e {
-	case PublicConversationsMessageDirectionINCOMING:
-		return true
-	case PublicConversationsMessageDirectionOUTGOING:
-		return true
-	default:
-		return false
-	}
-}
-
-// Defines values for PublicConversationsMessageTruncationStatus.
-const (
-	PublicConversationsMessageTruncationStatusNOTTRUNCATED               PublicConversationsMessageTruncationStatus = "NOT_TRUNCATED"
-	PublicConversationsMessageTruncationStatusTRUNCATED                  PublicConversationsMessageTruncationStatus = "TRUNCATED"
-	PublicConversationsMessageTruncationStatusTRUNCATEDTOMOSTRECENTREPLY PublicConversationsMessageTruncationStatus = "TRUNCATED_TO_MOST_RECENT_REPLY"
-)
-
-// Valid indicates whether the value is a known member of the PublicConversationsMessageTruncationStatus enum.
-func (e PublicConversationsMessageTruncationStatus) Valid() bool {
-	switch e {
-	case PublicConversationsMessageTruncationStatusNOTTRUNCATED:
-		return true
-	case PublicConversationsMessageTruncationStatusTRUNCATED:
-		return true
-	case PublicConversationsMessageTruncationStatusTRUNCATEDTOMOSTRECENTREPLY:
-		return true
-	default:
-		return false
-	}
-}
-
-// Defines values for PublicConversationsMessageType.
-const (
-	PublicConversationsMessageTypeMESSAGE PublicConversationsMessageType = "MESSAGE"
-)
-
-// Valid indicates whether the value is a known member of the PublicConversationsMessageType enum.
-func (e PublicConversationsMessageType) Valid() bool {
-	switch e {
-	case PublicConversationsMessageTypeMESSAGE:
-		return true
-	default:
-		return false
-	}
-}
-
-// Defines values for PublicCtaAnalyticsFilterFilterType.
-const (
-	PublicCtaAnalyticsFilterFilterTypeCTA PublicCtaAnalyticsFilterFilterType = "CTA"
-)
-
-// Valid indicates whether the value is a known member of the PublicCtaAnalyticsFilterFilterType enum.
-func (e PublicCtaAnalyticsFilterFilterType) Valid() bool {
-	switch e {
-	case PublicCtaAnalyticsFilterFilterTypeCTA:
-		return true
-	default:
-		return false
-	}
-}
-
-// Defines values for PublicDatePointTimeType.
-const (
-	PublicDatePointTimeTypeDATE PublicDatePointTimeType = "DATE"
-)
-
-// Valid indicates whether the value is a known member of the PublicDatePointTimeType enum.
-func (e PublicDatePointTimeType) Valid() bool {
-	switch e {
-	case PublicDatePointTimeTypeDATE:
-		return true
-	default:
-		return false
-	}
-}
-
-// Defines values for PublicDatePropertyOperationOperationType.
-const (
-	PublicDatePropertyOperationOperationTypeDATE PublicDatePropertyOperationOperationType = "DATE"
-)
-
-// Valid indicates whether the value is a known member of the PublicDatePropertyOperationOperationType enum.
-func (e PublicDatePropertyOperationOperationType) Valid() bool {
-	switch e {
-	case PublicDatePropertyOperationOperationTypeDATE:
-		return true
-	default:
-		return false
-	}
-}
-
-// Defines values for PublicDateTimePropertyOperationOperationType.
-const (
-	PublicDateTimePropertyOperationOperationTypeDATETIME PublicDateTimePropertyOperationOperationType = "DATETIME"
-)
-
-// Valid indicates whether the value is a known member of the PublicDateTimePropertyOperationOperationType enum.
-func (e PublicDateTimePropertyOperationOperationType) Valid() bool {
-	switch e {
-	case PublicDateTimePropertyOperationOperationTypeDATETIME:
-		return true
-	default:
-		return false
-	}
-}
-
-// Defines values for PublicDeliveryIdentifierType.
-const (
-	PublicDeliveryIdentifierTypeCHANNELSPECIFICOPAQUEID PublicDeliveryIdentifierType = "CHANNEL_SPECIFIC_OPAQUE_ID"
-	PublicDeliveryIdentifierTypeHSEMAILADDRESS          PublicDeliveryIdentifierType = "HS_EMAIL_ADDRESS"
-	PublicDeliveryIdentifierTypeHSPHONENUMBER           PublicDeliveryIdentifierType = "HS_PHONE_NUMBER"
-	PublicDeliveryIdentifierTypeHSSHORTCODE             PublicDeliveryIdentifierType = "HS_SHORT_CODE"
-)
-
-// Valid indicates whether the value is a known member of the PublicDeliveryIdentifierType enum.
-func (e PublicDeliveryIdentifierType) Valid() bool {
-	switch e {
-	case PublicDeliveryIdentifierTypeCHANNELSPECIFICOPAQUEID:
-		return true
-	case PublicDeliveryIdentifierTypeHSEMAILADDRESS:
-		return true
-	case PublicDeliveryIdentifierTypeHSPHONENUMBER:
-		return true
-	case PublicDeliveryIdentifierTypeHSSHORTCODE:
-		return true
-	default:
-		return false
-	}
-}
-
-// Defines values for PublicEmailEmailTemplateMode.
-const (
-	PublicEmailEmailTemplateModeDESIGNMANAGER PublicEmailEmailTemplateMode = "DESIGN_MANAGER"
-	PublicEmailEmailTemplateModeDRAGANDDROP   PublicEmailEmailTemplateMode = "DRAG_AND_DROP"
-)
-
-// Valid indicates whether the value is a known member of the PublicEmailEmailTemplateMode enum.
-func (e PublicEmailEmailTemplateMode) Valid() bool {
-	switch e {
-	case PublicEmailEmailTemplateModeDESIGNMANAGER:
-		return true
-	case PublicEmailEmailTemplateModeDRAGANDDROP:
-		return true
-	default:
-		return false
-	}
-}
-
-// Defines values for PublicEmailLanguage.
-const (
-	PublicEmailLanguageAa     PublicEmailLanguage = "aa"
-	PublicEmailLanguageAb     PublicEmailLanguage = "ab"
-	PublicEmailLanguageAe     PublicEmailLanguage = "ae"
-	PublicEmailLanguageAf     PublicEmailLanguage = "af"
-	PublicEmailLanguageAfNa   PublicEmailLanguage = "af-na"
-	PublicEmailLanguageAfZa   PublicEmailLanguage = "af-za"
-	PublicEmailLanguageAgq    PublicEmailLanguage = "agq"
-	PublicEmailLanguageAgqCm  PublicEmailLanguage = "agq-cm"
-	PublicEmailLanguageAk     PublicEmailLanguage = "ak"
-	PublicEmailLanguageAkGh   PublicEmailLanguage = "ak-gh"
-	PublicEmailLanguageAm     PublicEmailLanguage = "am"
-	PublicEmailLanguageAmEt   PublicEmailLanguage = "am-et"
-	PublicEmailLanguageAn     PublicEmailLanguage = "an"
-	PublicEmailLanguageAnn    PublicEmailLanguage = "ann"
-	PublicEmailLanguageAnnNg  PublicEmailLanguage = "ann-ng"
-	PublicEmailLanguageAr     PublicEmailLanguage = "ar"
-	PublicEmailLanguageAr001  PublicEmailLanguage = "ar-001"
-	PublicEmailLanguageArAe   PublicEmailLanguage = "ar-ae"
-	PublicEmailLanguageArBh   PublicEmailLanguage = "ar-bh"
-	PublicEmailLanguageArDj   PublicEmailLanguage = "ar-dj"
-	PublicEmailLanguageArDz   PublicEmailLanguage = "ar-dz"
-	PublicEmailLanguageArEg   PublicEmailLanguage = "ar-eg"
-	PublicEmailLanguageArEh   PublicEmailLanguage = "ar-eh"
-	PublicEmailLanguageArEr   PublicEmailLanguage = "ar-er"
-	PublicEmailLanguageArIl   PublicEmailLanguage = "ar-il"
-	PublicEmailLanguageArIq   PublicEmailLanguage = "ar-iq"
-	PublicEmailLanguageArJo   PublicEmailLanguage = "ar-jo"
-	PublicEmailLanguageArKm   PublicEmailLanguage = "ar-km"
-	PublicEmailLanguageArKw   PublicEmailLanguage = "ar-kw"
-	PublicEmailLanguageArLb   PublicEmailLanguage = "ar-lb"
-	PublicEmailLanguageArLy   PublicEmailLanguage = "ar-ly"
-	PublicEmailLanguageArMa   PublicEmailLanguage = "ar-ma"
-	PublicEmailLanguageArMr   PublicEmailLanguage = "ar-mr"
-	PublicEmailLanguageArOm   PublicEmailLanguage = "ar-om"
-	PublicEmailLanguageArPs   PublicEmailLanguage = "ar-ps"
-	PublicEmailLanguageArQa   PublicEmailLanguage = "ar-qa"
-	PublicEmailLanguageArSa   PublicEmailLanguage = "ar-sa"
-	PublicEmailLanguageArSd   PublicEmailLanguage = "ar-sd"
-	PublicEmailLanguageArSo   PublicEmailLanguage = "ar-so"
-	PublicEmailLanguageArSs   PublicEmailLanguage = "ar-ss"
-	PublicEmailLanguageArSy   PublicEmailLanguage = "ar-sy"
-	PublicEmailLanguageArTd   PublicEmailLanguage = "ar-td"
-	PublicEmailLanguageArTn   PublicEmailLanguage = "ar-tn"
-	PublicEmailLanguageArYe   PublicEmailLanguage = "ar-ye"
-	PublicEmailLanguageAs     PublicEmailLanguage = "as"
-	PublicEmailLanguageAsIn   PublicEmailLanguage = "as-in"
-	PublicEmailLanguageAsa    PublicEmailLanguage = "asa"
-	PublicEmailLanguageAsaTz  PublicEmailLanguage = "asa-tz"
-	PublicEmailLanguageAst    PublicEmailLanguage = "ast"
-	PublicEmailLanguageAstEs  PublicEmailLanguage = "ast-es"
-	PublicEmailLanguageAv     PublicEmailLanguage = "av"
-	PublicEmailLanguageAy     PublicEmailLanguage = "ay"
-	PublicEmailLanguageAz     PublicEmailLanguage = "az"
-	PublicEmailLanguageAzAz   PublicEmailLanguage = "az-az"
-	PublicEmailLanguageBa     PublicEmailLanguage = "ba"
-	PublicEmailLanguageBal    PublicEmailLanguage = "bal"
-	PublicEmailLanguageBalPk  PublicEmailLanguage = "bal-pk"
-	PublicEmailLanguageBas    PublicEmailLanguage = "bas"
-	PublicEmailLanguageBasCm  PublicEmailLanguage = "bas-cm"
-	PublicEmailLanguageBe     PublicEmailLanguage = "be"
-	PublicEmailLanguageBeBy   PublicEmailLanguage = "be-by"
-	PublicEmailLanguageBem    PublicEmailLanguage = "bem"
-	PublicEmailLanguageBemZm  PublicEmailLanguage = "bem-zm"
-	PublicEmailLanguageBez    PublicEmailLanguage = "bez"
-	PublicEmailLanguageBezTz  PublicEmailLanguage = "bez-tz"
-	PublicEmailLanguageBg     PublicEmailLanguage = "bg"
-	PublicEmailLanguageBgBg   PublicEmailLanguage = "bg-bg"
-	PublicEmailLanguageBgc    PublicEmailLanguage = "bgc"
-	PublicEmailLanguageBgcIn  PublicEmailLanguage = "bgc-in"
-	PublicEmailLanguageBho    PublicEmailLanguage = "bho"
-	PublicEmailLanguageBhoIn  PublicEmailLanguage = "bho-in"
-	PublicEmailLanguageBi     PublicEmailLanguage = "bi"
-	PublicEmailLanguageBlo    PublicEmailLanguage = "blo"
-	PublicEmailLanguageBloBj  PublicEmailLanguage = "blo-bj"
-	PublicEmailLanguageBm     PublicEmailLanguage = "bm"
-	PublicEmailLanguageBmMl   PublicEmailLanguage = "bm-ml"
-	PublicEmailLanguageBn     PublicEmailLanguage = "bn"
-	PublicEmailLanguageBnBd   PublicEmailLanguage = "bn-bd"
-	PublicEmailLanguageBnIn   PublicEmailLanguage = "bn-in"
-	PublicEmailLanguageBo     PublicEmailLanguage = "bo"
-	PublicEmailLanguageBoCn   PublicEmailLanguage = "bo-cn"
-	PublicEmailLanguageBoIn   PublicEmailLanguage = "bo-in"
-	PublicEmailLanguageBr     PublicEmailLanguage = "br"
-	PublicEmailLanguageBrFr   PublicEmailLanguage = "br-fr"
-	PublicEmailLanguageBrx    PublicEmailLanguage = "brx"
-	PublicEmailLanguageBrxIn  PublicEmailLanguage = "brx-in"
-	PublicEmailLanguageBs     PublicEmailLanguage = "bs"
-	PublicEmailLanguageBsBa   PublicEmailLanguage = "bs-ba"
-	PublicEmailLanguageCa     PublicEmailLanguage = "ca"
-	PublicEmailLanguageCaAd   PublicEmailLanguage = "ca-ad"
-	PublicEmailLanguageCaEs   PublicEmailLanguage = "ca-es"
-	PublicEmailLanguageCaFr   PublicEmailLanguage = "ca-fr"
-	PublicEmailLanguageCaIt   PublicEmailLanguage = "ca-it"
-	PublicEmailLanguageCcp    PublicEmailLanguage = "ccp"
-	PublicEmailLanguageCcpBd  PublicEmailLanguage = "ccp-bd"
-	PublicEmailLanguageCcpIn  PublicEmailLanguage = "ccp-in"
-	PublicEmailLanguageCe     PublicEmailLanguage = "ce"
-	PublicEmailLanguageCeRu   PublicEmailLanguage = "ce-ru"
-	PublicEmailLanguageCeb    PublicEmailLanguage = "ceb"
-	PublicEmailLanguageCebPh  PublicEmailLanguage = "ceb-ph"
-	PublicEmailLanguageCgg    PublicEmailLanguage = "cgg"
-	PublicEmailLanguageCggUg  PublicEmailLanguage = "cgg-ug"
-	PublicEmailLanguageCh     PublicEmailLanguage = "ch"
-	PublicEmailLanguageChr    PublicEmailLanguage = "chr"
-	PublicEmailLanguageChrUs  PublicEmailLanguage = "chr-us"
-	PublicEmailLanguageCkb    PublicEmailLanguage = "ckb"
-	PublicEmailLanguageCkbIq  PublicEmailLanguage = "ckb-iq"
-	PublicEmailLanguageCkbIr  PublicEmailLanguage = "ckb-ir"
-	PublicEmailLanguageCo     PublicEmailLanguage = "co"
-	PublicEmailLanguageCr     PublicEmailLanguage = "cr"
-	PublicEmailLanguageCs     PublicEmailLanguage = "cs"
-	PublicEmailLanguageCsCz   PublicEmailLanguage = "cs-cz"
-	PublicEmailLanguageCsw    PublicEmailLanguage = "csw"
-	PublicEmailLanguageCswCa  PublicEmailLanguage = "csw-ca"
-	PublicEmailLanguageCu     PublicEmailLanguage = "cu"
-	PublicEmailLanguageCuRu   PublicEmailLanguage = "cu-ru"
-	PublicEmailLanguageCv     PublicEmailLanguage = "cv"
-	PublicEmailLanguageCvRu   PublicEmailLanguage = "cv-ru"
-	PublicEmailLanguageCy     PublicEmailLanguage = "cy"
-	PublicEmailLanguageCyGb   PublicEmailLanguage = "cy-gb"
-	PublicEmailLanguageDa     PublicEmailLanguage = "da"
-	PublicEmailLanguageDaDk   PublicEmailLanguage = "da-dk"
-	PublicEmailLanguageDaGl   PublicEmailLanguage = "da-gl"
-	PublicEmailLanguageDav    PublicEmailLanguage = "dav"
-	PublicEmailLanguageDavKe  PublicEmailLanguage = "dav-ke"
-	PublicEmailLanguageDe     PublicEmailLanguage = "de"
-	PublicEmailLanguageDeAt   PublicEmailLanguage = "de-at"
-	PublicEmailLanguageDeBe   PublicEmailLanguage = "de-be"
-	PublicEmailLanguageDeCh   PublicEmailLanguage = "de-ch"
-	PublicEmailLanguageDeDe   PublicEmailLanguage = "de-de"
-	PublicEmailLanguageDeGr   PublicEmailLanguage = "de-gr"
-	PublicEmailLanguageDeIt   PublicEmailLanguage = "de-it"
-	PublicEmailLanguageDeLi   PublicEmailLanguage = "de-li"
-	PublicEmailLanguageDeLu   PublicEmailLanguage = "de-lu"
-	PublicEmailLanguageDje    PublicEmailLanguage = "dje"
-	PublicEmailLanguageDjeNe  PublicEmailLanguage = "dje-ne"
-	PublicEmailLanguageDoi    PublicEmailLanguage = "doi"
-	PublicEmailLanguageDoiIn  PublicEmailLanguage = "doi-in"
-	PublicEmailLanguageDsb    PublicEmailLanguage = "dsb"
-	PublicEmailLanguageDsbDe  PublicEmailLanguage = "dsb-de"
-	PublicEmailLanguageDua    PublicEmailLanguage = "dua"
-	PublicEmailLanguageDuaCm  PublicEmailLanguage = "dua-cm"
-	PublicEmailLanguageDv     PublicEmailLanguage = "dv"
-	PublicEmailLanguageDyo    PublicEmailLanguage = "dyo"
-	PublicEmailLanguageDyoSn  PublicEmailLanguage = "dyo-sn"
-	PublicEmailLanguageDz     PublicEmailLanguage = "dz"
-	PublicEmailLanguageDzBt   PublicEmailLanguage = "dz-bt"
-	PublicEmailLanguageEbu    PublicEmailLanguage = "ebu"
-	PublicEmailLanguageEbuKe  PublicEmailLanguage = "ebu-ke"
-	PublicEmailLanguageEe     PublicEmailLanguage = "ee"
-	PublicEmailLanguageEeGh   PublicEmailLanguage = "ee-gh"
-	PublicEmailLanguageEeTg   PublicEmailLanguage = "ee-tg"
-	PublicEmailLanguageEl     PublicEmailLanguage = "el"
-	PublicEmailLanguageElCy   PublicEmailLanguage = "el-cy"
-	PublicEmailLanguageElGr   PublicEmailLanguage = "el-gr"
-	PublicEmailLanguageEn     PublicEmailLanguage = "en"
-	PublicEmailLanguageEn001  PublicEmailLanguage = "en-001"
-	PublicEmailLanguageEn150  PublicEmailLanguage = "en-150"
-	PublicEmailLanguageEnAe   PublicEmailLanguage = "en-ae"
-	PublicEmailLanguageEnAg   PublicEmailLanguage = "en-ag"
-	PublicEmailLanguageEnAi   PublicEmailLanguage = "en-ai"
-	PublicEmailLanguageEnAs   PublicEmailLanguage = "en-as"
-	PublicEmailLanguageEnAt   PublicEmailLanguage = "en-at"
-	PublicEmailLanguageEnAu   PublicEmailLanguage = "en-au"
-	PublicEmailLanguageEnBb   PublicEmailLanguage = "en-bb"
-	PublicEmailLanguageEnBe   PublicEmailLanguage = "en-be"
-	PublicEmailLanguageEnBi   PublicEmailLanguage = "en-bi"
-	PublicEmailLanguageEnBm   PublicEmailLanguage = "en-bm"
-	PublicEmailLanguageEnBs   PublicEmailLanguage = "en-bs"
-	PublicEmailLanguageEnBw   PublicEmailLanguage = "en-bw"
-	PublicEmailLanguageEnBz   PublicEmailLanguage = "en-bz"
-	PublicEmailLanguageEnCa   PublicEmailLanguage = "en-ca"
-	PublicEmailLanguageEnCc   PublicEmailLanguage = "en-cc"
-	PublicEmailLanguageEnCh   PublicEmailLanguage = "en-ch"
-	PublicEmailLanguageEnCk   PublicEmailLanguage = "en-ck"
-	PublicEmailLanguageEnCm   PublicEmailLanguage = "en-cm"
-	PublicEmailLanguageEnCn   PublicEmailLanguage = "en-cn"
-	PublicEmailLanguageEnCx   PublicEmailLanguage = "en-cx"
-	PublicEmailLanguageEnCy   PublicEmailLanguage = "en-cy"
-	PublicEmailLanguageEnCz   PublicEmailLanguage = "en-cz"
-	PublicEmailLanguageEnDe   PublicEmailLanguage = "en-de"
-	PublicEmailLanguageEnDg   PublicEmailLanguage = "en-dg"
-	PublicEmailLanguageEnDk   PublicEmailLanguage = "en-dk"
-	PublicEmailLanguageEnDm   PublicEmailLanguage = "en-dm"
-	PublicEmailLanguageEnEe   PublicEmailLanguage = "en-ee"
-	PublicEmailLanguageEnEg   PublicEmailLanguage = "en-eg"
-	PublicEmailLanguageEnEr   PublicEmailLanguage = "en-er"
-	PublicEmailLanguageEnEs   PublicEmailLanguage = "en-es"
-	PublicEmailLanguageEnFi   PublicEmailLanguage = "en-fi"
-	PublicEmailLanguageEnFj   PublicEmailLanguage = "en-fj"
-	PublicEmailLanguageEnFk   PublicEmailLanguage = "en-fk"
-	PublicEmailLanguageEnFm   PublicEmailLanguage = "en-fm"
-	PublicEmailLanguageEnFr   PublicEmailLanguage = "en-fr"
-	PublicEmailLanguageEnGb   PublicEmailLanguage = "en-gb"
-	PublicEmailLanguageEnGd   PublicEmailLanguage = "en-gd"
-	PublicEmailLanguageEnGg   PublicEmailLanguage = "en-gg"
-	PublicEmailLanguageEnGh   PublicEmailLanguage = "en-gh"
-	PublicEmailLanguageEnGi   PublicEmailLanguage = "en-gi"
-	PublicEmailLanguageEnGm   PublicEmailLanguage = "en-gm"
-	PublicEmailLanguageEnGs   PublicEmailLanguage = "en-gs"
-	PublicEmailLanguageEnGu   PublicEmailLanguage = "en-gu"
-	PublicEmailLanguageEnGy   PublicEmailLanguage = "en-gy"
-	PublicEmailLanguageEnHk   PublicEmailLanguage = "en-hk"
-	PublicEmailLanguageEnHu   PublicEmailLanguage = "en-hu"
-	PublicEmailLanguageEnId   PublicEmailLanguage = "en-id"
-	PublicEmailLanguageEnIe   PublicEmailLanguage = "en-ie"
-	PublicEmailLanguageEnIl   PublicEmailLanguage = "en-il"
-	PublicEmailLanguageEnIm   PublicEmailLanguage = "en-im"
-	PublicEmailLanguageEnIn   PublicEmailLanguage = "en-in"
-	PublicEmailLanguageEnIo   PublicEmailLanguage = "en-io"
-	PublicEmailLanguageEnIt   PublicEmailLanguage = "en-it"
-	PublicEmailLanguageEnJe   PublicEmailLanguage = "en-je"
-	PublicEmailLanguageEnJm   PublicEmailLanguage = "en-jm"
-	PublicEmailLanguageEnKe   PublicEmailLanguage = "en-ke"
-	PublicEmailLanguageEnKi   PublicEmailLanguage = "en-ki"
-	PublicEmailLanguageEnKn   PublicEmailLanguage = "en-kn"
-	PublicEmailLanguageEnKy   PublicEmailLanguage = "en-ky"
-	PublicEmailLanguageEnLc   PublicEmailLanguage = "en-lc"
-	PublicEmailLanguageEnLr   PublicEmailLanguage = "en-lr"
-	PublicEmailLanguageEnLs   PublicEmailLanguage = "en-ls"
-	PublicEmailLanguageEnLu   PublicEmailLanguage = "en-lu"
-	PublicEmailLanguageEnMg   PublicEmailLanguage = "en-mg"
-	PublicEmailLanguageEnMh   PublicEmailLanguage = "en-mh"
-	PublicEmailLanguageEnMo   PublicEmailLanguage = "en-mo"
-	PublicEmailLanguageEnMp   PublicEmailLanguage = "en-mp"
-	PublicEmailLanguageEnMs   PublicEmailLanguage = "en-ms"
-	PublicEmailLanguageEnMt   PublicEmailLanguage = "en-mt"
-	PublicEmailLanguageEnMu   PublicEmailLanguage = "en-mu"
-	PublicEmailLanguageEnMv   PublicEmailLanguage = "en-mv"
-	PublicEmailLanguageEnMw   PublicEmailLanguage = "en-mw"
-	PublicEmailLanguageEnMx   PublicEmailLanguage = "en-mx"
-	PublicEmailLanguageEnMy   PublicEmailLanguage = "en-my"
-	PublicEmailLanguageEnNa   PublicEmailLanguage = "en-na"
-	PublicEmailLanguageEnNf   PublicEmailLanguage = "en-nf"
-	PublicEmailLanguageEnNg   PublicEmailLanguage = "en-ng"
-	PublicEmailLanguageEnNl   PublicEmailLanguage = "en-nl"
-	PublicEmailLanguageEnNo   PublicEmailLanguage = "en-no"
-	PublicEmailLanguageEnNr   PublicEmailLanguage = "en-nr"
-	PublicEmailLanguageEnNu   PublicEmailLanguage = "en-nu"
-	PublicEmailLanguageEnNz   PublicEmailLanguage = "en-nz"
-	PublicEmailLanguageEnPg   PublicEmailLanguage = "en-pg"
-	PublicEmailLanguageEnPh   PublicEmailLanguage = "en-ph"
-	PublicEmailLanguageEnPk   PublicEmailLanguage = "en-pk"
-	PublicEmailLanguageEnPl   PublicEmailLanguage = "en-pl"
-	PublicEmailLanguageEnPn   PublicEmailLanguage = "en-pn"
-	PublicEmailLanguageEnPr   PublicEmailLanguage = "en-pr"
-	PublicEmailLanguageEnPt   PublicEmailLanguage = "en-pt"
-	PublicEmailLanguageEnPw   PublicEmailLanguage = "en-pw"
-	PublicEmailLanguageEnRo   PublicEmailLanguage = "en-ro"
-	PublicEmailLanguageEnRw   PublicEmailLanguage = "en-rw"
-	PublicEmailLanguageEnSb   PublicEmailLanguage = "en-sb"
-	PublicEmailLanguageEnSc   PublicEmailLanguage = "en-sc"
-	PublicEmailLanguageEnSd   PublicEmailLanguage = "en-sd"
-	PublicEmailLanguageEnSe   PublicEmailLanguage = "en-se"
-	PublicEmailLanguageEnSg   PublicEmailLanguage = "en-sg"
-	PublicEmailLanguageEnSh   PublicEmailLanguage = "en-sh"
-	PublicEmailLanguageEnSi   PublicEmailLanguage = "en-si"
-	PublicEmailLanguageEnSk   PublicEmailLanguage = "en-sk"
-	PublicEmailLanguageEnSl   PublicEmailLanguage = "en-sl"
-	PublicEmailLanguageEnSs   PublicEmailLanguage = "en-ss"
-	PublicEmailLanguageEnSx   PublicEmailLanguage = "en-sx"
-	PublicEmailLanguageEnSz   PublicEmailLanguage = "en-sz"
-	PublicEmailLanguageEnTc   PublicEmailLanguage = "en-tc"
-	PublicEmailLanguageEnTh   PublicEmailLanguage = "en-th"
-	PublicEmailLanguageEnTk   PublicEmailLanguage = "en-tk"
-	PublicEmailLanguageEnTn   PublicEmailLanguage = "en-tn"
-	PublicEmailLanguageEnTo   PublicEmailLanguage = "en-to"
-	PublicEmailLanguageEnTt   PublicEmailLanguage = "en-tt"
-	PublicEmailLanguageEnTv   PublicEmailLanguage = "en-tv"
-	PublicEmailLanguageEnTz   PublicEmailLanguage = "en-tz"
-	PublicEmailLanguageEnUg   PublicEmailLanguage = "en-ug"
-	PublicEmailLanguageEnUm   PublicEmailLanguage = "en-um"
-	PublicEmailLanguageEnUs   PublicEmailLanguage = "en-us"
-	PublicEmailLanguageEnVc   PublicEmailLanguage = "en-vc"
-	PublicEmailLanguageEnVg   PublicEmailLanguage = "en-vg"
-	PublicEmailLanguageEnVi   PublicEmailLanguage = "en-vi"
-	PublicEmailLanguageEnVn   PublicEmailLanguage = "en-vn"
-	PublicEmailLanguageEnVu   PublicEmailLanguage = "en-vu"
-	PublicEmailLanguageEnWs   PublicEmailLanguage = "en-ws"
-	PublicEmailLanguageEnZa   PublicEmailLanguage = "en-za"
-	PublicEmailLanguageEnZm   PublicEmailLanguage = "en-zm"
-	PublicEmailLanguageEnZw   PublicEmailLanguage = "en-zw"
-	PublicEmailLanguageEo     PublicEmailLanguage = "eo"
-	PublicEmailLanguageEo001  PublicEmailLanguage = "eo-001"
-	PublicEmailLanguageEs     PublicEmailLanguage = "es"
-	PublicEmailLanguageEs419  PublicEmailLanguage = "es-419"
-	PublicEmailLanguageEsAr   PublicEmailLanguage = "es-ar"
-	PublicEmailLanguageEsBo   PublicEmailLanguage = "es-bo"
-	PublicEmailLanguageEsBr   PublicEmailLanguage = "es-br"
-	PublicEmailLanguageEsBz   PublicEmailLanguage = "es-bz"
-	PublicEmailLanguageEsCl   PublicEmailLanguage = "es-cl"
-	PublicEmailLanguageEsCo   PublicEmailLanguage = "es-co"
-	PublicEmailLanguageEsCr   PublicEmailLanguage = "es-cr"
-	PublicEmailLanguageEsCu   PublicEmailLanguage = "es-cu"
-	PublicEmailLanguageEsDo   PublicEmailLanguage = "es-do"
-	PublicEmailLanguageEsEa   PublicEmailLanguage = "es-ea"
-	PublicEmailLanguageEsEc   PublicEmailLanguage = "es-ec"
-	PublicEmailLanguageEsEs   PublicEmailLanguage = "es-es"
-	PublicEmailLanguageEsGq   PublicEmailLanguage = "es-gq"
-	PublicEmailLanguageEsGt   PublicEmailLanguage = "es-gt"
-	PublicEmailLanguageEsHn   PublicEmailLanguage = "es-hn"
-	PublicEmailLanguageEsIc   PublicEmailLanguage = "es-ic"
-	PublicEmailLanguageEsMx   PublicEmailLanguage = "es-mx"
-	PublicEmailLanguageEsNi   PublicEmailLanguage = "es-ni"
-	PublicEmailLanguageEsPa   PublicEmailLanguage = "es-pa"
-	PublicEmailLanguageEsPe   PublicEmailLanguage = "es-pe"
-	PublicEmailLanguageEsPh   PublicEmailLanguage = "es-ph"
-	PublicEmailLanguageEsPr   PublicEmailLanguage = "es-pr"
-	PublicEmailLanguageEsPy   PublicEmailLanguage = "es-py"
-	PublicEmailLanguageEsSv   PublicEmailLanguage = "es-sv"
-	PublicEmailLanguageEsUs   PublicEmailLanguage = "es-us"
-	PublicEmailLanguageEsUy   PublicEmailLanguage = "es-uy"
-	PublicEmailLanguageEsVe   PublicEmailLanguage = "es-ve"
-	PublicEmailLanguageEt     PublicEmailLanguage = "et"
-	PublicEmailLanguageEtEe   PublicEmailLanguage = "et-ee"
-	PublicEmailLanguageEu     PublicEmailLanguage = "eu"
-	PublicEmailLanguageEuEs   PublicEmailLanguage = "eu-es"
-	PublicEmailLanguageEwo    PublicEmailLanguage = "ewo"
-	PublicEmailLanguageEwoCm  PublicEmailLanguage = "ewo-cm"
-	PublicEmailLanguageFa     PublicEmailLanguage = "fa"
-	PublicEmailLanguageFaAf   PublicEmailLanguage = "fa-af"
-	PublicEmailLanguageFaIr   PublicEmailLanguage = "fa-ir"
-	PublicEmailLanguageFf     PublicEmailLanguage = "ff"
-	PublicEmailLanguageFfBf   PublicEmailLanguage = "ff-bf"
-	PublicEmailLanguageFfCm   PublicEmailLanguage = "ff-cm"
-	PublicEmailLanguageFfGh   PublicEmailLanguage = "ff-gh"
-	PublicEmailLanguageFfGm   PublicEmailLanguage = "ff-gm"
-	PublicEmailLanguageFfGn   PublicEmailLanguage = "ff-gn"
-	PublicEmailLanguageFfGw   PublicEmailLanguage = "ff-gw"
-	PublicEmailLanguageFfLr   PublicEmailLanguage = "ff-lr"
-	PublicEmailLanguageFfMr   PublicEmailLanguage = "ff-mr"
-	PublicEmailLanguageFfNe   PublicEmailLanguage = "ff-ne"
-	PublicEmailLanguageFfNg   PublicEmailLanguage = "ff-ng"
-	PublicEmailLanguageFfSl   PublicEmailLanguage = "ff-sl"
-	PublicEmailLanguageFfSn   PublicEmailLanguage = "ff-sn"
-	PublicEmailLanguageFi     PublicEmailLanguage = "fi"
-	PublicEmailLanguageFiFi   PublicEmailLanguage = "fi-fi"
-	PublicEmailLanguageFil    PublicEmailLanguage = "fil"
-	PublicEmailLanguageFilPh  PublicEmailLanguage = "fil-ph"
-	PublicEmailLanguageFj     PublicEmailLanguage = "fj"
-	PublicEmailLanguageFo     PublicEmailLanguage = "fo"
-	PublicEmailLanguageFoDk   PublicEmailLanguage = "fo-dk"
-	PublicEmailLanguageFoFo   PublicEmailLanguage = "fo-fo"
-	PublicEmailLanguageFr     PublicEmailLanguage = "fr"
-	PublicEmailLanguageFrBe   PublicEmailLanguage = "fr-be"
-	PublicEmailLanguageFrBf   PublicEmailLanguage = "fr-bf"
-	PublicEmailLanguageFrBi   PublicEmailLanguage = "fr-bi"
-	PublicEmailLanguageFrBj   PublicEmailLanguage = "fr-bj"
-	PublicEmailLanguageFrBl   PublicEmailLanguage = "fr-bl"
-	PublicEmailLanguageFrCa   PublicEmailLanguage = "fr-ca"
-	PublicEmailLanguageFrCd   PublicEmailLanguage = "fr-cd"
-	PublicEmailLanguageFrCf   PublicEmailLanguage = "fr-cf"
-	PublicEmailLanguageFrCg   PublicEmailLanguage = "fr-cg"
-	PublicEmailLanguageFrCh   PublicEmailLanguage = "fr-ch"
-	PublicEmailLanguageFrCi   PublicEmailLanguage = "fr-ci"
-	PublicEmailLanguageFrCm   PublicEmailLanguage = "fr-cm"
-	PublicEmailLanguageFrDj   PublicEmailLanguage = "fr-dj"
-	PublicEmailLanguageFrDz   PublicEmailLanguage = "fr-dz"
-	PublicEmailLanguageFrFr   PublicEmailLanguage = "fr-fr"
-	PublicEmailLanguageFrGa   PublicEmailLanguage = "fr-ga"
-	PublicEmailLanguageFrGf   PublicEmailLanguage = "fr-gf"
-	PublicEmailLanguageFrGn   PublicEmailLanguage = "fr-gn"
-	PublicEmailLanguageFrGp   PublicEmailLanguage = "fr-gp"
-	PublicEmailLanguageFrGq   PublicEmailLanguage = "fr-gq"
-	PublicEmailLanguageFrHt   PublicEmailLanguage = "fr-ht"
-	PublicEmailLanguageFrKm   PublicEmailLanguage = "fr-km"
-	PublicEmailLanguageFrLu   PublicEmailLanguage = "fr-lu"
-	PublicEmailLanguageFrMa   PublicEmailLanguage = "fr-ma"
-	PublicEmailLanguageFrMc   PublicEmailLanguage = "fr-mc"
-	PublicEmailLanguageFrMf   PublicEmailLanguage = "fr-mf"
-	PublicEmailLanguageFrMg   PublicEmailLanguage = "fr-mg"
-	PublicEmailLanguageFrMl   PublicEmailLanguage = "fr-ml"
-	PublicEmailLanguageFrMq   PublicEmailLanguage = "fr-mq"
-	PublicEmailLanguageFrMr   PublicEmailLanguage = "fr-mr"
-	PublicEmailLanguageFrMu   PublicEmailLanguage = "fr-mu"
-	PublicEmailLanguageFrNc   PublicEmailLanguage = "fr-nc"
-	PublicEmailLanguageFrNe   PublicEmailLanguage = "fr-ne"
-	PublicEmailLanguageFrPf   PublicEmailLanguage = "fr-pf"
-	PublicEmailLanguageFrPm   PublicEmailLanguage = "fr-pm"
-	PublicEmailLanguageFrRe   PublicEmailLanguage = "fr-re"
-	PublicEmailLanguageFrRw   PublicEmailLanguage = "fr-rw"
-	PublicEmailLanguageFrSc   PublicEmailLanguage = "fr-sc"
-	PublicEmailLanguageFrSn   PublicEmailLanguage = "fr-sn"
-	PublicEmailLanguageFrSy   PublicEmailLanguage = "fr-sy"
-	PublicEmailLanguageFrTd   PublicEmailLanguage = "fr-td"
-	PublicEmailLanguageFrTg   PublicEmailLanguage = "fr-tg"
-	PublicEmailLanguageFrTn   PublicEmailLanguage = "fr-tn"
-	PublicEmailLanguageFrVu   PublicEmailLanguage = "fr-vu"
-	PublicEmailLanguageFrWf   PublicEmailLanguage = "fr-wf"
-	PublicEmailLanguageFrYt   PublicEmailLanguage = "fr-yt"
-	PublicEmailLanguageFrr    PublicEmailLanguage = "frr"
-	PublicEmailLanguageFrrDe  PublicEmailLanguage = "frr-de"
-	PublicEmailLanguageFur    PublicEmailLanguage = "fur"
-	PublicEmailLanguageFurIt  PublicEmailLanguage = "fur-it"
-	PublicEmailLanguageFy     PublicEmailLanguage = "fy"
-	PublicEmailLanguageFyNl   PublicEmailLanguage = "fy-nl"
-	PublicEmailLanguageGa     PublicEmailLanguage = "ga"
-	PublicEmailLanguageGaGb   PublicEmailLanguage = "ga-gb"
-	PublicEmailLanguageGaIe   PublicEmailLanguage = "ga-ie"
-	PublicEmailLanguageGaa    PublicEmailLanguage = "gaa"
-	PublicEmailLanguageGaaGh  PublicEmailLanguage = "gaa-gh"
-	PublicEmailLanguageGd     PublicEmailLanguage = "gd"
-	PublicEmailLanguageGdGb   PublicEmailLanguage = "gd-gb"
-	PublicEmailLanguageGl     PublicEmailLanguage = "gl"
-	PublicEmailLanguageGlEs   PublicEmailLanguage = "gl-es"
-	PublicEmailLanguageGn     PublicEmailLanguage = "gn"
-	PublicEmailLanguageGsw    PublicEmailLanguage = "gsw"
-	PublicEmailLanguageGswCh  PublicEmailLanguage = "gsw-ch"
-	PublicEmailLanguageGswFr  PublicEmailLanguage = "gsw-fr"
-	PublicEmailLanguageGswLi  PublicEmailLanguage = "gsw-li"
-	PublicEmailLanguageGu     PublicEmailLanguage = "gu"
-	PublicEmailLanguageGuIn   PublicEmailLanguage = "gu-in"
-	PublicEmailLanguageGuz    PublicEmailLanguage = "guz"
-	PublicEmailLanguageGuzKe  PublicEmailLanguage = "guz-ke"
-	PublicEmailLanguageGv     PublicEmailLanguage = "gv"
-	PublicEmailLanguageGvIm   PublicEmailLanguage = "gv-im"
-	PublicEmailLanguageHa     PublicEmailLanguage = "ha"
-	PublicEmailLanguageHaGh   PublicEmailLanguage = "ha-gh"
-	PublicEmailLanguageHaNe   PublicEmailLanguage = "ha-ne"
-	PublicEmailLanguageHaNg   PublicEmailLanguage = "ha-ng"
-	PublicEmailLanguageHaw    PublicEmailLanguage = "haw"
-	PublicEmailLanguageHawUs  PublicEmailLanguage = "haw-us"
-	PublicEmailLanguageHe     PublicEmailLanguage = "he"
-	PublicEmailLanguageHeIl   PublicEmailLanguage = "he-il"
-	PublicEmailLanguageHi     PublicEmailLanguage = "hi"
-	PublicEmailLanguageHiIn   PublicEmailLanguage = "hi-in"
-	PublicEmailLanguageHmn    PublicEmailLanguage = "hmn"
-	PublicEmailLanguageHo     PublicEmailLanguage = "ho"
-	PublicEmailLanguageHr     PublicEmailLanguage = "hr"
-	PublicEmailLanguageHrBa   PublicEmailLanguage = "hr-ba"
-	PublicEmailLanguageHrHr   PublicEmailLanguage = "hr-hr"
-	PublicEmailLanguageHsb    PublicEmailLanguage = "hsb"
-	PublicEmailLanguageHsbDe  PublicEmailLanguage = "hsb-de"
-	PublicEmailLanguageHt     PublicEmailLanguage = "ht"
-	PublicEmailLanguageHtHt   PublicEmailLanguage = "ht-ht"
-	PublicEmailLanguageHu     PublicEmailLanguage = "hu"
-	PublicEmailLanguageHuHu   PublicEmailLanguage = "hu-hu"
-	PublicEmailLanguageHy     PublicEmailLanguage = "hy"
-	PublicEmailLanguageHyAm   PublicEmailLanguage = "hy-am"
-	PublicEmailLanguageHz     PublicEmailLanguage = "hz"
-	PublicEmailLanguageIa     PublicEmailLanguage = "ia"
-	PublicEmailLanguageIa001  PublicEmailLanguage = "ia-001"
-	PublicEmailLanguageId     PublicEmailLanguage = "id"
-	PublicEmailLanguageIdId   PublicEmailLanguage = "id-id"
-	PublicEmailLanguageIe     PublicEmailLanguage = "ie"
-	PublicEmailLanguageIeEe   PublicEmailLanguage = "ie-ee"
-	PublicEmailLanguageIg     PublicEmailLanguage = "ig"
-	PublicEmailLanguageIgNg   PublicEmailLanguage = "ig-ng"
-	PublicEmailLanguageIi     PublicEmailLanguage = "ii"
-	PublicEmailLanguageIiCn   PublicEmailLanguage = "ii-cn"
-	PublicEmailLanguageIk     PublicEmailLanguage = "ik"
-	PublicEmailLanguageIo     PublicEmailLanguage = "io"
-	PublicEmailLanguageIs     PublicEmailLanguage = "is"
-	PublicEmailLanguageIsIs   PublicEmailLanguage = "is-is"
-	PublicEmailLanguageIt     PublicEmailLanguage = "it"
-	PublicEmailLanguageItCh   PublicEmailLanguage = "it-ch"
-	PublicEmailLanguageItIt   PublicEmailLanguage = "it-it"
-	PublicEmailLanguageItSm   PublicEmailLanguage = "it-sm"
-	PublicEmailLanguageItVa   PublicEmailLanguage = "it-va"
-	PublicEmailLanguageIu     PublicEmailLanguage = "iu"
-	PublicEmailLanguageJa     PublicEmailLanguage = "ja"
-	PublicEmailLanguageJaJp   PublicEmailLanguage = "ja-jp"
-	PublicEmailLanguageJgo    PublicEmailLanguage = "jgo"
-	PublicEmailLanguageJgoCm  PublicEmailLanguage = "jgo-cm"
-	PublicEmailLanguageJmc    PublicEmailLanguage = "jmc"
-	PublicEmailLanguageJmcTz  PublicEmailLanguage = "jmc-tz"
-	PublicEmailLanguageJv     PublicEmailLanguage = "jv"
-	PublicEmailLanguageJvId   PublicEmailLanguage = "jv-id"
-	PublicEmailLanguageKa     PublicEmailLanguage = "ka"
-	PublicEmailLanguageKaGe   PublicEmailLanguage = "ka-ge"
-	PublicEmailLanguageKab    PublicEmailLanguage = "kab"
-	PublicEmailLanguageKabDz  PublicEmailLanguage = "kab-dz"
-	PublicEmailLanguageKam    PublicEmailLanguage = "kam"
-	PublicEmailLanguageKamKe  PublicEmailLanguage = "kam-ke"
-	PublicEmailLanguageKar    PublicEmailLanguage = "kar"
-	PublicEmailLanguageKde    PublicEmailLanguage = "kde"
-	PublicEmailLanguageKdeTz  PublicEmailLanguage = "kde-tz"
-	PublicEmailLanguageKea    PublicEmailLanguage = "kea"
-	PublicEmailLanguageKeaCv  PublicEmailLanguage = "kea-cv"
-	PublicEmailLanguageKg     PublicEmailLanguage = "kg"
-	PublicEmailLanguageKgp    PublicEmailLanguage = "kgp"
-	PublicEmailLanguageKgpBr  PublicEmailLanguage = "kgp-br"
-	PublicEmailLanguageKh     PublicEmailLanguage = "kh"
-	PublicEmailLanguageKhq    PublicEmailLanguage = "khq"
-	PublicEmailLanguageKhqMl  PublicEmailLanguage = "khq-ml"
-	PublicEmailLanguageKi     PublicEmailLanguage = "ki"
-	PublicEmailLanguageKiKe   PublicEmailLanguage = "ki-ke"
-	PublicEmailLanguageKj     PublicEmailLanguage = "kj"
-	PublicEmailLanguageKk     PublicEmailLanguage = "kk"
-	PublicEmailLanguageKkKz   PublicEmailLanguage = "kk-kz"
-	PublicEmailLanguageKkj    PublicEmailLanguage = "kkj"
-	PublicEmailLanguageKkjCm  PublicEmailLanguage = "kkj-cm"
-	PublicEmailLanguageKl     PublicEmailLanguage = "kl"
-	PublicEmailLanguageKlGl   PublicEmailLanguage = "kl-gl"
-	PublicEmailLanguageKln    PublicEmailLanguage = "kln"
-	PublicEmailLanguageKlnKe  PublicEmailLanguage = "kln-ke"
-	PublicEmailLanguageKm     PublicEmailLanguage = "km"
-	PublicEmailLanguageKmKh   PublicEmailLanguage = "km-kh"
-	PublicEmailLanguageKn     PublicEmailLanguage = "kn"
-	PublicEmailLanguageKnIn   PublicEmailLanguage = "kn-in"
-	PublicEmailLanguageKo     PublicEmailLanguage = "ko"
-	PublicEmailLanguageKoCn   PublicEmailLanguage = "ko-cn"
-	PublicEmailLanguageKoKp   PublicEmailLanguage = "ko-kp"
-	PublicEmailLanguageKoKr   PublicEmailLanguage = "ko-kr"
-	PublicEmailLanguageKok    PublicEmailLanguage = "kok"
-	PublicEmailLanguageKokIn  PublicEmailLanguage = "kok-in"
-	PublicEmailLanguageKr     PublicEmailLanguage = "kr"
-	PublicEmailLanguageKs     PublicEmailLanguage = "ks"
-	PublicEmailLanguageKsIn   PublicEmailLanguage = "ks-in"
-	PublicEmailLanguageKsb    PublicEmailLanguage = "ksb"
-	PublicEmailLanguageKsbTz  PublicEmailLanguage = "ksb-tz"
-	PublicEmailLanguageKsf    PublicEmailLanguage = "ksf"
-	PublicEmailLanguageKsfCm  PublicEmailLanguage = "ksf-cm"
-	PublicEmailLanguageKsh    PublicEmailLanguage = "ksh"
-	PublicEmailLanguageKshDe  PublicEmailLanguage = "ksh-de"
-	PublicEmailLanguageKu     PublicEmailLanguage = "ku"
-	PublicEmailLanguageKuTr   PublicEmailLanguage = "ku-tr"
-	PublicEmailLanguageKv     PublicEmailLanguage = "kv"
-	PublicEmailLanguageKw     PublicEmailLanguage = "kw"
-	PublicEmailLanguageKwGb   PublicEmailLanguage = "kw-gb"
-	PublicEmailLanguageKxv    PublicEmailLanguage = "kxv"
-	PublicEmailLanguageKxvIn  PublicEmailLanguage = "kxv-in"
-	PublicEmailLanguageKy     PublicEmailLanguage = "ky"
-	PublicEmailLanguageKyKg   PublicEmailLanguage = "ky-kg"
-	PublicEmailLanguageLa     PublicEmailLanguage = "la"
-	PublicEmailLanguageLag    PublicEmailLanguage = "lag"
-	PublicEmailLanguageLagTz  PublicEmailLanguage = "lag-tz"
-	PublicEmailLanguageLb     PublicEmailLanguage = "lb"
-	PublicEmailLanguageLbLu   PublicEmailLanguage = "lb-lu"
-	PublicEmailLanguageLg     PublicEmailLanguage = "lg"
-	PublicEmailLanguageLgUg   PublicEmailLanguage = "lg-ug"
-	PublicEmailLanguageLi     PublicEmailLanguage = "li"
-	PublicEmailLanguageLij    PublicEmailLanguage = "lij"
-	PublicEmailLanguageLijIt  PublicEmailLanguage = "lij-it"
-	PublicEmailLanguageLkt    PublicEmailLanguage = "lkt"
-	PublicEmailLanguageLktUs  PublicEmailLanguage = "lkt-us"
-	PublicEmailLanguageLmo    PublicEmailLanguage = "lmo"
-	PublicEmailLanguageLmoIt  PublicEmailLanguage = "lmo-it"
-	PublicEmailLanguageLn     PublicEmailLanguage = "ln"
-	PublicEmailLanguageLnAo   PublicEmailLanguage = "ln-ao"
-	PublicEmailLanguageLnCd   PublicEmailLanguage = "ln-cd"
-	PublicEmailLanguageLnCf   PublicEmailLanguage = "ln-cf"
-	PublicEmailLanguageLnCg   PublicEmailLanguage = "ln-cg"
-	PublicEmailLanguageLo     PublicEmailLanguage = "lo"
-	PublicEmailLanguageLoLa   PublicEmailLanguage = "lo-la"
-	PublicEmailLanguageLrc    PublicEmailLanguage = "lrc"
-	PublicEmailLanguageLrcIq  PublicEmailLanguage = "lrc-iq"
-	PublicEmailLanguageLrcIr  PublicEmailLanguage = "lrc-ir"
-	PublicEmailLanguageLt     PublicEmailLanguage = "lt"
-	PublicEmailLanguageLtLt   PublicEmailLanguage = "lt-lt"
-	PublicEmailLanguageLu     PublicEmailLanguage = "lu"
-	PublicEmailLanguageLuCd   PublicEmailLanguage = "lu-cd"
-	PublicEmailLanguageLuo    PublicEmailLanguage = "luo"
-	PublicEmailLanguageLuoKe  PublicEmailLanguage = "luo-ke"
-	PublicEmailLanguageLuy    PublicEmailLanguage = "luy"
-	PublicEmailLanguageLuyKe  PublicEmailLanguage = "luy-ke"
-	PublicEmailLanguageLv     PublicEmailLanguage = "lv"
-	PublicEmailLanguageLvLv   PublicEmailLanguage = "lv-lv"
-	PublicEmailLanguageMai    PublicEmailLanguage = "mai"
-	PublicEmailLanguageMaiIn  PublicEmailLanguage = "mai-in"
-	PublicEmailLanguageMas    PublicEmailLanguage = "mas"
-	PublicEmailLanguageMasKe  PublicEmailLanguage = "mas-ke"
-	PublicEmailLanguageMasTz  PublicEmailLanguage = "mas-tz"
-	PublicEmailLanguageMdf    PublicEmailLanguage = "mdf"
-	PublicEmailLanguageMdfRu  PublicEmailLanguage = "mdf-ru"
-	PublicEmailLanguageMer    PublicEmailLanguage = "mer"
-	PublicEmailLanguageMerKe  PublicEmailLanguage = "mer-ke"
-	PublicEmailLanguageMfe    PublicEmailLanguage = "mfe"
-	PublicEmailLanguageMfeMu  PublicEmailLanguage = "mfe-mu"
-	PublicEmailLanguageMg     PublicEmailLanguage = "mg"
-	PublicEmailLanguageMgMg   PublicEmailLanguage = "mg-mg"
-	PublicEmailLanguageMgh    PublicEmailLanguage = "mgh"
-	PublicEmailLanguageMghMz  PublicEmailLanguage = "mgh-mz"
-	PublicEmailLanguageMgo    PublicEmailLanguage = "mgo"
-	PublicEmailLanguageMgoCm  PublicEmailLanguage = "mgo-cm"
-	PublicEmailLanguageMh     PublicEmailLanguage = "mh"
-	PublicEmailLanguageMi     PublicEmailLanguage = "mi"
-	PublicEmailLanguageMiNz   PublicEmailLanguage = "mi-nz"
-	PublicEmailLanguageMk     PublicEmailLanguage = "mk"
-	PublicEmailLanguageMkMk   PublicEmailLanguage = "mk-mk"
-	PublicEmailLanguageMl     PublicEmailLanguage = "ml"
-	PublicEmailLanguageMlIn   PublicEmailLanguage = "ml-in"
-	PublicEmailLanguageMn     PublicEmailLanguage = "mn"
-	PublicEmailLanguageMnMn   PublicEmailLanguage = "mn-mn"
-	PublicEmailLanguageMni    PublicEmailLanguage = "mni"
-	PublicEmailLanguageMniIn  PublicEmailLanguage = "mni-in"
-	PublicEmailLanguageMr     PublicEmailLanguage = "mr"
-	PublicEmailLanguageMrIn   PublicEmailLanguage = "mr-in"
-	PublicEmailLanguageMs     PublicEmailLanguage = "ms"
-	PublicEmailLanguageMsBn   PublicEmailLanguage = "ms-bn"
-	PublicEmailLanguageMsId   PublicEmailLanguage = "ms-id"
-	PublicEmailLanguageMsMy   PublicEmailLanguage = "ms-my"
-	PublicEmailLanguageMsSg   PublicEmailLanguage = "ms-sg"
-	PublicEmailLanguageMt     PublicEmailLanguage = "mt"
-	PublicEmailLanguageMtMt   PublicEmailLanguage = "mt-mt"
-	PublicEmailLanguageMua    PublicEmailLanguage = "mua"
-	PublicEmailLanguageMuaCm  PublicEmailLanguage = "mua-cm"
-	PublicEmailLanguageMy     PublicEmailLanguage = "my"
-	PublicEmailLanguageMyMm   PublicEmailLanguage = "my-mm"
-	PublicEmailLanguageMzn    PublicEmailLanguage = "mzn"
-	PublicEmailLanguageMznIr  PublicEmailLanguage = "mzn-ir"
-	PublicEmailLanguageNa     PublicEmailLanguage = "na"
-	PublicEmailLanguageNaq    PublicEmailLanguage = "naq"
-	PublicEmailLanguageNaqNa  PublicEmailLanguage = "naq-na"
-	PublicEmailLanguageNb     PublicEmailLanguage = "nb"
-	PublicEmailLanguageNbNo   PublicEmailLanguage = "nb-no"
-	PublicEmailLanguageNbSj   PublicEmailLanguage = "nb-sj"
-	PublicEmailLanguageNd     PublicEmailLanguage = "nd"
-	PublicEmailLanguageNdZw   PublicEmailLanguage = "nd-zw"
-	PublicEmailLanguageNds    PublicEmailLanguage = "nds"
-	PublicEmailLanguageNdsDe  PublicEmailLanguage = "nds-de"
-	PublicEmailLanguageNdsNl  PublicEmailLanguage = "nds-nl"
-	PublicEmailLanguageNe     PublicEmailLanguage = "ne"
-	PublicEmailLanguageNeIn   PublicEmailLanguage = "ne-in"
-	PublicEmailLanguageNeNp   PublicEmailLanguage = "ne-np"
-	PublicEmailLanguageNg     PublicEmailLanguage = "ng"
-	PublicEmailLanguageNl     PublicEmailLanguage = "nl"
-	PublicEmailLanguageNlAw   PublicEmailLanguage = "nl-aw"
-	PublicEmailLanguageNlBe   PublicEmailLanguage = "nl-be"
-	PublicEmailLanguageNlBq   PublicEmailLanguage = "nl-bq"
-	PublicEmailLanguageNlCh   PublicEmailLanguage = "nl-ch"
-	PublicEmailLanguageNlCw   PublicEmailLanguage = "nl-cw"
-	PublicEmailLanguageNlLu   PublicEmailLanguage = "nl-lu"
-	PublicEmailLanguageNlNl   PublicEmailLanguage = "nl-nl"
-	PublicEmailLanguageNlSr   PublicEmailLanguage = "nl-sr"
-	PublicEmailLanguageNlSx   PublicEmailLanguage = "nl-sx"
-	PublicEmailLanguageNmg    PublicEmailLanguage = "nmg"
-	PublicEmailLanguageNmgCm  PublicEmailLanguage = "nmg-cm"
-	PublicEmailLanguageNn     PublicEmailLanguage = "nn"
-	PublicEmailLanguageNnNo   PublicEmailLanguage = "nn-no"
-	PublicEmailLanguageNnh    PublicEmailLanguage = "nnh"
-	PublicEmailLanguageNnhCm  PublicEmailLanguage = "nnh-cm"
-	PublicEmailLanguageNo     PublicEmailLanguage = "no"
-	PublicEmailLanguageNoNo   PublicEmailLanguage = "no-no"
-	PublicEmailLanguageNqo    PublicEmailLanguage = "nqo"
-	PublicEmailLanguageNqoGn  PublicEmailLanguage = "nqo-gn"
-	PublicEmailLanguageNr     PublicEmailLanguage = "nr"
-	PublicEmailLanguageNso    PublicEmailLanguage = "nso"
-	PublicEmailLanguageNsoZa  PublicEmailLanguage = "nso-za"
-	PublicEmailLanguageNus    PublicEmailLanguage = "nus"
-	PublicEmailLanguageNusSs  PublicEmailLanguage = "nus-ss"
-	PublicEmailLanguageNv     PublicEmailLanguage = "nv"
-	PublicEmailLanguageNy     PublicEmailLanguage = "ny"
-	PublicEmailLanguageNyn    PublicEmailLanguage = "nyn"
-	PublicEmailLanguageNynUg  PublicEmailLanguage = "nyn-ug"
-	PublicEmailLanguageOc     PublicEmailLanguage = "oc"
-	PublicEmailLanguageOcEs   PublicEmailLanguage = "oc-es"
-	PublicEmailLanguageOcFr   PublicEmailLanguage = "oc-fr"
-	PublicEmailLanguageOj     PublicEmailLanguage = "oj"
-	PublicEmailLanguageOm     PublicEmailLanguage = "om"
-	PublicEmailLanguageOmEt   PublicEmailLanguage = "om-et"
-	PublicEmailLanguageOmKe   PublicEmailLanguage = "om-ke"
-	PublicEmailLanguageOr     PublicEmailLanguage = "or"
-	PublicEmailLanguageOrIn   PublicEmailLanguage = "or-in"
-	PublicEmailLanguageOs     PublicEmailLanguage = "os"
-	PublicEmailLanguageOsGe   PublicEmailLanguage = "os-ge"
-	PublicEmailLanguageOsRu   PublicEmailLanguage = "os-ru"
-	PublicEmailLanguagePa     PublicEmailLanguage = "pa"
-	PublicEmailLanguagePaIn   PublicEmailLanguage = "pa-in"
-	PublicEmailLanguagePaPk   PublicEmailLanguage = "pa-pk"
-	PublicEmailLanguagePcm    PublicEmailLanguage = "pcm"
-	PublicEmailLanguagePcmNg  PublicEmailLanguage = "pcm-ng"
-	PublicEmailLanguagePi     PublicEmailLanguage = "pi"
-	PublicEmailLanguagePis    PublicEmailLanguage = "pis"
-	PublicEmailLanguagePisSb  PublicEmailLanguage = "pis-sb"
-	PublicEmailLanguagePl     PublicEmailLanguage = "pl"
-	PublicEmailLanguagePlPl   PublicEmailLanguage = "pl-pl"
-	PublicEmailLanguagePrg    PublicEmailLanguage = "prg"
-	PublicEmailLanguagePrg001 PublicEmailLanguage = "prg-001"
-	PublicEmailLanguagePs     PublicEmailLanguage = "ps"
-	PublicEmailLanguagePsAf   PublicEmailLanguage = "ps-af"
-	PublicEmailLanguagePsPk   PublicEmailLanguage = "ps-pk"
-	PublicEmailLanguagePt     PublicEmailLanguage = "pt"
-	PublicEmailLanguagePtAo   PublicEmailLanguage = "pt-ao"
-	PublicEmailLanguagePtBr   PublicEmailLanguage = "pt-br"
-	PublicEmailLanguagePtCh   PublicEmailLanguage = "pt-ch"
-	PublicEmailLanguagePtCv   PublicEmailLanguage = "pt-cv"
-	PublicEmailLanguagePtGq   PublicEmailLanguage = "pt-gq"
-	PublicEmailLanguagePtGw   PublicEmailLanguage = "pt-gw"
-	PublicEmailLanguagePtLu   PublicEmailLanguage = "pt-lu"
-	PublicEmailLanguagePtMo   PublicEmailLanguage = "pt-mo"
-	PublicEmailLanguagePtMz   PublicEmailLanguage = "pt-mz"
-	PublicEmailLanguagePtPt   PublicEmailLanguage = "pt-pt"
-	PublicEmailLanguagePtSt   PublicEmailLanguage = "pt-st"
-	PublicEmailLanguagePtTl   PublicEmailLanguage = "pt-tl"
-	PublicEmailLanguageQu     PublicEmailLanguage = "qu"
-	PublicEmailLanguageQuBo   PublicEmailLanguage = "qu-bo"
-	PublicEmailLanguageQuEc   PublicEmailLanguage = "qu-ec"
-	PublicEmailLanguageQuPe   PublicEmailLanguage = "qu-pe"
-	PublicEmailLanguageRaj    PublicEmailLanguage = "raj"
-	PublicEmailLanguageRajIn  PublicEmailLanguage = "raj-in"
-	PublicEmailLanguageRm     PublicEmailLanguage = "rm"
-	PublicEmailLanguageRmCh   PublicEmailLanguage = "rm-ch"
-	PublicEmailLanguageRn     PublicEmailLanguage = "rn"
-	PublicEmailLanguageRnBi   PublicEmailLanguage = "rn-bi"
-	PublicEmailLanguageRo     PublicEmailLanguage = "ro"
-	PublicEmailLanguageRoMd   PublicEmailLanguage = "ro-md"
-	PublicEmailLanguageRoRo   PublicEmailLanguage = "ro-ro"
-	PublicEmailLanguageRof    PublicEmailLanguage = "rof"
-	PublicEmailLanguageRofTz  PublicEmailLanguage = "rof-tz"
-	PublicEmailLanguageRu     PublicEmailLanguage = "ru"
-	PublicEmailLanguageRuBy   PublicEmailLanguage = "ru-by"
-	PublicEmailLanguageRuKg   PublicEmailLanguage = "ru-kg"
-	PublicEmailLanguageRuKz   PublicEmailLanguage = "ru-kz"
-	PublicEmailLanguageRuMd   PublicEmailLanguage = "ru-md"
-	PublicEmailLanguageRuRu   PublicEmailLanguage = "ru-ru"
-	PublicEmailLanguageRuUa   PublicEmailLanguage = "ru-ua"
-	PublicEmailLanguageRw     PublicEmailLanguage = "rw"
-	PublicEmailLanguageRwRw   PublicEmailLanguage = "rw-rw"
-	PublicEmailLanguageRwk    PublicEmailLanguage = "rwk"
-	PublicEmailLanguageRwkTz  PublicEmailLanguage = "rwk-tz"
-	PublicEmailLanguageSa     PublicEmailLanguage = "sa"
-	PublicEmailLanguageSaIn   PublicEmailLanguage = "sa-in"
-	PublicEmailLanguageSah    PublicEmailLanguage = "sah"
-	PublicEmailLanguageSahRu  PublicEmailLanguage = "sah-ru"
-	PublicEmailLanguageSaq    PublicEmailLanguage = "saq"
-	PublicEmailLanguageSaqKe  PublicEmailLanguage = "saq-ke"
-	PublicEmailLanguageSat    PublicEmailLanguage = "sat"
-	PublicEmailLanguageSatIn  PublicEmailLanguage = "sat-in"
-	PublicEmailLanguageSbp    PublicEmailLanguage = "sbp"
-	PublicEmailLanguageSbpTz  PublicEmailLanguage = "sbp-tz"
-	PublicEmailLanguageSc     PublicEmailLanguage = "sc"
-	PublicEmailLanguageScIt   PublicEmailLanguage = "sc-it"
-	PublicEmailLanguageSd     PublicEmailLanguage = "sd"
-	PublicEmailLanguageSdIn   PublicEmailLanguage = "sd-in"
-	PublicEmailLanguageSdPk   PublicEmailLanguage = "sd-pk"
-	PublicEmailLanguageSe     PublicEmailLanguage = "se"
-	PublicEmailLanguageSeFi   PublicEmailLanguage = "se-fi"
-	PublicEmailLanguageSeNo   PublicEmailLanguage = "se-no"
-	PublicEmailLanguageSeSe   PublicEmailLanguage = "se-se"
-	PublicEmailLanguageSeh    PublicEmailLanguage = "seh"
-	PublicEmailLanguageSehMz  PublicEmailLanguage = "seh-mz"
-	PublicEmailLanguageSes    PublicEmailLanguage = "ses"
-	PublicEmailLanguageSesMl  PublicEmailLanguage = "ses-ml"
-	PublicEmailLanguageSg     PublicEmailLanguage = "sg"
-	PublicEmailLanguageSgCf   PublicEmailLanguage = "sg-cf"
-	PublicEmailLanguageShi    PublicEmailLanguage = "shi"
-	PublicEmailLanguageShiMa  PublicEmailLanguage = "shi-ma"
-	PublicEmailLanguageSi     PublicEmailLanguage = "si"
-	PublicEmailLanguageSiLk   PublicEmailLanguage = "si-lk"
-	PublicEmailLanguageSk     PublicEmailLanguage = "sk"
-	PublicEmailLanguageSkSk   PublicEmailLanguage = "sk-sk"
-	PublicEmailLanguageSl     PublicEmailLanguage = "sl"
-	PublicEmailLanguageSlSi   PublicEmailLanguage = "sl-si"
-	PublicEmailLanguageSm     PublicEmailLanguage = "sm"
-	PublicEmailLanguageSmn    PublicEmailLanguage = "smn"
-	PublicEmailLanguageSmnFi  PublicEmailLanguage = "smn-fi"
-	PublicEmailLanguageSms    PublicEmailLanguage = "sms"
-	PublicEmailLanguageSmsFi  PublicEmailLanguage = "sms-fi"
-	PublicEmailLanguageSn     PublicEmailLanguage = "sn"
-	PublicEmailLanguageSnZw   PublicEmailLanguage = "sn-zw"
-	PublicEmailLanguageSo     PublicEmailLanguage = "so"
-	PublicEmailLanguageSoDj   PublicEmailLanguage = "so-dj"
-	PublicEmailLanguageSoEt   PublicEmailLanguage = "so-et"
-	PublicEmailLanguageSoKe   PublicEmailLanguage = "so-ke"
-	PublicEmailLanguageSoSo   PublicEmailLanguage = "so-so"
-	PublicEmailLanguageSq     PublicEmailLanguage = "sq"
-	PublicEmailLanguageSqAl   PublicEmailLanguage = "sq-al"
-	PublicEmailLanguageSqMk   PublicEmailLanguage = "sq-mk"
-	PublicEmailLanguageSqXk   PublicEmailLanguage = "sq-xk"
-	PublicEmailLanguageSr     PublicEmailLanguage = "sr"
-	PublicEmailLanguageSrBa   PublicEmailLanguage = "sr-ba"
-	PublicEmailLanguageSrCs   PublicEmailLanguage = "sr-cs"
-	PublicEmailLanguageSrMe   PublicEmailLanguage = "sr-me"
-	PublicEmailLanguageSrRs   PublicEmailLanguage = "sr-rs"
-	PublicEmailLanguageSrXk   PublicEmailLanguage = "sr-xk"
-	PublicEmailLanguageSs     PublicEmailLanguage = "ss"
-	PublicEmailLanguageSt     PublicEmailLanguage = "st"
-	PublicEmailLanguageStLs   PublicEmailLanguage = "st-ls"
-	PublicEmailLanguageStZa   PublicEmailLanguage = "st-za"
-	PublicEmailLanguageSu     PublicEmailLanguage = "su"
-	PublicEmailLanguageSuId   PublicEmailLanguage = "su-id"
-	PublicEmailLanguageSv     PublicEmailLanguage = "sv"
-	PublicEmailLanguageSvAx   PublicEmailLanguage = "sv-ax"
-	PublicEmailLanguageSvFi   PublicEmailLanguage = "sv-fi"
-	PublicEmailLanguageSvSe   PublicEmailLanguage = "sv-se"
-	PublicEmailLanguageSw     PublicEmailLanguage = "sw"
-	PublicEmailLanguageSwCd   PublicEmailLanguage = "sw-cd"
-	PublicEmailLanguageSwKe   PublicEmailLanguage = "sw-ke"
-	PublicEmailLanguageSwTz   PublicEmailLanguage = "sw-tz"
-	PublicEmailLanguageSwUg   PublicEmailLanguage = "sw-ug"
-	PublicEmailLanguageSy     PublicEmailLanguage = "sy"
-	PublicEmailLanguageSyr    PublicEmailLanguage = "syr"
-	PublicEmailLanguageSyrIq  PublicEmailLanguage = "syr-iq"
-	PublicEmailLanguageSyrSy  PublicEmailLanguage = "syr-sy"
-	PublicEmailLanguageSzl    PublicEmailLanguage = "szl"
-	PublicEmailLanguageSzlPl  PublicEmailLanguage = "szl-pl"
-	PublicEmailLanguageTa     PublicEmailLanguage = "ta"
-	PublicEmailLanguageTaIn   PublicEmailLanguage = "ta-in"
-	PublicEmailLanguageTaLk   PublicEmailLanguage = "ta-lk"
-	PublicEmailLanguageTaMy   PublicEmailLanguage = "ta-my"
-	PublicEmailLanguageTaSg   PublicEmailLanguage = "ta-sg"
-	PublicEmailLanguageTe     PublicEmailLanguage = "te"
-	PublicEmailLanguageTeIn   PublicEmailLanguage = "te-in"
-	PublicEmailLanguageTeo    PublicEmailLanguage = "teo"
-	PublicEmailLanguageTeoKe  PublicEmailLanguage = "teo-ke"
-	PublicEmailLanguageTeoUg  PublicEmailLanguage = "teo-ug"
-	PublicEmailLanguageTg     PublicEmailLanguage = "tg"
-	PublicEmailLanguageTgTj   PublicEmailLanguage = "tg-tj"
-	PublicEmailLanguageTh     PublicEmailLanguage = "th"
-	PublicEmailLanguageThTh   PublicEmailLanguage = "th-th"
-	PublicEmailLanguageTi     PublicEmailLanguage = "ti"
-	PublicEmailLanguageTiEr   PublicEmailLanguage = "ti-er"
-	PublicEmailLanguageTiEt   PublicEmailLanguage = "ti-et"
-	PublicEmailLanguageTk     PublicEmailLanguage = "tk"
-	PublicEmailLanguageTkTm   PublicEmailLanguage = "tk-tm"
-	PublicEmailLanguageTl     PublicEmailLanguage = "tl"
-	PublicEmailLanguageTn     PublicEmailLanguage = "tn"
-	PublicEmailLanguageTnBw   PublicEmailLanguage = "tn-bw"
-	PublicEmailLanguageTnZa   PublicEmailLanguage = "tn-za"
-	PublicEmailLanguageTo     PublicEmailLanguage = "to"
-	PublicEmailLanguageToTo   PublicEmailLanguage = "to-to"
-	PublicEmailLanguageTok    PublicEmailLanguage = "tok"
-	PublicEmailLanguageTok001 PublicEmailLanguage = "tok-001"
-	PublicEmailLanguageTr     PublicEmailLanguage = "tr"
-	PublicEmailLanguageTrCy   PublicEmailLanguage = "tr-cy"
-	PublicEmailLanguageTrTr   PublicEmailLanguage = "tr-tr"
-	PublicEmailLanguageTs     PublicEmailLanguage = "ts"
-	PublicEmailLanguageTt     PublicEmailLanguage = "tt"
-	PublicEmailLanguageTtRu   PublicEmailLanguage = "tt-ru"
-	PublicEmailLanguageTw     PublicEmailLanguage = "tw"
-	PublicEmailLanguageTwq    PublicEmailLanguage = "twq"
-	PublicEmailLanguageTwqNe  PublicEmailLanguage = "twq-ne"
-	PublicEmailLanguageTy     PublicEmailLanguage = "ty"
-	PublicEmailLanguageTzm    PublicEmailLanguage = "tzm"
-	PublicEmailLanguageTzmMa  PublicEmailLanguage = "tzm-ma"
-	PublicEmailLanguageUg     PublicEmailLanguage = "ug"
-	PublicEmailLanguageUgCn   PublicEmailLanguage = "ug-cn"
-	PublicEmailLanguageUk     PublicEmailLanguage = "uk"
-	PublicEmailLanguageUkUa   PublicEmailLanguage = "uk-ua"
-	PublicEmailLanguageUr     PublicEmailLanguage = "ur"
-	PublicEmailLanguageUrIn   PublicEmailLanguage = "ur-in"
-	PublicEmailLanguageUrPk   PublicEmailLanguage = "ur-pk"
-	PublicEmailLanguageUz     PublicEmailLanguage = "uz"
-	PublicEmailLanguageUzAf   PublicEmailLanguage = "uz-af"
-	PublicEmailLanguageUzUz   PublicEmailLanguage = "uz-uz"
-	PublicEmailLanguageVai    PublicEmailLanguage = "vai"
-	PublicEmailLanguageVaiLr  PublicEmailLanguage = "vai-lr"
-	PublicEmailLanguageVe     PublicEmailLanguage = "ve"
-	PublicEmailLanguageVec    PublicEmailLanguage = "vec"
-	PublicEmailLanguageVecIt  PublicEmailLanguage = "vec-it"
-	PublicEmailLanguageVi     PublicEmailLanguage = "vi"
-	PublicEmailLanguageViVn   PublicEmailLanguage = "vi-vn"
-	PublicEmailLanguageVmw    PublicEmailLanguage = "vmw"
-	PublicEmailLanguageVmwMz  PublicEmailLanguage = "vmw-mz"
-	PublicEmailLanguageVo     PublicEmailLanguage = "vo"
-	PublicEmailLanguageVo001  PublicEmailLanguage = "vo-001"
-	PublicEmailLanguageVun    PublicEmailLanguage = "vun"
-	PublicEmailLanguageVunTz  PublicEmailLanguage = "vun-tz"
-	PublicEmailLanguageWa     PublicEmailLanguage = "wa"
-	PublicEmailLanguageWae    PublicEmailLanguage = "wae"
-	PublicEmailLanguageWaeCh  PublicEmailLanguage = "wae-ch"
-	PublicEmailLanguageWo     PublicEmailLanguage = "wo"
-	PublicEmailLanguageWoSn   PublicEmailLanguage = "wo-sn"
-	PublicEmailLanguageXh     PublicEmailLanguage = "xh"
-	PublicEmailLanguageXhZa   PublicEmailLanguage = "xh-za"
-	PublicEmailLanguageXnr    PublicEmailLanguage = "xnr"
-	PublicEmailLanguageXnrIn  PublicEmailLanguage = "xnr-in"
-	PublicEmailLanguageXog    PublicEmailLanguage = "xog"
-	PublicEmailLanguageXogUg  PublicEmailLanguage = "xog-ug"
-	PublicEmailLanguageYav    PublicEmailLanguage = "yav"
-	PublicEmailLanguageYavCm  PublicEmailLanguage = "yav-cm"
-	PublicEmailLanguageYi     PublicEmailLanguage = "yi"
-	PublicEmailLanguageYi001  PublicEmailLanguage = "yi-001"
-	PublicEmailLanguageYiUa   PublicEmailLanguage = "yi-ua"
-	PublicEmailLanguageYo     PublicEmailLanguage = "yo"
-	PublicEmailLanguageYoBj   PublicEmailLanguage = "yo-bj"
-	PublicEmailLanguageYoNg   PublicEmailLanguage = "yo-ng"
-	PublicEmailLanguageYrl    PublicEmailLanguage = "yrl"
-	PublicEmailLanguageYrlBr  PublicEmailLanguage = "yrl-br"
-	PublicEmailLanguageYrlCo  PublicEmailLanguage = "yrl-co"
-	PublicEmailLanguageYrlVe  PublicEmailLanguage = "yrl-ve"
-	PublicEmailLanguageYue    PublicEmailLanguage = "yue"
-	PublicEmailLanguageYueCn  PublicEmailLanguage = "yue-cn"
-	PublicEmailLanguageYueHk  PublicEmailLanguage = "yue-hk"
-	PublicEmailLanguageYueMo  PublicEmailLanguage = "yue-mo"
-	PublicEmailLanguageZa     PublicEmailLanguage = "za"
-	PublicEmailLanguageZaCn   PublicEmailLanguage = "za-cn"
-	PublicEmailLanguageZgh    PublicEmailLanguage = "zgh"
-	PublicEmailLanguageZghMa  PublicEmailLanguage = "zgh-ma"
-	PublicEmailLanguageZh     PublicEmailLanguage = "zh"
-	PublicEmailLanguageZhCn   PublicEmailLanguage = "zh-cn"
-	PublicEmailLanguageZhHans PublicEmailLanguage = "zh-hans"
-	PublicEmailLanguageZhHant PublicEmailLanguage = "zh-hant"
-	PublicEmailLanguageZhHk   PublicEmailLanguage = "zh-hk"
-	PublicEmailLanguageZhMo   PublicEmailLanguage = "zh-mo"
-	PublicEmailLanguageZhMy   PublicEmailLanguage = "zh-my"
-	PublicEmailLanguageZhSg   PublicEmailLanguage = "zh-sg"
-	PublicEmailLanguageZhTw   PublicEmailLanguage = "zh-tw"
-	PublicEmailLanguageZu     PublicEmailLanguage = "zu"
-	PublicEmailLanguageZuZa   PublicEmailLanguage = "zu-za"
-)
-
-// Valid indicates whether the value is a known member of the PublicEmailLanguage enum.
-func (e PublicEmailLanguage) Valid() bool {
-	switch e {
-	case PublicEmailLanguageAa:
-		return true
-	case PublicEmailLanguageAb:
-		return true
-	case PublicEmailLanguageAe:
-		return true
-	case PublicEmailLanguageAf:
-		return true
-	case PublicEmailLanguageAfNa:
-		return true
-	case PublicEmailLanguageAfZa:
-		return true
-	case PublicEmailLanguageAgq:
-		return true
-	case PublicEmailLanguageAgqCm:
-		return true
-	case PublicEmailLanguageAk:
-		return true
-	case PublicEmailLanguageAkGh:
-		return true
-	case PublicEmailLanguageAm:
-		return true
-	case PublicEmailLanguageAmEt:
-		return true
-	case PublicEmailLanguageAn:
-		return true
-	case PublicEmailLanguageAnn:
-		return true
-	case PublicEmailLanguageAnnNg:
-		return true
-	case PublicEmailLanguageAr:
-		return true
-	case PublicEmailLanguageAr001:
-		return true
-	case PublicEmailLanguageArAe:
-		return true
-	case PublicEmailLanguageArBh:
-		return true
-	case PublicEmailLanguageArDj:
-		return true
-	case PublicEmailLanguageArDz:
-		return true
-	case PublicEmailLanguageArEg:
-		return true
-	case PublicEmailLanguageArEh:
-		return true
-	case PublicEmailLanguageArEr:
-		return true
-	case PublicEmailLanguageArIl:
-		return true
-	case PublicEmailLanguageArIq:
-		return true
-	case PublicEmailLanguageArJo:
-		return true
-	case PublicEmailLanguageArKm:
-		return true
-	case PublicEmailLanguageArKw:
-		return true
-	case PublicEmailLanguageArLb:
-		return true
-	case PublicEmailLanguageArLy:
-		return true
-	case PublicEmailLanguageArMa:
-		return true
-	case PublicEmailLanguageArMr:
-		return true
-	case PublicEmailLanguageArOm:
-		return true
-	case PublicEmailLanguageArPs:
-		return true
-	case PublicEmailLanguageArQa:
-		return true
-	case PublicEmailLanguageArSa:
-		return true
-	case PublicEmailLanguageArSd:
-		return true
-	case PublicEmailLanguageArSo:
-		return true
-	case PublicEmailLanguageArSs:
-		return true
-	case PublicEmailLanguageArSy:
-		return true
-	case PublicEmailLanguageArTd:
-		return true
-	case PublicEmailLanguageArTn:
-		return true
-	case PublicEmailLanguageArYe:
-		return true
-	case PublicEmailLanguageAs:
-		return true
-	case PublicEmailLanguageAsIn:
-		return true
-	case PublicEmailLanguageAsa:
-		return true
-	case PublicEmailLanguageAsaTz:
-		return true
-	case PublicEmailLanguageAst:
-		return true
-	case PublicEmailLanguageAstEs:
-		return true
-	case PublicEmailLanguageAv:
-		return true
-	case PublicEmailLanguageAy:
-		return true
-	case PublicEmailLanguageAz:
-		return true
-	case PublicEmailLanguageAzAz:
-		return true
-	case PublicEmailLanguageBa:
-		return true
-	case PublicEmailLanguageBal:
-		return true
-	case PublicEmailLanguageBalPk:
-		return true
-	case PublicEmailLanguageBas:
-		return true
-	case PublicEmailLanguageBasCm:
-		return true
-	case PublicEmailLanguageBe:
-		return true
-	case PublicEmailLanguageBeBy:
-		return true
-	case PublicEmailLanguageBem:
-		return true
-	case PublicEmailLanguageBemZm:
-		return true
-	case PublicEmailLanguageBez:
-		return true
-	case PublicEmailLanguageBezTz:
-		return true
-	case PublicEmailLanguageBg:
-		return true
-	case PublicEmailLanguageBgBg:
-		return true
-	case PublicEmailLanguageBgc:
-		return true
-	case PublicEmailLanguageBgcIn:
-		return true
-	case PublicEmailLanguageBho:
-		return true
-	case PublicEmailLanguageBhoIn:
-		return true
-	case PublicEmailLanguageBi:
-		return true
-	case PublicEmailLanguageBlo:
-		return true
-	case PublicEmailLanguageBloBj:
-		return true
-	case PublicEmailLanguageBm:
-		return true
-	case PublicEmailLanguageBmMl:
-		return true
-	case PublicEmailLanguageBn:
-		return true
-	case PublicEmailLanguageBnBd:
-		return true
-	case PublicEmailLanguageBnIn:
-		return true
-	case PublicEmailLanguageBo:
-		return true
-	case PublicEmailLanguageBoCn:
-		return true
-	case PublicEmailLanguageBoIn:
-		return true
-	case PublicEmailLanguageBr:
-		return true
-	case PublicEmailLanguageBrFr:
-		return true
-	case PublicEmailLanguageBrx:
-		return true
-	case PublicEmailLanguageBrxIn:
-		return true
-	case PublicEmailLanguageBs:
-		return true
-	case PublicEmailLanguageBsBa:
-		return true
-	case PublicEmailLanguageCa:
-		return true
-	case PublicEmailLanguageCaAd:
-		return true
-	case PublicEmailLanguageCaEs:
-		return true
-	case PublicEmailLanguageCaFr:
-		return true
-	case PublicEmailLanguageCaIt:
-		return true
-	case PublicEmailLanguageCcp:
-		return true
-	case PublicEmailLanguageCcpBd:
-		return true
-	case PublicEmailLanguageCcpIn:
-		return true
-	case PublicEmailLanguageCe:
-		return true
-	case PublicEmailLanguageCeRu:
-		return true
-	case PublicEmailLanguageCeb:
-		return true
-	case PublicEmailLanguageCebPh:
-		return true
-	case PublicEmailLanguageCgg:
-		return true
-	case PublicEmailLanguageCggUg:
-		return true
-	case PublicEmailLanguageCh:
-		return true
-	case PublicEmailLanguageChr:
-		return true
-	case PublicEmailLanguageChrUs:
-		return true
-	case PublicEmailLanguageCkb:
-		return true
-	case PublicEmailLanguageCkbIq:
-		return true
-	case PublicEmailLanguageCkbIr:
-		return true
-	case PublicEmailLanguageCo:
-		return true
-	case PublicEmailLanguageCr:
-		return true
-	case PublicEmailLanguageCs:
-		return true
-	case PublicEmailLanguageCsCz:
-		return true
-	case PublicEmailLanguageCsw:
-		return true
-	case PublicEmailLanguageCswCa:
-		return true
-	case PublicEmailLanguageCu:
-		return true
-	case PublicEmailLanguageCuRu:
-		return true
-	case PublicEmailLanguageCv:
-		return true
-	case PublicEmailLanguageCvRu:
-		return true
-	case PublicEmailLanguageCy:
-		return true
-	case PublicEmailLanguageCyGb:
-		return true
-	case PublicEmailLanguageDa:
-		return true
-	case PublicEmailLanguageDaDk:
-		return true
-	case PublicEmailLanguageDaGl:
-		return true
-	case PublicEmailLanguageDav:
-		return true
-	case PublicEmailLanguageDavKe:
-		return true
-	case PublicEmailLanguageDe:
-		return true
-	case PublicEmailLanguageDeAt:
-		return true
-	case PublicEmailLanguageDeBe:
-		return true
-	case PublicEmailLanguageDeCh:
-		return true
-	case PublicEmailLanguageDeDe:
-		return true
-	case PublicEmailLanguageDeGr:
-		return true
-	case PublicEmailLanguageDeIt:
-		return true
-	case PublicEmailLanguageDeLi:
-		return true
-	case PublicEmailLanguageDeLu:
-		return true
-	case PublicEmailLanguageDje:
-		return true
-	case PublicEmailLanguageDjeNe:
-		return true
-	case PublicEmailLanguageDoi:
-		return true
-	case PublicEmailLanguageDoiIn:
-		return true
-	case PublicEmailLanguageDsb:
-		return true
-	case PublicEmailLanguageDsbDe:
-		return true
-	case PublicEmailLanguageDua:
-		return true
-	case PublicEmailLanguageDuaCm:
-		return true
-	case PublicEmailLanguageDv:
-		return true
-	case PublicEmailLanguageDyo:
-		return true
-	case PublicEmailLanguageDyoSn:
-		return true
-	case PublicEmailLanguageDz:
-		return true
-	case PublicEmailLanguageDzBt:
-		return true
-	case PublicEmailLanguageEbu:
-		return true
-	case PublicEmailLanguageEbuKe:
-		return true
-	case PublicEmailLanguageEe:
-		return true
-	case PublicEmailLanguageEeGh:
-		return true
-	case PublicEmailLanguageEeTg:
-		return true
-	case PublicEmailLanguageEl:
-		return true
-	case PublicEmailLanguageElCy:
-		return true
-	case PublicEmailLanguageElGr:
-		return true
-	case PublicEmailLanguageEn:
-		return true
-	case PublicEmailLanguageEn001:
-		return true
-	case PublicEmailLanguageEn150:
-		return true
-	case PublicEmailLanguageEnAe:
-		return true
-	case PublicEmailLanguageEnAg:
-		return true
-	case PublicEmailLanguageEnAi:
-		return true
-	case PublicEmailLanguageEnAs:
-		return true
-	case PublicEmailLanguageEnAt:
-		return true
-	case PublicEmailLanguageEnAu:
-		return true
-	case PublicEmailLanguageEnBb:
-		return true
-	case PublicEmailLanguageEnBe:
-		return true
-	case PublicEmailLanguageEnBi:
-		return true
-	case PublicEmailLanguageEnBm:
-		return true
-	case PublicEmailLanguageEnBs:
-		return true
-	case PublicEmailLanguageEnBw:
-		return true
-	case PublicEmailLanguageEnBz:
-		return true
-	case PublicEmailLanguageEnCa:
-		return true
-	case PublicEmailLanguageEnCc:
-		return true
-	case PublicEmailLanguageEnCh:
-		return true
-	case PublicEmailLanguageEnCk:
-		return true
-	case PublicEmailLanguageEnCm:
-		return true
-	case PublicEmailLanguageEnCn:
-		return true
-	case PublicEmailLanguageEnCx:
-		return true
-	case PublicEmailLanguageEnCy:
-		return true
-	case PublicEmailLanguageEnCz:
-		return true
-	case PublicEmailLanguageEnDe:
-		return true
-	case PublicEmailLanguageEnDg:
-		return true
-	case PublicEmailLanguageEnDk:
-		return true
-	case PublicEmailLanguageEnDm:
-		return true
-	case PublicEmailLanguageEnEe:
-		return true
-	case PublicEmailLanguageEnEg:
-		return true
-	case PublicEmailLanguageEnEr:
-		return true
-	case PublicEmailLanguageEnEs:
-		return true
-	case PublicEmailLanguageEnFi:
-		return true
-	case PublicEmailLanguageEnFj:
-		return true
-	case PublicEmailLanguageEnFk:
-		return true
-	case PublicEmailLanguageEnFm:
-		return true
-	case PublicEmailLanguageEnFr:
-		return true
-	case PublicEmailLanguageEnGb:
-		return true
-	case PublicEmailLanguageEnGd:
-		return true
-	case PublicEmailLanguageEnGg:
-		return true
-	case PublicEmailLanguageEnGh:
-		return true
-	case PublicEmailLanguageEnGi:
-		return true
-	case PublicEmailLanguageEnGm:
-		return true
-	case PublicEmailLanguageEnGs:
-		return true
-	case PublicEmailLanguageEnGu:
-		return true
-	case PublicEmailLanguageEnGy:
-		return true
-	case PublicEmailLanguageEnHk:
-		return true
-	case PublicEmailLanguageEnHu:
-		return true
-	case PublicEmailLanguageEnId:
-		return true
-	case PublicEmailLanguageEnIe:
-		return true
-	case PublicEmailLanguageEnIl:
-		return true
-	case PublicEmailLanguageEnIm:
-		return true
-	case PublicEmailLanguageEnIn:
-		return true
-	case PublicEmailLanguageEnIo:
-		return true
-	case PublicEmailLanguageEnIt:
-		return true
-	case PublicEmailLanguageEnJe:
-		return true
-	case PublicEmailLanguageEnJm:
-		return true
-	case PublicEmailLanguageEnKe:
-		return true
-	case PublicEmailLanguageEnKi:
-		return true
-	case PublicEmailLanguageEnKn:
-		return true
-	case PublicEmailLanguageEnKy:
-		return true
-	case PublicEmailLanguageEnLc:
-		return true
-	case PublicEmailLanguageEnLr:
-		return true
-	case PublicEmailLanguageEnLs:
-		return true
-	case PublicEmailLanguageEnLu:
-		return true
-	case PublicEmailLanguageEnMg:
-		return true
-	case PublicEmailLanguageEnMh:
-		return true
-	case PublicEmailLanguageEnMo:
-		return true
-	case PublicEmailLanguageEnMp:
-		return true
-	case PublicEmailLanguageEnMs:
-		return true
-	case PublicEmailLanguageEnMt:
-		return true
-	case PublicEmailLanguageEnMu:
-		return true
-	case PublicEmailLanguageEnMv:
-		return true
-	case PublicEmailLanguageEnMw:
-		return true
-	case PublicEmailLanguageEnMx:
-		return true
-	case PublicEmailLanguageEnMy:
-		return true
-	case PublicEmailLanguageEnNa:
-		return true
-	case PublicEmailLanguageEnNf:
-		return true
-	case PublicEmailLanguageEnNg:
-		return true
-	case PublicEmailLanguageEnNl:
-		return true
-	case PublicEmailLanguageEnNo:
-		return true
-	case PublicEmailLanguageEnNr:
-		return true
-	case PublicEmailLanguageEnNu:
-		return true
-	case PublicEmailLanguageEnNz:
-		return true
-	case PublicEmailLanguageEnPg:
-		return true
-	case PublicEmailLanguageEnPh:
-		return true
-	case PublicEmailLanguageEnPk:
-		return true
-	case PublicEmailLanguageEnPl:
-		return true
-	case PublicEmailLanguageEnPn:
-		return true
-	case PublicEmailLanguageEnPr:
-		return true
-	case PublicEmailLanguageEnPt:
-		return true
-	case PublicEmailLanguageEnPw:
-		return true
-	case PublicEmailLanguageEnRo:
-		return true
-	case PublicEmailLanguageEnRw:
-		return true
-	case PublicEmailLanguageEnSb:
-		return true
-	case PublicEmailLanguageEnSc:
-		return true
-	case PublicEmailLanguageEnSd:
-		return true
-	case PublicEmailLanguageEnSe:
-		return true
-	case PublicEmailLanguageEnSg:
-		return true
-	case PublicEmailLanguageEnSh:
-		return true
-	case PublicEmailLanguageEnSi:
-		return true
-	case PublicEmailLanguageEnSk:
-		return true
-	case PublicEmailLanguageEnSl:
-		return true
-	case PublicEmailLanguageEnSs:
-		return true
-	case PublicEmailLanguageEnSx:
-		return true
-	case PublicEmailLanguageEnSz:
-		return true
-	case PublicEmailLanguageEnTc:
-		return true
-	case PublicEmailLanguageEnTh:
-		return true
-	case PublicEmailLanguageEnTk:
-		return true
-	case PublicEmailLanguageEnTn:
-		return true
-	case PublicEmailLanguageEnTo:
-		return true
-	case PublicEmailLanguageEnTt:
-		return true
-	case PublicEmailLanguageEnTv:
-		return true
-	case PublicEmailLanguageEnTz:
-		return true
-	case PublicEmailLanguageEnUg:
-		return true
-	case PublicEmailLanguageEnUm:
-		return true
-	case PublicEmailLanguageEnUs:
-		return true
-	case PublicEmailLanguageEnVc:
-		return true
-	case PublicEmailLanguageEnVg:
-		return true
-	case PublicEmailLanguageEnVi:
-		return true
-	case PublicEmailLanguageEnVn:
-		return true
-	case PublicEmailLanguageEnVu:
-		return true
-	case PublicEmailLanguageEnWs:
-		return true
-	case PublicEmailLanguageEnZa:
-		return true
-	case PublicEmailLanguageEnZm:
-		return true
-	case PublicEmailLanguageEnZw:
-		return true
-	case PublicEmailLanguageEo:
-		return true
-	case PublicEmailLanguageEo001:
-		return true
-	case PublicEmailLanguageEs:
-		return true
-	case PublicEmailLanguageEs419:
-		return true
-	case PublicEmailLanguageEsAr:
-		return true
-	case PublicEmailLanguageEsBo:
-		return true
-	case PublicEmailLanguageEsBr:
-		return true
-	case PublicEmailLanguageEsBz:
-		return true
-	case PublicEmailLanguageEsCl:
-		return true
-	case PublicEmailLanguageEsCo:
-		return true
-	case PublicEmailLanguageEsCr:
-		return true
-	case PublicEmailLanguageEsCu:
-		return true
-	case PublicEmailLanguageEsDo:
-		return true
-	case PublicEmailLanguageEsEa:
-		return true
-	case PublicEmailLanguageEsEc:
-		return true
-	case PublicEmailLanguageEsEs:
-		return true
-	case PublicEmailLanguageEsGq:
-		return true
-	case PublicEmailLanguageEsGt:
-		return true
-	case PublicEmailLanguageEsHn:
-		return true
-	case PublicEmailLanguageEsIc:
-		return true
-	case PublicEmailLanguageEsMx:
-		return true
-	case PublicEmailLanguageEsNi:
-		return true
-	case PublicEmailLanguageEsPa:
-		return true
-	case PublicEmailLanguageEsPe:
-		return true
-	case PublicEmailLanguageEsPh:
-		return true
-	case PublicEmailLanguageEsPr:
-		return true
-	case PublicEmailLanguageEsPy:
-		return true
-	case PublicEmailLanguageEsSv:
-		return true
-	case PublicEmailLanguageEsUs:
-		return true
-	case PublicEmailLanguageEsUy:
-		return true
-	case PublicEmailLanguageEsVe:
-		return true
-	case PublicEmailLanguageEt:
-		return true
-	case PublicEmailLanguageEtEe:
-		return true
-	case PublicEmailLanguageEu:
-		return true
-	case PublicEmailLanguageEuEs:
-		return true
-	case PublicEmailLanguageEwo:
-		return true
-	case PublicEmailLanguageEwoCm:
-		return true
-	case PublicEmailLanguageFa:
-		return true
-	case PublicEmailLanguageFaAf:
-		return true
-	case PublicEmailLanguageFaIr:
-		return true
-	case PublicEmailLanguageFf:
-		return true
-	case PublicEmailLanguageFfBf:
-		return true
-	case PublicEmailLanguageFfCm:
-		return true
-	case PublicEmailLanguageFfGh:
-		return true
-	case PublicEmailLanguageFfGm:
-		return true
-	case PublicEmailLanguageFfGn:
-		return true
-	case PublicEmailLanguageFfGw:
-		return true
-	case PublicEmailLanguageFfLr:
-		return true
-	case PublicEmailLanguageFfMr:
-		return true
-	case PublicEmailLanguageFfNe:
-		return true
-	case PublicEmailLanguageFfNg:
-		return true
-	case PublicEmailLanguageFfSl:
-		return true
-	case PublicEmailLanguageFfSn:
-		return true
-	case PublicEmailLanguageFi:
-		return true
-	case PublicEmailLanguageFiFi:
-		return true
-	case PublicEmailLanguageFil:
-		return true
-	case PublicEmailLanguageFilPh:
-		return true
-	case PublicEmailLanguageFj:
-		return true
-	case PublicEmailLanguageFo:
-		return true
-	case PublicEmailLanguageFoDk:
-		return true
-	case PublicEmailLanguageFoFo:
-		return true
-	case PublicEmailLanguageFr:
-		return true
-	case PublicEmailLanguageFrBe:
-		return true
-	case PublicEmailLanguageFrBf:
-		return true
-	case PublicEmailLanguageFrBi:
-		return true
-	case PublicEmailLanguageFrBj:
-		return true
-	case PublicEmailLanguageFrBl:
-		return true
-	case PublicEmailLanguageFrCa:
-		return true
-	case PublicEmailLanguageFrCd:
-		return true
-	case PublicEmailLanguageFrCf:
-		return true
-	case PublicEmailLanguageFrCg:
-		return true
-	case PublicEmailLanguageFrCh:
-		return true
-	case PublicEmailLanguageFrCi:
-		return true
-	case PublicEmailLanguageFrCm:
-		return true
-	case PublicEmailLanguageFrDj:
-		return true
-	case PublicEmailLanguageFrDz:
-		return true
-	case PublicEmailLanguageFrFr:
-		return true
-	case PublicEmailLanguageFrGa:
-		return true
-	case PublicEmailLanguageFrGf:
-		return true
-	case PublicEmailLanguageFrGn:
-		return true
-	case PublicEmailLanguageFrGp:
-		return true
-	case PublicEmailLanguageFrGq:
-		return true
-	case PublicEmailLanguageFrHt:
-		return true
-	case PublicEmailLanguageFrKm:
-		return true
-	case PublicEmailLanguageFrLu:
-		return true
-	case PublicEmailLanguageFrMa:
-		return true
-	case PublicEmailLanguageFrMc:
-		return true
-	case PublicEmailLanguageFrMf:
-		return true
-	case PublicEmailLanguageFrMg:
-		return true
-	case PublicEmailLanguageFrMl:
-		return true
-	case PublicEmailLanguageFrMq:
-		return true
-	case PublicEmailLanguageFrMr:
-		return true
-	case PublicEmailLanguageFrMu:
-		return true
-	case PublicEmailLanguageFrNc:
-		return true
-	case PublicEmailLanguageFrNe:
-		return true
-	case PublicEmailLanguageFrPf:
-		return true
-	case PublicEmailLanguageFrPm:
-		return true
-	case PublicEmailLanguageFrRe:
-		return true
-	case PublicEmailLanguageFrRw:
-		return true
-	case PublicEmailLanguageFrSc:
-		return true
-	case PublicEmailLanguageFrSn:
-		return true
-	case PublicEmailLanguageFrSy:
-		return true
-	case PublicEmailLanguageFrTd:
-		return true
-	case PublicEmailLanguageFrTg:
-		return true
-	case PublicEmailLanguageFrTn:
-		return true
-	case PublicEmailLanguageFrVu:
-		return true
-	case PublicEmailLanguageFrWf:
-		return true
-	case PublicEmailLanguageFrYt:
-		return true
-	case PublicEmailLanguageFrr:
-		return true
-	case PublicEmailLanguageFrrDe:
-		return true
-	case PublicEmailLanguageFur:
-		return true
-	case PublicEmailLanguageFurIt:
-		return true
-	case PublicEmailLanguageFy:
-		return true
-	case PublicEmailLanguageFyNl:
-		return true
-	case PublicEmailLanguageGa:
-		return true
-	case PublicEmailLanguageGaGb:
-		return true
-	case PublicEmailLanguageGaIe:
-		return true
-	case PublicEmailLanguageGaa:
-		return true
-	case PublicEmailLanguageGaaGh:
-		return true
-	case PublicEmailLanguageGd:
-		return true
-	case PublicEmailLanguageGdGb:
-		return true
-	case PublicEmailLanguageGl:
-		return true
-	case PublicEmailLanguageGlEs:
-		return true
-	case PublicEmailLanguageGn:
-		return true
-	case PublicEmailLanguageGsw:
-		return true
-	case PublicEmailLanguageGswCh:
-		return true
-	case PublicEmailLanguageGswFr:
-		return true
-	case PublicEmailLanguageGswLi:
-		return true
-	case PublicEmailLanguageGu:
-		return true
-	case PublicEmailLanguageGuIn:
-		return true
-	case PublicEmailLanguageGuz:
-		return true
-	case PublicEmailLanguageGuzKe:
-		return true
-	case PublicEmailLanguageGv:
-		return true
-	case PublicEmailLanguageGvIm:
-		return true
-	case PublicEmailLanguageHa:
-		return true
-	case PublicEmailLanguageHaGh:
-		return true
-	case PublicEmailLanguageHaNe:
-		return true
-	case PublicEmailLanguageHaNg:
-		return true
-	case PublicEmailLanguageHaw:
-		return true
-	case PublicEmailLanguageHawUs:
-		return true
-	case PublicEmailLanguageHe:
-		return true
-	case PublicEmailLanguageHeIl:
-		return true
-	case PublicEmailLanguageHi:
-		return true
-	case PublicEmailLanguageHiIn:
-		return true
-	case PublicEmailLanguageHmn:
-		return true
-	case PublicEmailLanguageHo:
-		return true
-	case PublicEmailLanguageHr:
-		return true
-	case PublicEmailLanguageHrBa:
-		return true
-	case PublicEmailLanguageHrHr:
-		return true
-	case PublicEmailLanguageHsb:
-		return true
-	case PublicEmailLanguageHsbDe:
-		return true
-	case PublicEmailLanguageHt:
-		return true
-	case PublicEmailLanguageHtHt:
-		return true
-	case PublicEmailLanguageHu:
-		return true
-	case PublicEmailLanguageHuHu:
-		return true
-	case PublicEmailLanguageHy:
-		return true
-	case PublicEmailLanguageHyAm:
-		return true
-	case PublicEmailLanguageHz:
-		return true
-	case PublicEmailLanguageIa:
-		return true
-	case PublicEmailLanguageIa001:
-		return true
-	case PublicEmailLanguageId:
-		return true
-	case PublicEmailLanguageIdId:
-		return true
-	case PublicEmailLanguageIe:
-		return true
-	case PublicEmailLanguageIeEe:
-		return true
-	case PublicEmailLanguageIg:
-		return true
-	case PublicEmailLanguageIgNg:
-		return true
-	case PublicEmailLanguageIi:
-		return true
-	case PublicEmailLanguageIiCn:
-		return true
-	case PublicEmailLanguageIk:
-		return true
-	case PublicEmailLanguageIo:
-		return true
-	case PublicEmailLanguageIs:
-		return true
-	case PublicEmailLanguageIsIs:
-		return true
-	case PublicEmailLanguageIt:
-		return true
-	case PublicEmailLanguageItCh:
-		return true
-	case PublicEmailLanguageItIt:
-		return true
-	case PublicEmailLanguageItSm:
-		return true
-	case PublicEmailLanguageItVa:
-		return true
-	case PublicEmailLanguageIu:
-		return true
-	case PublicEmailLanguageJa:
-		return true
-	case PublicEmailLanguageJaJp:
-		return true
-	case PublicEmailLanguageJgo:
-		return true
-	case PublicEmailLanguageJgoCm:
-		return true
-	case PublicEmailLanguageJmc:
-		return true
-	case PublicEmailLanguageJmcTz:
-		return true
-	case PublicEmailLanguageJv:
-		return true
-	case PublicEmailLanguageJvId:
-		return true
-	case PublicEmailLanguageKa:
-		return true
-	case PublicEmailLanguageKaGe:
-		return true
-	case PublicEmailLanguageKab:
-		return true
-	case PublicEmailLanguageKabDz:
-		return true
-	case PublicEmailLanguageKam:
-		return true
-	case PublicEmailLanguageKamKe:
-		return true
-	case PublicEmailLanguageKar:
-		return true
-	case PublicEmailLanguageKde:
-		return true
-	case PublicEmailLanguageKdeTz:
-		return true
-	case PublicEmailLanguageKea:
-		return true
-	case PublicEmailLanguageKeaCv:
-		return true
-	case PublicEmailLanguageKg:
-		return true
-	case PublicEmailLanguageKgp:
-		return true
-	case PublicEmailLanguageKgpBr:
-		return true
-	case PublicEmailLanguageKh:
-		return true
-	case PublicEmailLanguageKhq:
-		return true
-	case PublicEmailLanguageKhqMl:
-		return true
-	case PublicEmailLanguageKi:
-		return true
-	case PublicEmailLanguageKiKe:
-		return true
-	case PublicEmailLanguageKj:
-		return true
-	case PublicEmailLanguageKk:
-		return true
-	case PublicEmailLanguageKkKz:
-		return true
-	case PublicEmailLanguageKkj:
-		return true
-	case PublicEmailLanguageKkjCm:
-		return true
-	case PublicEmailLanguageKl:
-		return true
-	case PublicEmailLanguageKlGl:
-		return true
-	case PublicEmailLanguageKln:
-		return true
-	case PublicEmailLanguageKlnKe:
-		return true
-	case PublicEmailLanguageKm:
-		return true
-	case PublicEmailLanguageKmKh:
-		return true
-	case PublicEmailLanguageKn:
-		return true
-	case PublicEmailLanguageKnIn:
-		return true
-	case PublicEmailLanguageKo:
-		return true
-	case PublicEmailLanguageKoCn:
-		return true
-	case PublicEmailLanguageKoKp:
-		return true
-	case PublicEmailLanguageKoKr:
-		return true
-	case PublicEmailLanguageKok:
-		return true
-	case PublicEmailLanguageKokIn:
-		return true
-	case PublicEmailLanguageKr:
-		return true
-	case PublicEmailLanguageKs:
-		return true
-	case PublicEmailLanguageKsIn:
-		return true
-	case PublicEmailLanguageKsb:
-		return true
-	case PublicEmailLanguageKsbTz:
-		return true
-	case PublicEmailLanguageKsf:
-		return true
-	case PublicEmailLanguageKsfCm:
-		return true
-	case PublicEmailLanguageKsh:
-		return true
-	case PublicEmailLanguageKshDe:
-		return true
-	case PublicEmailLanguageKu:
-		return true
-	case PublicEmailLanguageKuTr:
-		return true
-	case PublicEmailLanguageKv:
-		return true
-	case PublicEmailLanguageKw:
-		return true
-	case PublicEmailLanguageKwGb:
-		return true
-	case PublicEmailLanguageKxv:
-		return true
-	case PublicEmailLanguageKxvIn:
-		return true
-	case PublicEmailLanguageKy:
-		return true
-	case PublicEmailLanguageKyKg:
-		return true
-	case PublicEmailLanguageLa:
-		return true
-	case PublicEmailLanguageLag:
-		return true
-	case PublicEmailLanguageLagTz:
-		return true
-	case PublicEmailLanguageLb:
-		return true
-	case PublicEmailLanguageLbLu:
-		return true
-	case PublicEmailLanguageLg:
-		return true
-	case PublicEmailLanguageLgUg:
-		return true
-	case PublicEmailLanguageLi:
-		return true
-	case PublicEmailLanguageLij:
-		return true
-	case PublicEmailLanguageLijIt:
-		return true
-	case PublicEmailLanguageLkt:
-		return true
-	case PublicEmailLanguageLktUs:
-		return true
-	case PublicEmailLanguageLmo:
-		return true
-	case PublicEmailLanguageLmoIt:
-		return true
-	case PublicEmailLanguageLn:
-		return true
-	case PublicEmailLanguageLnAo:
-		return true
-	case PublicEmailLanguageLnCd:
-		return true
-	case PublicEmailLanguageLnCf:
-		return true
-	case PublicEmailLanguageLnCg:
-		return true
-	case PublicEmailLanguageLo:
-		return true
-	case PublicEmailLanguageLoLa:
-		return true
-	case PublicEmailLanguageLrc:
-		return true
-	case PublicEmailLanguageLrcIq:
-		return true
-	case PublicEmailLanguageLrcIr:
-		return true
-	case PublicEmailLanguageLt:
-		return true
-	case PublicEmailLanguageLtLt:
-		return true
-	case PublicEmailLanguageLu:
-		return true
-	case PublicEmailLanguageLuCd:
-		return true
-	case PublicEmailLanguageLuo:
-		return true
-	case PublicEmailLanguageLuoKe:
-		return true
-	case PublicEmailLanguageLuy:
-		return true
-	case PublicEmailLanguageLuyKe:
-		return true
-	case PublicEmailLanguageLv:
-		return true
-	case PublicEmailLanguageLvLv:
-		return true
-	case PublicEmailLanguageMai:
-		return true
-	case PublicEmailLanguageMaiIn:
-		return true
-	case PublicEmailLanguageMas:
-		return true
-	case PublicEmailLanguageMasKe:
-		return true
-	case PublicEmailLanguageMasTz:
-		return true
-	case PublicEmailLanguageMdf:
-		return true
-	case PublicEmailLanguageMdfRu:
-		return true
-	case PublicEmailLanguageMer:
-		return true
-	case PublicEmailLanguageMerKe:
-		return true
-	case PublicEmailLanguageMfe:
-		return true
-	case PublicEmailLanguageMfeMu:
-		return true
-	case PublicEmailLanguageMg:
-		return true
-	case PublicEmailLanguageMgMg:
-		return true
-	case PublicEmailLanguageMgh:
-		return true
-	case PublicEmailLanguageMghMz:
-		return true
-	case PublicEmailLanguageMgo:
-		return true
-	case PublicEmailLanguageMgoCm:
-		return true
-	case PublicEmailLanguageMh:
-		return true
-	case PublicEmailLanguageMi:
-		return true
-	case PublicEmailLanguageMiNz:
-		return true
-	case PublicEmailLanguageMk:
-		return true
-	case PublicEmailLanguageMkMk:
-		return true
-	case PublicEmailLanguageMl:
-		return true
-	case PublicEmailLanguageMlIn:
-		return true
-	case PublicEmailLanguageMn:
-		return true
-	case PublicEmailLanguageMnMn:
-		return true
-	case PublicEmailLanguageMni:
-		return true
-	case PublicEmailLanguageMniIn:
-		return true
-	case PublicEmailLanguageMr:
-		return true
-	case PublicEmailLanguageMrIn:
-		return true
-	case PublicEmailLanguageMs:
-		return true
-	case PublicEmailLanguageMsBn:
-		return true
-	case PublicEmailLanguageMsId:
-		return true
-	case PublicEmailLanguageMsMy:
-		return true
-	case PublicEmailLanguageMsSg:
-		return true
-	case PublicEmailLanguageMt:
-		return true
-	case PublicEmailLanguageMtMt:
-		return true
-	case PublicEmailLanguageMua:
-		return true
-	case PublicEmailLanguageMuaCm:
-		return true
-	case PublicEmailLanguageMy:
-		return true
-	case PublicEmailLanguageMyMm:
-		return true
-	case PublicEmailLanguageMzn:
-		return true
-	case PublicEmailLanguageMznIr:
-		return true
-	case PublicEmailLanguageNa:
-		return true
-	case PublicEmailLanguageNaq:
-		return true
-	case PublicEmailLanguageNaqNa:
-		return true
-	case PublicEmailLanguageNb:
-		return true
-	case PublicEmailLanguageNbNo:
-		return true
-	case PublicEmailLanguageNbSj:
-		return true
-	case PublicEmailLanguageNd:
-		return true
-	case PublicEmailLanguageNdZw:
-		return true
-	case PublicEmailLanguageNds:
-		return true
-	case PublicEmailLanguageNdsDe:
-		return true
-	case PublicEmailLanguageNdsNl:
-		return true
-	case PublicEmailLanguageNe:
-		return true
-	case PublicEmailLanguageNeIn:
-		return true
-	case PublicEmailLanguageNeNp:
-		return true
-	case PublicEmailLanguageNg:
-		return true
-	case PublicEmailLanguageNl:
-		return true
-	case PublicEmailLanguageNlAw:
-		return true
-	case PublicEmailLanguageNlBe:
-		return true
-	case PublicEmailLanguageNlBq:
-		return true
-	case PublicEmailLanguageNlCh:
-		return true
-	case PublicEmailLanguageNlCw:
-		return true
-	case PublicEmailLanguageNlLu:
-		return true
-	case PublicEmailLanguageNlNl:
-		return true
-	case PublicEmailLanguageNlSr:
-		return true
-	case PublicEmailLanguageNlSx:
-		return true
-	case PublicEmailLanguageNmg:
-		return true
-	case PublicEmailLanguageNmgCm:
-		return true
-	case PublicEmailLanguageNn:
-		return true
-	case PublicEmailLanguageNnNo:
-		return true
-	case PublicEmailLanguageNnh:
-		return true
-	case PublicEmailLanguageNnhCm:
-		return true
-	case PublicEmailLanguageNo:
-		return true
-	case PublicEmailLanguageNoNo:
-		return true
-	case PublicEmailLanguageNqo:
-		return true
-	case PublicEmailLanguageNqoGn:
-		return true
-	case PublicEmailLanguageNr:
-		return true
-	case PublicEmailLanguageNso:
-		return true
-	case PublicEmailLanguageNsoZa:
-		return true
-	case PublicEmailLanguageNus:
-		return true
-	case PublicEmailLanguageNusSs:
-		return true
-	case PublicEmailLanguageNv:
-		return true
-	case PublicEmailLanguageNy:
-		return true
-	case PublicEmailLanguageNyn:
-		return true
-	case PublicEmailLanguageNynUg:
-		return true
-	case PublicEmailLanguageOc:
-		return true
-	case PublicEmailLanguageOcEs:
-		return true
-	case PublicEmailLanguageOcFr:
-		return true
-	case PublicEmailLanguageOj:
-		return true
-	case PublicEmailLanguageOm:
-		return true
-	case PublicEmailLanguageOmEt:
-		return true
-	case PublicEmailLanguageOmKe:
-		return true
-	case PublicEmailLanguageOr:
-		return true
-	case PublicEmailLanguageOrIn:
-		return true
-	case PublicEmailLanguageOs:
-		return true
-	case PublicEmailLanguageOsGe:
-		return true
-	case PublicEmailLanguageOsRu:
-		return true
-	case PublicEmailLanguagePa:
-		return true
-	case PublicEmailLanguagePaIn:
-		return true
-	case PublicEmailLanguagePaPk:
-		return true
-	case PublicEmailLanguagePcm:
-		return true
-	case PublicEmailLanguagePcmNg:
-		return true
-	case PublicEmailLanguagePi:
-		return true
-	case PublicEmailLanguagePis:
-		return true
-	case PublicEmailLanguagePisSb:
-		return true
-	case PublicEmailLanguagePl:
-		return true
-	case PublicEmailLanguagePlPl:
-		return true
-	case PublicEmailLanguagePrg:
-		return true
-	case PublicEmailLanguagePrg001:
-		return true
-	case PublicEmailLanguagePs:
-		return true
-	case PublicEmailLanguagePsAf:
-		return true
-	case PublicEmailLanguagePsPk:
-		return true
-	case PublicEmailLanguagePt:
-		return true
-	case PublicEmailLanguagePtAo:
-		return true
-	case PublicEmailLanguagePtBr:
-		return true
-	case PublicEmailLanguagePtCh:
-		return true
-	case PublicEmailLanguagePtCv:
-		return true
-	case PublicEmailLanguagePtGq:
-		return true
-	case PublicEmailLanguagePtGw:
-		return true
-	case PublicEmailLanguagePtLu:
-		return true
-	case PublicEmailLanguagePtMo:
-		return true
-	case PublicEmailLanguagePtMz:
-		return true
-	case PublicEmailLanguagePtPt:
-		return true
-	case PublicEmailLanguagePtSt:
-		return true
-	case PublicEmailLanguagePtTl:
-		return true
-	case PublicEmailLanguageQu:
-		return true
-	case PublicEmailLanguageQuBo:
-		return true
-	case PublicEmailLanguageQuEc:
-		return true
-	case PublicEmailLanguageQuPe:
-		return true
-	case PublicEmailLanguageRaj:
-		return true
-	case PublicEmailLanguageRajIn:
-		return true
-	case PublicEmailLanguageRm:
-		return true
-	case PublicEmailLanguageRmCh:
-		return true
-	case PublicEmailLanguageRn:
-		return true
-	case PublicEmailLanguageRnBi:
-		return true
-	case PublicEmailLanguageRo:
-		return true
-	case PublicEmailLanguageRoMd:
-		return true
-	case PublicEmailLanguageRoRo:
-		return true
-	case PublicEmailLanguageRof:
-		return true
-	case PublicEmailLanguageRofTz:
-		return true
-	case PublicEmailLanguageRu:
-		return true
-	case PublicEmailLanguageRuBy:
-		return true
-	case PublicEmailLanguageRuKg:
-		return true
-	case PublicEmailLanguageRuKz:
-		return true
-	case PublicEmailLanguageRuMd:
-		return true
-	case PublicEmailLanguageRuRu:
-		return true
-	case PublicEmailLanguageRuUa:
-		return true
-	case PublicEmailLanguageRw:
-		return true
-	case PublicEmailLanguageRwRw:
-		return true
-	case PublicEmailLanguageRwk:
-		return true
-	case PublicEmailLanguageRwkTz:
-		return true
-	case PublicEmailLanguageSa:
-		return true
-	case PublicEmailLanguageSaIn:
-		return true
-	case PublicEmailLanguageSah:
-		return true
-	case PublicEmailLanguageSahRu:
-		return true
-	case PublicEmailLanguageSaq:
-		return true
-	case PublicEmailLanguageSaqKe:
-		return true
-	case PublicEmailLanguageSat:
-		return true
-	case PublicEmailLanguageSatIn:
-		return true
-	case PublicEmailLanguageSbp:
-		return true
-	case PublicEmailLanguageSbpTz:
-		return true
-	case PublicEmailLanguageSc:
-		return true
-	case PublicEmailLanguageScIt:
-		return true
-	case PublicEmailLanguageSd:
-		return true
-	case PublicEmailLanguageSdIn:
-		return true
-	case PublicEmailLanguageSdPk:
-		return true
-	case PublicEmailLanguageSe:
-		return true
-	case PublicEmailLanguageSeFi:
-		return true
-	case PublicEmailLanguageSeNo:
-		return true
-	case PublicEmailLanguageSeSe:
-		return true
-	case PublicEmailLanguageSeh:
-		return true
-	case PublicEmailLanguageSehMz:
-		return true
-	case PublicEmailLanguageSes:
-		return true
-	case PublicEmailLanguageSesMl:
-		return true
-	case PublicEmailLanguageSg:
-		return true
-	case PublicEmailLanguageSgCf:
-		return true
-	case PublicEmailLanguageShi:
-		return true
-	case PublicEmailLanguageShiMa:
-		return true
-	case PublicEmailLanguageSi:
-		return true
-	case PublicEmailLanguageSiLk:
-		return true
-	case PublicEmailLanguageSk:
-		return true
-	case PublicEmailLanguageSkSk:
-		return true
-	case PublicEmailLanguageSl:
-		return true
-	case PublicEmailLanguageSlSi:
-		return true
-	case PublicEmailLanguageSm:
-		return true
-	case PublicEmailLanguageSmn:
-		return true
-	case PublicEmailLanguageSmnFi:
-		return true
-	case PublicEmailLanguageSms:
-		return true
-	case PublicEmailLanguageSmsFi:
-		return true
-	case PublicEmailLanguageSn:
-		return true
-	case PublicEmailLanguageSnZw:
-		return true
-	case PublicEmailLanguageSo:
-		return true
-	case PublicEmailLanguageSoDj:
-		return true
-	case PublicEmailLanguageSoEt:
-		return true
-	case PublicEmailLanguageSoKe:
-		return true
-	case PublicEmailLanguageSoSo:
-		return true
-	case PublicEmailLanguageSq:
-		return true
-	case PublicEmailLanguageSqAl:
-		return true
-	case PublicEmailLanguageSqMk:
-		return true
-	case PublicEmailLanguageSqXk:
-		return true
-	case PublicEmailLanguageSr:
-		return true
-	case PublicEmailLanguageSrBa:
-		return true
-	case PublicEmailLanguageSrCs:
-		return true
-	case PublicEmailLanguageSrMe:
-		return true
-	case PublicEmailLanguageSrRs:
-		return true
-	case PublicEmailLanguageSrXk:
-		return true
-	case PublicEmailLanguageSs:
-		return true
-	case PublicEmailLanguageSt:
-		return true
-	case PublicEmailLanguageStLs:
-		return true
-	case PublicEmailLanguageStZa:
-		return true
-	case PublicEmailLanguageSu:
-		return true
-	case PublicEmailLanguageSuId:
-		return true
-	case PublicEmailLanguageSv:
-		return true
-	case PublicEmailLanguageSvAx:
-		return true
-	case PublicEmailLanguageSvFi:
-		return true
-	case PublicEmailLanguageSvSe:
-		return true
-	case PublicEmailLanguageSw:
-		return true
-	case PublicEmailLanguageSwCd:
-		return true
-	case PublicEmailLanguageSwKe:
-		return true
-	case PublicEmailLanguageSwTz:
-		return true
-	case PublicEmailLanguageSwUg:
-		return true
-	case PublicEmailLanguageSy:
-		return true
-	case PublicEmailLanguageSyr:
-		return true
-	case PublicEmailLanguageSyrIq:
-		return true
-	case PublicEmailLanguageSyrSy:
-		return true
-	case PublicEmailLanguageSzl:
-		return true
-	case PublicEmailLanguageSzlPl:
-		return true
-	case PublicEmailLanguageTa:
-		return true
-	case PublicEmailLanguageTaIn:
-		return true
-	case PublicEmailLanguageTaLk:
-		return true
-	case PublicEmailLanguageTaMy:
-		return true
-	case PublicEmailLanguageTaSg:
-		return true
-	case PublicEmailLanguageTe:
-		return true
-	case PublicEmailLanguageTeIn:
-		return true
-	case PublicEmailLanguageTeo:
-		return true
-	case PublicEmailLanguageTeoKe:
-		return true
-	case PublicEmailLanguageTeoUg:
-		return true
-	case PublicEmailLanguageTg:
-		return true
-	case PublicEmailLanguageTgTj:
-		return true
-	case PublicEmailLanguageTh:
-		return true
-	case PublicEmailLanguageThTh:
-		return true
-	case PublicEmailLanguageTi:
-		return true
-	case PublicEmailLanguageTiEr:
-		return true
-	case PublicEmailLanguageTiEt:
-		return true
-	case PublicEmailLanguageTk:
-		return true
-	case PublicEmailLanguageTkTm:
-		return true
-	case PublicEmailLanguageTl:
-		return true
-	case PublicEmailLanguageTn:
-		return true
-	case PublicEmailLanguageTnBw:
-		return true
-	case PublicEmailLanguageTnZa:
-		return true
-	case PublicEmailLanguageTo:
-		return true
-	case PublicEmailLanguageToTo:
-		return true
-	case PublicEmailLanguageTok:
-		return true
-	case PublicEmailLanguageTok001:
-		return true
-	case PublicEmailLanguageTr:
-		return true
-	case PublicEmailLanguageTrCy:
-		return true
-	case PublicEmailLanguageTrTr:
-		return true
-	case PublicEmailLanguageTs:
-		return true
-	case PublicEmailLanguageTt:
-		return true
-	case PublicEmailLanguageTtRu:
-		return true
-	case PublicEmailLanguageTw:
-		return true
-	case PublicEmailLanguageTwq:
-		return true
-	case PublicEmailLanguageTwqNe:
-		return true
-	case PublicEmailLanguageTy:
-		return true
-	case PublicEmailLanguageTzm:
-		return true
-	case PublicEmailLanguageTzmMa:
-		return true
-	case PublicEmailLanguageUg:
-		return true
-	case PublicEmailLanguageUgCn:
-		return true
-	case PublicEmailLanguageUk:
-		return true
-	case PublicEmailLanguageUkUa:
-		return true
-	case PublicEmailLanguageUr:
-		return true
-	case PublicEmailLanguageUrIn:
-		return true
-	case PublicEmailLanguageUrPk:
-		return true
-	case PublicEmailLanguageUz:
-		return true
-	case PublicEmailLanguageUzAf:
-		return true
-	case PublicEmailLanguageUzUz:
-		return true
-	case PublicEmailLanguageVai:
-		return true
-	case PublicEmailLanguageVaiLr:
-		return true
-	case PublicEmailLanguageVe:
-		return true
-	case PublicEmailLanguageVec:
-		return true
-	case PublicEmailLanguageVecIt:
-		return true
-	case PublicEmailLanguageVi:
-		return true
-	case PublicEmailLanguageViVn:
-		return true
-	case PublicEmailLanguageVmw:
-		return true
-	case PublicEmailLanguageVmwMz:
-		return true
-	case PublicEmailLanguageVo:
-		return true
-	case PublicEmailLanguageVo001:
-		return true
-	case PublicEmailLanguageVun:
-		return true
-	case PublicEmailLanguageVunTz:
-		return true
-	case PublicEmailLanguageWa:
-		return true
-	case PublicEmailLanguageWae:
-		return true
-	case PublicEmailLanguageWaeCh:
-		return true
-	case PublicEmailLanguageWo:
-		return true
-	case PublicEmailLanguageWoSn:
-		return true
-	case PublicEmailLanguageXh:
-		return true
-	case PublicEmailLanguageXhZa:
-		return true
-	case PublicEmailLanguageXnr:
-		return true
-	case PublicEmailLanguageXnrIn:
-		return true
-	case PublicEmailLanguageXog:
-		return true
-	case PublicEmailLanguageXogUg:
-		return true
-	case PublicEmailLanguageYav:
-		return true
-	case PublicEmailLanguageYavCm:
-		return true
-	case PublicEmailLanguageYi:
-		return true
-	case PublicEmailLanguageYi001:
-		return true
-	case PublicEmailLanguageYiUa:
-		return true
-	case PublicEmailLanguageYo:
-		return true
-	case PublicEmailLanguageYoBj:
-		return true
-	case PublicEmailLanguageYoNg:
-		return true
-	case PublicEmailLanguageYrl:
-		return true
-	case PublicEmailLanguageYrlBr:
-		return true
-	case PublicEmailLanguageYrlCo:
-		return true
-	case PublicEmailLanguageYrlVe:
-		return true
-	case PublicEmailLanguageYue:
-		return true
-	case PublicEmailLanguageYueCn:
-		return true
-	case PublicEmailLanguageYueHk:
-		return true
-	case PublicEmailLanguageYueMo:
-		return true
-	case PublicEmailLanguageZa:
-		return true
-	case PublicEmailLanguageZaCn:
-		return true
-	case PublicEmailLanguageZgh:
-		return true
-	case PublicEmailLanguageZghMa:
-		return true
-	case PublicEmailLanguageZh:
-		return true
-	case PublicEmailLanguageZhCn:
-		return true
-	case PublicEmailLanguageZhHans:
-		return true
-	case PublicEmailLanguageZhHant:
-		return true
-	case PublicEmailLanguageZhHk:
-		return true
-	case PublicEmailLanguageZhMo:
-		return true
-	case PublicEmailLanguageZhMy:
-		return true
-	case PublicEmailLanguageZhSg:
-		return true
-	case PublicEmailLanguageZhTw:
-		return true
-	case PublicEmailLanguageZu:
-		return true
-	case PublicEmailLanguageZuZa:
-		return true
-	default:
-		return false
-	}
-}
 
 // Defines values for PublicEmailState.
 const (
@@ -15176,2739 +11167,6 @@ func (e Putautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeFunction
 	}
 }
 
-// Defines values for GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage.
-const (
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAa     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "aa"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAb     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ab"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAe     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ae"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAf     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "af"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAfNa   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "af-na"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAfZa   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "af-za"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAgq    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "agq"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAgqCm  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "agq-cm"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAk     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ak"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAkGh   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ak-gh"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAm     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "am"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAmEt   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "am-et"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAn     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "an"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAnn    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ann"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAnnNg  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ann-ng"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAr     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ar"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAr001  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ar-001"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArAe   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ar-ae"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArBh   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ar-bh"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArDj   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ar-dj"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArDz   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ar-dz"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArEg   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ar-eg"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArEh   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ar-eh"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArEr   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ar-er"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArIl   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ar-il"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArIq   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ar-iq"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArJo   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ar-jo"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArKm   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ar-km"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArKw   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ar-kw"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArLb   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ar-lb"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArLy   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ar-ly"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArMa   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ar-ma"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArMr   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ar-mr"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArOm   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ar-om"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArPs   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ar-ps"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArQa   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ar-qa"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArSa   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ar-sa"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArSd   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ar-sd"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArSo   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ar-so"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArSs   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ar-ss"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArSy   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ar-sy"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArTd   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ar-td"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArTn   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ar-tn"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArYe   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ar-ye"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAs     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "as"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAsIn   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "as-in"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAsa    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "asa"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAsaTz  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "asa-tz"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAst    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ast"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAstEs  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ast-es"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAv     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "av"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAy     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ay"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAz     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "az"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAzAz   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "az-az"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBa     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ba"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBal    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "bal"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBalPk  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "bal-pk"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBas    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "bas"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBasCm  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "bas-cm"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBe     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "be"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBeBy   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "be-by"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBem    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "bem"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBemZm  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "bem-zm"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBez    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "bez"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBezTz  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "bez-tz"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBg     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "bg"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBgBg   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "bg-bg"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBgc    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "bgc"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBgcIn  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "bgc-in"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBho    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "bho"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBhoIn  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "bho-in"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBi     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "bi"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBlo    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "blo"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBloBj  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "blo-bj"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBm     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "bm"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBmMl   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "bm-ml"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBn     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "bn"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBnBd   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "bn-bd"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBnIn   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "bn-in"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBo     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "bo"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBoCn   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "bo-cn"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBoIn   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "bo-in"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBr     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "br"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBrFr   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "br-fr"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBrx    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "brx"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBrxIn  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "brx-in"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBs     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "bs"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBsBa   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "bs-ba"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCa     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ca"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCaAd   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ca-ad"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCaEs   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ca-es"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCaFr   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ca-fr"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCaIt   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ca-it"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCcp    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ccp"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCcpBd  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ccp-bd"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCcpIn  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ccp-in"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCe     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ce"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCeRu   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ce-ru"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCeb    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ceb"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCebPh  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ceb-ph"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCgg    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "cgg"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCggUg  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "cgg-ug"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCh     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ch"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageChr    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "chr"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageChrUs  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "chr-us"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCkb    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ckb"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCkbIq  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ckb-iq"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCkbIr  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ckb-ir"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCo     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "co"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCr     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "cr"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCs     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "cs"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCsCz   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "cs-cz"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCsw    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "csw"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCswCa  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "csw-ca"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCu     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "cu"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCuRu   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "cu-ru"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCv     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "cv"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCvRu   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "cv-ru"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCy     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "cy"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCyGb   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "cy-gb"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDa     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "da"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDaDk   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "da-dk"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDaGl   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "da-gl"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDav    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "dav"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDavKe  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "dav-ke"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDe     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "de"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDeAt   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "de-at"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDeBe   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "de-be"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDeCh   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "de-ch"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDeDe   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "de-de"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDeGr   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "de-gr"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDeIt   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "de-it"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDeLi   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "de-li"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDeLu   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "de-lu"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDje    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "dje"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDjeNe  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "dje-ne"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDoi    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "doi"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDoiIn  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "doi-in"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDsb    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "dsb"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDsbDe  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "dsb-de"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDua    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "dua"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDuaCm  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "dua-cm"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDv     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "dv"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDyo    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "dyo"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDyoSn  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "dyo-sn"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDz     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "dz"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDzBt   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "dz-bt"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEbu    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ebu"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEbuKe  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ebu-ke"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEe     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ee"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEeGh   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ee-gh"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEeTg   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ee-tg"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEl     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "el"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageElCy   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "el-cy"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageElGr   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "el-gr"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEn     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEn001  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-001"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEn150  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-150"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnAe   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-ae"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnAg   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-ag"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnAi   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-ai"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnAs   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-as"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnAt   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-at"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnAu   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-au"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnBb   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-bb"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnBe   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-be"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnBi   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-bi"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnBm   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-bm"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnBs   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-bs"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnBw   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-bw"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnBz   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-bz"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnCa   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-ca"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnCc   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-cc"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnCh   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-ch"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnCk   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-ck"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnCm   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-cm"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnCn   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-cn"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnCx   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-cx"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnCy   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-cy"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnCz   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-cz"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnDe   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-de"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnDg   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-dg"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnDk   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-dk"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnDm   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-dm"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnEe   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-ee"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnEg   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-eg"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnEr   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-er"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnEs   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-es"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnFi   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-fi"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnFj   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-fj"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnFk   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-fk"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnFm   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-fm"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnFr   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-fr"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnGb   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-gb"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnGd   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-gd"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnGg   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-gg"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnGh   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-gh"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnGi   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-gi"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnGm   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-gm"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnGs   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-gs"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnGu   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-gu"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnGy   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-gy"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnHk   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-hk"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnHu   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-hu"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnId   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-id"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnIe   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-ie"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnIl   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-il"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnIm   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-im"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnIn   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-in"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnIo   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-io"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnIt   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-it"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnJe   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-je"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnJm   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-jm"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnKe   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-ke"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnKi   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-ki"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnKn   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-kn"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnKy   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-ky"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnLc   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-lc"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnLr   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-lr"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnLs   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-ls"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnLu   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-lu"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnMg   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-mg"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnMh   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-mh"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnMo   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-mo"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnMp   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-mp"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnMs   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-ms"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnMt   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-mt"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnMu   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-mu"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnMv   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-mv"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnMw   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-mw"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnMx   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-mx"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnMy   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-my"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnNa   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-na"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnNf   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-nf"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnNg   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-ng"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnNl   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-nl"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnNo   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-no"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnNr   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-nr"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnNu   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-nu"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnNz   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-nz"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnPg   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-pg"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnPh   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-ph"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnPk   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-pk"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnPl   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-pl"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnPn   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-pn"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnPr   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-pr"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnPt   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-pt"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnPw   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-pw"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnRo   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-ro"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnRw   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-rw"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnSb   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-sb"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnSc   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-sc"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnSd   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-sd"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnSe   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-se"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnSg   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-sg"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnSh   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-sh"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnSi   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-si"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnSk   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-sk"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnSl   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-sl"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnSs   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-ss"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnSx   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-sx"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnSz   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-sz"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnTc   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-tc"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnTh   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-th"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnTk   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-tk"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnTn   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-tn"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnTo   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-to"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnTt   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-tt"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnTv   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-tv"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnTz   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-tz"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnUg   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-ug"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnUm   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-um"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnUs   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-us"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnVc   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-vc"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnVg   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-vg"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnVi   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-vi"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnVn   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-vn"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnVu   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-vu"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnWs   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-ws"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnZa   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-za"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnZm   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-zm"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnZw   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "en-zw"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEo     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "eo"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEo001  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "eo-001"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEs     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "es"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEs419  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "es-419"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsAr   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "es-ar"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsBo   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "es-bo"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsBr   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "es-br"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsBz   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "es-bz"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsCl   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "es-cl"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsCo   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "es-co"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsCr   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "es-cr"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsCu   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "es-cu"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsDo   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "es-do"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsEa   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "es-ea"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsEc   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "es-ec"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsEs   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "es-es"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsGq   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "es-gq"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsGt   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "es-gt"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsHn   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "es-hn"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsIc   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "es-ic"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsMx   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "es-mx"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsNi   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "es-ni"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsPa   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "es-pa"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsPe   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "es-pe"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsPh   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "es-ph"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsPr   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "es-pr"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsPy   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "es-py"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsSv   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "es-sv"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsUs   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "es-us"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsUy   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "es-uy"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsVe   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "es-ve"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEt     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "et"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEtEe   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "et-ee"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEu     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "eu"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEuEs   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "eu-es"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEwo    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ewo"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEwoCm  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ewo-cm"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFa     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fa"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFaAf   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fa-af"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFaIr   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fa-ir"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFf     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ff"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFfBf   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ff-bf"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFfCm   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ff-cm"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFfGh   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ff-gh"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFfGm   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ff-gm"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFfGn   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ff-gn"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFfGw   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ff-gw"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFfLr   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ff-lr"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFfMr   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ff-mr"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFfNe   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ff-ne"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFfNg   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ff-ng"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFfSl   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ff-sl"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFfSn   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ff-sn"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFi     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fi"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFiFi   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fi-fi"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFil    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fil"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFilPh  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fil-ph"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFj     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fj"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFo     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fo"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFoDk   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fo-dk"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFoFo   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fo-fo"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFr     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fr"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrBe   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fr-be"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrBf   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fr-bf"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrBi   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fr-bi"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrBj   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fr-bj"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrBl   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fr-bl"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrCa   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fr-ca"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrCd   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fr-cd"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrCf   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fr-cf"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrCg   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fr-cg"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrCh   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fr-ch"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrCi   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fr-ci"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrCm   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fr-cm"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrDj   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fr-dj"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrDz   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fr-dz"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrFr   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fr-fr"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrGa   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fr-ga"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrGf   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fr-gf"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrGn   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fr-gn"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrGp   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fr-gp"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrGq   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fr-gq"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrHt   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fr-ht"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrKm   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fr-km"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrLu   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fr-lu"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrMa   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fr-ma"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrMc   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fr-mc"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrMf   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fr-mf"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrMg   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fr-mg"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrMl   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fr-ml"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrMq   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fr-mq"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrMr   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fr-mr"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrMu   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fr-mu"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrNc   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fr-nc"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrNe   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fr-ne"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrPf   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fr-pf"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrPm   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fr-pm"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrRe   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fr-re"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrRw   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fr-rw"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrSc   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fr-sc"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrSn   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fr-sn"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrSy   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fr-sy"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrTd   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fr-td"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrTg   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fr-tg"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrTn   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fr-tn"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrVu   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fr-vu"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrWf   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fr-wf"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrYt   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fr-yt"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrr    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "frr"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrrDe  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "frr-de"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFur    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fur"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFurIt  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fur-it"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFy     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fy"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFyNl   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "fy-nl"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageGa     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ga"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageGaGb   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ga-gb"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageGaIe   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ga-ie"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageGaa    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "gaa"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageGaaGh  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "gaa-gh"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageGd     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "gd"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageGdGb   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "gd-gb"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageGl     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "gl"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageGlEs   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "gl-es"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageGn     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "gn"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageGsw    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "gsw"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageGswCh  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "gsw-ch"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageGswFr  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "gsw-fr"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageGswLi  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "gsw-li"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageGu     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "gu"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageGuIn   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "gu-in"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageGuz    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "guz"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageGuzKe  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "guz-ke"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageGv     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "gv"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageGvIm   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "gv-im"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageHa     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ha"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageHaGh   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ha-gh"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageHaNe   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ha-ne"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageHaNg   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ha-ng"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageHaw    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "haw"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageHawUs  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "haw-us"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageHe     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "he"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageHeIl   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "he-il"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageHi     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "hi"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageHiIn   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "hi-in"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageHmn    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "hmn"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageHo     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ho"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageHr     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "hr"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageHrBa   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "hr-ba"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageHrHr   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "hr-hr"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageHsb    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "hsb"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageHsbDe  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "hsb-de"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageHt     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ht"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageHtHt   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ht-ht"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageHu     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "hu"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageHuHu   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "hu-hu"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageHy     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "hy"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageHyAm   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "hy-am"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageHz     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "hz"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageIa     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ia"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageIa001  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ia-001"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageId     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "id"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageIdId   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "id-id"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageIe     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ie"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageIeEe   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ie-ee"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageIg     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ig"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageIgNg   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ig-ng"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageIi     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ii"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageIiCn   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ii-cn"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageIk     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ik"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageIo     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "io"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageIs     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "is"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageIsIs   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "is-is"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageIt     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "it"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageItCh   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "it-ch"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageItIt   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "it-it"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageItSm   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "it-sm"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageItVa   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "it-va"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageIu     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "iu"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageJa     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ja"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageJaJp   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ja-jp"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageJgo    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "jgo"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageJgoCm  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "jgo-cm"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageJmc    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "jmc"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageJmcTz  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "jmc-tz"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageJv     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "jv"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageJvId   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "jv-id"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKa     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ka"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKaGe   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ka-ge"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKab    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "kab"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKabDz  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "kab-dz"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKam    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "kam"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKamKe  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "kam-ke"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKar    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "kar"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKde    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "kde"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKdeTz  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "kde-tz"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKea    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "kea"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKeaCv  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "kea-cv"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKg     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "kg"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKgp    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "kgp"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKgpBr  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "kgp-br"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKh     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "kh"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKhq    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "khq"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKhqMl  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "khq-ml"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKi     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ki"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKiKe   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ki-ke"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKj     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "kj"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKk     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "kk"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKkKz   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "kk-kz"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKkj    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "kkj"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKkjCm  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "kkj-cm"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKl     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "kl"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKlGl   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "kl-gl"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKln    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "kln"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKlnKe  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "kln-ke"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKm     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "km"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKmKh   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "km-kh"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKn     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "kn"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKnIn   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "kn-in"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKo     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ko"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKoCn   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ko-cn"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKoKp   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ko-kp"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKoKr   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ko-kr"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKok    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "kok"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKokIn  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "kok-in"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKr     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "kr"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKs     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ks"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKsIn   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ks-in"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKsb    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ksb"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKsbTz  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ksb-tz"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKsf    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ksf"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKsfCm  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ksf-cm"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKsh    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ksh"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKshDe  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ksh-de"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKu     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ku"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKuTr   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ku-tr"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKv     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "kv"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKw     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "kw"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKwGb   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "kw-gb"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKxv    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "kxv"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKxvIn  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "kxv-in"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKy     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ky"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKyKg   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ky-kg"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLa     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "la"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLag    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "lag"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLagTz  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "lag-tz"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLb     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "lb"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLbLu   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "lb-lu"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLg     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "lg"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLgUg   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "lg-ug"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLi     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "li"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLij    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "lij"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLijIt  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "lij-it"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLkt    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "lkt"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLktUs  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "lkt-us"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLmo    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "lmo"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLmoIt  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "lmo-it"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLn     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ln"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLnAo   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ln-ao"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLnCd   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ln-cd"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLnCf   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ln-cf"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLnCg   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ln-cg"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLo     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "lo"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLoLa   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "lo-la"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLrc    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "lrc"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLrcIq  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "lrc-iq"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLrcIr  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "lrc-ir"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLt     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "lt"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLtLt   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "lt-lt"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLu     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "lu"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLuCd   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "lu-cd"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLuo    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "luo"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLuoKe  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "luo-ke"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLuy    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "luy"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLuyKe  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "luy-ke"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLv     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "lv"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLvLv   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "lv-lv"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMai    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "mai"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMaiIn  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "mai-in"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMas    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "mas"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMasKe  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "mas-ke"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMasTz  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "mas-tz"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMdf    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "mdf"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMdfRu  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "mdf-ru"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMer    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "mer"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMerKe  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "mer-ke"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMfe    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "mfe"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMfeMu  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "mfe-mu"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMg     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "mg"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMgMg   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "mg-mg"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMgh    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "mgh"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMghMz  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "mgh-mz"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMgo    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "mgo"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMgoCm  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "mgo-cm"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMh     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "mh"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMi     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "mi"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMiNz   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "mi-nz"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMk     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "mk"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMkMk   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "mk-mk"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMl     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ml"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMlIn   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ml-in"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMn     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "mn"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMnMn   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "mn-mn"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMni    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "mni"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMniIn  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "mni-in"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMr     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "mr"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMrIn   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "mr-in"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMs     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ms"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMsBn   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ms-bn"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMsId   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ms-id"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMsMy   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ms-my"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMsSg   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ms-sg"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMt     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "mt"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMtMt   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "mt-mt"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMua    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "mua"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMuaCm  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "mua-cm"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMy     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "my"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMyMm   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "my-mm"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMzn    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "mzn"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMznIr  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "mzn-ir"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNa     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "na"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNaq    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "naq"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNaqNa  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "naq-na"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNb     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "nb"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNbNo   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "nb-no"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNbSj   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "nb-sj"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNd     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "nd"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNdZw   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "nd-zw"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNds    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "nds"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNdsDe  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "nds-de"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNdsNl  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "nds-nl"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNe     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ne"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNeIn   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ne-in"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNeNp   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ne-np"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNg     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ng"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNl     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "nl"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNlAw   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "nl-aw"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNlBe   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "nl-be"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNlBq   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "nl-bq"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNlCh   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "nl-ch"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNlCw   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "nl-cw"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNlLu   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "nl-lu"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNlNl   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "nl-nl"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNlSr   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "nl-sr"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNlSx   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "nl-sx"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNmg    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "nmg"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNmgCm  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "nmg-cm"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNn     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "nn"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNnNo   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "nn-no"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNnh    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "nnh"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNnhCm  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "nnh-cm"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNo     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "no"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNoNo   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "no-no"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNqo    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "nqo"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNqoGn  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "nqo-gn"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNr     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "nr"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNso    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "nso"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNsoZa  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "nso-za"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNus    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "nus"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNusSs  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "nus-ss"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNv     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "nv"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNy     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ny"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNyn    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "nyn"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNynUg  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "nyn-ug"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageOc     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "oc"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageOcEs   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "oc-es"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageOcFr   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "oc-fr"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageOj     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "oj"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageOm     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "om"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageOmEt   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "om-et"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageOmKe   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "om-ke"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageOr     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "or"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageOrIn   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "or-in"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageOs     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "os"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageOsGe   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "os-ge"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageOsRu   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "os-ru"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePa     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "pa"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePaIn   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "pa-in"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePaPk   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "pa-pk"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePcm    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "pcm"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePcmNg  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "pcm-ng"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePi     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "pi"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePis    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "pis"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePisSb  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "pis-sb"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePl     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "pl"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePlPl   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "pl-pl"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePrg    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "prg"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePrg001 GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "prg-001"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePs     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ps"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePsAf   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ps-af"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePsPk   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ps-pk"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePt     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "pt"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePtAo   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "pt-ao"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePtBr   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "pt-br"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePtCh   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "pt-ch"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePtCv   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "pt-cv"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePtGq   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "pt-gq"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePtGw   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "pt-gw"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePtLu   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "pt-lu"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePtMo   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "pt-mo"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePtMz   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "pt-mz"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePtPt   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "pt-pt"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePtSt   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "pt-st"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePtTl   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "pt-tl"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageQu     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "qu"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageQuBo   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "qu-bo"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageQuEc   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "qu-ec"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageQuPe   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "qu-pe"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageRaj    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "raj"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageRajIn  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "raj-in"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageRm     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "rm"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageRmCh   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "rm-ch"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageRn     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "rn"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageRnBi   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "rn-bi"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageRo     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ro"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageRoMd   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ro-md"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageRoRo   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ro-ro"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageRof    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "rof"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageRofTz  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "rof-tz"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageRu     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ru"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageRuBy   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ru-by"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageRuKg   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ru-kg"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageRuKz   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ru-kz"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageRuMd   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ru-md"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageRuRu   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ru-ru"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageRuUa   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ru-ua"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageRw     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "rw"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageRwRw   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "rw-rw"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageRwk    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "rwk"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageRwkTz  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "rwk-tz"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSa     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "sa"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSaIn   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "sa-in"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSah    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "sah"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSahRu  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "sah-ru"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSaq    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "saq"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSaqKe  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "saq-ke"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSat    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "sat"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSatIn  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "sat-in"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSbp    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "sbp"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSbpTz  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "sbp-tz"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSc     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "sc"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageScIt   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "sc-it"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSd     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "sd"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSdIn   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "sd-in"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSdPk   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "sd-pk"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSe     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "se"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSeFi   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "se-fi"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSeNo   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "se-no"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSeSe   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "se-se"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSeh    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "seh"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSehMz  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "seh-mz"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSes    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ses"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSesMl  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ses-ml"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSg     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "sg"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSgCf   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "sg-cf"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageShi    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "shi"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageShiMa  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "shi-ma"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSi     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "si"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSiLk   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "si-lk"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSk     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "sk"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSkSk   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "sk-sk"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSl     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "sl"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSlSi   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "sl-si"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSm     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "sm"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSmn    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "smn"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSmnFi  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "smn-fi"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSms    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "sms"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSmsFi  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "sms-fi"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSn     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "sn"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSnZw   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "sn-zw"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSo     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "so"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSoDj   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "so-dj"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSoEt   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "so-et"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSoKe   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "so-ke"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSoSo   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "so-so"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSq     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "sq"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSqAl   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "sq-al"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSqMk   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "sq-mk"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSqXk   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "sq-xk"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSr     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "sr"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSrBa   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "sr-ba"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSrCs   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "sr-cs"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSrMe   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "sr-me"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSrRs   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "sr-rs"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSrXk   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "sr-xk"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSs     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ss"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSt     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "st"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageStLs   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "st-ls"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageStZa   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "st-za"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSu     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "su"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSuId   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "su-id"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSv     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "sv"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSvAx   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "sv-ax"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSvFi   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "sv-fi"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSvSe   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "sv-se"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSw     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "sw"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSwCd   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "sw-cd"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSwKe   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "sw-ke"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSwTz   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "sw-tz"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSwUg   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "sw-ug"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSy     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "sy"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSyr    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "syr"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSyrIq  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "syr-iq"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSyrSy  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "syr-sy"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSzl    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "szl"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSzlPl  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "szl-pl"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTa     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ta"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTaIn   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ta-in"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTaLk   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ta-lk"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTaMy   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ta-my"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTaSg   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ta-sg"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTe     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "te"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTeIn   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "te-in"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTeo    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "teo"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTeoKe  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "teo-ke"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTeoUg  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "teo-ug"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTg     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "tg"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTgTj   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "tg-tj"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTh     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "th"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageThTh   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "th-th"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTi     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ti"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTiEr   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ti-er"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTiEt   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ti-et"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTk     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "tk"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTkTm   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "tk-tm"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTl     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "tl"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTn     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "tn"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTnBw   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "tn-bw"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTnZa   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "tn-za"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTo     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "to"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageToTo   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "to-to"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTok    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "tok"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTok001 GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "tok-001"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTr     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "tr"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTrCy   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "tr-cy"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTrTr   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "tr-tr"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTs     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ts"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTt     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "tt"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTtRu   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "tt-ru"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTw     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "tw"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTwq    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "twq"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTwqNe  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "twq-ne"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTy     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ty"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTzm    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "tzm"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTzmMa  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "tzm-ma"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageUg     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ug"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageUgCn   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ug-cn"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageUk     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "uk"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageUkUa   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "uk-ua"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageUr     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ur"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageUrIn   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ur-in"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageUrPk   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ur-pk"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageUz     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "uz"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageUzAf   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "uz-af"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageUzUz   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "uz-uz"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageVai    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "vai"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageVaiLr  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "vai-lr"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageVe     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "ve"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageVec    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "vec"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageVecIt  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "vec-it"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageVi     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "vi"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageViVn   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "vi-vn"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageVmw    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "vmw"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageVmwMz  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "vmw-mz"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageVo     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "vo"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageVo001  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "vo-001"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageVun    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "vun"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageVunTz  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "vun-tz"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageWa     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "wa"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageWae    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "wae"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageWaeCh  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "wae-ch"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageWo     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "wo"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageWoSn   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "wo-sn"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageXh     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "xh"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageXhZa   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "xh-za"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageXnr    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "xnr"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageXnrIn  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "xnr-in"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageXog    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "xog"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageXogUg  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "xog-ug"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageYav    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "yav"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageYavCm  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "yav-cm"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageYi     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "yi"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageYi001  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "yi-001"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageYiUa   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "yi-ua"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageYo     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "yo"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageYoBj   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "yo-bj"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageYoNg   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "yo-ng"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageYrl    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "yrl"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageYrlBr  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "yrl-br"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageYrlCo  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "yrl-co"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageYrlVe  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "yrl-ve"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageYue    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "yue"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageYueCn  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "yue-cn"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageYueHk  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "yue-hk"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageYueMo  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "yue-mo"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageZa     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "za"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageZaCn   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "za-cn"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageZgh    GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "zgh"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageZghMa  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "zgh-ma"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageZh     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "zh"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageZhCn   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "zh-cn"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageZhHans GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "zh-hans"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageZhHant GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "zh-hant"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageZhHk   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "zh-hk"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageZhMo   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "zh-mo"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageZhMy   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "zh-my"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageZhSg   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "zh-sg"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageZhTw   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "zh-tw"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageZu     GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "zu"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageZuZa   GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage = "zu-za"
-)
-
-// Valid indicates whether the value is a known member of the GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage enum.
-func (e GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguage) Valid() bool {
-	switch e {
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAa:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAb:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAf:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAfNa:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAfZa:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAgq:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAgqCm:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAk:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAkGh:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAm:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAmEt:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAnn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAnnNg:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAr:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAr001:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArAe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArBh:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArDj:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArDz:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArEg:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArEh:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArEr:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArIl:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArIq:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArJo:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArKm:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArKw:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArLb:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArLy:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArMa:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArMr:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArOm:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArPs:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArQa:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArSa:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArSd:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArSo:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArSs:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArSy:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArTd:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArTn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageArYe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAs:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAsIn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAsa:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAsaTz:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAst:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAstEs:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAv:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAy:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAz:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageAzAz:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBa:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBal:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBalPk:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBas:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBasCm:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBeBy:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBem:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBemZm:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBez:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBezTz:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBg:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBgBg:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBgc:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBgcIn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBho:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBhoIn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBi:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBlo:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBloBj:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBm:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBmMl:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBnBd:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBnIn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBo:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBoCn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBoIn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBr:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBrFr:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBrx:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBrxIn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBs:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageBsBa:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCa:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCaAd:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCaEs:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCaFr:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCaIt:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCcp:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCcpBd:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCcpIn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCeRu:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCeb:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCebPh:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCgg:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCggUg:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCh:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageChr:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageChrUs:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCkb:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCkbIq:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCkbIr:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCo:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCr:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCs:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCsCz:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCsw:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCswCa:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCu:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCuRu:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCv:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCvRu:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCy:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageCyGb:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDa:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDaDk:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDaGl:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDav:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDavKe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDeAt:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDeBe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDeCh:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDeDe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDeGr:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDeIt:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDeLi:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDeLu:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDje:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDjeNe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDoi:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDoiIn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDsb:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDsbDe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDua:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDuaCm:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDv:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDyo:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDyoSn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDz:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageDzBt:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEbu:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEbuKe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEeGh:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEeTg:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEl:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageElCy:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageElGr:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEn001:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEn150:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnAe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnAg:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnAi:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnAs:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnAt:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnAu:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnBb:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnBe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnBi:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnBm:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnBs:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnBw:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnBz:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnCa:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnCc:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnCh:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnCk:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnCm:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnCn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnCx:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnCy:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnCz:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnDe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnDg:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnDk:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnDm:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnEe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnEg:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnEr:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnEs:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnFi:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnFj:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnFk:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnFm:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnFr:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnGb:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnGd:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnGg:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnGh:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnGi:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnGm:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnGs:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnGu:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnGy:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnHk:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnHu:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnId:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnIe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnIl:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnIm:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnIn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnIo:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnIt:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnJe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnJm:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnKe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnKi:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnKn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnKy:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnLc:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnLr:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnLs:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnLu:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnMg:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnMh:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnMo:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnMp:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnMs:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnMt:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnMu:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnMv:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnMw:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnMx:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnMy:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnNa:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnNf:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnNg:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnNl:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnNo:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnNr:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnNu:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnNz:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnPg:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnPh:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnPk:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnPl:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnPn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnPr:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnPt:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnPw:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnRo:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnRw:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnSb:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnSc:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnSd:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnSe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnSg:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnSh:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnSi:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnSk:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnSl:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnSs:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnSx:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnSz:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnTc:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnTh:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnTk:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnTn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnTo:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnTt:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnTv:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnTz:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnUg:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnUm:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnUs:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnVc:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnVg:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnVi:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnVn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnVu:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnWs:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnZa:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnZm:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEnZw:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEo:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEo001:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEs:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEs419:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsAr:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsBo:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsBr:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsBz:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsCl:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsCo:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsCr:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsCu:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsDo:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsEa:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsEc:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsEs:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsGq:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsGt:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsHn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsIc:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsMx:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsNi:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsPa:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsPe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsPh:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsPr:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsPy:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsSv:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsUs:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsUy:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEsVe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEt:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEtEe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEu:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEuEs:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEwo:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageEwoCm:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFa:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFaAf:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFaIr:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFf:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFfBf:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFfCm:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFfGh:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFfGm:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFfGn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFfGw:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFfLr:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFfMr:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFfNe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFfNg:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFfSl:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFfSn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFi:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFiFi:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFil:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFilPh:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFj:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFo:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFoDk:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFoFo:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFr:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrBe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrBf:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrBi:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrBj:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrBl:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrCa:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrCd:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrCf:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrCg:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrCh:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrCi:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrCm:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrDj:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrDz:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrFr:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrGa:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrGf:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrGn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrGp:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrGq:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrHt:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrKm:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrLu:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrMa:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrMc:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrMf:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrMg:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrMl:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrMq:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrMr:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrMu:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrNc:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrNe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrPf:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrPm:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrRe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrRw:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrSc:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrSn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrSy:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrTd:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrTg:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrTn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrVu:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrWf:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrYt:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrr:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFrrDe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFur:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFurIt:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFy:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageFyNl:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageGa:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageGaGb:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageGaIe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageGaa:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageGaaGh:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageGd:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageGdGb:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageGl:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageGlEs:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageGn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageGsw:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageGswCh:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageGswFr:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageGswLi:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageGu:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageGuIn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageGuz:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageGuzKe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageGv:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageGvIm:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageHa:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageHaGh:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageHaNe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageHaNg:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageHaw:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageHawUs:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageHe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageHeIl:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageHi:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageHiIn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageHmn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageHo:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageHr:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageHrBa:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageHrHr:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageHsb:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageHsbDe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageHt:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageHtHt:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageHu:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageHuHu:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageHy:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageHyAm:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageHz:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageIa:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageIa001:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageId:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageIdId:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageIe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageIeEe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageIg:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageIgNg:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageIi:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageIiCn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageIk:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageIo:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageIs:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageIsIs:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageIt:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageItCh:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageItIt:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageItSm:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageItVa:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageIu:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageJa:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageJaJp:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageJgo:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageJgoCm:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageJmc:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageJmcTz:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageJv:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageJvId:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKa:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKaGe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKab:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKabDz:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKam:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKamKe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKar:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKde:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKdeTz:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKea:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKeaCv:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKg:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKgp:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKgpBr:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKh:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKhq:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKhqMl:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKi:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKiKe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKj:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKk:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKkKz:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKkj:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKkjCm:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKl:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKlGl:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKln:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKlnKe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKm:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKmKh:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKnIn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKo:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKoCn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKoKp:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKoKr:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKok:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKokIn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKr:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKs:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKsIn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKsb:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKsbTz:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKsf:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKsfCm:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKsh:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKshDe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKu:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKuTr:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKv:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKw:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKwGb:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKxv:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKxvIn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKy:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageKyKg:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLa:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLag:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLagTz:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLb:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLbLu:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLg:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLgUg:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLi:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLij:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLijIt:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLkt:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLktUs:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLmo:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLmoIt:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLnAo:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLnCd:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLnCf:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLnCg:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLo:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLoLa:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLrc:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLrcIq:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLrcIr:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLt:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLtLt:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLu:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLuCd:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLuo:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLuoKe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLuy:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLuyKe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLv:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageLvLv:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMai:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMaiIn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMas:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMasKe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMasTz:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMdf:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMdfRu:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMer:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMerKe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMfe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMfeMu:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMg:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMgMg:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMgh:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMghMz:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMgo:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMgoCm:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMh:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMi:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMiNz:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMk:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMkMk:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMl:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMlIn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMnMn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMni:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMniIn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMr:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMrIn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMs:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMsBn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMsId:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMsMy:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMsSg:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMt:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMtMt:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMua:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMuaCm:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMy:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMyMm:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMzn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageMznIr:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNa:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNaq:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNaqNa:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNb:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNbNo:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNbSj:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNd:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNdZw:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNds:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNdsDe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNdsNl:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNeIn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNeNp:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNg:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNl:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNlAw:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNlBe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNlBq:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNlCh:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNlCw:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNlLu:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNlNl:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNlSr:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNlSx:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNmg:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNmgCm:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNnNo:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNnh:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNnhCm:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNo:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNoNo:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNqo:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNqoGn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNr:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNso:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNsoZa:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNus:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNusSs:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNv:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNy:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNyn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageNynUg:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageOc:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageOcEs:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageOcFr:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageOj:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageOm:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageOmEt:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageOmKe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageOr:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageOrIn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageOs:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageOsGe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageOsRu:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePa:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePaIn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePaPk:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePcm:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePcmNg:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePi:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePis:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePisSb:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePl:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePlPl:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePrg:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePrg001:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePs:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePsAf:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePsPk:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePt:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePtAo:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePtBr:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePtCh:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePtCv:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePtGq:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePtGw:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePtLu:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePtMo:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePtMz:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePtPt:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePtSt:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguagePtTl:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageQu:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageQuBo:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageQuEc:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageQuPe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageRaj:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageRajIn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageRm:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageRmCh:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageRn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageRnBi:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageRo:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageRoMd:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageRoRo:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageRof:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageRofTz:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageRu:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageRuBy:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageRuKg:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageRuKz:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageRuMd:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageRuRu:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageRuUa:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageRw:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageRwRw:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageRwk:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageRwkTz:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSa:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSaIn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSah:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSahRu:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSaq:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSaqKe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSat:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSatIn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSbp:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSbpTz:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSc:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageScIt:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSd:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSdIn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSdPk:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSeFi:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSeNo:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSeSe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSeh:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSehMz:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSes:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSesMl:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSg:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSgCf:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageShi:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageShiMa:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSi:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSiLk:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSk:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSkSk:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSl:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSlSi:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSm:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSmn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSmnFi:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSms:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSmsFi:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSnZw:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSo:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSoDj:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSoEt:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSoKe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSoSo:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSq:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSqAl:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSqMk:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSqXk:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSr:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSrBa:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSrCs:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSrMe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSrRs:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSrXk:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSs:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSt:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageStLs:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageStZa:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSu:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSuId:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSv:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSvAx:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSvFi:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSvSe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSw:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSwCd:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSwKe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSwTz:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSwUg:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSy:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSyr:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSyrIq:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSyrSy:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSzl:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageSzlPl:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTa:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTaIn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTaLk:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTaMy:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTaSg:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTeIn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTeo:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTeoKe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTeoUg:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTg:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTgTj:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTh:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageThTh:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTi:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTiEr:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTiEt:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTk:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTkTm:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTl:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTnBw:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTnZa:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTo:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageToTo:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTok:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTok001:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTr:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTrCy:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTrTr:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTs:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTt:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTtRu:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTw:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTwq:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTwqNe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTy:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTzm:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageTzmMa:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageUg:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageUgCn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageUk:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageUkUa:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageUr:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageUrIn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageUrPk:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageUz:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageUzAf:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageUzUz:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageVai:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageVaiLr:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageVe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageVec:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageVecIt:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageVi:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageViVn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageVmw:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageVmwMz:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageVo:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageVo001:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageVun:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageVunTz:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageWa:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageWae:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageWaeCh:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageWo:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageWoSn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageXh:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageXhZa:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageXnr:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageXnrIn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageXog:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageXogUg:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageYav:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageYavCm:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageYi:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageYi001:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageYiUa:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageYo:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageYoBj:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageYoNg:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageYrl:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageYrlBr:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageYrlCo:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageYrlVe:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageYue:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageYueCn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageYueHk:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageYueMo:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageZa:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageZaCn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageZgh:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageZghMa:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageZh:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageZhCn:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageZhHans:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageZhHant:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageZhHk:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageZhMo:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageZhMy:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageZhSg:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageZhTw:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageZu:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLanguageZuZa:
-		return true
-	default:
-		return false
-	}
-}
-
-// Defines values for GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLength.
-const (
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLengthLONG  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLength = "LONG"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLengthSHORT GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLength = "SHORT"
-)
-
-// Valid indicates whether the value is a known member of the GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLength enum.
-func (e GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLength) Valid() bool {
-	switch e {
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLengthLONG:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsLengthSHORT:
-		return true
-	default:
-		return false
-	}
-}
-
-// Defines values for GetcmssiteSearch202603searchcmssiteSearch202603searchParamsTypes.
-const (
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsTypesBLOGPOST          GetcmssiteSearch202603searchcmssiteSearch202603searchParamsTypes = "BLOG_POST"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsTypesKNOWLEDGEARTICLE  GetcmssiteSearch202603searchcmssiteSearch202603searchParamsTypes = "KNOWLEDGE_ARTICLE"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsTypesLANDINGPAGE       GetcmssiteSearch202603searchcmssiteSearch202603searchParamsTypes = "LANDING_PAGE"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsTypesLISTINGPAGE       GetcmssiteSearch202603searchcmssiteSearch202603searchParamsTypes = "LISTING_PAGE"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsTypesSITEPAGE          GetcmssiteSearch202603searchcmssiteSearch202603searchParamsTypes = "SITE_PAGE"
-	GetcmssiteSearch202603searchcmssiteSearch202603searchParamsTypesSTRUCTUREDCONTENT GetcmssiteSearch202603searchcmssiteSearch202603searchParamsTypes = "STRUCTURED_CONTENT"
-)
-
-// Valid indicates whether the value is a known member of the GetcmssiteSearch202603searchcmssiteSearch202603searchParamsTypes enum.
-func (e GetcmssiteSearch202603searchcmssiteSearch202603searchParamsTypes) Valid() bool {
-	switch e {
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsTypesBLOGPOST:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsTypesKNOWLEDGEARTICLE:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsTypesLANDINGPAGE:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsTypesLISTINGPAGE:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsTypesSITEPAGE:
-		return true
-	case GetcmssiteSearch202603searchcmssiteSearch202603searchParamsTypesSTRUCTUREDCONTENT:
-		return true
-	default:
-		return false
-	}
-}
-
 // Defines values for PostcommunicationPreferences202603linksgeneratecommunicationPreferencesv4linksgenerateParamsChannel.
 const (
 	PostcommunicationPreferences202603linksgeneratecommunicationPreferencesv4linksgenerateParamsChannelEMAIL PostcommunicationPreferences202603linksgeneratecommunicationPreferencesv4linksgenerateParamsChannel = "EMAIL"
@@ -20018,4 +13276,6752 @@ type ActionResponseWithResultsSubscriptionDefinition struct {
 
 	// Status The current status of the operation, which can be PENDING, PROCESSING, CANCELED, or COMPLETE.
 	Status ActionResponseWithResultsSubscriptionDefinitionStatus `json:"status"`
+}
+
+// ActionResponseWithResultsSubscriptionDefinitionStatus The current status of the operation, which can be PENDING, PROCESSING, CANCELED, or COMPLETE.
+type ActionResponseWithResultsSubscriptionDefinitionStatus string
+
+// ActionResponseWithSingleResultURI defines model for ActionResponseWithSingleResultURI.
+type ActionResponseWithSingleResultURI struct {
+	// CompletedAt The timestamp when the export was completed, in ISO 8601 format.
+	CompletedAt time.Time `json:"completedAt"`
+
+	// Errors An array of StandardError objects detailing any errors that occurred during the export task.
+	Errors *[]StandardError `json:"errors,omitempty"`
+
+	// Links A collection of related links associated with the export.
+	Links *map[string]string `json:"links,omitempty"`
+
+	// NumErrors The number of errors encountered during the export process.
+	NumErrors *int32 `json:"numErrors,omitempty"`
+
+	// RequestedAt The timestamp when the export request was made, in ISO 8601 format.
+	RequestedAt *time.Time `json:"requestedAt,omitempty"`
+
+	// Result The URL of the resulting file if the export status is COMPLETE.
+	Result *string `json:"result,omitempty"`
+
+	// StartedAt The timestamp when the export process started, in ISO 8601 format.
+	StartedAt time.Time `json:"startedAt"`
+
+	// Status The current status of the export, which can be PENDING, PROCESSING, COMPLETE or CANCELED.
+	Status ActionResponseWithSingleResultURIStatus `json:"status"`
+}
+
+// ActionResponseWithSingleResultURIStatus The current status of the export, which can be PENDING, PROCESSING, COMPLETE or CANCELED.
+type ActionResponseWithSingleResultURIStatus string
+
+// AggregateEmailStatistics defines model for AggregateEmailStatistics.
+type AggregateEmailStatistics struct {
+	Aggregate EmailStatisticsData `json:"aggregate"`
+
+	// CampaignAggregations The aggregated statistics per campaign.
+	CampaignAggregations map[string]EmailStatisticsData `json:"campaignAggregations"`
+
+	// Emails List of email IDs that were sent during the time span.
+	Emails []int64 `json:"emails"`
+}
+
+// AllHistoryRefineBy defines model for AllHistoryRefineBy.
+type AllHistoryRefineBy struct {
+	// Type A string that indicates the type of refinement. The default and only valid value is 'AllHistoryRefineBy'.
+	Type AllHistoryRefineByType `json:"type"`
+}
+
+// AllHistoryRefineByType A string that indicates the type of refinement. The default and only valid value is 'AllHistoryRefineBy'.
+type AllHistoryRefineByType string
+
+// AllPropertyTypesOperation defines model for AllPropertyTypesOperation.
+type AllPropertyTypesOperation struct {
+	// CoalescingRefineBy An object that specifies additional refinement criteria for coalescing, which can be one of several types such as NumOccurrencesRefineBy or SetOccurrencesRefineBy.
+	CoalescingRefineBy AllPropertyTypesOperation_CoalescingRefineBy `json:"coalescingRefineBy"`
+
+	// DefaultValue A string specifying the default value to be used in the operation.
+	DefaultValue *string `json:"defaultValue,omitempty"`
+
+	// IncludeObjectsWithNoValueSet A boolean indicating whether objects with no value set should be included in the operation.
+	IncludeObjectsWithNoValueSet bool `json:"includeObjectsWithNoValueSet"`
+
+	// OperationType A string indicating the type of operation being performed.
+	OperationType string `json:"operationType"`
+
+	// Operator A string representing the operation to be performed, with valid values including 'IS_KNOWN', 'IS_UNKNOWN', 'IS_BLANK', and 'IS_NOT_BLANK'.
+	Operator AllPropertyTypesOperationOperator `json:"operator"`
+
+	// OperatorName A string representing the name of the operator used in the operation.
+	OperatorName   string          `json:"operatorName"`
+	PropertyAspect *PropertyAspect `json:"propertyAspect,omitempty"`
+
+	// PropertyType A string indicating the type of property operation, which is 'alltypes' for this component.
+	PropertyType AllPropertyTypesOperationPropertyType `json:"propertyType"`
+
+	// PruningRefineBy An object that specifies additional refinement criteria for pruning, which can be one of several types such as RelativeComparativeTimestampRefineBy or AbsoluteRangedTimestampRefineBy.
+	PruningRefineBy *AllPropertyTypesOperation_PruningRefineBy `json:"pruningRefineBy,omitempty"`
+
+	// RenderSpec A string that provides rendering specifications for the operation.
+	RenderSpec *string `json:"renderSpec,omitempty"`
+}
+
+// AllPropertyTypesOperation_CoalescingRefineBy An object that specifies additional refinement criteria for coalescing, which can be one of several types such as NumOccurrencesRefineBy or SetOccurrencesRefineBy.
+type AllPropertyTypesOperation_CoalescingRefineBy struct {
+	union json.RawMessage
+}
+
+// AllPropertyTypesOperationOperator A string representing the operation to be performed, with valid values including 'IS_KNOWN', 'IS_UNKNOWN', 'IS_BLANK', and 'IS_NOT_BLANK'.
+type AllPropertyTypesOperationOperator string
+
+// AllPropertyTypesOperationPropertyType A string indicating the type of property operation, which is 'alltypes' for this component.
+type AllPropertyTypesOperationPropertyType string
+
+// AllPropertyTypesOperation_PruningRefineBy An object that specifies additional refinement criteria for pruning, which can be one of several types such as RelativeComparativeTimestampRefineBy or AbsoluteRangedTimestampRefineBy.
+type AllPropertyTypesOperation_PruningRefineBy struct {
+	union json.RawMessage
+}
+
+// Angle defines model for Angle.
+type Angle struct {
+	// Units The unit of measurement for the angle.
+	Units AngleUnits `json:"units"`
+
+	// Value The numerical representation of the angle.
+	Value float64 `json:"value"`
+}
+
+// AngleUnits The unit of measurement for the angle.
+type AngleUnits string
+
+// ApiCollectionResponseJoinTimeAndRecordId defines model for ApiCollectionResponseJoinTimeAndRecordId.
+type ApiCollectionResponseJoinTimeAndRecordId struct {
+	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
+	Paging  *Paging               `json:"paging,omitempty"`
+	Results []JoinTimeAndRecordId `json:"results"`
+
+	// Total The total number of records that match the query.
+	Total *int64 `json:"total,omitempty"`
+}
+
+// ApiCollectionResponseRecordListMembership defines model for ApiCollectionResponseRecordListMembership.
+type ApiCollectionResponseRecordListMembership struct {
+	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
+	Paging  *Paging                `json:"paging,omitempty"`
+	Results []RecordListMembership `json:"results"`
+	Total   *int64                 `json:"total,omitempty"`
+}
+
+// ApiUsage defines model for ApiUsage.
+type ApiUsage struct {
+	// CollectedAt Indicates when the cache was last updated.
+	CollectedAt time.Time `json:"collectedAt"`
+
+	// CurrentUsage How many API calls an account has made for the current day.
+	CurrentUsage int32 `json:"currentUsage"`
+
+	// FetchStatus Status of fetching the information, including if the data came from the cache.
+	FetchStatus ApiUsageFetchStatus `json:"fetchStatus"`
+
+	// Name Name of the limit type.
+	Name string `json:"name"`
+
+	// ResetsAt Time that the limit will reset.
+	ResetsAt *time.Time `json:"resetsAt,omitempty"`
+
+	// UsageLimit Limits by which a single integration can consume the HubSpot public APIs.
+	UsageLimit int32 `json:"usageLimit"`
+}
+
+// ApiUsageFetchStatus Status of fetching the information, including if the data came from the cache.
+type ApiUsageFetchStatus string
+
+// AppEventOccurrence defines model for AppEventOccurrence.
+type AppEventOccurrence struct {
+	// Domain The domain associated with the event occurrence, represented as a string.
+	Domain *string `json:"domain,omitempty"`
+
+	// Email The email address associated with the event occurrence, represented as a string.
+	Email *string `json:"email,omitempty"`
+
+	// EventTypeName The name of the event type, represented as a string.
+	EventTypeName string `json:"eventTypeName"`
+
+	// ExtraData An object containing additional data related to the event occurrence.
+	ExtraData *map[string]interface{} `json:"extraData,omitempty"`
+
+	// Id The unique identifier for this event occurrence, represented as a string.
+	Id string `json:"id"`
+
+	// ObjectId The unique identifier of the object related to the event, represented as a string.
+	ObjectId *string `json:"objectId,omitempty"`
+
+	// ObjectTypeFullyQualifiedName The fully qualified name of the object type associated with the event, represented as a string.
+	ObjectTypeFullyQualifiedName *string `json:"objectTypeFullyQualifiedName,omitempty"`
+
+	// Properties A map of custom property names to their values, represented as an object with string values.
+	Properties     map[string]string    `json:"properties"`
+	TimelineIFrame *TimelineEventIFrame `json:"timelineIFrame,omitempty"`
+
+	// Timestamp The date and time when the event occurred, represented in ISO 8601 format.
+	Timestamp *time.Time `json:"timestamp,omitempty"`
+
+	// Utk The user token key (utk) associated with the event, represented as a string.
+	Utk *string `json:"utk,omitempty"`
+}
+
+// AppEventResolutionResponse defines model for AppEventResolutionResponse.
+type AppEventResolutionResponse struct {
+	DeveloperQualifiedSymbol DeveloperQualifiedSymbol `json:"developerQualifiedSymbol"`
+
+	// FullyQualifiedName A string representing the fully qualified name of the App Event Type.
+	FullyQualifiedName string `json:"fullyQualifiedName"`
+}
+
+// AppInfo defines model for AppInfo.
+type AppInfo struct {
+	// Id The ID of the application
+	Id string `json:"id"`
+
+	// Name The name of the application
+	Name string `json:"name"`
+}
+
+// AppLifecycleEventSubscriptionUpsertRequest defines model for AppLifecycleEventSubscriptionUpsertRequest.
+type AppLifecycleEventSubscriptionUpsertRequest struct {
+	// EventTypeId A string representing the unique identifier for the event type that the subscription pertains to. This value corresponds to an internal event classification at HubSpot.
+	//
+	// 4-1909196: App install event
+	// 4-1916193: App uninstall event
+	EventTypeId string `json:"eventTypeId"`
+
+	// Properties An array of strings specifying the properties of the event associated with the subscription.
+	Properties []string `json:"properties"`
+
+	// SubscriptionType A string indicating the type of subscription, which is 'APP_LIFECYCLE_EVENT' by default.
+	SubscriptionType AppLifecycleEventSubscriptionUpsertRequestSubscriptionType `json:"subscriptionType"`
+}
+
+// AppLifecycleEventSubscriptionUpsertRequestSubscriptionType A string indicating the type of subscription, which is 'APP_LIFECYCLE_EVENT' by default.
+type AppLifecycleEventSubscriptionUpsertRequestSubscriptionType string
+
+// ArrayFieldSchema defines model for ArrayFieldSchema.
+type ArrayFieldSchema struct {
+	// Items Defines the type of elements contained within the array, which can be an integer, long, double, string, boolean, another array, or an object.
+	Items ArrayFieldSchema_Items `json:"items"`
+
+	// Type Specifies that the field is of type 'ARRAY'.
+	Type ArrayFieldSchemaType `json:"type"`
+}
+
+// ArrayFieldSchema_Items Defines the type of elements contained within the array, which can be an integer, long, double, string, boolean, another array, or an object.
+type ArrayFieldSchema_Items struct {
+	union json.RawMessage
+}
+
+// ArrayFieldSchemaType Specifies that the field is of type 'ARRAY'.
+type ArrayFieldSchemaType string
+
+// AssetFileMetadata defines model for AssetFileMetadata.
+type AssetFileMetadata struct {
+	// ArchivedAt Timestamp of when the object was archived (deleted).
+	ArchivedAt *int64 `json:"archivedAt,omitempty"`
+
+	// Children If the object is a folder, contains the filenames of the files within the folder.
+	Children *[]string `json:"children,omitempty"`
+
+	// CreatedAt Timestamp of when the object was first created.
+	CreatedAt int64 `json:"createdAt"`
+
+	// Folder Determines whether or not this path points to a folder.
+	Folder bool `json:"folder"`
+
+	// Hash A unique identifier for the file's content, used to verify data integrity.
+	Hash *string `json:"hash,omitempty"`
+
+	// Id The path of the file in the CMS Developer File System.
+	Id string `json:"id"`
+
+	// Name The name of the file.
+	Name string `json:"name"`
+
+	// UpdatedAt Timestamp of when the object was last updated.
+	UpdatedAt int64 `json:"updatedAt"`
+}
+
+// AssociatedId Contains the id and type of an association
+type AssociatedId struct {
+	// Id The unique identifier for the associated object.
+	Id string `json:"id"`
+
+	// Type The type of associations.
+	//
+	// Example: deal_to_contact
+	Type string `json:"type"`
+}
+
+// AssociationDefinition The definition of an association
+type AssociationDefinition struct {
+	// CreatedAt The date and time when this association definition was created, in ISO 8601 format.
+	CreatedAt *time.Time `json:"createdAt,omitempty"`
+
+	// FromObjectTypeId The unique identifier of the object type from which the association originates.
+	FromObjectTypeId string `json:"fromObjectTypeId"`
+
+	// Id The unique identifier for this association definition.
+	Id string `json:"id"`
+
+	// Name The name of the association, which serves as a human-readable identifier.
+	Name *string `json:"name,omitempty"`
+
+	// ToObjectTypeId The unique identifier of the object type to which the association points.
+	ToObjectTypeId string `json:"toObjectTypeId"`
+
+	// UpdatedAt The date and time when this association definition was last updated, in ISO 8601 format.
+	UpdatedAt *time.Time `json:"updatedAt,omitempty"`
+}
+
+// AssociationDefinitionEgg defines model for AssociationDefinitionEgg.
+type AssociationDefinitionEgg struct {
+	// FromObjectTypeId The unique identifier for the object type from which the association originates.
+	FromObjectTypeId string `json:"fromObjectTypeId"`
+
+	// Name The name of the association, used to identify and reference the relationship.
+	Name *string `json:"name,omitempty"`
+
+	// ToObjectTypeId The unique identifier for the object type to which the association is directed.
+	ToObjectTypeId string `json:"toObjectTypeId"`
+}
+
+// AssociationLabelLimitResponse defines model for AssociationLabelLimitResponse.
+type AssociationLabelLimitResponse struct {
+	// AllLabels A list of all association labels.
+	AllLabels      []string                           `json:"allLabels"`
+	FromObjectType LimitsTrackingObjectTypeDefinition `json:"fromObjectType"`
+
+	// Limit The maximum number of association labels allowed.
+	Limit int64 `json:"limit"`
+
+	// Percentage The percentage of the association label limit that has been used.
+	Percentage   float64                            `json:"percentage"`
+	ToObjectType LimitsTrackingObjectTypeDefinition `json:"toObjectType"`
+
+	// Usage The current number of association labels used.
+	Usage int64 `json:"usage"`
+}
+
+// AssociationRecordLimitResponse defines model for AssociationRecordLimitResponse.
+type AssociationRecordLimitResponse struct {
+	// AtLimitFromRecordSamples An array of AtLimitRecordSample objects, each representing a sample record that is at the association limit.
+	AtLimitFromRecordSamples []AtLimitRecordSample `json:"atLimitFromRecordSamples"`
+
+	// Limit The maximum number of associations allowed for records.
+	Limit int64 `json:"limit"`
+
+	// NearLimitFromRecordSamples An array of NearLimitRecordSample objects, each representing a sample record that is near the association limit.
+	NearLimitFromRecordSamples []NearLimitRecordSample `json:"nearLimitFromRecordSamples"`
+
+	// TotalRecordsAtLimit The total number of records that have reached their association limit.
+	TotalRecordsAtLimit int32 `json:"totalRecordsAtLimit"`
+
+	// TotalRecordsNearLimit The total number of records that are approaching their association limit.
+	TotalRecordsNearLimit int32 `json:"totalRecordsNearLimit"`
+}
+
+// AssociationSpec Defines the type, direction, and details of the relationship between two CRM objects.
+type AssociationSpec struct {
+	// AssociationCategory The category of the association, indicating its origin or purpose. Valid values include "HUBSPOT_DEFINED", "USER_DEFINED", "INTEGRATOR_DEFINED", and "WORK".
+	AssociationCategory AssociationSpecAssociationCategory `json:"associationCategory"`
+
+	// AssociationTypeId An integer representing the unique identifier for the type of association.
+	AssociationTypeId int32 `json:"associationTypeId"`
+}
+
+// AssociationSpecAssociationCategory The category of the association, indicating its origin or purpose. Valid values include "HUBSPOT_DEFINED", "USER_DEFINED", "INTEGRATOR_DEFINED", and "WORK".
+type AssociationSpecAssociationCategory string
+
+// AssociationSpecWithLabel Defines the type, direction, and details of the relationship between two CRM objects.
+type AssociationSpecWithLabel struct {
+	// Category The category of the association, such as 'HUBSPOT_DEFINED', 'USER_DEFINED', or 'INTEGRATOR_DEFINED'.
+	Category         AssociationSpecWithLabelCategory `json:"category"`
+	FromObjectTypeId *string                          `json:"fromObjectTypeId,omitempty"`
+
+	// Label The label associated with the type of association.
+	Label          *string `json:"label,omitempty"`
+	ToObjectTypeId *string `json:"toObjectTypeId,omitempty"`
+
+	// TypeId The ID representing the specific type of association.
+	TypeId int32 `json:"typeId"`
+}
+
+// AssociationSpecWithLabelCategory The category of the association, such as 'HUBSPOT_DEFINED', 'USER_DEFINED', or 'INTEGRATOR_DEFINED'.
+type AssociationSpecWithLabelCategory string
+
+// AssociationSubscriptionUpsertRequest defines model for AssociationSubscriptionUpsertRequest.
+type AssociationSubscriptionUpsertRequest struct {
+	// Actions An array of strings specifying the actions that trigger the subscription. Valid actions include  'ASSOCIATION_ADDED' and 'ASSOCIATION_REMOVED'.
+	Actions []AssociationSubscriptionUpsertRequestActions `json:"actions"`
+
+	// AssociatedObjectTypeIds An array of strings representing the type identifiers of the associated objects involved in the subscription. If present, events will only fire if the TO objectTypeId in the association is included in this array.
+	AssociatedObjectTypeIds []string `json:"associatedObjectTypeIds"`
+
+	// ObjectIds An array of integers representing the unique identifiers of the objects involved in the subscription.
+	ObjectIds []int64 `json:"objectIds"`
+
+	// ObjectTypeId A string representing the type identifier of the object involved in the subscription. For example "0-1" for Contacts. This corresponds to the FROM side of the association. An objectTypeId of "0-1" would match a CONTACT_TO_COMPANY association change.
+	ObjectTypeId string `json:"objectTypeId"`
+
+	// PortalId An integer representing the unique identifier of the HubSpot portal.
+	PortalId int64 `json:"portalId"`
+
+	// SubscriptionType A string indicating the type of subscription, which is 'ASSOCIATION' by default.
+	SubscriptionType AssociationSubscriptionUpsertRequestSubscriptionType `json:"subscriptionType"`
+}
+
+// AssociationSubscriptionUpsertRequestActions defines model for AssociationSubscriptionUpsertRequest.Actions.
+type AssociationSubscriptionUpsertRequestActions string
+
+// AssociationSubscriptionUpsertRequestSubscriptionType A string indicating the type of subscription, which is 'ASSOCIATION' by default.
+type AssociationSubscriptionUpsertRequestSubscriptionType string
+
+// AtLimitRecordSample defines model for AtLimitRecordSample.
+type AtLimitRecordSample struct {
+	// Label The label associated with a record that is at its limit.
+	Label string `json:"label"`
+
+	// ObjectId The objectId of the object that is at its limit.
+	ObjectId int64 `json:"objectId"`
+}
+
+// AttachToLangPrimaryRequestVNext defines model for AttachToLangPrimaryRequestVNext.
+type AttachToLangPrimaryRequestVNext struct {
+	// Id ID of the object to add to a multi-language group.
+	Id string `json:"id"`
+
+	// Language Designated language of the object to add to a multi-language group.
+	Language AttachToLangPrimaryRequestVNextLanguage `json:"language"`
+
+	// PrimaryId ID of primary language object in multi-language group.
+	PrimaryId string `json:"primaryId"`
+
+	// PrimaryLanguage Primary language of the multi-language group.
+	PrimaryLanguage *AttachToLangPrimaryRequestVNextPrimaryLanguage `json:"primaryLanguage,omitempty"`
+}
+
+// AttachToLangPrimaryRequestVNextLanguage Designated language of the object to add to a multi-language group.
+type AttachToLangPrimaryRequestVNextLanguage string
+
+// AttachToLangPrimaryRequestVNextPrimaryLanguage Primary language of the multi-language group.
+type AttachToLangPrimaryRequestVNextPrimaryLanguage string
+
+// AttendanceCounters defines model for AttendanceCounters.
+type AttendanceCounters struct {
+	// Attended Number of attended contact records of a marketing event
+	Attended int32 `json:"attended"`
+
+	// Cancelled Number of cancelled contact records of a marketing event
+	Cancelled int32 `json:"cancelled"`
+
+	// NoShows Number of no-show contact records of a marketing event
+	NoShows int32 `json:"noShows"`
+
+	// Registered Number of registered contact records of a marketing event
+	Registered int32 `json:"registered"`
+}
+
+// AttentionSpanCalculatedValues defines model for AttentionSpanCalculatedValues.
+type AttentionSpanCalculatedValues struct {
+	// TotalPercentPlayed The percentage of the media content that was played. This is a numerical value indicating how much of the total content was viewed, expressed as a percentage.
+	TotalPercentPlayed float64 `json:"totalPercentPlayed"`
+
+	// TotalSecondsPlayed The total duration in seconds that the media content was played. This is a numerical value representing the cumulative playtime.
+	TotalSecondsPlayed int32 `json:"totalSecondsPlayed"`
+}
+
+// AttentionSpanEvent defines model for AttentionSpanEvent.
+type AttentionSpanEvent struct {
+	// ContactId A string representing the unique identifier for the contact associated with the event.
+	ContactId int64 `json:"contactId"`
+
+	// ExternalPlayContext A string providing additional context about the play event from an external source.
+	ExternalPlayContext *AttentionSpanEventExternalPlayContext `json:"externalPlayContext,omitempty"`
+
+	// MediaBridgeId A string representing the unique identifier for the media bridge instance.
+	MediaBridgeId int64 `json:"mediaBridgeId"`
+
+	// MediaBridgeObjectCoordinates A string detailing the coordinates of the media bridge object.
+	MediaBridgeObjectCoordinates string `json:"mediaBridgeObjectCoordinates"`
+
+	// MediaBridgeObjectTypeId A string representing the type identifier for the media bridge object.
+	MediaBridgeObjectTypeId string `json:"mediaBridgeObjectTypeId"`
+
+	// MediaName A string representing the name of the media content.
+	MediaName string `json:"mediaName"`
+
+	// MediaType A string indicating the type of media involved in the event, such as 'VIDEO', 'AUDIO', etc.
+	MediaType AttentionSpanEventMediaType `json:"mediaType"`
+
+	// MediaUrl A string containing the URL of the media content.
+	MediaUrl *string `json:"mediaUrl,omitempty"`
+
+	// OccurredTimestamp A string representing the timestamp of when the event occurred, in ISO 8601 format.
+	OccurredTimestamp int64 `json:"occurredTimestamp"`
+
+	// PageId A string representing the unique identifier for the page.
+	PageId *int64 `json:"pageId,omitempty"`
+
+	// PageName A string representing the name of the page where the media was accessed.
+	PageName *string `json:"pageName,omitempty"`
+
+	// PageObjectCoordinates A string detailing the coordinates of the page object.
+	PageObjectCoordinates *string `json:"pageObjectCoordinates,omitempty"`
+
+	// PageUrl A string containing the URL of the page where the media was accessed.
+	PageUrl *string `json:"pageUrl,omitempty"`
+
+	// PercentRange A string indicating the range of percentages that were played during the session.
+	PercentRange string `json:"percentRange"`
+
+	// PortalId An integer representing the unique identifier for the HubSpot portal.
+	PortalId int32 `json:"portalId"`
+
+	// ProviderId A string representing the unique identifier for the media provider.
+	ProviderId int32 `json:"providerId"`
+
+	// RawData A string containing raw data associated with the event.
+	RawData *string `json:"rawData,omitempty"`
+
+	// SessionId A string representing the unique identifier for the session during which the media was played.
+	SessionId string `json:"sessionId"`
+
+	// TotalPercentPlayed A number indicating the total percentage of the media that was played.
+	TotalPercentPlayed float64 `json:"totalPercentPlayed"`
+
+	// TotalSecondsPlayed A number representing the total seconds of media that were played.
+	TotalSecondsPlayed *int32 `json:"totalSecondsPlayed,omitempty"`
+}
+
+// AttentionSpanEventExternalPlayContext A string providing additional context about the play event from an external source.
+type AttentionSpanEventExternalPlayContext string
+
+// AttentionSpanEventMediaType A string indicating the type of media involved in the event, such as 'VIDEO', 'AUDIO', etc.
+type AttentionSpanEventMediaType string
+
+// AttentionSpanEventRequest defines model for AttentionSpanEventRequest.
+type AttentionSpanEventRequest struct {
+	// UnderscoreHsenc An encoded string used for HubSpot-specific encoding purposes.
+	UnderscoreHsenc *string `json:"_hsenc,omitempty"`
+
+	// ContactId The unique identifier for the contact associated with the event.
+	ContactId *int64 `json:"contactId,omitempty"`
+
+	// ContactUtk The unique tracking key for the contact, used for tracking purposes.
+	ContactUtk    *string                        `json:"contactUtk,omitempty"`
+	DerivedValues *AttentionSpanCalculatedValues `json:"derivedValues,omitempty"`
+
+	// ExternalId An external identifier for the event, typically used to correlate with external systems.
+	ExternalId *string `json:"externalId,omitempty"`
+
+	// ExternalPlayContext Additional context about the play event, typically used for external integrations.
+	ExternalPlayContext *AttentionSpanEventRequestExternalPlayContext `json:"externalPlayContext,omitempty"`
+
+	// MediaBridgeId The unique identifier for the media bridge instance.
+	MediaBridgeId *int64 `json:"mediaBridgeId,omitempty"`
+
+	// MediaName The name of the media involved in the event.
+	MediaName *string `json:"mediaName,omitempty"`
+
+	// MediaType The type of media involved in the event. Valid values include 'VIDEO', 'AUDIO', 'DOCUMENT', 'OTHER', and 'IMAGE'.
+	MediaType AttentionSpanEventRequestMediaType `json:"mediaType"`
+
+	// MediaUrl The URL of the media involved in the event.
+	MediaUrl *string `json:"mediaUrl,omitempty"`
+
+	// OccurredTimestamp The timestamp when the event occurred, represented as a Unix timestamp in milliseconds.
+	OccurredTimestamp int64 `json:"occurredTimestamp"`
+
+	// PageId The unique identifier for the page where the event occurred.
+	PageId *int64 `json:"pageId,omitempty"`
+
+	// PageName The name of the page where the event occurred.
+	PageName *string `json:"pageName,omitempty"`
+
+	// PageUrl The URL of the page where the event occurred.
+	PageUrl *string `json:"pageUrl,omitempty"`
+
+	// RawDataMap A map of raw data key-value pairs providing additional context about the event.
+	RawDataMap map[string]int32 `json:"rawDataMap"`
+
+	// RawDataString A raw data string containing additional information about the event.
+	RawDataString *string `json:"rawDataString,omitempty"`
+
+	// SessionId The unique identifier for the session during which the event occurred.
+	SessionId string `json:"sessionId"`
+}
+
+// AttentionSpanEventRequestExternalPlayContext Additional context about the play event, typically used for external integrations.
+type AttentionSpanEventRequestExternalPlayContext string
+
+// AttentionSpanEventRequestMediaType The type of media involved in the event. Valid values include 'VIDEO', 'AUDIO', 'DOCUMENT', 'OTHER', and 'IMAGE'.
+type AttentionSpanEventRequestMediaType string
+
+// AutomationActionsV4Option A HubSpot property option
+type AutomationActionsV4Option struct {
+	// Description A string providing additional details about the option.
+	Description string `json:"description"`
+
+	// DisplayOrder An integer indicating the order in which the option should be displayed relative to other options.
+	DisplayOrder int32 `json:"displayOrder"`
+
+	// DoubleData A numerical value associated with the option.
+	DoubleData float64 `json:"doubleData"`
+
+	// Hidden A boolean indicating whether the option is hidden from the user interface.
+	Hidden bool `json:"hidden"`
+
+	// Label The display name of the option, shown to users. It is a string.
+	Label string `json:"label"`
+
+	// ReadOnly A boolean indicating whether the option is read-only and cannot be modified.
+	ReadOnly bool `json:"readOnly"`
+
+	// Value The internal value of the option, used in data processing. It is a string.
+	Value string `json:"value"`
+}
+
+// BackgroundImage defines model for BackgroundImage.
+type BackgroundImage struct {
+	// BackgroundPosition Defines the position of the background image.
+	BackgroundPosition string `json:"backgroundPosition"`
+
+	// BackgroundSize Specifies the size of the background image.
+	BackgroundSize string `json:"backgroundSize"`
+
+	// ImageUrl The URL of the background image.
+	ImageUrl string `json:"imageUrl"`
+}
+
+// BatchInputAppEventOccurrence defines model for BatchInputAppEventOccurrence.
+type BatchInputAppEventOccurrence struct {
+	// Inputs An array of AppEventOccurrence objects, each representing an individual app event occurrence to be included in the batch. This property is required.
+	Inputs []AppEventOccurrence `json:"inputs"`
+}
+
+// BatchInputBlogAuthor defines model for BatchInputBlogAuthor.
+type BatchInputBlogAuthor struct {
+	// Inputs Blog authors to input.
+	Inputs []BlogAuthor `json:"inputs"`
+}
+
+// BatchInputBlogPost defines model for BatchInputBlogPost.
+type BatchInputBlogPost struct {
+	// Inputs Blog posts to input.
+	Inputs []BlogPost `json:"inputs"`
+}
+
+// BatchInputCallbackCompletionBatchRequest defines model for BatchInputCallbackCompletionBatchRequest.
+type BatchInputCallbackCompletionBatchRequest struct {
+	// Inputs An array of CallbackCompletionBatchRequest objects, each representing a single callback completion request. This property is required.
+	Inputs []CallbackCompletionBatchRequest `json:"inputs"`
+}
+
+// BatchInputContentFolder defines model for BatchInputContentFolder.
+type BatchInputContentFolder struct {
+	// Inputs Content folders to input.
+	Inputs []ContentFolder `json:"inputs"`
+}
+
+// BatchInputExchangeRateCreateRequest defines model for BatchInputExchangeRateCreateRequest.
+type BatchInputExchangeRateCreateRequest struct {
+	// Inputs An array of ExchangeRateCreateRequest objects, each representing the details required to create a single exchange rate. This includes properties like fromCurrencyCode, conversionRate, and effectiveAt.
+	Inputs []ExchangeRateCreateRequest `json:"inputs"`
+}
+
+// BatchInputExchangeRateUpdateRequest defines model for BatchInputExchangeRateUpdateRequest.
+type BatchInputExchangeRateUpdateRequest struct {
+	// Inputs An array of ExchangeRateUpdateRequest objects, each representing an individual exchange rate update. This array is required and contains the details of each exchange rate to be updated, including the conversion rate and the effective date.
+	Inputs []ExchangeRateUpdateRequest `json:"inputs"`
+}
+
+// BatchInputHubDbTableRowBatchCloneRequest defines model for BatchInputHubDbTableRowBatchCloneRequest.
+type BatchInputHubDbTableRowBatchCloneRequest struct {
+	// Inputs An array of HubDbTableRowBatchCloneRequest objects, each specifying the details of a row to be cloned. This property is required.
+	Inputs []HubDbTableRowBatchCloneRequest `json:"inputs"`
+}
+
+// BatchInputHubDbTableRowV3BatchUpdateRequest defines model for BatchInputHubDbTableRowV3BatchUpdateRequest.
+type BatchInputHubDbTableRowV3BatchUpdateRequest struct {
+	// Inputs An array of HubDbTableRowV3BatchUpdateRequest objects, each containing details for a row update. This property is required.
+	Inputs []HubDbTableRowV3BatchUpdateRequest `json:"inputs"`
+}
+
+// BatchInputHubDbTableRowV3Request defines model for BatchInputHubDbTableRowV3Request.
+type BatchInputHubDbTableRowV3Request struct {
+	// Inputs An array of HubDbTableRowV3Request objects, each representing a row to be created. This property is required.
+	Inputs []HubDbTableRowV3Request `json:"inputs"`
+}
+
+// BatchInputJsonNode defines model for BatchInputJsonNode.
+type BatchInputJsonNode struct {
+	// Inputs JSON nodes to input.
+	Inputs []map[string]interface{} `json:"inputs"`
+}
+
+// BatchInputMarketingEventCreateRequestParams defines model for BatchInputMarketingEventCreateRequestParams.
+type BatchInputMarketingEventCreateRequestParams struct {
+	// Inputs An array of MarketingEventCreateRequestParams objects, each containing the necessary details to create a marketing event. This includes properties such as event name, organizer, and custom properties.
+	Inputs []MarketingEventCreateRequestParams `json:"inputs"`
+}
+
+// BatchInputMarketingEventEmailSubscriber defines model for BatchInputMarketingEventEmailSubscriber.
+type BatchInputMarketingEventEmailSubscriber struct {
+	// Inputs List of marketing event details to create or update
+	Inputs []MarketingEventEmailSubscriber `json:"inputs"`
+}
+
+// BatchInputMarketingEventExternalUniqueIdentifier defines model for BatchInputMarketingEventExternalUniqueIdentifier.
+type BatchInputMarketingEventExternalUniqueIdentifier struct {
+	// Inputs An array of MarketingEventExternalUniqueIdentifier objects, each representing a unique identifier for a marketing event. This is required for batch operations.
+	Inputs []MarketingEventExternalUniqueIdentifier `json:"inputs"`
+}
+
+// BatchInputMarketingEventPublicObjectIdDeleteRequest defines model for BatchInputMarketingEventPublicObjectIdDeleteRequest.
+type BatchInputMarketingEventPublicObjectIdDeleteRequest struct {
+	// Inputs An array of marketing event public object IDs to be deleted. Each item in the array is a MarketingEventPublicObjectIdDeleteRequest object.
+	Inputs []MarketingEventPublicObjectIdDeleteRequest `json:"inputs"`
+}
+
+// BatchInputMarketingEventPublicUpdateRequestFullV2 defines model for BatchInputMarketingEventPublicUpdateRequestFullV2.
+type BatchInputMarketingEventPublicUpdateRequestFullV2 struct {
+	// Inputs An array of MarketingEventPublicUpdateRequestFullV2 objects, each representing a marketing event update request. This property is required.
+	Inputs []MarketingEventPublicUpdateRequestFullV2 `json:"inputs"`
+}
+
+// BatchInputMarketingEventSubscriber defines model for BatchInputMarketingEventSubscriber.
+type BatchInputMarketingEventSubscriber struct {
+	// Inputs List of HubSpot contacts to subscribe to the marketing event
+	Inputs []MarketingEventSubscriber `json:"inputs"`
+}
+
+// BatchInputPage defines model for BatchInputPage.
+type BatchInputPage struct {
+	// Inputs Pages to input.
+	Inputs []Page `json:"inputs"`
+}
+
+// BatchInputPropertyCreate defines model for BatchInputPropertyCreate.
+type BatchInputPropertyCreate struct {
+	// Inputs An array of PropertyCreate objects, each representing a property to be created. This is a required field.
+	Inputs []PropertyCreate `json:"inputs"`
+}
+
+// BatchInputPropertyName defines model for BatchInputPropertyName.
+type BatchInputPropertyName struct {
+	// Inputs An array of property names to be processed in the batch operation. Each item in the array is expected to be a string representing a property name.
+	Inputs []PropertyName `json:"inputs"`
+}
+
+// BatchInputPublicAssociationDefinitionConfigurationCreateRequest defines model for BatchInputPublicAssociationDefinitionConfigurationCreateRequest.
+type BatchInputPublicAssociationDefinitionConfigurationCreateRequest struct {
+	// Inputs An array of PublicAssociationDefinitionConfigurationCreateRequest objects. Each item in the array specifies the configuration details for creating an association definition.
+	Inputs []PublicAssociationDefinitionConfigurationCreateRequest `json:"inputs"`
+}
+
+// BatchInputPublicAssociationDefinitionConfigurationUpdateRequest defines model for BatchInputPublicAssociationDefinitionConfigurationUpdateRequest.
+type BatchInputPublicAssociationDefinitionConfigurationUpdateRequest struct {
+	// Inputs An array of PublicAssociationDefinitionConfigurationUpdateRequest objects. Each object in the array specifies the configuration details to be updated.
+	Inputs []PublicAssociationDefinitionConfigurationUpdateRequest `json:"inputs"`
+}
+
+// BatchInputPublicAssociationMultiArchive defines model for BatchInputPublicAssociationMultiArchive.
+type BatchInputPublicAssociationMultiArchive struct {
+	Inputs []PublicAssociationMultiArchive `json:"inputs"`
+}
+
+// BatchInputPublicAssociationMultiPost defines model for BatchInputPublicAssociationMultiPost.
+type BatchInputPublicAssociationMultiPost struct {
+	Inputs []PublicAssociationMultiPost `json:"inputs"`
+}
+
+// BatchInputPublicAssociationSpec defines model for BatchInputPublicAssociationSpec.
+type BatchInputPublicAssociationSpec struct {
+	// Inputs An array of PublicAssociationSpec objects, each defining the specifications for an association. This property is required and allows multiple association specifications to be processed in a single batch operation.
+	Inputs []PublicAssociationSpec `json:"inputs"`
+}
+
+// BatchInputPublicCampaignBatchUpdateItem defines model for BatchInputPublicCampaignBatchUpdateItem.
+type BatchInputPublicCampaignBatchUpdateItem struct {
+	// Inputs An array of PublicCampaignBatchUpdateItem objects, each containing the ID and properties to update for a specific campaign.
+	Inputs []PublicCampaignBatchUpdateItem `json:"inputs"`
+}
+
+// BatchInputPublicCampaignDeleteInput defines model for BatchInputPublicCampaignDeleteInput.
+type BatchInputPublicCampaignDeleteInput struct {
+	// Inputs An array of PublicCampaignDeleteInput objects, each specifying a campaign to be deleted. Each object must include the campaign's unique identifier.
+	Inputs []PublicCampaignDeleteInput `json:"inputs"`
+}
+
+// BatchInputPublicCampaignInput defines model for BatchInputPublicCampaignInput.
+type BatchInputPublicCampaignInput struct {
+	// Inputs An array of PublicCampaignInput objects, each representing the properties of a campaign to be created in the batch. This property is required.
+	Inputs []PublicCampaignInput `json:"inputs"`
+}
+
+// BatchInputPublicCampaignReadInput defines model for BatchInputPublicCampaignReadInput.
+type BatchInputPublicCampaignReadInput struct {
+	// Inputs An array of PublicCampaignReadInput objects, each containing the ID of a campaign to be read. This property is required.
+	Inputs []PublicCampaignReadInput `json:"inputs"`
+}
+
+// BatchInputPublicDefaultAssociationMultiPost defines model for BatchInputPublicDefaultAssociationMultiPost.
+type BatchInputPublicDefaultAssociationMultiPost struct {
+	Inputs []PublicDefaultAssociationMultiPost `json:"inputs"`
+}
+
+// BatchInputPublicFetchAssociationsBatchRequest defines model for BatchInputPublicFetchAssociationsBatchRequest.
+type BatchInputPublicFetchAssociationsBatchRequest struct {
+	Inputs []PublicFetchAssociationsBatchRequest `json:"inputs"`
+}
+
+// BatchInputPublicObjectId defines model for BatchInputPublicObjectId.
+type BatchInputPublicObjectId struct {
+	// Inputs An array of deal split inputs
+	Inputs []PublicObjectId `json:"inputs"`
+}
+
+// BatchInputPublicStatusRequest defines model for BatchInputPublicStatusRequest.
+type BatchInputPublicStatusRequest struct {
+	// Inputs An array of PublicStatusRequest objects, each representing a subscription status update request. This property is required.
+	Inputs []PublicStatusRequest `json:"inputs"`
+}
+
+// BatchInputRecordIdInput defines model for BatchInputRecordIdInput.
+type BatchInputRecordIdInput struct {
+	Inputs []RecordIdInput `json:"inputs"`
+}
+
+// BatchInputSimplePublicObjectBatchInput Represents a batch input component used to handle multiple simple public objects in a single API request. This component is typically used when performing batch operations to create, update, or delete multiple records simultaneously.
+type BatchInputSimplePublicObjectBatchInput struct {
+	// Inputs An array of simple public objects to be processed in the batch operation. Each object in the array contains the data necessary for the specific operation being performed.
+	Inputs []SimplePublicObjectBatchInput `json:"inputs"`
+}
+
+// BatchInputSimplePublicObjectBatchInputForCreate Represents a batch input for creating multiple simple public objects in a single request. This component is used to streamline the process of adding new objects to a HubSpot account by allowing multiple entries to be created at once.
+type BatchInputSimplePublicObjectBatchInputForCreate struct {
+	// Inputs An array of simple public objects to be created. Each object in the array contains the necessary data for creating a new entry in the system.
+	Inputs []SimplePublicObjectBatchInputForCreate `json:"inputs"`
+}
+
+// BatchInputSimplePublicObjectBatchInputUpsert Represents a batch input operation for upserting simple public objects in HubSpot. This component is used to process multiple upsert operations in a single request, improving efficiency and performance.
+type BatchInputSimplePublicObjectBatchInputUpsert struct {
+	// Inputs An array of simple public objects to be upserted. Each object in the array contains the necessary data for creating or updating a record in HubSpot.
+	Inputs []SimplePublicObjectBatchInputUpsert `json:"inputs"`
+}
+
+// BatchInputSimplePublicObjectId Represents a batch input payload containing a list of simple public object IDs. This component is used when performing batch operations on multiple objects within HubSpot.
+type BatchInputSimplePublicObjectId struct {
+	// Inputs An array of simple public object IDs to be processed in the batch operation.
+	Inputs []SimplePublicObjectId `json:"inputs"`
+}
+
+// BatchInputString defines model for BatchInputString.
+type BatchInputString struct {
+	// Inputs Strings to input.
+	Inputs []string `json:"inputs"`
+}
+
+// BatchInputSubscriptionBatchUpdateRequest defines model for BatchInputSubscriptionBatchUpdateRequest.
+type BatchInputSubscriptionBatchUpdateRequest struct {
+	// Inputs An array of SubscriptionBatchUpdateRequest objects, each representing a subscription to be updated. This property is required.
+	Inputs []SubscriptionBatchUpdateRequest `json:"inputs"`
+}
+
+// BatchInputTag defines model for BatchInputTag.
+type BatchInputTag struct {
+	// Inputs Blog tags to input.
+	Inputs []Tag `json:"inputs"`
+}
+
+// BatchPortalEntry defines model for BatchPortalEntry.
+type BatchPortalEntry struct {
+	// FlagState The flag state for this portal (e.g. ON or OFF)
+	FlagState BatchPortalEntryFlagState `json:"flagState"`
+
+	// PortalId The ID of the portal
+	PortalId int32 `json:"portalId"`
+}
+
+// BatchPortalEntryFlagState The flag state for this portal (e.g. ON or OFF)
+type BatchPortalEntryFlagState string
+
+// BatchReadInputPropertyName defines model for BatchReadInputPropertyName.
+type BatchReadInputPropertyName struct {
+	// Archived A boolean indicating whether to include archived properties in the batch read. Defaults to false if not specified.
+	Archived bool `json:"archived"`
+
+	// DataSensitivity A string representing the sensitivity level of the data being accessed. This property helps in determining the security measures needed for handling the data.
+	DataSensitivity BatchReadInputPropertyNameDataSensitivity `json:"dataSensitivity"`
+
+	// Inputs An array of strings, each representing a property name to be included in the batch read operation.
+	Inputs []PropertyName `json:"inputs"`
+}
+
+// BatchReadInputPropertyNameDataSensitivity A string representing the sensitivity level of the data being accessed. This property helps in determining the security measures needed for handling the data.
+type BatchReadInputPropertyNameDataSensitivity string
+
+// BatchReadInputSimplePublicObjectId Specifies the input for reading a batch of CRM objects, including arrays of object IDs, requested property names (with optional history), and an optional unique identifying property.
+type BatchReadInputSimplePublicObjectId struct {
+	// IdProperty When using a custom unique value property to retrieve records, the name of the property. Do not include this parameter if retrieving by record ID.
+	IdProperty *string `json:"idProperty,omitempty"`
+
+	// Inputs An array of SimplePublicObjectId objects, each containing the ID of an object to be read.
+	Inputs []SimplePublicObjectId `json:"inputs"`
+
+	// Properties An array of the property names to be returned in the response. If a specified property is not present on the requested object(s), it will be ignored.
+	Properties []string `json:"properties"`
+
+	// PropertiesWithHistory An array of the property names to be returned along with their history of previous values. If a specified property is not present on the requested object(s), it will be ignored.
+	PropertiesWithHistory []string `json:"propertiesWithHistory"`
+}
+
+// BatchResponse defines model for BatchResponse.
+type BatchResponse struct {
+	CompletedAt time.Time                `json:"completedAt"`
+	Errors      *[]StandardError         `json:"errors,omitempty"`
+	Links       *map[string]string       `json:"links,omitempty"`
+	NumErrors   *int32                   `json:"numErrors,omitempty"`
+	RequestedAt *time.Time               `json:"requestedAt,omitempty"`
+	Results     []map[string]interface{} `json:"results"`
+	StartedAt   time.Time                `json:"startedAt"`
+	Status      BatchResponseStatus      `json:"status"`
+}
+
+// BatchResponseStatus defines model for BatchResponse.Status.
+type BatchResponseStatus string
+
+// BatchResponseAppEventOccurrence defines model for BatchResponseAppEventOccurrence.
+type BatchResponseAppEventOccurrence struct {
+	// CompletedAt The date and time when the batch operation was completed, in ISO 8601 format.
+	CompletedAt time.Time `json:"completedAt"`
+
+	// Errors An array of StandardError objects detailing any errors that occurred during the batch operation.
+	Errors *[]StandardError `json:"errors,omitempty"`
+
+	// Links A map of link names to associated URIs that provide additional information about the batch operation.
+	Links *map[string]string `json:"links,omitempty"`
+
+	// NumErrors The number of errors encountered during the batch operation.
+	NumErrors *int32 `json:"numErrors,omitempty"`
+
+	// RequestedAt The date and time when the batch operation was requested, in ISO 8601 format.
+	RequestedAt *time.Time `json:"requestedAt,omitempty"`
+
+	// Results An array of AppEventOccurrence objects representing the results of the batch operation.
+	Results []AppEventOccurrence `json:"results"`
+
+	// StartedAt The date and time when the batch operation started, in ISO 8601 format.
+	StartedAt time.Time `json:"startedAt"`
+
+	// Status The current status of the batch operation. Valid values include 'PENDING', 'PROCESSING', 'CANCELED', and 'COMPLETE'.
+	Status BatchResponseAppEventOccurrenceStatus `json:"status"`
+}
+
+// BatchResponseAppEventOccurrenceStatus The current status of the batch operation. Valid values include 'PENDING', 'PROCESSING', 'CANCELED', and 'COMPLETE'.
+type BatchResponseAppEventOccurrenceStatus string
+
+// BatchResponseBlogAuthor defines model for BatchResponseBlogAuthor.
+type BatchResponseBlogAuthor struct {
+	// CompletedAt Time of batch operation completion.
+	CompletedAt time.Time `json:"completedAt"`
+
+	// Links Links associated with batch operation.
+	Links *map[string]string `json:"links,omitempty"`
+
+	// RequestedAt Time of batch operation request.
+	RequestedAt *time.Time `json:"requestedAt,omitempty"`
+
+	// Results Results of batch operation.
+	Results []BlogAuthor `json:"results"`
+
+	// StartedAt Time of batch operation start.
+	StartedAt time.Time `json:"startedAt"`
+
+	// Status Status of batch operation.
+	Status BatchResponseBlogAuthorStatus `json:"status"`
+}
+
+// BatchResponseBlogAuthorStatus Status of batch operation.
+type BatchResponseBlogAuthorStatus string
+
+// BatchResponseBlogAuthorWithErrors defines model for BatchResponseBlogAuthorWithErrors.
+type BatchResponseBlogAuthorWithErrors struct {
+	// CompletedAt Time of batch operation completion.
+	CompletedAt time.Time `json:"completedAt"`
+
+	// Errors Errors in batch operation.
+	Errors *[]StandardError `json:"errors,omitempty"`
+
+	// Links Links associated with batch operation.
+	Links *map[string]string `json:"links,omitempty"`
+
+	// NumErrors Number of errors.
+	NumErrors *int32 `json:"numErrors,omitempty"`
+
+	// RequestedAt Time of batch operation request.
+	RequestedAt *time.Time `json:"requestedAt,omitempty"`
+
+	// Results Results of batch operation.
+	Results []BlogAuthor `json:"results"`
+
+	// StartedAt Time of batch operation start.
+	StartedAt time.Time `json:"startedAt"`
+
+	// Status Status of batch operation.
+	Status BatchResponseBlogAuthorWithErrorsStatus `json:"status"`
+}
+
+// BatchResponseBlogAuthorWithErrorsStatus Status of batch operation.
+type BatchResponseBlogAuthorWithErrorsStatus string
+
+// BatchResponseBlogPost defines model for BatchResponseBlogPost.
+type BatchResponseBlogPost struct {
+	// CompletedAt Time of batch operation completion.
+	CompletedAt time.Time `json:"completedAt"`
+
+	// Links Links associated with batch operation.
+	Links *map[string]string `json:"links,omitempty"`
+
+	// RequestedAt Time of batch operation request.
+	RequestedAt *time.Time `json:"requestedAt,omitempty"`
+
+	// Results Results of batch operation.
+	Results []BlogPost `json:"results"`
+
+	// StartedAt Time of batch operation start.
+	StartedAt time.Time `json:"startedAt"`
+
+	// Status Status of batch operation.
+	Status BatchResponseBlogPostStatus `json:"status"`
+}
+
+// BatchResponseBlogPostStatus Status of batch operation.
+type BatchResponseBlogPostStatus string
+
+// BatchResponseBlogPostWithErrors defines model for BatchResponseBlogPostWithErrors.
+type BatchResponseBlogPostWithErrors struct {
+	// CompletedAt Time of batch operation completion.
+	CompletedAt time.Time `json:"completedAt"`
+
+	// Errors Errors in batch operation.
+	Errors *[]StandardError `json:"errors,omitempty"`
+
+	// Links Links associated with batch operation.
+	Links *map[string]string `json:"links,omitempty"`
+
+	// NumErrors Number of errors.
+	NumErrors *int32 `json:"numErrors,omitempty"`
+
+	// RequestedAt Time of batch operation request.
+	RequestedAt *time.Time `json:"requestedAt,omitempty"`
+
+	// Results Results of batch operation.
+	Results []BlogPost `json:"results"`
+
+	// StartedAt Time of batch operation start.
+	StartedAt time.Time `json:"startedAt"`
+
+	// Status Status of batch operation.
+	Status BatchResponseBlogPostWithErrorsStatus `json:"status"`
+}
+
+// BatchResponseBlogPostWithErrorsStatus Status of batch operation.
+type BatchResponseBlogPostWithErrorsStatus string
+
+// BatchResponseContentFolder defines model for BatchResponseContentFolder.
+type BatchResponseContentFolder struct {
+	// CompletedAt Time of batch operation completion.
+	CompletedAt time.Time `json:"completedAt"`
+
+	// Links Links associated with batch operation.
+	Links *map[string]string `json:"links,omitempty"`
+
+	// RequestedAt Time of batch operation request.
+	RequestedAt *time.Time `json:"requestedAt,omitempty"`
+
+	// Results Results of batch operation.
+	Results []ContentFolder `json:"results"`
+
+	// StartedAt Time of batch operation start.
+	StartedAt time.Time `json:"startedAt"`
+
+	// Status Status of batch operation.
+	Status BatchResponseContentFolderStatus `json:"status"`
+}
+
+// BatchResponseContentFolderStatus Status of batch operation.
+type BatchResponseContentFolderStatus string
+
+// BatchResponseContentFolderWithErrors defines model for BatchResponseContentFolderWithErrors.
+type BatchResponseContentFolderWithErrors struct {
+	// CompletedAt Time of batch operation completion.
+	CompletedAt time.Time `json:"completedAt"`
+
+	// Errors Errors in batch operation.
+	Errors *[]StandardError `json:"errors,omitempty"`
+
+	// Links Links associated with batch operation.
+	Links *map[string]string `json:"links,omitempty"`
+
+	// NumErrors Number of errors.
+	NumErrors *int32 `json:"numErrors,omitempty"`
+
+	// RequestedAt Time of batch operation request.
+	RequestedAt *time.Time `json:"requestedAt,omitempty"`
+
+	// Results Results of batch operation.
+	Results []ContentFolder `json:"results"`
+
+	// StartedAt Time of batch operation start.
+	StartedAt time.Time `json:"startedAt"`
+
+	// Status Status of batch operation.
+	Status BatchResponseContentFolderWithErrorsStatus `json:"status"`
+}
+
+// BatchResponseContentFolderWithErrorsStatus Status of batch operation.
+type BatchResponseContentFolderWithErrorsStatus string
+
+// BatchResponseDealToDealSplits defines model for BatchResponseDealToDealSplits.
+type BatchResponseDealToDealSplits struct {
+	// CompletedAt The timestamp indicating when the batch operation was completed, in date-time format.
+	CompletedAt time.Time `json:"completedAt"`
+
+	// Links A map of link names to associated URIs for additional resources or documentation.
+	Links *map[string]string `json:"links,omitempty"`
+
+	// RequestedAt The timestamp indicating when the batch operation was requested, in date-time format.
+	RequestedAt *time.Time `json:"requestedAt,omitempty"`
+
+	// Results An array of deal-to-deal split objects representing the results of the batch operation.
+	Results []DealToDealSplits `json:"results"`
+
+	// StartedAt The timestamp indicating when the batch operation started, in date-time format.
+	StartedAt time.Time `json:"startedAt"`
+
+	// Status The current status of the batch operation, with possible values: CANCELED, COMPLETE, PENDING, PROCESSING.
+	Status BatchResponseDealToDealSplitsStatus `json:"status"`
+}
+
+// BatchResponseDealToDealSplitsStatus The current status of the batch operation, with possible values: CANCELED, COMPLETE, PENDING, PROCESSING.
+type BatchResponseDealToDealSplitsStatus string
+
+// BatchResponseDealToDealSplitsWithErrors defines model for BatchResponseDealToDealSplitsWithErrors.
+type BatchResponseDealToDealSplitsWithErrors struct {
+	// CompletedAt The timestamp indicating when the batch operation was completed, in date-time format.
+	CompletedAt time.Time `json:"completedAt"`
+
+	// Errors An array of error objects detailing the errors that occurred during the batch operation.
+	Errors *[]StandardError `json:"errors,omitempty"`
+
+	// Links A map of link names to associated URIs for additional resources or documentation.
+	Links *map[string]string `json:"links,omitempty"`
+
+	// NumErrors The total number of errors encountered during the batch operation.
+	NumErrors *int32 `json:"numErrors,omitempty"`
+
+	// RequestedAt The timestamp indicating when the batch operation was requested, in date-time format.
+	RequestedAt *time.Time `json:"requestedAt,omitempty"`
+
+	// Results An array of deal-to-deal split objects representing the results of the batch operation.
+	Results []DealToDealSplits `json:"results"`
+
+	// StartedAt The timestamp indicating when the batch operation started, in date-time format.
+	StartedAt time.Time `json:"startedAt"`
+
+	// Status The current status of the batch operation, with possible values: CANCELED, COMPLETE, PENDING, PROCESSING.
+	Status BatchResponseDealToDealSplitsWithErrorsStatus `json:"status"`
+}
+
+// BatchResponseDealToDealSplitsWithErrorsStatus The current status of the batch operation, with possible values: CANCELED, COMPLETE, PENDING, PROCESSING.
+type BatchResponseDealToDealSplitsWithErrorsStatus string
+
+// BatchResponseExchangeRate defines model for BatchResponseExchangeRate.
+type BatchResponseExchangeRate struct {
+	// CompletedAt The datetime the response was completed
+	CompletedAt time.Time `json:"completedAt"`
+
+	// Links The link to the next page with exchange rates.
+	Links *map[string]string `json:"links,omitempty"`
+
+	// RequestedAt The datetime the of the request.
+	RequestedAt *time.Time `json:"requestedAt,omitempty"`
+
+	// Results An array of exchange rate objects that represent the results of the batch operation.
+	Results []ExchangeRate `json:"results"`
+
+	// StartedAt The datetime the of the request.
+	StartedAt time.Time `json:"startedAt"`
+
+	// Status The current status of the response (e.g. COMPLETED)
+	Status BatchResponseExchangeRateStatus `json:"status"`
+}
+
+// BatchResponseExchangeRateStatus The current status of the response (e.g. COMPLETED)
+type BatchResponseExchangeRateStatus string
+
+// BatchResponseExchangeRateWithErrors defines model for BatchResponseExchangeRateWithErrors.
+type BatchResponseExchangeRateWithErrors struct {
+	// CompletedAt The datetime the response was completed
+	CompletedAt time.Time `json:"completedAt"`
+
+	// Errors An array of standard error objects detailing any errors encountered during the batch operation.
+	Errors *[]StandardError `json:"errors,omitempty"`
+
+	// Links The link to the next page with exchange rates.
+	Links *map[string]string `json:"links,omitempty"`
+
+	// NumErrors The number of errors associated to the request.
+	NumErrors *int32 `json:"numErrors,omitempty"`
+
+	// RequestedAt The datetime the of the request.
+	RequestedAt *time.Time `json:"requestedAt,omitempty"`
+
+	// Results An array of exchange rate objects representing the successful results of the batch operation.
+	Results []ExchangeRate `json:"results"`
+
+	// StartedAt The datetime the of the request.
+	StartedAt time.Time `json:"startedAt"`
+
+	// Status The current status of the response (e.g. COMPLETED)
+	Status BatchResponseExchangeRateWithErrorsStatus `json:"status"`
+}
+
+// BatchResponseExchangeRateWithErrorsStatus The current status of the response (e.g. COMPLETED)
+type BatchResponseExchangeRateWithErrorsStatus string
+
+// BatchResponseHubDbTableRowV3 defines model for BatchResponseHubDbTableRowV3.
+type BatchResponseHubDbTableRowV3 struct {
+	// CompletedAt The timestamp indicating when the batch processing was completed.
+	CompletedAt time.Time `json:"completedAt"`
+
+	// Links A collection of related links associated with the batch response.
+	Links *map[string]string `json:"links,omitempty"`
+
+	// RequestedAt The timestamp indicating when the batch request was made.
+	RequestedAt *time.Time `json:"requestedAt,omitempty"`
+
+	// Results An array of HubDbTableRowV3 objects representing the results of the batch operation.
+	Results []HubDbTableRowV3 `json:"results"`
+
+	// StartedAt The timestamp indicating when the batch processing began.
+	StartedAt time.Time `json:"startedAt"`
+
+	// Status The current status of the batch operation, with possible values: CANCELED, COMPLETE, PENDING, PROCESSING.
+	Status BatchResponseHubDbTableRowV3Status `json:"status"`
+}
+
+// BatchResponseHubDbTableRowV3Status The current status of the batch operation, with possible values: CANCELED, COMPLETE, PENDING, PROCESSING.
+type BatchResponseHubDbTableRowV3Status string
+
+// BatchResponseHubDbTableRowV3WithErrors defines model for BatchResponseHubDbTableRowV3WithErrors.
+type BatchResponseHubDbTableRowV3WithErrors struct {
+	// CompletedAt The timestamp indicating when the batch processing was completed.
+	CompletedAt time.Time `json:"completedAt"`
+
+	// Errors An array of StandardError objects detailing any errors encountered during the batch operation.
+	Errors *[]StandardError `json:"errors,omitempty"`
+
+	// Links A collection of related links associated with the batch response.
+	Links *map[string]string `json:"links,omitempty"`
+
+	// NumErrors The number of errors encountered during the batch operation.
+	NumErrors *int32 `json:"numErrors,omitempty"`
+
+	// RequestedAt The timestamp indicating when the batch request was made.
+	RequestedAt *time.Time `json:"requestedAt,omitempty"`
+
+	// Results An array of HubDbTableRowV3 objects representing the successful results of the batch operation.
+	Results []HubDbTableRowV3 `json:"results"`
+
+	// StartedAt The timestamp indicating when the batch processing began.
+	StartedAt time.Time `json:"startedAt"`
+
+	// Status The current status of the batch operation, with possible values: CANCELED, COMPLETE, PENDING, PROCESSING.
+	Status BatchResponseHubDbTableRowV3WithErrorsStatus `json:"status"`
+}
+
+// BatchResponseHubDbTableRowV3WithErrorsStatus The current status of the batch operation, with possible values: CANCELED, COMPLETE, PENDING, PROCESSING.
+type BatchResponseHubDbTableRowV3WithErrorsStatus string
+
+// BatchResponseJournalFetchResponse defines model for BatchResponseJournalFetchResponse.
+type BatchResponseJournalFetchResponse struct {
+	// CompletedAt The date and time when the batch operation was completed, in ISO 8601 format.
+	CompletedAt time.Time `json:"completedAt"`
+
+	// Links A map of link names to associated URIs related to the batch operation.
+	Links *map[string]string `json:"links,omitempty"`
+
+	// RequestedAt The date and time when the batch operation was requested, in ISO 8601 format.
+	RequestedAt *time.Time `json:"requestedAt,omitempty"`
+
+	// Results An array of results from the batch operation, each represented as a JournalFetchResponse object.
+	Results []JournalFetchResponse `json:"results"`
+
+	// StartedAt The date and time when the batch operation started, in ISO 8601 format.
+	StartedAt time.Time `json:"startedAt"`
+
+	// Status The current status of the batch operation. Valid values include 'PENDING', 'PROCESSING', 'CANCELED', and 'COMPLETE'.
+	Status BatchResponseJournalFetchResponseStatus `json:"status"`
+}
+
+// BatchResponseJournalFetchResponseStatus The current status of the batch operation. Valid values include 'PENDING', 'PROCESSING', 'CANCELED', and 'COMPLETE'.
+type BatchResponseJournalFetchResponseStatus string
+
+// BatchResponseJournalFetchResponseWithErrors defines model for BatchResponseJournalFetchResponseWithErrors.
+type BatchResponseJournalFetchResponseWithErrors struct {
+	// CompletedAt The date and time when the batch process was completed, in ISO 8601 format.
+	CompletedAt time.Time `json:"completedAt"`
+
+	// Errors An array of standard errors that occurred during the batch process, providing details about each error.
+	Errors *[]StandardError `json:"errors,omitempty"`
+
+	// Links A map of link names to associated URIs, providing additional context or actions related to the batch process.
+	Links *map[string]string `json:"links,omitempty"`
+
+	// NumErrors The number of errors that occurred during the batch process.
+	NumErrors *int32 `json:"numErrors,omitempty"`
+
+	// RequestedAt The date and time when the batch request was made, in ISO 8601 format.
+	RequestedAt *time.Time `json:"requestedAt,omitempty"`
+
+	// Results An array of journal fetch responses, each representing a result from the batch process.
+	Results []JournalFetchResponse `json:"results"`
+
+	// StartedAt The date and time when the batch process started, in ISO 8601 format.
+	StartedAt time.Time `json:"startedAt"`
+
+	// Status The current status of the batch process. Valid values include 'PENDING', 'PROCESSING', 'CANCELED', and 'COMPLETE'.
+	Status BatchResponseJournalFetchResponseWithErrorsStatus `json:"status"`
+}
+
+// BatchResponseJournalFetchResponseWithErrorsStatus The current status of the batch process. Valid values include 'PENDING', 'PROCESSING', 'CANCELED', and 'COMPLETE'.
+type BatchResponseJournalFetchResponseWithErrorsStatus string
+
+// BatchResponseLabelsBetweenObjectPair defines model for BatchResponseLabelsBetweenObjectPair.
+type BatchResponseLabelsBetweenObjectPair struct {
+	// CompletedAt The timestamp when the batch processing was completed, in ISO 8601 format.
+	CompletedAt time.Time `json:"completedAt"`
+
+	// Links An object containing relevant links related to the batch request.
+	Links *map[string]string `json:"links,omitempty"`
+
+	// RequestedAt The timestamp when the batch request was initially made, in ISO 8601 format.
+	RequestedAt *time.Time                `json:"requestedAt,omitempty"`
+	Results     []LabelsBetweenObjectPair `json:"results"`
+
+	// StartedAt The timestamp when the batch processing began, in ISO 8601 format.
+	StartedAt time.Time `json:"startedAt"`
+
+	// Status The status of the batch processing request: "PENDING", "PROCESSING", "CANCELLED", or "COMPLETE".
+	Status BatchResponseLabelsBetweenObjectPairStatus `json:"status"`
+}
+
+// BatchResponseLabelsBetweenObjectPairStatus The status of the batch processing request: "PENDING", "PROCESSING", "CANCELLED", or "COMPLETE".
+type BatchResponseLabelsBetweenObjectPairStatus string
+
+// BatchResponseLabelsBetweenObjectPairWithErrors defines model for BatchResponseLabelsBetweenObjectPairWithErrors.
+type BatchResponseLabelsBetweenObjectPairWithErrors struct {
+	CompletedAt time.Time                                            `json:"completedAt"`
+	Errors      *[]StandardError                                     `json:"errors,omitempty"`
+	Links       *map[string]string                                   `json:"links,omitempty"`
+	NumErrors   *int32                                               `json:"numErrors,omitempty"`
+	RequestedAt *time.Time                                           `json:"requestedAt,omitempty"`
+	Results     []LabelsBetweenObjectPair                            `json:"results"`
+	StartedAt   time.Time                                            `json:"startedAt"`
+	Status      BatchResponseLabelsBetweenObjectPairWithErrorsStatus `json:"status"`
+}
+
+// BatchResponseLabelsBetweenObjectPairWithErrorsStatus defines model for BatchResponseLabelsBetweenObjectPairWithErrors.Status.
+type BatchResponseLabelsBetweenObjectPairWithErrorsStatus string
+
+// BatchResponseMarketingEventPublicDefaultResponse defines model for BatchResponseMarketingEventPublicDefaultResponse.
+type BatchResponseMarketingEventPublicDefaultResponse struct {
+	// CompletedAt Timestamp of when the request was completed.
+	CompletedAt time.Time `json:"completedAt"`
+
+	// Errors An array of errors encountered during the batch operation, each item detailing a specific error.
+	Errors *[]StandardError `json:"errors,omitempty"`
+
+	// Links Result of the request.
+	Links *map[string]string `json:"links,omitempty"`
+
+	// NumErrors The number of errors that occurred during the request.
+	NumErrors *int32 `json:"numErrors,omitempty"`
+
+	// RequestedAt Timestamp of when the request was sent.
+	RequestedAt *time.Time `json:"requestedAt,omitempty"`
+
+	// Results An array of results from the batch operation, each item representing a response for an individual marketing event.
+	Results []MarketingEventPublicDefaultResponse `json:"results"`
+
+	// StartedAt Timestamp of when the request started processing.
+	StartedAt time.Time `json:"startedAt"`
+
+	// Status Status of the response.
+	Status BatchResponseMarketingEventPublicDefaultResponseStatus `json:"status"`
+}
+
+// BatchResponseMarketingEventPublicDefaultResponseStatus Status of the response.
+type BatchResponseMarketingEventPublicDefaultResponseStatus string
+
+// BatchResponseMarketingEventPublicDefaultResponseV2 defines model for BatchResponseMarketingEventPublicDefaultResponseV2.
+type BatchResponseMarketingEventPublicDefaultResponseV2 struct {
+	// CompletedAt Timestamp of when the request was processed.
+	CompletedAt time.Time `json:"completedAt"`
+
+	// Links Result object of the request.
+	Links *map[string]string `json:"links,omitempty"`
+
+	// RequestedAt Timestamp of when the request was sent.
+	RequestedAt *time.Time `json:"requestedAt,omitempty"`
+
+	// Results An array containing the results of the batch operation, with each item representing a marketing event response.
+	Results []MarketingEventPublicDefaultResponseV2 `json:"results"`
+
+	// StartedAt Timestamp of when the request started processing.
+	StartedAt time.Time `json:"startedAt"`
+
+	// Status The status of the response.
+	Status BatchResponseMarketingEventPublicDefaultResponseV2Status `json:"status"`
+}
+
+// BatchResponseMarketingEventPublicDefaultResponseV2Status The status of the response.
+type BatchResponseMarketingEventPublicDefaultResponseV2Status string
+
+// BatchResponseMarketingEventPublicDefaultResponseV2WithErrors defines model for BatchResponseMarketingEventPublicDefaultResponseV2WithErrors.
+type BatchResponseMarketingEventPublicDefaultResponseV2WithErrors struct {
+	// CompletedAt Timestamp that represents when the request finished processing
+	CompletedAt time.Time `json:"completedAt"`
+
+	// Errors An array of errors encountered during the batch operation, each represented as a StandardError object.
+	Errors *[]StandardError `json:"errors,omitempty"`
+
+	// Links Result of the request
+	Links *map[string]string `json:"links,omitempty"`
+
+	// NumErrors The number of errors that occurred during the processing
+	NumErrors *int32 `json:"numErrors,omitempty"`
+
+	// RequestedAt Timestamp that represents when the request was made
+	RequestedAt *time.Time `json:"requestedAt,omitempty"`
+
+	// Results An array containing the results of the batch operation, each represented as a MarketingEventPublicDefaultResponseV2 object.
+	Results []MarketingEventPublicDefaultResponseV2 `json:"results"`
+
+	// StartedAt Timestamp that represents when the request started processing
+	StartedAt time.Time `json:"startedAt"`
+
+	// Status The status of the request processing
+	Status BatchResponseMarketingEventPublicDefaultResponseV2WithErrorsStatus `json:"status"`
+}
+
+// BatchResponseMarketingEventPublicDefaultResponseV2WithErrorsStatus The status of the request processing
+type BatchResponseMarketingEventPublicDefaultResponseV2WithErrorsStatus string
+
+// BatchResponsePage defines model for BatchResponsePage.
+type BatchResponsePage struct {
+	// CompletedAt Time of batch operation completion.
+	CompletedAt time.Time `json:"completedAt"`
+
+	// Links Links associated with batch operation.
+	Links *map[string]string `json:"links,omitempty"`
+
+	// RequestedAt Time of batch operation request.
+	RequestedAt *time.Time `json:"requestedAt,omitempty"`
+
+	// Results Results of batch operation.
+	Results []Page `json:"results"`
+
+	// StartedAt Time of batch operation start.
+	StartedAt time.Time `json:"startedAt"`
+
+	// Status Status of batch operation.
+	Status BatchResponsePageStatus `json:"status"`
+}
+
+// BatchResponsePageStatus Status of batch operation.
+type BatchResponsePageStatus string
+
+// BatchResponsePageWithErrors defines model for BatchResponsePageWithErrors.
+type BatchResponsePageWithErrors struct {
+	// CompletedAt Time of batch operation completion.
+	CompletedAt time.Time `json:"completedAt"`
+
+	// Errors Errors in batch operation.
+	Errors *[]StandardError `json:"errors,omitempty"`
+
+	// Links Links associated with batch operation.
+	Links *map[string]string `json:"links,omitempty"`
+
+	// NumErrors Number of errors.
+	NumErrors *int32 `json:"numErrors,omitempty"`
+
+	// RequestedAt Time of batch operation request.
+	RequestedAt *time.Time `json:"requestedAt,omitempty"`
+
+	// Results Results of batch operation.
+	Results []Page `json:"results"`
+
+	// StartedAt Time of batch operation start.
+	StartedAt time.Time `json:"startedAt"`
+
+	// Status Status of batch operation.
+	Status BatchResponsePageWithErrorsStatus `json:"status"`
+}
+
+// BatchResponsePageWithErrorsStatus Status of batch operation.
+type BatchResponsePageWithErrorsStatus string
+
+// BatchResponseProperty defines model for BatchResponseProperty.
+type BatchResponseProperty struct {
+	// CompletedAt The date and time when the batch operation was completed, in ISO 8601 format.
+	CompletedAt time.Time `json:"completedAt"`
+
+	// Links A collection of links related to the batch operation, typically used for navigation or additional actions.
+	Links *map[string]string `json:"links,omitempty"`
+
+	// RequestedAt The date and time when the batch operation was requested, in ISO 8601 format.
+	RequestedAt *time.Time `json:"requestedAt,omitempty"`
+
+	// Results An array containing the results of the batch operation, detailing the outcome for each property involved.
+	Results []CMSMediaBridgeProperty `json:"results"`
+
+	// StartedAt The date and time when the batch operation began, in ISO 8601 format.
+	StartedAt time.Time `json:"startedAt"`
+
+	// Status The current status of the batch operation, indicating success or failure.
+	Status BatchResponsePropertyStatus `json:"status"`
+}
+
+// BatchResponsePropertyStatus The current status of the batch operation, indicating success or failure.
+type BatchResponsePropertyStatus string
+
+// BatchResponsePropertyWithErrors defines model for BatchResponsePropertyWithErrors.
+type BatchResponsePropertyWithErrors struct {
+	// CompletedAt The date and time when the batch operation was completed, in ISO 8601 format.
+	CompletedAt time.Time `json:"completedAt"`
+
+	// Errors An array containing error details for properties that failed during the batch operation.
+	Errors *[]StandardError `json:"errors,omitempty"`
+
+	// Links A collection of links related to the batch operation, typically used for navigation or further actions.
+	Links *map[string]string `json:"links,omitempty"`
+
+	// NumErrors The number of errors encountered during the batch operation.
+	NumErrors *int32 `json:"numErrors,omitempty"`
+
+	// RequestedAt The date and time when the batch operation was requested, in ISO 8601 format.
+	RequestedAt *time.Time `json:"requestedAt,omitempty"`
+
+	// Results An array containing the results of the batch operation, detailing each property's operation outcome.
+	Results []CMSMediaBridgeProperty `json:"results"`
+
+	// StartedAt The date and time when the batch operation started, in ISO 8601 format.
+	StartedAt time.Time `json:"startedAt"`
+
+	// Status The overall status of the batch operation, indicating success or failure.
+	Status BatchResponsePropertyWithErrorsStatus `json:"status"`
+}
+
+// BatchResponsePropertyWithErrorsStatus The overall status of the batch operation, indicating success or failure.
+type BatchResponsePropertyWithErrorsStatus string
+
+// BatchResponsePublicAssociationDefinitionConfigurationUpdateResult defines model for BatchResponsePublicAssociationDefinitionConfigurationUpdateResult.
+type BatchResponsePublicAssociationDefinitionConfigurationUpdateResult struct {
+	// CompletedAt The date and time when the batch update operation was completed.
+	CompletedAt time.Time `json:"completedAt"`
+
+	// Links URLs linking to documentation or resources associated with the batch update operation.
+	Links *map[string]string `json:"links,omitempty"`
+
+	// RequestedAt The date and time when the batch update operation was requested.
+	RequestedAt *time.Time `json:"requestedAt,omitempty"`
+
+	// Results An array of results from the batch update operation. Each item in the array is a PublicAssociationDefinitionConfigurationUpdateResult object.
+	Results []PublicAssociationDefinitionConfigurationUpdateResult `json:"results"`
+
+	// StartedAt The date and time when the batch update operation started.
+	StartedAt time.Time `json:"startedAt"`
+
+	// Status The current status of the batch update operation, which can be CANCELED, COMPLETE, PENDING, or PROCESSING.
+	Status BatchResponsePublicAssociationDefinitionConfigurationUpdateResultStatus `json:"status"`
+}
+
+// BatchResponsePublicAssociationDefinitionConfigurationUpdateResultStatus The current status of the batch update operation, which can be CANCELED, COMPLETE, PENDING, or PROCESSING.
+type BatchResponsePublicAssociationDefinitionConfigurationUpdateResultStatus string
+
+// BatchResponsePublicAssociationDefinitionConfigurationUpdateResultWithErrors defines model for BatchResponsePublicAssociationDefinitionConfigurationUpdateResultWithErrors.
+type BatchResponsePublicAssociationDefinitionConfigurationUpdateResultWithErrors struct {
+	// CompletedAt The date and time when the batch operation was completed, in ISO 8601 format.
+	CompletedAt time.Time `json:"completedAt"`
+
+	// Errors An array of errors encountered during the batch operation, each detailing a specific issue that occurred.
+	Errors *[]StandardError `json:"errors,omitempty"`
+
+	// Links A map of link names to associated URIs, providing additional information or resources related to the batch operation.
+	Links *map[string]string `json:"links,omitempty"`
+
+	// NumErrors The total number of errors encountered during the batch operation.
+	NumErrors *int32 `json:"numErrors,omitempty"`
+
+	// RequestedAt The date and time when the batch operation was requested, in ISO 8601 format.
+	RequestedAt *time.Time `json:"requestedAt,omitempty"`
+
+	// Results An array of results from the batch operation, each representing an update result for a public association definition configuration.
+	Results []PublicAssociationDefinitionConfigurationUpdateResult `json:"results"`
+
+	// StartedAt The date and time when the batch operation started, in ISO 8601 format.
+	StartedAt time.Time `json:"startedAt"`
+
+	// Status The current status of the batch operation. Valid values include 'PENDING', 'PROCESSING', 'CANCELED', and 'COMPLETE'.
+	Status BatchResponsePublicAssociationDefinitionConfigurationUpdateResultWithErrorsStatus `json:"status"`
+}
+
+// BatchResponsePublicAssociationDefinitionConfigurationUpdateResultWithErrorsStatus The current status of the batch operation. Valid values include 'PENDING', 'PROCESSING', 'CANCELED', and 'COMPLETE'.
+type BatchResponsePublicAssociationDefinitionConfigurationUpdateResultWithErrorsStatus string
+
+// BatchResponsePublicAssociationDefinitionUserConfiguration defines model for BatchResponsePublicAssociationDefinitionUserConfiguration.
+type BatchResponsePublicAssociationDefinitionUserConfiguration struct {
+	// CompletedAt The date and time when the batch operation was completed.
+	CompletedAt time.Time `json:"completedAt"`
+
+	// Links A collection of URLs linking to related documentation or resources associated with the batch operation.
+	Links *map[string]string `json:"links,omitempty"`
+
+	// RequestedAt The date and time when the batch operation was requested.
+	RequestedAt *time.Time `json:"requestedAt,omitempty"`
+
+	// Results An array of user configurations for public association definitions, representing the outcome of the batch operation.
+	Results []PublicAssociationDefinitionUserConfiguration `json:"results"`
+
+	// StartedAt The date and time when the batch operation started.
+	StartedAt time.Time `json:"startedAt"`
+
+	// Status The current status of the batch operation, which can be CANCELED, COMPLETE, PENDING, or PROCESSING.
+	Status BatchResponsePublicAssociationDefinitionUserConfigurationStatus `json:"status"`
+}
+
+// BatchResponsePublicAssociationDefinitionUserConfigurationStatus The current status of the batch operation, which can be CANCELED, COMPLETE, PENDING, or PROCESSING.
+type BatchResponsePublicAssociationDefinitionUserConfigurationStatus string
+
+// BatchResponsePublicAssociationDefinitionUserConfigurationWithErrors defines model for BatchResponsePublicAssociationDefinitionUserConfigurationWithErrors.
+type BatchResponsePublicAssociationDefinitionUserConfigurationWithErrors struct {
+	// CompletedAt The date and time when the batch operation was completed, in ISO 8601 format.
+	CompletedAt time.Time `json:"completedAt"`
+
+	// Errors An array of errors encountered during the batch operation, each item detailing a specific error.
+	Errors *[]StandardError `json:"errors,omitempty"`
+
+	// Links An object containing key-value pairs where each key is a link name and each value is a URI string related to the operation.
+	Links *map[string]string `json:"links,omitempty"`
+
+	// NumErrors The number of errors encountered during the batch operation.
+	NumErrors *int32 `json:"numErrors,omitempty"`
+
+	// RequestedAt The date and time when the batch operation was requested, in ISO 8601 format.
+	RequestedAt *time.Time `json:"requestedAt,omitempty"`
+
+	// Results An array of results from the batch operation, each item representing a public association definition user configuration.
+	Results []PublicAssociationDefinitionUserConfiguration `json:"results"`
+
+	// StartedAt The date and time when the batch operation started, in ISO 8601 format.
+	StartedAt time.Time `json:"startedAt"`
+
+	// Status The current status of the batch operation. Valid values include 'PENDING', 'PROCESSING', 'CANCELED', and 'COMPLETE'.
+	Status BatchResponsePublicAssociationDefinitionUserConfigurationWithErrorsStatus `json:"status"`
+}
+
+// BatchResponsePublicAssociationDefinitionUserConfigurationWithErrorsStatus The current status of the batch operation. Valid values include 'PENDING', 'PROCESSING', 'CANCELED', and 'COMPLETE'.
+type BatchResponsePublicAssociationDefinitionUserConfigurationWithErrorsStatus string
+
+// BatchResponsePublicAssociationMultiWithLabel defines model for BatchResponsePublicAssociationMultiWithLabel.
+type BatchResponsePublicAssociationMultiWithLabel struct {
+	// CompletedAt The timestamp when the batch processing was completed, in ISO 8601 format.
+	CompletedAt time.Time `json:"completedAt"`
+
+	// Links An object containing relevant links related to the batch request.
+	Links *map[string]string `json:"links,omitempty"`
+
+	// RequestedAt The timestamp when the batch request was initially made, in ISO 8601 format.
+	RequestedAt *time.Time                        `json:"requestedAt,omitempty"`
+	Results     []PublicAssociationMultiWithLabel `json:"results"`
+
+	// StartedAt The timestamp when the batch processing began, in ISO 8601 format.
+	StartedAt time.Time `json:"startedAt"`
+
+	// Status The status of the batch processing request: "PENDING", "PROCESSING", "CANCELED", or "COMPLETE".
+	Status BatchResponsePublicAssociationMultiWithLabelStatus `json:"status"`
+}
+
+// BatchResponsePublicAssociationMultiWithLabelStatus The status of the batch processing request: "PENDING", "PROCESSING", "CANCELED", or "COMPLETE".
+type BatchResponsePublicAssociationMultiWithLabelStatus string
+
+// BatchResponsePublicAssociationMultiWithLabelWithErrors defines model for BatchResponsePublicAssociationMultiWithLabelWithErrors.
+type BatchResponsePublicAssociationMultiWithLabelWithErrors struct {
+	CompletedAt time.Time                                                    `json:"completedAt"`
+	Errors      *[]StandardError                                             `json:"errors,omitempty"`
+	Links       *map[string]string                                           `json:"links,omitempty"`
+	NumErrors   *int32                                                       `json:"numErrors,omitempty"`
+	RequestedAt *time.Time                                                   `json:"requestedAt,omitempty"`
+	Results     []PublicAssociationMultiWithLabel                            `json:"results"`
+	StartedAt   time.Time                                                    `json:"startedAt"`
+	Status      BatchResponsePublicAssociationMultiWithLabelWithErrorsStatus `json:"status"`
+}
+
+// BatchResponsePublicAssociationMultiWithLabelWithErrorsStatus defines model for BatchResponsePublicAssociationMultiWithLabelWithErrors.Status.
+type BatchResponsePublicAssociationMultiWithLabelWithErrorsStatus string
+
+// BatchResponsePublicBulkOptOutFromAllResponse defines model for BatchResponsePublicBulkOptOutFromAllResponse.
+type BatchResponsePublicBulkOptOutFromAllResponse struct {
+	// CompletedAt The date and time when the bulk opt-out operation was completed.
+	CompletedAt time.Time `json:"completedAt"`
+
+	// Errors An array of error objects detailing any issues encountered during the bulk opt-out operation.
+	Errors *[]StandardError `json:"errors,omitempty"`
+
+	// Links A collection of URLs linking to related resources or documentation.
+	Links *map[string]string `json:"links,omitempty"`
+
+	// NumErrors The total number of errors encountered during the bulk opt-out operation.
+	NumErrors *int32 `json:"numErrors,omitempty"`
+
+	// RequestedAt The date and time when the bulk opt-out request was made.
+	RequestedAt *time.Time `json:"requestedAt,omitempty"`
+
+	// Results An array containing the results of the bulk opt-out from all communications operation.
+	Results []PublicBulkOptOutFromAllResponse `json:"results"`
+
+	// StartedAt The date and time when the bulk opt-out operation began.
+	StartedAt time.Time `json:"startedAt"`
+
+	// Status The current status of the bulk opt-out operation, which can be PENDING, PROCESSING, CANCELED, or COMPLETE.
+	Status BatchResponsePublicBulkOptOutFromAllResponseStatus `json:"status"`
+}
+
+// BatchResponsePublicBulkOptOutFromAllResponseStatus The current status of the bulk opt-out operation, which can be PENDING, PROCESSING, CANCELED, or COMPLETE.
+type BatchResponsePublicBulkOptOutFromAllResponseStatus string
+
+// BatchResponsePublicCampaign defines model for BatchResponsePublicCampaign.
+type BatchResponsePublicCampaign struct {
+	// CompletedAt The date and time when the batch operation was completed, formatted as a date-time string.
+	CompletedAt time.Time `json:"completedAt"`
+
+	// Links A map of related links associated with the batch operation.
+	Links *map[string]string `json:"links,omitempty"`
+
+	// RequestedAt The date and time when the batch operation was requested, formatted as a date-time string.
+	RequestedAt *time.Time `json:"requestedAt,omitempty"`
+
+	// Results An array of results from the batch operation, each item representing a public campaign.
+	Results []PublicCampaign `json:"results"`
+
+	// StartedAt The date and time when the batch operation started, formatted as a date-time string.
+	StartedAt time.Time `json:"startedAt"`
+
+	// Status The current status of the batch operation, with possible values: CANCELED, COMPLETE, PENDING, PROCESSING.
+	Status BatchResponsePublicCampaignStatus `json:"status"`
+}
+
+// BatchResponsePublicCampaignStatus The current status of the batch operation, with possible values: CANCELED, COMPLETE, PENDING, PROCESSING.
+type BatchResponsePublicCampaignStatus string
+
+// BatchResponsePublicCampaignWithAssets defines model for BatchResponsePublicCampaignWithAssets.
+type BatchResponsePublicCampaignWithAssets struct {
+	// CompletedAt The timestamp when the batch request processing was completed.
+	CompletedAt time.Time `json:"completedAt"`
+
+	// Links A collection of URLs linking to related resources or documentation.
+	Links *map[string]string `json:"links,omitempty"`
+
+	// RequestedAt The timestamp when the batch request was initially made.
+	RequestedAt *time.Time `json:"requestedAt,omitempty"`
+
+	// Results An array of results from the batch operation, each representing a public campaign with assets.
+	Results []PublicCampaignWithAssets `json:"results"`
+
+	// StartedAt The timestamp when the processing of the batch request began.
+	StartedAt time.Time `json:"startedAt"`
+
+	// Status The current processing status of the batch operation, with possible values: CANCELED, COMPLETE, PENDING, PROCESSING.
+	Status BatchResponsePublicCampaignWithAssetsStatus `json:"status"`
+}
+
+// BatchResponsePublicCampaignWithAssetsStatus The current processing status of the batch operation, with possible values: CANCELED, COMPLETE, PENDING, PROCESSING.
+type BatchResponsePublicCampaignWithAssetsStatus string
+
+// BatchResponsePublicCampaignWithAssetsWithErrors defines model for BatchResponsePublicCampaignWithAssetsWithErrors.
+type BatchResponsePublicCampaignWithAssetsWithErrors struct {
+	// CompletedAt The date and time when the batch operation was completed.
+	CompletedAt time.Time `json:"completedAt"`
+
+	// Errors The list of errors for individual campaign reads that failed within the batch (e.g., campaign not found, permission denied). Only included when non-empty.
+	Errors *[]StandardError `json:"errors,omitempty"`
+
+	// Links A collection of links related to the batch operation.
+	Links *map[string]string `json:"links,omitempty"`
+
+	// NumErrors The number of errors that occurred during the batch operation.
+	NumErrors *int32 `json:"numErrors,omitempty"`
+
+	// RequestedAt The date and time when the batch operation was requested.
+	RequestedAt *time.Time `json:"requestedAt,omitempty"`
+
+	// Results The list of successfully retrieved campaigns with their associated assets.
+	Results []PublicCampaignWithAssets `json:"results"`
+
+	// StartedAt The date and time when the batch operation started.
+	StartedAt time.Time `json:"startedAt"`
+
+	// Status The current status of the batch operation, which can be CANCELED, COMPLETE, PENDING, or PROCESSING.
+	Status BatchResponsePublicCampaignWithAssetsWithErrorsStatus `json:"status"`
+}
+
+// BatchResponsePublicCampaignWithAssetsWithErrorsStatus The current status of the batch operation, which can be CANCELED, COMPLETE, PENDING, or PROCESSING.
+type BatchResponsePublicCampaignWithAssetsWithErrorsStatus string
+
+// BatchResponsePublicCampaignWithErrors defines model for BatchResponsePublicCampaignWithErrors.
+type BatchResponsePublicCampaignWithErrors struct {
+	// CompletedAt The date and time when the batch operation was completed.
+	CompletedAt time.Time `json:"completedAt"`
+
+	// Errors The list of errors for individual campaign operations that failed within the batch. Only included when non-empty.
+	Errors *[]StandardError `json:"errors,omitempty"`
+
+	// Links URLs linking to resources or documentation related to the batch operation.
+	Links *map[string]string `json:"links,omitempty"`
+
+	// NumErrors The total number of errors encountered during the batch operation.
+	NumErrors *int32 `json:"numErrors,omitempty"`
+
+	// RequestedAt The date and time when the batch request was made.
+	RequestedAt *time.Time `json:"requestedAt,omitempty"`
+
+	// Results The list of successfully created or updated campaigns.
+	Results []PublicCampaign `json:"results"`
+
+	// StartedAt The date and time when the batch operation began.
+	StartedAt time.Time `json:"startedAt"`
+
+	// Status The current status of the batch operation. Accepted values are: CANCELED, COMPLETE, PENDING, PROCESSING.
+	Status BatchResponsePublicCampaignWithErrorsStatus `json:"status"`
+}
+
+// BatchResponsePublicCampaignWithErrorsStatus The current status of the batch operation. Accepted values are: CANCELED, COMPLETE, PENDING, PROCESSING.
+type BatchResponsePublicCampaignWithErrorsStatus string
+
+// BatchResponsePublicDefaultAssociation The response returned after performing a batch operation on associations.
+type BatchResponsePublicDefaultAssociation struct {
+	// CompletedAt The timestamp when the batch processing was completed, in ISO 8601 format.
+	CompletedAt time.Time `json:"completedAt"`
+
+	// Errors An array of StandardError objects detailing any errors that occurred during the batch operation.
+	Errors *[]StandardError `json:"errors,omitempty"`
+
+	// Links An object containing relevant links related to the batch request.
+	Links *map[string]string `json:"links,omitempty"`
+
+	// NumErrors The number of errors that occurred during the batch operation.
+	NumErrors *int32 `json:"numErrors,omitempty"`
+
+	// RequestedAt The timestamp when the batch request was initially made, in ISO 8601 format.
+	RequestedAt *time.Time `json:"requestedAt,omitempty"`
+
+	// Results An array of PublicDefaultAssociation objects representing the results of the batch operation.
+	Results []PublicDefaultAssociation `json:"results"`
+
+	// StartedAt The timestamp when the batch processing began, in ISO 8601 format.
+	StartedAt time.Time `json:"startedAt"`
+
+	// Status The status of the batch processing request: "PENDING", "PROCESSING", "CANCELLED", or "COMPLETE".
+	Status BatchResponsePublicDefaultAssociationStatus `json:"status"`
+}
+
+// BatchResponsePublicDefaultAssociationStatus The status of the batch processing request: "PENDING", "PROCESSING", "CANCELLED", or "COMPLETE".
+type BatchResponsePublicDefaultAssociationStatus string
+
+// BatchResponsePublicStatus defines model for BatchResponsePublicStatus.
+type BatchResponsePublicStatus struct {
+	// CompletedAt The date and time when the batch operation was completed.
+	CompletedAt time.Time `json:"completedAt"`
+
+	// Errors An array of error objects detailing any issues encountered.
+	Errors *[]StandardError `json:"errors,omitempty"`
+
+	// Links URLs linking to related resources or documentation.
+	Links *map[string]string `json:"links,omitempty"`
+
+	// NumErrors The number of errors encountered during the batch operation.
+	NumErrors *int32 `json:"numErrors,omitempty"`
+
+	// RequestedAt The date and time when the request was made.
+	RequestedAt *time.Time `json:"requestedAt,omitempty"`
+
+	// Results An array containing the results of the batch operation.
+	Results []PublicStatus `json:"results"`
+
+	// StartedAt The date and time when the batch operation started.
+	StartedAt time.Time `json:"startedAt"`
+
+	// Status The current status of the batch operation, which can be PENDING, PROCESSING, CANCELED, or COMPLETE.
+	Status BatchResponsePublicStatusStatus `json:"status"`
+}
+
+// BatchResponsePublicStatusStatus The current status of the batch operation, which can be PENDING, PROCESSING, CANCELED, or COMPLETE.
+type BatchResponsePublicStatusStatus string
+
+// BatchResponsePublicStatusBulkResponse defines model for BatchResponsePublicStatusBulkResponse.
+type BatchResponsePublicStatusBulkResponse struct {
+	// CompletedAt The date and time when the batch process was completed.
+	CompletedAt time.Time `json:"completedAt"`
+
+	// Links A collection of related links associated with the batch response.
+	Links *map[string]string `json:"links,omitempty"`
+
+	// RequestedAt The date and time when the batch request was made.
+	RequestedAt *time.Time `json:"requestedAt,omitempty"`
+
+	// Results The array of results from the batch process, each containing subscription status information.
+	Results []PublicStatusBulkResponse `json:"results"`
+
+	// StartedAt The date and time when the batch process began.
+	StartedAt time.Time `json:"startedAt"`
+
+	// Status The current status of the batch process, with possible values: PENDING, PROCESSING, CANCELED, COMPLETE.
+	Status BatchResponsePublicStatusBulkResponseStatus `json:"status"`
+}
+
+// BatchResponsePublicStatusBulkResponseStatus The current status of the batch process, with possible values: PENDING, PROCESSING, CANCELED, COMPLETE.
+type BatchResponsePublicStatusBulkResponseStatus string
+
+// BatchResponsePublicStatusBulkResponseWithErrors defines model for BatchResponsePublicStatusBulkResponseWithErrors.
+type BatchResponsePublicStatusBulkResponseWithErrors struct {
+	// CompletedAt The date and time when the operation was completed.
+	CompletedAt time.Time `json:"completedAt"`
+
+	// Errors An array of error objects detailing any issues encountered during the operation.
+	Errors *[]StandardError `json:"errors,omitempty"`
+
+	// Links An object containing related links, where each key is a link name and each value is a URL.
+	Links *map[string]string `json:"links,omitempty"`
+
+	// NumErrors The number of errors encountered during the operation.
+	NumErrors *int32 `json:"numErrors,omitempty"`
+
+	// RequestedAt The date and time when the request was made.
+	RequestedAt *time.Time `json:"requestedAt,omitempty"`
+
+	// Results An array containing the results of the operation.
+	Results []PublicStatusBulkResponse `json:"results"`
+
+	// StartedAt The date and time when the operation started.
+	StartedAt time.Time `json:"startedAt"`
+
+	// Status The current status of the operation, which can be PENDING, PROCESSING, CANCELED, or COMPLETE.
+	Status BatchResponsePublicStatusBulkResponseWithErrorsStatus `json:"status"`
+}
+
+// BatchResponsePublicStatusBulkResponseWithErrorsStatus The current status of the operation, which can be PENDING, PROCESSING, CANCELED, or COMPLETE.
+type BatchResponsePublicStatusBulkResponseWithErrorsStatus string
+
+// BatchResponsePublicWideStatusBulkResponse defines model for BatchResponsePublicWideStatusBulkResponse.
+type BatchResponsePublicWideStatusBulkResponse struct {
+	// CompletedAt The date and time when the batch process was completed.
+	CompletedAt time.Time `json:"completedAt"`
+
+	// Links A collection of related links associated with the batch response.
+	Links *map[string]string `json:"links,omitempty"`
+
+	// RequestedAt The date and time when the batch request was made.
+	RequestedAt *time.Time `json:"requestedAt,omitempty"`
+
+	// Results The array of results from the batch process, each containing subscription status information.
+	Results []PublicWideStatusBulkResponse `json:"results"`
+
+	// StartedAt The date and time when the batch process began.
+	StartedAt time.Time `json:"startedAt"`
+
+	// Status The current status of the batch process, with possible values: PENDING, PROCESSING, CANCELED, COMPLETE.
+	Status BatchResponsePublicWideStatusBulkResponseStatus `json:"status"`
+}
+
+// BatchResponsePublicWideStatusBulkResponseStatus The current status of the batch process, with possible values: PENDING, PROCESSING, CANCELED, COMPLETE.
+type BatchResponsePublicWideStatusBulkResponseStatus string
+
+// BatchResponsePublicWideStatusBulkResponseWithErrors defines model for BatchResponsePublicWideStatusBulkResponseWithErrors.
+type BatchResponsePublicWideStatusBulkResponseWithErrors struct {
+	// CompletedAt The date and time when the operation was completed.
+	CompletedAt time.Time `json:"completedAt"`
+
+	// Errors An array of error objects detailing any issues encountered during the operation.
+	Errors *[]StandardError `json:"errors,omitempty"`
+
+	// Links An object containing related links, where each key is a link name and each value is a URL.
+	Links *map[string]string `json:"links,omitempty"`
+
+	// NumErrors The number of errors encountered during the operation.
+	NumErrors *int32 `json:"numErrors,omitempty"`
+
+	// RequestedAt The date and time when the operation was requested.
+	RequestedAt *time.Time `json:"requestedAt,omitempty"`
+
+	// Results An array containing the results of the operation.
+	Results []PublicWideStatusBulkResponse `json:"results"`
+
+	// StartedAt The date and time when the operation started.
+	StartedAt time.Time `json:"startedAt"`
+
+	// Status The current status of the operation, which can be PENDING, PROCESSING, CANCELED, or COMPLETE.
+	Status BatchResponsePublicWideStatusBulkResponseWithErrorsStatus `json:"status"`
+}
+
+// BatchResponsePublicWideStatusBulkResponseWithErrorsStatus The current status of the operation, which can be PENDING, PROCESSING, CANCELED, or COMPLETE.
+type BatchResponsePublicWideStatusBulkResponseWithErrorsStatus string
+
+// BatchResponseRecordIdWithMemberships defines model for BatchResponseRecordIdWithMemberships.
+type BatchResponseRecordIdWithMemberships struct {
+	CompletedAt time.Time                                  `json:"completedAt"`
+	Links       *map[string]string                         `json:"links,omitempty"`
+	RequestedAt *time.Time                                 `json:"requestedAt,omitempty"`
+	Results     []RecordIdWithMemberships                  `json:"results"`
+	StartedAt   time.Time                                  `json:"startedAt"`
+	Status      BatchResponseRecordIdWithMembershipsStatus `json:"status"`
+}
+
+// BatchResponseRecordIdWithMembershipsStatus defines model for BatchResponseRecordIdWithMemberships.Status.
+type BatchResponseRecordIdWithMembershipsStatus string
+
+// BatchResponseRecordIdWithMembershipsWithErrors defines model for BatchResponseRecordIdWithMembershipsWithErrors.
+type BatchResponseRecordIdWithMembershipsWithErrors struct {
+	CompletedAt time.Time                                            `json:"completedAt"`
+	Errors      *[]StandardError                                     `json:"errors,omitempty"`
+	Links       *map[string]string                                   `json:"links,omitempty"`
+	NumErrors   *int32                                               `json:"numErrors,omitempty"`
+	RequestedAt *time.Time                                           `json:"requestedAt,omitempty"`
+	Results     []RecordIdWithMemberships                            `json:"results"`
+	StartedAt   time.Time                                            `json:"startedAt"`
+	Status      BatchResponseRecordIdWithMembershipsWithErrorsStatus `json:"status"`
+}
+
+// BatchResponseRecordIdWithMembershipsWithErrorsStatus defines model for BatchResponseRecordIdWithMembershipsWithErrors.Status.
+type BatchResponseRecordIdWithMembershipsWithErrorsStatus string
+
+// BatchResponseSimplePublicObject A public object batch response object
+type BatchResponseSimplePublicObject struct {
+	// CompletedAt The timestamp when the batch processing was completed, in ISO 8601 format.
+	CompletedAt time.Time `json:"completedAt"`
+
+	// Links A map of link names to associated URIs, providing additional information or actions related to the batch operation.
+	Links *map[string]string `json:"links,omitempty"`
+
+	// RequestedAt The timestamp when the batch request was initially made, in ISO 8601 format.
+	RequestedAt *time.Time `json:"requestedAt,omitempty"`
+
+	// Results An array of SimplePublicObject items representing the results of the batch operation.
+	Results []SimplePublicObject `json:"results"`
+
+	// StartedAt The timestamp when the batch processing began, in ISO 8601 format.
+	StartedAt time.Time `json:"startedAt"`
+
+	// Status The status of the batch processing request: "PENDING", "PROCESSING", "CANCELLED", or "COMPLETE"
+	Status BatchResponseSimplePublicObjectStatus `json:"status"`
+}
+
+// BatchResponseSimplePublicObjectStatus The status of the batch processing request: "PENDING", "PROCESSING", "CANCELLED", or "COMPLETE"
+type BatchResponseSimplePublicObjectStatus string
+
+// BatchResponseSimplePublicObjectWithErrors Represents the result of a batch operation on CRM objects, including the processing status, batch results, timestamps, and a list of any errors encountered during the operation.
+type BatchResponseSimplePublicObjectWithErrors struct {
+	// CompletedAt The timestamp when the batch process was completed, in ISO 8601 format.
+	CompletedAt time.Time        `json:"completedAt"`
+	Errors      *[]StandardError `json:"errors,omitempty"`
+
+	// Links An object containing relevant links related to the batch request.
+	Links *map[string]string `json:"links,omitempty"`
+
+	// NumErrors The number of errors encountered during the batch process.
+	NumErrors *int32 `json:"numErrors,omitempty"`
+
+	// RequestedAt The timestamp when the batch process was initiated, in ISO 8601 format.
+	RequestedAt *time.Time           `json:"requestedAt,omitempty"`
+	Results     []SimplePublicObject `json:"results"`
+
+	// StartedAt The timestamp when the batch process began execution, in ISO 8601 format.
+	StartedAt time.Time `json:"startedAt"`
+
+	// Status The status of the batch processing request - "PENDING", "PROCESSING", "CANCELLED", or "COMPLETE"
+	Status BatchResponseSimplePublicObjectWithErrorsStatus `json:"status"`
+}
+
+// BatchResponseSimplePublicObjectWithErrorsStatus The status of the batch processing request - "PENDING", "PROCESSING", "CANCELLED", or "COMPLETE"
+type BatchResponseSimplePublicObjectWithErrorsStatus string
+
+// BatchResponseSimplePublicUpsertObject Represents the result of a batch upsert operation, including the operation’s status, timestamps, and a list of successfully created or updated objects.
+type BatchResponseSimplePublicUpsertObject struct {
+	// CompletedAt The timestamp when the batch process was completed, in ISO 8601 format.
+	CompletedAt time.Time `json:"completedAt"`
+
+	// Links A map of link names to associated URIs, providing additional information or actions related to the batch operation.
+	Links *map[string]string `json:"links,omitempty"`
+
+	// RequestedAt The timestamp when the batch process was initiated, in ISO 8601 format.
+	RequestedAt *time.Time `json:"requestedAt,omitempty"`
+
+	// Results An array of SimplePublicUpsertObject items representing the results of the batch upsert operation.
+	Results []SimplePublicUpsertObject `json:"results"`
+
+	// StartedAt The timestamp when the batch process began execution, in ISO 8601 format.
+	StartedAt time.Time `json:"startedAt"`
+
+	// Status The status of the batch processing request. Can be: "PENDING", "PROCESSING", "CANCELED", or "COMPLETE".
+	Status BatchResponseSimplePublicUpsertObjectStatus `json:"status"`
+}
+
+// BatchResponseSimplePublicUpsertObjectStatus The status of the batch processing request. Can be: "PENDING", "PROCESSING", "CANCELED", or "COMPLETE".
+type BatchResponseSimplePublicUpsertObjectStatus string
+
+// BatchResponseSimplePublicUpsertObjectWithErrors Represents the response from a batch upsert operation, including the status, timestamps, successfully processed objects, and any errors that occurred during processing.
+type BatchResponseSimplePublicUpsertObjectWithErrors struct {
+	// CompletedAt The timestamp when the batch process was completed, in ISO 8601 format.
+	CompletedAt time.Time        `json:"completedAt"`
+	Errors      *[]StandardError `json:"errors,omitempty"`
+
+	// Links An object containing relevant links related to the batch request.
+	Links *map[string]string `json:"links,omitempty"`
+
+	// NumErrors The number of errors encountered during the batch process.
+	NumErrors *int32 `json:"numErrors,omitempty"`
+
+	// RequestedAt The timestamp when the batch process was initiated, in ISO 8601 format.
+	RequestedAt *time.Time                 `json:"requestedAt,omitempty"`
+	Results     []SimplePublicUpsertObject `json:"results"`
+
+	// StartedAt The timestamp when the batch process began execution, in ISO 8601 format.
+	StartedAt time.Time `json:"startedAt"`
+
+	// Status The status of the batch processing request. Can be: "PENDING", "PROCESSING", "CANCELLED", or "COMPLETE".
+	Status BatchResponseSimplePublicUpsertObjectWithErrorsStatus `json:"status"`
+}
+
+// BatchResponseSimplePublicUpsertObjectWithErrorsStatus The status of the batch processing request. Can be: "PENDING", "PROCESSING", "CANCELLED", or "COMPLETE".
+type BatchResponseSimplePublicUpsertObjectWithErrorsStatus string
+
+// BatchResponseSubscriberEmailResponse defines model for BatchResponseSubscriberEmailResponse.
+type BatchResponseSubscriberEmailResponse struct {
+	// CompletedAt Timestamp that represents when the request finished processing
+	CompletedAt time.Time `json:"completedAt"`
+
+	// Errors An array of errors encountered during the batch operation, each providing details about the error.
+	Errors *[]StandardError `json:"errors,omitempty"`
+
+	// Links Result of the request
+	Links *map[string]string `json:"links,omitempty"`
+
+	// NumErrors The number of errors that occurred during the processing
+	NumErrors *int32 `json:"numErrors,omitempty"`
+
+	// RequestedAt Timestamp that represents when the request was made
+	RequestedAt *time.Time `json:"requestedAt,omitempty"`
+
+	// Results An array of results from the batch operation, each containing details about a subscriber email response.
+	Results []SubscriberEmailResponse `json:"results"`
+
+	// StartedAt Timestamp that represents when the request started processing
+	StartedAt time.Time `json:"startedAt"`
+
+	// Status The status of the request processing
+	Status BatchResponseSubscriberEmailResponseStatus `json:"status"`
+}
+
+// BatchResponseSubscriberEmailResponseStatus The status of the request processing
+type BatchResponseSubscriberEmailResponseStatus string
+
+// BatchResponseSubscriberVidResponse defines model for BatchResponseSubscriberVidResponse.
+type BatchResponseSubscriberVidResponse struct {
+	// CompletedAt Timestamp that represents when the request finished processing
+	CompletedAt time.Time `json:"completedAt"`
+
+	// Errors An array of StandardError objects, each detailing an error encountered during the batch operation.
+	Errors *[]StandardError `json:"errors,omitempty"`
+
+	// Links Result of the request
+	Links *map[string]string `json:"links,omitempty"`
+
+	// NumErrors The number of errors that occurred during the processing
+	NumErrors *int32 `json:"numErrors,omitempty"`
+
+	// RequestedAt Timestamp that represents when the request was made
+	RequestedAt *time.Time `json:"requestedAt,omitempty"`
+
+	// Results An array of SubscriberVidResponse objects, each representing the result of processing an individual subscriber VID.
+	Results []SubscriberVidResponse `json:"results"`
+
+	// StartedAt Timestamp that represents when the request started processing
+	StartedAt time.Time `json:"startedAt"`
+
+	// Status The status of the request processing
+	Status BatchResponseSubscriberVidResponseStatus `json:"status"`
+}
+
+// BatchResponseSubscriberVidResponseStatus The status of the request processing
+type BatchResponseSubscriberVidResponseStatus string
+
+// BatchResponseSubscriptionResponse defines model for BatchResponseSubscriptionResponse.
+type BatchResponseSubscriptionResponse struct {
+	// CompletedAt The date and time when the batch operation was completed, in ISO 8601 format.
+	CompletedAt time.Time `json:"completedAt"`
+
+	// Links A map of link names to associated URIs providing additional information about the batch operation.
+	Links *map[string]string `json:"links,omitempty"`
+
+	// RequestedAt The date and time when the batch operation was requested, in ISO 8601 format.
+	RequestedAt *time.Time `json:"requestedAt,omitempty"`
+
+	// Results An array containing the results of the batch operation, with each item representing an individual subscription response.
+	Results []SubscriptionResponse `json:"results"`
+
+	// StartedAt The date and time when the batch operation started, in ISO 8601 format.
+	StartedAt time.Time `json:"startedAt"`
+
+	// Status The current status of the batch operation. Valid values include 'PENDING', 'PROCESSING', 'CANCELED', and 'COMPLETE'.
+	Status BatchResponseSubscriptionResponseStatus `json:"status"`
+}
+
+// BatchResponseSubscriptionResponseStatus The current status of the batch operation. Valid values include 'PENDING', 'PROCESSING', 'CANCELED', and 'COMPLETE'.
+type BatchResponseSubscriptionResponseStatus string
+
+// BatchResponseSubscriptionResponseWithErrors defines model for BatchResponseSubscriptionResponseWithErrors.
+type BatchResponseSubscriptionResponseWithErrors struct {
+	// CompletedAt The date and time when the batch processing was completed, in ISO 8601 format.
+	CompletedAt time.Time `json:"completedAt"`
+
+	// Errors An array of StandardError objects detailing any errors that occurred during the batch processing.
+	Errors *[]StandardError `json:"errors,omitempty"`
+
+	// Links A map of link names to associated URIs, providing additional resources or documentation related to the batch operation.
+	Links *map[string]string `json:"links,omitempty"`
+
+	// NumErrors The total number of errors encountered during the batch operation.
+	NumErrors *int32 `json:"numErrors,omitempty"`
+
+	// RequestedAt The date and time when the batch request was initially made, in ISO 8601 format.
+	RequestedAt *time.Time `json:"requestedAt,omitempty"`
+
+	// Results An array of SubscriptionResponse objects representing the results of each subscription update processed in the batch.
+	Results []SubscriptionResponse `json:"results"`
+
+	// StartedAt The date and time when the batch processing began, in ISO 8601 format.
+	StartedAt time.Time `json:"startedAt"`
+
+	// Status The current status of the batch operation. Valid values include 'PENDING', 'PROCESSING', 'CANCELED', and 'COMPLETE'.
+	Status BatchResponseSubscriptionResponseWithErrorsStatus `json:"status"`
+}
+
+// BatchResponseSubscriptionResponseWithErrorsStatus The current status of the batch operation. Valid values include 'PENDING', 'PROCESSING', 'CANCELED', and 'COMPLETE'.
+type BatchResponseSubscriptionResponseWithErrorsStatus string
+
+// BatchResponseTag defines model for BatchResponseTag.
+type BatchResponseTag struct {
+	// CompletedAt Time of batch operation completion.
+	CompletedAt time.Time `json:"completedAt"`
+
+	// Links Links associated with batch operation.
+	Links *map[string]string `json:"links,omitempty"`
+
+	// RequestedAt Time of batch operation request.
+	RequestedAt *time.Time `json:"requestedAt,omitempty"`
+
+	// Results Results of batch operation.
+	Results []Tag `json:"results"`
+
+	// StartedAt Time of batch operation start.
+	StartedAt time.Time `json:"startedAt"`
+
+	// Status Status of batch operation.
+	Status BatchResponseTagStatus `json:"status"`
+}
+
+// BatchResponseTagStatus Status of batch operation.
+type BatchResponseTagStatus string
+
+// BatchResponseTagWithErrors defines model for BatchResponseTagWithErrors.
+type BatchResponseTagWithErrors struct {
+	// CompletedAt Time of batch operation completion.
+	CompletedAt time.Time `json:"completedAt"`
+
+	// Errors Errors in batch operation.
+	Errors *[]StandardError `json:"errors,omitempty"`
+
+	// Links Links associated with batch operation.
+	Links *map[string]string `json:"links,omitempty"`
+
+	// NumErrors Number of errors.
+	NumErrors *int32 `json:"numErrors,omitempty"`
+
+	// RequestedAt Time of batch operation request.
+	RequestedAt *time.Time `json:"requestedAt,omitempty"`
+
+	// Results Results of batch operation.
+	Results []Tag `json:"results"`
+
+	// StartedAt Time of batch operation start.
+	StartedAt time.Time `json:"startedAt"`
+
+	// Status Status of batch operation.
+	Status BatchResponseTagWithErrorsStatus `json:"status"`
+}
+
+// BatchResponseTagWithErrorsStatus Status of batch operation.
+type BatchResponseTagWithErrorsStatus string
+
+// BatchedBehavioralEventHttpCompletionRequest defines model for BatchedBehavioralEventHttpCompletionRequest.
+type BatchedBehavioralEventHttpCompletionRequest struct {
+	// Inputs An array of BehavioralEventHttpCompletionRequest objects, representing individual behavioral event completion requests to be processed in a batch.
+	Inputs []BehavioralEventHttpCompletionRequest `json:"inputs"`
+}
+
+// BehavioralEventHttpCompletionRequest defines model for BehavioralEventHttpCompletionRequest.
+type BehavioralEventHttpCompletionRequest struct {
+	// Email Email of visitor
+	Email *string `json:"email,omitempty"`
+
+	// EventName Internal name of the event-type to trigger
+	EventName string `json:"eventName"`
+
+	// ObjectId The object id that this event occurred on. Could be a contact id or a visitor id.
+	ObjectId *string `json:"objectId,omitempty"`
+
+	// OccurredAt The time when this event occurred (if any). If this isn't set, the current time will be used
+	OccurredAt *time.Time `json:"occurredAt,omitempty"`
+
+	// Properties Map of properties for the event in the format property internal name - property value
+	Properties map[string]string `json:"properties"`
+
+	// Utk User token
+	Utk *string `json:"utk,omitempty"`
+
+	// Uuid A string representing the universally unique identifier for the event.
+	Uuid *string `json:"uuid,omitempty"`
+}
+
+// BehavioralEventTypeDefinitionLabels defines model for BehavioralEventTypeDefinitionLabels.
+type BehavioralEventTypeDefinitionLabels struct {
+	// Plural The plural label for the event type. This is a string and is optional.
+	Plural *string `json:"plural,omitempty"`
+
+	// Singular The singular label for the event type. This is a string and is required.
+	Singular string `json:"singular"`
+}
+
+// Blog defines model for Blog.
+type Blog struct {
+	// AbsoluteUrl Blog's root URL
+	AbsoluteUrl string `json:"absoluteUrl"`
+
+	// AllowComments Boolean determining whether or not this blog allows public comments.
+	AllowComments bool `json:"allowComments"`
+
+	// Created The timestamp (ISO8601 format) when this blog was created.
+	Created time.Time `json:"created"`
+
+	// DeletedAt The timestamp (ISO8601 format) when this Blog was deleted.
+	DeletedAt time.Time `json:"deletedAt"`
+
+	// Description The Description of this Blog.
+	Description string `json:"description"`
+
+	// HtmlTitle The html title of this Blog.
+	HtmlTitle string `json:"htmlTitle"`
+
+	// Id The unique ID of the Blog.
+	Id string `json:"id"`
+
+	// Language The explicitly defined language of the Blog. If null, the Blog will default to the language of the Domain.
+	Language BlogLanguage `json:"language"`
+
+	// ListingPageId The ID of the listing page associated with the blog.
+	ListingPageId string `json:"listingPageId"`
+
+	// Name The internal name of the blog.
+	Name string `json:"name"`
+
+	// PublicAccessRules Rules for require member registration to access private content.
+	PublicAccessRules []PublicAccessRule `json:"publicAccessRules"`
+
+	// PublicAccessRulesEnabled Boolean to determine whether or not to respect publicAccessRules.
+	PublicAccessRulesEnabled bool `json:"publicAccessRulesEnabled"`
+
+	// PublicTitle The public title of this Blog.
+	PublicTitle string `json:"publicTitle"`
+
+	// Slug The path of the this blog. This field is appended to the domain to construct the url of this blog.
+	Slug string `json:"slug"`
+
+	// TranslatedFromId ID of the primary Blog this object was translated from.
+	TranslatedFromId string `json:"translatedFromId"`
+
+	// Updated The timestamp (ISO8601 format) when this blog was updated.
+	Updated time.Time `json:"updated"`
+}
+
+// BlogLanguage The explicitly defined language of the Blog. If null, the Blog will default to the language of the Domain.
+type BlogLanguage string
+
+// BlogAuthor defines model for BlogAuthor.
+type BlogAuthor struct {
+	// Avatar URL to the blog author's avatar, if supplying a custom one.
+	Avatar string `json:"avatar"`
+
+	// Bio A short biography of the blog author.
+	Bio string `json:"bio"`
+
+	// Created The timestamp (ISO8601 format) when this Blog Author was created.
+	Created time.Time `json:"created"`
+
+	// DeletedAt The timestamp (ISO8601 format) when this Blog Author was deleted.
+	DeletedAt time.Time `json:"deletedAt"`
+
+	// DisplayName The full name of the Blog Author to be displayed.
+	DisplayName string `json:"displayName"`
+
+	// Email Email address of the Blog Author.
+	Email string `json:"email"`
+
+	// Facebook URL to the Blog Author's Facebook page.
+	Facebook string `json:"facebook"`
+
+	// FullName The full, unabbreviated name of the blog author, typically their first and last name combined.
+	FullName string `json:"fullName"`
+
+	// Id The unique ID of the Blog Author.
+	Id string `json:"id"`
+
+	// Language The explicitly defined ISO 639 language code of the blog author.
+	Language BlogAuthorLanguage `json:"language"`
+
+	// Linkedin URL to the blog author's LinkedIn page.
+	Linkedin string `json:"linkedin"`
+
+	// Name The name field for the blog author. (This appears to be a shorter or alternative name field compared to fullName.)
+	Name string `json:"name"`
+
+	// Slug A URL-friendly identifier for the blog author that can be used to reference the author in URLs. Typically generated from the author's name and contains lowercase letters, hyphens, and underscores.
+	Slug string `json:"slug"`
+
+	// TranslatedFromId ID of the primary blog author this object was translated from.
+	TranslatedFromId int64 `json:"translatedFromId"`
+
+	// Twitter URL or username of the Twitter account associated with the Blog Author. This will be normalized into the Twitter url for said user.
+	Twitter string `json:"twitter"`
+
+	// Updated The timestamp (ISO8601 format) when this Blog Author was updated.
+	Updated time.Time `json:"updated"`
+
+	// Website URL to the website of the Blog Author.
+	Website string `json:"website"`
+}
+
+// BlogAuthorLanguage The explicitly defined ISO 639 language code of the blog author.
+type BlogAuthorLanguage string
+
+// BlogAuthorCloneRequestVNext defines model for BlogAuthorCloneRequestVNext.
+type BlogAuthorCloneRequestVNext struct {
+	BlogAuthor BlogAuthor `json:"blogAuthor"`
+
+	// Id ID of the object to be cloned.
+	Id string `json:"id"`
+
+	// Language Language of newly cloned object.
+	Language *string `json:"language,omitempty"`
+
+	// PrimaryLanguage Primary language in multi-language group.
+	PrimaryLanguage *string `json:"primaryLanguage,omitempty"`
+
+	// UsePublished Specifies whether to use the published version of the blog author for cloning. This is a boolean.
+	UsePublished *bool `json:"usePublished,omitempty"`
+}
+
+// BlogLanguageCloneRequestVNext defines model for BlogLanguageCloneRequestVNext.
+type BlogLanguageCloneRequestVNext struct {
+	// Id ID of blog to clone.
+	Id string `json:"id"`
+
+	// Language Target language of new variant.
+	Language *string `json:"language,omitempty"`
+
+	// PrimaryLanguage Language of primary blog to clone.
+	PrimaryLanguage *string `json:"primaryLanguage,omitempty"`
+
+	// Slug Path to this blog.
+	Slug *string `json:"slug,omitempty"`
+
+	// UsePublished A boolean indicating whether to use the published version of the blog post for cloning.
+	UsePublished *bool `json:"usePublished,omitempty"`
+}
+
+// BlogPost defines model for BlogPost.
+type BlogPost struct {
+	// AbStatus The status of the AB test associated with this blog post, if applicable
+	//
+	// Available options: automated_loser_variant, automated_master, automated_variant, loser_variant, mab_master, mab_variant, master, variant
+	AbStatus BlogPostAbStatus `json:"abStatus"`
+
+	// AbTestId The ID of the AB test associated with this page, if applicable
+	AbTestId string `json:"abTestId"`
+
+	// ArchivedAt The timestamp (ISO8601 format) when this Blog Post was deleted.
+	ArchivedAt int64 `json:"archivedAt"`
+
+	// ArchivedInDashboard If True, the post will not show up in your dashboard, although the post could still be live.
+	ArchivedInDashboard bool `json:"archivedInDashboard"`
+
+	// AttachedStylesheets List of stylesheets to attach to this blog post. These stylesheets are attached to just this page. Order of precedence is bottom to top, just like in the HTML.
+	AttachedStylesheets []map[string]map[string]interface{} `json:"attachedStylesheets"`
+
+	// AuthorName The name of the user that updated this Blog Post.
+	AuthorName string `json:"authorName"`
+
+	// BlogAuthorId The ID of the Blog Author associated with this Blog Post.
+	BlogAuthorId string `json:"blogAuthorId"`
+
+	// Campaign The GUID of the marketing campaign this Blog Post is a part of.
+	Campaign string `json:"campaign"`
+
+	// CategoryId ID of the type of object this is. Should always .
+	CategoryId int32 `json:"categoryId"`
+
+	// ContentGroupId The ID of the parent Blog this Blog Post is associated with.
+	ContentGroupId string `json:"contentGroupId"`
+
+	// ContentTypeCategory An ENUM descibing the type of this object. Should always be BLOG_POST.
+	ContentTypeCategory BlogPostContentTypeCategory `json:"contentTypeCategory"`
+
+	// Created The timestamp (ISO8601 format) when this Blog Post was created.
+	Created time.Time `json:"created"`
+
+	// CreatedById The ID of the user that created this Blog Post.
+	CreatedById string `json:"createdById"`
+
+	// CurrentState A generated ENUM descibing the current state of this Blog Post. Should always match state.
+	CurrentState BlogPostCurrentState `json:"currentState"`
+
+	// CurrentlyPublished Whether the post is published (true or false)
+	CurrentlyPublished bool `json:"currentlyPublished"`
+
+	// Domain The domain this Blog Post will resolve to. If null, the Blog Post will default to the domain of the ParentBlog.
+	Domain string `json:"domain"`
+
+	// DynamicPageDataSourceId The identifier for the data source used by the dynamic page.
+	DynamicPageDataSourceId string `json:"dynamicPageDataSourceId"`
+
+	// DynamicPageDataSourceType The type of data source used by the dynamic page.
+	DynamicPageDataSourceType int32 `json:"dynamicPageDataSourceType"`
+
+	// DynamicPageHubDbTableId The ID of the HubDB table this Blog Post references, if applicable
+	DynamicPageHubDbTableId string `json:"dynamicPageHubDbTableId"`
+
+	// EnableDomainStylesheets Boolean to determine whether or not the styles from the template should be applied.
+	EnableDomainStylesheets bool `json:"enableDomainStylesheets"`
+
+	// EnableGoogleAmpOutputOverride Boolean to allow overriding the AMP settings for the blog.
+	EnableGoogleAmpOutputOverride bool `json:"enableGoogleAmpOutputOverride"`
+
+	// EnableLayoutStylesheets Boolean to determine whether or not the styles from the template should be applied.
+	EnableLayoutStylesheets bool `json:"enableLayoutStylesheets"`
+
+	// FeaturedImage The featuredImage of this Blog Post.
+	FeaturedImage string `json:"featuredImage"`
+
+	// FeaturedImageAltText Alt Text of the featuredImage.
+	FeaturedImageAltText string `json:"featuredImageAltText"`
+
+	// FolderId Unique identifier of associated folder
+	FolderId string `json:"folderId"`
+
+	// FooterHtml Custom HTML for embed codes, javascript that should be placed before the </body> tag of the page.
+	FooterHtml string `json:"footerHtml"`
+
+	// HeadHtml Custom HTML for embed codes, javascript, etc. that goes in the <head> tag of the page.
+	HeadHtml string `json:"headHtml"`
+
+	// HtmlTitle The html title of this Blog Post.
+	HtmlTitle string `json:"htmlTitle"`
+
+	// Id The unique ID of the Blog Post.
+	Id string `json:"id"`
+
+	// IncludeDefaultCustomCss Boolean to determine whether or not the Primary CSS Files should be applied.
+	IncludeDefaultCustomCss bool `json:"includeDefaultCustomCss"`
+
+	// Language The explicitly defined ISO 639 language code of the Blog Post. If null, the Blog Post will default to the language of the ParentBlog.
+	Language BlogPostLanguage `json:"language"`
+
+	// LayoutSections A structure detailing the layout sections of the blog post.
+	LayoutSections map[string]LayoutSection `json:"layoutSections"`
+
+	// LinkRelCanonicalUrl Optional override to set the URL to be used in the rel=canonical link tag on the page.
+	LinkRelCanonicalUrl string `json:"linkRelCanonicalUrl"`
+
+	// MabExperimentId Unique identifier of the MAB Experiment
+	MabExperimentId string `json:"mabExperimentId"`
+
+	// MetaDescription A description that goes in <meta> tag on the page.
+	MetaDescription string `json:"metaDescription"`
+
+	// Name The internal name of the Blog Post.
+	Name string `json:"name"`
+
+	// PageExpiryDate The date at which this blog post should expire and begin redirecting to another url or page.
+	PageExpiryDate int64 `json:"pageExpiryDate"`
+
+	// PageExpiryEnabled Boolean describing if the page expiration feature is enabled for this blog post.
+	PageExpiryEnabled bool `json:"pageExpiryEnabled"`
+
+	// PageExpiryRedirectId The ID of another page this blog post's url should redirect to once this blog post expires. Should only set this or pageExpiryRedirectUrl.
+	PageExpiryRedirectId int64 `json:"pageExpiryRedirectId"`
+
+	// PageExpiryRedirectUrl The URL this blog post's url should redirect to once it expires. Should only set this or pageExpiryRedirectId.
+	PageExpiryRedirectUrl string `json:"pageExpiryRedirectUrl"`
+
+	// Password Set this to create a password protected page. Entering the password will be required to view the page.
+	Password string `json:"password"`
+
+	// PostBody The HTML of the main post body.
+	PostBody string `json:"postBody"`
+
+	// PostSummary The summary of the blog post that will appear on the main listing page.
+	PostSummary string `json:"postSummary"`
+
+	// PublicAccessRules Rules for require member registration to access private content.
+	PublicAccessRules []PublicAccessRule `json:"publicAccessRules"`
+
+	// PublicAccessRulesEnabled Boolean to determine whether or not to respect publicAccessRules.
+	PublicAccessRulesEnabled bool `json:"publicAccessRulesEnabled"`
+
+	// PublishDate The date (ISO8601 format) the blog post is to be published at.
+	PublishDate time.Time `json:"publishDate"`
+
+	// PublishImmediately Set this to true if you want to be published immediately when the schedule publish endpoint is called, and to ignore the publish_date setting.
+	PublishImmediately bool `json:"publishImmediately"`
+
+	// PublishedAt The date and time when the blog post was published, in ISO 8601 format.
+	PublishedAt time.Time `json:"publishedAt"`
+
+	// RssBody The contents of the RSS body for this Blog Post.
+	RssBody string `json:"rssBody"`
+
+	// RssSummary The contents of the RSS summary for this Blog Post.
+	RssSummary string `json:"rssSummary"`
+
+	// Slug The path of the this blog post. This field is appended to the domain to construct the url of this post.
+	Slug string `json:"slug"`
+
+	// State An ENUM descibing the current state of this Blog Post.
+	State string `json:"state"`
+
+	// TagIds List of IDs for the tags associated with this Blog Post.
+	TagIds []int64 `json:"tagIds"`
+
+	// ThemeSettingsValues A collection of settings specific to the theme applied to the blog post.
+	ThemeSettingsValues map[string]map[string]interface{} `json:"themeSettingsValues"`
+
+	// TranslatedFromId ID of the primary blog post this object was translated from.
+	TranslatedFromId string `json:"translatedFromId"`
+
+	// Translations A map of translations for the blog post, each associated with a specific language variation.
+	Translations map[string]ContentLanguageVariation `json:"translations"`
+
+	// Updated The timestamp (ISO8601 format) when this Blog Post was updated.
+	Updated time.Time `json:"updated"`
+
+	// UpdatedById The ID of the user that updated this Blog Post.
+	UpdatedById string `json:"updatedById"`
+
+	// Url A generated field representing the URL of this blog post.
+	Url string `json:"url"`
+
+	// UseFeaturedImage Boolean to determine if this post should use a featuredImage.
+	UseFeaturedImage bool `json:"useFeaturedImage"`
+
+	// WidgetContainers A data structure containing the data for all the modules inside the containers for this post. This will only be populated if the page has widget containers.
+	WidgetContainers map[string]map[string]interface{} `json:"widgetContainers"`
+
+	// Widgets A data structure containing the data for all the modules for this page.
+	Widgets map[string]map[string]interface{} `json:"widgets"`
+}
+
+// BlogPostAbStatus The status of the AB test associated with this blog post, if applicable
+//
+// Available options: automated_loser_variant, automated_master, automated_variant, loser_variant, mab_master, mab_variant, master, variant
+type BlogPostAbStatus string
+
+// BlogPostContentTypeCategory An ENUM descibing the type of this object. Should always be BLOG_POST.
+type BlogPostContentTypeCategory string
+
+// BlogPostCurrentState A generated ENUM descibing the current state of this Blog Post. Should always match state.
+type BlogPostCurrentState string
+
+// BlogPostLanguage The explicitly defined ISO 639 language code of the Blog Post. If null, the Blog Post will default to the language of the ParentBlog.
+type BlogPostLanguage string
+
+// BlogPostLanguageCloneRequestVNext defines model for BlogPostLanguageCloneRequestVNext.
+type BlogPostLanguageCloneRequestVNext struct {
+	// Id ID of blog post to clone.
+	Id string `json:"id"`
+
+	// Language Target language of new variant.
+	Language *string `json:"language,omitempty"`
+
+	// UsePublished A boolean indicating whether the published version of the blog post should be used for cloning. If true, the published version is used; otherwise, the draft version is used.
+	UsePublished *bool `json:"usePublished,omitempty"`
+}
+
+// BlogPostVersion defines model for BlogPostVersion.
+type BlogPostVersion struct {
+	// Id The unique identifier for this specific version of the blog post.
+	Id     string   `json:"id"`
+	Object BlogPost `json:"object"`
+
+	// UpdatedAt The date and time when this version of the blog post was last updated, in ISO 8601 format.
+	UpdatedAt time.Time   `json:"updatedAt"`
+	User      VersionUser `json:"user"`
+}
+
+// BlogVersion defines model for BlogVersion.
+type BlogVersion struct {
+	// Id The unique identifier for this blog version.
+	Id     string `json:"id"`
+	Object Blog   `json:"object"`
+
+	// UpdatedAt The date and time when this version was last updated, in ISO 8601 format.
+	UpdatedAt time.Time   `json:"updatedAt"`
+	User      VersionUser `json:"user"`
+}
+
+// BoolPropertyOperation defines model for BoolPropertyOperation.
+type BoolPropertyOperation struct {
+	// DefaultValue A string representing the default value for the operation.
+	DefaultValue *string `json:"defaultValue,omitempty"`
+
+	// IncludeObjectsWithNoValueSet A boolean indicating whether to include objects that have no value set for the property.
+	IncludeObjectsWithNoValueSet bool `json:"includeObjectsWithNoValueSet"`
+
+	// OperationType A string indicating the type of operation being performed.
+	OperationType string `json:"operationType"`
+
+	// Operator A string representing the operation to be performed. Valid values include 'IS_EQUAL_TO', 'IS_NOT_EQUAL_TO', 'HAS_EVER_BEEN_EQUAL_TO', and 'HAS_NEVER_BEEN_EQUAL_TO'.
+	Operator BoolPropertyOperationOperator `json:"operator"`
+
+	// OperatorName A string representing the name of the operator used in the operation.
+	OperatorName   string          `json:"operatorName"`
+	PropertyAspect *PropertyAspect `json:"propertyAspect,omitempty"`
+
+	// PropertyType A string indicating the type of property, which is 'bool' for this operation.
+	PropertyType BoolPropertyOperationPropertyType `json:"propertyType"`
+
+	// RenderSpec A string specifying the rendering specification for the operation.
+	RenderSpec *string `json:"renderSpec,omitempty"`
+
+	// Value A boolean indicating the value to be used in the operation.
+	Value bool `json:"value"`
+}
+
+// BoolPropertyOperationOperator A string representing the operation to be performed. Valid values include 'IS_EQUAL_TO', 'IS_NOT_EQUAL_TO', 'HAS_EVER_BEEN_EQUAL_TO', and 'HAS_NEVER_BEEN_EQUAL_TO'.
+type BoolPropertyOperationOperator string
+
+// BoolPropertyOperationPropertyType A string indicating the type of property, which is 'bool' for this operation.
+type BoolPropertyOperationPropertyType string
+
+// BooleanFieldSchema defines model for BooleanFieldSchema.
+type BooleanFieldSchema struct {
+	// Type Specifies the field type as BOOLEAN, indicating that the field can hold a true or false value.
+	Type BooleanFieldSchemaType `json:"type"`
+}
+
+// BooleanFieldSchemaType Specifies the field type as BOOLEAN, indicating that the field can hold a true or false value.
+type BooleanFieldSchemaType string
+
+// BoundedNextPage defines model for BoundedNextPage.
+type BoundedNextPage struct {
+	// Link A URL that can be used to retrieve the next set of results.
+	Link *string `json:"link,omitempty"`
+
+	// Offset The offset value indicating the starting point for the next set of results.
+	Offset int32 `json:"offset"`
+}
+
+// BoundedPaging defines model for BoundedPaging.
+type BoundedPaging struct {
+	Next *BoundedNextPage `json:"next,omitempty"`
+}
+
+// BreakpointStyles defines model for BreakpointStyles.
+type BreakpointStyles struct {
+	// Hidden A boolean indicating whether the element should be hidden at this breakpoint. A value of true means the element is not visible.
+	Hidden  bool    `json:"hidden"`
+	Margin  Margin  `json:"margin"`
+	Padding Padding `json:"padding"`
+}
+
+// BulkIntegratorObjectCreationResponse defines model for BulkIntegratorObjectCreationResponse.
+type BulkIntegratorObjectCreationResponse struct {
+	// CreatedObjects An array of objects that have been successfully created. Each object in the array represents a newly created integrator object.
+	CreatedObjects map[string]IntegratorObjectCreationResponse `json:"createdObjects"`
+}
+
+// CMSMediaBridgeProperty A HubSpot property
+type CMSMediaBridgeProperty struct {
+	// AllowedObjectTypes An array of strings representing the object types that are allowed for this property.
+	AllowedObjectTypes []ObjectTypeIdProto `json:"allowedObjectTypes"`
+
+	// Calculated A boolean indicating if the property is calculated.
+	Calculated bool `json:"calculated"`
+
+	// CanArchive A boolean indicating if the property can be archived.
+	CanArchive bool `json:"canArchive"`
+
+	// CanRestore A boolean indicating if the property can be restored.
+	CanRestore bool `json:"canRestore"`
+
+	// CreatedAt A string representing the date and time when the property was created, in ISO 8601 format.
+	CreatedAt int64 `json:"createdAt"`
+
+	// CreatedUserId A string representing the user ID who created the property.
+	CreatedUserId int64 `json:"createdUserId"`
+
+	// CurrencyPropertyName A string representing the name of the currency property associated with this property.
+	CurrencyPropertyName string `json:"currencyPropertyName"`
+
+	// DataSensitivity A string indicating the sensitivity level of the data.
+	DataSensitivity CMSMediaBridgePropertyDataSensitivity `json:"dataSensitivity"`
+
+	// DateDisplayHint A string providing a hint for displaying dates.
+	DateDisplayHint CMSMediaBridgePropertyDateDisplayHint `json:"dateDisplayHint"`
+
+	// Deleted A boolean indicating if the property has been deleted.
+	Deleted bool `json:"deleted"`
+
+	// Description A string providing a description of the property.
+	Description string `json:"description"`
+
+	// DisplayMode A string indicating the display mode of the property.
+	DisplayMode CMSMediaBridgePropertyDisplayMode `json:"displayMode"`
+
+	// DisplayOrder An integer specifying the order in which the property is displayed.
+	DisplayOrder int32 `json:"displayOrder"`
+
+	// EnforceMultivalueUniqueness A boolean indicating if uniqueness is enforced for multivalue properties.
+	EnforceMultivalueUniqueness bool `json:"enforceMultivalueUniqueness"`
+
+	// ExternalOptions A boolean indicating if the property has external options.
+	ExternalOptions bool `json:"externalOptions"`
+
+	// ExternalOptionsReferenceType A string indicating the reference type for external options.
+	ExternalOptionsReferenceType string `json:"externalOptionsReferenceType"`
+
+	// Favorited A boolean indicating if the property is marked as a favorite.
+	Favorited bool `json:"favorited"`
+
+	// FavoritedOrder An integer specifying the order of the property among favorites.
+	FavoritedOrder int32 `json:"favoritedOrder"`
+
+	// FieldType A string indicating the field type of the property, such as 'booleancheckbox', 'calculation_equation', 'checkbox', 'date', 'file', 'html', 'number', 'phonenumber', 'radio', 'select', 'text', or 'textarea'.
+	FieldType string `json:"fieldType"`
+
+	// FormField A boolean indicating whether the property is used as a form field.
+	FormField bool `json:"formField"`
+
+	// FromUserId A string representing the user ID from which the property originates.
+	FromUserId int64 `json:"fromUserId"`
+
+	// GroupName A string representing the name of the group to which the property belongs.
+	GroupName string `json:"groupName"`
+
+	// HasUniqueValue A boolean indicating if the property has a unique value.
+	HasUniqueValue bool `json:"hasUniqueValue"`
+
+	// Hidden A boolean indicating whether the property is hidden.
+	//
+	// Example: false
+	Hidden bool `json:"hidden"`
+
+	// HubspotDefined A boolean indicating if the property is defined by HubSpot.
+	HubspotDefined bool `json:"hubspotDefined"`
+
+	// IsCustomizedDefault A boolean indicating if the property is a customized default.
+	IsCustomizedDefault bool `json:"isCustomizedDefault"`
+
+	// IsMultiValued A boolean indicating if the property can have multiple values.
+	IsMultiValued bool `json:"isMultiValued"`
+
+	// IsPartial A boolean indicating if the property is partial.
+	IsPartial bool `json:"isPartial"`
+
+	// Label A string representing the label of the property, used for display purposes.
+	Label string `json:"label"`
+
+	// MutableDefinitionNotDeletable A boolean indicating if the property definition is mutable but not deletable.
+	MutableDefinitionNotDeletable bool `json:"mutableDefinitionNotDeletable"`
+
+	// Name A string representing the name of the property.
+	Name string `json:"name"`
+
+	// NumberDisplayHint A string providing a hint for displaying numbers, with options like 'unformatted', 'formatted', 'currency', 'percentage', 'duration', or 'probability'.
+	NumberDisplayHint CMSMediaBridgePropertyNumberDisplayHint `json:"numberDisplayHint"`
+
+	// OptionSortStrategy A string indicating the strategy used to sort options.
+	OptionSortStrategy CMSMediaBridgePropertyOptionSortStrategy `json:"optionSortStrategy"`
+
+	// Options An array of options available for the property, applicable if the property type supports options.
+	Options []AutomationActionsV4Option `json:"options"`
+
+	// OptionsAreMutable A boolean indicating if the options for the property are mutable.
+	OptionsAreMutable bool `json:"optionsAreMutable"`
+
+	// OwningAppId An integer representing the ID of the app that owns the property.
+	OwningAppId int64 `json:"owningAppId"`
+
+	// PortalId An integer representing the unique identifier for the portal.
+	PortalId int64 `json:"portalId"`
+
+	// ReadOnlyDefinition A boolean indicating if the property's definition is read-only.
+	ReadOnlyDefinition bool `json:"readOnlyDefinition"`
+
+	// ReadOnlyValue A boolean indicating if the property's value is read-only.
+	ReadOnlyValue bool `json:"readOnlyValue"`
+
+	// ReferencedObjectType A string indicating the type of object referenced by the property.
+	ReferencedObjectType CMSMediaBridgePropertyReferencedObjectType `json:"referencedObjectType"`
+
+	// SearchTextAnalysisMode A string indicating the mode of text analysis for search purposes.
+	SearchTextAnalysisMode CMSMediaBridgePropertySearchTextAnalysisMode `json:"searchTextAnalysisMode"`
+
+	// SearchableInGlobalSearch A boolean indicating if the property is searchable in global search.
+	SearchableInGlobalSearch bool `json:"searchableInGlobalSearch"`
+
+	// SensitiveDataCategories An array of strings representing the categories of sensitive data associated with this property.
+	SensitiveDataCategories []string `json:"sensitiveDataCategories"`
+
+	// ShowCurrencySymbol A boolean indicating if the currency symbol should be displayed for the property.
+	ShowCurrencySymbol bool `json:"showCurrencySymbol"`
+
+	// TextDisplayHint A string providing a hint for displaying text, with options like 'unformatted_single_line', 'multi_line', 'email', 'phone_number', 'domain_name', 'ip_address', 'physical_address', or 'postal_code'.
+	TextDisplayHint CMSMediaBridgePropertyTextDisplayHint `json:"textDisplayHint"`
+
+	// Type A string indicating the type of the property, such as 'bool', 'date', 'datetime', 'enumeration', 'number', 'phone_number', or 'string'.
+	Type CMSMediaBridgePropertyType `json:"type"`
+
+	// UpdatedAt A string representing the date and time when the property was last updated, in ISO 8601 format.
+	UpdatedAt int64 `json:"updatedAt"`
+}
+
+// CMSMediaBridgePropertyDataSensitivity A string indicating the sensitivity level of the data.
+type CMSMediaBridgePropertyDataSensitivity string
+
+// CMSMediaBridgePropertyDateDisplayHint A string providing a hint for displaying dates.
+type CMSMediaBridgePropertyDateDisplayHint string
+
+// CMSMediaBridgePropertyDisplayMode A string indicating the display mode of the property.
+type CMSMediaBridgePropertyDisplayMode string
+
+// CMSMediaBridgePropertyNumberDisplayHint A string providing a hint for displaying numbers, with options like 'unformatted', 'formatted', 'currency', 'percentage', 'duration', or 'probability'.
+type CMSMediaBridgePropertyNumberDisplayHint string
+
+// CMSMediaBridgePropertyOptionSortStrategy A string indicating the strategy used to sort options.
+type CMSMediaBridgePropertyOptionSortStrategy string
+
+// CMSMediaBridgePropertyReferencedObjectType A string indicating the type of object referenced by the property.
+type CMSMediaBridgePropertyReferencedObjectType string
+
+// CMSMediaBridgePropertySearchTextAnalysisMode A string indicating the mode of text analysis for search purposes.
+type CMSMediaBridgePropertySearchTextAnalysisMode string
+
+// CMSMediaBridgePropertyTextDisplayHint A string providing a hint for displaying text, with options like 'unformatted_single_line', 'multi_line', 'email', 'phone_number', 'domain_name', 'ip_address', 'physical_address', or 'postal_code'.
+type CMSMediaBridgePropertyTextDisplayHint string
+
+// CMSMediaBridgePropertyType A string indicating the type of the property, such as 'bool', 'date', 'datetime', 'enumeration', 'number', 'phone_number', or 'string'.
+type CMSMediaBridgePropertyType string
+
+// CRMDealSplitsSimplePublicObject A simple public object.
+type CRMDealSplitsSimplePublicObject struct {
+	// Archived A boolean indicating whether this object is archived.
+	Archived bool `json:"archived"`
+
+	// ArchivedAt The date and time when this object was archived, in ISO 8601 format.
+	ArchivedAt *time.Time `json:"archivedAt,omitempty"`
+
+	// CreatedAt The date and time when this object was created, in ISO 8601 format.
+	CreatedAt time.Time `json:"createdAt"`
+
+	// Id The unique identifier for this object, represented as a string.
+	Id string `json:"id"`
+
+	// ObjectWriteTraceId A string identifier used for tracing write operations on this object.
+	ObjectWriteTraceId *string `json:"objectWriteTraceId,omitempty"`
+
+	// Properties A map of property names to their values, where each value is a string.
+	Properties map[string]string `json:"properties"`
+
+	// PropertiesWithHistory A map of property names to arrays of historical values, each containing a value and its associated timestamp.
+	PropertiesWithHistory *map[string][]ValueWithTimestamp `json:"propertiesWithHistory,omitempty"`
+
+	// UpdatedAt The date and time when this object was last updated, in ISO 8601 format.
+	UpdatedAt time.Time `json:"updatedAt"`
+
+	// Url A string representing the URL associated with this object.
+	Url *string `json:"url,omitempty"`
+}
+
+// CalculatedPropertyLimitResponse defines model for CalculatedPropertyLimitResponse.
+type CalculatedPropertyLimitResponse struct {
+	// ByObjectType An array detailing the usage of calculated properties by object type, with each entry providing specific usage information for an object type.
+	ByObjectType []UsageForObjectType `json:"byObjectType"`
+
+	// OverallLimit The maximum number of calculated properties allowed.
+	OverallLimit int64 `json:"overallLimit"`
+
+	// OverallPercentage The percentage of the overall limit that is currently being used for calculated properties.
+	OverallPercentage float64 `json:"overallPercentage"`
+
+	// OverallUsage The total number of calculated properties currently in use.
+	OverallUsage int64 `json:"overallUsage"`
+}
+
+// CalendarDatePropertyOperation defines model for CalendarDatePropertyOperation.
+type CalendarDatePropertyOperation struct {
+	// DefaultValue A string representing the default value for the operation.
+	DefaultValue *string `json:"defaultValue,omitempty"`
+
+	// FiscalYearStart A string indicating the starting month of the fiscal year, with options like 'JANUARY', 'FEBRUARY', 'MARCH', etc.
+	FiscalYearStart *CalendarDatePropertyOperationFiscalYearStart `json:"fiscalYearStart,omitempty"`
+
+	// IncludeObjectsWithNoValueSet A boolean that determines whether objects with no value set should be included in the operation.
+	IncludeObjectsWithNoValueSet bool `json:"includeObjectsWithNoValueSet"`
+
+	// OperationType A string indicating the type of operation being performed.
+	OperationType string `json:"operationType"`
+
+	// Operator A string that specifies the operation to perform, with valid values including 'IN_THIS_TIME_UNIT', 'IN_THIS_TIME_UNIT_SO_FAR', 'IN_NEXT_TIME_UNIT', 'IN_LAST_TIME_UNIT', and 'IN_LAST_TIME_UNIT_SO_FAR'.
+	Operator CalendarDatePropertyOperationOperator `json:"operator"`
+
+	// OperatorName A string representing the name of the operator used in the operation.
+	OperatorName   string          `json:"operatorName"`
+	PropertyAspect *PropertyAspect `json:"propertyAspect,omitempty"`
+
+	// PropertyType A string indicating the type of property, defaulting to 'calendar-date'.
+	PropertyType CalendarDatePropertyOperationPropertyType `json:"propertyType"`
+
+	// RenderSpec A string used to define the rendering specifications for the operation.
+	RenderSpec *string `json:"renderSpec,omitempty"`
+
+	// TimeUnit A string representing the unit of time for the operation, such as 'DAY', 'WEEK', 'MONTH', 'QUARTER', or 'YEAR'.
+	TimeUnit CalendarDatePropertyOperationTimeUnit `json:"timeUnit"`
+
+	// TimeUnitCount An integer specifying the number of time units to consider in the operation.
+	TimeUnitCount int32 `json:"timeUnitCount"`
+
+	// UseFiscalYear A boolean indicating whether the fiscal year should be used in the operation.
+	UseFiscalYear bool `json:"useFiscalYear"`
+}
+
+// CalendarDatePropertyOperationFiscalYearStart A string indicating the starting month of the fiscal year, with options like 'JANUARY', 'FEBRUARY', 'MARCH', etc.
+type CalendarDatePropertyOperationFiscalYearStart string
+
+// CalendarDatePropertyOperationOperator A string that specifies the operation to perform, with valid values including 'IN_THIS_TIME_UNIT', 'IN_THIS_TIME_UNIT_SO_FAR', 'IN_NEXT_TIME_UNIT', 'IN_LAST_TIME_UNIT', and 'IN_LAST_TIME_UNIT_SO_FAR'.
+type CalendarDatePropertyOperationOperator string
+
+// CalendarDatePropertyOperationPropertyType A string indicating the type of property, defaulting to 'calendar-date'.
+type CalendarDatePropertyOperationPropertyType string
+
+// CalendarDatePropertyOperationTimeUnit A string representing the unit of time for the operation, such as 'DAY', 'WEEK', 'MONTH', 'QUARTER', or 'YEAR'.
+type CalendarDatePropertyOperationTimeUnit string
+
+// CallbackCompletionBatchRequest defines model for CallbackCompletionBatchRequest.
+type CallbackCompletionBatchRequest struct {
+	// CallbackId The unique identifier for the callback.
+	CallbackId string `json:"callbackId"`
+
+	// FailureReasonType Specifies the type of failure reason for the callback completion.
+	FailureReasonType *string `json:"failureReasonType,omitempty"`
+
+	// OutputFields Holds the output fields for the callback completion.
+	OutputFields map[string]string `json:"outputFields"`
+
+	// TypedOutputs Contains the typed outputs for the callback completion.
+	TypedOutputs map[string]interface{} `json:"typedOutputs"`
+}
+
+// CallbackCompletionRequest defines model for CallbackCompletionRequest.
+type CallbackCompletionRequest struct {
+	// FailureReasonType Indicates the reason for the failure of a callback completion.
+	FailureReasonType *string `json:"failureReasonType,omitempty"`
+
+	// OutputFields Contains the output fields associated with the callback, with each field represented as a key-value pair.
+	OutputFields map[string]string `json:"outputFields"`
+
+	// TypedOutputs Holds the typed outputs related to the callback, structured as an object.
+	TypedOutputs map[string]interface{} `json:"typedOutputs"`
+}
+
+// CardActions defines model for CardActions.
+type CardActions struct {
+	// BaseUrls A list of URL prefixes that will be accepted for card action URLs. If your data fetch response includes an action URL that doesn't begin with one of these values, it will result in an error and the card will not be displayed.
+	BaseUrls []string `json:"baseUrls"`
+}
+
+// CardAuditResponse defines model for CardAuditResponse.
+type CardAuditResponse struct {
+	// ActionType The type of action performed, with possible values: CREATE, DELETE, UPDATE.
+	ActionType CardAuditResponseActionType `json:"actionType"`
+
+	// ApplicationId The ID of the application associated with the card.
+	ApplicationId int32 `json:"applicationId"`
+
+	// AuthSource The source of authentication for the action, with possible values: APP, EXTERNAL, INTERNAL.
+	AuthSource CardAuditResponseAuthSource `json:"authSource"`
+
+	// ChangedAt The timestamp indicating when the change occurred.
+	ChangedAt int64 `json:"changedAt"`
+
+	// InitiatingUserId The ID of the user who initiated the action.
+	InitiatingUserId int32 `json:"initiatingUserId"`
+
+	// ObjectTypeId The ID of the card.
+	ObjectTypeId int64 `json:"objectTypeId"`
+}
+
+// CardAuditResponseActionType The type of action performed, with possible values: CREATE, DELETE, UPDATE.
+type CardAuditResponseActionType string
+
+// CardAuditResponseAuthSource The source of authentication for the action, with possible values: APP, EXTERNAL, INTERNAL.
+type CardAuditResponseAuthSource string
+
+// CardCreateRequest defines model for CardCreateRequest.
+type CardCreateRequest struct {
+	Actions CardActions     `json:"actions"`
+	Display CardDisplayBody `json:"display"`
+	Fetch   CardFetchBody   `json:"fetch"`
+
+	// Title The top-level title for this card. Displayed to users in the CRM UI.
+	Title string `json:"title"`
+}
+
+// CardDisplayBody defines model for CardDisplayBody.
+type CardDisplayBody struct {
+	// Properties Card display properties. These will will be rendered as "label : value" pairs in the card UI. See the [example card](#) in the overview docs for more details.
+	Properties []CardDisplayProperty `json:"properties"`
+}
+
+// CardDisplayProperty defines model for CardDisplayProperty.
+type CardDisplayProperty struct {
+	// DataType Type of data represented by this property.
+	DataType CardDisplayPropertyDataType `json:"dataType"`
+
+	// Label The label for this property as you'd like it displayed to users.
+	Label string `json:"label"`
+
+	// Name An internal identifier for this property. This value must be unique TODO.
+	Name string `json:"name"`
+
+	// Options An array of available options that can be displayed. Only used in when `dataType` is `STATUS`.
+	Options []DisplayOption `json:"options"`
+}
+
+// CardDisplayPropertyDataType Type of data represented by this property.
+type CardDisplayPropertyDataType string
+
+// CardFetchBody defines model for CardFetchBody.
+type CardFetchBody struct {
+	// CardType A deprecated field to determine the type of card returned.
+	CardType CardFetchBodyCardType `json:"cardType"`
+
+	// ObjectTypes An array of CRM object types where this card should be displayed. HubSpot will call your data fetch URL whenever a user visits a record page of the types defined here.
+	ObjectTypes []CardObjectTypeBody `json:"objectTypes"`
+
+	// ServerlessFunction A deprecated field to specify serverless functionality with the card
+	ServerlessFunction *string `json:"serverlessFunction,omitempty"`
+
+	// TargetUrl URL to a service endpoints that will respond with card details. HubSpot will call this endpoint each time a user visits a CRM record page where this card should be displayed.
+	TargetUrl string `json:"targetUrl"`
+}
+
+// CardFetchBodyCardType A deprecated field to determine the type of card returned.
+type CardFetchBodyCardType string
+
+// CardFetchBodyPatch defines model for CardFetchBodyPatch.
+type CardFetchBodyPatch struct {
+	// CardType A deprecated field to determine the type of card returned.
+	CardType *CardFetchBodyPatchCardType `json:"cardType,omitempty"`
+
+	// ObjectTypes An array of CRM object types where this card should be displayed. HubSpot will call your target URL whenever a user visits a record page of the types defined here.
+	ObjectTypes []CardObjectTypeBody `json:"objectTypes"`
+
+	// ServerlessFunction A deprecated field to specify serverless functionality with the card
+	ServerlessFunction *string `json:"serverlessFunction,omitempty"`
+
+	// TargetUrl URL to a service endpoint that will respond with details for this card. HubSpot will call this endpoint each time a user visits a CRM record page where this card should be displayed.
+	TargetUrl *string `json:"targetUrl,omitempty"`
+}
+
+// CardFetchBodyPatchCardType A deprecated field to determine the type of card returned.
+type CardFetchBodyPatchCardType string
+
+// CardMigrateViewsRequest defines model for CardMigrateViewsRequest.
+type CardMigrateViewsRequest struct {
+	// AllowDuplicateAppCardIds A boolean flag indicating whether duplicate app card IDs are allowed during the migration process.
+	AllowDuplicateAppCardIds bool `json:"allowDuplicateAppCardIds"`
+
+	// AppCardId The unique identifier for the new app card to which views will be migrated. This is an integer in int64 format.
+	AppCardId int64 `json:"appCardId"`
+
+	// HelpdeskAppCardId The unique identifier for the helpdesk app card, if applicable. This is an integer in int64 format.
+	HelpdeskAppCardId *int64 `json:"helpdeskAppCardId,omitempty"`
+
+	// LegacyCrmCardId The unique identifier for the legacy CRM card. This is an integer in int64 format.
+	LegacyCrmCardId int64  `json:"legacyCrmCardId"`
+	TabAppCardId    *int64 `json:"tabAppCardId,omitempty"`
+}
+
+// CardMigrateViewsResponse defines model for CardMigrateViewsResponse.
+type CardMigrateViewsResponse struct {
+	// EndedAt The timestamp for when the migration ended.
+	EndedAt *int64 `json:"endedAt,omitempty"`
+
+	// Message A human readable message describing the progress of the migration.
+	Message string `json:"message"`
+
+	// RemainingPortalCount The number of portals that remain to be swapped from the Legacy CRM Card to the App Card
+	RemainingPortalCount *int64 `json:"remainingPortalCount,omitempty"`
+
+	// StartedAt The timestamp for when the migration started.
+	StartedAt *int64 `json:"startedAt,omitempty"`
+
+	// TotalPortalCount The total number of portals that have access to the Legacy CRM Card
+	TotalPortalCount *int64 `json:"totalPortalCount,omitempty"`
+}
+
+// CardObjectTypeBody defines model for CardObjectTypeBody.
+type CardObjectTypeBody struct {
+	// Name A CRM object type where this card should be displayed.
+	Name CardObjectTypeBodyName `json:"name"`
+
+	// PropertiesToSend An array of properties that should be sent to this card's target URL when the data fetch request is made. Must be valid properties for the corresponding CRM object type.
+	PropertiesToSend []string `json:"propertiesToSend"`
+}
+
+// CardObjectTypeBodyName A CRM object type where this card should be displayed.
+type CardObjectTypeBodyName string
+
+// CardPatchRequest defines model for CardPatchRequest.
+type CardPatchRequest struct {
+	Actions *CardActions        `json:"actions,omitempty"`
+	Display *CardDisplayBody    `json:"display,omitempty"`
+	Fetch   *CardFetchBodyPatch `json:"fetch,omitempty"`
+
+	// Title The top-level title for this card. Displayed to users in the CRM UI.
+	Title *string `json:"title,omitempty"`
+}
+
+// CaseChangeTestExtensionData defines model for CaseChangeTestExtensionData.
+type CaseChangeTestExtensionData struct {
+	// Mood A property representing the mood, typically used for testing case changes in text. The data type and constraints are not specified in the provided schema.
+	Mood CaseChangeTestExtensionDataMood `json:"mood"`
+}
+
+// CaseChangeTestExtensionDataMood A property representing the mood, typically used for testing case changes in text. The data type and constraints are not specified in the provided schema.
+type CaseChangeTestExtensionDataMood string
+
+// CentralExchangeRatesInformation defines model for CentralExchangeRatesInformation.
+type CentralExchangeRatesInformation struct {
+	// CentralExchangeRatesEnabled Indicates if central exchange rates is enabled for the portal or not.
+	CentralExchangeRatesEnabled bool `json:"centralExchangeRatesEnabled"`
+}
+
+// ChannelConnectionSettingsPatchRequest defines model for ChannelConnectionSettingsPatchRequest.
+type ChannelConnectionSettingsPatchRequest struct {
+	// IsReady Indicates whether the channel connection settings are ready.
+	IsReady *bool `json:"isReady,omitempty"`
+
+	// Url The URL for the channel connection settings.
+	Url *string `json:"url,omitempty"`
+}
+
+// ChannelConnectionSettingsRequest defines model for ChannelConnectionSettingsRequest.
+type ChannelConnectionSettingsRequest struct {
+	// IsReady Indicates whether the channel connection settings are ready.
+	IsReady bool `json:"isReady"`
+
+	// Url The URL associated with the channel connection settings.
+	Url string `json:"url"`
+}
+
+// ChannelConnectionSettingsResponse defines model for ChannelConnectionSettingsResponse.
+type ChannelConnectionSettingsResponse struct {
+	// CreatedAt The date and time when the channel connection settings were created.
+	CreatedAt time.Time `json:"createdAt"`
+
+	// IsReady Indicates whether the channel connection settings are ready for use.
+	IsReady bool `json:"isReady"`
+
+	// UpdatedAt The date and time when the channel connection settings were last updated.
+	UpdatedAt time.Time `json:"updatedAt"`
+
+	// Url The URL associated with the channel connection settings.
+	Url string `json:"url"`
+}
+
+// ChannelIntegrationMessageEgg defines model for ChannelIntegrationMessageEgg.
+type ChannelIntegrationMessageEgg struct {
+	// AssociateWithContactId The ID of the contact with which this message should be associated.
+	AssociateWithContactId *int64 `json:"associateWithContactId,omitempty"`
+
+	// Attachments An array of attachments included with the message, which can be files, locations, contacts, or other supported types.
+	Attachments []ChannelIntegrationMessageEgg_Attachments_Item `json:"attachments"`
+
+	// ChannelAccountId The ID of the channel account through which the message is sent.
+	ChannelAccountId string `json:"channelAccountId"`
+
+	// InReplyToId The ID of the message this message is replying to.
+	InReplyToId *string `json:"inReplyToId,omitempty"`
+
+	// IntegrationIdempotencyId A unique identifier to ensure idempotency of the message within the integration.
+	IntegrationIdempotencyId *string `json:"integrationIdempotencyId,omitempty"`
+
+	// IntegrationThreadId A unique identifier for the thread within the integration.
+	IntegrationThreadId *string `json:"integrationThreadId,omitempty"`
+
+	// MessageDirection The direction of the message, indicating whether it is 'INCOMING' or 'OUTGOING'.
+	MessageDirection    ChannelIntegrationMessageEggMessageDirection `json:"messageDirection"`
+	PreResolvedContacts *PreResolvedContacts                         `json:"preResolvedContacts,omitempty"`
+
+	// Recipients An array of participants representing the recipients of the message.
+	Recipients []ChannelIntegrationParticipant `json:"recipients"`
+
+	// RichText The rich text content of the message, allowing for formatting.
+	RichText *string `json:"richText,omitempty"`
+
+	// Senders An array of participants representing the senders of the message.
+	Senders []ChannelIntegrationParticipant `json:"senders"`
+
+	// Text The plain text content of the message.
+	Text string `json:"text"`
+
+	// Timestamp The date and time when the message was created, in ISO 8601 format.
+	Timestamp time.Time `json:"timestamp"`
+}
+
+// ChannelIntegrationMessageEgg_Attachments_Item defines model for ChannelIntegrationMessageEgg.attachments.Item.
+type ChannelIntegrationMessageEgg_Attachments_Item struct {
+	union json.RawMessage
+}
+
+// ChannelIntegrationMessageEggMessageDirection The direction of the message, indicating whether it is 'INCOMING' or 'OUTGOING'.
+type ChannelIntegrationMessageEggMessageDirection string
+
+// ChannelIntegrationParticipant defines model for ChannelIntegrationParticipant.
+type ChannelIntegrationParticipant struct {
+	DeliveryIdentifier PublicDeliveryIdentifier `json:"deliveryIdentifier"`
+
+	// Name The name of the participant. It is a string that can be used to identify the participant within the channel.
+	Name *string `json:"name,omitempty"`
+
+	// SenderActorId A string representing the unique identifier of the sender actor. This is used to distinguish the sender within the channel integration.
+	SenderActorId *string `json:"senderActorId,omitempty"`
+}
+
+// ClientCredentialsTokenResponse defines model for ClientCredentialsTokenResponse.
+type ClientCredentialsTokenResponse struct {
+	// AccessToken A string representing the access token issued.
+	AccessToken string `json:"access_token"`
+
+	// ExpiresIn An integer indicating the number of seconds until the token expires, in int64 format.
+	ExpiresIn int64 `json:"expires_in"`
+
+	// HubId An integer representing the HubSpot account ID associated with the token.
+	HubId *int32 `json:"hub_id,omitempty"`
+
+	// IdToken A string representing the ID token, if applicable.
+	IdToken *string `json:"id_token,omitempty"`
+
+	// Scopes An array of strings representing the scopes granted by the token.
+	Scopes *[]string `json:"scopes,omitempty"`
+
+	// TokenType A string indicating the type of the token.
+	TokenType string `json:"token_type"`
+
+	// TokenUse Indicates the usage of the token, which is 'client_credentials' by default.
+	TokenUse ClientCredentialsTokenResponseTokenUse `json:"token_use"`
+
+	// UserId An integer representing the user ID associated with the token.
+	UserId *int32 `json:"user_id,omitempty"`
+}
+
+// ClientCredentialsTokenResponseTokenUse Indicates the usage of the token, which is 'client_credentials' by default.
+type ClientCredentialsTokenResponseTokenUse string
+
+// CmsAuditLoggingExportFilters defines model for CmsAuditLoggingExportFilters.
+type CmsAuditLoggingExportFilters struct {
+	// ObjectType An array of strings representing the types of objects to filter by during the export. Valid object types include 'BLOG', 'BLOG_POST', 'LANDING_PAGE', 'WEBSITE_PAGE', 'TEMPLATE', 'MODULE', 'GLOBAL_MODULE', 'SERVERLESS_FUNCTION', 'DOMAIN', 'URL_MAPPING', 'EMAIL', 'CONTENT_SETTINGS', 'HUBDB_TABLE', 'KNOWLEDGE_BASE_ARTICLE', 'KNOWLEDGE_BASE', 'THEME', 'CSS', 'JS', 'CTA', 'FILE', 'WEB_INTERACTIVE', 'PODCAST', 'CASE_STUDY', and 'QUOTE'.
+	ObjectType []string `json:"objectType"`
+}
+
+// CmsAuditLoggingExportSettings defines model for CmsAuditLoggingExportSettings.
+type CmsAuditLoggingExportSettings struct {
+	// Email A string specifying the email address to which notifications about the export should be sent.
+	Email   string                        `json:"email"`
+	Filters *CmsAuditLoggingExportFilters `json:"filters,omitempty"`
+
+	// Format A string specifying the format of the export file. Valid values include 'XLS', 'XLSX', and 'CSV'.
+	Format CmsAuditLoggingExportSettingsFormat `json:"format"`
+
+	// Partition An integer used for partitioning the export data, if applicable.
+	Partition *int32 `json:"partition,omitempty"`
+
+	// PortalId An integer representing the ID of the portal from which the audit logs are being exported.
+	PortalId int32 `json:"portalId"`
+
+	// RecipientUserIds An array of integers specifying the IDs of users who should receive the exported file.
+	RecipientUserIds []int32 `json:"recipientUserIds"`
+
+	// ShouldMarkExportFileAsSensitive A boolean indicating whether the export file should be marked as sensitive.
+	ShouldMarkExportFileAsSensitive bool `json:"shouldMarkExportFileAsSensitive"`
+
+	// Type A string indicating the type of export being performed.
+	Type string `json:"type"`
+
+	// UserId An integer representing the ID of the user initiating the export.
+	UserId *int32 `json:"userId,omitempty"`
+
+	// UserTimeZone A string representing the time zone of the user initiating the export.
+	UserTimeZone *string `json:"userTimeZone,omitempty"`
+}
+
+// CmsAuditLoggingExportSettingsFormat A string specifying the format of the export file. Valid values include 'XLS', 'XLSX', and 'CSV'.
+type CmsAuditLoggingExportSettingsFormat string
+
+// CollectionResponseApiUsageNoPaging defines model for CollectionResponseApiUsageNoPaging.
+type CollectionResponseApiUsageNoPaging struct {
+	Results []ApiUsage `json:"results"`
+}
+
+// CollectionResponseAssociatedId Represents a collection of associated IDs returned by an API request, including pagination details for navigating through the results.
+type CollectionResponseAssociatedId struct {
+	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
+	Paging *Paging `json:"paging,omitempty"`
+
+	// Results A list of associated IDs retrieved from the API request.
+	Results []AssociatedId `json:"results"`
+}
+
+// CollectionResponseAssociationLabelLimitResponseNoPaging defines model for CollectionResponseAssociationLabelLimitResponseNoPaging.
+type CollectionResponseAssociationLabelLimitResponseNoPaging struct {
+	// Results An array of AssociationLabelLimitResponse objects, each detailing the limits and usage of association labels between object types.
+	Results []AssociationLabelLimitResponse `json:"results"`
+}
+
+// CollectionResponseAssociationSpecWithLabelNoPaging defines model for CollectionResponseAssociationSpecWithLabelNoPaging.
+type CollectionResponseAssociationSpecWithLabelNoPaging struct {
+	// Results An array of association specifications with labels, where each item defines a specific association type between two object types. Each specification includes details such as category, typeId, and labels.
+	Results []AssociationSpecWithLabel `json:"results"`
+}
+
+// CollectionResponseContactReferenceForwardPaging defines model for CollectionResponseContactReferenceForwardPaging.
+type CollectionResponseContactReferenceForwardPaging struct {
+	// Paging Paging information for forward-only pagination. Contains the next page reference when more results are available; omitted or empty on the last page.
+	Paging *ForwardPaging `json:"paging,omitempty"`
+
+	// Results An array of contact references, each containing an identifier for a contact.
+	Results []ContactReference `json:"results"`
+}
+
+// CollectionResponseCurrencyCodeInfoNoPaging defines model for CollectionResponseCurrencyCodeInfoNoPaging.
+type CollectionResponseCurrencyCodeInfoNoPaging struct {
+	// Results An array of currency code information objects, each containing details about a specific currency code and its name.
+	Results []CurrencyCodeInfo `json:"results"`
+}
+
+// CollectionResponseExchangeRateForwardPaging defines model for CollectionResponseExchangeRateForwardPaging.
+type CollectionResponseExchangeRateForwardPaging struct {
+	// Paging Paging information for forward-only pagination. Contains the next page reference when more results are available; omitted or empty on the last page.
+	Paging *ForwardPaging `json:"paging,omitempty"`
+
+	// Results An array of exchange rate objects, each representing a specific currency conversion rate.
+	Results []ExchangeRate `json:"results"`
+}
+
+// CollectionResponseExchangeRateNoPaging defines model for CollectionResponseExchangeRateNoPaging.
+type CollectionResponseExchangeRateNoPaging struct {
+	// Results An array of exchange rate objects, each representing the conversion rate details between two currencies.
+	Results []ExchangeRate `json:"results"`
+}
+
+// CollectionResponseExternalUnifiedEvent defines model for CollectionResponseExternalUnifiedEvent.
+type CollectionResponseExternalUnifiedEvent struct {
+	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
+	Paging *Paging `json:"paging,omitempty"`
+
+	// Results An array of ExternalUnifiedEvent objects, each representing an individual event with its associated details.
+	Results []ExternalUnifiedEvent `json:"results"`
+}
+
+// CollectionResponseFile defines model for CollectionResponseFile.
+type CollectionResponseFile struct {
+	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
+	Paging  *Paging `json:"paging,omitempty"`
+	Results []File  `json:"results"`
+}
+
+// CollectionResponseFolder defines model for CollectionResponseFolder.
+type CollectionResponseFolder struct {
+	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
+	Paging  *Paging  `json:"paging,omitempty"`
+	Results []Folder `json:"results"`
+}
+
+// CollectionResponseHydratedCriticalActionForwardPaging defines model for CollectionResponseHydratedCriticalActionForwardPaging.
+type CollectionResponseHydratedCriticalActionForwardPaging struct {
+	// Paging Paging information for forward-only pagination. Contains the next page reference when more results are available; omitted or empty on the last page.
+	Paging *ForwardPaging `json:"paging,omitempty"`
+
+	// Results An array of hydrated critical actions, each containing detailed information about a specific critical action.
+	Results []HydratedCriticalAction `json:"results"`
+}
+
+// CollectionResponseIpRangeNoPaging defines model for CollectionResponseIpRangeNoPaging.
+type CollectionResponseIpRangeNoPaging struct {
+	// Results An array of IpRange objects, each representing a specific IP range with associated details such as CIDR, direction, service, and description.
+	Results []IpRange `json:"results"`
+}
+
+// CollectionResponseMarketingEventPublicReadResponseV2ForwardPaging defines model for CollectionResponseMarketingEventPublicReadResponseV2ForwardPaging.
+type CollectionResponseMarketingEventPublicReadResponseV2ForwardPaging struct {
+	// Paging Paging information for forward-only pagination. Contains the next page reference when more results are available; omitted or empty on the last page.
+	Paging *ForwardPaging `json:"paging,omitempty"`
+
+	// Results An array of marketing event public read responses, each containing details about a specific marketing event.
+	Results []MarketingEventPublicReadResponseV2 `json:"results"`
+}
+
+// CollectionResponseMultiAssociatedObjectWithLabelForwardPaging Represents a paginated collection of objects that are associated with multiple labels, including the results and pagination details. This component is used when retrieving associated objects with specific labels in a forward-paging manner.
+type CollectionResponseMultiAssociatedObjectWithLabelForwardPaging struct {
+	// Paging Paging information for forward-only pagination. Contains the next page reference when more results are available; omitted or empty on the last page.
+	Paging *ForwardPaging `json:"paging,omitempty"`
+
+	// Results The list of objects that are associated with multiple labels, returned as part of the collection.
+	Results []MultiAssociatedObjectWithLabel `json:"results"`
+}
+
+// CollectionResponseObjectSchemaNoPaging defines model for CollectionResponseObjectSchemaNoPaging.
+type CollectionResponseObjectSchemaNoPaging struct {
+	// Results An array of object schemas included in the response. Each item in the array is an object schema.
+	Results []ObjectSchema `json:"results"`
+}
+
+// CollectionResponseObjectTypeNearOrAtAssociationLimitNoPaging defines model for CollectionResponseObjectTypeNearOrAtAssociationLimitNoPaging.
+type CollectionResponseObjectTypeNearOrAtAssociationLimitNoPaging struct {
+	// Results An array containing details of object types that are near or at their association limits. Each item in the array is an ObjectTypeNearOrAtAssociationLimit object.
+	Results []ObjectTypeNearOrAtAssociationLimit `json:"results"`
+}
+
+// CollectionResponsePipelineNoPaging defines model for CollectionResponsePipelineNoPaging.
+type CollectionResponsePipelineNoPaging struct {
+	Results []Pipeline `json:"results"`
+}
+
+// CollectionResponsePipelineStageNoPaging defines model for CollectionResponsePipelineStageNoPaging.
+type CollectionResponsePipelineStageNoPaging struct {
+	Results []PipelineStage `json:"results"`
+}
+
+// CollectionResponsePropertyGroupNoPaging defines model for CollectionResponsePropertyGroupNoPaging.
+type CollectionResponsePropertyGroupNoPaging struct {
+	// Results An array of PropertyGroup objects. Each PropertyGroup contains details such as name, label, display order, and archived status.
+	Results []PropertyGroup `json:"results"`
+}
+
+// CollectionResponsePropertyNoPaging defines model for CollectionResponsePropertyNoPaging.
+type CollectionResponsePropertyNoPaging struct {
+	// Results An array of Property objects, each representing a property associated with the specified object type.
+	Results []Property1 `json:"results"`
+}
+
+// CollectionResponsePublicActionDefinitionForwardPaging defines model for CollectionResponsePublicActionDefinitionForwardPaging.
+type CollectionResponsePublicActionDefinitionForwardPaging struct {
+	// Paging Paging information for forward-only pagination. Contains the next page reference when more results are available; omitted or empty on the last page.
+	Paging *ForwardPaging `json:"paging,omitempty"`
+
+	// Results An array of public action definitions, each represented by a PublicActionDefinition object.
+	Results []PublicActionDefinition `json:"results"`
+}
+
+// CollectionResponsePublicActionFunctionIdentifierNoPaging defines model for CollectionResponsePublicActionFunctionIdentifierNoPaging.
+type CollectionResponsePublicActionFunctionIdentifierNoPaging struct {
+	// Results An array of PublicActionFunctionIdentifier objects, each representing a specific function associated with an automation action definition.
+	Results []PublicActionFunctionIdentifier `json:"results"`
+}
+
+// CollectionResponsePublicActionRevisionForwardPaging defines model for CollectionResponsePublicActionRevisionForwardPaging.
+type CollectionResponsePublicActionRevisionForwardPaging struct {
+	// Paging Paging information for forward-only pagination. Contains the next page reference when more results are available; omitted or empty on the last page.
+	Paging *ForwardPaging `json:"paging,omitempty"`
+
+	// Results An array of PublicActionRevision objects, each representing a specific revision of a public action definition.
+	Results []PublicActionRevision `json:"results"`
+}
+
+// CollectionResponsePublicApiUserActionEventForwardPaging defines model for CollectionResponsePublicApiUserActionEventForwardPaging.
+type CollectionResponsePublicApiUserActionEventForwardPaging struct {
+	// Paging Paging information for forward-only pagination. Contains the next page reference when more results are available; omitted or empty on the last page.
+	Paging *ForwardPaging `json:"paging,omitempty"`
+
+	// Results An array of user action events, each represented by a PublicApiUserActionEvent object.
+	Results []PublicApiUserActionEvent `json:"results"`
+}
+
+// CollectionResponsePublicAssociationDefinitionUserConfigurationNoPaging defines model for CollectionResponsePublicAssociationDefinitionUserConfigurationNoPaging.
+type CollectionResponsePublicAssociationDefinitionUserConfigurationNoPaging struct {
+	// Results An array of PublicAssociationDefinitionUserConfiguration objects, each representing a user configuration for an association definition.
+	Results []PublicAssociationDefinitionUserConfiguration `json:"results"`
+}
+
+// CollectionResponsePublicAuditInfoNoPaging defines model for CollectionResponsePublicAuditInfoNoPaging.
+type CollectionResponsePublicAuditInfoNoPaging struct {
+	Results []PublicAuditInfo `json:"results"`
+}
+
+// CollectionResponsePublicAuditLog defines model for CollectionResponsePublicAuditLog.
+type CollectionResponsePublicAuditLog struct {
+	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
+	Paging *Paging `json:"paging,omitempty"`
+
+	// Results An array of PublicAuditLog objects, each representing a single audit log entry.
+	Results []PublicAuditLog `json:"results"`
+}
+
+// CollectionResponsePublicBusinessUnitNoPaging defines model for CollectionResponsePublicBusinessUnitNoPaging.
+type CollectionResponsePublicBusinessUnitNoPaging struct {
+	// Results The collection of Business Units
+	Results []PublicBusinessUnit `json:"results"`
+}
+
+// CollectionResponsePublicCampaignAsset defines model for CollectionResponsePublicCampaignAsset.
+type CollectionResponsePublicCampaignAsset struct {
+	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
+	Paging *Paging `json:"paging,omitempty"`
+
+	// Results An array of public campaign assets. Each item in the array is an object representing a campaign asset.
+	Results []PublicCampaignAsset `json:"results"`
+}
+
+// CollectionResponsePublicCampaignAssetForwardPaging defines model for CollectionResponsePublicCampaignAssetForwardPaging.
+type CollectionResponsePublicCampaignAssetForwardPaging struct {
+	// Paging Paging information for forward-only pagination. Contains the next page reference when more results are available; omitted or empty on the last page.
+	Paging *ForwardPaging `json:"paging,omitempty"`
+
+	// Results An array of public campaign assets. Each item in the array is a reference to a PublicCampaignAsset object.
+	Results []PublicCampaignAsset `json:"results"`
+}
+
+// CollectionResponsePublicImportErrorForwardPaging defines model for CollectionResponsePublicImportErrorForwardPaging.
+type CollectionResponsePublicImportErrorForwardPaging struct {
+	// Paging Paging information for forward-only pagination. Contains the next page reference when more results are available; omitted or empty on the last page.
+	Paging *ForwardPaging `json:"paging,omitempty"`
+
+	// Results An array of public import errors, each represented by a PublicImportError object.
+	Results []PublicImportError `json:"results"`
+}
+
+// CollectionResponsePublicImportResponseForwardPaging defines model for CollectionResponsePublicImportResponseForwardPaging.
+type CollectionResponsePublicImportResponseForwardPaging struct {
+	// Paging Paging information for forward-only pagination. Contains the next page reference when more results are available; omitted or empty on the last page.
+	Paging *ForwardPaging `json:"paging,omitempty"`
+
+	// Results An array of PublicImportResponse objects, each representing an individual import response.
+	Results []PublicImportResponse `json:"results"`
+}
+
+// CollectionResponsePublicLoginAuditForwardPaging defines model for CollectionResponsePublicLoginAuditForwardPaging.
+type CollectionResponsePublicLoginAuditForwardPaging struct {
+	// Paging Paging information for forward-only pagination. Contains the next page reference when more results are available; omitted or empty on the last page.
+	Paging *ForwardPaging `json:"paging,omitempty"`
+
+	// Results An array of PublicLoginAudit objects, each representing a single login audit event.
+	Results []PublicLoginAudit `json:"results"`
+}
+
+// CollectionResponsePublicOwnerForwardPaging defines model for CollectionResponsePublicOwnerForwardPaging.
+type CollectionResponsePublicOwnerForwardPaging struct {
+	// Paging Paging information for forward-only pagination. Contains the next page reference when more results are available; omitted or empty on the last page.
+	Paging *ForwardPaging `json:"paging,omitempty"`
+
+	// Results An array of PublicOwner objects, each representing an individual owner with their specific details.
+	Results []PublicOwner `json:"results"`
+}
+
+// CollectionResponsePublicPermissionSetNoPaging defines model for CollectionResponsePublicPermissionSetNoPaging.
+type CollectionResponsePublicPermissionSetNoPaging struct {
+	Results []PublicPermissionSet `json:"results"`
+}
+
+// CollectionResponsePublicPropertyValidationRuleMapNoPaging defines model for CollectionResponsePublicPropertyValidationRuleMapNoPaging.
+type CollectionResponsePublicPropertyValidationRuleMapNoPaging struct {
+	// Results Collection of properties with their validation rules. Each item maps a property name to its configured validation rules for the specified object type.
+	Results []PublicPropertyValidationRuleMap `json:"results"`
+}
+
+// CollectionResponsePublicPropertyValidationRuleNoPaging defines model for CollectionResponsePublicPropertyValidationRuleNoPaging.
+type CollectionResponsePublicPropertyValidationRuleNoPaging struct {
+	// Results Collection of validation rules configured for the specified property. Each rule defines a constraint that property values must satisfy (e.g., format requirements, length limits, allowed values).
+	Results []PublicPropertyValidationRule `json:"results"`
+}
+
+// CollectionResponsePublicTaxRateGroupForwardPaging defines model for CollectionResponsePublicTaxRateGroupForwardPaging.
+type CollectionResponsePublicTaxRateGroupForwardPaging struct {
+	// Paging Paging information for forward-only pagination. Contains the next page reference when more results are available; omitted or empty on the last page.
+	Paging *ForwardPaging `json:"paging,omitempty"`
+
+	// Results An array of PublicTaxRateGroup objects, each representing a tax rate group with its properties.
+	Results []PublicTaxRateGroup `json:"results"`
+}
+
+// CollectionResponsePublicTeamNoPaging defines model for CollectionResponsePublicTeamNoPaging.
+type CollectionResponsePublicTeamNoPaging struct {
+	Results []UserProvisioningPublicTeam `json:"results"`
+}
+
+// CollectionResponsePublicUserForwardPaging defines model for CollectionResponsePublicUserForwardPaging.
+type CollectionResponsePublicUserForwardPaging struct {
+	// Paging Paging information for forward-only pagination. Contains the next page reference when more results are available; omitted or empty on the last page.
+	Paging  *ForwardPaging `json:"paging,omitempty"`
+	Results []PublicUser   `json:"results"`
+}
+
+// CollectionResponseSearchPublicResponseWrapperNoPaging defines model for CollectionResponseSearchPublicResponseWrapperNoPaging.
+type CollectionResponseSearchPublicResponseWrapperNoPaging struct {
+	// Results An array of search result objects, each represented by a SearchPublicResponseWrapper. This property contains the search results returned by the API.
+	Results []SearchPublicResponseWrapper `json:"results"`
+}
+
+// CollectionResponseSimplePublicObjectWithAssociationsForwardPaging Represents a paginated collection response that includes simple public objects with their associations. This component is used to handle the results and pagination details when retrieving a list of objects from the API.
+type CollectionResponseSimplePublicObjectWithAssociationsForwardPaging struct {
+	// Paging Paging information for forward-only pagination. Contains the next page reference when more results are available; omitted or empty on the last page.
+	Paging *ForwardPaging `json:"paging,omitempty"`
+
+	// Results An array of simple public objects that are included in the current page of the response. Each object may include its associated data.
+	Results []SimplePublicObjectWithAssociations `json:"results"`
+}
+
+// CollectionResponseSmtpApiTokenViewForwardPaging defines model for CollectionResponseSmtpApiTokenViewForwardPaging.
+type CollectionResponseSmtpApiTokenViewForwardPaging struct {
+	// Paging Paging information for forward-only pagination. Contains the next page reference when more results are available; omitted or empty on the last page.
+	Paging *ForwardPaging `json:"paging,omitempty"`
+
+	// Results An array of SMTP API token objects, each representing a token with its associated details.
+	Results []SmtpApiTokenView `json:"results"`
+}
+
+// CollectionResponseSubscriptionResponseMarch2027NoPaging defines model for CollectionResponseSubscriptionResponseMarch2027NoPaging.
+type CollectionResponseSubscriptionResponseMarch2027NoPaging struct {
+	Results []SubscriptionResponseMarch2027 `json:"results"`
+}
+
+// CollectionResponseWithTotalBlog defines model for CollectionResponseWithTotalBlog.
+type CollectionResponseWithTotalBlog struct {
+	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
+	Paging *Paging `json:"paging,omitempty"`
+
+	// Results An array of blog objects, each represented by the Blog schema.
+	Results []Blog `json:"results"`
+
+	// Total The total number of blog objects in the collection. It is an integer value.
+	Total int32 `json:"total"`
+}
+
+// CollectionResponseWithTotalBlogAuthorForwardPaging defines model for CollectionResponseWithTotalBlogAuthorForwardPaging.
+type CollectionResponseWithTotalBlogAuthorForwardPaging struct {
+	// Paging Paging information for forward-only pagination. Contains the next page reference when more results are available; omitted or empty on the last page.
+	Paging *ForwardPaging `json:"paging,omitempty"`
+
+	// Results Collection of blog authors.
+	Results []BlogAuthor `json:"results"`
+
+	// Total Total number of blog authors.
+	Total int32 `json:"total"`
+}
+
+// CollectionResponseWithTotalBlogPostForwardPaging defines model for CollectionResponseWithTotalBlogPostForwardPaging.
+type CollectionResponseWithTotalBlogPostForwardPaging struct {
+	// Paging Paging information for forward-only pagination. Contains the next page reference when more results are available; omitted or empty on the last page.
+	Paging *ForwardPaging `json:"paging,omitempty"`
+
+	// Results Collection of blog posts.
+	Results []BlogPost `json:"results"`
+
+	// Total Total number of blog posts.
+	Total int32 `json:"total"`
+}
+
+// CollectionResponseWithTotalBlogPostVersion defines model for CollectionResponseWithTotalBlogPostVersion.
+type CollectionResponseWithTotalBlogPostVersion struct {
+	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
+	Paging *Paging `json:"paging,omitempty"`
+
+	// Results An array containing the individual blog post versions. Each item in the array represents a specific version of a blog post.
+	Results []VersionBlogPost `json:"results"`
+
+	// Total The total number of blog post versions available. This is an integer value.
+	Total int32 `json:"total"`
+}
+
+// CollectionResponseWithTotalBlogVersion defines model for CollectionResponseWithTotalBlogVersion.
+type CollectionResponseWithTotalBlogVersion struct {
+	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
+	Paging *Paging `json:"paging,omitempty"`
+
+	// Results An array of VersionBlog objects, each representing a specific version of a blog.
+	Results []VersionBlog `json:"results"`
+
+	// Total An integer representing the total number of blog versions available.
+	Total int32 `json:"total"`
+}
+
+// CollectionResponseWithTotalContentFolderForwardPaging defines model for CollectionResponseWithTotalContentFolderForwardPaging.
+type CollectionResponseWithTotalContentFolderForwardPaging struct {
+	// Paging Paging information for forward-only pagination. Contains the next page reference when more results are available; omitted or empty on the last page.
+	Paging *ForwardPaging `json:"paging,omitempty"`
+
+	// Results Collection of content folders.
+	Results []ContentFolder `json:"results"`
+
+	// Total Total number of content folders.
+	Total int32 `json:"total"`
+}
+
+// CollectionResponseWithTotalContentFolderVersion defines model for CollectionResponseWithTotalContentFolderVersion.
+type CollectionResponseWithTotalContentFolderVersion struct {
+	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
+	Paging *Paging `json:"paging,omitempty"`
+
+	// Results An array containing the content folder version objects returned in the current response.
+	Results []ContentFolderVersion `json:"results"`
+
+	// Total An integer representing the total number of content folder versions available.
+	Total int32 `json:"total"`
+}
+
+// CollectionResponseWithTotalDomain defines model for CollectionResponseWithTotalDomain.
+type CollectionResponseWithTotalDomain struct {
+	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
+	Paging *Paging `json:"paging,omitempty"`
+
+	// Results The results of the query.
+	Results []Domain `json:"results"`
+
+	// Total The number of available results.
+	Total int32 `json:"total"`
+}
+
+// CollectionResponseWithTotalEmailStatisticInterval defines model for CollectionResponseWithTotalEmailStatisticInterval.
+type CollectionResponseWithTotalEmailStatisticInterval struct {
+	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
+	Paging *Paging `json:"paging,omitempty"`
+
+	// Results An array of EmailStatisticInterval objects, each representing statistics for a specific time interval.
+	Results []EmailStatisticInterval `json:"results"`
+
+	// Total An integer representing the total number of email statistic intervals available.
+	Total int32 `json:"total"`
+}
+
+// CollectionResponseWithTotalExternalBehavioralEventTypeDefinition defines model for CollectionResponseWithTotalExternalBehavioralEventTypeDefinition.
+type CollectionResponseWithTotalExternalBehavioralEventTypeDefinition struct {
+	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
+	Paging *Paging `json:"paging,omitempty"`
+
+	// Results An array containing the external behavioral event type definitions returned in the current page of results.
+	Results []ExternalBehavioralEventTypeDefinition `json:"results"`
+
+	// Total An integer representing the total number of external behavioral event type definitions available.
+	Total int32 `json:"total"`
+}
+
+// CollectionResponseWithTotalExternalLinkMetadata defines model for CollectionResponseWithTotalExternalLinkMetadata.
+type CollectionResponseWithTotalExternalLinkMetadata struct {
+	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
+	Paging *Paging `json:"paging,omitempty"`
+
+	// Results An array of external link metadata objects. Each object contains details about an external meeting link.
+	Results []ExternalLinkMetadata `json:"results"`
+
+	// Total The total number of external link metadata entries available. This is an integer value.
+	Total int32 `json:"total"`
+}
+
+// CollectionResponseWithTotalHubDbTableV3 defines model for CollectionResponseWithTotalHubDbTableV3.
+type CollectionResponseWithTotalHubDbTableV3 struct {
+	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
+	Paging *Paging `json:"paging,omitempty"`
+
+	// Results An array of HubDbTableV3 objects, each representing the details of a HubDB table.
+	Results []HubDbTableV3 `json:"results"`
+
+	// Total An integer representing the total number of HubDB tables available.
+	Total int32 `json:"total"`
+}
+
+// CollectionResponseWithTotalMarketingEventIdentifiersResponse defines model for CollectionResponseWithTotalMarketingEventIdentifiersResponse.
+type CollectionResponseWithTotalMarketingEventIdentifiersResponse struct {
+	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
+	Paging *Paging `json:"paging,omitempty"`
+
+	// Results An array containing the marketing event identifiers. Each item in the array is a MarketingEventIdentifiersResponse object.
+	Results []MarketingEventIdentifiersResponse `json:"results"`
+
+	// Total An integer representing the total number of marketing event identifiers.
+	Total int32 `json:"total"`
+}
+
+// CollectionResponseWithTotalPageForwardPaging defines model for CollectionResponseWithTotalPageForwardPaging.
+type CollectionResponseWithTotalPageForwardPaging struct {
+	// Paging Paging information for forward-only pagination. Contains the next page reference when more results are available; omitted or empty on the last page.
+	Paging *ForwardPaging `json:"paging,omitempty"`
+
+	// Results Collection of pages.
+	Results []Page `json:"results"`
+
+	// Total Total number of pages.
+	Total int32 `json:"total"`
+}
+
+// CollectionResponseWithTotalPageVersion defines model for CollectionResponseWithTotalPageVersion.
+type CollectionResponseWithTotalPageVersion struct {
+	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
+	Paging *Paging `json:"paging,omitempty"`
+
+	// Results An array containing the individual items or results of the collection.
+	Results []PageVersion `json:"results"`
+
+	// Total An integer representing the total number of items in the collection.
+	Total int32 `json:"total"`
+}
+
+// CollectionResponseWithTotalParticipationBreakdown defines model for CollectionResponseWithTotalParticipationBreakdown.
+type CollectionResponseWithTotalParticipationBreakdown struct {
+	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
+	Paging *Paging `json:"paging,omitempty"`
+
+	// Results An array of participation breakdown objects, each detailing a specific participation instance.
+	Results []ParticipationBreakdown `json:"results"`
+
+	// Total An integer representing the total number of participation breakdowns available.
+	Total int32 `json:"total"`
+}
+
+// CollectionResponseWithTotalPublicCampaign defines model for CollectionResponseWithTotalPublicCampaign.
+type CollectionResponseWithTotalPublicCampaign struct {
+	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
+	Paging *Paging `json:"paging,omitempty"`
+
+	// Results An array of PublicCampaign objects, each representing a campaign with its associated properties.
+	Results []PublicCampaign `json:"results"`
+
+	// Total An integer representing the total number of public campaigns available.
+	Total int32 `json:"total"`
+}
+
+// CollectionResponseWithTotalPublicChannelAccount defines model for CollectionResponseWithTotalPublicChannelAccount.
+type CollectionResponseWithTotalPublicChannelAccount struct {
+	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
+	Paging *Paging `json:"paging,omitempty"`
+
+	// Results An array of PublicChannelAccount objects, each representing a public channel account with its details.
+	Results []PublicChannelAccount `json:"results"`
+
+	// Total An integer representing the total number of public channel accounts available.
+	Total int32 `json:"total"`
+}
+
+// CollectionResponseWithTotalPublicChannelIntegrationChannel defines model for CollectionResponseWithTotalPublicChannelIntegrationChannel.
+type CollectionResponseWithTotalPublicChannelIntegrationChannel struct {
+	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
+	Paging *Paging `json:"paging,omitempty"`
+
+	// Results An array of public channel integration channels. Each item in the array is a PublicChannelIntegrationChannel object.
+	Results []PublicChannelIntegrationChannel `json:"results"`
+
+	// Total The total number of public channel integration channels available. This is an integer value.
+	Total int32 `json:"total"`
+}
+
+// CollectionResponseWithTotalPublicEmail defines model for CollectionResponseWithTotalPublicEmail.
+type CollectionResponseWithTotalPublicEmail struct {
+	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
+	Paging *Paging `json:"paging,omitempty"`
+
+	// Results An array containing the public email objects retrieved in the current page of results.
+	Results []PublicEmail `json:"results"`
+
+	// Total An integer representing the total number of public emails available.
+	Total int32 `json:"total"`
+}
+
+// CollectionResponseWithTotalPublicEmailVersion defines model for CollectionResponseWithTotalPublicEmailVersion.
+type CollectionResponseWithTotalPublicEmailVersion struct {
+	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
+	Paging *Paging `json:"paging,omitempty"`
+
+	// Results An array of email version objects, each conforming to the VersionPublicEmail schema.
+	Results []VersionPublicEmail `json:"results"`
+
+	// Total An integer representing the total number of email version results available.
+	Total int32 `json:"total"`
+}
+
+// CollectionResponseWithTotalPublicList defines model for CollectionResponseWithTotalPublicList.
+type CollectionResponseWithTotalPublicList struct {
+	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
+	Paging *Paging `json:"paging,omitempty"`
+
+	// Results An array of public lists, where each list contains details such as list ID, version, name, and processing status.
+	Results []PublicList `json:"results"`
+
+	// Total The total number of public lists available. It is an integer value.
+	Total int32 `json:"total"`
+}
+
+// CollectionResponseWithTotalPublicSequenceLiteResponse defines model for CollectionResponseWithTotalPublicSequenceLiteResponse.
+type CollectionResponseWithTotalPublicSequenceLiteResponse struct {
+	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
+	Paging *Paging `json:"paging,omitempty"`
+
+	// Results An array of PublicSequenceLiteResponse objects, each representing a lightweight version of a sequence.
+	Results []PublicSequenceLiteResponse `json:"results"`
+
+	// Total An integer representing the total number of sequence items available.
+	Total int32 `json:"total"`
+}
+
+// CollectionResponseWithTotalSimplePublicObject Represents a list of simple objects returned from an API request, along with the total count of objects available.
+type CollectionResponseWithTotalSimplePublicObject struct {
+	// Paging Represents the pagination information for navigating through a list of results in the API. It provides details on how to access the previous or next set of results.
+	Paging *Paging `json:"paging,omitempty"`
+
+	// Results An array containing the simple public objects returned in the current page of the response. This property is required.
+	Results []SimplePublicObject `json:"results"`
+
+	// Total The number of available results
+	Total int32 `json:"total"`
+}
+
+// CollectionResponseWithTotalTagForwardPaging defines model for CollectionResponseWithTotalTagForwardPaging.
+type CollectionResponseWithTotalTagForwardPaging struct {
+	// Paging Paging information for forward-only pagination. Contains the next page reference when more results are available; omitted or empty on the last page.
+	Paging *ForwardPaging `json:"paging,omitempty"`
+
+	// Results Collection of blog tags.
+	Results []Tag `json:"results"`
+
+	// Total Total number of blog tags.
+	Total int32 `json:"total"`
+}
+
+// CollectionResponseWithTotalUrlMappingForwardPaging defines model for CollectionResponseWithTotalUrlMappingForwardPaging.
+type CollectionResponseWithTotalUrlMappingForwardPaging struct {
+	// Paging Paging information for forward-only pagination. Contains the next page reference when more results are available; omitted or empty on the last page.
+	Paging *ForwardPaging `json:"paging,omitempty"`
+
+	// Results An array of UrlMapping objects, each representing a specific URL mapping.
+	Results []UrlRedirectsUrlMapping `json:"results"`
+
+	// Total The total number of URL mappings available.
+	Total int32 `json:"total"`
+}
+
+// ColorStop defines model for ColorStop.
+type ColorStop struct {
+	Color RGBAColor `json:"color"`
+}
+
+// Column defines model for Column.
+type Column struct {
+	// CreatedAt The timestamp when the column was created.
+	CreatedAt *time.Time  `json:"createdAt,omitempty"`
+	CreatedBy *SimpleUser `json:"createdBy,omitempty"`
+
+	// CreatedByUserId The ID of the user who created the column.
+	CreatedByUserId *int32 `json:"createdByUserId,omitempty"`
+
+	// Deleted Indicates whether the column has been deleted.
+	Deleted bool `json:"deleted"`
+
+	// Description The description of the column.
+	Description string `json:"description"`
+
+	// ForeignColumnId Foreign Column id
+	ForeignColumnId *int32 `json:"foreignColumnId,omitempty"`
+
+	// ForeignIds Foreign Ids
+	ForeignIds *[]ForeignId `json:"foreignIds,omitempty"`
+
+	// ForeignIdsById Foreign ids
+	ForeignIdsById *map[string]ForeignId `json:"foreignIdsById,omitempty"`
+
+	// ForeignIdsByName Foreign ids by name
+	ForeignIdsByName *map[string]ForeignId `json:"foreignIdsByName,omitempty"`
+
+	// ForeignTableId Foreign table id referenced
+	ForeignTableId *int64 `json:"foreignTableId,omitempty"`
+
+	// Id Column Id
+	Id string `json:"id"`
+
+	// Label Label of the column
+	Label string `json:"label"`
+
+	// Name Name of the column
+	Name string `json:"name"`
+
+	// OptionCount Number of options available
+	OptionCount *int32 `json:"optionCount,omitempty"`
+
+	// Options Options to choose for select and multi-select columns
+	Options *[]HubdbOption `json:"options,omitempty"`
+
+	// Type Type of the column
+	Type ColumnType `json:"type"`
+
+	// UpdatedAt The timestamp when the column was last updated.
+	UpdatedAt *time.Time  `json:"updatedAt,omitempty"`
+	UpdatedBy *SimpleUser `json:"updatedBy,omitempty"`
+
+	// UpdatedByUserId The ID of the user who last updated the column.
+	UpdatedByUserId *int32 `json:"updatedByUserId,omitempty"`
+
+	// Width Column width for HubDB UI
+	Width *int32 `json:"width,omitempty"`
+}
+
+// ColumnType Type of the column
+type ColumnType string
+
+// ColumnRequest defines model for ColumnRequest.
+type ColumnRequest struct {
+	// ForeignColumnId The id of the column from another table to which the column refers/points to.
+	ForeignColumnId *int32 `json:"foreignColumnId,omitempty"`
+
+	// ForeignTableId The id of another table to which the column refers/points to.
+	ForeignTableId *int64 `json:"foreignTableId,omitempty"`
+
+	// Id Column Id
+	Id int32 `json:"id"`
+
+	// Label Label of the column
+	Label string `json:"label"`
+
+	// MaxNumberOfCharacters Defines the maximum number of characters allowed in the column.
+	MaxNumberOfCharacters *int32 `json:"maxNumberOfCharacters,omitempty"`
+
+	// MaxNumberOfOptions Specifies the maximum number of options that can be set for select and multi-select columns.
+	MaxNumberOfOptions *int32 `json:"maxNumberOfOptions,omitempty"`
+
+	// Name Name of the column
+	Name string `json:"name"`
+
+	// Options Options to choose for select and multi-select columns
+	Options []HubdbOption `json:"options"`
+
+	// Type Type of the column
+	Type ColumnRequestType `json:"type"`
+}
+
+// ColumnRequestType Type of the column
+type ColumnRequestType string
+
+// ComboEventRule defines model for ComboEventRule.
+type ComboEventRule struct {
+	// Count An integer specifying the number of occurrences required for the event rule to be satisfied.
+	Count int32 `json:"count"`
+
+	// EventTypeId The unique identifier for the type of event. It is a string.
+	EventTypeId string `json:"eventTypeId"`
+
+	// LookbackWindowDays An integer representing the number of days to look back when evaluating the event rule.
+	LookbackWindowDays *int32 `json:"lookbackWindowDays,omitempty"`
+
+	// PropertyFilters An array of property filters that define additional criteria for the event. Each filter specifies a property and the operation to apply.
+	PropertyFilters []PropertyFilter `json:"propertyFilters"`
+}
+
+// ComboEventRuleBranch defines model for ComboEventRuleBranch.
+type ComboEventRuleBranch struct {
+	// ComposingRules An array of ComboEventRule objects that define the individual rules composing this branch of the combo event.
+	ComposingRules []ComboEventRule `json:"composingRules"`
+
+	// OperationType A string indicating the type of logical operation to be applied between the rules in this branch. Valid values are 'AND' and 'OR'.
+	OperationType ComboEventRuleBranchOperationType `json:"operationType"`
+
+	// RuleBranches An array of ComboEventRuleBranch objects, allowing for nested branching logic within the combo event rules.
+	RuleBranches []ComboEventRuleBranch `json:"ruleBranches"`
+}
+
+// ComboEventRuleBranchOperationType A string indicating the type of logical operation to be applied between the rules in this branch. Valid values are 'AND' and 'OR'.
+type ComboEventRuleBranchOperationType string
+
+// CompanyCallerId defines model for CompanyCallerId.
+type CompanyCallerId struct {
+	// CallerIdType Specifies the type of caller ID, which is set to 'COMPANY' by default.
+	CallerIdType CompanyCallerIdCallerIdType `json:"callerIdType"`
+
+	// Name The name associated with the company caller ID.
+	Name              *string           `json:"name,omitempty"`
+	ObjectCoordinates ObjectCoordinates `json:"objectCoordinates"`
+}
+
+// CompanyCallerIdCallerIdType Specifies the type of caller ID, which is set to 'COMPANY' by default.
+type CompanyCallerIdCallerIdType string
+
+// CompanyCurrency defines model for CompanyCurrency.
+type CompanyCurrency struct {
+	// CreatedAt The date the company currency was created.
+	CreatedAt time.Time `json:"createdAt"`
+
+	// Id The currency code for the company currency
+	Id string `json:"id"`
+}
+
+// CompanyCurrencyUpdateRequest defines model for CompanyCurrencyUpdateRequest.
+type CompanyCurrencyUpdateRequest struct {
+	// CurrencyCode The three-letter code representing a specific currency (ex. USD).
+	CurrencyCode CompanyCurrencyUpdateRequestCurrencyCode `json:"currencyCode"`
+}
+
+// CompanyCurrencyUpdateRequestCurrencyCode The three-letter code representing a specific currency (ex. USD).
+type CompanyCurrencyUpdateRequestCurrencyCode string
+
+// ComparativeBoolPropertyOperation defines model for ComparativeBoolPropertyOperation.
+type ComparativeBoolPropertyOperation struct {
+	// ComparisonPropertyName A string specifying the name of the property to be compared.
+	ComparisonPropertyName string `json:"comparisonPropertyName"`
+
+	// DefaultValue A string representing the default value to use if no value is set.
+	DefaultValue *string `json:"defaultValue,omitempty"`
+
+	// IncludeObjectsWithNoValueSet A boolean indicating whether objects with no value set should be included in the operation.
+	IncludeObjectsWithNoValueSet bool `json:"includeObjectsWithNoValueSet"`
+
+	// OperationType A string that specifies the type of operation being performed.
+	OperationType string `json:"operationType"`
+
+	// Operator A string representing the comparison operator. Valid values are 'IS_EQUAL_TO' and 'IS_NOT_EQUAL_TO'.
+	Operator ComparativeBoolPropertyOperationOperator `json:"operator"`
+
+	// OperatorName A string representing the name of the operator used in the operation.
+	OperatorName   string          `json:"operatorName"`
+	PropertyAspect *PropertyAspect `json:"propertyAspect,omitempty"`
+
+	// PropertyType A string indicating the type of property operation, which is 'bool-comparative' for this component.
+	PropertyType ComparativeBoolPropertyOperationPropertyType `json:"propertyType"`
+
+	// RenderSpec A string that defines the rendering specification for the operation.
+	RenderSpec *string `json:"renderSpec,omitempty"`
+}
+
+// ComparativeBoolPropertyOperationOperator A string representing the comparison operator. Valid values are 'IS_EQUAL_TO' and 'IS_NOT_EQUAL_TO'.
+type ComparativeBoolPropertyOperationOperator string
+
+// ComparativeBoolPropertyOperationPropertyType A string indicating the type of property operation, which is 'bool-comparative' for this component.
+type ComparativeBoolPropertyOperationPropertyType string
+
+// ComparativeDatePropertyOperation defines model for ComparativeDatePropertyOperation.
+type ComparativeDatePropertyOperation struct {
+	// ComparisonPropertyName A string representing the name of the property to compare against.
+	ComparisonPropertyName string `json:"comparisonPropertyName"`
+
+	// DefaultComparisonValue A string specifying the default value for comparison if the comparison property is not set.
+	DefaultComparisonValue *string `json:"defaultComparisonValue,omitempty"`
+
+	// DefaultValue A string providing the default value for the operation if no specific value is set.
+	DefaultValue *string `json:"defaultValue,omitempty"`
+
+	// IncludeObjectsWithNoValueSet A boolean indicating whether objects with no value set for the property should be included in the operation.
+	IncludeObjectsWithNoValueSet bool `json:"includeObjectsWithNoValueSet"`
+
+	// OperationType A string representing the type of operation being performed.
+	OperationType string `json:"operationType"`
+
+	// Operator A string specifying the comparison operator to use, with valid values being 'IS_BEFORE' and 'IS_AFTER'.
+	Operator ComparativeDatePropertyOperationOperator `json:"operator"`
+
+	// OperatorName A string that provides a human-readable name for the operator being used.
+	OperatorName   string          `json:"operatorName"`
+	PropertyAspect *PropertyAspect `json:"propertyAspect,omitempty"`
+
+	// PropertyType A string indicating the type of property operation, which is 'datetime-comparative' for this component.
+	PropertyType ComparativeDatePropertyOperationPropertyType `json:"propertyType"`
+
+	// RenderSpec A string used to define how the operation should be rendered, though specifics are not detailed in the schema.
+	RenderSpec *string `json:"renderSpec,omitempty"`
+}
+
+// ComparativeDatePropertyOperationOperator A string specifying the comparison operator to use, with valid values being 'IS_BEFORE' and 'IS_AFTER'.
+type ComparativeDatePropertyOperationOperator string
+
+// ComparativeDatePropertyOperationPropertyType A string indicating the type of property operation, which is 'datetime-comparative' for this component.
+type ComparativeDatePropertyOperationPropertyType string
+
+// ComparativeNumberPropertyOperation defines model for ComparativeNumberPropertyOperation.
+type ComparativeNumberPropertyOperation struct {
+	// ComparisonPropertyName A string representing the name of the property to which the comparison is made.
+	ComparisonPropertyName string `json:"comparisonPropertyName"`
+
+	// DefaultValue A string specifying the default value to use if no value is set for the property being compared.
+	DefaultValue *string `json:"defaultValue,omitempty"`
+
+	// IncludeObjectsWithNoValueSet A boolean indicating whether to include objects that have no value set for the property being compared.
+	IncludeObjectsWithNoValueSet bool `json:"includeObjectsWithNoValueSet"`
+
+	// OperationType A string representing the type of operation being performed.
+	OperationType string `json:"operationType"`
+
+	// Operator A string indicating the comparison operator to be used. Valid values include 'IS_EQUAL_TO', 'IS_NOT_EQUAL_TO', 'IS_GREATER_THAN', 'IS_GREATER_THAN_OR_EQUAL_TO', 'IS_LESS_THAN', and 'IS_LESS_THAN_OR_EQUAL_TO'.
+	Operator ComparativeNumberPropertyOperationOperator `json:"operator"`
+
+	// OperatorName A string representing the name of the operator used in the operation.
+	OperatorName   string          `json:"operatorName"`
+	PropertyAspect *PropertyAspect `json:"propertyAspect,omitempty"`
+
+	// PropertyType A string representing the type of property operation, with a default value of 'number-comparative'.
+	PropertyType ComparativeNumberPropertyOperationPropertyType `json:"propertyType"`
+
+	// RenderSpec A string that provides rendering specifications for the operation.
+	RenderSpec *string `json:"renderSpec,omitempty"`
+}
+
+// ComparativeNumberPropertyOperationOperator A string indicating the comparison operator to be used. Valid values include 'IS_EQUAL_TO', 'IS_NOT_EQUAL_TO', 'IS_GREATER_THAN', 'IS_GREATER_THAN_OR_EQUAL_TO', 'IS_LESS_THAN', and 'IS_LESS_THAN_OR_EQUAL_TO'.
+type ComparativeNumberPropertyOperationOperator string
+
+// ComparativeNumberPropertyOperationPropertyType A string representing the type of property operation, with a default value of 'number-comparative'.
+type ComparativeNumberPropertyOperationPropertyType string
+
+// ComparativePropertyUpdatedOperation defines model for ComparativePropertyUpdatedOperation.
+type ComparativePropertyUpdatedOperation struct {
+	// ComparisonPropertyName A string specifying the name of the property to compare against.
+	ComparisonPropertyName string `json:"comparisonPropertyName"`
+
+	// DefaultComparisonValue A string representing the default value to use for comparison if no other value is set.
+	DefaultComparisonValue *string `json:"defaultComparisonValue,omitempty"`
+
+	// DefaultValue A string representing the default value to use if no other value is set.
+	DefaultValue *string `json:"defaultValue,omitempty"`
+
+	// IncludeObjectsWithNoValueSet A boolean indicating whether to include objects that have no value set for the property.
+	IncludeObjectsWithNoValueSet bool `json:"includeObjectsWithNoValueSet"`
+
+	// OperationType A string indicating the type of operation being performed.
+	OperationType string `json:"operationType"`
+
+	// Operator A string indicating the comparison operator to use, with valid values being 'IS_BEFORE' and 'IS_AFTER'.
+	Operator ComparativePropertyUpdatedOperationOperator `json:"operator"`
+
+	// OperatorName A string representing the name of the operator used in the operation.
+	OperatorName   string          `json:"operatorName"`
+	PropertyAspect *PropertyAspect `json:"propertyAspect,omitempty"`
+
+	// PropertyType A string representing the type of property operation, defaulting to 'property-updated-comparative'.
+	PropertyType ComparativePropertyUpdatedOperationPropertyType `json:"propertyType"`
+
+	// RenderSpec A string providing specifications for rendering the operation.
+	RenderSpec *string `json:"renderSpec,omitempty"`
+}
+
+// ComparativePropertyUpdatedOperationOperator A string indicating the comparison operator to use, with valid values being 'IS_BEFORE' and 'IS_AFTER'.
+type ComparativePropertyUpdatedOperationOperator string
+
+// ComparativePropertyUpdatedOperationPropertyType A string representing the type of property operation, defaulting to 'property-updated-comparative'.
+type ComparativePropertyUpdatedOperationPropertyType string
+
+// ComparativeStringPropertyOperation defines model for ComparativeStringPropertyOperation.
+type ComparativeStringPropertyOperation struct {
+	// ComparisonPropertyName A string specifying the name of the property to be compared against.
+	ComparisonPropertyName string `json:"comparisonPropertyName"`
+
+	// DefaultValue A string representing the default value to be used if the property value is not set.
+	DefaultValue *string `json:"defaultValue,omitempty"`
+
+	// IncludeObjectsWithNoValueSet A boolean indicating whether objects with no value set for the property should be included in the operation.
+	IncludeObjectsWithNoValueSet bool `json:"includeObjectsWithNoValueSet"`
+
+	// OperationType A string representing the type of operation being performed.
+	OperationType string `json:"operationType"`
+
+	// Operator A string representing the comparison operator used in the operation. Valid values include 'IS_EQUAL_TO', 'IS_NOT_EQUAL_TO', 'CONTAINS', 'DOES_NOT_CONTAIN', 'STARTS_WITH', and 'ENDS_WITH'.
+	Operator ComparativeStringPropertyOperationOperator `json:"operator"`
+
+	// OperatorName A string that provides a human-readable name for the operator used in the operation.
+	OperatorName   string          `json:"operatorName"`
+	PropertyAspect *PropertyAspect `json:"propertyAspect,omitempty"`
+
+	// PropertyType A string indicating the type of property operation, which is 'string-comparative' for this component.
+	PropertyType ComparativeStringPropertyOperationPropertyType `json:"propertyType"`
+
+	// RenderSpec A string that provides rendering specifications for the operation, though its specific use is not detailed in the spec.
+	RenderSpec *string `json:"renderSpec,omitempty"`
+}
+
+// ComparativeStringPropertyOperationOperator A string representing the comparison operator used in the operation. Valid values include 'IS_EQUAL_TO', 'IS_NOT_EQUAL_TO', 'CONTAINS', 'DOES_NOT_CONTAIN', 'STARTS_WITH', and 'ENDS_WITH'.
+type ComparativeStringPropertyOperationOperator string
+
+// ComparativeStringPropertyOperationPropertyType A string indicating the type of property operation, which is 'string-comparative' for this component.
+type ComparativeStringPropertyOperationPropertyType string
+
+// CompletedThirdPartyCallRequest defines model for CompletedThirdPartyCallRequest.
+type CompletedThirdPartyCallRequest struct {
+	// CallStartedTimestamp The timestamp indicating when the call started, formatted as a date-time string.
+	CallStartedTimestamp *time.Time `json:"callStartedTimestamp,omitempty"`
+
+	// CreateEngagement Indicates whether an engagement should be created for the call.
+	CreateEngagement bool `json:"createEngagement"`
+
+	// DurationSeconds The duration of the call in seconds.
+	DurationSeconds *int32 `json:"durationSeconds,omitempty"`
+
+	// EngagementProperties Contains additional properties related to the engagement.
+	EngagementProperties map[string]string `json:"engagementProperties"`
+
+	// ExternalCallId The unique identifier for the call from an external system.
+	ExternalCallId string `json:"externalCallId"`
+
+	// FinalCallStatus The final status of the call, with accepted values including: BUSY, CALLING_CRM_USER, CANCELED, COMPLETED, CONNECTING, FAILED, HOLD, IN_PROGRESS, MISSED, NO_ANSWER, QUEUED, RINGING, UNKNOWN.
+	FinalCallStatus           CompletedThirdPartyCallRequestFinalCallStatus `json:"finalCallStatus"`
+	FromNumber                FormattedPhoneNumber                          `json:"fromNumber"`
+	PotentialRecipientUserIds []int32                                       `json:"potentialRecipientUserIds"`
+	ToNumber                  FormattedPhoneNumber                          `json:"toNumber"`
+
+	// UserId The ID of the user associated with the call.
+	UserId *int32 `json:"userId,omitempty"`
+}
+
+// CompletedThirdPartyCallRequestFinalCallStatus The final status of the call, with accepted values including: BUSY, CALLING_CRM_USER, CANCELED, COMPLETED, CONNECTING, FAILED, HOLD, IN_PROGRESS, MISSED, NO_ANSWER, QUEUED, RINGING, UNKNOWN.
+type CompletedThirdPartyCallRequestFinalCallStatus string
+
+// CompletedThirdPartyCallResponse defines model for CompletedThirdPartyCallResponse.
+type CompletedThirdPartyCallResponse struct {
+	CallerIdMatches []CompletedThirdPartyCallResponse_CallerIdMatches_Item `json:"callerIdMatches"`
+}
+
+// CompletedThirdPartyCallResponse_CallerIdMatches_Item defines model for CompletedThirdPartyCallResponse.callerIdMatches.Item.
+type CompletedThirdPartyCallResponse_CallerIdMatches_Item struct {
+	union json.RawMessage
+}
+
+// Condition defines model for Condition.
+type Condition struct {
+	// FilterType A string indicating the type of filter being applied. Valid value is 'CRM_OBJECT_PROPERTY'.
+	FilterType ConditionFilterType `json:"filterType"`
+
+	// Operator A string specifying the operation to be performed in the condition. Valid values include 'EQ', 'N_EQ', 'LT', 'GT', 'LTE', 'GTE', 'CONTAINS', 'STARTS_WITH', 'ENDS_WITH', 'IN', 'NOT_IN', 'IS_EMPTY', and 'IS_NOT_EMPTY'.
+	Operator ConditionOperator `json:"operator"`
+
+	// Property A string representing the specific property of the CRM object that the condition applies to.
+	Property string `json:"property"`
+
+	// Value A string representing the value to be compared against the specified property when using single-value operators.
+	Value *string `json:"value,omitempty"`
+
+	// Values An array of strings used to specify multiple values for comparison when using operators that support multiple values, such as 'IN' or 'NOT_IN'.
+	Values *[]string `json:"values,omitempty"`
+}
+
+// ConditionFilterType A string indicating the type of filter being applied. Valid value is 'CRM_OBJECT_PROPERTY'.
+type ConditionFilterType string
+
+// ConditionOperator A string specifying the operation to be performed in the condition. Valid values include 'EQ', 'N_EQ', 'LT', 'GT', 'LTE', 'GTE', 'CONTAINS', 'STARTS_WITH', 'ENDS_WITH', 'IN', 'NOT_IN', 'IS_EMPTY', and 'IS_NOT_EMPTY'.
+type ConditionOperator string
+
+// ContactAddress defines model for ContactAddress.
+type ContactAddress struct {
+	// City The city where the contact is located. It is a string value.
+	City *string `json:"city,omitempty"`
+
+	// Country The country where the contact is located. It is a string value.
+	Country *string `json:"country,omitempty"`
+
+	// CountryCode The code representing the country of the contact's address. It is a string value.
+	CountryCode *string `json:"countryCode,omitempty"`
+
+	// State The state where the contact is located. It is a string value.
+	State *string `json:"state,omitempty"`
+
+	// Street The street address of the contact. It is a string value.
+	Street *string `json:"street,omitempty"`
+
+	// Type The type of address, which can be either 'HOME' or 'WORK'.
+	Type *ContactAddressType `json:"type,omitempty"`
+
+	// Zip The postal code of the contact's address. It is a string value.
+	Zip *string `json:"zip,omitempty"`
+}
+
+// ContactAddressType The type of address, which can be either 'HOME' or 'WORK'.
+type ContactAddressType string
+
+// ContactAssociation defines model for ContactAssociation.
+type ContactAssociation struct {
+	// ContactId The internal ID of the contact in HubSpot
+	ContactId string `json:"contactId"`
+
+	// Email The email of the contact in HubSpot
+	Email string `json:"email"`
+
+	// Firstname The first name of the contact in HubSpot
+	Firstname *string `json:"firstname,omitempty"`
+
+	// Lastname The last name of the contact in HubSpot
+	Lastname *string `json:"lastname,omitempty"`
+}
+
+// ContactAttachment defines model for ContactAttachment.
+type ContactAttachment struct {
+	ContactProfile ContactProfile `json:"contactProfile"`
+
+	// Type A string indicating the type of attachment. The default value is 'CONTACT'.
+	Type ContactAttachmentType `json:"type"`
+}
+
+// ContactAttachmentType A string indicating the type of attachment. The default value is 'CONTACT'.
+type ContactAttachmentType string
+
+// ContactCallerId defines model for ContactCallerId.
+type ContactCallerId struct {
+	// CallerIdType Specifies the type of caller ID, with the default value being CONTACT.
+	CallerIdType ContactCallerIdCallerIdType `json:"callerIdType"`
+
+	// Email The email address of the contact.
+	Email *string `json:"email,omitempty"`
+
+	// FirstName The first name of the contact.
+	FirstName *string `json:"firstName,omitempty"`
+
+	// LastName The last name of the contact.
+	LastName          *string           `json:"lastName,omitempty"`
+	ObjectCoordinates ObjectCoordinates `json:"objectCoordinates"`
+}
+
+// ContactCallerIdCallerIdType Specifies the type of caller ID, with the default value being CONTACT.
+type ContactCallerIdCallerIdType string
+
+// ContactEmail defines model for ContactEmail.
+type ContactEmail struct {
+	// Email The actual email address of the contact, represented as a string.
+	Email string `json:"email"`
+
+	// Type The type of email address, which can be either 'HOME' or 'WORK'.
+	Type *ContactEmailType `json:"type,omitempty"`
+}
+
+// ContactEmailType The type of email address, which can be either 'HOME' or 'WORK'.
+type ContactEmailType string
+
+// ContactName defines model for ContactName.
+type ContactName struct {
+	// FirstName A string representing the first name of the contact.
+	FirstName *string `json:"firstName,omitempty"`
+
+	// LastName A string representing the last name of the contact.
+	LastName *string `json:"lastName,omitempty"`
+
+	// MiddleName A string representing the middle name of the contact.
+	MiddleName *string `json:"middleName,omitempty"`
+
+	// Prefix A string representing the prefix of the contact's name, such as 'Mr.', 'Ms.', or 'Dr.'.
+	Prefix *string `json:"prefix,omitempty"`
+
+	// Suffix A string representing the suffix of the contact's name, such as 'Jr.', 'Sr.', or 'III'.
+	Suffix *string `json:"suffix,omitempty"`
+}
+
+// ContactOrg defines model for ContactOrg.
+type ContactOrg struct {
+	// Company The name of the company the contact is associated with. It is a string value.
+	Company *string `json:"company,omitempty"`
+
+	// Department The department within the company where the contact works. It is a string value.
+	Department *string `json:"department,omitempty"`
+
+	// Title The job title of the contact within their company. It is a string value.
+	Title *string `json:"title,omitempty"`
+}
+
+// ContactPhone defines model for ContactPhone.
+type ContactPhone struct {
+	// Phone The phone number associated with the contact. This is a string representing the contact's phone number.
+	Phone string `json:"phone"`
+
+	// Type The type of phone, which can be one of the following: 'CELL', 'MAIN', 'HOME', or 'WORK'.
+	Type *ContactPhoneType `json:"type,omitempty"`
+}
+
+// ContactPhoneType The type of phone, which can be one of the following: 'CELL', 'MAIN', 'HOME', or 'WORK'.
+type ContactPhoneType string
+
+// ContactProfile defines model for ContactProfile.
+type ContactProfile struct {
+	// Addresses An array of addresses associated with the contact, where each address includes details such as type (e.g., HOME, WORK), street, city, state, zip, country, and country code.
+	Addresses []ContactAddress `json:"addresses"`
+
+	// Emails An array of email addresses for the contact, with each email having a type (e.g., HOME, WORK) and the email address itself.
+	Emails []ContactEmail `json:"emails"`
+	Name   *ContactName   `json:"name,omitempty"`
+	Org    *ContactOrg    `json:"org,omitempty"`
+
+	// Phones An array of phone numbers for the contact, with each phone number including a type (e.g., CELL, MAIN, HOME, WORK) and the phone number.
+	Phones []ContactPhone `json:"phones"`
+
+	// Urls An array of URLs related to the contact, where each URL includes a type (e.g., HOME, WORK) and the URL itself.
+	Urls []ContactUrl `json:"urls"`
+}
+
+// ContactReference defines model for ContactReference.
+type ContactReference struct {
+	// Id Unique identifier for the contact.
+	Id string `json:"id"`
+}
+
+// ContactUrl defines model for ContactUrl.
+type ContactUrl struct {
+	// Type The category of the URL, indicating its purpose. Valid values include 'HOME' and 'WORK'.
+	Type *ContactUrlType `json:"type,omitempty"`
+
+	// Url The actual URL string associated with the contact.
+	Url string `json:"url"`
+}
+
+// ContactUrlType The category of the URL, indicating its purpose. Valid values include 'HOME' and 'WORK'.
+type ContactUrlType string
+
+// ContentCloneRequestVNext defines model for ContentCloneRequestVNext.
+type ContentCloneRequestVNext struct {
+	// CloneName Name of the cloned object.
+	CloneName *string `json:"cloneName,omitempty"`
+
+	// Id ID of the object to be cloned.
+	Id string `json:"id"`
+}
+
+// ContentFolder defines model for ContentFolder.
+type ContentFolder struct {
+	// Category The type of object this folder applies to. Should always be LANDING_PAGE.
+	Category int32 `json:"category"`
+
+	// Created The timestamp indicating when the content folder was created.
+	Created time.Time `json:"created"`
+
+	// DeletedAt The timestamp (ISO8601 format) when this content folder was deleted.
+	DeletedAt time.Time `json:"deletedAt"`
+
+	// Id The unique ID of the content folder.
+	Id string `json:"id"`
+
+	// Name The name of the folder which will show up in the app dashboard
+	Name string `json:"name"`
+
+	// ParentFolderId The ID of the content folder this folder is nested under
+	ParentFolderId int64 `json:"parentFolderId"`
+
+	// Updated The timestamp indicating when the content folder was last updated.
+	Updated time.Time `json:"updated"`
+}
+
+// ContentFolderVersion defines model for ContentFolderVersion.
+type ContentFolderVersion struct {
+	// Id The unique identifier for this version of the content folder.
+	Id     string        `json:"id"`
+	Object ContentFolder `json:"object"`
+
+	// UpdatedAt The date and time when this version was last updated, in ISO 8601 format.
+	UpdatedAt time.Time   `json:"updatedAt"`
+	User      VersionUser `json:"user"`
+}
+
+// ContentLanguageCloneRequestVNext defines model for ContentLanguageCloneRequestVNext.
+type ContentLanguageCloneRequestVNext struct {
+	// Id ID of content to clone.
+	Id string `json:"id"`
+
+	// Language Target language of new variant.
+	Language *string `json:"language,omitempty"`
+
+	// PrimaryLanguage Language of primary content to clone.
+	PrimaryLanguage *string `json:"primaryLanguage,omitempty"`
+
+	// UsePublished A boolean indicating whether the published version of the page should be used for creating the language variation. If true, the published version is used; otherwise, the draft version is used.
+	UsePublished *bool `json:"usePublished,omitempty"`
+}
+
+// ContentLanguageVariation defines model for ContentLanguageVariation.
+type ContentLanguageVariation struct {
+	// ArchivedInDashboard Indicates if the page is hidden from the dashboard, though it may still be live.
+	ArchivedInDashboard bool `json:"archivedInDashboard"`
+
+	// AuthorName The name of the user that updated this page.
+	AuthorName string `json:"authorName"`
+
+	// Campaign The GUID of the marketing campaign this page is a part of.
+	Campaign string `json:"campaign"`
+
+	// CampaignName The name of the campaign associated with this language variation.
+	CampaignName string `json:"campaignName"`
+
+	// Created The date and time when the content language variation was created.
+	Created time.Time `json:"created"`
+
+	// Id ID of object to set as primary in multi-language group.
+	Id int64 `json:"id"`
+
+	// Name The internal name of the page.
+	Name string `json:"name"`
+
+	// Password A password required to view the page, if set.
+	Password string `json:"password"`
+
+	// PublicAccessRules A list of rules defining public access permissions for this language variation.
+	PublicAccessRules []PublicAccessRule `json:"publicAccessRules"`
+
+	// PublicAccessRulesEnabled Determines if public access rules should be respected.
+	PublicAccessRulesEnabled bool `json:"publicAccessRulesEnabled"`
+
+	// PublishDate The date and time when the page is scheduled to be published.
+	PublishDate time.Time `json:"publishDate"`
+
+	// Slug The path of this page, appended to the domain to construct the URL.
+	Slug string `json:"slug"`
+
+	// State An ENUM descibing the current state of this page.
+	State string `json:"state"`
+
+	// TagIds A list of tag IDs associated with this language variation.
+	TagIds *[]int64 `json:"tagIds,omitempty"`
+
+	// Updated The date and time when the content language variation was last updated.
+	Updated time.Time `json:"updated"`
+}
+
+// ContentScheduleRequestVNext defines model for ContentScheduleRequestVNext.
+type ContentScheduleRequestVNext struct {
+	// Id The ID of the object to be scheduled.
+	Id string `json:"id"`
+
+	// PublishDate The date the object should transition from scheduled to published.
+	PublishDate time.Time `json:"publishDate"`
+}
+
+// CrmObjectSnapshotBatchRequest defines model for CrmObjectSnapshotBatchRequest.
+type CrmObjectSnapshotBatchRequest struct {
+	// SnapshotRequests An array of CrmObjectSnapshotRequest objects, each representing a request to create a snapshot for a specific CRM object. This property is required.
+	SnapshotRequests []CrmObjectSnapshotRequest `json:"snapshotRequests"`
+}
+
+// CrmObjectSnapshotBatchResponse defines model for CrmObjectSnapshotBatchResponse.
+type CrmObjectSnapshotBatchResponse struct {
+	// SnapshotResponses An array of CrmObjectSnapshotResponse objects, each representing the result of a snapshot operation for a specific CRM object. This property is required.
+	SnapshotResponses []CrmObjectSnapshotResponse `json:"snapshotResponses"`
+}
+
+// CrmObjectSnapshotRequest defines model for CrmObjectSnapshotRequest.
+type CrmObjectSnapshotRequest struct {
+	// ObjectId An integer representing the unique identifier of the CRM object for which the snapshot is requested.
+	ObjectId int64 `json:"objectId"`
+
+	// ObjectTypeId A string representing the type identifier of the CRM object, specifying what kind of object it is within HubSpot.
+	ObjectTypeId string `json:"objectTypeId"`
+
+	// PortalId An integer representing the unique identifier of the HubSpot account (portal) where the CRM object resides.
+	PortalId int64 `json:"portalId"`
+
+	// Properties An array of strings, each representing a property of the CRM object that should be included in the snapshot.
+	Properties []string `json:"properties"`
+}
+
+// CrmObjectSnapshotResponse defines model for CrmObjectSnapshotResponse.
+type CrmObjectSnapshotResponse struct {
+	// ObjectId An integer representing the unique identifier of the CRM object for which the snapshot is taken.
+	ObjectId int64 `json:"objectId"`
+
+	// ObjectTypeId A string indicating the type of the CRM object, such as contact, company, or deal.
+	ObjectTypeId string `json:"objectTypeId"`
+
+	// PortalId An integer representing the unique identifier of the HubSpot portal associated with the CRM object.
+	PortalId int64 `json:"portalId"`
+
+	// SnapshotStatusId A UUID string representing the status identifier of the snapshot request, indicating the current state of the snapshot process.
+	SnapshotStatusId openapi_types.UUID `json:"snapshotStatusId"`
+}
+
+// CrmPropertyWrapper defines model for CrmPropertyWrapper.
+type CrmPropertyWrapper struct {
+	// Name The name of the property in the CRM
+	Name string `json:"name"`
+
+	// Value The value of the property in the CRM
+	Value string `json:"value"`
+}
+
+// CurrencyCodeInfo defines model for CurrencyCodeInfo.
+type CurrencyCodeInfo struct {
+	// CurrencyCode The three-letter code representing a specific currency (ex. USD).
+	CurrencyCode string `json:"currencyCode"`
+
+	// CurrencyName The full name of the currency (ex. US Dollar).
+	CurrencyName string `json:"currencyName"`
+}
+
+// CurrencyCreateRequest defines model for CurrencyCreateRequest.
+type CurrencyCreateRequest struct {
+	// CurrencyCode The currency code being added to the HubSpot portal for use with central exchange rates.
+	CurrencyCode CurrencyCreateRequestCurrencyCode `json:"currencyCode"`
+}
+
+// CurrencyCreateRequestCurrencyCode The currency code being added to the HubSpot portal for use with central exchange rates.
+type CurrencyCreateRequestCurrencyCode string
+
+// CurrencyPairUpdate defines model for CurrencyPairUpdate.
+type CurrencyPairUpdate struct {
+	// FromCurrencyCode This represents the three-letter currency code (such as USD for US Dollar) of the currency you want to convert from.
+	FromCurrencyCode CurrencyPairUpdateFromCurrencyCode `json:"fromCurrencyCode"`
+
+	// ToCurrencyCode This represents the three-letter currency code (such as USD for US Dollar) of the currency you want to convert to.
+	ToCurrencyCode CurrencyPairUpdateToCurrencyCode `json:"toCurrencyCode"`
+
+	// VisibleInUI This indicates if the currency pair is shown in the MultiCurrency settings page. Setting this to false will remove the currency pair from the settings page.
+	VisibleInUI bool `json:"visibleInUI"`
+}
+
+// CurrencyPairUpdateFromCurrencyCode This represents the three-letter currency code (such as USD for US Dollar) of the currency you want to convert from.
+type CurrencyPairUpdateFromCurrencyCode string
+
+// CurrencyPairUpdateToCurrencyCode This represents the three-letter currency code (such as USD for US Dollar) of the currency you want to convert to.
+type CurrencyPairUpdateToCurrencyCode string
+
+// CursorPagedResultBlogAuthorLong defines model for CursorPagedResultBlogAuthorLong.
+type CursorPagedResultBlogAuthorLong = map[string]interface{}
+
+// CursorPagedResultBlogPostLong defines model for CursorPagedResultBlogPostLong.
+type CursorPagedResultBlogPostLong = map[string]interface{}
+
+// CursorPagedResultTagLong defines model for CursorPagedResultTagLong.
+type CursorPagedResultTagLong = map[string]interface{}
+
+// CustomObjectLimitResponse defines model for CustomObjectLimitResponse.
+type CustomObjectLimitResponse struct {
+	// Limit The maximum number of custom objects allowed.
+	Limit int64 `json:"limit"`
+
+	// Percentage The percentage of the custom object limit that is currently used.
+	Percentage float64 `json:"percentage"`
+
+	// Usage The current number of custom objects used.
+	Usage int64 `json:"usage"`
+}
+
+// CustomObjectRecordLimitResponse defines model for CustomObjectRecordLimitResponse.
+type CustomObjectRecordLimitResponse struct {
+	// ByObjectType An array containing usage details for each object type, with each entry providing specific usage information for a particular object type.
+	ByObjectType []UsageForObjectType `json:"byObjectType"`
+
+	// OverallLimit The maximum number of custom object records allowed.
+	OverallLimit int64 `json:"overallLimit"`
+
+	// OverallPercentage The percentage of the overall custom object record limit that has been used.
+	OverallPercentage float64 `json:"overallPercentage"`
+
+	// OverallUsage The total number of custom object records currently in use.
+	OverallUsage int64 `json:"overallUsage"`
+}
+
+// CustomPropertyLimitResponse defines model for CustomPropertyLimitResponse.
+type CustomPropertyLimitResponse struct {
+	// ByObjectType An array detailing the limit and usage of custom properties for each specific object type.
+	ByObjectType []LimitAndUsageForObjectType `json:"byObjectType"`
+
+	// OverallLimit The total limit for custom properties across all objects.
+	OverallLimit int64 `json:"overallLimit"`
+
+	// OverallPercentage The percentage of the overall custom property limit that has been used.
+	OverallPercentage float64 `json:"overallPercentage"`
+
+	// OverallUsage The total number of custom properties currently in use across all objects.
+	OverallUsage int64 `json:"overallUsage"`
+}
+
+// DatePoint defines model for DatePoint.
+type DatePoint struct {
+	// Day An integer representing the day component of the date.
+	Day int32 `json:"day"`
+
+	// Hour An integer representing the hour component of the time.
+	Hour *int32 `json:"hour,omitempty"`
+
+	// Millisecond An integer representing the millisecond component of the time.
+	Millisecond *int32 `json:"millisecond,omitempty"`
+
+	// Minute An integer representing the minute component of the time.
+	Minute *int32 `json:"minute,omitempty"`
+
+	// Month An integer representing the month component of the date.
+	Month int32 `json:"month"`
+
+	// Second An integer representing the second component of the time.
+	Second *int32 `json:"second,omitempty"`
+
+	// TimeType A string indicating the type of time representation, defaulting to 'DATE'.
+	TimeType DatePointTimeType `json:"timeType"`
+
+	// TimezoneSource A string specifying the source of the timezone, with valid values including 'CUSTOM', 'USER', and 'PORTAL'.
+	TimezoneSource DatePointTimezoneSource `json:"timezoneSource"`
+
+	// Year An integer representing the year component of the date.
+	Year int32 `json:"year"`
+
+	// ZoneId A string representing the identifier for the timezone.
+	ZoneId string `json:"zoneId"`
+}
+
+// DatePointTimeType A string indicating the type of time representation, defaulting to 'DATE'.
+type DatePointTimeType string
+
+// DatePointTimezoneSource A string specifying the source of the timezone, with valid values including 'CUSTOM', 'USER', and 'PORTAL'.
+type DatePointTimezoneSource string
+
+// DatePropertyOperation defines model for DatePropertyOperation.
+type DatePropertyOperation struct {
+	// Day An integer specifying the day component of the date.
+	Day int32 `json:"day"`
+
+	// DefaultValue A string representing the default value to be used if no other value is set.
+	DefaultValue *string `json:"defaultValue,omitempty"`
+
+	// IncludeObjectsWithNoValueSet A boolean indicating whether to include objects that have no value set for the property.
+	IncludeObjectsWithNoValueSet bool `json:"includeObjectsWithNoValueSet"`
+
+	// Month An integer specifying the month component of the date.
+	Month DatePropertyOperationMonth `json:"month"`
+
+	// OperationType A string indicating the type of operation being performed.
+	OperationType string `json:"operationType"`
+
+	// Operator A string representing the operation to be performed on the date property, such as comparison operations.
+	Operator DatePropertyOperationOperator `json:"operator"`
+
+	// OperatorName A string representing the name of the operator used in the operation.
+	OperatorName   string          `json:"operatorName"`
+	PropertyAspect *PropertyAspect `json:"propertyAspect,omitempty"`
+
+	// PropertyType A string indicating the type of property operation, with a default value of 'date'.
+	PropertyType DatePropertyOperationPropertyType `json:"propertyType"`
+
+	// RenderSpec A string that provides specifications for rendering the operation.
+	RenderSpec *string `json:"renderSpec,omitempty"`
+
+	// Year An integer specifying the year component of the date.
+	Year int32 `json:"year"`
+}
+
+// DatePropertyOperationMonth An integer specifying the month component of the date.
+type DatePropertyOperationMonth string
+
+// DatePropertyOperationOperator A string representing the operation to be performed on the date property, such as comparison operations.
+type DatePropertyOperationOperator string
+
+// DatePropertyOperationPropertyType A string indicating the type of property operation, with a default value of 'date'.
+type DatePropertyOperationPropertyType string
+
+// DateTime defines model for DateTime.
+type DateTime struct {
+	// DateOnly Indicates whether the DateTime value represents only a date without a time component.
+	DateOnly bool `json:"dateOnly"`
+
+	// TimeZoneShift The integer value representing the shift in minutes from UTC for the DateTime value.
+	TimeZoneShift int32 `json:"timeZoneShift"`
+
+	// Value The integer value representing a specific point in time.
+	Value int64 `json:"value"`
+}
+
+// DateTimePropertyOperation defines model for DateTimePropertyOperation.
+type DateTimePropertyOperation struct {
+	// DefaultValue A string that specifies the default value to be used if no other value is set.
+	DefaultValue *string `json:"defaultValue,omitempty"`
+
+	// IncludeObjectsWithNoValueSet A boolean indicating whether objects with no value set for this property should be included in the operation.
+	IncludeObjectsWithNoValueSet bool `json:"includeObjectsWithNoValueSet"`
+
+	// OperationType A string that specifies the type of operation being performed.
+	OperationType string `json:"operationType"`
+
+	// Operator A string representing the operation to be performed, with valid values including 'IS_BEFORE', 'IS_AFTER', 'IS_EQUAL_TO', 'IS_BEFORE_DATE', and 'IS_AFTER_DATE'.
+	Operator DateTimePropertyOperationOperator `json:"operator"`
+
+	// OperatorName A string representing the name of the operator used in the operation.
+	OperatorName   string          `json:"operatorName"`
+	PropertyAspect *PropertyAspect `json:"propertyAspect,omitempty"`
+
+	// PropertyType A string indicating the type of property, defaulting to 'datetime'.
+	PropertyType DateTimePropertyOperationPropertyType `json:"propertyType"`
+
+	// RenderSpec A string that defines how the operation should be rendered or displayed.
+	RenderSpec *string `json:"renderSpec,omitempty"`
+
+	// RequiresTimeZoneConversion A boolean indicating whether the operation requires conversion based on time zones.
+	RequiresTimeZoneConversion bool `json:"requiresTimeZoneConversion"`
+
+	// Timestamp An integer representing a Unix timestamp in milliseconds, used for datetime comparisons.
+	Timestamp int64 `json:"timestamp"`
+}
+
+// DateTimePropertyOperationOperator A string representing the operation to be performed, with valid values including 'IS_BEFORE', 'IS_AFTER', 'IS_EQUAL_TO', 'IS_BEFORE_DATE', and 'IS_AFTER_DATE'.
+type DateTimePropertyOperationOperator string
+
+// DateTimePropertyOperationPropertyType A string indicating the type of property, defaulting to 'datetime'.
+type DateTimePropertyOperationPropertyType string
+
+// DealToDealSplits defines model for DealToDealSplits.
+type DealToDealSplits struct {
+	// Id The unique identifier for the deal associated with the deal splits.
+	Id string `json:"id"`
+
+	// Splits An array of deal split objects, each representing a portion of the deal assigned to an owner.
+	Splits []CRMDealSplitsSimplePublicObject `json:"splits"`
+}
+
+// DefaultRequirements defines model for DefaultRequirements.
+type DefaultRequirements struct {
+	// Gates An array of conditions or constraints that must be satisfied. Each element in the array represents a specific gate or requirement.
+	Gates []string `json:"gates"`
+
+	// Operator A string representing the logical operator used to evaluate the requirements. Common operators include 'AND' and 'OR'.
+	Operator DefaultRequirementsOperator `json:"operator"`
+
+	// ScopeNames An array of scope names that define the permissions or access levels required. Each scope name corresponds to a specific permission.
+	ScopeNames []string `json:"scopeNames"`
+
+	// Settings A collection of configuration settings that influence the behavior of the operation. These settings may include various options and parameters.
+	Settings []string `json:"settings"`
+}
+
+// DefaultRequirementsOperator A string representing the logical operator used to evaluate the requirements. Common operators include 'AND' and 'OR'.
+type DefaultRequirementsOperator string
+
+// DefinitionSource defines model for DefinitionSource.
+type DefinitionSource struct {
+	// Name A string representing the name of the definition source.
+	Name *string `json:"name,omitempty"`
+
+	// Type A string indicating the type of definition source. Valid values include 'GLOBAL', 'OBJECT_TYPE', 'HAVEN_BRANCH', and 'PORTAL'.
+	Type DefinitionSourceType `json:"type"`
+}
+
+// DefinitionSourceType A string indicating the type of definition source. Valid values include 'GLOBAL', 'OBJECT_TYPE', 'HAVEN_BRANCH', and 'PORTAL'.
+type DefinitionSourceType string
+
+// DetachFromLangGroupRequestVNext defines model for DetachFromLangGroupRequestVNext.
+type DetachFromLangGroupRequestVNext struct {
+	// Id ID of the object to remove from a multi-language group.
+	Id string `json:"id"`
+}
+
+// DeveloperQualifiedSymbol defines model for DeveloperQualifiedSymbol.
+type DeveloperQualifiedSymbol struct {
+	// DeveloperSymbol A string representing the developer's unique symbol or identifier within the project. This symbol is used in conjunction with the project name to resolve the fully qualified name of an App Event Type.
+	DeveloperSymbol string `json:"developerSymbol"`
+
+	// ProjectName The name of the project associated with the developer. It is a string that identifies the project within the developer's scope.
+	ProjectName string `json:"projectName"`
+}
+
+// DisplayOption defines model for DisplayOption.
+type DisplayOption struct {
+	// Label The text that will be displayed to users for this option.
+	Label string `json:"label"`
+
+	// Name JSON-friendly unique name for option.
+	Name string `json:"name"`
+
+	// Type The type of status.
+	Type DisplayOptionType `json:"type"`
+}
+
+// DisplayOptionType The type of status.
+type DisplayOptionType string
+
+// Domain defines model for Domain.
+type Domain struct {
+	// CorrectCname The expected CNAME record for the domain.
+	CorrectCname string `json:"correctCname"`
+
+	// Created The date and time when the domain was created.
+	Created time.Time `json:"created"`
+
+	// Domain The actual domain or sub-domain. e.g. www.hubspot.com
+	Domain string `json:"domain"`
+
+	// Id The unique ID of this domain.
+	Id string `json:"id"`
+
+	// IsResolving Whether the DNS for this domain is optimally configured for use with HubSpot.
+	IsResolving bool `json:"isResolving"`
+
+	// IsSslEnabled Indicates whether SSL is enabled for the domain.
+	IsSslEnabled bool `json:"isSslEnabled"`
+
+	// IsSslOnly Indicates whether the domain is accessible only via SSL.
+	IsSslOnly bool `json:"isSslOnly"`
+
+	// IsUsedForBlogPost Whether the domain is used for CMS blog posts.
+	IsUsedForBlogPost bool `json:"isUsedForBlogPost"`
+
+	// IsUsedForEmail Whether the domain is used for CMS email web pages.
+	IsUsedForEmail bool `json:"isUsedForEmail"`
+
+	// IsUsedForKnowledge Whether the domain is used for CMS knowledge pages.
+	IsUsedForKnowledge bool `json:"isUsedForKnowledge"`
+
+	// IsUsedForLandingPage Whether the domain is used for CMS landing pages.
+	IsUsedForLandingPage bool `json:"isUsedForLandingPage"`
+
+	// IsUsedForSitePage Whether the domain is used for CMS site pages.
+	IsUsedForSitePage bool `json:"isUsedForSitePage"`
+
+	// ManuallyMarkedAsResolving Indicates whether the domain has been manually marked as resolving.
+	ManuallyMarkedAsResolving bool `json:"manuallyMarkedAsResolving"`
+
+	// PrimaryBlogPost Indicates whether the domain is the primary domain for blog posts.
+	PrimaryBlogPost bool `json:"primaryBlogPost"`
+
+	// PrimaryEmail Indicates whether the domain is the primary domain for email pages.
+	PrimaryEmail bool `json:"primaryEmail"`
+
+	// PrimaryKnowledge Indicates whether the domain is the primary domain for knowledge pages.
+	PrimaryKnowledge bool `json:"primaryKnowledge"`
+
+	// PrimaryLandingPage Indicates whether the domain is the primary domain for landing pages.
+	PrimaryLandingPage bool `json:"primaryLandingPage"`
+
+	// PrimarySitePage Indicates whether the domain is the primary domain for site pages.
+	PrimarySitePage bool `json:"primarySitePage"`
+
+	// SecondaryToDomain Specifies the domain to which this domain is secondary.
+	SecondaryToDomain string `json:"secondaryToDomain"`
+
+	// Updated The date and time when the domain was last updated.
+	Updated time.Time `json:"updated"`
+}
+
+// DoubleFieldSchema defines model for DoubleFieldSchema.
+type DoubleFieldSchema struct {
+	// Maximum The maximum allowable value for the double field.
+	Maximum *float64 `json:"maximum,omitempty"`
+
+	// Minimum The minimum allowable value for the double field.
+	Minimum *float64 `json:"minimum,omitempty"`
+
+	// Type Indicates the field type as DOUBLE.
+	Type DoubleFieldSchemaType `json:"type"`
+}
+
+// DoubleFieldSchemaType Indicates the field type as DOUBLE.
+type DoubleFieldSchemaType string
+
+// EmailCloneRequestVNext defines model for EmailCloneRequestVNext.
+type EmailCloneRequestVNext struct {
+	// CloneName The name to assign to the cloned email.
+	CloneName *string `json:"cloneName,omitempty"`
+
+	// Id The email ID.
+	Id string `json:"id"`
+
+	// Language The language code for the cloned email, such as 'en' for English.
+	Language *string `json:"language,omitempty"`
+}
+
+// EmailCreateRequest defines model for EmailCreateRequest.
+type EmailCreateRequest struct {
+	// ActiveDomain The active domain of the email.
+	ActiveDomain *string `json:"activeDomain,omitempty"`
+
+	// Archived Determines if the email is archived or not.
+	Archived *bool `json:"archived,omitempty"`
+
+	// BusinessUnitId The ID of the business unit associated with the email.
+	BusinessUnitId *int64 `json:"businessUnitId,omitempty"`
+
+	// Campaign The ID of the campaign this email is associated to.
+	Campaign *string             `json:"campaign,omitempty"`
+	Content  *PublicEmailContent `json:"content,omitempty"`
+
+	// FeedbackSurveyId The ID of the feedback survey linked to the email.
+	FeedbackSurveyId *string `json:"feedbackSurveyId,omitempty"`
+
+	// FolderIdV2 The ID of the folder where the email will be stored.
+	FolderIdV2 *int64                  `json:"folderIdV2,omitempty"`
+	From       *PublicEmailFromDetails `json:"from,omitempty"`
+
+	// JitterSendTime Determines whether the email send time should be randomized to avoid sending all emails at the exact same time.
+	JitterSendTime *bool `json:"jitterSendTime,omitempty"`
+
+	// Language The language code for the email, such as 'en' for English.
+	Language *EmailCreateRequestLanguage `json:"language,omitempty"`
+
+	// Name The name of the email, as displayed on the email dashboard.
+	Name *string `json:"name,omitempty"`
+
+	// PublishDate The date and time the email is scheduled for, in ISO8601 representation. This is only used in local time or scheduled emails.
+	PublishDate *time.Time             `json:"publishDate,omitempty"`
+	RssData     *PublicRssEmailDetails `json:"rssData,omitempty"`
+
+	// SendOnPublish Determines whether the email will be sent immediately on publish.
+	SendOnPublish *bool `json:"sendOnPublish,omitempty"`
+
+	// State The email state.
+	State *EmailCreateRequestState `json:"state,omitempty"`
+
+	// Subcategory The email subcategory.
+	Subcategory *EmailCreateRequestSubcategory `json:"subcategory,omitempty"`
+
+	// Subject The subject of the email.
+	Subject             *string                         `json:"subject,omitempty"`
+	SubscriptionDetails *PublicEmailSubscriptionDetails `json:"subscriptionDetails,omitempty"`
+	Testing             *PublicEmailTestingDetails      `json:"testing,omitempty"`
+	To                  *PublicEmailToDetails           `json:"to,omitempty"`
+	Webversion          *PublicWebversionDetails        `json:"webversion,omitempty"`
+}
+
+// EmailCreateRequestLanguage The language code for the email, such as 'en' for English.
+type EmailCreateRequestLanguage string
+
+// EmailCreateRequestState The email state.
+type EmailCreateRequestState string
+
+// EmailCreateRequestSubcategory The email subcategory.
+type EmailCreateRequestSubcategory string
+
+// EmailSendStatusView defines model for EmailSendStatusView.
+type EmailSendStatusView struct {
+	// CompletedAt Time when the send was completed.
+	CompletedAt *time.Time   `json:"completedAt,omitempty"`
+	EventId     *EventIdView `json:"eventId,omitempty"`
+
+	// Message A human readable message describing the error along with remediation steps where appropriate
+	Message *string `json:"message,omitempty"`
+
+	// RequestedAt Time when the send was requested.
+	RequestedAt *time.Time `json:"requestedAt,omitempty"`
+
+	// SendResult Result of the send.
+	SendResult *EmailSendStatusViewSendResult `json:"sendResult,omitempty"`
+
+	// StartedAt Time when the send began processing.
+	StartedAt *time.Time `json:"startedAt,omitempty"`
+
+	// Status Status of the send request.
+	Status EmailSendStatusViewStatus `json:"status"`
+
+	// StatusId Identifier used to query the status of the send.
+	StatusId string `json:"statusId"`
+}
+
+// EmailSendStatusViewSendResult Result of the send.
+type EmailSendStatusViewSendResult string
+
+// EmailSendStatusViewStatus Status of the send request.
+type EmailSendStatusViewStatus string
+
+// EmailStatisticInterval defines model for EmailStatisticInterval.
+type EmailStatisticInterval struct {
+	Aggregations EmailStatisticsData `json:"aggregations"`
+	Interval     Interval            `json:"interval"`
+}
+
+// EmailStatisticsData defines model for EmailStatisticsData.
+type EmailStatisticsData struct {
+	// Counters Counters like number of `sent`, `open` or `delivered`.
+	Counters map[string]int64 `json:"counters"`
+
+	// DeviceBreakdown Statistics by device.
+	DeviceBreakdown map[string]map[string]int64 `json:"deviceBreakdown"`
+
+	// QualifierStats Number of emails that were dropped and bounced.
+	QualifierStats map[string]map[string]int64 `json:"qualifierStats"`
+
+	// Ratios Ratios like `openratio` or `clickratio`
+	Ratios map[string]float64 `json:"ratios"`
+}
+
+// EmailUpdateRequest defines model for EmailUpdateRequest.
+type EmailUpdateRequest struct {
+	// ActiveDomain The active domain of the email.
+	ActiveDomain *string `json:"activeDomain,omitempty"`
+
+	// Archived Determines if the email is archived or not.
+	Archived *bool `json:"archived,omitempty"`
+
+	// BusinessUnitId The ID of the business unit associated with the email.
+	BusinessUnitId *int64 `json:"businessUnitId,omitempty"`
+
+	// Campaign The ID of the campaign this email is associated to.
+	Campaign *string             `json:"campaign,omitempty"`
+	Content  *PublicEmailContent `json:"content,omitempty"`
+
+	// FolderIdV2 The ID of the folder where the email will be stored.
+	FolderIdV2 *int64                  `json:"folderIdV2,omitempty"`
+	From       *PublicEmailFromDetails `json:"from,omitempty"`
+
+	// JitterSendTime Determines whether the email send time should be randomized to avoid sending all emails at the exact same time.
+	JitterSendTime *bool `json:"jitterSendTime,omitempty"`
+
+	// Language The language code for the email, such as 'en' for English.
+	Language *EmailUpdateRequestLanguage `json:"language,omitempty"`
+
+	// Name The name of the email, as displayed on the email dashboard.
+	Name *string `json:"name,omitempty"`
+
+	// PublishDate The date and time the email is scheduled for, in ISO8601 representation. This is only used in local time or scheduled emails.
+	PublishDate *time.Time             `json:"publishDate,omitempty"`
+	RssData     *PublicRssEmailDetails `json:"rssData,omitempty"`
+
+	// SendOnPublish Determines whether the email will be sent immediately on publish.
+	SendOnPublish *bool `json:"sendOnPublish,omitempty"`
+
+	// State The email state.
+	State *EmailUpdateRequestState `json:"state,omitempty"`
+
+	// Subcategory The email subcategory.
+	Subcategory *EmailUpdateRequestSubcategory `json:"subcategory,omitempty"`
+
+	// Subject The subject of the email.
+	Subject             *string                         `json:"subject,omitempty"`
+	SubscriptionDetails *PublicEmailSubscriptionDetails `json:"subscriptionDetails,omitempty"`
+	Testing             *PublicEmailTestingDetails      `json:"testing,omitempty"`
+	To                  *PublicEmailToDetails           `json:"to,omitempty"`
+	Webversion          *PublicWebversionDetails        `json:"webversion,omitempty"`
+}
+
+// EmailUpdateRequestLanguage The language code for the email, such as 'en' for English.
+type EmailUpdateRequestLanguage string
+
+// EmailUpdateRequestState The email state.
+type EmailUpdateRequestState string
+
+// EmailUpdateRequestSubcategory The email subcategory.
+type EmailUpdateRequestSubcategory string
+
+// Endpoints defines model for Endpoints.
+type Endpoints struct {
+	// Discovery Information related to the discovery of the endpoint, which may include metadata or additional details for client integration.
+	Discovery bool `json:"discovery"`
+
+	// Schemes An array of supported schemes for the endpoint, such as 'http' or 'https'.
+	Schemes []string `json:"schemes"`
+
+	// Url The URL of the endpoint, specifying where the API can be accessed.
+	Url string `json:"url"`
+}
+
+// EnumerationPropertyOperation defines model for EnumerationPropertyOperation.
+type EnumerationPropertyOperation struct {
+	// DefaultValue A string representing the default value for the operation.
+	DefaultValue *string `json:"defaultValue,omitempty"`
+
+	// IncludeObjectsWithNoValueSet A boolean indicating whether to include objects that have no value set for this property.
+	IncludeObjectsWithNoValueSet bool `json:"includeObjectsWithNoValueSet"`
+
+	// OperationType A string indicating the type of operation being performed.
+	OperationType string `json:"operationType"`
+
+	// Operator A string representing the operation to be performed, with valid values including 'IS_ANY_OF', 'IS_NONE_OF', 'IS_EXACTLY', 'IS_NOT_EXACTLY', 'CONTAINS_ALL', 'DOES_NOT_CONTAIN_ALL', 'HAS_EVER_BEEN_ANY_OF', 'HAS_NEVER_BEEN_ANY_OF', 'HAS_EVER_BEEN_EXACTLY', 'HAS_NEVER_BEEN_EXACTLY', 'HAS_EVER_CONTAINED_ALL', and 'HAS_NEVER_CONTAINED_ALL'.
+	Operator EnumerationPropertyOperationOperator `json:"operator"`
+
+	// OperatorName A string representing the name of the operator used in the operation.
+	OperatorName   string          `json:"operatorName"`
+	PropertyAspect *PropertyAspect `json:"propertyAspect,omitempty"`
+
+	// PropertyType A string indicating the type of property, which is 'enumeration' by default.
+	PropertyType EnumerationPropertyOperationPropertyType `json:"propertyType"`
+
+	// RenderSpec A string specifying how the operation should be rendered.
+	RenderSpec *string `json:"renderSpec,omitempty"`
+
+	// Values An array of strings representing the values to be used in the operation.
+	Values []string `json:"values"`
+}
+
+// EnumerationPropertyOperationOperator A string representing the operation to be performed, with valid values including 'IS_ANY_OF', 'IS_NONE_OF', 'IS_EXACTLY', 'IS_NOT_EXACTLY', 'CONTAINS_ALL', 'DOES_NOT_CONTAIN_ALL', 'HAS_EVER_BEEN_ANY_OF', 'HAS_NEVER_BEEN_ANY_OF', 'HAS_EVER_BEEN_EXACTLY', 'HAS_NEVER_BEEN_EXACTLY', 'HAS_EVER_CONTAINED_ALL', and 'HAS_NEVER_CONTAINED_ALL'.
+type EnumerationPropertyOperationOperator string
+
+// EnumerationPropertyOperationPropertyType A string indicating the type of property, which is 'enumeration' by default.
+type EnumerationPropertyOperationPropertyType string
+
+// Error Represents an error response returned by the API when an operation fails. This component is used in various endpoints to provide detailed information about the error encountered.
+//
+// Example: {"category":"VALIDATION_ERROR","correlationId":"aeb5f871-7f07-4993-9211-075dc63e7cbf","links":{"knowledge-base":"https://www.hubspot.com/products/service/knowledge-base"},"message":"Invalid input (details will vary based on the error)"}
+type Error struct {
+	// Category The error category
+	Category string `json:"category"`
+
+	// Context Context about the error condition
+	//
+	// Example: {invalidPropertyName=[propertyValue], missingScopes=[scope1, scope2]}
+	Context *map[string][]string `json:"context,omitempty"`
+
+	// CorrelationId A unique identifier for the request. Include this value with any error reports or support tickets
+	//
+	// Example: aeb5f871-7f07-4993-9211-075dc63e7cbf
+	CorrelationId openapi_types.UUID `json:"correlationId"`
+
+	// Errors further information about the error
+	Errors *[]ErrorDetail `json:"errors,omitempty"`
+
+	// Links A map of link names to associated URIs containing documentation about the error or recommended remediation steps
+	Links *map[string]string `json:"links,omitempty"`
+
+	// Message A human readable message describing the error along with remediation steps where appropriate
+	//
+	// Example: An error occurred
+	Message string `json:"message"`
+
+	// SubCategory A specific category that contains more specific detail about the error
+	SubCategory *string `json:"subCategory,omitempty"`
+}
+
+// ErrorDetail Represents detailed information about an error that occurred in the API. This component is used to provide additional context and specifics about errors, typically as part of an error response.
+type ErrorDetail struct {
+	// Code The status code associated with the error detail
+	Code *string `json:"code,omitempty"`
+
+	// Context Context about the error condition
+	//
+	// Example: {missingScopes=[scope1, scope2]}
+	Context *map[string][]string `json:"context,omitempty"`
+
+	// In The name of the field or parameter in which the error was found.
+	In *string `json:"in,omitempty"`
+
+	// Message A human readable message describing the error along with remediation steps where appropriate
+	Message string `json:"message"`
+
+	// SubCategory A specific category that contains more specific detail about the error
+	SubCategory *string `json:"subCategory,omitempty"`
+}
+
+// EventDetailSettings defines model for EventDetailSettings.
+type EventDetailSettings struct {
+	// AppId The id of the application the settings are for
+	AppId int32 `json:"appId"`
+
+	// EventDetailsUrl The url that will be used to fetch marketing event details by id
+	EventDetailsUrl string `json:"eventDetailsUrl"`
+}
+
+// EventDetailSettingsUrl defines model for EventDetailSettingsUrl.
+type EventDetailSettingsUrl struct {
+	// EventDetailsUrl The url that will be used to fetch marketing event details by id. Must contain a `%s` character sequence that will be substituted with the event id. For example: `https://my.event.app/events/%s`
+	EventDetailsUrl string `json:"eventDetailsUrl"`
+}
+
+// EventIdView defines model for EventIdView.
+type EventIdView struct {
+	// Created Time of event creation.
+	Created time.Time `json:"created"`
+
+	// Id Identifier of event.
+	Id openapi_types.UUID `json:"id"`
+}
+
+// EventVisibilityChange defines model for EventVisibilityChange.
+type EventVisibilityChange struct {
+	// EventType A string representing the type of event whose visibility settings are being changed.
+	EventType EventVisibilityChangeEventType `json:"eventType"`
+
+	// ShowInReporting A boolean indicating whether the event should be included in reporting.
+	ShowInReporting *bool `json:"showInReporting,omitempty"`
+
+	// ShowInTimeline A boolean indicating whether the event should be displayed in the timeline.
+	ShowInTimeline *bool `json:"showInTimeline,omitempty"`
+
+	// ShowInWorkflows A boolean indicating whether the event should be available for use in workflows.
+	ShowInWorkflows *bool `json:"showInWorkflows,omitempty"`
+
+	// UpdatedAt A string representing the date and time when the visibility settings were last updated, in ISO 8601 format.
+	UpdatedAt int64 `json:"updatedAt"`
+}
+
+// EventVisibilityChangeEventType A string representing the type of event whose visibility settings are being changed.
+type EventVisibilityChangeEventType string
+
+// EventVisibilityResponse defines model for EventVisibilityResponse.
+type EventVisibilityResponse struct {
+	// CreatedAt The date and time when the visibility settings were created, in ISO 8601 format.
+	CreatedAt time.Time `json:"createdAt"`
+
+	// VisibilitySettings An object containing the visibility settings for events. The specific structure and properties of this object are not detailed in the provided specification.
+	VisibilitySettings []EventVisibilityChange `json:"visibilitySettings"`
+}
+
+// EventsManageEventDefinitionsAssociationDefinition The definition of an association
+type EventsManageEventDefinitionsAssociationDefinition struct {
+	// AllowsCustomLabels Indicates whether custom labels are allowed for this association.
+	AllowsCustomLabels bool `json:"allowsCustomLabels"`
+
+	// Cardinality Defines the nature of the association in terms of quantity. Valid values are 'ONE_TO_ONE' and 'ONE_TO_MANY'.
+	Cardinality EventsManageEventDefinitionsAssociationDefinitionCardinality `json:"cardinality"`
+
+	// Category The error category
+	Category EventsManageEventDefinitionsAssociationDefinitionCategory `json:"category"`
+
+	// FromObjectType The type of object from which the association originates. Valid values include various HubSpot object types such as 'CONTACT', 'COMPANY', 'DEAL', etc.
+	FromObjectType *EventsManageEventDefinitionsAssociationDefinitionFromObjectType `json:"fromObjectType,omitempty"`
+
+	// FromObjectTypeId The object type ID from which the association originates.
+	FromObjectTypeId string `json:"fromObjectTypeId"`
+
+	// HasAllAssociatedObjects Indicates whether all associated objects are included in the association.
+	HasAllAssociatedObjects bool `json:"hasAllAssociatedObjects"`
+
+	// HasCascadingDeletes Indicates if the association supports cascading deletes.
+	HasCascadingDeletes bool `json:"hasCascadingDeletes"`
+
+	// HasUserEnforcedMaxFromObjectIds Indicates if there is a user-enforced maximum number of object IDs for the source object type.
+	HasUserEnforcedMaxFromObjectIds bool `json:"hasUserEnforcedMaxFromObjectIds"`
+
+	// HasUserEnforcedMaxToObjectIds Indicates if there is a user-enforced maximum number of object IDs for the target object type.
+	HasUserEnforcedMaxToObjectIds bool `json:"hasUserEnforcedMaxToObjectIds"`
+
+	// Hidden Indicates if the association is hidden.
+	Hidden bool `json:"hidden"`
+
+	// HiddenReason The reason why the association is hidden. Valid values include 'DEFAULT', 'INTERNAL', and 'USER_CONFIGURED'.
+	HiddenReason *EventsManageEventDefinitionsAssociationDefinitionHiddenReason `json:"hiddenReason,omitempty"`
+
+	// Id The unique identifier for the association definition.
+	Id int32 `json:"id"`
+
+	// InverseAllowsCustomLabels Indicates whether custom labels are allowed for the inverse association.
+	InverseAllowsCustomLabels bool `json:"inverseAllowsCustomLabels"`
+
+	// InverseCardinality Defines the inverse nature of the association in terms of quantity. Valid values are 'ONE_TO_ONE' and 'ONE_TO_MANY'.
+	InverseCardinality EventsManageEventDefinitionsAssociationDefinitionInverseCardinality `json:"inverseCardinality"`
+
+	// InverseHasAllAssociatedObjects Indicates whether all associated objects are included in the inverse association.
+	InverseHasAllAssociatedObjects bool `json:"inverseHasAllAssociatedObjects"`
+
+	// InverseId The unique identifier for the inverse association definition.
+	InverseId int32 `json:"inverseId"`
+
+	// InverseLabel A human-readable label for the inverse association.
+	InverseLabel *string `json:"inverseLabel,omitempty"`
+
+	// InverseName The name of the inverse association.
+	InverseName string `json:"inverseName"`
+
+	// IsDefault Indicates if this association is the default association.
+	IsDefault bool `json:"isDefault"`
+
+	// IsInversePrimary Indicates if the inverse association is the primary association.
+	IsInversePrimary bool `json:"isInversePrimary"`
+
+	// IsPrimary Indicates if this association is the primary association.
+	IsPrimary bool `json:"isPrimary"`
+
+	// Label A human-readable label for the association.
+	Label *string `json:"label,omitempty"`
+
+	// MaxFromObjectIds The maximum number of object IDs that can be associated from the source object type.
+	MaxFromObjectIds int32 `json:"maxFromObjectIds"`
+
+	// MaxToObjectIds The maximum number of object IDs that can be associated to the target object type.
+	MaxToObjectIds int32 `json:"maxToObjectIds"`
+
+	// Name The name of the association.
+	Name string `json:"name"`
+
+	// PortalUniqueIdentifier A unique identifier for the association within the portal.
+	PortalUniqueIdentifier string `json:"portalUniqueIdentifier"`
+
+	// ReadOnly Indicates if the association is read-only.
+	ReadOnly bool `json:"readOnly"`
+
+	// ToObjectType The type of object to which the association points. Valid values include various HubSpot object types such as 'CONTACT', 'COMPANY', 'DEAL', etc.
+	ToObjectType *EventsManageEventDefinitionsAssociationDefinitionToObjectType `json:"toObjectType,omitempty"`
+
+	// ToObjectTypeId The object type ID to which the association points.
+	ToObjectTypeId string `json:"toObjectTypeId"`
+}
+
+// EventsManageEventDefinitionsAssociationDefinitionCardinality Defines the nature of the association in terms of quantity. Valid values are 'ONE_TO_ONE' and 'ONE_TO_MANY'.
+type EventsManageEventDefinitionsAssociationDefinitionCardinality string
+
+// EventsManageEventDefinitionsAssociationDefinitionCategory The error category
+type EventsManageEventDefinitionsAssociationDefinitionCategory string
+
+// EventsManageEventDefinitionsAssociationDefinitionFromObjectType The type of object from which the association originates. Valid values include various HubSpot object types such as 'CONTACT', 'COMPANY', 'DEAL', etc.
+type EventsManageEventDefinitionsAssociationDefinitionFromObjectType string
+
+// EventsManageEventDefinitionsAssociationDefinitionHiddenReason The reason why the association is hidden. Valid values include 'DEFAULT', 'INTERNAL', and 'USER_CONFIGURED'.
+type EventsManageEventDefinitionsAssociationDefinitionHiddenReason string
+
+// EventsManageEventDefinitionsAssociationDefinitionInverseCardinality Defines the inverse nature of the association in terms of quantity. Valid values are 'ONE_TO_ONE' and 'ONE_TO_MANY'.
+type EventsManageEventDefinitionsAssociationDefinitionInverseCardinality string
+
+// EventsManageEventDefinitionsAssociationDefinitionToObjectType The type of object to which the association points. Valid values include various HubSpot object types such as 'CONTACT', 'COMPANY', 'DEAL', etc.
+type EventsManageEventDefinitionsAssociationDefinitionToObjectType string
+
+// ExchangeRate defines model for ExchangeRate.
+type ExchangeRate struct {
+	// ConversionRate The conversion rate between the to and from currency code of this exchange rate.
+	ConversionRate float64 `json:"conversionRate"`
+
+	// CreatedAt The date the exchange rate was created.
+	CreatedAt time.Time `json:"createdAt"`
+
+	// EffectiveAt The date the exchange rate is in effect.
+	EffectiveAt time.Time `json:"effectiveAt"`
+
+	// FromCurrencyCode This represents the three-letter currency code (such as USD for US Dollar) of the currency you are converting from.
+	FromCurrencyCode ExchangeRateFromCurrencyCode `json:"fromCurrencyCode"`
+
+	// Id A unique identifier for the exchange rate
+	Id string `json:"id"`
+
+	// ToCurrencyCode This represents the three-letter currency code (such as USD for US Dollar) of the currency you are converting to.
+	ToCurrencyCode ExchangeRateToCurrencyCode `json:"toCurrencyCode"`
+
+	// UpdatedAt The date the exchange rate was last updated.
+	UpdatedAt time.Time `json:"updatedAt"`
+
+	// VisibleInUI This indicates if the exchange rate is shown in the MultiCurrency settings page.
+	VisibleInUI bool `json:"visibleInUI"`
+}
+
+// ExchangeRateFromCurrencyCode This represents the three-letter currency code (such as USD for US Dollar) of the currency you are converting from.
+type ExchangeRateFromCurrencyCode string
+
+// ExchangeRateToCurrencyCode This represents the three-letter currency code (such as USD for US Dollar) of the currency you are converting to.
+type ExchangeRateToCurrencyCode string
+
+// ExchangeRateCreateRequest defines model for ExchangeRateCreateRequest.
+type ExchangeRateCreateRequest struct {
+	// ConversionRate The conversion rate between the to and from currency code of this exchange rate.
+	ConversionRate float64 `json:"conversionRate"`
+
+	// EffectiveAt The date the exchange rate is in effect.
+	EffectiveAt *time.Time `json:"effectiveAt,omitempty"`
+
+	// FromCurrencyCode This represents the three-letter currency code (such as USD for US Dollar) of the currency you want to convert from.
+	FromCurrencyCode ExchangeRateCreateRequestFromCurrencyCode `json:"fromCurrencyCode"`
+}
+
+// ExchangeRateCreateRequestFromCurrencyCode This represents the three-letter currency code (such as USD for US Dollar) of the currency you want to convert from.
+type ExchangeRateCreateRequestFromCurrencyCode string
+
+// ExchangeRateMultiplier defines model for ExchangeRateMultiplier.
+type ExchangeRateMultiplier struct {
+	// ConversionRate The updated conversion rate between the to and from currency code of this exchange rate.
+	ConversionRate float64 `json:"conversionRate"`
+
+	// EffectiveAt The date the exchange rate is in effect.
+	EffectiveAt *time.Time `json:"effectiveAt,omitempty"`
+}
+
+// ExchangeRateUpdateRequest defines model for ExchangeRateUpdateRequest.
+type ExchangeRateUpdateRequest struct {
+	// ConversionRate The updated conversion rate between the to and from currency code of this exchange rate.
+	ConversionRate float64 `json:"conversionRate"`
+
+	// EffectiveAt The date the exchange rate will be in effect.
+	EffectiveAt *time.Time `json:"effectiveAt,omitempty"`
+
+	// Id A unique identifier for the exchange rate being updated
+	Id string `json:"id"`
+}
+
+// ExtensionData defines model for ExtensionData.
+type ExtensionData struct {
+	CaseChangeTestExtensionData *CaseChangeTestExtensionData `json:"caseChangeTestExtensionData,omitempty"`
+
+	// ExtensionStatusMap A map that holds the status of various extensions. The keys are extension identifiers, and the values represent the status of each extension.
+	ExtensionStatusMap                  map[string]ExtensionDataExtensionStatusMap `json:"extensionStatusMap"`
+	OptionDecoratorsExtensionData       *OptionDecoratorsExtensionData             `json:"optionDecoratorsExtensionData,omitempty"`
+	RequiredPropertiesExtensionData     *RequiredPropertiesExtensionData           `json:"requiredPropertiesExtensionData,omitempty"`
+	SoftRequiredPropertiesExtensionData *SoftRequiredPropertiesExtensionData       `json:"softRequiredPropertiesExtensionData,omitempty"`
+
+	// Tags An array of tags associated with the extension data. Each tag is a string that categorizes or describes the extension.
+	Tags []string `json:"tags"`
+}
+
+// ExtensionDataExtensionStatusMap defines model for ExtensionData.ExtensionStatusMap.
+type ExtensionDataExtensionStatusMap string
+
+// ExternalAppEventResolutionRequest defines model for ExternalAppEventResolutionRequest.
+type ExternalAppEventResolutionRequest struct {
+	// DeveloperSymbol The developer symbol used to identify the App Event Type. It is a string.
+	DeveloperSymbol string `json:"developerSymbol"`
+
+	// ProjectName The name of the project associated with the App Event Type. It is a string.
+	ProjectName string `json:"projectName"`
+}
+
+// ExternalAssociationCreateRequest defines model for ExternalAssociationCreateRequest.
+type ExternalAssociationCreateRequest struct {
+	// To Contains the Id of a Public Object
+	To PublicObjectId `json:"to"`
+
+	// Types An array of association specifications, detailing the types of associations to be created. Each item in the array is an object that defines the association type.
+	Types []AssociationSpec `json:"types"`
+}
+
+// ExternalBehavioralEventPropertyCreate defines model for ExternalBehavioralEventPropertyCreate.
+type ExternalBehavioralEventPropertyCreate struct {
+	// Description A description of the property that will be shown as help text in HubSpot.
+	Description *string `json:"description,omitempty"`
+
+	// Label Human readable label for the property. Used in HubSpot UI
+	Label string `json:"label"`
+
+	// Name Internal property name, which must be used when referencing the property from the API
+	Name *string `json:"name,omitempty"`
+
+	// Options A list of available options for the property if it is an enumeration. NOTE: This field is only applicable for enumerated properties.
+	Options *[]OptionInput `json:"options,omitempty"`
+
+	// Type The data type of the property. Can be one of the following: [string, number, enumeration, datetime]
+	Type string `json:"type"`
+}
+
+// ExternalBehavioralEventPropertyDefinitionPatch defines model for ExternalBehavioralEventPropertyDefinitionPatch.
+type ExternalBehavioralEventPropertyDefinitionPatch struct {
+	// Description A description of the property that will be shown as help text in HubSpot.
+	Description *string `json:"description,omitempty"`
+
+	// Label Human readable label for the property. Used in HubSpot UI
+	Label *string `json:"label,omitempty"`
+
+	// Options A list of available options for the property if it is an enumeration. NOTE: This field is only applicable for enumerated properties.
+	Options *[]OptionInput `json:"options,omitempty"`
+}
+
+// ExternalBehavioralEventTypeDefinition defines model for ExternalBehavioralEventTypeDefinition.
+type ExternalBehavioralEventTypeDefinition struct {
+	// Archived A boolean indicating whether the event type is archived.
+	Archived bool `json:"archived"`
+
+	// Associations An array of association definitions that define the associations related to the event type.
+	Associations    []EventsManageEventDefinitionsAssociationDefinition `json:"associations"`
+	ComboEventRules *ComboEventRuleBranch                               `json:"comboEventRules,omitempty"`
+
+	// CreatedAt A string representing the date and time when the event type was created, in ISO 8601 format.
+	CreatedAt *time.Time `json:"createdAt,omitempty"`
+
+	// CreatedUserId An integer representing the ID of the user who created the event type.
+	CreatedUserId    *int32                                   `json:"createdUserId,omitempty"`
+	CustomMatchingId *ExternalObjectResolutionMappingResponse `json:"customMatchingId,omitempty"`
+
+	// Description A string providing a description of the event type.
+	Description *string `json:"description,omitempty"`
+
+	// DetailTemplate A string used as a template for the details of the event type.
+	DetailTemplate *string `json:"detailTemplate,omitempty"`
+
+	// FullyQualifiedName A string representing the fully qualified name of the event type.
+	FullyQualifiedName string `json:"fullyQualifiedName"`
+
+	// HeaderTemplate A string used as a template for the header of the event type.
+	HeaderTemplate *string `json:"headerTemplate,omitempty"`
+
+	// Id A string representing the unique identifier of the event type.
+	Id     string                              `json:"id"`
+	Labels BehavioralEventTypeDefinitionLabels `json:"labels"`
+
+	// Name A string representing the name of the event type.
+	Name string `json:"name"`
+
+	// ObjectTypeId A string representing the object type ID of the event type.
+	ObjectTypeId string `json:"objectTypeId"`
+
+	// PrimaryObject A string representing the primary object associated with the event type.
+	PrimaryObject *string `json:"primaryObject,omitempty"`
+
+	// PrimaryObjectId A string representing the ID of the primary object associated with the event type.
+	PrimaryObjectId *string `json:"primaryObjectId,omitempty"`
+
+	// Properties An array of property objects that define the properties of the event type.
+	Properties []Property `json:"properties"`
+
+	// TrackingType A string specifying the tracking type of the event. Valid values include 'VISITED_URL', 'CLICKED_ELEMENT', 'CUSTOM_SCRIPT', and others.
+	TrackingType *ExternalBehavioralEventTypeDefinitionTrackingType `json:"trackingType,omitempty"`
+
+	// UpdatedAt A string representing the date and time when the event type was last updated, in ISO 8601 format.
+	UpdatedAt *time.Time `json:"updatedAt,omitempty"`
+
+	// UpdatedUserId An integer representing the ID of the user who last updated the event type.
+	UpdatedUserId *int32 `json:"updatedUserId,omitempty"`
+}
+
+// ExternalBehavioralEventTypeDefinitionTrackingType A string specifying the tracking type of the event. Valid values include 'VISITED_URL', 'CLICKED_ELEMENT', 'CUSTOM_SCRIPT', and others.
+type ExternalBehavioralEventTypeDefinitionTrackingType string
+
+// ExternalBehavioralEventTypeDefinitionEgg defines model for ExternalBehavioralEventTypeDefinitionEgg.
+type ExternalBehavioralEventTypeDefinitionEgg struct {
+	CustomMatchingId *ExternalObjectResolutionMappingRequest `json:"customMatchingId,omitempty"`
+
+	// Description A description of the event that will be shown as help text in HubSpot.
+	Description *string `json:"description,omitempty"`
+
+	// IncludeDefaultProperties A boolean indicating whether to include default properties in the event type definition.
+	IncludeDefaultProperties bool `json:"includeDefaultProperties"`
+
+	// Label Human readable label for the event. Used in HubSpot UI
+	Label string `json:"label"`
+
+	// Name Internal event name, which must be used when referencing the event from this event definitions API. If a name is not supplied, one will be generated based on the label. The `name` value will also be used to automatically generate a `fullyQualifiedName` for the event definition, which you'll use when sending event completions to this event.
+	Name *string `json:"name,omitempty"`
+
+	// PrimaryObject The object type to associate this event to. Can be one of CONTACT, COMPANY, DEAL, TICKET. If no primaryObject is supplied, we will default to associating the event to CONTACT objects.
+	PrimaryObject *string `json:"primaryObject,omitempty"`
+
+	// PropertyDefinitions List of custom properties on event
+	PropertyDefinitions []ExternalBehavioralEventPropertyCreate `json:"propertyDefinitions"`
+}
+
+// ExternalBehavioralEventTypeDefinitionPatch defines model for ExternalBehavioralEventTypeDefinitionPatch.
+type ExternalBehavioralEventTypeDefinitionPatch struct {
+	// Description A description of the event that will be shown as help text in HubSpot.
+	Description *string `json:"description,omitempty"`
+
+	// Label Human readable label for the event. Used in HubSpot UI
+	Label *string `json:"label,omitempty"`
+}
+
+// ExternalBookingFormField defines model for ExternalBookingFormField.
+type ExternalBookingFormField struct {
+	// Name The name of the form field, represented as a string.
+	Name string `json:"name"`
+
+	// Value The value associated with the form field, represented as a string.
+	Value string `json:"value"`
+}
+
+// ExternalBookingInfo defines model for ExternalBookingInfo.
+type ExternalBookingInfo struct {
+	// AllUsersBusyTimes An array of objects representing the busy times for all users associated with the meeting link.
+	AllUsersBusyTimes []ExternalUserBusyTimes      `json:"allUsersBusyTimes"`
+	BrandingMetadata  *ExternalBrandingMetadata    `json:"brandingMetadata,omitempty"`
+	CustomParams      ExternalMeetingsLinkSettings `json:"customParams"`
+
+	// IsOffline A boolean indicating whether the meeting link is offline.
+	IsOffline        bool                      `json:"isOffline"`
+	LinkAvailability *ExternalLinkAvailability `json:"linkAvailability,omitempty"`
+
+	// LinkId The unique identifier for the meeting link.
+	LinkId string `json:"linkId"`
+
+	// LinkType The type of meeting link. Valid values include 'PERSONAL_LINK', 'GROUP_CALENDAR', and 'ROUND_ROBIN_CALENDAR'.
+	LinkType ExternalBookingInfoLinkType `json:"linkType"`
+}
+
+// ExternalBookingInfoLinkType The type of meeting link. Valid values include 'PERSONAL_LINK', 'GROUP_CALENDAR', and 'ROUND_ROBIN_CALENDAR'.
+type ExternalBookingInfoLinkType string
+
+// ExternalBrandingMetadata defines model for ExternalBrandingMetadata.
+type ExternalBrandingMetadata struct {
+	// Accent2Color The second accent color used for branding, represented as a string.
+	Accent2Color *string `json:"accent2Color,omitempty"`
+
+	// AccentColor The accent color used for branding, represented as a string.
+	AccentColor *string `json:"accentColor,omitempty"`
+
+	// CompanyAddressLine1 The first line of the company's address.
+	CompanyAddressLine1 *string `json:"companyAddressLine1,omitempty"`
+
+	// CompanyAddressLine2 The second line of the company's address, if applicable.
+	CompanyAddressLine2 *string `json:"companyAddressLine2,omitempty"`
+
+	// CompanyAvatar The URL of the company's avatar image.
+	CompanyAvatar *string `json:"companyAvatar,omitempty"`
+
+	// CompanyCity The city where the company is located.
+	CompanyCity *string `json:"companyCity,omitempty"`
+
+	// CompanyCountry The country where the company is located.
+	CompanyCountry *string `json:"companyCountry,omitempty"`
+
+	// CompanyDomain The domain of the company, typically used in URLs.
+	CompanyDomain *string `json:"companyDomain,omitempty"`
+
+	// CompanyName The name of the company.
+	CompanyName *string `json:"companyName,omitempty"`
+
+	// CompanyState The state or region where the company is located.
+	CompanyState *string `json:"companyState,omitempty"`
+
+	// CompanyZip The postal or ZIP code of the company's location.
+	CompanyZip *string `json:"companyZip,omitempty"`
+
+	// LogoAltText The alternative text for the company logo, used for accessibility.
+	LogoAltText string `json:"logoAltText"`
+
+	// LogoHeight The height of the company logo in pixels.
+	LogoHeight *int32 `json:"logoHeight,omitempty"`
+
+	// LogoUrl The URL of the company logo image.
+	LogoUrl *string `json:"logoUrl,omitempty"`
+
+	// LogoWidth The width of the company logo in pixels.
+	LogoWidth *int32 `json:"logoWidth,omitempty"`
+
+	// PrimaryColor The primary color used for branding, represented as a string.
+	PrimaryColor *string `json:"primaryColor,omitempty"`
+
+	// SecondaryColor The secondary color used for branding, represented as a string.
+	SecondaryColor *string `json:"secondaryColor,omitempty"`
+
+	// ShowMarketingAd Indicates whether a marketing advertisement should be displayed. This is a boolean value.
+	ShowMarketingAd bool `json:"showMarketingAd"`
+
+	// ShowSalesAd Indicates whether a sales advertisement should be displayed. This is a boolean value.
+	ShowSalesAd bool `json:"showSalesAd"`
+}
+
+// ExternalCalendarMeetingEventCreateProperties defines model for ExternalCalendarMeetingEventCreateProperties.
+type ExternalCalendarMeetingEventCreateProperties struct {
+	// HsActivityType The type of activity for the meeting. This is a string value.
+	HsActivityType *string `json:"hs_activity_type,omitempty"`
+
+	// HsAttachmentIds An array of strings representing the IDs of attachments associated with the meeting.
+	HsAttachmentIds *[]string `json:"hs_attachment_ids,omitempty"`
+
+	// HsAttendeeOwnerIds An array of strings representing the IDs of the owners of the attendees for the meeting.
+	HsAttendeeOwnerIds *[]string `json:"hs_attendee_owner_ids,omitempty"`
+
+	// HsInternalMeetingNotes Internal notes for the meeting. This is a string value.
+	HsInternalMeetingNotes *string `json:"hs_internal_meeting_notes,omitempty"`
+
+	// HsMeetingBody The body content or description of the meeting. This is a string value.
+	HsMeetingBody *string `json:"hs_meeting_body,omitempty"`
+
+	// HsMeetingEndTime The end time of the meeting, in ISO 8601 format.
+	HsMeetingEndTime time.Time `json:"hs_meeting_end_time"`
+
+	// HsMeetingLocation The location of the meeting. This is a string value.
+	HsMeetingLocation *string `json:"hs_meeting_location,omitempty"`
+
+	// HsMeetingLocationType The type of location for the meeting. Valid values include 'PHONE', 'ADDRESS', and 'CUSTOM'.
+	HsMeetingLocationType *ExternalCalendarMeetingEventCreatePropertiesHsMeetingLocationType `json:"hs_meeting_location_type,omitempty"`
+
+	// HsMeetingOutcome A string representing the outcome of the meeting.
+	HsMeetingOutcome string `json:"hs_meeting_outcome"`
+
+	// HsMeetingStartTime The start time of the meeting, in ISO 8601 format.
+	HsMeetingStartTime time.Time `json:"hs_meeting_start_time"`
+
+	// HsMeetingTitle The title of the meeting. This is a string value.
+	HsMeetingTitle string `json:"hs_meeting_title"`
+
+	// HsTimestamp A timestamp indicating when the meeting event was created, in ISO 8601 format.
+	HsTimestamp time.Time `json:"hs_timestamp"`
+
+	// HubspotOwnerId The unique identifier of the HubSpot owner associated with the meeting.
+	HubspotOwnerId string `json:"hubspot_owner_id"`
+}
+
+// ExternalCalendarMeetingEventCreatePropertiesHsMeetingLocationType The type of location for the meeting. Valid values include 'PHONE', 'ADDRESS', and 'CUSTOM'.
+type ExternalCalendarMeetingEventCreatePropertiesHsMeetingLocationType string
+
+// ExternalCalendarMeetingEventCreateRequest defines model for ExternalCalendarMeetingEventCreateRequest.
+type ExternalCalendarMeetingEventCreateRequest struct {
+	// Associations An array of associations related to the meeting event, each represented by an ExternalAssociationCreateRequest object.
+	Associations          []ExternalAssociationCreateRequest           `json:"associations"`
+	EmailReminderSchedule ExternalEmailReminderSchedule                `json:"emailReminderSchedule"`
+	Properties            ExternalCalendarMeetingEventCreateProperties `json:"properties"`
+
+	// Timezone A string representing the timezone in which the meeting event is scheduled.
+	Timezone string `json:"timezone"`
+}
+
+// ExternalCalendarMeetingEventResponseProperties defines model for ExternalCalendarMeetingEventResponseProperties.
+type ExternalCalendarMeetingEventResponseProperties struct {
+	// HsActivityType The type of activity associated with the meeting.
+	HsActivityType *string `json:"hs_activity_type,omitempty"`
+
+	// HsAttachmentIds An array of unique identifiers for attachments associated with the meeting.
+	HsAttachmentIds *[]string `json:"hs_attachment_ids,omitempty"`
+
+	// HsAttendeeOwnerIds An array of unique identifiers for the owners of the attendees.
+	HsAttendeeOwnerIds *[]string `json:"hs_attendee_owner_ids,omitempty"`
+
+	// HsEngagementSource The source of the engagement. Valid values include a wide range of sources such as 'UNKNOWN', 'IMPORT', 'API', 'FORM', and many others.
+	HsEngagementSource ExternalCalendarMeetingEventResponsePropertiesHsEngagementSource `json:"hs_engagement_source"`
+
+	// HsEngagementSourceId The unique identifier for the source of the engagement.
+	HsEngagementSourceId string `json:"hs_engagement_source_id"`
+
+	// HsIncludeDescriptionInReminder Indicates whether the meeting description should be included in reminders.
+	HsIncludeDescriptionInReminder *string `json:"hs_include_description_in_reminder,omitempty"`
+
+	// HsInternalMeetingNotes Internal notes related to the meeting.
+	HsInternalMeetingNotes *string `json:"hs_internal_meeting_notes,omitempty"`
+
+	// HsMeetingBody The body or description of the meeting.
+	HsMeetingBody *string `json:"hs_meeting_body,omitempty"`
+
+	// HsMeetingEndTime The end time of the meeting, in ISO 8601 format.
+	HsMeetingEndTime time.Time `json:"hs_meeting_end_time"`
+
+	// HsMeetingExternalUrl The external URL associated with the meeting.
+	HsMeetingExternalUrl *string `json:"hs_meeting_external_url,omitempty"`
+
+	// HsMeetingLocation The location where the meeting is held.
+	HsMeetingLocation *string `json:"hs_meeting_location,omitempty"`
+
+	// HsMeetingLocationType The type of location for the meeting. Valid values include 'PHONE', 'ADDRESS', and 'CUSTOM'.
+	HsMeetingLocationType *ExternalCalendarMeetingEventResponsePropertiesHsMeetingLocationType `json:"hs_meeting_location_type,omitempty"`
+
+	// HsMeetingOutcome The outcome of the meeting.
+	HsMeetingOutcome string `json:"hs_meeting_outcome"`
+
+	// HsMeetingStartTime The start time of the meeting, in ISO 8601 format.
+	HsMeetingStartTime time.Time `json:"hs_meeting_start_time"`
+
+	// HsMeetingTitle The title of the meeting.
+	HsMeetingTitle string `json:"hs_meeting_title"`
+
+	// HsTimestamp A timestamp indicating when the meeting event was recorded, in ISO 8601 format.
+	HsTimestamp time.Time `json:"hs_timestamp"`
+
+	// HsUniqueId A unique identifier for the meeting event.
+	HsUniqueId *string `json:"hs_unique_id,omitempty"`
+
+	// HubspotOwnerId The unique identifier of the HubSpot owner associated with the meeting.
+	HubspotOwnerId *string `json:"hubspot_owner_id,omitempty"`
+}
+
+// ExternalCalendarMeetingEventResponsePropertiesHsEngagementSource The source of the engagement. Valid values include a wide range of sources such as 'UNKNOWN', 'IMPORT', 'API', 'FORM', and many others.
+type ExternalCalendarMeetingEventResponsePropertiesHsEngagementSource string
+
+// ExternalCalendarMeetingEventResponsePropertiesHsMeetingLocationType The type of location for the meeting. Valid values include 'PHONE', 'ADDRESS', and 'CUSTOM'.
+type ExternalCalendarMeetingEventResponsePropertiesHsMeetingLocationType string
+
+// ExternalCalenderMeetingEventResponse defines model for ExternalCalenderMeetingEventResponse.
+type ExternalCalenderMeetingEventResponse struct {
+	// CreatedAt The date and time when the calendar meeting event was created, in ISO 8601 format.
+	CreatedAt time.Time `json:"createdAt"`
+
+	// Id The unique identifier for the calendar meeting event.
+	Id string `json:"id"`
+
+	// LastUpdatedAt The date and time when the calendar meeting event was last updated, in ISO 8601 format.
+	LastUpdatedAt time.Time                                      `json:"lastUpdatedAt"`
+	Properties    ExternalCalendarMeetingEventResponseProperties `json:"properties"`
+}
+
+// ExternalClosedRange defines model for ExternalClosedRange.
+type ExternalClosedRange struct {
+	// End The ending point of the range, represented as an integer in int64 format.
+	End int64 `json:"end"`
+
+	// Start The starting point of the range, represented as an integer in int64 format.
+	Start int64 `json:"start"`
+}
+
+// ExternalCommunicationConsentCheckbox defines model for ExternalCommunicationConsentCheckbox.
+type ExternalCommunicationConsentCheckbox struct {
+	// CommunicationTypeId A string representing the unique identifier for the type of communication this checkbox pertains to.
+	CommunicationTypeId string `json:"communicationTypeId"`
+
+	// Label A string that contains the text label displayed next to the checkbox, describing the communication type or purpose.
+	Label string `json:"label"`
+
+	// Required A boolean indicating whether this checkbox must be checked by the user to proceed, signifying mandatory consent.
+	Required bool `json:"required"`
+}
+
+// ExternalEmailReminderSchedule defines model for ExternalEmailReminderSchedule.
+type ExternalEmailReminderSchedule struct {
+	// Reminders An array of ExternalReminder objects that specify the timing and frequency of the email reminders.
+	Reminders []ExternalReminder `json:"reminders"`
+
+	// ShouldIncludeInviteDescription A boolean indicating whether the invite description should be included in the email reminder.
+	ShouldIncludeInviteDescription bool `json:"shouldIncludeInviteDescription"`
+}
+
+// ExternalGuestSettings defines model for ExternalGuestSettings.
+type ExternalGuestSettings struct {
+	// CanAddGuests A boolean indicating whether guests can be added to the meeting.
+	CanAddGuests bool `json:"canAddGuests"`
+
+	// MaxGuestCount An integer specifying the maximum number of guests that can be added to the meeting.
+	MaxGuestCount int32 `json:"maxGuestCount"`
+}
+
+// ExternalLegalConsentOptions defines model for ExternalLegalConsentOptions.
+type ExternalLegalConsentOptions struct {
+	// CommunicationConsentCheckboxes An array of communication consent checkboxes, each defined by an ExternalCommunicationConsentCheckbox object.
+	CommunicationConsentCheckboxes []ExternalCommunicationConsentCheckbox `json:"communicationConsentCheckboxes"`
+
+	// CommunicationConsentText A string containing the text for communication consent.
+	CommunicationConsentText string `json:"communicationConsentText"`
+
+	// IsLegitimateInterest A boolean indicating whether legitimate interest is applicable.
+	IsLegitimateInterest bool `json:"isLegitimateInterest"`
+
+	// LegitimateInterestLegalBasis A string indicating the legal basis for legitimate interest. Valid values include 'LEGITIMATE_INTEREST_PQL', 'LEGITIMATE_INTEREST_CLIENT', 'PERFORMANCE_OF_CONTRACT', 'CONSENT_WITH_NOTICE', 'NON_GDPR', 'PROCESS_AND_STORE', and 'LEGITIMATE_INTEREST_OTHER'.
+	LegitimateInterestLegalBasis *ExternalLegalConsentOptionsLegitimateInterestLegalBasis `json:"legitimateInterestLegalBasis,omitempty"`
+
+	// LegitimateInterestSubscriptionTypes An array of integers representing the subscription types that fall under legitimate interest.
+	LegitimateInterestSubscriptionTypes []int64 `json:"legitimateInterestSubscriptionTypes"`
+
+	// PrivacyPolicyText A string containing the text for the privacy policy.
+	PrivacyPolicyText string `json:"privacyPolicyText"`
+
+	// ProcessingConsentCheckboxLabel A string representing the label for the processing consent checkbox.
+	ProcessingConsentCheckboxLabel string `json:"processingConsentCheckboxLabel"`
+
+	// ProcessingConsentFooterText A string containing the footer text for processing consent.
+	ProcessingConsentFooterText string `json:"processingConsentFooterText"`
+
+	// ProcessingConsentText A string containing the text for processing consent.
+	ProcessingConsentText string `json:"processingConsentText"`
+
+	// ProcessingConsentType A string indicating the type of processing consent. Valid values are 'IMPLICIT' and 'REQUIRED_CHECKBOX'.
+	ProcessingConsentType ExternalLegalConsentOptionsProcessingConsentType `json:"processingConsentType"`
+}
+
+// ExternalLegalConsentOptionsLegitimateInterestLegalBasis A string indicating the legal basis for legitimate interest. Valid values include 'LEGITIMATE_INTEREST_PQL', 'LEGITIMATE_INTEREST_CLIENT', 'PERFORMANCE_OF_CONTRACT', 'CONSENT_WITH_NOTICE', 'NON_GDPR', 'PROCESS_AND_STORE', and 'LEGITIMATE_INTEREST_OTHER'.
+type ExternalLegalConsentOptionsLegitimateInterestLegalBasis string
+
+// ExternalLegalConsentOptionsProcessingConsentType A string indicating the type of processing consent. Valid values are 'IMPLICIT' and 'REQUIRED_CHECKBOX'.
+type ExternalLegalConsentOptionsProcessingConsentType string
+
+// ExternalLegalConsentResponse defines model for ExternalLegalConsentResponse.
+type ExternalLegalConsentResponse struct {
+	// CommunicationTypeId A string representing the unique identifier for the type of communication for which consent is being recorded.
+	CommunicationTypeId string `json:"communicationTypeId"`
+
+	// Consented A boolean indicating whether the user has given consent for the communication type. It is true if consent is given, otherwise false.
+	Consented bool `json:"consented"`
+}
+
+// ExternalLinkAvailability defines model for ExternalLinkAvailability.
+type ExternalLinkAvailability struct {
+	// HasMore A boolean indicating whether there are more available meeting times beyond those currently provided.
+	HasMore bool `json:"hasMore"`
+
+	// LinkAvailabilityByDuration An object where each key is a duration and the value is an availability object for that duration. This provides detailed availability information for each specified meeting duration.
+	LinkAvailabilityByDuration map[string]ExternalLinkAvailabilityForDuration `json:"linkAvailabilityByDuration"`
+}
+
+// ExternalLinkAvailabilityAndBusyTimes defines model for ExternalLinkAvailabilityAndBusyTimes.
+type ExternalLinkAvailabilityAndBusyTimes struct {
+	// AllUsersBusyTimes An array of objects representing the busy times for all users associated with the meeting link. Each object includes the user's busy time ranges.
+	AllUsersBusyTimes []ExternalUserBusyTimes   `json:"allUsersBusyTimes"`
+	LinkAvailability  *ExternalLinkAvailability `json:"linkAvailability,omitempty"`
+}
+
+// ExternalLinkAvailabilityForDuration defines model for ExternalLinkAvailabilityForDuration.
+type ExternalLinkAvailabilityForDuration struct {
+	// Availabilities An array of available time slots for the specified meeting duration. Each item in the array is an object representing a time slot's start and end times.
+	Availabilities []ExternalMeetingAvailability `json:"availabilities"`
+
+	// MeetingDurationMillis The duration of the meeting in milliseconds. This is an integer value representing the length of the meeting.
+	MeetingDurationMillis int64 `json:"meetingDurationMillis"`
+}
+
+// ExternalLinkDisplayInfo defines model for ExternalLinkDisplayInfo.
+type ExternalLinkDisplayInfo struct {
+	// Avatar A string representing the URL of the avatar image to be displayed.
+	Avatar *string `json:"avatar,omitempty"`
+
+	// CompanyAvatar A string representing the URL of the company avatar image to be displayed.
+	CompanyAvatar *string `json:"companyAvatar,omitempty"`
+
+	// Headline A string representing the headline text to be displayed with the meeting link.
+	Headline *string `json:"headline,omitempty"`
+
+	// PublicDisplayAvatarOption A string indicating the avatar display option, with valid values including 'PROFILE_IMAGE', 'COMPANY_LOGO', and 'CUSTOM_AVATAR'.
+	PublicDisplayAvatarOption *ExternalLinkDisplayInfoPublicDisplayAvatarOption `json:"publicDisplayAvatarOption,omitempty"`
+}
+
+// ExternalLinkDisplayInfoPublicDisplayAvatarOption A string indicating the avatar display option, with valid values including 'PROFILE_IMAGE', 'COMPANY_LOGO', and 'CUSTOM_AVATAR'.
+type ExternalLinkDisplayInfoPublicDisplayAvatarOption string
+
+// ExternalLinkFormField defines model for ExternalLinkFormField.
+type ExternalLinkFormField struct {
+	// FieldType The type of the form field, represented as a string, indicating the kind of input expected.
+	FieldType string `json:"fieldType"`
+
+	// IsCustom A boolean indicating whether the form field is a custom field defined by the user.
+	IsCustom bool `json:"isCustom"`
+
+	// IsRequired A boolean indicating whether the form field is mandatory for the user to fill out.
+	IsRequired bool `json:"isRequired"`
+
+	// Label The display label for the form field, shown to users, represented as a string.
+	Label string `json:"label"`
+
+	// Name The unique name identifier for the form field, represented as a string.
+	Name string `json:"name"`
+
+	// Options An array of options available for the form field, applicable if the field type supports multiple choices.
+	Options []ExternalOption `json:"options"`
+
+	// Type The specific data type of the form field, represented as a string.
+	Type string `json:"type"`
+}
+
+// ExternalLinkMetadata defines model for ExternalLinkMetadata.
+type ExternalLinkMetadata struct {
+	// CreatedAt The date and time when the meeting link was created, in ISO 8601 format.
+	CreatedAt time.Time `json:"createdAt"`
+
+	// DefaultLink A boolean indicating whether this is the default meeting link.
+	DefaultLink bool `json:"defaultLink"`
+
+	// Id The unique identifier for the meeting link.
+	Id string `json:"id"`
+
+	// Link The full URL of the meeting link.
+	Link string `json:"link"`
+
+	// Name The name of the meeting link.
+	Name *string `json:"name,omitempty"`
+
+	// OrganizerUserId The unique identifier of the user who organized the meeting.
+	OrganizerUserId string `json:"organizerUserId"`
+
+	// PaymentLinkId An integer representing the identifier for the payment link associated with the meeting.
+	PaymentLinkId *string `json:"paymentLinkId,omitempty"`
+
+	// Slug A string representing the unique part of the URL for the meeting link.
+	Slug string `json:"slug"`
+
+	// Type The type of meeting link. Valid values include 'PERSONAL_LINK', 'GROUP_CALENDAR', and 'ROUND_ROBIN_CALENDAR'.
+	Type ExternalLinkMetadataType `json:"type"`
+
+	// UpdatedAt The date and time when the meeting link was last updated, in ISO 8601 format.
+	UpdatedAt *time.Time `json:"updatedAt,omitempty"`
+
+	// UserIdsOfLinkMembers An array of user IDs representing the members associated with the meeting link.
+	UserIdsOfLinkMembers []string `json:"userIdsOfLinkMembers"`
+}
+
+// ExternalLinkMetadataType The type of meeting link. Valid values include 'PERSONAL_LINK', 'GROUP_CALENDAR', and 'ROUND_ROBIN_CALENDAR'.
+type ExternalLinkMetadataType string
+
+// ExternalMeetingAvailability defines model for ExternalMeetingAvailability.
+type ExternalMeetingAvailability struct {
+	// EndMillisUtc The end time of the meeting availability, represented as a Unix timestamp in milliseconds.
+	EndMillisUtc int64 `json:"endMillisUtc"`
+
+	// StartMillisUtc The start time of the meeting availability, represented as a Unix timestamp in milliseconds.
+	StartMillisUtc int64 `json:"startMillisUtc"`
+}
+
+// ExternalMeetingBooking defines model for ExternalMeetingBooking.
+type ExternalMeetingBooking struct {
+	// Duration An integer representing the duration of the meeting in minutes.
+	Duration int64 `json:"duration"`
+
+	// Email The email address of the person booking the meeting.
+	Email string `json:"email"`
+
+	// FirstName The first name of the person booking the meeting.
+	FirstName string `json:"firstName"`
+
+	// FormFields An array of form fields filled out by the participant, each containing a name and value.
+	FormFields []ExternalBookingFormField `json:"formFields"`
+
+	// LastName The last name of the person booking the meeting.
+	LastName string `json:"lastName"`
+
+	// LegalConsentResponses An array of legal consent responses, each detailing the consent given by the participant.
+	LegalConsentResponses []ExternalLegalConsentResponse `json:"legalConsentResponses"`
+
+	// LikelyAvailableUserIds An array of strings representing the user IDs of those likely available for the meeting.
+	LikelyAvailableUserIds []string `json:"likelyAvailableUserIds"`
+
+	// Locale A string representing the locale of the person booking the meeting.
+	Locale *string `json:"locale,omitempty"`
+
+	// Slug A string representing the unique identifier for the meeting link.
+	Slug string `json:"slug"`
+
+	// StartTime The start time of the meeting in ISO 8601 date-time format.
+	StartTime time.Time `json:"startTime"`
+
+	// Timezone A string representing the timezone of the person booking the meeting.
+	Timezone *string `json:"timezone,omitempty"`
+}
+
+// ExternalMeetingBookingResponse defines model for ExternalMeetingBookingResponse.
+type ExternalMeetingBookingResponse struct {
+	// BookingTimezone The timezone in which the meeting was booked, represented as a string.
+	BookingTimezone string `json:"bookingTimezone"`
+
+	// CalendarEventId The unique identifier for the calendar event associated with this meeting.
+	CalendarEventId string `json:"calendarEventId"`
+
+	// ContactId The unique identifier for the contact associated with this meeting.
+	ContactId string `json:"contactId"`
+
+	// Duration The duration of the meeting in minutes, represented as an integer.
+	Duration int64 `json:"duration"`
+
+	// End The end date and time of the meeting, in ISO 8601 format.
+	End time.Time `json:"end"`
+
+	// FormFields An array of validated form fields submitted during the booking process, each represented by an ExternalValidatedFormField object.
+	FormFields []ExternalValidatedFormField `json:"formFields"`
+
+	// GuestEmails An array of email addresses for the guests invited to the meeting.
+	GuestEmails []string `json:"guestEmails"`
+
+	// IsOffline A boolean indicating whether the meeting is offline (true) or online (false).
+	IsOffline bool `json:"isOffline"`
+
+	// LegalConsentResponses An array of legal consent responses associated with the meeting, each represented by an ExternalLegalConsentResponse object.
+	LegalConsentResponses []ExternalLegalConsentResponse `json:"legalConsentResponses"`
+
+	// Locale The locale setting for the meeting, represented as a string.
+	Locale *string `json:"locale,omitempty"`
+
+	// Location The location of the meeting, represented as a string.
+	Location *string `json:"location,omitempty"`
+
+	// Start The start date and time of the meeting, in ISO 8601 format.
+	Start time.Time `json:"start"`
+
+	// Subject The subject or title of the meeting, represented as a string.
+	Subject string `json:"subject"`
+
+	// WebConferenceMeetingId The unique identifier for the web conference meeting, if applicable.
+	WebConferenceMeetingId *string `json:"webConferenceMeetingId,omitempty"`
+
+	// WebConferenceUrl The URL for the web conference associated with the meeting, if applicable.
+	WebConferenceUrl *string `json:"webConferenceUrl,omitempty"`
+}
+
+// ExternalMeetingsLinkSettings defines model for ExternalMeetingsLinkSettings.
+type ExternalMeetingsLinkSettings struct {
+	// Availability An object representing the availability settings for the meeting link, with additional properties for closed ranges.
+	Availability map[string]ExternalClosedRange `json:"availability"`
+
+	// CustomAvailabilityEndDate An integer representing the custom availability end date as a Unix timestamp in milliseconds.
+	CustomAvailabilityEndDate *int64 `json:"customAvailabilityEndDate,omitempty"`
+
+	// CustomAvailabilityStartDate An integer representing the custom availability start date as a Unix timestamp in milliseconds.
+	CustomAvailabilityStartDate *int64                   `json:"customAvailabilityStartDate,omitempty"`
+	DisplayInfo                 *ExternalLinkDisplayInfo `json:"displayInfo,omitempty"`
+
+	// Durations An array of integers representing the possible durations for meetings in milliseconds.
+	Durations []int64 `json:"durations"`
+
+	// FormFields An array of form fields that are included in the meeting link form.
+	FormFields    []ExternalLinkFormField `json:"formFields"`
+	GuestSettings *ExternalGuestSettings  `json:"guestSettings,omitempty"`
+
+	// Language A string representing the language setting for the meeting link.
+	Language *string `json:"language,omitempty"`
+
+	// LegalConsentEnabled A boolean indicating whether legal consent is required for the meeting link.
+	LegalConsentEnabled bool                         `json:"legalConsentEnabled"`
+	LegalConsentOptions *ExternalLegalConsentOptions `json:"legalConsentOptions,omitempty"`
+
+	// Locale A string representing the locale setting for the meeting link.
+	Locale *string `json:"locale,omitempty"`
+
+	// Location A string representing the location information for the meeting.
+	Location *string `json:"location,omitempty"`
+
+	// MeetingBufferTime An integer representing the buffer time between meetings in milliseconds.
+	MeetingBufferTime int64 `json:"meetingBufferTime"`
+
+	// OwnerPrioritized A boolean indicating whether the meeting owner is prioritized in scheduling.
+	OwnerPrioritized bool `json:"ownerPrioritized"`
+
+	// RedirectUrl A string representing the URL to which users are redirected after booking a meeting.
+	RedirectUrl *string `json:"redirectUrl,omitempty"`
+
+	// StartTimeIncrementMinutes A string indicating the increment for start times, with valid values including 'MEETING_DURATION', 'FIVE', 'TEN', 'FIFTEEN', 'TWENTY', 'THIRTY', 'FORTY_FIVE', 'SIXTY', 'NINETY', and 'ONE_HUNDRED_TWENTY'.
+	StartTimeIncrementMinutes ExternalMeetingsLinkSettingsStartTimeIncrementMinutes `json:"startTimeIncrementMinutes"`
+
+	// WeeksToAdvertise An integer representing the number of weeks to advertise the meeting link.
+	WeeksToAdvertise  int32                              `json:"weeksToAdvertise"`
+	WelcomeScreenInfo *ExternalMeetingsWelcomeScreenInfo `json:"welcomeScreenInfo,omitempty"`
+}
+
+// ExternalMeetingsLinkSettingsStartTimeIncrementMinutes A string indicating the increment for start times, with valid values including 'MEETING_DURATION', 'FIVE', 'TEN', 'FIFTEEN', 'TWENTY', 'THIRTY', 'FORTY_FIVE', 'SIXTY', 'NINETY', and 'ONE_HUNDRED_TWENTY'.
+type ExternalMeetingsLinkSettingsStartTimeIncrementMinutes string
+
+// ExternalMeetingsUser defines model for ExternalMeetingsUser.
+type ExternalMeetingsUser struct {
+	// CalendarProvider The calendar service provider used by the user. Valid values include 'GOOGLE', 'OFFICE365', 'EXCHANGE', and 'UNKNOWN'.
+	CalendarProvider ExternalMeetingsUserCalendarProvider `json:"calendarProvider"`
+
+	// Id The unique identifier for the meetings user.
+	Id string `json:"id"`
+
+	// IsSalesStarter A boolean indicating whether the user is a sales starter.
+	IsSalesStarter bool `json:"isSalesStarter"`
+
+	// UserId The unique identifier for the user associated with the meetings service.
+	UserId      string              `json:"userId"`
+	UserProfile ExternalUserProfile `json:"userProfile"`
+}
+
+// ExternalMeetingsUserCalendarProvider The calendar service provider used by the user. Valid values include 'GOOGLE', 'OFFICE365', 'EXCHANGE', and 'UNKNOWN'.
+type ExternalMeetingsUserCalendarProvider string
+
+// ExternalMeetingsWelcomeScreenInfo defines model for ExternalMeetingsWelcomeScreenInfo.
+type ExternalMeetingsWelcomeScreenInfo struct {
+	// Description A descriptive text shown on the welcome screen. It is a string value.
+	Description *string `json:"description,omitempty"`
+
+	// LogoUrl The URL of the logo image displayed on the welcome screen. It is a string value.
+	LogoUrl *string `json:"logoUrl,omitempty"`
+
+	// ShowWelcomeScreen A boolean indicating whether the welcome screen should be displayed to users.
+	ShowWelcomeScreen *bool `json:"showWelcomeScreen,omitempty"`
+
+	// Title The title displayed on the welcome screen. It is a string value.
+	Title *string `json:"title,omitempty"`
+
+	// UseCompanyLogo A boolean indicating whether the company's logo should be used on the welcome screen.
+	UseCompanyLogo *bool `json:"useCompanyLogo,omitempty"`
+}
+
+// ExternalObjectResolutionMappingRequest defines model for ExternalObjectResolutionMappingRequest.
+type ExternalObjectResolutionMappingRequest struct {
+	PrimaryObjectRule ExternalPrimaryObjectResolutionRule `json:"primaryObjectRule"`
+}
+
+// ExternalObjectResolutionMappingResponse defines model for ExternalObjectResolutionMappingResponse.
+type ExternalObjectResolutionMappingResponse struct {
+	PrimaryObjectRule ExternalPrimaryObjectResolutionRule `json:"primaryObjectRule"`
+}
+
+// ExternalOption defines model for ExternalOption.
+type ExternalOption struct {
+	// Description A string providing a detailed description of the option.
+	Description string `json:"description"`
+
+	// DisplayOrder An integer indicating the order in which the option should be displayed relative to other options.
+	DisplayOrder int32 `json:"displayOrder"`
+
+	// DoubleData A number that may hold additional data associated with the option.
+	DoubleData float64 `json:"doubleData"`
+
+	// Hidden A boolean indicating whether the option is hidden from display.
+	Hidden bool `json:"hidden"`
+
+	// Label A string representing the display name of the option.
+	Label string `json:"label"`
+
+	// ReadOnly A boolean indicating whether the option is read-only and cannot be modified.
+	ReadOnly bool `json:"readOnly"`
+
+	// Value A string representing the internal value associated with the option.
+	Value string `json:"value"`
+}
+
+// ExternalOptionsMetaData defines model for ExternalOptionsMetaData.
+type ExternalOptionsMetaData struct {
+	Filter *FilteringMetaData `json:"filter,omitempty"`
+
+	// FromObjectId A string representing the identifier of the object from which the external options are derived or related.
+	FromObjectId *int64 `json:"fromObjectId,omitempty"`
+
+	// PropertyName A string indicating the name of the property for which the external options metadata is being defined.
+	PropertyName *string `json:"propertyName,omitempty"`
+
+	// RelatedObjectTypeId A string representing the identifier of the related object type. This is used to specify which type of object the external options are associated with.
+	RelatedObjectTypeId *string `json:"relatedObjectTypeId,omitempty"`
+}
+
+// ExternalPrimaryObjectResolutionRule defines model for ExternalPrimaryObjectResolutionRule.
+type ExternalPrimaryObjectResolutionRule struct {
+	// EventPropertyName The name of the property on the event. This is a string that identifies which property of the event is being used in the resolution rule.
+	EventPropertyName string `json:"eventPropertyName"`
+
+	// TargetObjectPropertyName The name of the property on the target object. This is a string that identifies which property of the target object is being referred to.
+	TargetObjectPropertyName string `json:"targetObjectPropertyName"`
+}
+
+// ExternalReminder defines model for ExternalReminder.
+type ExternalReminder struct {
+	// NumberOfTimeUnits The number of time units before the meeting when the reminder should be sent. This is an integer value.
+	NumberOfTimeUnits int32 `json:"numberOfTimeUnits"`
+
+	// TimeUnit The unit of time for the reminder. Valid values include 'WEEKS', 'DAYS', 'HOURS', and 'MINUTES'.
+	TimeUnit ExternalReminderTimeUnit `json:"timeUnit"`
+}
+
+// ExternalReminderTimeUnit The unit of time for the reminder. Valid values include 'WEEKS', 'DAYS', 'HOURS', and 'MINUTES'.
+type ExternalReminderTimeUnit string
+
+// ExternalSettings defines model for ExternalSettings.
+type ExternalSettings struct {
+	// CreateMeetingUrl A string representing the URL used to create a new meeting. This property is required.
+	CreateMeetingUrl string `json:"createMeetingUrl"`
+
+	// DeleteMeetingUrl A string representing the URL used to delete a meeting.
+	DeleteMeetingUrl *string `json:"deleteMeetingUrl,omitempty"`
+
+	// FetchAccountsUri A string representing the URI used to fetch account information.
+	FetchAccountsUri *string `json:"fetchAccountsUri,omitempty"`
+
+	// UpdateMeetingUrl A string representing the URL used to update an existing meeting.
+	UpdateMeetingUrl *string `json:"updateMeetingUrl,omitempty"`
+
+	// UserVerifyUrl A string representing the URL used to verify a user's identity.
+	UserVerifyUrl *string `json:"userVerifyUrl,omitempty"`
+}
+
+// ExternalTimeRange defines model for ExternalTimeRange.
+type ExternalTimeRange struct {
+	// End The end of the time range, represented as an integer in int64 format.
+	End int64 `json:"end"`
+
+	// Start The start of the time range, represented as an integer in int64 format.
+	Start int64 `json:"start"`
+}
+
+// ExternalUnifiedEvent defines model for ExternalUnifiedEvent.
+type ExternalUnifiedEvent struct {
+	// EventType The format of the `eventType` string is `ae{appId}_{eventTypeLabel}`, `pe{portalId}_{eventTypeLabel}`, or just `e_{eventTypeLabel}` for HubSpot events.
+	EventType string `json:"eventType"`
+
+	// Id A unique identifier for the event.
+	Id string `json:"id"`
+
+	// ObjectId The objectId of the object which did the event.
+	ObjectId string `json:"objectId"`
+
+	// ObjectType The objectType for the object which did the event.
+	ObjectType string `json:"objectType"`
+
+	// OccurredAt An ISO 8601 timestamp when the event occurred.
+	OccurredAt time.Time `json:"occurredAt"`
+
+	// Properties A key-value map of event-specific properties. The available properties depend on the event type definition.
+	Properties map[string]string `json:"properties"`
+}
+
+// ExternalUserBusyTimes defines model for ExternalUserBusyTimes.
+type ExternalUserBusyTimes struct {
+	// BusyTimes An array of time ranges during which the user is busy. Each time range is represented by an object with start and end times.
+	BusyTimes []ExternalTimeRange `json:"busyTimes"`
+
+	// IsOffline A boolean indicating whether the user is currently offline.
+	IsOffline    bool                 `json:"isOffline"`
+	MeetingsUser ExternalMeetingsUser `json:"meetingsUser"`
+}
+
+// ExternalUserProfile defines model for ExternalUserProfile.
+type ExternalUserProfile struct {
+	// Email The email address of the user. This is a required string property.
+	Email string `json:"email"`
+
+	// FirstName The first name of the user. It is a string.
+	FirstName *string `json:"firstName,omitempty"`
+
+	// FullName The full name of the user, combining first and last names. It is a string.
+	FullName *string `json:"fullName,omitempty"`
+
+	// LastName The last name of the user. It is a string.
+	LastName *string `json:"lastName,omitempty"`
+}
+
+// ExternalValidatedFormField defines model for ExternalValidatedFormField.
+type ExternalValidatedFormField struct {
+	// FieldType The type of the form field, represented as a string.
+	FieldType *string `json:"fieldType,omitempty"`
+
+	// IsCustom A boolean indicating whether the form field is custom-defined.
+	IsCustom bool `json:"isCustom"`
+
+	// Label The display label for the form field, represented as a string.
+	Label string `json:"label"`
+
+	// Name The name of the form field, represented as a string.
+	Name string `json:"name"`
+
+	// TranslatedLabel The translated label for the form field, represented as a string.
+	TranslatedLabel *string `json:"translatedLabel,omitempty"`
+
+	// Value The value assigned to the form field, represented as a string.
+	Value string `json:"value"`
+
+	// ValueLabel A label for the field's value, represented as a string.
+	ValueLabel *string `json:"valueLabel,omitempty"`
+}
+
+// FieldLevelPermission defines model for FieldLevelPermission.
+type FieldLevelPermission struct {
+	// AccessLevel The level of access granted for the field. This is a string value that specifies the permission level.
+	AccessLevel string `json:"accessLevel"`
+}
+
+// FieldTypeDefinition defines model for FieldTypeDefinition.
+type FieldTypeDefinition struct {
+	// Description A detailed explanation of the field's purpose and usage.
+	Description *string `json:"description,omitempty"`
+
+	// ExternalOptions Indicates whether the field's options are sourced externally.
+	ExternalOptions bool `json:"externalOptions"`
+
+	// ExternalOptionsReferenceType Specifies the type of external reference for options.
+	ExternalOptionsReferenceType *string `json:"externalOptionsReferenceType,omitempty"`
+
+	// FieldType Describes the field's type in the UI, with accepted values like booleancheckbox, calculation_equation, checkbox, date, file, html, number, phonenumber, radio, select, text, textarea, unknown.
+	FieldType *FieldTypeDefinitionFieldType `json:"fieldType,omitempty"`
+
+	// HelpText Additional information or guidance about the field.
+	HelpText *string `json:"helpText,omitempty"`
+
+	// Label The user-friendly label for the field.
+	Label *string `json:"label,omitempty"`
+
+	// Name The unique identifier for the field.
+	Name string `json:"name"`
+
+	// Options An array of options available for the field, each represented by an Option object.
+	Options []AutomationActionsV4Option `json:"options"`
+
+	// OptionsUrl A URL that provides options for the field.
+	OptionsUrl *string `json:"optionsUrl,omitempty"`
+
+	// ReferencedObjectType Indicates the type of object that the field references, with accepted values like OWNER.
+	ReferencedObjectType *FieldTypeDefinitionReferencedObjectType `json:"referencedObjectType,omitempty"`
+
+	// Schema Defines the structure and constraints of the field.
+	Schema FieldTypeDefinition_Schema `json:"schema"`
+
+	// Type Specifies the data type of the field, with accepted values like bool, date, datetime, enumeration, json, number, object_coordinates, phone_number, string.
+	Type FieldTypeDefinitionType `json:"type"`
+
+	// UseChirp Specifies whether the field uses the Chirp feature.
+	UseChirp bool `json:"useChirp"`
+}
+
+// FieldTypeDefinitionFieldType Describes the field's type in the UI, with accepted values like booleancheckbox, calculation_equation, checkbox, date, file, html, number, phonenumber, radio, select, text, textarea, unknown.
+type FieldTypeDefinitionFieldType string
+
+// FieldTypeDefinitionReferencedObjectType Indicates the type of object that the field references, with accepted values like OWNER.
+type FieldTypeDefinitionReferencedObjectType string
+
+// FieldTypeDefinition_Schema Defines the structure and constraints of the field.
+type FieldTypeDefinition_Schema struct {
+	union json.RawMessage
+}
+
+// FieldTypeDefinitionType Specifies the data type of the field, with accepted values like bool, date, datetime, enumeration, json, number, object_coordinates, phone_number, string.
+type FieldTypeDefinitionType string
+
+// File defines model for File.
+type File struct {
+	// Access File access. Can be PUBLIC_INDEXABLE, PUBLIC_NOT_INDEXABLE, PRIVATE.
+	Access *FileAccess `json:"access,omitempty"`
+
+	// Archived If the file is deleted.
+	Archived bool `json:"archived"`
+
+	// ArchivedAt Deletion time of the file object.
+	ArchivedAt *time.Time `json:"archivedAt,omitempty"`
+
+	// CreatedAt Creation time of the file object.
+	CreatedAt time.Time `json:"createdAt"`
+
+	// DefaultHostingUrl Default hosting URL of the file. This will use one of HubSpot's provided URLs to serve the file.
+	DefaultHostingUrl *string `json:"defaultHostingUrl,omitempty"`
+
+	// Encoding Encoding of the file.
+	Encoding  *string `json:"encoding,omitempty"`
+	ExpiresAt *int64  `json:"expiresAt,omitempty"`
+
+	// Extension Extension of the file. ex: .jpg, .png, .gif, .pdf, etc.
+	Extension *string `json:"extension,omitempty"`
+
+	// FileMd5 The MD5 hash of the file.
+	FileMd5 *string `json:"fileMd5,omitempty"`
+
+	// Height For image and video files, the height of the content.
+	Height *int32 `json:"height,omitempty"`
+
+	// Id File ID.
+	Id string `json:"id"`
+
+	// IsUsableInContent Previously "archied". Indicates if the file should be used when creating new content like web pages.
+	IsUsableInContent *bool `json:"isUsableInContent,omitempty"`
+
+	// Name Name of the file.
+	Name *string `json:"name,omitempty"`
+
+	// ParentFolderId ID of the folder the file is in.
+	ParentFolderId *string `json:"parentFolderId,omitempty"`
+
+	// Path Path of the file in the file manager.
+	Path *string `json:"path,omitempty"`
+
+	// Size Size of the file in bytes.
+	Size        *int64           `json:"size,omitempty"`
+	SourceGroup *FileSourceGroup `json:"sourceGroup,omitempty"`
+
+	// Type Type of the file. Can be IMG, DOCUMENT, AUDIO, MOVIE, or OTHER.
+	Type *string `json:"type,omitempty"`
+
+	// UpdatedAt Timestamp of the latest update to the file.
+	UpdatedAt time.Time `json:"updatedAt"`
+
+	// Url URL of the given file. This URL can change depending on the domain settings of the account. Will use the select file hosting domain.
+	Url *string `json:"url,omitempty"`
+
+	// Width For image and video files, the width of the content.
+	Width *int32 `json:"width,omitempty"`
+}
+
+// FileAccess File access. Can be PUBLIC_INDEXABLE, PUBLIC_NOT_INDEXABLE, PRIVATE.
+type FileAccess string
+
+// FileSourceGroup defines model for File.SourceGroup.
+type FileSourceGroup string
+
+// FileActionResponse defines model for FileActionResponse.
+type FileActionResponse struct {
+	// CompletedAt Time of completion of task.
+	CompletedAt time.Time `json:"completedAt"`
+
+	// Errors Descriptive error messages.
+	Errors *[]StandardError `json:"errors,omitempty"`
+
+	// Links Link to check the status of the requested task.
+	Links *map[string]string `json:"links,omitempty"`
+
+	// NumErrors Number of errors resulting from the task.
+	NumErrors *int32 `json:"numErrors,omitempty"`
+
+	// RequestedAt Timestamp of when the task was requested.
+	RequestedAt *time.Time `json:"requestedAt,omitempty"`
+	Result      *File      `json:"result,omitempty"`
+
+	// StartedAt Timestamp of when the task was started.
+	StartedAt time.Time `json:"startedAt"`
+
+	// Status Current status of the task.
+	Status FileActionResponseStatus `json:"status"`
+
+	// TaskId ID of the requested task.
+	TaskId string `json:"taskId"`
 }
