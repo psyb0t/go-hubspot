@@ -2,6 +2,11 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.3.1, 2026-10-29
+
+- Added the constants `PreResolvedContactContactPropertiesLeadingToMatchHsSmsMobilephoneCommunicationSubscriptionsOptedIn`, `PreResolvedContactContactPropertiesLeadingToMatchHsSmsMobilephoneCommunicationSubscriptionsOptedOut`, `PreResolvedContactContactPropertiesLeadingToMatchHsSmsPhoneCommunicationSubscriptionsOptedIn` and `PreResolvedContactContactPropertiesLeadingToMatchHsSmsPhoneCommunicationSubscriptionsOptedOut` for new contact properties. The `Valid` method of `PreResolvedContactContactPropertiesLeadingToMatch` accepts them.
+- The generated code moved between `client_NNN.gen.go` files. This has no effect on callers.
+
 ## v0.3.0, 2026-10-28
 
 - Breaking: removed the CMS site search operation `GetcmssiteSearch202603searchcmssiteSearch202603search`, along with `(*ClientWithResponses).GetcmssiteSearch202603searchcmssiteSearch202603searchWithResponse` and the matching methods on `ClientInterface` and `ClientWithResponsesInterface`. The spec for API version 2026-03 no longer has this endpoint.
