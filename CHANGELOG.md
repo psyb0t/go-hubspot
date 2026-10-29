@@ -2,6 +2,10 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.3.2, 2026-10-29
+
+- Added the constant `PublicImportErrorErrorTypeMANYDUPLICATEERRORS` for the import error type `MANY_DUPLICATE_ERRORS`. The `Valid` method of `PublicImportErrorErrorType` accepts it.
+
 ## v0.3.1, 2026-10-29
 
 - Added the constants `PreResolvedContactContactPropertiesLeadingToMatchHsSmsMobilephoneCommunicationSubscriptionsOptedIn`, `PreResolvedContactContactPropertiesLeadingToMatchHsSmsMobilephoneCommunicationSubscriptionsOptedOut`, `PreResolvedContactContactPropertiesLeadingToMatchHsSmsPhoneCommunicationSubscriptionsOptedIn` and `PreResolvedContactContactPropertiesLeadingToMatchHsSmsPhoneCommunicationSubscriptionsOptedOut` for new contact properties. The `Valid` method of `PreResolvedContactContactPropertiesLeadingToMatch` accepts them.

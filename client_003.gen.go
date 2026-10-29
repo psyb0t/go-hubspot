@@ -1237,6 +1237,7 @@ const (
 	PublicImportErrorErrorTypeINVALIDSPREADSHEET                           PublicImportErrorErrorType = "INVALID_SPREADSHEET"
 	PublicImportErrorErrorTypeLIMITEXCEEDED                                PublicImportErrorErrorType = "LIMIT_EXCEEDED"
 	PublicImportErrorErrorTypeLINEITEMMULTIPLEPARENTSINROW                 PublicImportErrorErrorType = "LINE_ITEM_MULTIPLE_PARENTS_IN_ROW"
+	PublicImportErrorErrorTypeMANYDUPLICATEERRORS                          PublicImportErrorErrorType = "MANY_DUPLICATE_ERRORS"
 	PublicImportErrorErrorTypeMANYERRORSINROW                              PublicImportErrorErrorType = "MANY_ERRORS_IN_ROW"
 	PublicImportErrorErrorTypeMISSINGEVENTDEFINITION                       PublicImportErrorErrorType = "MISSING_EVENT_DEFINITION"
 	PublicImportErrorErrorTypeMISSINGEVENTTIMESTAMP                        PublicImportErrorErrorType = "MISSING_EVENT_TIMESTAMP"
@@ -1358,6 +1359,8 @@ func (e PublicImportErrorErrorType) Valid() bool {
 	case PublicImportErrorErrorTypeLIMITEXCEEDED:
 		return true
 	case PublicImportErrorErrorTypeLINEITEMMULTIPLEPARENTSINROW:
+		return true
+	case PublicImportErrorErrorTypeMANYDUPLICATEERRORS:
 		return true
 	case PublicImportErrorErrorTypeMANYERRORSINROW:
 		return true
