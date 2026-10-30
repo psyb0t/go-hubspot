@@ -12541,6 +12541,13 @@ func (r GetwebhooksJournaljournalLocal202603batchOffsetnextCountResponse) Conten
 type GetwebhooksJournaljournalLocal202603earliestResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *JournalFetchResponse
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r GetwebhooksJournaljournalLocal202603earliestResponse) GetJSON200() *JournalFetchResponse {
+	return r.JSON200
 }
 
 // GetBody returns the raw response body bytes
@@ -12575,6 +12582,13 @@ func (r GetwebhooksJournaljournalLocal202603earliestResponse) ContentType() stri
 type GetwebhooksJournaljournalLocal202603latestResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *JournalFetchResponse
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r GetwebhooksJournaljournalLocal202603latestResponse) GetJSON200() *JournalFetchResponse {
+	return r.JSON200
 }
 
 // GetBody returns the raw response body bytes
@@ -12609,6 +12623,13 @@ func (r GetwebhooksJournaljournalLocal202603latestResponse) ContentType() string
 type GetwebhooksJournaljournalLocal202603offsetOffsetnextResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *JournalFetchResponse
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r GetwebhooksJournaljournalLocal202603offsetOffsetnextResponse) GetJSON200() *JournalFetchResponse {
+	return r.JSON200
 }
 
 // GetBody returns the raw response body bytes
@@ -12855,6 +12876,13 @@ func (r GetwebhooksJournaljournal202603batchOffsetnextCountResponse) ContentType
 type GetwebhooksJournaljournal202603earliestResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *JournalFetchResponse
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r GetwebhooksJournaljournal202603earliestResponse) GetJSON200() *JournalFetchResponse {
+	return r.JSON200
 }
 
 // GetBody returns the raw response body bytes
@@ -12889,6 +12917,13 @@ func (r GetwebhooksJournaljournal202603earliestResponse) ContentType() string {
 type GetwebhooksJournaljournal202603latestResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *JournalFetchResponse
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r GetwebhooksJournaljournal202603latestResponse) GetJSON200() *JournalFetchResponse {
+	return r.JSON200
 }
 
 // GetBody returns the raw response body bytes
@@ -12923,6 +12958,13 @@ func (r GetwebhooksJournaljournal202603latestResponse) ContentType() string {
 type GetwebhooksJournaljournal202603offsetOffsetnextResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *JournalFetchResponse
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r GetwebhooksJournaljournal202603offsetOffsetnextResponse) GetJSON200() *JournalFetchResponse {
+	return r.JSON200
 }
 
 // GetBody returns the raw response body bytes
@@ -19967,49 +20009,4 @@ func (c *ClientWithResponses) Getcrmlists202603ListIdsizeAndEditsHistorybetweenc
 		return nil, err
 	}
 	return ParseGetcrmlists202603ListIdsizeAndEditsHistorybetweencrmlists202603ListIdsizeAndEditsHistorybetweenResponse(rsp)
-}
-
-// Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersWithBodyWithResponse Update List Filter Definition
-//
-// Update the filter branch definition of a `DYNAMIC` list. Once updated, the list memberships will be re-evaluated and updated to match the new definition.
-//
-// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
-//
-// Corresponds with PUT /crm/lists/2026-03/{listId}/update-list-filters (the `Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFilters` operationId).
-func (c *ClientWithResponses) Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersWithBodyWithResponse(ctx context.Context, listId string, params *Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersResponse, error) {
-	rsp, err := c.Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersWithBody(ctx, listId, params, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParsePutcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersResponse(rsp)
-}
-
-// Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersWithResponse Update List Filter Definition
-//
-// Update the filter branch definition of a `DYNAMIC` list. Once updated, the list memberships will be re-evaluated and updated to match the new definition.
-//
-// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
-//
-// Corresponds with PUT /crm/lists/2026-03/{listId}/update-list-filters (the `Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFilters` operationId).
-func (c *ClientWithResponses) Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersWithResponse(ctx context.Context, listId string, params *Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersParams, body Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersJSONRequestBody, reqEditors ...RequestEditorFn) (*Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersResponse, error) {
-	rsp, err := c.Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFilters(ctx, listId, params, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParsePutcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersResponse(rsp)
-}
-
-// Putcrmlists202603ListIdupdateListNamecrmlistsv3ListIdupdateListNameWithResponse Update List Name
-//
-// Update the name of a list. The name must be globally unique relative to all other public lists in the portal.
-//
-// Returns a wrapper object for the known response body format(s).
-//
-// Corresponds with PUT /crm/lists/2026-03/{listId}/update-list-name (the `Putcrmlists202603ListIdupdateListNamecrmlistsv3ListIdupdateListName` operationId).
-func (c *ClientWithResponses) Putcrmlists202603ListIdupdateListNamecrmlistsv3ListIdupdateListNameWithResponse(ctx context.Context, listId string, params *Putcrmlists202603ListIdupdateListNamecrmlistsv3ListIdupdateListNameParams, reqEditors ...RequestEditorFn) (*Putcrmlists202603ListIdupdateListNamecrmlistsv3ListIdupdateListNameResponse, error) {
-	rsp, err := c.Putcrmlists202603ListIdupdateListNamecrmlistsv3ListIdupdateListName(ctx, listId, params, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParsePutcrmlists202603ListIdupdateListNamecrmlistsv3ListIdupdateListNameResponse(rsp)
 }

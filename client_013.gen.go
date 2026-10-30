@@ -14,6 +14,51 @@ import (
 	openapi_types "github.com/oapi-codegen/runtime/types"
 )
 
+// Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersWithBodyWithResponse Update List Filter Definition
+//
+// Update the filter branch definition of a `DYNAMIC` list. Once updated, the list memberships will be re-evaluated and updated to match the new definition.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PUT /crm/lists/2026-03/{listId}/update-list-filters (the `Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFilters` operationId).
+func (c *ClientWithResponses) Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersWithBodyWithResponse(ctx context.Context, listId string, params *Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersResponse, error) {
+	rsp, err := c.Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersWithBody(ctx, listId, params, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePutcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersResponse(rsp)
+}
+
+// Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersWithResponse Update List Filter Definition
+//
+// Update the filter branch definition of a `DYNAMIC` list. Once updated, the list memberships will be re-evaluated and updated to match the new definition.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PUT /crm/lists/2026-03/{listId}/update-list-filters (the `Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFilters` operationId).
+func (c *ClientWithResponses) Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersWithResponse(ctx context.Context, listId string, params *Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersParams, body Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersJSONRequestBody, reqEditors ...RequestEditorFn) (*Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersResponse, error) {
+	rsp, err := c.Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFilters(ctx, listId, params, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePutcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersResponse(rsp)
+}
+
+// Putcrmlists202603ListIdupdateListNamecrmlistsv3ListIdupdateListNameWithResponse Update List Name
+//
+// Update the name of a list. The name must be globally unique relative to all other public lists in the portal.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PUT /crm/lists/2026-03/{listId}/update-list-name (the `Putcrmlists202603ListIdupdateListNamecrmlistsv3ListIdupdateListName` operationId).
+func (c *ClientWithResponses) Putcrmlists202603ListIdupdateListNamecrmlistsv3ListIdupdateListNameWithResponse(ctx context.Context, listId string, params *Putcrmlists202603ListIdupdateListNamecrmlistsv3ListIdupdateListNameParams, reqEditors ...RequestEditorFn) (*Putcrmlists202603ListIdupdateListNamecrmlistsv3ListIdupdateListNameResponse, error) {
+	rsp, err := c.Putcrmlists202603ListIdupdateListNamecrmlistsv3ListIdupdateListName(ctx, listId, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePutcrmlists202603ListIdupdateListNamecrmlistsv3ListIdupdateListNameResponse(rsp)
+}
+
 // GetcrmobjectLibrary202603enablementcrmobjectLibrary202603enablementWithResponse Get object activation statuses
 //
 // For all object types supporting enablement, returns whether they're enabled or disabled
@@ -19959,58 +20004,6 @@ func ParsePatchcmsurlRedirects202603UrlRedirectIdUpdateResponse(rsp *http.Respon
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
 		var dest UrlRedirectsUrlMapping
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetcommunicationPreferences202603definitionsResponse parses an HTTP response from a GetcommunicationPreferences202603definitionsWithResponse call
-func ParseGetcommunicationPreferences202603definitionsResponse(rsp *http.Response) (*GetcommunicationPreferences202603definitionsResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetcommunicationPreferences202603definitionsResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest ActionResponseWithResultsSubscriptionDefinition
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostcommunicationPreferences202603linksgeneratecommunicationPreferencesv4linksgenerateResponse parses an HTTP response from a PostcommunicationPreferences202603linksgeneratecommunicationPreferencesv4linksgenerateWithResponse call
-func ParsePostcommunicationPreferences202603linksgeneratecommunicationPreferencesv4linksgenerateResponse(rsp *http.Response) (*PostcommunicationPreferences202603linksgeneratecommunicationPreferencesv4linksgenerateResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostcommunicationPreferences202603linksgeneratecommunicationPreferencesv4linksgenerateResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest LinkGenerationResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}

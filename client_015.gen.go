@@ -8,7 +8,159 @@ import (
 	"io"
 	"net/http"
 	"strings"
+
+	"github.com/oapi-codegen/runtime"
 )
+
+// ParseGetwebhooks202603AppIdsettingsGetAllResponse parses an HTTP response from a Getwebhooks202603AppIdsettingsGetAllWithResponse call
+func ParseGetwebhooks202603AppIdsettingsGetAllResponse(rsp *http.Response) (*Getwebhooks202603AppIdsettingsGetAllResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getwebhooks202603AppIdsettingsGetAllResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest WebhooksWebhooksSettingsResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePutwebhooks202603AppIdsettingsConfigureResponse parses an HTTP response from a Putwebhooks202603AppIdsettingsConfigureWithResponse call
+func ParsePutwebhooks202603AppIdsettingsConfigureResponse(rsp *http.Response) (*Putwebhooks202603AppIdsettingsConfigureResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Putwebhooks202603AppIdsettingsConfigureResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest WebhooksWebhooksSettingsResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetwebhooks202603AppIdsubscriptionsGetAllResponse parses an HTTP response from a Getwebhooks202603AppIdsubscriptionsGetAllWithResponse call
+func ParseGetwebhooks202603AppIdsubscriptionsGetAllResponse(rsp *http.Response) (*Getwebhooks202603AppIdsubscriptionsGetAllResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getwebhooks202603AppIdsubscriptionsGetAllResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest SubscriptionListResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostwebhooks202603AppIdsubscriptionsCreateResponse parses an HTTP response from a Postwebhooks202603AppIdsubscriptionsCreateWithResponse call
+func ParsePostwebhooks202603AppIdsubscriptionsCreateResponse(rsp *http.Response) (*Postwebhooks202603AppIdsubscriptionsCreateResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postwebhooks202603AppIdsubscriptionsCreateResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
+		var dest SubscriptionResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON201 = &dest
+
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postwebhooks202603AppIdsubscriptionsCreateResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
+	}
+
+	return response, nil
+}
+
+// ParsePostwebhooks202603AppIdsubscriptionsbatchupdateUpdateBatchResponse parses an HTTP response from a Postwebhooks202603AppIdsubscriptionsbatchupdateUpdateBatchWithResponse call
+func ParsePostwebhooks202603AppIdsubscriptionsbatchupdateUpdateBatchResponse(rsp *http.Response) (*Postwebhooks202603AppIdsubscriptionsbatchupdateUpdateBatchResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postwebhooks202603AppIdsubscriptionsbatchupdateUpdateBatchResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BatchResponseSubscriptionResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
+		var dest BatchResponseSubscriptionResponseWithErrors
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON207 = &dest
+
+	}
+
+	return response, nil
+}
 
 // ParseDeletewebhooks202603AppIdsubscriptionsSubscriptionIdArchiveResponse parses an HTTP response from a Deletewebhooks202603AppIdsubscriptionsSubscriptionIdArchiveWithResponse call
 func ParseDeletewebhooks202603AppIdsubscriptionsSubscriptionIdArchiveResponse(rsp *http.Response) (*Deletewebhooks202603AppIdsubscriptionsSubscriptionIdArchiveResponse, error) {

@@ -2192,6 +2192,7 @@ const (
 	EmailSendStatusViewSendResultQUARANTINEDADDRESS                 EmailSendStatusViewSendResult = "QUARANTINED_ADDRESS"
 	EmailSendStatusViewSendResultQUEUED                             EmailSendStatusViewSendResult = "QUEUED"
 	EmailSendStatusViewSendResultRECIPIENTFATIGUESUPPRESSED         EmailSendStatusViewSendResult = "RECIPIENT_FATIGUE_SUPPRESSED"
+	EmailSendStatusViewSendResultRECIPIENTSENDLIMITEXCEEDED         EmailSendStatusViewSendResult = "RECIPIENT_SEND_LIMIT_EXCEEDED"
 	EmailSendStatusViewSendResultSENT                               EmailSendStatusViewSendResult = "SENT"
 	EmailSendStatusViewSendResultTEMPLATERENDEREXCEPTION            EmailSendStatusViewSendResult = "TEMPLATE_RENDER_EXCEPTION"
 	EmailSendStatusViewSendResultTHROTTLED                          EmailSendStatusViewSendResult = "THROTTLED"
@@ -2290,6 +2291,8 @@ func (e EmailSendStatusViewSendResult) Valid() bool {
 	case EmailSendStatusViewSendResultQUEUED:
 		return true
 	case EmailSendStatusViewSendResultRECIPIENTFATIGUESUPPRESSED:
+		return true
+	case EmailSendStatusViewSendResultRECIPIENTSENDLIMITEXCEEDED:
 		return true
 	case EmailSendStatusViewSendResultSENT:
 		return true

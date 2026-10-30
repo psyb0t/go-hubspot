@@ -10739,6 +10739,7 @@ const (
 	UrlMappingCosObjectTypeSITEMAP                      UrlMappingCosObjectType = "SITE_MAP"
 	UrlMappingCosObjectTypeSITEMENU                     UrlMappingCosObjectType = "SITE_MENU"
 	UrlMappingCosObjectTypeSITESETTINGS                 UrlMappingCosObjectType = "SITE_SETTINGS"
+	UrlMappingCosObjectTypeSTAGEDCONTENT                UrlMappingCosObjectType = "STAGED_CONTENT"
 	UrlMappingCosObjectTypeSUBSCRIPTIONSSETTINGS        UrlMappingCosObjectType = "SUBSCRIPTIONS_SETTINGS"
 	UrlMappingCosObjectTypeTAG                          UrlMappingCosObjectType = "TAG"
 	UrlMappingCosObjectTypeTHEME                        UrlMappingCosObjectType = "THEME"
@@ -10858,6 +10859,8 @@ func (e UrlMappingCosObjectType) Valid() bool {
 	case UrlMappingCosObjectTypeSITEMENU:
 		return true
 	case UrlMappingCosObjectTypeSITESETTINGS:
+		return true
+	case UrlMappingCosObjectTypeSTAGEDCONTENT:
 		return true
 	case UrlMappingCosObjectTypeSUBSCRIPTIONSSETTINGS:
 		return true

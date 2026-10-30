@@ -2,6 +2,13 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.3.3, 2026-10-30
+
+- Added the constant `EmailSendStatusViewSendResultRECIPIENTSENDLIMITEXCEEDED` for the send result `RECIPIENT_SEND_LIMIT_EXCEEDED`.
+- Added the constant `UrlMappingCosObjectTypeSTAGEDCONTENT` for the URL mapping object type `STAGED_CONTENT`.
+- Added the field `JSON200` and the method `GetJSON200` on the response types of the webhooks journal `earliest`, `latest` and `offset/next` operations, both the `GetwebhooksJournaljournal202603...` and `GetwebhooksJournaljournalLocal202603...` variants. They return a `*JournalFetchResponse`.
+- Some generated code moved between `client_NNN.gen.go` files. This has no effect on callers.
+
 ## v0.3.2, 2026-10-29
 
 - Added the constant `PublicImportErrorErrorTypeMANYDUPLICATEERRORS` for the import error type `MANY_DUPLICATE_ERRORS`. The `Valid` method of `PublicImportErrorErrorType` accepts it.
