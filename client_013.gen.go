@@ -14,6 +14,412 @@ import (
 	openapi_types "github.com/oapi-codegen/runtime/types"
 )
 
+// Postcrmlists202603idmappingcrmlistsv3idmappingWithBodyWithResponse Translate Legacy List Id to Modern List Id in Batch
+//
+// This API allows translation of a batch of legacy list id's to list id's. This allows for a maximum of 10,000 id's. This is a temporary API allowed for mapping old id's to new id's and will expire on May 30th, 2025.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/lists/2026-03/idmapping (the `Postcrmlists202603idmappingcrmlistsv3idmapping` operationId).
+func (c *ClientWithResponses) Postcrmlists202603idmappingcrmlistsv3idmappingWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmlists202603idmappingcrmlistsv3idmappingResponse, error) {
+	rsp, err := c.Postcrmlists202603idmappingcrmlistsv3idmappingWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmlists202603idmappingcrmlistsv3idmappingResponse(rsp)
+}
+
+// Postcrmlists202603idmappingcrmlistsv3idmappingWithResponse Translate Legacy List Id to Modern List Id in Batch
+//
+// This API allows translation of a batch of legacy list id's to list id's. This allows for a maximum of 10,000 id's. This is a temporary API allowed for mapping old id's to new id's and will expire on May 30th, 2025.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/lists/2026-03/idmapping (the `Postcrmlists202603idmappingcrmlistsv3idmapping` operationId).
+func (c *ClientWithResponses) Postcrmlists202603idmappingcrmlistsv3idmappingWithResponse(ctx context.Context, body Postcrmlists202603idmappingcrmlistsv3idmappingJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmlists202603idmappingcrmlistsv3idmappingResponse, error) {
+	rsp, err := c.Postcrmlists202603idmappingcrmlistsv3idmapping(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmlists202603idmappingcrmlistsv3idmappingResponse(rsp)
+}
+
+// Getcrmlists202603objectTypeIdObjectTypeIdnameListNamecrmlistsv3objectTypeIdObjectTypeIdnameListNameWithResponse Fetch List by Name
+//
+// Fetch a single list by list name and object type.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /crm/lists/2026-03/object-type-id/{objectTypeId}/name/{listName} (the `Getcrmlists202603objectTypeIdObjectTypeIdnameListNamecrmlistsv3objectTypeIdObjectTypeIdnameListName` operationId).
+func (c *ClientWithResponses) Getcrmlists202603objectTypeIdObjectTypeIdnameListNamecrmlistsv3objectTypeIdObjectTypeIdnameListNameWithResponse(ctx context.Context, objectTypeId string, listName string, params *Getcrmlists202603objectTypeIdObjectTypeIdnameListNamecrmlistsv3objectTypeIdObjectTypeIdnameListNameParams, reqEditors ...RequestEditorFn) (*Getcrmlists202603objectTypeIdObjectTypeIdnameListNamecrmlistsv3objectTypeIdObjectTypeIdnameListNameResponse, error) {
+	rsp, err := c.Getcrmlists202603objectTypeIdObjectTypeIdnameListNamecrmlistsv3objectTypeIdObjectTypeIdnameListName(ctx, objectTypeId, listName, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetcrmlists202603objectTypeIdObjectTypeIdnameListNamecrmlistsv3objectTypeIdObjectTypeIdnameListNameResponse(rsp)
+}
+
+// Postcrmlists202603recordsmembershipsbatchreadcrmlistsv3recordsmembershipsbatchreadWithBodyWithResponse performs a POST /crm/lists/2026-03/records/memberships/batch/read (the `Postcrmlists202603recordsmembershipsbatchreadcrmlistsv3recordsmembershipsbatchread` operationId) request,
+// with any type of body and a specified content type.
+//
+// Returns a wrapper object for the known response body format(s).
+func (c *ClientWithResponses) Postcrmlists202603recordsmembershipsbatchreadcrmlistsv3recordsmembershipsbatchreadWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmlists202603recordsmembershipsbatchreadcrmlistsv3recordsmembershipsbatchreadResponse, error) {
+	rsp, err := c.Postcrmlists202603recordsmembershipsbatchreadcrmlistsv3recordsmembershipsbatchreadWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmlists202603recordsmembershipsbatchreadcrmlistsv3recordsmembershipsbatchreadResponse(rsp)
+}
+
+// Postcrmlists202603recordsmembershipsbatchreadcrmlistsv3recordsmembershipsbatchreadWithResponse performs a POST /crm/lists/2026-03/records/memberships/batch/read (the `Postcrmlists202603recordsmembershipsbatchreadcrmlistsv3recordsmembershipsbatchread` operationId) request.
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+func (c *ClientWithResponses) Postcrmlists202603recordsmembershipsbatchreadcrmlistsv3recordsmembershipsbatchreadWithResponse(ctx context.Context, body Postcrmlists202603recordsmembershipsbatchreadcrmlistsv3recordsmembershipsbatchreadJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmlists202603recordsmembershipsbatchreadcrmlistsv3recordsmembershipsbatchreadResponse, error) {
+	rsp, err := c.Postcrmlists202603recordsmembershipsbatchreadcrmlistsv3recordsmembershipsbatchread(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmlists202603recordsmembershipsbatchreadcrmlistsv3recordsmembershipsbatchreadResponse(rsp)
+}
+
+// Getcrmlists202603recordsObjectTypeIdRecordIdmembershipscrmlistsv3recordsObjectTypeIdRecordIdmembershipsWithResponse Get lists record is member of
+//
+// For given record provide lists this record is member of.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /crm/lists/2026-03/records/{objectTypeId}/{recordId}/memberships (the `Getcrmlists202603recordsObjectTypeIdRecordIdmembershipscrmlistsv3recordsObjectTypeIdRecordIdmemberships` operationId).
+func (c *ClientWithResponses) Getcrmlists202603recordsObjectTypeIdRecordIdmembershipscrmlistsv3recordsObjectTypeIdRecordIdmembershipsWithResponse(ctx context.Context, objectTypeId string, recordId string, reqEditors ...RequestEditorFn) (*Getcrmlists202603recordsObjectTypeIdRecordIdmembershipscrmlistsv3recordsObjectTypeIdRecordIdmembershipsResponse, error) {
+	rsp, err := c.Getcrmlists202603recordsObjectTypeIdRecordIdmembershipscrmlistsv3recordsObjectTypeIdRecordIdmemberships(ctx, objectTypeId, recordId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetcrmlists202603recordsObjectTypeIdRecordIdmembershipscrmlistsv3recordsObjectTypeIdRecordIdmembershipsResponse(rsp)
+}
+
+// Postcrmlists202603searchcrmlistsv3searchWithBodyWithResponse Search Lists
+//
+// Search lists by list name or page through all lists by providing an empty `query` value.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/lists/2026-03/search (the `Postcrmlists202603searchcrmlistsv3search` operationId).
+func (c *ClientWithResponses) Postcrmlists202603searchcrmlistsv3searchWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcrmlists202603searchcrmlistsv3searchResponse, error) {
+	rsp, err := c.Postcrmlists202603searchcrmlistsv3searchWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmlists202603searchcrmlistsv3searchResponse(rsp)
+}
+
+// Postcrmlists202603searchcrmlistsv3searchWithResponse Search Lists
+//
+// Search lists by list name or page through all lists by providing an empty `query` value.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /crm/lists/2026-03/search (the `Postcrmlists202603searchcrmlistsv3search` operationId).
+func (c *ClientWithResponses) Postcrmlists202603searchcrmlistsv3searchWithResponse(ctx context.Context, body Postcrmlists202603searchcrmlistsv3searchJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcrmlists202603searchcrmlistsv3searchResponse, error) {
+	rsp, err := c.Postcrmlists202603searchcrmlistsv3search(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcrmlists202603searchcrmlistsv3searchResponse(rsp)
+}
+
+// Deletecrmlists202603ListIdcrmlistsv3ListIdWithResponse Delete a List
+//
+// Delete a list by **ILS list ID**. Lists deleted through this endpoint can be restored up to 90-days following the delete. After 90-days, the list is purged and can no longer be restored.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with DELETE /crm/lists/2026-03/{listId} (the `Deletecrmlists202603ListIdcrmlistsv3ListId` operationId).
+func (c *ClientWithResponses) Deletecrmlists202603ListIdcrmlistsv3ListIdWithResponse(ctx context.Context, listId string, reqEditors ...RequestEditorFn) (*Deletecrmlists202603ListIdcrmlistsv3ListIdResponse, error) {
+	rsp, err := c.Deletecrmlists202603ListIdcrmlistsv3ListId(ctx, listId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDeletecrmlists202603ListIdcrmlistsv3ListIdResponse(rsp)
+}
+
+// Getcrmlists202603ListIdcrmlistsv3ListIdWithResponse Fetch List by ID
+//
+// Fetch a single list by **ILS list ID**.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /crm/lists/2026-03/{listId} (the `Getcrmlists202603ListIdcrmlistsv3ListId` operationId).
+func (c *ClientWithResponses) Getcrmlists202603ListIdcrmlistsv3ListIdWithResponse(ctx context.Context, listId string, params *Getcrmlists202603ListIdcrmlistsv3ListIdParams, reqEditors ...RequestEditorFn) (*Getcrmlists202603ListIdcrmlistsv3ListIdResponse, error) {
+	rsp, err := c.Getcrmlists202603ListIdcrmlistsv3ListId(ctx, listId, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetcrmlists202603ListIdcrmlistsv3ListIdResponse(rsp)
+}
+
+// Deletecrmlists202603ListIdmembershipscrmlistsv3ListIdmembershipsWithResponse Delete All Records from a List
+//
+// Remove **all** of the records from a list. ***Note:*** *The list is not deleted.*
+//
+// This endpoint only works for lists that have a `processingType` of `MANUAL` or `SNAPSHOT`.
+//
+// This endpoint only supports lists that have less than 100,000 memberships.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with DELETE /crm/lists/2026-03/{listId}/memberships (the `Deletecrmlists202603ListIdmembershipscrmlistsv3ListIdmemberships` operationId).
+func (c *ClientWithResponses) Deletecrmlists202603ListIdmembershipscrmlistsv3ListIdmembershipsWithResponse(ctx context.Context, listId string, reqEditors ...RequestEditorFn) (*Deletecrmlists202603ListIdmembershipscrmlistsv3ListIdmembershipsResponse, error) {
+	rsp, err := c.Deletecrmlists202603ListIdmembershipscrmlistsv3ListIdmemberships(ctx, listId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDeletecrmlists202603ListIdmembershipscrmlistsv3ListIdmembershipsResponse(rsp)
+}
+
+// Getcrmlists202603ListIdmembershipscrmlistsv3ListIdmembershipsWithResponse Fetch List Memberships Ordered by ID
+//
+// Fetch the memberships of a list in order sorted by the `recordId` of the records in the list.
+//
+// The `recordId`s are sorted in *ascending* order if an `after` offset or no offset is provided. If only a `before` offset is provided, then the records are sorted in *descending* order.
+//
+// The `after` offset parameter will take precedence over the `before` offset in a case where both are provided.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /crm/lists/2026-03/{listId}/memberships (the `Getcrmlists202603ListIdmembershipscrmlistsv3ListIdmemberships` operationId).
+func (c *ClientWithResponses) Getcrmlists202603ListIdmembershipscrmlistsv3ListIdmembershipsWithResponse(ctx context.Context, listId string, params *Getcrmlists202603ListIdmembershipscrmlistsv3ListIdmembershipsParams, reqEditors ...RequestEditorFn) (*Getcrmlists202603ListIdmembershipscrmlistsv3ListIdmembershipsResponse, error) {
+	rsp, err := c.Getcrmlists202603ListIdmembershipscrmlistsv3ListIdmemberships(ctx, listId, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetcrmlists202603ListIdmembershipscrmlistsv3ListIdmembershipsResponse(rsp)
+}
+
+// Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsaddWithBodyWithResponse Add Records to a List
+//
+// Add the records provided to the list. Records that do not exist or that are already members of the list are ignored.
+//
+// This endpoint only works for lists that have a `processingType` of `MANUAL` or `SNAPSHOT`.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PUT /crm/lists/2026-03/{listId}/memberships/add (the `Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsadd` operationId).
+func (c *ClientWithResponses) Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsaddWithBodyWithResponse(ctx context.Context, listId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsaddResponse, error) {
+	rsp, err := c.Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsaddWithBody(ctx, listId, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePutcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsaddResponse(rsp)
+}
+
+// Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsaddWithResponse Add Records to a List
+//
+// Add the records provided to the list. Records that do not exist or that are already members of the list are ignored.
+//
+// This endpoint only works for lists that have a `processingType` of `MANUAL` or `SNAPSHOT`.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PUT /crm/lists/2026-03/{listId}/memberships/add (the `Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsadd` operationId).
+func (c *ClientWithResponses) Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsaddWithResponse(ctx context.Context, listId string, body Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsaddJSONRequestBody, reqEditors ...RequestEditorFn) (*Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsaddResponse, error) {
+	rsp, err := c.Putcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsadd(ctx, listId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePutcrmlists202603ListIdmembershipsaddcrmlistsv3ListIdmembershipsaddResponse(rsp)
+}
+
+// Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemoveWithBodyWithResponse Add and/or Remove Records from a List
+//
+// Add and/or remove records that have already been created in the system to and/or from a list.
+//
+// This endpoint only works for lists that have a `processingType` of `MANUAL` or `SNAPSHOT`.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PUT /crm/lists/2026-03/{listId}/memberships/add-and-remove (the `Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemove` operationId).
+func (c *ClientWithResponses) Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemoveWithBodyWithResponse(ctx context.Context, listId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemoveResponse, error) {
+	rsp, err := c.Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemoveWithBody(ctx, listId, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePutcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemoveResponse(rsp)
+}
+
+// Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemoveWithResponse Add and/or Remove Records from a List
+//
+// Add and/or remove records that have already been created in the system to and/or from a list.
+//
+// This endpoint only works for lists that have a `processingType` of `MANUAL` or `SNAPSHOT`.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PUT /crm/lists/2026-03/{listId}/memberships/add-and-remove (the `Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemove` operationId).
+func (c *ClientWithResponses) Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemoveWithResponse(ctx context.Context, listId string, body Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemoveJSONRequestBody, reqEditors ...RequestEditorFn) (*Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemoveResponse, error) {
+	rsp, err := c.Putcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemove(ctx, listId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePutcrmlists202603ListIdmembershipsaddAndRemovecrmlistsv3ListIdmembershipsaddAndRemoveResponse(rsp)
+}
+
+// Putcrmlists202603ListIdmembershipsaddFromSourceListIdcrmlistsv3ListIdmembershipsaddFromSourceListIdWithResponse Add All Records from a Source List to a Destination List
+//
+// Add all of the records from a *source list* (specified by the `sourceListId`) to a *destination list* (specified by the `listId`). Records that are already members of the *destination list* will be ignored. The *destination* and *source list* IDs must be different. The *destination* and *source lists* must contain records of the same type (e.g. contacts, companies, etc.).
+//
+// This endpoint only works for *destination lists* that have a `processingType` of `MANUAL` or `SNAPSHOT`. The *source list* can have any `processingType`.
+//
+// This endpoint only supports a `sourceListId` for lists with less than 100,000 memberships.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PUT /crm/lists/2026-03/{listId}/memberships/add-from/{sourceListId} (the `Putcrmlists202603ListIdmembershipsaddFromSourceListIdcrmlistsv3ListIdmembershipsaddFromSourceListId` operationId).
+func (c *ClientWithResponses) Putcrmlists202603ListIdmembershipsaddFromSourceListIdcrmlistsv3ListIdmembershipsaddFromSourceListIdWithResponse(ctx context.Context, listId string, sourceListId string, reqEditors ...RequestEditorFn) (*Putcrmlists202603ListIdmembershipsaddFromSourceListIdcrmlistsv3ListIdmembershipsaddFromSourceListIdResponse, error) {
+	rsp, err := c.Putcrmlists202603ListIdmembershipsaddFromSourceListIdcrmlistsv3ListIdmembershipsaddFromSourceListId(ctx, listId, sourceListId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePutcrmlists202603ListIdmembershipsaddFromSourceListIdcrmlistsv3ListIdmembershipsaddFromSourceListIdResponse(rsp)
+}
+
+// Getcrmlists202603ListIdmembershipsjoinOrdercrmlistsv3ListIdmembershipsjoinOrderWithResponse Fetch List Memberships Ordered by Added to List Date
+//
+// Fetch the memberships of a list in order sorted by the time the records were added to the list.
+//
+// The `recordId`s are sorted in *ascending* order if an `after` offset or no offset is provided. If only a `before` offset is provided, then the records are sorted in *descending* order.
+//
+// The `after` offset parameter will take precedence over the `before` offset in a case where both are provided.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /crm/lists/2026-03/{listId}/memberships/join-order (the `Getcrmlists202603ListIdmembershipsjoinOrdercrmlistsv3ListIdmembershipsjoinOrder` operationId).
+func (c *ClientWithResponses) Getcrmlists202603ListIdmembershipsjoinOrdercrmlistsv3ListIdmembershipsjoinOrderWithResponse(ctx context.Context, listId string, params *Getcrmlists202603ListIdmembershipsjoinOrdercrmlistsv3ListIdmembershipsjoinOrderParams, reqEditors ...RequestEditorFn) (*Getcrmlists202603ListIdmembershipsjoinOrdercrmlistsv3ListIdmembershipsjoinOrderResponse, error) {
+	rsp, err := c.Getcrmlists202603ListIdmembershipsjoinOrdercrmlistsv3ListIdmembershipsjoinOrder(ctx, listId, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetcrmlists202603ListIdmembershipsjoinOrdercrmlistsv3ListIdmembershipsjoinOrderResponse(rsp)
+}
+
+// Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremoveWithBodyWithResponse Remove Records from a List
+//
+// Remove the records provided from the list. Records that do not exist or that are not members of the list are ignored.
+//
+// This endpoint only works for lists that have a `processingType` of `MANUAL` or `SNAPSHOT`.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PUT /crm/lists/2026-03/{listId}/memberships/remove (the `Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremove` operationId).
+func (c *ClientWithResponses) Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremoveWithBodyWithResponse(ctx context.Context, listId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremoveResponse, error) {
+	rsp, err := c.Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremoveWithBody(ctx, listId, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePutcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremoveResponse(rsp)
+}
+
+// Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremoveWithResponse Remove Records from a List
+//
+// Remove the records provided from the list. Records that do not exist or that are not members of the list are ignored.
+//
+// This endpoint only works for lists that have a `processingType` of `MANUAL` or `SNAPSHOT`.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PUT /crm/lists/2026-03/{listId}/memberships/remove (the `Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremove` operationId).
+func (c *ClientWithResponses) Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremoveWithResponse(ctx context.Context, listId string, body Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremoveJSONRequestBody, reqEditors ...RequestEditorFn) (*Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremoveResponse, error) {
+	rsp, err := c.Putcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremove(ctx, listId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePutcrmlists202603ListIdmembershipsremovecrmlistsv3ListIdmembershipsremoveResponse(rsp)
+}
+
+// Putcrmlists202603ListIdrestorecrmlistsv3ListIdrestoreWithResponse Restore a List
+//
+// Restore a previously deleted list by **ILS list ID**. Deleted lists are eligible to be restored up-to 90-days after the list has been deleted.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PUT /crm/lists/2026-03/{listId}/restore (the `Putcrmlists202603ListIdrestorecrmlistsv3ListIdrestore` operationId).
+func (c *ClientWithResponses) Putcrmlists202603ListIdrestorecrmlistsv3ListIdrestoreWithResponse(ctx context.Context, listId string, reqEditors ...RequestEditorFn) (*Putcrmlists202603ListIdrestorecrmlistsv3ListIdrestoreResponse, error) {
+	rsp, err := c.Putcrmlists202603ListIdrestorecrmlistsv3ListIdrestore(ctx, listId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePutcrmlists202603ListIdrestorecrmlistsv3ListIdrestoreResponse(rsp)
+}
+
+// Deletecrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionWithResponse Cancel the conversion of a list
+//
+// Delete an existing scheduled conversion for a list.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with DELETE /crm/lists/2026-03/{listId}/schedule-conversion (the `Deletecrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversion` operationId).
+func (c *ClientWithResponses) Deletecrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionWithResponse(ctx context.Context, listId string, reqEditors ...RequestEditorFn) (*Deletecrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionResponse, error) {
+	rsp, err := c.Deletecrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversion(ctx, listId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDeletecrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionResponse(rsp)
+}
+
+// Getcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionWithResponse Retrieve the conversion details for a list
+//
+// Retrieve the conversion details for a list. This can be used to check for an upcoming conversion, or to get the details of when a list was already converted.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /crm/lists/2026-03/{listId}/schedule-conversion (the `Getcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversion` operationId).
+func (c *ClientWithResponses) Getcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionWithResponse(ctx context.Context, listId string, reqEditors ...RequestEditorFn) (*Getcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionResponse, error) {
+	rsp, err := c.Getcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversion(ctx, listId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionResponse(rsp)
+}
+
+// Putcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionWithBodyWithResponse Schedule or update the conversion of a list to static
+//
+// Schedule the conversion of an active list into a static list, or update the already scheduled conversion. This can be scheduled for a specific date or based on activity.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PUT /crm/lists/2026-03/{listId}/schedule-conversion (the `Putcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversion` operationId).
+func (c *ClientWithResponses) Putcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionWithBodyWithResponse(ctx context.Context, listId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Putcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionResponse, error) {
+	rsp, err := c.Putcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionWithBody(ctx, listId, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePutcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionResponse(rsp)
+}
+
+// Putcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionWithResponse Schedule or update the conversion of a list to static
+//
+// Schedule the conversion of an active list into a static list, or update the already scheduled conversion. This can be scheduled for a specific date or based on activity.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PUT /crm/lists/2026-03/{listId}/schedule-conversion (the `Putcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversion` operationId).
+func (c *ClientWithResponses) Putcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionWithResponse(ctx context.Context, listId string, body Putcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionJSONRequestBody, reqEditors ...RequestEditorFn) (*Putcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionResponse, error) {
+	rsp, err := c.Putcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversion(ctx, listId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePutcrmlists202603ListIdscheduleConversioncrmlistsv3ListIdscheduleConversionResponse(rsp)
+}
+
+// Getcrmlists202603ListIdsizeAndEditsHistorybetweencrmlists202603ListIdsizeAndEditsHistorybetweenWithResponse performs a GET /crm/lists/2026-03/{listId}/size-and-edits-history/between (the `Getcrmlists202603ListIdsizeAndEditsHistorybetweencrmlists202603ListIdsizeAndEditsHistorybetween` operationId) request.
+//
+// Returns a wrapper object for the known response body format(s).
+func (c *ClientWithResponses) Getcrmlists202603ListIdsizeAndEditsHistorybetweencrmlists202603ListIdsizeAndEditsHistorybetweenWithResponse(ctx context.Context, listId string, params *Getcrmlists202603ListIdsizeAndEditsHistorybetweencrmlists202603ListIdsizeAndEditsHistorybetweenParams, reqEditors ...RequestEditorFn) (*Getcrmlists202603ListIdsizeAndEditsHistorybetweencrmlists202603ListIdsizeAndEditsHistorybetweenResponse, error) {
+	rsp, err := c.Getcrmlists202603ListIdsizeAndEditsHistorybetweencrmlists202603ListIdsizeAndEditsHistorybetween(ctx, listId, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetcrmlists202603ListIdsizeAndEditsHistorybetweencrmlists202603ListIdsizeAndEditsHistorybetweenResponse(rsp)
+}
+
 // Putcrmlists202603ListIdupdateListFilterscrmlistsv3ListIdupdateListFiltersWithBodyWithResponse Update List Filter Definition
 //
 // Update the filter branch definition of a `DYNAMIC` list. Once updated, the list memberships will be re-evaluated and updated to match the new definition.
@@ -19616,394 +20022,6 @@ func ParsePostcmspages202603sitePagesObjectIdrevisionsRevisionIdrestoreToDraftRe
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
 		var dest Page
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetcmssiteSearch202603indexedDataContentIdGetByIdResponse parses an HTTP response from a GetcmssiteSearch202603indexedDataContentIdGetByIdWithResponse call
-func ParseGetcmssiteSearch202603indexedDataContentIdGetByIdResponse(rsp *http.Response) (*GetcmssiteSearch202603indexedDataContentIdGetByIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetcmssiteSearch202603indexedDataContentIdGetByIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest IndexedData
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostcmssourceCode202603extractasyncDoAsyncResponse parses an HTTP response from a PostcmssourceCode202603extractasyncDoAsyncWithResponse call
-func ParsePostcmssourceCode202603extractasyncDoAsyncResponse(rsp *http.Response) (*PostcmssourceCode202603extractasyncDoAsyncResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostcmssourceCode202603extractasyncDoAsyncResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 202:
-		var dest TaskLocator
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON202 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetcmssourceCode202603extractasynctasksTaskIdstatusGetAsyncStatusResponse parses an HTTP response from a GetcmssourceCode202603extractasynctasksTaskIdstatusGetAsyncStatusWithResponse call
-func ParseGetcmssourceCode202603extractasynctasksTaskIdstatusGetAsyncStatusResponse(rsp *http.Response) (*GetcmssourceCode202603extractasynctasksTaskIdstatusGetAsyncStatusResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetcmssourceCode202603extractasynctasksTaskIdstatusGetAsyncStatusResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest ActionResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseDeletecmssourceCode202603EnvironmentcontentPathArchiveResponse parses an HTTP response from a DeletecmssourceCode202603EnvironmentcontentPathArchiveWithResponse call
-func ParseDeletecmssourceCode202603EnvironmentcontentPathArchiveResponse(rsp *http.Response) (*DeletecmssourceCode202603EnvironmentcontentPathArchiveResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &DeletecmssourceCode202603EnvironmentcontentPathArchiveResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParseGetcmssourceCode202603EnvironmentcontentPathDownloadResponse parses an HTTP response from a GetcmssourceCode202603EnvironmentcontentPathDownloadWithResponse call
-func ParseGetcmssourceCode202603EnvironmentcontentPathDownloadResponse(rsp *http.Response) (*GetcmssourceCode202603EnvironmentcontentPathDownloadResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetcmssourceCode202603EnvironmentcontentPathDownloadResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParsePostcmssourceCode202603EnvironmentcontentPathCreateResponse parses an HTTP response from a PostcmssourceCode202603EnvironmentcontentPathCreateWithResponse call
-func ParsePostcmssourceCode202603EnvironmentcontentPathCreateResponse(rsp *http.Response) (*PostcmssourceCode202603EnvironmentcontentPathCreateResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostcmssourceCode202603EnvironmentcontentPathCreateResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest AssetFileMetadata
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePutcmssourceCode202603EnvironmentcontentPathCreateOrUpdateResponse parses an HTTP response from a PutcmssourceCode202603EnvironmentcontentPathCreateOrUpdateWithResponse call
-func ParsePutcmssourceCode202603EnvironmentcontentPathCreateOrUpdateResponse(rsp *http.Response) (*PutcmssourceCode202603EnvironmentcontentPathCreateOrUpdateResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PutcmssourceCode202603EnvironmentcontentPathCreateOrUpdateResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest AssetFileMetadata
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetcmssourceCode202603EnvironmentmetadataPathGetResponse parses an HTTP response from a GetcmssourceCode202603EnvironmentmetadataPathGetWithResponse call
-func ParseGetcmssourceCode202603EnvironmentmetadataPathGetResponse(rsp *http.Response) (*GetcmssourceCode202603EnvironmentmetadataPathGetResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetcmssourceCode202603EnvironmentmetadataPathGetResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest AssetFileMetadata
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostcmssourceCode202603EnvironmentvalidatePathDoValidateResponse parses an HTTP response from a PostcmssourceCode202603EnvironmentvalidatePathDoValidateWithResponse call
-func ParsePostcmssourceCode202603EnvironmentvalidatePathDoValidateResponse(rsp *http.Response) (*PostcmssourceCode202603EnvironmentvalidatePathDoValidateResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostcmssourceCode202603EnvironmentvalidatePathDoValidateResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParseGetcmsurlRedirects202603cmsurlRedirectsv3Response parses an HTTP response from a GetcmsurlRedirects202603cmsurlRedirectsv3WithResponse call
-func ParseGetcmsurlRedirects202603cmsurlRedirectsv3Response(rsp *http.Response) (*GetcmsurlRedirects202603cmsurlRedirectsv3Response, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetcmsurlRedirects202603cmsurlRedirectsv3Response{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CollectionResponseWithTotalUrlMappingForwardPaging
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostcmsurlRedirects202603cmsurlRedirectsv3Response parses an HTTP response from a PostcmsurlRedirects202603cmsurlRedirectsv3WithResponse call
-func ParsePostcmsurlRedirects202603cmsurlRedirectsv3Response(rsp *http.Response) (*PostcmsurlRedirects202603cmsurlRedirectsv3Response, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostcmsurlRedirects202603cmsurlRedirectsv3Response{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest UrlRedirectsUrlMapping
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON201 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappingsResponse parses an HTTP response from a GetcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappingsWithResponse call
-func ParseGetcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappingsResponse(rsp *http.Response) (*GetcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappingsResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappingsResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParsePostcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappingsResponse parses an HTTP response from a PostcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappingsWithResponse call
-func ParsePostcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappingsResponse(rsp *http.Response) (*PostcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappingsResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappingsResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParseDeletecmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsIdResponse parses an HTTP response from a DeletecmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsIdWithResponse call
-func ParseDeletecmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsIdResponse(rsp *http.Response) (*DeletecmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &DeletecmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParseGetcmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsIdResponse parses an HTTP response from a GetcmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsIdWithResponse call
-func ParseGetcmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsIdResponse(rsp *http.Response) (*GetcmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetcmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParseDeletecmsurlRedirects202603UrlRedirectIdArchiveResponse parses an HTTP response from a DeletecmsurlRedirects202603UrlRedirectIdArchiveWithResponse call
-func ParseDeletecmsurlRedirects202603UrlRedirectIdArchiveResponse(rsp *http.Response) (*DeletecmsurlRedirects202603UrlRedirectIdArchiveResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &DeletecmsurlRedirects202603UrlRedirectIdArchiveResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParseGetcmsurlRedirects202603UrlRedirectIdGetByIdResponse parses an HTTP response from a GetcmsurlRedirects202603UrlRedirectIdGetByIdWithResponse call
-func ParseGetcmsurlRedirects202603UrlRedirectIdGetByIdResponse(rsp *http.Response) (*GetcmsurlRedirects202603UrlRedirectIdGetByIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetcmsurlRedirects202603UrlRedirectIdGetByIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest UrlRedirectsUrlMapping
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePatchcmsurlRedirects202603UrlRedirectIdUpdateResponse parses an HTTP response from a PatchcmsurlRedirects202603UrlRedirectIdUpdateWithResponse call
-func ParsePatchcmsurlRedirects202603UrlRedirectIdUpdateResponse(rsp *http.Response) (*PatchcmsurlRedirects202603UrlRedirectIdUpdateResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PatchcmsurlRedirects202603UrlRedirectIdUpdateResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest UrlRedirectsUrlMapping
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}

@@ -12,6 +12,424 @@ import (
 	"github.com/oapi-codegen/runtime"
 )
 
+// ParsePostwebhooksJournaljournal202603batchreadResponse parses an HTTP response from a PostwebhooksJournaljournal202603batchreadWithResponse call
+func ParsePostwebhooksJournaljournal202603batchreadResponse(rsp *http.Response) (*PostwebhooksJournaljournal202603batchreadResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &PostwebhooksJournaljournal202603batchreadResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BatchResponseJournalFetchResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
+		var dest BatchResponseJournalFetchResponseWithErrors
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON207 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetwebhooksJournaljournal202603batchOffsetnextCountResponse parses an HTTP response from a GetwebhooksJournaljournal202603batchOffsetnextCountWithResponse call
+func ParseGetwebhooksJournaljournal202603batchOffsetnextCountResponse(rsp *http.Response) (*GetwebhooksJournaljournal202603batchOffsetnextCountResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetwebhooksJournaljournal202603batchOffsetnextCountResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BatchResponseJournalFetchResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetwebhooksJournaljournal202603earliestResponse parses an HTTP response from a GetwebhooksJournaljournal202603earliestWithResponse call
+func ParseGetwebhooksJournaljournal202603earliestResponse(rsp *http.Response) (*GetwebhooksJournaljournal202603earliestResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetwebhooksJournaljournal202603earliestResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest JournalFetchResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case rsp.StatusCode == 204:
+		break // No content-type
+
+	}
+
+	return response, nil
+}
+
+// ParseGetwebhooksJournaljournal202603latestResponse parses an HTTP response from a GetwebhooksJournaljournal202603latestWithResponse call
+func ParseGetwebhooksJournaljournal202603latestResponse(rsp *http.Response) (*GetwebhooksJournaljournal202603latestResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetwebhooksJournaljournal202603latestResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest JournalFetchResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case rsp.StatusCode == 204:
+		break // No content-type
+
+	}
+
+	return response, nil
+}
+
+// ParseGetwebhooksJournaljournal202603offsetOffsetnextResponse parses an HTTP response from a GetwebhooksJournaljournal202603offsetOffsetnextWithResponse call
+func ParseGetwebhooksJournaljournal202603offsetOffsetnextResponse(rsp *http.Response) (*GetwebhooksJournaljournal202603offsetOffsetnextResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetwebhooksJournaljournal202603offsetOffsetnextResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest JournalFetchResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case rsp.StatusCode == 204:
+		break // No content-type
+
+	}
+
+	return response, nil
+}
+
+// ParseGetwebhooksJournaljournal202603statusStatusIdResponse parses an HTTP response from a GetwebhooksJournaljournal202603statusStatusIdWithResponse call
+func ParseGetwebhooksJournaljournal202603statusStatusIdResponse(rsp *http.Response) (*GetwebhooksJournaljournal202603statusStatusIdResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetwebhooksJournaljournal202603statusStatusIdResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest SnapshotStatusResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostwebhooksJournalsnapshots202603crmResponse parses an HTTP response from a PostwebhooksJournalsnapshots202603crmWithResponse call
+func ParsePostwebhooksJournalsnapshots202603crmResponse(rsp *http.Response) (*PostwebhooksJournalsnapshots202603crmResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &PostwebhooksJournalsnapshots202603crmResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CrmObjectSnapshotBatchResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetwebhooksJournalsubscriptions202603Response parses an HTTP response from a GetwebhooksJournalsubscriptions202603WithResponse call
+func ParseGetwebhooksJournalsubscriptions202603Response(rsp *http.Response) (*GetwebhooksJournalsubscriptions202603Response, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetwebhooksJournalsubscriptions202603Response{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CollectionResponseSubscriptionResponseMarch2027NoPaging
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostwebhooksJournalsubscriptions202603Response parses an HTTP response from a PostwebhooksJournalsubscriptions202603WithResponse call
+func ParsePostwebhooksJournalsubscriptions202603Response(rsp *http.Response) (*PostwebhooksJournalsubscriptions202603Response, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &PostwebhooksJournalsubscriptions202603Response{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest WebhooksJournalWebhooksJournalSubscriptionResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostwebhooksJournalsubscriptions202603filtersResponse parses an HTTP response from a PostwebhooksJournalsubscriptions202603filtersWithResponse call
+func ParsePostwebhooksJournalsubscriptions202603filtersResponse(rsp *http.Response) (*PostwebhooksJournalsubscriptions202603filtersResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &PostwebhooksJournalsubscriptions202603filtersResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest FilterCreateResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetwebhooksJournalsubscriptions202603filterssubscriptionSubscriptionIdResponse parses an HTTP response from a GetwebhooksJournalsubscriptions202603filterssubscriptionSubscriptionIdWithResponse call
+func ParseGetwebhooksJournalsubscriptions202603filterssubscriptionSubscriptionIdResponse(rsp *http.Response) (*GetwebhooksJournalsubscriptions202603filterssubscriptionSubscriptionIdResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetwebhooksJournalsubscriptions202603filterssubscriptionSubscriptionIdResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest []FilterResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseDeletewebhooksJournalsubscriptions202603filtersFilterIdResponse parses an HTTP response from a DeletewebhooksJournalsubscriptions202603filtersFilterIdWithResponse call
+func ParseDeletewebhooksJournalsubscriptions202603filtersFilterIdResponse(rsp *http.Response) (*DeletewebhooksJournalsubscriptions202603filtersFilterIdResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &DeletewebhooksJournalsubscriptions202603filtersFilterIdResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParseGetwebhooksJournalsubscriptions202603filtersFilterIdResponse parses an HTTP response from a GetwebhooksJournalsubscriptions202603filtersFilterIdWithResponse call
+func ParseGetwebhooksJournalsubscriptions202603filtersFilterIdResponse(rsp *http.Response) (*GetwebhooksJournalsubscriptions202603filtersFilterIdResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetwebhooksJournalsubscriptions202603filtersFilterIdResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest FilterResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseDeletewebhooksJournalsubscriptions202603portalsPortalIdResponse parses an HTTP response from a DeletewebhooksJournalsubscriptions202603portalsPortalIdWithResponse call
+func ParseDeletewebhooksJournalsubscriptions202603portalsPortalIdResponse(rsp *http.Response) (*DeletewebhooksJournalsubscriptions202603portalsPortalIdResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &DeletewebhooksJournalsubscriptions202603portalsPortalIdResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParseDeletewebhooksJournalsubscriptions202603SubscriptionIdResponse parses an HTTP response from a DeletewebhooksJournalsubscriptions202603SubscriptionIdWithResponse call
+func ParseDeletewebhooksJournalsubscriptions202603SubscriptionIdResponse(rsp *http.Response) (*DeletewebhooksJournalsubscriptions202603SubscriptionIdResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &DeletewebhooksJournalsubscriptions202603SubscriptionIdResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParseGetwebhooksJournalsubscriptions202603SubscriptionIdResponse parses an HTTP response from a GetwebhooksJournalsubscriptions202603SubscriptionIdWithResponse call
+func ParseGetwebhooksJournalsubscriptions202603SubscriptionIdResponse(rsp *http.Response) (*GetwebhooksJournalsubscriptions202603SubscriptionIdResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetwebhooksJournalsubscriptions202603SubscriptionIdResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest WebhooksJournalWebhooksJournalSubscriptionResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseDeletewebhooks202603AppIdsettingsClearResponse parses an HTTP response from a Deletewebhooks202603AppIdsettingsClearWithResponse call
+func ParseDeletewebhooks202603AppIdsettingsClearResponse(rsp *http.Response) (*Deletewebhooks202603AppIdsettingsClearResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Deletewebhooks202603AppIdsettingsClearResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
 // ParseGetwebhooks202603AppIdsettingsGetAllResponse parses an HTTP response from a Getwebhooks202603AppIdsettingsGetAllWithResponse call
 func ParseGetwebhooks202603AppIdsettingsGetAllResponse(rsp *http.Response) (*Getwebhooks202603AppIdsettingsGetAllResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)

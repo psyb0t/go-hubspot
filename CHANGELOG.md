@@ -2,6 +2,15 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.3.4, 2026-11-01
+
+- Added the CMS site search operation for spec version 2026-03: `GetcmssiteSearch202603search` and `GetcmssiteSearch202603searchWithResponse` on `Client`, `ClientWithResponses`, `ClientInterface` and `ClientWithResponsesInterface`. The request builder is `NewGetcmssiteSearch202603searchRequest` and the response parser is `ParseGetcmssiteSearch202603searchResponse`.
+- Added the types `GetcmssiteSearch202603searchParams` and `GetcmssiteSearch202603searchResponse` for the new operation.
+- Added the query parameter enums `GetcmssiteSearch202603searchParamsLanguage` (one constant per language code), `GetcmssiteSearch202603searchParamsLength` (`SHORT`, `LONG`) and `GetcmssiteSearch202603searchParamsTypes` (`BLOGPOST`, `KNOWLEDGEARTICLE`, `LANDINGPAGE`, `LISTINGPAGE`, `SITEPAGE`, `STRUCTUREDCONTENT`).
+- Added the result types `PublicSearchResults`, `ContentSearchResult`, `ContentSearchResultLanguage` and `ContentSearchResultType`, with the same language and content type constants.
+- Types that implement `ClientInterface` or `ClientWithResponsesInterface`, such as test mocks, need the two new methods.
+- Generated code moved between `client_NNN.gen.go` files, and a new `client_005.gen.go` file was added. This has no effect on callers.
+
 ## v0.3.3, 2026-10-30
 
 - Added the constant `EmailSendStatusViewSendResultRECIPIENTSENDLIMITEXCEEDED` for the send result `RECIPIENT_SEND_LIMIT_EXCEEDED`.
