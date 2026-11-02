@@ -7,6 +7,3031 @@ import (
 	"net/http"
 )
 
+// Status returns HTTPResponse.Status
+func (r Postcmsblogs202603postsObjectIddraftresetResetDraftResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmsblogs202603postsObjectIddraftresetResetDraftResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmsblogs202603postsObjectIddraftresetResetDraftResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Getcmsblogs202603postsObjectIdrevisionsGetPreviousVersionsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *CollectionResponseWithTotalBlogPostVersion
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Getcmsblogs202603postsObjectIdrevisionsGetPreviousVersionsResponse) GetJSON200() *CollectionResponseWithTotalBlogPostVersion {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Getcmsblogs202603postsObjectIdrevisionsGetPreviousVersionsResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Getcmsblogs202603postsObjectIdrevisionsGetPreviousVersionsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Getcmsblogs202603postsObjectIdrevisionsGetPreviousVersionsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Getcmsblogs202603postsObjectIdrevisionsGetPreviousVersionsResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Getcmsblogs202603postsObjectIdrevisionsRevisionIdGetPreviousVersionResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *BlogPostVersion
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Getcmsblogs202603postsObjectIdrevisionsRevisionIdGetPreviousVersionResponse) GetJSON200() *BlogPostVersion {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Getcmsblogs202603postsObjectIdrevisionsRevisionIdGetPreviousVersionResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Getcmsblogs202603postsObjectIdrevisionsRevisionIdGetPreviousVersionResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Getcmsblogs202603postsObjectIdrevisionsRevisionIdGetPreviousVersionResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Getcmsblogs202603postsObjectIdrevisionsRevisionIdGetPreviousVersionResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmsblogs202603postsObjectIdrevisionsRevisionIdrestoreRestorePreviousVersionResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *BlogPost
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Postcmsblogs202603postsObjectIdrevisionsRevisionIdrestoreRestorePreviousVersionResponse) GetJSON200() *BlogPost {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmsblogs202603postsObjectIdrevisionsRevisionIdrestoreRestorePreviousVersionResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmsblogs202603postsObjectIdrevisionsRevisionIdrestoreRestorePreviousVersionResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmsblogs202603postsObjectIdrevisionsRevisionIdrestoreRestorePreviousVersionResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmsblogs202603postsObjectIdrevisionsRevisionIdrestoreRestorePreviousVersionResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmsblogs202603postsObjectIdrevisionsRevisionIdrestoreToDraftRestorePreviousVersionToDraftResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *BlogPost
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Postcmsblogs202603postsObjectIdrevisionsRevisionIdrestoreToDraftRestorePreviousVersionToDraftResponse) GetJSON200() *BlogPost {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmsblogs202603postsObjectIdrevisionsRevisionIdrestoreToDraftRestorePreviousVersionToDraftResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmsblogs202603postsObjectIdrevisionsRevisionIdrestoreToDraftRestorePreviousVersionToDraftResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmsblogs202603postsObjectIdrevisionsRevisionIdrestoreToDraftRestorePreviousVersionToDraftResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmsblogs202603postsObjectIdrevisionsRevisionIdrestoreToDraftRestorePreviousVersionToDraftResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Getcmsblogs202603tagsGetPageResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *CollectionResponseWithTotalTagForwardPaging
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Getcmsblogs202603tagsGetPageResponse) GetJSON200() *CollectionResponseWithTotalTagForwardPaging {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Getcmsblogs202603tagsGetPageResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Getcmsblogs202603tagsGetPageResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Getcmsblogs202603tagsGetPageResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Getcmsblogs202603tagsGetPageResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+// Postcmsblogs202603tagsCreateResponse201Headers the declared response headers of an HTTP 201 response for Postcmsblogs202603tagsCreate
+type Postcmsblogs202603tagsCreateResponse201Headers struct {
+	Location *string
+}
+
+type Postcmsblogs202603tagsCreateResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON201 the response for an HTTP 201 `application/json` response
+	JSON201 *Tag
+	// Headers201 the parsed response headers for an HTTP 201 response
+	Headers201 *Postcmsblogs202603tagsCreateResponse201Headers
+}
+
+// GetJSON201 returns the response for an HTTP 201 `application/json` response
+func (r Postcmsblogs202603tagsCreateResponse) GetJSON201() *Tag {
+	return r.JSON201
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmsblogs202603tagsCreateResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmsblogs202603tagsCreateResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmsblogs202603tagsCreateResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmsblogs202603tagsCreateResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmsblogs202603tagsbatcharchiveArchiveBatchResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON207 the response for an HTTP 207 `application/json` response
+	JSON207 *BatchResponseTagWithErrors
+}
+
+// GetJSON207 returns the response for an HTTP 207 `application/json` response
+func (r Postcmsblogs202603tagsbatcharchiveArchiveBatchResponse) GetJSON207() *BatchResponseTagWithErrors {
+	return r.JSON207
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmsblogs202603tagsbatcharchiveArchiveBatchResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmsblogs202603tagsbatcharchiveArchiveBatchResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmsblogs202603tagsbatcharchiveArchiveBatchResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmsblogs202603tagsbatcharchiveArchiveBatchResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmsblogs202603tagsbatchcreateCreateBatchResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON201 the response for an HTTP 201 `application/json` response
+	JSON201 *BatchResponseTag
+	// JSON207 the response for an HTTP 207 `application/json` response
+	JSON207 *BatchResponseTagWithErrors
+}
+
+// GetJSON201 returns the response for an HTTP 201 `application/json` response
+func (r Postcmsblogs202603tagsbatchcreateCreateBatchResponse) GetJSON201() *BatchResponseTag {
+	return r.JSON201
+}
+
+// GetJSON207 returns the response for an HTTP 207 `application/json` response
+func (r Postcmsblogs202603tagsbatchcreateCreateBatchResponse) GetJSON207() *BatchResponseTagWithErrors {
+	return r.JSON207
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmsblogs202603tagsbatchcreateCreateBatchResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmsblogs202603tagsbatchcreateCreateBatchResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmsblogs202603tagsbatchcreateCreateBatchResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmsblogs202603tagsbatchcreateCreateBatchResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmsblogs202603tagsbatchreadReadBatchResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *BatchResponseTag
+	// JSON207 the response for an HTTP 207 `application/json` response
+	JSON207 *BatchResponseTagWithErrors
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Postcmsblogs202603tagsbatchreadReadBatchResponse) GetJSON200() *BatchResponseTag {
+	return r.JSON200
+}
+
+// GetJSON207 returns the response for an HTTP 207 `application/json` response
+func (r Postcmsblogs202603tagsbatchreadReadBatchResponse) GetJSON207() *BatchResponseTagWithErrors {
+	return r.JSON207
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmsblogs202603tagsbatchreadReadBatchResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmsblogs202603tagsbatchreadReadBatchResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmsblogs202603tagsbatchreadReadBatchResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmsblogs202603tagsbatchreadReadBatchResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmsblogs202603tagsbatchupdateUpdateBatchResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *BatchResponseTag
+	// JSON207 the response for an HTTP 207 `application/json` response
+	JSON207 *BatchResponseTagWithErrors
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Postcmsblogs202603tagsbatchupdateUpdateBatchResponse) GetJSON200() *BatchResponseTag {
+	return r.JSON200
+}
+
+// GetJSON207 returns the response for an HTTP 207 `application/json` response
+func (r Postcmsblogs202603tagsbatchupdateUpdateBatchResponse) GetJSON207() *BatchResponseTagWithErrors {
+	return r.JSON207
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmsblogs202603tagsbatchupdateUpdateBatchResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmsblogs202603tagsbatchupdateUpdateBatchResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmsblogs202603tagsbatchupdateUpdateBatchResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmsblogs202603tagsbatchupdateUpdateBatchResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Getcmsblogs202603tagscursorcmsblogsv3tagscursorResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *CursorPagedResultTagLong
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Getcmsblogs202603tagscursorcmsblogsv3tagscursorResponse) GetJSON200() *CursorPagedResultTagLong {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Getcmsblogs202603tagscursorcmsblogsv3tagscursorResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Getcmsblogs202603tagscursorcmsblogsv3tagscursorResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Getcmsblogs202603tagscursorcmsblogsv3tagscursorResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Getcmsblogs202603tagscursorcmsblogsv3tagscursorResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Getcmsblogs202603tagscursorquerycmsblogsv3tagscursorqueryResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *CursorPagedResultTagLong
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Getcmsblogs202603tagscursorquerycmsblogsv3tagscursorqueryResponse) GetJSON200() *CursorPagedResultTagLong {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Getcmsblogs202603tagscursorquerycmsblogsv3tagscursorqueryResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Getcmsblogs202603tagscursorquerycmsblogsv3tagscursorqueryResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Getcmsblogs202603tagscursorquerycmsblogsv3tagscursorqueryResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Getcmsblogs202603tagscursorquerycmsblogsv3tagscursorqueryResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmsblogs202603tagsmultiLanguageattachToLangGroupAttachToLangGroupResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmsblogs202603tagsmultiLanguageattachToLangGroupAttachToLangGroupResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmsblogs202603tagsmultiLanguageattachToLangGroupAttachToLangGroupResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmsblogs202603tagsmultiLanguageattachToLangGroupAttachToLangGroupResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmsblogs202603tagsmultiLanguageattachToLangGroupAttachToLangGroupResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmsblogs202603tagsmultiLanguagecreateLanguageVariationCreateLangVariationResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *Tag
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Postcmsblogs202603tagsmultiLanguagecreateLanguageVariationCreateLangVariationResponse) GetJSON200() *Tag {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmsblogs202603tagsmultiLanguagecreateLanguageVariationCreateLangVariationResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmsblogs202603tagsmultiLanguagecreateLanguageVariationCreateLangVariationResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmsblogs202603tagsmultiLanguagecreateLanguageVariationCreateLangVariationResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmsblogs202603tagsmultiLanguagecreateLanguageVariationCreateLangVariationResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmsblogs202603tagsmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmsblogs202603tagsmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmsblogs202603tagsmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmsblogs202603tagsmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmsblogs202603tagsmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Putcmsblogs202603tagsmultiLanguagesetNewLangPrimarySetLangPrimaryResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+}
+
+// GetBody returns the raw response body bytes
+func (r Putcmsblogs202603tagsmultiLanguagesetNewLangPrimarySetLangPrimaryResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Putcmsblogs202603tagsmultiLanguagesetNewLangPrimarySetLangPrimaryResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Putcmsblogs202603tagsmultiLanguagesetNewLangPrimarySetLangPrimaryResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Putcmsblogs202603tagsmultiLanguagesetNewLangPrimarySetLangPrimaryResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmsblogs202603tagsmultiLanguageupdateLanguagesUpdateLangsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmsblogs202603tagsmultiLanguageupdateLanguagesUpdateLangsResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmsblogs202603tagsmultiLanguageupdateLanguagesUpdateLangsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmsblogs202603tagsmultiLanguageupdateLanguagesUpdateLangsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmsblogs202603tagsmultiLanguageupdateLanguagesUpdateLangsResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Deletecmsblogs202603tagsObjectIdArchiveResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+}
+
+// GetBody returns the raw response body bytes
+func (r Deletecmsblogs202603tagsObjectIdArchiveResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Deletecmsblogs202603tagsObjectIdArchiveResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Deletecmsblogs202603tagsObjectIdArchiveResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Deletecmsblogs202603tagsObjectIdArchiveResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Getcmsblogs202603tagsObjectIdGetByIdResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *Tag
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Getcmsblogs202603tagsObjectIdGetByIdResponse) GetJSON200() *Tag {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Getcmsblogs202603tagsObjectIdGetByIdResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Getcmsblogs202603tagsObjectIdGetByIdResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Getcmsblogs202603tagsObjectIdGetByIdResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Getcmsblogs202603tagsObjectIdGetByIdResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Patchcmsblogs202603tagsObjectIdUpdateResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *Tag
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Patchcmsblogs202603tagsObjectIdUpdateResponse) GetJSON200() *Tag {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Patchcmsblogs202603tagsObjectIdUpdateResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Patchcmsblogs202603tagsObjectIdUpdateResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Patchcmsblogs202603tagsObjectIdUpdateResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Patchcmsblogs202603tagsObjectIdUpdateResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Getcmsdomains202603cmsdomainsv3Response struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *CollectionResponseWithTotalDomain
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Getcmsdomains202603cmsdomainsv3Response) GetJSON200() *CollectionResponseWithTotalDomain {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Getcmsdomains202603cmsdomainsv3Response) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Getcmsdomains202603cmsdomainsv3Response) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Getcmsdomains202603cmsdomainsv3Response) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Getcmsdomains202603cmsdomainsv3Response) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Getcmsdomains202603DomainIdGetByIdResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *Domain
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Getcmsdomains202603DomainIdGetByIdResponse) GetJSON200() *Domain {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Getcmsdomains202603DomainIdGetByIdResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Getcmsdomains202603DomainIdGetByIdResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Getcmsdomains202603DomainIdGetByIdResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Getcmsdomains202603DomainIdGetByIdResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Getcmshubdb202603tablesGetAllTablesResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *CollectionResponseWithTotalHubDbTableV3
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Getcmshubdb202603tablesGetAllTablesResponse) GetJSON200() *CollectionResponseWithTotalHubDbTableV3 {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Getcmshubdb202603tablesGetAllTablesResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Getcmshubdb202603tablesGetAllTablesResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Getcmshubdb202603tablesGetAllTablesResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Getcmshubdb202603tablesGetAllTablesResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+// Postcmshubdb202603tablesCreateTableResponse201Headers the declared response headers of an HTTP 201 response for Postcmshubdb202603tablesCreateTable
+type Postcmshubdb202603tablesCreateTableResponse201Headers struct {
+	Location *string
+}
+
+type Postcmshubdb202603tablesCreateTableResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON201 the response for an HTTP 201 `application/json` response
+	JSON201 *HubDbTableV3
+	// Headers201 the parsed response headers for an HTTP 201 response
+	Headers201 *Postcmshubdb202603tablesCreateTableResponse201Headers
+}
+
+// GetJSON201 returns the response for an HTTP 201 `application/json` response
+func (r Postcmshubdb202603tablesCreateTableResponse) GetJSON201() *HubDbTableV3 {
+	return r.JSON201
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmshubdb202603tablesCreateTableResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmshubdb202603tablesCreateTableResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmshubdb202603tablesCreateTableResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmshubdb202603tablesCreateTableResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Getcmshubdb202603tablesdraftGetAllDraftTablesResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *CollectionResponseWithTotalHubDbTableV3
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Getcmshubdb202603tablesdraftGetAllDraftTablesResponse) GetJSON200() *CollectionResponseWithTotalHubDbTableV3 {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Getcmshubdb202603tablesdraftGetAllDraftTablesResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Getcmshubdb202603tablesdraftGetAllDraftTablesResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Getcmshubdb202603tablesdraftGetAllDraftTablesResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Getcmshubdb202603tablesdraftGetAllDraftTablesResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Deletecmshubdb202603tablesTableIdOrNameArchiveTableResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+}
+
+// GetBody returns the raw response body bytes
+func (r Deletecmshubdb202603tablesTableIdOrNameArchiveTableResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Deletecmshubdb202603tablesTableIdOrNameArchiveTableResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Deletecmshubdb202603tablesTableIdOrNameArchiveTableResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Deletecmshubdb202603tablesTableIdOrNameArchiveTableResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Getcmshubdb202603tablesTableIdOrNameGetTableDetailsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *HubDbTableV3
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Getcmshubdb202603tablesTableIdOrNameGetTableDetailsResponse) GetJSON200() *HubDbTableV3 {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Getcmshubdb202603tablesTableIdOrNameGetTableDetailsResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Getcmshubdb202603tablesTableIdOrNameGetTableDetailsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Getcmshubdb202603tablesTableIdOrNameGetTableDetailsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Getcmshubdb202603tablesTableIdOrNameGetTableDetailsResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Getcmshubdb202603tablesTableIdOrNamedraftGetDraftTableDetailsByIdResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *HubDbTableV3
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Getcmshubdb202603tablesTableIdOrNamedraftGetDraftTableDetailsByIdResponse) GetJSON200() *HubDbTableV3 {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Getcmshubdb202603tablesTableIdOrNamedraftGetDraftTableDetailsByIdResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Getcmshubdb202603tablesTableIdOrNamedraftGetDraftTableDetailsByIdResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Getcmshubdb202603tablesTableIdOrNamedraftGetDraftTableDetailsByIdResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Getcmshubdb202603tablesTableIdOrNamedraftGetDraftTableDetailsByIdResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Patchcmshubdb202603tablesTableIdOrNamedraftUpdateDraftTableResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *HubDbTableV3
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Patchcmshubdb202603tablesTableIdOrNamedraftUpdateDraftTableResponse) GetJSON200() *HubDbTableV3 {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Patchcmshubdb202603tablesTableIdOrNamedraftUpdateDraftTableResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Patchcmshubdb202603tablesTableIdOrNamedraftUpdateDraftTableResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Patchcmshubdb202603tablesTableIdOrNamedraftUpdateDraftTableResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Patchcmshubdb202603tablesTableIdOrNamedraftUpdateDraftTableResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmshubdb202603tablesTableIdOrNamedraftcloneCloneDraftTableResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *HubDbTableV3
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Postcmshubdb202603tablesTableIdOrNamedraftcloneCloneDraftTableResponse) GetJSON200() *HubDbTableV3 {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmshubdb202603tablesTableIdOrNamedraftcloneCloneDraftTableResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmshubdb202603tablesTableIdOrNamedraftcloneCloneDraftTableResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmshubdb202603tablesTableIdOrNamedraftcloneCloneDraftTableResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmshubdb202603tablesTableIdOrNamedraftcloneCloneDraftTableResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Getcmshubdb202603tablesTableIdOrNamedraftexportExportDraftTableResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+}
+
+// GetBody returns the raw response body bytes
+func (r Getcmshubdb202603tablesTableIdOrNamedraftexportExportDraftTableResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Getcmshubdb202603tablesTableIdOrNamedraftexportExportDraftTableResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Getcmshubdb202603tablesTableIdOrNamedraftexportExportDraftTableResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Getcmshubdb202603tablesTableIdOrNamedraftexportExportDraftTableResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmshubdb202603tablesTableIdOrNamedraftimportImportDraftTableResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *ImportResult
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Postcmshubdb202603tablesTableIdOrNamedraftimportImportDraftTableResponse) GetJSON200() *ImportResult {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmshubdb202603tablesTableIdOrNamedraftimportImportDraftTableResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmshubdb202603tablesTableIdOrNamedraftimportImportDraftTableResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmshubdb202603tablesTableIdOrNamedraftimportImportDraftTableResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmshubdb202603tablesTableIdOrNamedraftimportImportDraftTableResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmshubdb202603tablesTableIdOrNamedraftpublishPublishDraftTableResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *HubDbTableV3
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Postcmshubdb202603tablesTableIdOrNamedraftpublishPublishDraftTableResponse) GetJSON200() *HubDbTableV3 {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmshubdb202603tablesTableIdOrNamedraftpublishPublishDraftTableResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmshubdb202603tablesTableIdOrNamedraftpublishPublishDraftTableResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmshubdb202603tablesTableIdOrNamedraftpublishPublishDraftTableResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmshubdb202603tablesTableIdOrNamedraftpublishPublishDraftTableResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmshubdb202603tablesTableIdOrNamedraftresetResetDraftTableResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *HubDbTableV3
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Postcmshubdb202603tablesTableIdOrNamedraftresetResetDraftTableResponse) GetJSON200() *HubDbTableV3 {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmshubdb202603tablesTableIdOrNamedraftresetResetDraftTableResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmshubdb202603tablesTableIdOrNamedraftresetResetDraftTableResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmshubdb202603tablesTableIdOrNamedraftresetResetDraftTableResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmshubdb202603tablesTableIdOrNamedraftresetResetDraftTableResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Getcmshubdb202603tablesTableIdOrNameexportExportTableResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+}
+
+// GetBody returns the raw response body bytes
+func (r Getcmshubdb202603tablesTableIdOrNameexportExportTableResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Getcmshubdb202603tablesTableIdOrNameexportExportTableResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Getcmshubdb202603tablesTableIdOrNameexportExportTableResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Getcmshubdb202603tablesTableIdOrNameexportExportTableResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Getcmshubdb202603tablesTableIdOrNamerowsGetTableRowsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *UnifiedCollectionResponseWithTotalBaseHubDbTableRowV3
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Getcmshubdb202603tablesTableIdOrNamerowsGetTableRowsResponse) GetJSON200() *UnifiedCollectionResponseWithTotalBaseHubDbTableRowV3 {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Getcmshubdb202603tablesTableIdOrNamerowsGetTableRowsResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Getcmshubdb202603tablesTableIdOrNamerowsGetTableRowsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Getcmshubdb202603tablesTableIdOrNamerowsGetTableRowsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Getcmshubdb202603tablesTableIdOrNamerowsGetTableRowsResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+// Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowResponse201Headers the declared response headers of an HTTP 201 response for Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRow
+type Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowResponse201Headers struct {
+	Location *string
+}
+
+type Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON201 the response for an HTTP 201 `application/json` response
+	JSON201 *HubDbTableRowV3
+	// Headers201 the parsed response headers for an HTTP 201 response
+	Headers201 *Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowResponse201Headers
+}
+
+// GetJSON201 returns the response for an HTTP 201 `application/json` response
+func (r Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowResponse) GetJSON201() *HubDbTableRowV3 {
+	return r.JSON201
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmshubdb202603tablesTableIdOrNamerowsbatchreadReadTableRowsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *BatchResponseHubDbTableRowV3
+	// JSON207 the response for an HTTP 207 `application/json` response
+	JSON207 *BatchResponseHubDbTableRowV3WithErrors
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Postcmshubdb202603tablesTableIdOrNamerowsbatchreadReadTableRowsResponse) GetJSON200() *BatchResponseHubDbTableRowV3 {
+	return r.JSON200
+}
+
+// GetJSON207 returns the response for an HTTP 207 `application/json` response
+func (r Postcmshubdb202603tablesTableIdOrNamerowsbatchreadReadTableRowsResponse) GetJSON207() *BatchResponseHubDbTableRowV3WithErrors {
+	return r.JSON207
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmshubdb202603tablesTableIdOrNamerowsbatchreadReadTableRowsResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmshubdb202603tablesTableIdOrNamerowsbatchreadReadTableRowsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmshubdb202603tablesTableIdOrNamerowsbatchreadReadTableRowsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmshubdb202603tablesTableIdOrNamerowsbatchreadReadTableRowsResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Getcmshubdb202603tablesTableIdOrNamerowsdraftReadDraftTableRowsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *UnifiedCollectionResponseWithTotalBaseHubDbTableRowV3
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Getcmshubdb202603tablesTableIdOrNamerowsdraftReadDraftTableRowsResponse) GetJSON200() *UnifiedCollectionResponseWithTotalBaseHubDbTableRowV3 {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Getcmshubdb202603tablesTableIdOrNamerowsdraftReadDraftTableRowsResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Getcmshubdb202603tablesTableIdOrNamerowsdraftReadDraftTableRowsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Getcmshubdb202603tablesTableIdOrNamerowsdraftReadDraftTableRowsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Getcmshubdb202603tablesTableIdOrNamerowsdraftReadDraftTableRowsResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcloneCloneDraftTableRowsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *BatchResponseHubDbTableRowV3
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcloneCloneDraftTableRowsResponse) GetJSON200() *BatchResponseHubDbTableRowV3 {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcloneCloneDraftTableRowsResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcloneCloneDraftTableRowsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcloneCloneDraftTableRowsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcloneCloneDraftTableRowsResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcreateCreateDraftTableRowsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON201 the response for an HTTP 201 `application/json` response
+	JSON201 *BatchResponseHubDbTableRowV3
+	// JSON207 the response for an HTTP 207 `application/json` response
+	JSON207 *BatchResponseHubDbTableRowV3WithErrors
+}
+
+// GetJSON201 returns the response for an HTTP 201 `application/json` response
+func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcreateCreateDraftTableRowsResponse) GetJSON201() *BatchResponseHubDbTableRowV3 {
+	return r.JSON201
+}
+
+// GetJSON207 returns the response for an HTTP 207 `application/json` response
+func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcreateCreateDraftTableRowsResponse) GetJSON207() *BatchResponseHubDbTableRowV3WithErrors {
+	return r.JSON207
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcreateCreateDraftTableRowsResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcreateCreateDraftTableRowsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcreateCreateDraftTableRowsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcreateCreateDraftTableRowsResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchpurgePurgeDraftTableRowsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON207 the response for an HTTP 207 `application/json` response
+	JSON207 *BatchResponseHubDbTableRowV3WithErrors
+}
+
+// GetJSON207 returns the response for an HTTP 207 `application/json` response
+func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchpurgePurgeDraftTableRowsResponse) GetJSON207() *BatchResponseHubDbTableRowV3WithErrors {
+	return r.JSON207
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchpurgePurgeDraftTableRowsResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchpurgePurgeDraftTableRowsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchpurgePurgeDraftTableRowsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchpurgePurgeDraftTableRowsResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreadReadDraftTableRowsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *BatchResponseHubDbTableRowV3
+	// JSON207 the response for an HTTP 207 `application/json` response
+	JSON207 *BatchResponseHubDbTableRowV3WithErrors
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreadReadDraftTableRowsResponse) GetJSON200() *BatchResponseHubDbTableRowV3 {
+	return r.JSON200
+}
+
+// GetJSON207 returns the response for an HTTP 207 `application/json` response
+func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreadReadDraftTableRowsResponse) GetJSON207() *BatchResponseHubDbTableRowV3WithErrors {
+	return r.JSON207
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreadReadDraftTableRowsResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreadReadDraftTableRowsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreadReadDraftTableRowsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreadReadDraftTableRowsResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreplaceReplaceDraftTableRowsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *BatchResponseHubDbTableRowV3
+	// JSON207 the response for an HTTP 207 `application/json` response
+	JSON207 *BatchResponseHubDbTableRowV3WithErrors
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreplaceReplaceDraftTableRowsResponse) GetJSON200() *BatchResponseHubDbTableRowV3 {
+	return r.JSON200
+}
+
+// GetJSON207 returns the response for an HTTP 207 `application/json` response
+func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreplaceReplaceDraftTableRowsResponse) GetJSON207() *BatchResponseHubDbTableRowV3WithErrors {
+	return r.JSON207
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreplaceReplaceDraftTableRowsResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreplaceReplaceDraftTableRowsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreplaceReplaceDraftTableRowsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreplaceReplaceDraftTableRowsResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchupdateUpdateDraftTableRowsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *BatchResponseHubDbTableRowV3
+	// JSON207 the response for an HTTP 207 `application/json` response
+	JSON207 *BatchResponseHubDbTableRowV3WithErrors
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchupdateUpdateDraftTableRowsResponse) GetJSON200() *BatchResponseHubDbTableRowV3 {
+	return r.JSON200
+}
+
+// GetJSON207 returns the response for an HTTP 207 `application/json` response
+func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchupdateUpdateDraftTableRowsResponse) GetJSON207() *BatchResponseHubDbTableRowV3WithErrors {
+	return r.JSON207
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchupdateUpdateDraftTableRowsResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchupdateUpdateDraftTableRowsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchupdateUpdateDraftTableRowsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchupdateUpdateDraftTableRowsResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Getcmshubdb202603tablesTableIdOrNamerowsRowIdGetTableRowResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *HubDbTableRowV3
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Getcmshubdb202603tablesTableIdOrNamerowsRowIdGetTableRowResponse) GetJSON200() *HubDbTableRowV3 {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Getcmshubdb202603tablesTableIdOrNamerowsRowIdGetTableRowResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Getcmshubdb202603tablesTableIdOrNamerowsRowIdGetTableRowResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Getcmshubdb202603tablesTableIdOrNamerowsRowIdGetTableRowResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Getcmshubdb202603tablesTableIdOrNamerowsRowIdGetTableRowResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Deletecmshubdb202603tablesTableIdOrNamerowsRowIddraftPurgeDraftTableRowResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+}
+
+// GetBody returns the raw response body bytes
+func (r Deletecmshubdb202603tablesTableIdOrNamerowsRowIddraftPurgeDraftTableRowResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Deletecmshubdb202603tablesTableIdOrNamerowsRowIddraftPurgeDraftTableRowResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Deletecmshubdb202603tablesTableIdOrNamerowsRowIddraftPurgeDraftTableRowResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Deletecmshubdb202603tablesTableIdOrNamerowsRowIddraftPurgeDraftTableRowResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Getcmshubdb202603tablesTableIdOrNamerowsRowIddraftGetDraftTableRowByIdResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *HubDbTableRowV3
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Getcmshubdb202603tablesTableIdOrNamerowsRowIddraftGetDraftTableRowByIdResponse) GetJSON200() *HubDbTableRowV3 {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Getcmshubdb202603tablesTableIdOrNamerowsRowIddraftGetDraftTableRowByIdResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Getcmshubdb202603tablesTableIdOrNamerowsRowIddraftGetDraftTableRowByIdResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Getcmshubdb202603tablesTableIdOrNamerowsRowIddraftGetDraftTableRowByIdResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Getcmshubdb202603tablesTableIdOrNamerowsRowIddraftGetDraftTableRowByIdResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Patchcmshubdb202603tablesTableIdOrNamerowsRowIddraftUpdateDraftTableRowResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *HubDbTableRowV3
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Patchcmshubdb202603tablesTableIdOrNamerowsRowIddraftUpdateDraftTableRowResponse) GetJSON200() *HubDbTableRowV3 {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Patchcmshubdb202603tablesTableIdOrNamerowsRowIddraftUpdateDraftTableRowResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Patchcmshubdb202603tablesTableIdOrNamerowsRowIddraftUpdateDraftTableRowResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Patchcmshubdb202603tablesTableIdOrNamerowsRowIddraftUpdateDraftTableRowResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Patchcmshubdb202603tablesTableIdOrNamerowsRowIddraftUpdateDraftTableRowResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Putcmshubdb202603tablesTableIdOrNamerowsRowIddraftReplaceDraftTableRowResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *HubDbTableRowV3
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Putcmshubdb202603tablesTableIdOrNamerowsRowIddraftReplaceDraftTableRowResponse) GetJSON200() *HubDbTableRowV3 {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Putcmshubdb202603tablesTableIdOrNamerowsRowIddraftReplaceDraftTableRowResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Putcmshubdb202603tablesTableIdOrNamerowsRowIddraftReplaceDraftTableRowResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Putcmshubdb202603tablesTableIdOrNamerowsRowIddraftReplaceDraftTableRowResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Putcmshubdb202603tablesTableIdOrNamerowsRowIddraftReplaceDraftTableRowResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmshubdb202603tablesTableIdOrNamerowsRowIddraftcloneCloneDraftTableRowResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *HubDbTableRowV3
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Postcmshubdb202603tablesTableIdOrNamerowsRowIddraftcloneCloneDraftTableRowResponse) GetJSON200() *HubDbTableRowV3 {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmshubdb202603tablesTableIdOrNamerowsRowIddraftcloneCloneDraftTableRowResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmshubdb202603tablesTableIdOrNamerowsRowIddraftcloneCloneDraftTableRowResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmshubdb202603tablesTableIdOrNamerowsRowIddraftcloneCloneDraftTableRowResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmshubdb202603tablesTableIdOrNamerowsRowIddraftcloneCloneDraftTableRowResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmshubdb202603tablesTableIdOrNameunpublishUnpublishTableResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *HubDbTableV3
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Postcmshubdb202603tablesTableIdOrNameunpublishUnpublishTableResponse) GetJSON200() *HubDbTableV3 {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmshubdb202603tablesTableIdOrNameunpublishUnpublishTableResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmshubdb202603tablesTableIdOrNameunpublishUnpublishTableResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmshubdb202603tablesTableIdOrNameunpublishUnpublishTableResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmshubdb202603tablesTableIdOrNameunpublishUnpublishTableResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Deletecmshubdb202603tablesTableIdOrNameversionsVersionIdRemoveTableVersionResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+}
+
+// GetBody returns the raw response body bytes
+func (r Deletecmshubdb202603tablesTableIdOrNameversionsVersionIdRemoveTableVersionResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Deletecmshubdb202603tablesTableIdOrNameversionsVersionIdRemoveTableVersionResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Deletecmshubdb202603tablesTableIdOrNameversionsVersionIdRemoveTableVersionResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Deletecmshubdb202603tablesTableIdOrNameversionsVersionIdRemoveTableVersionResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Getcmspages202603landingPagesGetPageResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *CollectionResponseWithTotalPageForwardPaging
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Getcmspages202603landingPagesGetPageResponse) GetJSON200() *CollectionResponseWithTotalPageForwardPaging {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Getcmspages202603landingPagesGetPageResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Getcmspages202603landingPagesGetPageResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Getcmspages202603landingPagesGetPageResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Getcmspages202603landingPagesGetPageResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+// Postcmspages202603landingPagesCreateResponse201Headers the declared response headers of an HTTP 201 response for Postcmspages202603landingPagesCreate
+type Postcmspages202603landingPagesCreateResponse201Headers struct {
+	Location *string
+}
+
+type Postcmspages202603landingPagesCreateResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON201 the response for an HTTP 201 `application/json` response
+	JSON201 *Page
+	// Headers201 the parsed response headers for an HTTP 201 response
+	Headers201 *Postcmspages202603landingPagesCreateResponse201Headers
+}
+
+// GetJSON201 returns the response for an HTTP 201 `application/json` response
+func (r Postcmspages202603landingPagesCreateResponse) GetJSON201() *Page {
+	return r.JSON201
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmspages202603landingPagesCreateResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmspages202603landingPagesCreateResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmspages202603landingPagesCreateResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmspages202603landingPagesCreateResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+// Postcmspages202603landingPagesabTestcreateVariationCreateABTestVariationResponse201Headers the declared response headers of an HTTP 201 response for Postcmspages202603landingPagesabTestcreateVariationCreateABTestVariation
+type Postcmspages202603landingPagesabTestcreateVariationCreateABTestVariationResponse201Headers struct {
+	Location *string
+}
+
+type Postcmspages202603landingPagesabTestcreateVariationCreateABTestVariationResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON201 the response for an HTTP 201 `application/json` response
+	JSON201 *Page
+	// Headers201 the parsed response headers for an HTTP 201 response
+	Headers201 *Postcmspages202603landingPagesabTestcreateVariationCreateABTestVariationResponse201Headers
+}
+
+// GetJSON201 returns the response for an HTTP 201 `application/json` response
+func (r Postcmspages202603landingPagesabTestcreateVariationCreateABTestVariationResponse) GetJSON201() *Page {
+	return r.JSON201
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmspages202603landingPagesabTestcreateVariationCreateABTestVariationResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmspages202603landingPagesabTestcreateVariationCreateABTestVariationResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmspages202603landingPagesabTestcreateVariationCreateABTestVariationResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmspages202603landingPagesabTestcreateVariationCreateABTestVariationResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmspages202603landingPagesabTestendEndActiveABTestResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmspages202603landingPagesabTestendEndActiveABTestResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmspages202603landingPagesabTestendEndActiveABTestResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmspages202603landingPagesabTestendEndActiveABTestResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmspages202603landingPagesabTestendEndActiveABTestResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmspages202603landingPagesabTestrerunRerunPreviousABTestResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmspages202603landingPagesabTestrerunRerunPreviousABTestResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmspages202603landingPagesabTestrerunRerunPreviousABTestResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmspages202603landingPagesabTestrerunRerunPreviousABTestResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmspages202603landingPagesabTestrerunRerunPreviousABTestResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmspages202603landingPagesbatcharchiveArchiveBatchResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON207 the response for an HTTP 207 `application/json` response
+	JSON207 *BatchResponsePageWithErrors
+}
+
+// GetJSON207 returns the response for an HTTP 207 `application/json` response
+func (r Postcmspages202603landingPagesbatcharchiveArchiveBatchResponse) GetJSON207() *BatchResponsePageWithErrors {
+	return r.JSON207
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmspages202603landingPagesbatcharchiveArchiveBatchResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmspages202603landingPagesbatcharchiveArchiveBatchResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmspages202603landingPagesbatcharchiveArchiveBatchResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmspages202603landingPagesbatcharchiveArchiveBatchResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmspages202603landingPagesbatchcreateCreateBatchResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON201 the response for an HTTP 201 `application/json` response
+	JSON201 *BatchResponsePage
+	// JSON207 the response for an HTTP 207 `application/json` response
+	JSON207 *BatchResponsePageWithErrors
+}
+
+// GetJSON201 returns the response for an HTTP 201 `application/json` response
+func (r Postcmspages202603landingPagesbatchcreateCreateBatchResponse) GetJSON201() *BatchResponsePage {
+	return r.JSON201
+}
+
+// GetJSON207 returns the response for an HTTP 207 `application/json` response
+func (r Postcmspages202603landingPagesbatchcreateCreateBatchResponse) GetJSON207() *BatchResponsePageWithErrors {
+	return r.JSON207
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmspages202603landingPagesbatchcreateCreateBatchResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmspages202603landingPagesbatchcreateCreateBatchResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmspages202603landingPagesbatchcreateCreateBatchResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmspages202603landingPagesbatchcreateCreateBatchResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmspages202603landingPagesbatchreadReadBatchResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *BatchResponsePage
+	// JSON207 the response for an HTTP 207 `application/json` response
+	JSON207 *BatchResponsePageWithErrors
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Postcmspages202603landingPagesbatchreadReadBatchResponse) GetJSON200() *BatchResponsePage {
+	return r.JSON200
+}
+
+// GetJSON207 returns the response for an HTTP 207 `application/json` response
+func (r Postcmspages202603landingPagesbatchreadReadBatchResponse) GetJSON207() *BatchResponsePageWithErrors {
+	return r.JSON207
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmspages202603landingPagesbatchreadReadBatchResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmspages202603landingPagesbatchreadReadBatchResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmspages202603landingPagesbatchreadReadBatchResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmspages202603landingPagesbatchreadReadBatchResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmspages202603landingPagesbatchupdateUpdateBatchResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *BatchResponsePage
+	// JSON207 the response for an HTTP 207 `application/json` response
+	JSON207 *BatchResponsePageWithErrors
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Postcmspages202603landingPagesbatchupdateUpdateBatchResponse) GetJSON200() *BatchResponsePage {
+	return r.JSON200
+}
+
+// GetJSON207 returns the response for an HTTP 207 `application/json` response
+func (r Postcmspages202603landingPagesbatchupdateUpdateBatchResponse) GetJSON207() *BatchResponsePageWithErrors {
+	return r.JSON207
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmspages202603landingPagesbatchupdateUpdateBatchResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmspages202603landingPagesbatchupdateUpdateBatchResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmspages202603landingPagesbatchupdateUpdateBatchResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmspages202603landingPagesbatchupdateUpdateBatchResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmspages202603landingPagescloneCloneResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *Page
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Postcmspages202603landingPagescloneCloneResponse) GetJSON200() *Page {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmspages202603landingPagescloneCloneResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmspages202603landingPagescloneCloneResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmspages202603landingPagescloneCloneResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmspages202603landingPagescloneCloneResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Getcmspages202603landingPagesfoldersGetFoldersPageResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *CollectionResponseWithTotalContentFolderForwardPaging
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Getcmspages202603landingPagesfoldersGetFoldersPageResponse) GetJSON200() *CollectionResponseWithTotalContentFolderForwardPaging {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Getcmspages202603landingPagesfoldersGetFoldersPageResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Getcmspages202603landingPagesfoldersGetFoldersPageResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Getcmspages202603landingPagesfoldersGetFoldersPageResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Getcmspages202603landingPagesfoldersGetFoldersPageResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+// Postcmspages202603landingPagesfoldersCreateFolderResponse201Headers the declared response headers of an HTTP 201 response for Postcmspages202603landingPagesfoldersCreateFolder
+type Postcmspages202603landingPagesfoldersCreateFolderResponse201Headers struct {
+	Location *string
+}
+
+type Postcmspages202603landingPagesfoldersCreateFolderResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON201 the response for an HTTP 201 `application/json` response
+	JSON201 *ContentFolder
+	// Headers201 the parsed response headers for an HTTP 201 response
+	Headers201 *Postcmspages202603landingPagesfoldersCreateFolderResponse201Headers
+}
+
+// GetJSON201 returns the response for an HTTP 201 `application/json` response
+func (r Postcmspages202603landingPagesfoldersCreateFolderResponse) GetJSON201() *ContentFolder {
+	return r.JSON201
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmspages202603landingPagesfoldersCreateFolderResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmspages202603landingPagesfoldersCreateFolderResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmspages202603landingPagesfoldersCreateFolderResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmspages202603landingPagesfoldersCreateFolderResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmspages202603landingPagesfoldersbatcharchiveArchiveFoldersResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON207 the response for an HTTP 207 `application/json` response
+	JSON207 *BatchResponseContentFolderWithErrors
+}
+
+// GetJSON207 returns the response for an HTTP 207 `application/json` response
+func (r Postcmspages202603landingPagesfoldersbatcharchiveArchiveFoldersResponse) GetJSON207() *BatchResponseContentFolderWithErrors {
+	return r.JSON207
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmspages202603landingPagesfoldersbatcharchiveArchiveFoldersResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmspages202603landingPagesfoldersbatcharchiveArchiveFoldersResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmspages202603landingPagesfoldersbatcharchiveArchiveFoldersResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmspages202603landingPagesfoldersbatcharchiveArchiveFoldersResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmspages202603landingPagesfoldersbatchcreateCreateFoldersResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON201 the response for an HTTP 201 `application/json` response
+	JSON201 *BatchResponseContentFolder
+	// JSON207 the response for an HTTP 207 `application/json` response
+	JSON207 *BatchResponseContentFolderWithErrors
+}
+
+// GetJSON201 returns the response for an HTTP 201 `application/json` response
+func (r Postcmspages202603landingPagesfoldersbatchcreateCreateFoldersResponse) GetJSON201() *BatchResponseContentFolder {
+	return r.JSON201
+}
+
+// GetJSON207 returns the response for an HTTP 207 `application/json` response
+func (r Postcmspages202603landingPagesfoldersbatchcreateCreateFoldersResponse) GetJSON207() *BatchResponseContentFolderWithErrors {
+	return r.JSON207
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmspages202603landingPagesfoldersbatchcreateCreateFoldersResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmspages202603landingPagesfoldersbatchcreateCreateFoldersResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmspages202603landingPagesfoldersbatchcreateCreateFoldersResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmspages202603landingPagesfoldersbatchcreateCreateFoldersResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmspages202603landingPagesfoldersbatchreadReadFoldersResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *BatchResponseContentFolder
+	// JSON207 the response for an HTTP 207 `application/json` response
+	JSON207 *BatchResponseContentFolderWithErrors
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Postcmspages202603landingPagesfoldersbatchreadReadFoldersResponse) GetJSON200() *BatchResponseContentFolder {
+	return r.JSON200
+}
+
+// GetJSON207 returns the response for an HTTP 207 `application/json` response
+func (r Postcmspages202603landingPagesfoldersbatchreadReadFoldersResponse) GetJSON207() *BatchResponseContentFolderWithErrors {
+	return r.JSON207
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmspages202603landingPagesfoldersbatchreadReadFoldersResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmspages202603landingPagesfoldersbatchreadReadFoldersResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmspages202603landingPagesfoldersbatchreadReadFoldersResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmspages202603landingPagesfoldersbatchreadReadFoldersResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcmspages202603landingPagesfoldersbatchupdateUpdateFoldersResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *BatchResponseContentFolder
+	// JSON207 the response for an HTTP 207 `application/json` response
+	JSON207 *BatchResponseContentFolderWithErrors
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Postcmspages202603landingPagesfoldersbatchupdateUpdateFoldersResponse) GetJSON200() *BatchResponseContentFolder {
+	return r.JSON200
+}
+
+// GetJSON207 returns the response for an HTTP 207 `application/json` response
+func (r Postcmspages202603landingPagesfoldersbatchupdateUpdateFoldersResponse) GetJSON207() *BatchResponseContentFolderWithErrors {
+	return r.JSON207
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcmspages202603landingPagesfoldersbatchupdateUpdateFoldersResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcmspages202603landingPagesfoldersbatchupdateUpdateFoldersResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcmspages202603landingPagesfoldersbatchupdateUpdateFoldersResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcmspages202603landingPagesfoldersbatchupdateUpdateFoldersResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Deletecmspages202603landingPagesfoldersObjectIdArchiveFolderResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+}
+
+// GetBody returns the raw response body bytes
+func (r Deletecmspages202603landingPagesfoldersObjectIdArchiveFolderResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Deletecmspages202603landingPagesfoldersObjectIdArchiveFolderResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Deletecmspages202603landingPagesfoldersObjectIdArchiveFolderResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Deletecmspages202603landingPagesfoldersObjectIdArchiveFolderResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Getcmspages202603landingPagesfoldersObjectIdGetFolderByIdResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *ContentFolder
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Getcmspages202603landingPagesfoldersObjectIdGetFolderByIdResponse) GetJSON200() *ContentFolder {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Getcmspages202603landingPagesfoldersObjectIdGetFolderByIdResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Getcmspages202603landingPagesfoldersObjectIdGetFolderByIdResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Getcmspages202603landingPagesfoldersObjectIdGetFolderByIdResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Getcmspages202603landingPagesfoldersObjectIdGetFolderByIdResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Patchcmspages202603landingPagesfoldersObjectIdUpdateFolderResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *ContentFolder
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Patchcmspages202603landingPagesfoldersObjectIdUpdateFolderResponse) GetJSON200() *ContentFolder {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Patchcmspages202603landingPagesfoldersObjectIdUpdateFolderResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Patchcmspages202603landingPagesfoldersObjectIdUpdateFolderResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Patchcmspages202603landingPagesfoldersObjectIdUpdateFolderResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Patchcmspages202603landingPagesfoldersObjectIdUpdateFolderResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
 type Getcmspages202603landingPagesfoldersObjectIdrevisionsGetFolderPreviousVersionsResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
@@ -979,6 +4004,13 @@ func (r Postcmspages202603sitePagesabTestrerunRerunPreviousABTestResponse) Conte
 type Postcmspages202603sitePagesbatcharchiveArchiveBatchResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
+	// JSON207 the response for an HTTP 207 `application/json` response
+	JSON207 *BatchResponsePageWithErrors
+}
+
+// GetJSON207 returns the response for an HTTP 207 `application/json` response
+func (r Postcmspages202603sitePagesbatcharchiveArchiveBatchResponse) GetJSON207() *BatchResponsePageWithErrors {
+	return r.JSON207
 }
 
 // GetBody returns the raw response body bytes
@@ -1871,47 +4903,6 @@ func (r GetcmssiteSearch202603indexedDataContentIdGetByIdResponse) StatusCode() 
 
 // ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
 func (r GetcmssiteSearch202603indexedDataContentIdGetByIdResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type GetcmssiteSearch202603searchResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *PublicSearchResults
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r GetcmssiteSearch202603searchResponse) GetJSON200() *PublicSearchResults {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r GetcmssiteSearch202603searchResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r GetcmssiteSearch202603searchResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r GetcmssiteSearch202603searchResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r GetcmssiteSearch202603searchResponse) ContentType() string {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.Header.Get("Content-Type")
 	}
@@ -17015,2995 +20006,4 @@ func (r Postcrmobjects202603ordersResponse) GetJSON201() *SimplePublicObject {
 // GetBody returns the raw response body bytes
 func (r Postcrmobjects202603ordersResponse) GetBody() []byte {
 	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603ordersResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603ordersResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603ordersResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603ordersbatcharchiveResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603ordersbatcharchiveResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603ordersbatcharchiveResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603ordersbatcharchiveResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603ordersbatcharchiveResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603ordersbatchcreateResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *BatchResponseSimplePublicObject
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *BatchResponseSimplePublicObjectWithErrors
-}
-
-// GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603ordersbatchcreateResponse) GetJSON201() *BatchResponseSimplePublicObject {
-	return r.JSON201
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603ordersbatchcreateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603ordersbatchcreateResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603ordersbatchcreateResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603ordersbatchcreateResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603ordersbatchcreateResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603ordersbatchreadResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *BatchResponseSimplePublicObject
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *BatchResponseSimplePublicObjectWithErrors
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603ordersbatchreadResponse) GetJSON200() *BatchResponseSimplePublicObject {
-	return r.JSON200
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603ordersbatchreadResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603ordersbatchreadResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603ordersbatchreadResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603ordersbatchreadResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603ordersbatchreadResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603ordersbatchupdateResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *BatchResponseSimplePublicObject
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *BatchResponseSimplePublicObjectWithErrors
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603ordersbatchupdateResponse) GetJSON200() *BatchResponseSimplePublicObject {
-	return r.JSON200
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603ordersbatchupdateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603ordersbatchupdateResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603ordersbatchupdateResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603ordersbatchupdateResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603ordersbatchupdateResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603ordersbatchupsertResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *BatchResponseSimplePublicUpsertObject
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *BatchResponseSimplePublicUpsertObjectWithErrors
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603ordersbatchupsertResponse) GetJSON200() *BatchResponseSimplePublicUpsertObject {
-	return r.JSON200
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603ordersbatchupsertResponse) GetJSON207() *BatchResponseSimplePublicUpsertObjectWithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603ordersbatchupsertResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603ordersbatchupsertResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603ordersbatchupsertResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603ordersbatchupsertResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603ordersmergeResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *SimplePublicObject
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603ordersmergeResponse) GetJSON200() *SimplePublicObject {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603ordersmergeResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603ordersmergeResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603ordersmergeResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603ordersmergeResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603orderssearchResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CollectionResponseWithTotalSimplePublicObject
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603orderssearchResponse) GetJSON200() *CollectionResponseWithTotalSimplePublicObject {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603orderssearchResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603orderssearchResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603orderssearchResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603orderssearchResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Deletecrmobjects202603ordersOrderIdResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Deletecrmobjects202603ordersOrderIdResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Deletecrmobjects202603ordersOrderIdResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Deletecrmobjects202603ordersOrderIdResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Deletecrmobjects202603ordersOrderIdResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcrmobjects202603ordersOrderIdResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *SimplePublicObjectWithAssociations
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603ordersOrderIdResponse) GetJSON200() *SimplePublicObjectWithAssociations {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcrmobjects202603ordersOrderIdResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcrmobjects202603ordersOrderIdResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcrmobjects202603ordersOrderIdResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcrmobjects202603ordersOrderIdResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Patchcrmobjects202603ordersOrderIdResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *SimplePublicObject
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Patchcrmobjects202603ordersOrderIdResponse) GetJSON200() *SimplePublicObject {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Patchcrmobjects202603ordersOrderIdResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Patchcrmobjects202603ordersOrderIdResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Patchcrmobjects202603ordersOrderIdResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Patchcrmobjects202603ordersOrderIdResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcrmobjects202603partnerClientsResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603partnerClientsResponse) GetJSON200() *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcrmobjects202603partnerClientsResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcrmobjects202603partnerClientsResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcrmobjects202603partnerClientsResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcrmobjects202603partnerClientsResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603partnerClientsbatchreadResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *BatchResponseSimplePublicObject
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *BatchResponseSimplePublicObjectWithErrors
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603partnerClientsbatchreadResponse) GetJSON200() *BatchResponseSimplePublicObject {
-	return r.JSON200
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603partnerClientsbatchreadResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603partnerClientsbatchreadResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603partnerClientsbatchreadResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603partnerClientsbatchreadResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603partnerClientsbatchreadResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603partnerClientsbatchupdateResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *BatchResponseSimplePublicObject
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *BatchResponseSimplePublicObjectWithErrors
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603partnerClientsbatchupdateResponse) GetJSON200() *BatchResponseSimplePublicObject {
-	return r.JSON200
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603partnerClientsbatchupdateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603partnerClientsbatchupdateResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603partnerClientsbatchupdateResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603partnerClientsbatchupdateResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603partnerClientsbatchupdateResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603partnerClientssearchResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CollectionResponseWithTotalSimplePublicObject
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603partnerClientssearchResponse) GetJSON200() *CollectionResponseWithTotalSimplePublicObject {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603partnerClientssearchResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603partnerClientssearchResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603partnerClientssearchResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603partnerClientssearchResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcrmobjects202603partnerClientsPartnerClientIdResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *SimplePublicObjectWithAssociations
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603partnerClientsPartnerClientIdResponse) GetJSON200() *SimplePublicObjectWithAssociations {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcrmobjects202603partnerClientsPartnerClientIdResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcrmobjects202603partnerClientsPartnerClientIdResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcrmobjects202603partnerClientsPartnerClientIdResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcrmobjects202603partnerClientsPartnerClientIdResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Patchcrmobjects202603partnerClientsPartnerClientIdResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *SimplePublicObject
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Patchcrmobjects202603partnerClientsPartnerClientIdResponse) GetJSON200() *SimplePublicObject {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Patchcrmobjects202603partnerClientsPartnerClientIdResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Patchcrmobjects202603partnerClientsPartnerClientIdResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Patchcrmobjects202603partnerClientsPartnerClientIdResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Patchcrmobjects202603partnerClientsPartnerClientIdResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcrmobjects202603partnerClientsPartnerClientIdassociationsToObjectTypeResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CollectionResponseMultiAssociatedObjectWithLabelForwardPaging
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603partnerClientsPartnerClientIdassociationsToObjectTypeResponse) GetJSON200() *CollectionResponseMultiAssociatedObjectWithLabelForwardPaging {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcrmobjects202603partnerClientsPartnerClientIdassociationsToObjectTypeResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcrmobjects202603partnerClientsPartnerClientIdassociationsToObjectTypeResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcrmobjects202603partnerClientsPartnerClientIdassociationsToObjectTypeResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcrmobjects202603partnerClientsPartnerClientIdassociationsToObjectTypeResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcrmobjects202603partnerServicesResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603partnerServicesResponse) GetJSON200() *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcrmobjects202603partnerServicesResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcrmobjects202603partnerServicesResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcrmobjects202603partnerServicesResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcrmobjects202603partnerServicesResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603partnerServicesbatchreadResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *BatchResponseSimplePublicObject
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *BatchResponseSimplePublicObjectWithErrors
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603partnerServicesbatchreadResponse) GetJSON200() *BatchResponseSimplePublicObject {
-	return r.JSON200
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603partnerServicesbatchreadResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603partnerServicesbatchreadResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603partnerServicesbatchreadResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603partnerServicesbatchreadResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603partnerServicesbatchreadResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603partnerServicesbatchupdateResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *BatchResponseSimplePublicObject
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *BatchResponseSimplePublicObjectWithErrors
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603partnerServicesbatchupdateResponse) GetJSON200() *BatchResponseSimplePublicObject {
-	return r.JSON200
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603partnerServicesbatchupdateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603partnerServicesbatchupdateResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603partnerServicesbatchupdateResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603partnerServicesbatchupdateResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603partnerServicesbatchupdateResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603partnerServicessearchResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CollectionResponseWithTotalSimplePublicObject
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603partnerServicessearchResponse) GetJSON200() *CollectionResponseWithTotalSimplePublicObject {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603partnerServicessearchResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603partnerServicessearchResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603partnerServicessearchResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603partnerServicessearchResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcrmobjects202603partnerServicesPartnerServiceIdResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *SimplePublicObjectWithAssociations
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603partnerServicesPartnerServiceIdResponse) GetJSON200() *SimplePublicObjectWithAssociations {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcrmobjects202603partnerServicesPartnerServiceIdResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcrmobjects202603partnerServicesPartnerServiceIdResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcrmobjects202603partnerServicesPartnerServiceIdResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcrmobjects202603partnerServicesPartnerServiceIdResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Patchcrmobjects202603partnerServicesPartnerServiceIdResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *SimplePublicObject
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Patchcrmobjects202603partnerServicesPartnerServiceIdResponse) GetJSON200() *SimplePublicObject {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Patchcrmobjects202603partnerServicesPartnerServiceIdResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Patchcrmobjects202603partnerServicesPartnerServiceIdResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Patchcrmobjects202603partnerServicesPartnerServiceIdResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Patchcrmobjects202603partnerServicesPartnerServiceIdResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcrmobjects202603postalMailGetPageResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603postalMailGetPageResponse) GetJSON200() *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcrmobjects202603postalMailGetPageResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcrmobjects202603postalMailGetPageResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcrmobjects202603postalMailGetPageResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcrmobjects202603postalMailGetPageResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-// Postcrmobjects202603postalMailCreateResponse201Headers the declared response headers of an HTTP 201 response for Postcrmobjects202603postalMailCreate
-type Postcrmobjects202603postalMailCreateResponse201Headers struct {
-	Location *string
-}
-
-type Postcrmobjects202603postalMailCreateResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *SimplePublicObject
-	// Headers201 the parsed response headers for an HTTP 201 response
-	Headers201 *Postcrmobjects202603postalMailCreateResponse201Headers
-}
-
-// GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603postalMailCreateResponse) GetJSON201() *SimplePublicObject {
-	return r.JSON201
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603postalMailCreateResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603postalMailCreateResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603postalMailCreateResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603postalMailCreateResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603postalMailbatcharchiveArchiveResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603postalMailbatcharchiveArchiveResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603postalMailbatcharchiveArchiveResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603postalMailbatcharchiveArchiveResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603postalMailbatcharchiveArchiveResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603postalMailbatchcreateCreateResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *BatchResponseSimplePublicObject
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *BatchResponseSimplePublicObjectWithErrors
-}
-
-// GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603postalMailbatchcreateCreateResponse) GetJSON201() *BatchResponseSimplePublicObject {
-	return r.JSON201
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603postalMailbatchcreateCreateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603postalMailbatchcreateCreateResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603postalMailbatchcreateCreateResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603postalMailbatchcreateCreateResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603postalMailbatchcreateCreateResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603postalMailbatchreadReadResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *BatchResponseSimplePublicObject
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *BatchResponseSimplePublicObjectWithErrors
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603postalMailbatchreadReadResponse) GetJSON200() *BatchResponseSimplePublicObject {
-	return r.JSON200
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603postalMailbatchreadReadResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603postalMailbatchreadReadResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603postalMailbatchreadReadResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603postalMailbatchreadReadResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603postalMailbatchreadReadResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603postalMailbatchupdateUpdateResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *BatchResponseSimplePublicObject
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *BatchResponseSimplePublicObjectWithErrors
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603postalMailbatchupdateUpdateResponse) GetJSON200() *BatchResponseSimplePublicObject {
-	return r.JSON200
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603postalMailbatchupdateUpdateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603postalMailbatchupdateUpdateResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603postalMailbatchupdateUpdateResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603postalMailbatchupdateUpdateResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603postalMailbatchupdateUpdateResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603postalMailbatchupsertUpsertResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *BatchResponseSimplePublicUpsertObject
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *BatchResponseSimplePublicUpsertObjectWithErrors
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603postalMailbatchupsertUpsertResponse) GetJSON200() *BatchResponseSimplePublicUpsertObject {
-	return r.JSON200
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603postalMailbatchupsertUpsertResponse) GetJSON207() *BatchResponseSimplePublicUpsertObjectWithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603postalMailbatchupsertUpsertResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603postalMailbatchupsertUpsertResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603postalMailbatchupsertUpsertResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603postalMailbatchupsertUpsertResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603postalMailsearchDoSearchResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CollectionResponseWithTotalSimplePublicObject
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603postalMailsearchDoSearchResponse) GetJSON200() *CollectionResponseWithTotalSimplePublicObject {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603postalMailsearchDoSearchResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603postalMailsearchDoSearchResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603postalMailsearchDoSearchResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603postalMailsearchDoSearchResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Deletecrmobjects202603postalMailPostalMailIdArchiveResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Deletecrmobjects202603postalMailPostalMailIdArchiveResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Deletecrmobjects202603postalMailPostalMailIdArchiveResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Deletecrmobjects202603postalMailPostalMailIdArchiveResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Deletecrmobjects202603postalMailPostalMailIdArchiveResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcrmobjects202603postalMailPostalMailIdGetByIdResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *SimplePublicObjectWithAssociations
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603postalMailPostalMailIdGetByIdResponse) GetJSON200() *SimplePublicObjectWithAssociations {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcrmobjects202603postalMailPostalMailIdGetByIdResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcrmobjects202603postalMailPostalMailIdGetByIdResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcrmobjects202603postalMailPostalMailIdGetByIdResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcrmobjects202603postalMailPostalMailIdGetByIdResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Patchcrmobjects202603postalMailPostalMailIdUpdateResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *SimplePublicObject
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Patchcrmobjects202603postalMailPostalMailIdUpdateResponse) GetJSON200() *SimplePublicObject {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Patchcrmobjects202603postalMailPostalMailIdUpdateResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Patchcrmobjects202603postalMailPostalMailIdUpdateResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Patchcrmobjects202603postalMailPostalMailIdUpdateResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Patchcrmobjects202603postalMailPostalMailIdUpdateResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcrmobjects202603productsGetPageResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603productsGetPageResponse) GetJSON200() *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcrmobjects202603productsGetPageResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcrmobjects202603productsGetPageResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcrmobjects202603productsGetPageResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcrmobjects202603productsGetPageResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-// Postcrmobjects202603productsCreateResponse201Headers the declared response headers of an HTTP 201 response for Postcrmobjects202603productsCreate
-type Postcrmobjects202603productsCreateResponse201Headers struct {
-	Location *string
-}
-
-type Postcrmobjects202603productsCreateResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *SimplePublicObject
-	// Headers201 the parsed response headers for an HTTP 201 response
-	Headers201 *Postcrmobjects202603productsCreateResponse201Headers
-}
-
-// GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603productsCreateResponse) GetJSON201() *SimplePublicObject {
-	return r.JSON201
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603productsCreateResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603productsCreateResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603productsCreateResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603productsCreateResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603productsbatcharchiveArchiveResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603productsbatcharchiveArchiveResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603productsbatcharchiveArchiveResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603productsbatcharchiveArchiveResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603productsbatcharchiveArchiveResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603productsbatchcreateCreateResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *BatchResponseSimplePublicObject
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *BatchResponseSimplePublicObjectWithErrors
-}
-
-// GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603productsbatchcreateCreateResponse) GetJSON201() *BatchResponseSimplePublicObject {
-	return r.JSON201
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603productsbatchcreateCreateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603productsbatchcreateCreateResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603productsbatchcreateCreateResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603productsbatchcreateCreateResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603productsbatchcreateCreateResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603productsbatchreadReadResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *BatchResponseSimplePublicObject
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *BatchResponseSimplePublicObjectWithErrors
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603productsbatchreadReadResponse) GetJSON200() *BatchResponseSimplePublicObject {
-	return r.JSON200
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603productsbatchreadReadResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603productsbatchreadReadResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603productsbatchreadReadResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603productsbatchreadReadResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603productsbatchreadReadResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603productsbatchupdateUpdateResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *BatchResponseSimplePublicObject
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *BatchResponseSimplePublicObjectWithErrors
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603productsbatchupdateUpdateResponse) GetJSON200() *BatchResponseSimplePublicObject {
-	return r.JSON200
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603productsbatchupdateUpdateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603productsbatchupdateUpdateResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603productsbatchupdateUpdateResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603productsbatchupdateUpdateResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603productsbatchupdateUpdateResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603productsbatchupsertUpsertResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *BatchResponseSimplePublicUpsertObject
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *BatchResponseSimplePublicUpsertObjectWithErrors
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603productsbatchupsertUpsertResponse) GetJSON200() *BatchResponseSimplePublicUpsertObject {
-	return r.JSON200
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603productsbatchupsertUpsertResponse) GetJSON207() *BatchResponseSimplePublicUpsertObjectWithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603productsbatchupsertUpsertResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603productsbatchupsertUpsertResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603productsbatchupsertUpsertResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603productsbatchupsertUpsertResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603productssearchDoSearchResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CollectionResponseWithTotalSimplePublicObject
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603productssearchDoSearchResponse) GetJSON200() *CollectionResponseWithTotalSimplePublicObject {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603productssearchDoSearchResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603productssearchDoSearchResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603productssearchDoSearchResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603productssearchDoSearchResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Deletecrmobjects202603productsProductIdArchiveResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Deletecrmobjects202603productsProductIdArchiveResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Deletecrmobjects202603productsProductIdArchiveResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Deletecrmobjects202603productsProductIdArchiveResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Deletecrmobjects202603productsProductIdArchiveResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcrmobjects202603productsProductIdGetByIdResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *SimplePublicObjectWithAssociations
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603productsProductIdGetByIdResponse) GetJSON200() *SimplePublicObjectWithAssociations {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcrmobjects202603productsProductIdGetByIdResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcrmobjects202603productsProductIdGetByIdResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcrmobjects202603productsProductIdGetByIdResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcrmobjects202603productsProductIdGetByIdResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Patchcrmobjects202603productsProductIdUpdateResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *SimplePublicObject
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Patchcrmobjects202603productsProductIdUpdateResponse) GetJSON200() *SimplePublicObject {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Patchcrmobjects202603productsProductIdUpdateResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Patchcrmobjects202603productsProductIdUpdateResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Patchcrmobjects202603productsProductIdUpdateResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Patchcrmobjects202603productsProductIdUpdateResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcrmobjects202603projectsResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603projectsResponse) GetJSON200() *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcrmobjects202603projectsResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcrmobjects202603projectsResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcrmobjects202603projectsResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcrmobjects202603projectsResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-// Postcrmobjects202603projectsResponse201Headers the declared response headers of an HTTP 201 response for Postcrmobjects202603projects
-type Postcrmobjects202603projectsResponse201Headers struct {
-	Location *string
-}
-
-type Postcrmobjects202603projectsResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *SimplePublicObject
-	// Headers201 the parsed response headers for an HTTP 201 response
-	Headers201 *Postcrmobjects202603projectsResponse201Headers
-}
-
-// GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603projectsResponse) GetJSON201() *SimplePublicObject {
-	return r.JSON201
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603projectsResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603projectsResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603projectsResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603projectsResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603projectsbatcharchiveResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603projectsbatcharchiveResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603projectsbatcharchiveResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603projectsbatcharchiveResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603projectsbatcharchiveResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603projectsbatchcreateResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *BatchResponseSimplePublicObject
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *BatchResponseSimplePublicObjectWithErrors
-}
-
-// GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603projectsbatchcreateResponse) GetJSON201() *BatchResponseSimplePublicObject {
-	return r.JSON201
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603projectsbatchcreateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603projectsbatchcreateResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603projectsbatchcreateResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603projectsbatchcreateResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603projectsbatchcreateResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603projectsbatchreadResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *BatchResponseSimplePublicObject
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *BatchResponseSimplePublicObjectWithErrors
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603projectsbatchreadResponse) GetJSON200() *BatchResponseSimplePublicObject {
-	return r.JSON200
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603projectsbatchreadResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603projectsbatchreadResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603projectsbatchreadResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603projectsbatchreadResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603projectsbatchreadResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603projectsbatchupdateResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *BatchResponseSimplePublicObject
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *BatchResponseSimplePublicObjectWithErrors
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603projectsbatchupdateResponse) GetJSON200() *BatchResponseSimplePublicObject {
-	return r.JSON200
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603projectsbatchupdateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603projectsbatchupdateResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603projectsbatchupdateResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603projectsbatchupdateResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603projectsbatchupdateResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603projectsbatchupsertResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *BatchResponseSimplePublicUpsertObject
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *BatchResponseSimplePublicUpsertObjectWithErrors
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603projectsbatchupsertResponse) GetJSON200() *BatchResponseSimplePublicUpsertObject {
-	return r.JSON200
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603projectsbatchupsertResponse) GetJSON207() *BatchResponseSimplePublicUpsertObjectWithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603projectsbatchupsertResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603projectsbatchupsertResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603projectsbatchupsertResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603projectsbatchupsertResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603projectsmergeResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *SimplePublicObject
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603projectsmergeResponse) GetJSON200() *SimplePublicObject {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603projectsmergeResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603projectsmergeResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603projectsmergeResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603projectsmergeResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603projectssearchResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CollectionResponseWithTotalSimplePublicObject
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603projectssearchResponse) GetJSON200() *CollectionResponseWithTotalSimplePublicObject {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603projectssearchResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603projectssearchResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603projectssearchResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603projectssearchResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Deletecrmobjects202603projectsProjectIdResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Deletecrmobjects202603projectsProjectIdResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Deletecrmobjects202603projectsProjectIdResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Deletecrmobjects202603projectsProjectIdResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Deletecrmobjects202603projectsProjectIdResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcrmobjects202603projectsProjectIdResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *SimplePublicObjectWithAssociations
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603projectsProjectIdResponse) GetJSON200() *SimplePublicObjectWithAssociations {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcrmobjects202603projectsProjectIdResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcrmobjects202603projectsProjectIdResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcrmobjects202603projectsProjectIdResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcrmobjects202603projectsProjectIdResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Patchcrmobjects202603projectsProjectIdResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *SimplePublicObject
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Patchcrmobjects202603projectsProjectIdResponse) GetJSON200() *SimplePublicObject {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Patchcrmobjects202603projectsProjectIdResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Patchcrmobjects202603projectsProjectIdResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Patchcrmobjects202603projectsProjectIdResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Patchcrmobjects202603projectsProjectIdResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcrmobjects202603quotesGetPageResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603quotesGetPageResponse) GetJSON200() *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcrmobjects202603quotesGetPageResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcrmobjects202603quotesGetPageResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcrmobjects202603quotesGetPageResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcrmobjects202603quotesGetPageResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-// Postcrmobjects202603quotesCreateResponse201Headers the declared response headers of an HTTP 201 response for Postcrmobjects202603quotesCreate
-type Postcrmobjects202603quotesCreateResponse201Headers struct {
-	Location *string
-}
-
-type Postcrmobjects202603quotesCreateResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *SimplePublicObject
-	// Headers201 the parsed response headers for an HTTP 201 response
-	Headers201 *Postcrmobjects202603quotesCreateResponse201Headers
-}
-
-// GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603quotesCreateResponse) GetJSON201() *SimplePublicObject {
-	return r.JSON201
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603quotesCreateResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603quotesCreateResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603quotesCreateResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603quotesCreateResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603quotesbatcharchiveArchiveResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603quotesbatcharchiveArchiveResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603quotesbatcharchiveArchiveResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603quotesbatcharchiveArchiveResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603quotesbatcharchiveArchiveResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603quotesbatchcreateCreateResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *BatchResponseSimplePublicObject
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *BatchResponseSimplePublicObjectWithErrors
-}
-
-// GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcrmobjects202603quotesbatchcreateCreateResponse) GetJSON201() *BatchResponseSimplePublicObject {
-	return r.JSON201
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603quotesbatchcreateCreateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603quotesbatchcreateCreateResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603quotesbatchcreateCreateResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603quotesbatchcreateCreateResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603quotesbatchcreateCreateResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603quotesbatchreadReadResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *BatchResponseSimplePublicObject
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *BatchResponseSimplePublicObjectWithErrors
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603quotesbatchreadReadResponse) GetJSON200() *BatchResponseSimplePublicObject {
-	return r.JSON200
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603quotesbatchreadReadResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603quotesbatchreadReadResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603quotesbatchreadReadResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603quotesbatchreadReadResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603quotesbatchreadReadResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603quotesbatchupdateUpdateResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *BatchResponseSimplePublicObject
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *BatchResponseSimplePublicObjectWithErrors
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603quotesbatchupdateUpdateResponse) GetJSON200() *BatchResponseSimplePublicObject {
-	return r.JSON200
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603quotesbatchupdateUpdateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603quotesbatchupdateUpdateResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603quotesbatchupdateUpdateResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603quotesbatchupdateUpdateResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603quotesbatchupdateUpdateResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603quotesbatchupsertUpsertResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *BatchResponseSimplePublicUpsertObject
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *BatchResponseSimplePublicUpsertObjectWithErrors
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603quotesbatchupsertUpsertResponse) GetJSON200() *BatchResponseSimplePublicUpsertObject {
-	return r.JSON200
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcrmobjects202603quotesbatchupsertUpsertResponse) GetJSON207() *BatchResponseSimplePublicUpsertObjectWithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603quotesbatchupsertUpsertResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603quotesbatchupsertUpsertResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603quotesbatchupsertUpsertResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603quotesbatchupsertUpsertResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603quotessearchDoSearchResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CollectionResponseWithTotalSimplePublicObject
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603quotessearchDoSearchResponse) GetJSON200() *CollectionResponseWithTotalSimplePublicObject {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603quotessearchDoSearchResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603quotessearchDoSearchResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603quotessearchDoSearchResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603quotessearchDoSearchResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Deletecrmobjects202603quotesQuoteIdArchiveResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Deletecrmobjects202603quotesQuoteIdArchiveResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Deletecrmobjects202603quotesQuoteIdArchiveResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Deletecrmobjects202603quotesQuoteIdArchiveResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Deletecrmobjects202603quotesQuoteIdArchiveResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcrmobjects202603quotesQuoteIdGetByIdResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *SimplePublicObjectWithAssociations
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603quotesQuoteIdGetByIdResponse) GetJSON200() *SimplePublicObjectWithAssociations {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcrmobjects202603quotesQuoteIdGetByIdResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcrmobjects202603quotesQuoteIdGetByIdResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcrmobjects202603quotesQuoteIdGetByIdResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcrmobjects202603quotesQuoteIdGetByIdResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Patchcrmobjects202603quotesQuoteIdUpdateResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *SimplePublicObject
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Patchcrmobjects202603quotesQuoteIdUpdateResponse) GetJSON200() *SimplePublicObject {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Patchcrmobjects202603quotesQuoteIdUpdateResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Patchcrmobjects202603quotesQuoteIdUpdateResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Patchcrmobjects202603quotesQuoteIdUpdateResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Patchcrmobjects202603quotesQuoteIdUpdateResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcrmobjects202603servicesmergeResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *SimplePublicObject
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcrmobjects202603servicesmergeResponse) GetJSON200() *SimplePublicObject {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcrmobjects202603servicesmergeResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcrmobjects202603servicesmergeResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcrmobjects202603servicesmergeResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcrmobjects202603servicesmergeResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcrmobjects202603subscriptionsResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcrmobjects202603subscriptionsResponse) GetJSON200() *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
-	return r.JSON200
 }

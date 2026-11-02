@@ -17826,2687 +17826,2763 @@ func (e ContactUrlType) Valid() bool {
 	}
 }
 
-// Defines values for ContentSearchResultLanguage.
+// Defines values for CurrencyCreateRequestCurrencyCode.
 const (
-	ContentSearchResultLanguageAa     ContentSearchResultLanguage = "aa"
-	ContentSearchResultLanguageAb     ContentSearchResultLanguage = "ab"
-	ContentSearchResultLanguageAe     ContentSearchResultLanguage = "ae"
-	ContentSearchResultLanguageAf     ContentSearchResultLanguage = "af"
-	ContentSearchResultLanguageAfNa   ContentSearchResultLanguage = "af-na"
-	ContentSearchResultLanguageAfZa   ContentSearchResultLanguage = "af-za"
-	ContentSearchResultLanguageAgq    ContentSearchResultLanguage = "agq"
-	ContentSearchResultLanguageAgqCm  ContentSearchResultLanguage = "agq-cm"
-	ContentSearchResultLanguageAk     ContentSearchResultLanguage = "ak"
-	ContentSearchResultLanguageAkGh   ContentSearchResultLanguage = "ak-gh"
-	ContentSearchResultLanguageAm     ContentSearchResultLanguage = "am"
-	ContentSearchResultLanguageAmEt   ContentSearchResultLanguage = "am-et"
-	ContentSearchResultLanguageAn     ContentSearchResultLanguage = "an"
-	ContentSearchResultLanguageAnn    ContentSearchResultLanguage = "ann"
-	ContentSearchResultLanguageAnnNg  ContentSearchResultLanguage = "ann-ng"
-	ContentSearchResultLanguageAr     ContentSearchResultLanguage = "ar"
-	ContentSearchResultLanguageAr001  ContentSearchResultLanguage = "ar-001"
-	ContentSearchResultLanguageArAe   ContentSearchResultLanguage = "ar-ae"
-	ContentSearchResultLanguageArBh   ContentSearchResultLanguage = "ar-bh"
-	ContentSearchResultLanguageArDj   ContentSearchResultLanguage = "ar-dj"
-	ContentSearchResultLanguageArDz   ContentSearchResultLanguage = "ar-dz"
-	ContentSearchResultLanguageArEg   ContentSearchResultLanguage = "ar-eg"
-	ContentSearchResultLanguageArEh   ContentSearchResultLanguage = "ar-eh"
-	ContentSearchResultLanguageArEr   ContentSearchResultLanguage = "ar-er"
-	ContentSearchResultLanguageArIl   ContentSearchResultLanguage = "ar-il"
-	ContentSearchResultLanguageArIq   ContentSearchResultLanguage = "ar-iq"
-	ContentSearchResultLanguageArJo   ContentSearchResultLanguage = "ar-jo"
-	ContentSearchResultLanguageArKm   ContentSearchResultLanguage = "ar-km"
-	ContentSearchResultLanguageArKw   ContentSearchResultLanguage = "ar-kw"
-	ContentSearchResultLanguageArLb   ContentSearchResultLanguage = "ar-lb"
-	ContentSearchResultLanguageArLy   ContentSearchResultLanguage = "ar-ly"
-	ContentSearchResultLanguageArMa   ContentSearchResultLanguage = "ar-ma"
-	ContentSearchResultLanguageArMr   ContentSearchResultLanguage = "ar-mr"
-	ContentSearchResultLanguageArOm   ContentSearchResultLanguage = "ar-om"
-	ContentSearchResultLanguageArPs   ContentSearchResultLanguage = "ar-ps"
-	ContentSearchResultLanguageArQa   ContentSearchResultLanguage = "ar-qa"
-	ContentSearchResultLanguageArSa   ContentSearchResultLanguage = "ar-sa"
-	ContentSearchResultLanguageArSd   ContentSearchResultLanguage = "ar-sd"
-	ContentSearchResultLanguageArSo   ContentSearchResultLanguage = "ar-so"
-	ContentSearchResultLanguageArSs   ContentSearchResultLanguage = "ar-ss"
-	ContentSearchResultLanguageArSy   ContentSearchResultLanguage = "ar-sy"
-	ContentSearchResultLanguageArTd   ContentSearchResultLanguage = "ar-td"
-	ContentSearchResultLanguageArTn   ContentSearchResultLanguage = "ar-tn"
-	ContentSearchResultLanguageArYe   ContentSearchResultLanguage = "ar-ye"
-	ContentSearchResultLanguageAs     ContentSearchResultLanguage = "as"
-	ContentSearchResultLanguageAsIn   ContentSearchResultLanguage = "as-in"
-	ContentSearchResultLanguageAsa    ContentSearchResultLanguage = "asa"
-	ContentSearchResultLanguageAsaTz  ContentSearchResultLanguage = "asa-tz"
-	ContentSearchResultLanguageAst    ContentSearchResultLanguage = "ast"
-	ContentSearchResultLanguageAstEs  ContentSearchResultLanguage = "ast-es"
-	ContentSearchResultLanguageAv     ContentSearchResultLanguage = "av"
-	ContentSearchResultLanguageAy     ContentSearchResultLanguage = "ay"
-	ContentSearchResultLanguageAz     ContentSearchResultLanguage = "az"
-	ContentSearchResultLanguageAzAz   ContentSearchResultLanguage = "az-az"
-	ContentSearchResultLanguageBa     ContentSearchResultLanguage = "ba"
-	ContentSearchResultLanguageBal    ContentSearchResultLanguage = "bal"
-	ContentSearchResultLanguageBalPk  ContentSearchResultLanguage = "bal-pk"
-	ContentSearchResultLanguageBas    ContentSearchResultLanguage = "bas"
-	ContentSearchResultLanguageBasCm  ContentSearchResultLanguage = "bas-cm"
-	ContentSearchResultLanguageBe     ContentSearchResultLanguage = "be"
-	ContentSearchResultLanguageBeBy   ContentSearchResultLanguage = "be-by"
-	ContentSearchResultLanguageBem    ContentSearchResultLanguage = "bem"
-	ContentSearchResultLanguageBemZm  ContentSearchResultLanguage = "bem-zm"
-	ContentSearchResultLanguageBez    ContentSearchResultLanguage = "bez"
-	ContentSearchResultLanguageBezTz  ContentSearchResultLanguage = "bez-tz"
-	ContentSearchResultLanguageBg     ContentSearchResultLanguage = "bg"
-	ContentSearchResultLanguageBgBg   ContentSearchResultLanguage = "bg-bg"
-	ContentSearchResultLanguageBgc    ContentSearchResultLanguage = "bgc"
-	ContentSearchResultLanguageBgcIn  ContentSearchResultLanguage = "bgc-in"
-	ContentSearchResultLanguageBho    ContentSearchResultLanguage = "bho"
-	ContentSearchResultLanguageBhoIn  ContentSearchResultLanguage = "bho-in"
-	ContentSearchResultLanguageBi     ContentSearchResultLanguage = "bi"
-	ContentSearchResultLanguageBlo    ContentSearchResultLanguage = "blo"
-	ContentSearchResultLanguageBloBj  ContentSearchResultLanguage = "blo-bj"
-	ContentSearchResultLanguageBm     ContentSearchResultLanguage = "bm"
-	ContentSearchResultLanguageBmMl   ContentSearchResultLanguage = "bm-ml"
-	ContentSearchResultLanguageBn     ContentSearchResultLanguage = "bn"
-	ContentSearchResultLanguageBnBd   ContentSearchResultLanguage = "bn-bd"
-	ContentSearchResultLanguageBnIn   ContentSearchResultLanguage = "bn-in"
-	ContentSearchResultLanguageBo     ContentSearchResultLanguage = "bo"
-	ContentSearchResultLanguageBoCn   ContentSearchResultLanguage = "bo-cn"
-	ContentSearchResultLanguageBoIn   ContentSearchResultLanguage = "bo-in"
-	ContentSearchResultLanguageBr     ContentSearchResultLanguage = "br"
-	ContentSearchResultLanguageBrFr   ContentSearchResultLanguage = "br-fr"
-	ContentSearchResultLanguageBrx    ContentSearchResultLanguage = "brx"
-	ContentSearchResultLanguageBrxIn  ContentSearchResultLanguage = "brx-in"
-	ContentSearchResultLanguageBs     ContentSearchResultLanguage = "bs"
-	ContentSearchResultLanguageBsBa   ContentSearchResultLanguage = "bs-ba"
-	ContentSearchResultLanguageCa     ContentSearchResultLanguage = "ca"
-	ContentSearchResultLanguageCaAd   ContentSearchResultLanguage = "ca-ad"
-	ContentSearchResultLanguageCaEs   ContentSearchResultLanguage = "ca-es"
-	ContentSearchResultLanguageCaFr   ContentSearchResultLanguage = "ca-fr"
-	ContentSearchResultLanguageCaIt   ContentSearchResultLanguage = "ca-it"
-	ContentSearchResultLanguageCcp    ContentSearchResultLanguage = "ccp"
-	ContentSearchResultLanguageCcpBd  ContentSearchResultLanguage = "ccp-bd"
-	ContentSearchResultLanguageCcpIn  ContentSearchResultLanguage = "ccp-in"
-	ContentSearchResultLanguageCe     ContentSearchResultLanguage = "ce"
-	ContentSearchResultLanguageCeRu   ContentSearchResultLanguage = "ce-ru"
-	ContentSearchResultLanguageCeb    ContentSearchResultLanguage = "ceb"
-	ContentSearchResultLanguageCebPh  ContentSearchResultLanguage = "ceb-ph"
-	ContentSearchResultLanguageCgg    ContentSearchResultLanguage = "cgg"
-	ContentSearchResultLanguageCggUg  ContentSearchResultLanguage = "cgg-ug"
-	ContentSearchResultLanguageCh     ContentSearchResultLanguage = "ch"
-	ContentSearchResultLanguageChr    ContentSearchResultLanguage = "chr"
-	ContentSearchResultLanguageChrUs  ContentSearchResultLanguage = "chr-us"
-	ContentSearchResultLanguageCkb    ContentSearchResultLanguage = "ckb"
-	ContentSearchResultLanguageCkbIq  ContentSearchResultLanguage = "ckb-iq"
-	ContentSearchResultLanguageCkbIr  ContentSearchResultLanguage = "ckb-ir"
-	ContentSearchResultLanguageCo     ContentSearchResultLanguage = "co"
-	ContentSearchResultLanguageCr     ContentSearchResultLanguage = "cr"
-	ContentSearchResultLanguageCs     ContentSearchResultLanguage = "cs"
-	ContentSearchResultLanguageCsCz   ContentSearchResultLanguage = "cs-cz"
-	ContentSearchResultLanguageCsw    ContentSearchResultLanguage = "csw"
-	ContentSearchResultLanguageCswCa  ContentSearchResultLanguage = "csw-ca"
-	ContentSearchResultLanguageCu     ContentSearchResultLanguage = "cu"
-	ContentSearchResultLanguageCuRu   ContentSearchResultLanguage = "cu-ru"
-	ContentSearchResultLanguageCv     ContentSearchResultLanguage = "cv"
-	ContentSearchResultLanguageCvRu   ContentSearchResultLanguage = "cv-ru"
-	ContentSearchResultLanguageCy     ContentSearchResultLanguage = "cy"
-	ContentSearchResultLanguageCyGb   ContentSearchResultLanguage = "cy-gb"
-	ContentSearchResultLanguageDa     ContentSearchResultLanguage = "da"
-	ContentSearchResultLanguageDaDk   ContentSearchResultLanguage = "da-dk"
-	ContentSearchResultLanguageDaGl   ContentSearchResultLanguage = "da-gl"
-	ContentSearchResultLanguageDav    ContentSearchResultLanguage = "dav"
-	ContentSearchResultLanguageDavKe  ContentSearchResultLanguage = "dav-ke"
-	ContentSearchResultLanguageDe     ContentSearchResultLanguage = "de"
-	ContentSearchResultLanguageDeAt   ContentSearchResultLanguage = "de-at"
-	ContentSearchResultLanguageDeBe   ContentSearchResultLanguage = "de-be"
-	ContentSearchResultLanguageDeCh   ContentSearchResultLanguage = "de-ch"
-	ContentSearchResultLanguageDeDe   ContentSearchResultLanguage = "de-de"
-	ContentSearchResultLanguageDeGr   ContentSearchResultLanguage = "de-gr"
-	ContentSearchResultLanguageDeIt   ContentSearchResultLanguage = "de-it"
-	ContentSearchResultLanguageDeLi   ContentSearchResultLanguage = "de-li"
-	ContentSearchResultLanguageDeLu   ContentSearchResultLanguage = "de-lu"
-	ContentSearchResultLanguageDje    ContentSearchResultLanguage = "dje"
-	ContentSearchResultLanguageDjeNe  ContentSearchResultLanguage = "dje-ne"
-	ContentSearchResultLanguageDoi    ContentSearchResultLanguage = "doi"
-	ContentSearchResultLanguageDoiIn  ContentSearchResultLanguage = "doi-in"
-	ContentSearchResultLanguageDsb    ContentSearchResultLanguage = "dsb"
-	ContentSearchResultLanguageDsbDe  ContentSearchResultLanguage = "dsb-de"
-	ContentSearchResultLanguageDua    ContentSearchResultLanguage = "dua"
-	ContentSearchResultLanguageDuaCm  ContentSearchResultLanguage = "dua-cm"
-	ContentSearchResultLanguageDv     ContentSearchResultLanguage = "dv"
-	ContentSearchResultLanguageDyo    ContentSearchResultLanguage = "dyo"
-	ContentSearchResultLanguageDyoSn  ContentSearchResultLanguage = "dyo-sn"
-	ContentSearchResultLanguageDz     ContentSearchResultLanguage = "dz"
-	ContentSearchResultLanguageDzBt   ContentSearchResultLanguage = "dz-bt"
-	ContentSearchResultLanguageEbu    ContentSearchResultLanguage = "ebu"
-	ContentSearchResultLanguageEbuKe  ContentSearchResultLanguage = "ebu-ke"
-	ContentSearchResultLanguageEe     ContentSearchResultLanguage = "ee"
-	ContentSearchResultLanguageEeGh   ContentSearchResultLanguage = "ee-gh"
-	ContentSearchResultLanguageEeTg   ContentSearchResultLanguage = "ee-tg"
-	ContentSearchResultLanguageEl     ContentSearchResultLanguage = "el"
-	ContentSearchResultLanguageElCy   ContentSearchResultLanguage = "el-cy"
-	ContentSearchResultLanguageElGr   ContentSearchResultLanguage = "el-gr"
-	ContentSearchResultLanguageEn     ContentSearchResultLanguage = "en"
-	ContentSearchResultLanguageEn001  ContentSearchResultLanguage = "en-001"
-	ContentSearchResultLanguageEn150  ContentSearchResultLanguage = "en-150"
-	ContentSearchResultLanguageEnAe   ContentSearchResultLanguage = "en-ae"
-	ContentSearchResultLanguageEnAg   ContentSearchResultLanguage = "en-ag"
-	ContentSearchResultLanguageEnAi   ContentSearchResultLanguage = "en-ai"
-	ContentSearchResultLanguageEnAs   ContentSearchResultLanguage = "en-as"
-	ContentSearchResultLanguageEnAt   ContentSearchResultLanguage = "en-at"
-	ContentSearchResultLanguageEnAu   ContentSearchResultLanguage = "en-au"
-	ContentSearchResultLanguageEnBb   ContentSearchResultLanguage = "en-bb"
-	ContentSearchResultLanguageEnBe   ContentSearchResultLanguage = "en-be"
-	ContentSearchResultLanguageEnBi   ContentSearchResultLanguage = "en-bi"
-	ContentSearchResultLanguageEnBm   ContentSearchResultLanguage = "en-bm"
-	ContentSearchResultLanguageEnBs   ContentSearchResultLanguage = "en-bs"
-	ContentSearchResultLanguageEnBw   ContentSearchResultLanguage = "en-bw"
-	ContentSearchResultLanguageEnBz   ContentSearchResultLanguage = "en-bz"
-	ContentSearchResultLanguageEnCa   ContentSearchResultLanguage = "en-ca"
-	ContentSearchResultLanguageEnCc   ContentSearchResultLanguage = "en-cc"
-	ContentSearchResultLanguageEnCh   ContentSearchResultLanguage = "en-ch"
-	ContentSearchResultLanguageEnCk   ContentSearchResultLanguage = "en-ck"
-	ContentSearchResultLanguageEnCm   ContentSearchResultLanguage = "en-cm"
-	ContentSearchResultLanguageEnCn   ContentSearchResultLanguage = "en-cn"
-	ContentSearchResultLanguageEnCx   ContentSearchResultLanguage = "en-cx"
-	ContentSearchResultLanguageEnCy   ContentSearchResultLanguage = "en-cy"
-	ContentSearchResultLanguageEnCz   ContentSearchResultLanguage = "en-cz"
-	ContentSearchResultLanguageEnDe   ContentSearchResultLanguage = "en-de"
-	ContentSearchResultLanguageEnDg   ContentSearchResultLanguage = "en-dg"
-	ContentSearchResultLanguageEnDk   ContentSearchResultLanguage = "en-dk"
-	ContentSearchResultLanguageEnDm   ContentSearchResultLanguage = "en-dm"
-	ContentSearchResultLanguageEnEe   ContentSearchResultLanguage = "en-ee"
-	ContentSearchResultLanguageEnEg   ContentSearchResultLanguage = "en-eg"
-	ContentSearchResultLanguageEnEr   ContentSearchResultLanguage = "en-er"
-	ContentSearchResultLanguageEnEs   ContentSearchResultLanguage = "en-es"
-	ContentSearchResultLanguageEnFi   ContentSearchResultLanguage = "en-fi"
-	ContentSearchResultLanguageEnFj   ContentSearchResultLanguage = "en-fj"
-	ContentSearchResultLanguageEnFk   ContentSearchResultLanguage = "en-fk"
-	ContentSearchResultLanguageEnFm   ContentSearchResultLanguage = "en-fm"
-	ContentSearchResultLanguageEnFr   ContentSearchResultLanguage = "en-fr"
-	ContentSearchResultLanguageEnGb   ContentSearchResultLanguage = "en-gb"
-	ContentSearchResultLanguageEnGd   ContentSearchResultLanguage = "en-gd"
-	ContentSearchResultLanguageEnGg   ContentSearchResultLanguage = "en-gg"
-	ContentSearchResultLanguageEnGh   ContentSearchResultLanguage = "en-gh"
-	ContentSearchResultLanguageEnGi   ContentSearchResultLanguage = "en-gi"
-	ContentSearchResultLanguageEnGm   ContentSearchResultLanguage = "en-gm"
-	ContentSearchResultLanguageEnGs   ContentSearchResultLanguage = "en-gs"
-	ContentSearchResultLanguageEnGu   ContentSearchResultLanguage = "en-gu"
-	ContentSearchResultLanguageEnGy   ContentSearchResultLanguage = "en-gy"
-	ContentSearchResultLanguageEnHk   ContentSearchResultLanguage = "en-hk"
-	ContentSearchResultLanguageEnHu   ContentSearchResultLanguage = "en-hu"
-	ContentSearchResultLanguageEnId   ContentSearchResultLanguage = "en-id"
-	ContentSearchResultLanguageEnIe   ContentSearchResultLanguage = "en-ie"
-	ContentSearchResultLanguageEnIl   ContentSearchResultLanguage = "en-il"
-	ContentSearchResultLanguageEnIm   ContentSearchResultLanguage = "en-im"
-	ContentSearchResultLanguageEnIn   ContentSearchResultLanguage = "en-in"
-	ContentSearchResultLanguageEnIo   ContentSearchResultLanguage = "en-io"
-	ContentSearchResultLanguageEnIt   ContentSearchResultLanguage = "en-it"
-	ContentSearchResultLanguageEnJe   ContentSearchResultLanguage = "en-je"
-	ContentSearchResultLanguageEnJm   ContentSearchResultLanguage = "en-jm"
-	ContentSearchResultLanguageEnKe   ContentSearchResultLanguage = "en-ke"
-	ContentSearchResultLanguageEnKi   ContentSearchResultLanguage = "en-ki"
-	ContentSearchResultLanguageEnKn   ContentSearchResultLanguage = "en-kn"
-	ContentSearchResultLanguageEnKy   ContentSearchResultLanguage = "en-ky"
-	ContentSearchResultLanguageEnLc   ContentSearchResultLanguage = "en-lc"
-	ContentSearchResultLanguageEnLr   ContentSearchResultLanguage = "en-lr"
-	ContentSearchResultLanguageEnLs   ContentSearchResultLanguage = "en-ls"
-	ContentSearchResultLanguageEnLu   ContentSearchResultLanguage = "en-lu"
-	ContentSearchResultLanguageEnMg   ContentSearchResultLanguage = "en-mg"
-	ContentSearchResultLanguageEnMh   ContentSearchResultLanguage = "en-mh"
-	ContentSearchResultLanguageEnMo   ContentSearchResultLanguage = "en-mo"
-	ContentSearchResultLanguageEnMp   ContentSearchResultLanguage = "en-mp"
-	ContentSearchResultLanguageEnMs   ContentSearchResultLanguage = "en-ms"
-	ContentSearchResultLanguageEnMt   ContentSearchResultLanguage = "en-mt"
-	ContentSearchResultLanguageEnMu   ContentSearchResultLanguage = "en-mu"
-	ContentSearchResultLanguageEnMv   ContentSearchResultLanguage = "en-mv"
-	ContentSearchResultLanguageEnMw   ContentSearchResultLanguage = "en-mw"
-	ContentSearchResultLanguageEnMx   ContentSearchResultLanguage = "en-mx"
-	ContentSearchResultLanguageEnMy   ContentSearchResultLanguage = "en-my"
-	ContentSearchResultLanguageEnNa   ContentSearchResultLanguage = "en-na"
-	ContentSearchResultLanguageEnNf   ContentSearchResultLanguage = "en-nf"
-	ContentSearchResultLanguageEnNg   ContentSearchResultLanguage = "en-ng"
-	ContentSearchResultLanguageEnNl   ContentSearchResultLanguage = "en-nl"
-	ContentSearchResultLanguageEnNo   ContentSearchResultLanguage = "en-no"
-	ContentSearchResultLanguageEnNr   ContentSearchResultLanguage = "en-nr"
-	ContentSearchResultLanguageEnNu   ContentSearchResultLanguage = "en-nu"
-	ContentSearchResultLanguageEnNz   ContentSearchResultLanguage = "en-nz"
-	ContentSearchResultLanguageEnPg   ContentSearchResultLanguage = "en-pg"
-	ContentSearchResultLanguageEnPh   ContentSearchResultLanguage = "en-ph"
-	ContentSearchResultLanguageEnPk   ContentSearchResultLanguage = "en-pk"
-	ContentSearchResultLanguageEnPl   ContentSearchResultLanguage = "en-pl"
-	ContentSearchResultLanguageEnPn   ContentSearchResultLanguage = "en-pn"
-	ContentSearchResultLanguageEnPr   ContentSearchResultLanguage = "en-pr"
-	ContentSearchResultLanguageEnPt   ContentSearchResultLanguage = "en-pt"
-	ContentSearchResultLanguageEnPw   ContentSearchResultLanguage = "en-pw"
-	ContentSearchResultLanguageEnRo   ContentSearchResultLanguage = "en-ro"
-	ContentSearchResultLanguageEnRw   ContentSearchResultLanguage = "en-rw"
-	ContentSearchResultLanguageEnSb   ContentSearchResultLanguage = "en-sb"
-	ContentSearchResultLanguageEnSc   ContentSearchResultLanguage = "en-sc"
-	ContentSearchResultLanguageEnSd   ContentSearchResultLanguage = "en-sd"
-	ContentSearchResultLanguageEnSe   ContentSearchResultLanguage = "en-se"
-	ContentSearchResultLanguageEnSg   ContentSearchResultLanguage = "en-sg"
-	ContentSearchResultLanguageEnSh   ContentSearchResultLanguage = "en-sh"
-	ContentSearchResultLanguageEnSi   ContentSearchResultLanguage = "en-si"
-	ContentSearchResultLanguageEnSk   ContentSearchResultLanguage = "en-sk"
-	ContentSearchResultLanguageEnSl   ContentSearchResultLanguage = "en-sl"
-	ContentSearchResultLanguageEnSs   ContentSearchResultLanguage = "en-ss"
-	ContentSearchResultLanguageEnSx   ContentSearchResultLanguage = "en-sx"
-	ContentSearchResultLanguageEnSz   ContentSearchResultLanguage = "en-sz"
-	ContentSearchResultLanguageEnTc   ContentSearchResultLanguage = "en-tc"
-	ContentSearchResultLanguageEnTh   ContentSearchResultLanguage = "en-th"
-	ContentSearchResultLanguageEnTk   ContentSearchResultLanguage = "en-tk"
-	ContentSearchResultLanguageEnTn   ContentSearchResultLanguage = "en-tn"
-	ContentSearchResultLanguageEnTo   ContentSearchResultLanguage = "en-to"
-	ContentSearchResultLanguageEnTt   ContentSearchResultLanguage = "en-tt"
-	ContentSearchResultLanguageEnTv   ContentSearchResultLanguage = "en-tv"
-	ContentSearchResultLanguageEnTz   ContentSearchResultLanguage = "en-tz"
-	ContentSearchResultLanguageEnUg   ContentSearchResultLanguage = "en-ug"
-	ContentSearchResultLanguageEnUm   ContentSearchResultLanguage = "en-um"
-	ContentSearchResultLanguageEnUs   ContentSearchResultLanguage = "en-us"
-	ContentSearchResultLanguageEnVc   ContentSearchResultLanguage = "en-vc"
-	ContentSearchResultLanguageEnVg   ContentSearchResultLanguage = "en-vg"
-	ContentSearchResultLanguageEnVi   ContentSearchResultLanguage = "en-vi"
-	ContentSearchResultLanguageEnVn   ContentSearchResultLanguage = "en-vn"
-	ContentSearchResultLanguageEnVu   ContentSearchResultLanguage = "en-vu"
-	ContentSearchResultLanguageEnWs   ContentSearchResultLanguage = "en-ws"
-	ContentSearchResultLanguageEnZa   ContentSearchResultLanguage = "en-za"
-	ContentSearchResultLanguageEnZm   ContentSearchResultLanguage = "en-zm"
-	ContentSearchResultLanguageEnZw   ContentSearchResultLanguage = "en-zw"
-	ContentSearchResultLanguageEo     ContentSearchResultLanguage = "eo"
-	ContentSearchResultLanguageEo001  ContentSearchResultLanguage = "eo-001"
-	ContentSearchResultLanguageEs     ContentSearchResultLanguage = "es"
-	ContentSearchResultLanguageEs419  ContentSearchResultLanguage = "es-419"
-	ContentSearchResultLanguageEsAr   ContentSearchResultLanguage = "es-ar"
-	ContentSearchResultLanguageEsBo   ContentSearchResultLanguage = "es-bo"
-	ContentSearchResultLanguageEsBr   ContentSearchResultLanguage = "es-br"
-	ContentSearchResultLanguageEsBz   ContentSearchResultLanguage = "es-bz"
-	ContentSearchResultLanguageEsCl   ContentSearchResultLanguage = "es-cl"
-	ContentSearchResultLanguageEsCo   ContentSearchResultLanguage = "es-co"
-	ContentSearchResultLanguageEsCr   ContentSearchResultLanguage = "es-cr"
-	ContentSearchResultLanguageEsCu   ContentSearchResultLanguage = "es-cu"
-	ContentSearchResultLanguageEsDo   ContentSearchResultLanguage = "es-do"
-	ContentSearchResultLanguageEsEa   ContentSearchResultLanguage = "es-ea"
-	ContentSearchResultLanguageEsEc   ContentSearchResultLanguage = "es-ec"
-	ContentSearchResultLanguageEsEs   ContentSearchResultLanguage = "es-es"
-	ContentSearchResultLanguageEsGq   ContentSearchResultLanguage = "es-gq"
-	ContentSearchResultLanguageEsGt   ContentSearchResultLanguage = "es-gt"
-	ContentSearchResultLanguageEsHn   ContentSearchResultLanguage = "es-hn"
-	ContentSearchResultLanguageEsIc   ContentSearchResultLanguage = "es-ic"
-	ContentSearchResultLanguageEsMx   ContentSearchResultLanguage = "es-mx"
-	ContentSearchResultLanguageEsNi   ContentSearchResultLanguage = "es-ni"
-	ContentSearchResultLanguageEsPa   ContentSearchResultLanguage = "es-pa"
-	ContentSearchResultLanguageEsPe   ContentSearchResultLanguage = "es-pe"
-	ContentSearchResultLanguageEsPh   ContentSearchResultLanguage = "es-ph"
-	ContentSearchResultLanguageEsPr   ContentSearchResultLanguage = "es-pr"
-	ContentSearchResultLanguageEsPy   ContentSearchResultLanguage = "es-py"
-	ContentSearchResultLanguageEsSv   ContentSearchResultLanguage = "es-sv"
-	ContentSearchResultLanguageEsUs   ContentSearchResultLanguage = "es-us"
-	ContentSearchResultLanguageEsUy   ContentSearchResultLanguage = "es-uy"
-	ContentSearchResultLanguageEsVe   ContentSearchResultLanguage = "es-ve"
-	ContentSearchResultLanguageEt     ContentSearchResultLanguage = "et"
-	ContentSearchResultLanguageEtEe   ContentSearchResultLanguage = "et-ee"
-	ContentSearchResultLanguageEu     ContentSearchResultLanguage = "eu"
-	ContentSearchResultLanguageEuEs   ContentSearchResultLanguage = "eu-es"
-	ContentSearchResultLanguageEwo    ContentSearchResultLanguage = "ewo"
-	ContentSearchResultLanguageEwoCm  ContentSearchResultLanguage = "ewo-cm"
-	ContentSearchResultLanguageFa     ContentSearchResultLanguage = "fa"
-	ContentSearchResultLanguageFaAf   ContentSearchResultLanguage = "fa-af"
-	ContentSearchResultLanguageFaIr   ContentSearchResultLanguage = "fa-ir"
-	ContentSearchResultLanguageFf     ContentSearchResultLanguage = "ff"
-	ContentSearchResultLanguageFfBf   ContentSearchResultLanguage = "ff-bf"
-	ContentSearchResultLanguageFfCm   ContentSearchResultLanguage = "ff-cm"
-	ContentSearchResultLanguageFfGh   ContentSearchResultLanguage = "ff-gh"
-	ContentSearchResultLanguageFfGm   ContentSearchResultLanguage = "ff-gm"
-	ContentSearchResultLanguageFfGn   ContentSearchResultLanguage = "ff-gn"
-	ContentSearchResultLanguageFfGw   ContentSearchResultLanguage = "ff-gw"
-	ContentSearchResultLanguageFfLr   ContentSearchResultLanguage = "ff-lr"
-	ContentSearchResultLanguageFfMr   ContentSearchResultLanguage = "ff-mr"
-	ContentSearchResultLanguageFfNe   ContentSearchResultLanguage = "ff-ne"
-	ContentSearchResultLanguageFfNg   ContentSearchResultLanguage = "ff-ng"
-	ContentSearchResultLanguageFfSl   ContentSearchResultLanguage = "ff-sl"
-	ContentSearchResultLanguageFfSn   ContentSearchResultLanguage = "ff-sn"
-	ContentSearchResultLanguageFi     ContentSearchResultLanguage = "fi"
-	ContentSearchResultLanguageFiFi   ContentSearchResultLanguage = "fi-fi"
-	ContentSearchResultLanguageFil    ContentSearchResultLanguage = "fil"
-	ContentSearchResultLanguageFilPh  ContentSearchResultLanguage = "fil-ph"
-	ContentSearchResultLanguageFj     ContentSearchResultLanguage = "fj"
-	ContentSearchResultLanguageFo     ContentSearchResultLanguage = "fo"
-	ContentSearchResultLanguageFoDk   ContentSearchResultLanguage = "fo-dk"
-	ContentSearchResultLanguageFoFo   ContentSearchResultLanguage = "fo-fo"
-	ContentSearchResultLanguageFr     ContentSearchResultLanguage = "fr"
-	ContentSearchResultLanguageFrBe   ContentSearchResultLanguage = "fr-be"
-	ContentSearchResultLanguageFrBf   ContentSearchResultLanguage = "fr-bf"
-	ContentSearchResultLanguageFrBi   ContentSearchResultLanguage = "fr-bi"
-	ContentSearchResultLanguageFrBj   ContentSearchResultLanguage = "fr-bj"
-	ContentSearchResultLanguageFrBl   ContentSearchResultLanguage = "fr-bl"
-	ContentSearchResultLanguageFrCa   ContentSearchResultLanguage = "fr-ca"
-	ContentSearchResultLanguageFrCd   ContentSearchResultLanguage = "fr-cd"
-	ContentSearchResultLanguageFrCf   ContentSearchResultLanguage = "fr-cf"
-	ContentSearchResultLanguageFrCg   ContentSearchResultLanguage = "fr-cg"
-	ContentSearchResultLanguageFrCh   ContentSearchResultLanguage = "fr-ch"
-	ContentSearchResultLanguageFrCi   ContentSearchResultLanguage = "fr-ci"
-	ContentSearchResultLanguageFrCm   ContentSearchResultLanguage = "fr-cm"
-	ContentSearchResultLanguageFrDj   ContentSearchResultLanguage = "fr-dj"
-	ContentSearchResultLanguageFrDz   ContentSearchResultLanguage = "fr-dz"
-	ContentSearchResultLanguageFrFr   ContentSearchResultLanguage = "fr-fr"
-	ContentSearchResultLanguageFrGa   ContentSearchResultLanguage = "fr-ga"
-	ContentSearchResultLanguageFrGf   ContentSearchResultLanguage = "fr-gf"
-	ContentSearchResultLanguageFrGn   ContentSearchResultLanguage = "fr-gn"
-	ContentSearchResultLanguageFrGp   ContentSearchResultLanguage = "fr-gp"
-	ContentSearchResultLanguageFrGq   ContentSearchResultLanguage = "fr-gq"
-	ContentSearchResultLanguageFrHt   ContentSearchResultLanguage = "fr-ht"
-	ContentSearchResultLanguageFrKm   ContentSearchResultLanguage = "fr-km"
-	ContentSearchResultLanguageFrLu   ContentSearchResultLanguage = "fr-lu"
-	ContentSearchResultLanguageFrMa   ContentSearchResultLanguage = "fr-ma"
-	ContentSearchResultLanguageFrMc   ContentSearchResultLanguage = "fr-mc"
-	ContentSearchResultLanguageFrMf   ContentSearchResultLanguage = "fr-mf"
-	ContentSearchResultLanguageFrMg   ContentSearchResultLanguage = "fr-mg"
-	ContentSearchResultLanguageFrMl   ContentSearchResultLanguage = "fr-ml"
-	ContentSearchResultLanguageFrMq   ContentSearchResultLanguage = "fr-mq"
-	ContentSearchResultLanguageFrMr   ContentSearchResultLanguage = "fr-mr"
-	ContentSearchResultLanguageFrMu   ContentSearchResultLanguage = "fr-mu"
-	ContentSearchResultLanguageFrNc   ContentSearchResultLanguage = "fr-nc"
-	ContentSearchResultLanguageFrNe   ContentSearchResultLanguage = "fr-ne"
-	ContentSearchResultLanguageFrPf   ContentSearchResultLanguage = "fr-pf"
-	ContentSearchResultLanguageFrPm   ContentSearchResultLanguage = "fr-pm"
-	ContentSearchResultLanguageFrRe   ContentSearchResultLanguage = "fr-re"
-	ContentSearchResultLanguageFrRw   ContentSearchResultLanguage = "fr-rw"
-	ContentSearchResultLanguageFrSc   ContentSearchResultLanguage = "fr-sc"
-	ContentSearchResultLanguageFrSn   ContentSearchResultLanguage = "fr-sn"
-	ContentSearchResultLanguageFrSy   ContentSearchResultLanguage = "fr-sy"
-	ContentSearchResultLanguageFrTd   ContentSearchResultLanguage = "fr-td"
-	ContentSearchResultLanguageFrTg   ContentSearchResultLanguage = "fr-tg"
-	ContentSearchResultLanguageFrTn   ContentSearchResultLanguage = "fr-tn"
-	ContentSearchResultLanguageFrVu   ContentSearchResultLanguage = "fr-vu"
-	ContentSearchResultLanguageFrWf   ContentSearchResultLanguage = "fr-wf"
-	ContentSearchResultLanguageFrYt   ContentSearchResultLanguage = "fr-yt"
-	ContentSearchResultLanguageFrr    ContentSearchResultLanguage = "frr"
-	ContentSearchResultLanguageFrrDe  ContentSearchResultLanguage = "frr-de"
-	ContentSearchResultLanguageFur    ContentSearchResultLanguage = "fur"
-	ContentSearchResultLanguageFurIt  ContentSearchResultLanguage = "fur-it"
-	ContentSearchResultLanguageFy     ContentSearchResultLanguage = "fy"
-	ContentSearchResultLanguageFyNl   ContentSearchResultLanguage = "fy-nl"
-	ContentSearchResultLanguageGa     ContentSearchResultLanguage = "ga"
-	ContentSearchResultLanguageGaGb   ContentSearchResultLanguage = "ga-gb"
-	ContentSearchResultLanguageGaIe   ContentSearchResultLanguage = "ga-ie"
-	ContentSearchResultLanguageGaa    ContentSearchResultLanguage = "gaa"
-	ContentSearchResultLanguageGaaGh  ContentSearchResultLanguage = "gaa-gh"
-	ContentSearchResultLanguageGd     ContentSearchResultLanguage = "gd"
-	ContentSearchResultLanguageGdGb   ContentSearchResultLanguage = "gd-gb"
-	ContentSearchResultLanguageGl     ContentSearchResultLanguage = "gl"
-	ContentSearchResultLanguageGlEs   ContentSearchResultLanguage = "gl-es"
-	ContentSearchResultLanguageGn     ContentSearchResultLanguage = "gn"
-	ContentSearchResultLanguageGsw    ContentSearchResultLanguage = "gsw"
-	ContentSearchResultLanguageGswCh  ContentSearchResultLanguage = "gsw-ch"
-	ContentSearchResultLanguageGswFr  ContentSearchResultLanguage = "gsw-fr"
-	ContentSearchResultLanguageGswLi  ContentSearchResultLanguage = "gsw-li"
-	ContentSearchResultLanguageGu     ContentSearchResultLanguage = "gu"
-	ContentSearchResultLanguageGuIn   ContentSearchResultLanguage = "gu-in"
-	ContentSearchResultLanguageGuz    ContentSearchResultLanguage = "guz"
-	ContentSearchResultLanguageGuzKe  ContentSearchResultLanguage = "guz-ke"
-	ContentSearchResultLanguageGv     ContentSearchResultLanguage = "gv"
-	ContentSearchResultLanguageGvIm   ContentSearchResultLanguage = "gv-im"
-	ContentSearchResultLanguageHa     ContentSearchResultLanguage = "ha"
-	ContentSearchResultLanguageHaGh   ContentSearchResultLanguage = "ha-gh"
-	ContentSearchResultLanguageHaNe   ContentSearchResultLanguage = "ha-ne"
-	ContentSearchResultLanguageHaNg   ContentSearchResultLanguage = "ha-ng"
-	ContentSearchResultLanguageHaw    ContentSearchResultLanguage = "haw"
-	ContentSearchResultLanguageHawUs  ContentSearchResultLanguage = "haw-us"
-	ContentSearchResultLanguageHe     ContentSearchResultLanguage = "he"
-	ContentSearchResultLanguageHeIl   ContentSearchResultLanguage = "he-il"
-	ContentSearchResultLanguageHi     ContentSearchResultLanguage = "hi"
-	ContentSearchResultLanguageHiIn   ContentSearchResultLanguage = "hi-in"
-	ContentSearchResultLanguageHmn    ContentSearchResultLanguage = "hmn"
-	ContentSearchResultLanguageHo     ContentSearchResultLanguage = "ho"
-	ContentSearchResultLanguageHr     ContentSearchResultLanguage = "hr"
-	ContentSearchResultLanguageHrBa   ContentSearchResultLanguage = "hr-ba"
-	ContentSearchResultLanguageHrHr   ContentSearchResultLanguage = "hr-hr"
-	ContentSearchResultLanguageHsb    ContentSearchResultLanguage = "hsb"
-	ContentSearchResultLanguageHsbDe  ContentSearchResultLanguage = "hsb-de"
-	ContentSearchResultLanguageHt     ContentSearchResultLanguage = "ht"
-	ContentSearchResultLanguageHtHt   ContentSearchResultLanguage = "ht-ht"
-	ContentSearchResultLanguageHu     ContentSearchResultLanguage = "hu"
-	ContentSearchResultLanguageHuHu   ContentSearchResultLanguage = "hu-hu"
-	ContentSearchResultLanguageHy     ContentSearchResultLanguage = "hy"
-	ContentSearchResultLanguageHyAm   ContentSearchResultLanguage = "hy-am"
-	ContentSearchResultLanguageHz     ContentSearchResultLanguage = "hz"
-	ContentSearchResultLanguageIa     ContentSearchResultLanguage = "ia"
-	ContentSearchResultLanguageIa001  ContentSearchResultLanguage = "ia-001"
-	ContentSearchResultLanguageId     ContentSearchResultLanguage = "id"
-	ContentSearchResultLanguageIdId   ContentSearchResultLanguage = "id-id"
-	ContentSearchResultLanguageIe     ContentSearchResultLanguage = "ie"
-	ContentSearchResultLanguageIeEe   ContentSearchResultLanguage = "ie-ee"
-	ContentSearchResultLanguageIg     ContentSearchResultLanguage = "ig"
-	ContentSearchResultLanguageIgNg   ContentSearchResultLanguage = "ig-ng"
-	ContentSearchResultLanguageIi     ContentSearchResultLanguage = "ii"
-	ContentSearchResultLanguageIiCn   ContentSearchResultLanguage = "ii-cn"
-	ContentSearchResultLanguageIk     ContentSearchResultLanguage = "ik"
-	ContentSearchResultLanguageIo     ContentSearchResultLanguage = "io"
-	ContentSearchResultLanguageIs     ContentSearchResultLanguage = "is"
-	ContentSearchResultLanguageIsIs   ContentSearchResultLanguage = "is-is"
-	ContentSearchResultLanguageIt     ContentSearchResultLanguage = "it"
-	ContentSearchResultLanguageItCh   ContentSearchResultLanguage = "it-ch"
-	ContentSearchResultLanguageItIt   ContentSearchResultLanguage = "it-it"
-	ContentSearchResultLanguageItSm   ContentSearchResultLanguage = "it-sm"
-	ContentSearchResultLanguageItVa   ContentSearchResultLanguage = "it-va"
-	ContentSearchResultLanguageIu     ContentSearchResultLanguage = "iu"
-	ContentSearchResultLanguageJa     ContentSearchResultLanguage = "ja"
-	ContentSearchResultLanguageJaJp   ContentSearchResultLanguage = "ja-jp"
-	ContentSearchResultLanguageJgo    ContentSearchResultLanguage = "jgo"
-	ContentSearchResultLanguageJgoCm  ContentSearchResultLanguage = "jgo-cm"
-	ContentSearchResultLanguageJmc    ContentSearchResultLanguage = "jmc"
-	ContentSearchResultLanguageJmcTz  ContentSearchResultLanguage = "jmc-tz"
-	ContentSearchResultLanguageJv     ContentSearchResultLanguage = "jv"
-	ContentSearchResultLanguageJvId   ContentSearchResultLanguage = "jv-id"
-	ContentSearchResultLanguageKa     ContentSearchResultLanguage = "ka"
-	ContentSearchResultLanguageKaGe   ContentSearchResultLanguage = "ka-ge"
-	ContentSearchResultLanguageKab    ContentSearchResultLanguage = "kab"
-	ContentSearchResultLanguageKabDz  ContentSearchResultLanguage = "kab-dz"
-	ContentSearchResultLanguageKam    ContentSearchResultLanguage = "kam"
-	ContentSearchResultLanguageKamKe  ContentSearchResultLanguage = "kam-ke"
-	ContentSearchResultLanguageKar    ContentSearchResultLanguage = "kar"
-	ContentSearchResultLanguageKde    ContentSearchResultLanguage = "kde"
-	ContentSearchResultLanguageKdeTz  ContentSearchResultLanguage = "kde-tz"
-	ContentSearchResultLanguageKea    ContentSearchResultLanguage = "kea"
-	ContentSearchResultLanguageKeaCv  ContentSearchResultLanguage = "kea-cv"
-	ContentSearchResultLanguageKg     ContentSearchResultLanguage = "kg"
-	ContentSearchResultLanguageKgp    ContentSearchResultLanguage = "kgp"
-	ContentSearchResultLanguageKgpBr  ContentSearchResultLanguage = "kgp-br"
-	ContentSearchResultLanguageKh     ContentSearchResultLanguage = "kh"
-	ContentSearchResultLanguageKhq    ContentSearchResultLanguage = "khq"
-	ContentSearchResultLanguageKhqMl  ContentSearchResultLanguage = "khq-ml"
-	ContentSearchResultLanguageKi     ContentSearchResultLanguage = "ki"
-	ContentSearchResultLanguageKiKe   ContentSearchResultLanguage = "ki-ke"
-	ContentSearchResultLanguageKj     ContentSearchResultLanguage = "kj"
-	ContentSearchResultLanguageKk     ContentSearchResultLanguage = "kk"
-	ContentSearchResultLanguageKkKz   ContentSearchResultLanguage = "kk-kz"
-	ContentSearchResultLanguageKkj    ContentSearchResultLanguage = "kkj"
-	ContentSearchResultLanguageKkjCm  ContentSearchResultLanguage = "kkj-cm"
-	ContentSearchResultLanguageKl     ContentSearchResultLanguage = "kl"
-	ContentSearchResultLanguageKlGl   ContentSearchResultLanguage = "kl-gl"
-	ContentSearchResultLanguageKln    ContentSearchResultLanguage = "kln"
-	ContentSearchResultLanguageKlnKe  ContentSearchResultLanguage = "kln-ke"
-	ContentSearchResultLanguageKm     ContentSearchResultLanguage = "km"
-	ContentSearchResultLanguageKmKh   ContentSearchResultLanguage = "km-kh"
-	ContentSearchResultLanguageKn     ContentSearchResultLanguage = "kn"
-	ContentSearchResultLanguageKnIn   ContentSearchResultLanguage = "kn-in"
-	ContentSearchResultLanguageKo     ContentSearchResultLanguage = "ko"
-	ContentSearchResultLanguageKoCn   ContentSearchResultLanguage = "ko-cn"
-	ContentSearchResultLanguageKoKp   ContentSearchResultLanguage = "ko-kp"
-	ContentSearchResultLanguageKoKr   ContentSearchResultLanguage = "ko-kr"
-	ContentSearchResultLanguageKok    ContentSearchResultLanguage = "kok"
-	ContentSearchResultLanguageKokIn  ContentSearchResultLanguage = "kok-in"
-	ContentSearchResultLanguageKr     ContentSearchResultLanguage = "kr"
-	ContentSearchResultLanguageKs     ContentSearchResultLanguage = "ks"
-	ContentSearchResultLanguageKsIn   ContentSearchResultLanguage = "ks-in"
-	ContentSearchResultLanguageKsb    ContentSearchResultLanguage = "ksb"
-	ContentSearchResultLanguageKsbTz  ContentSearchResultLanguage = "ksb-tz"
-	ContentSearchResultLanguageKsf    ContentSearchResultLanguage = "ksf"
-	ContentSearchResultLanguageKsfCm  ContentSearchResultLanguage = "ksf-cm"
-	ContentSearchResultLanguageKsh    ContentSearchResultLanguage = "ksh"
-	ContentSearchResultLanguageKshDe  ContentSearchResultLanguage = "ksh-de"
-	ContentSearchResultLanguageKu     ContentSearchResultLanguage = "ku"
-	ContentSearchResultLanguageKuTr   ContentSearchResultLanguage = "ku-tr"
-	ContentSearchResultLanguageKv     ContentSearchResultLanguage = "kv"
-	ContentSearchResultLanguageKw     ContentSearchResultLanguage = "kw"
-	ContentSearchResultLanguageKwGb   ContentSearchResultLanguage = "kw-gb"
-	ContentSearchResultLanguageKxv    ContentSearchResultLanguage = "kxv"
-	ContentSearchResultLanguageKxvIn  ContentSearchResultLanguage = "kxv-in"
-	ContentSearchResultLanguageKy     ContentSearchResultLanguage = "ky"
-	ContentSearchResultLanguageKyKg   ContentSearchResultLanguage = "ky-kg"
-	ContentSearchResultLanguageLa     ContentSearchResultLanguage = "la"
-	ContentSearchResultLanguageLag    ContentSearchResultLanguage = "lag"
-	ContentSearchResultLanguageLagTz  ContentSearchResultLanguage = "lag-tz"
-	ContentSearchResultLanguageLb     ContentSearchResultLanguage = "lb"
-	ContentSearchResultLanguageLbLu   ContentSearchResultLanguage = "lb-lu"
-	ContentSearchResultLanguageLg     ContentSearchResultLanguage = "lg"
-	ContentSearchResultLanguageLgUg   ContentSearchResultLanguage = "lg-ug"
-	ContentSearchResultLanguageLi     ContentSearchResultLanguage = "li"
-	ContentSearchResultLanguageLij    ContentSearchResultLanguage = "lij"
-	ContentSearchResultLanguageLijIt  ContentSearchResultLanguage = "lij-it"
-	ContentSearchResultLanguageLkt    ContentSearchResultLanguage = "lkt"
-	ContentSearchResultLanguageLktUs  ContentSearchResultLanguage = "lkt-us"
-	ContentSearchResultLanguageLmo    ContentSearchResultLanguage = "lmo"
-	ContentSearchResultLanguageLmoIt  ContentSearchResultLanguage = "lmo-it"
-	ContentSearchResultLanguageLn     ContentSearchResultLanguage = "ln"
-	ContentSearchResultLanguageLnAo   ContentSearchResultLanguage = "ln-ao"
-	ContentSearchResultLanguageLnCd   ContentSearchResultLanguage = "ln-cd"
-	ContentSearchResultLanguageLnCf   ContentSearchResultLanguage = "ln-cf"
-	ContentSearchResultLanguageLnCg   ContentSearchResultLanguage = "ln-cg"
-	ContentSearchResultLanguageLo     ContentSearchResultLanguage = "lo"
-	ContentSearchResultLanguageLoLa   ContentSearchResultLanguage = "lo-la"
-	ContentSearchResultLanguageLrc    ContentSearchResultLanguage = "lrc"
-	ContentSearchResultLanguageLrcIq  ContentSearchResultLanguage = "lrc-iq"
-	ContentSearchResultLanguageLrcIr  ContentSearchResultLanguage = "lrc-ir"
-	ContentSearchResultLanguageLt     ContentSearchResultLanguage = "lt"
-	ContentSearchResultLanguageLtLt   ContentSearchResultLanguage = "lt-lt"
-	ContentSearchResultLanguageLu     ContentSearchResultLanguage = "lu"
-	ContentSearchResultLanguageLuCd   ContentSearchResultLanguage = "lu-cd"
-	ContentSearchResultLanguageLuo    ContentSearchResultLanguage = "luo"
-	ContentSearchResultLanguageLuoKe  ContentSearchResultLanguage = "luo-ke"
-	ContentSearchResultLanguageLuy    ContentSearchResultLanguage = "luy"
-	ContentSearchResultLanguageLuyKe  ContentSearchResultLanguage = "luy-ke"
-	ContentSearchResultLanguageLv     ContentSearchResultLanguage = "lv"
-	ContentSearchResultLanguageLvLv   ContentSearchResultLanguage = "lv-lv"
-	ContentSearchResultLanguageMai    ContentSearchResultLanguage = "mai"
-	ContentSearchResultLanguageMaiIn  ContentSearchResultLanguage = "mai-in"
-	ContentSearchResultLanguageMas    ContentSearchResultLanguage = "mas"
-	ContentSearchResultLanguageMasKe  ContentSearchResultLanguage = "mas-ke"
-	ContentSearchResultLanguageMasTz  ContentSearchResultLanguage = "mas-tz"
-	ContentSearchResultLanguageMdf    ContentSearchResultLanguage = "mdf"
-	ContentSearchResultLanguageMdfRu  ContentSearchResultLanguage = "mdf-ru"
-	ContentSearchResultLanguageMer    ContentSearchResultLanguage = "mer"
-	ContentSearchResultLanguageMerKe  ContentSearchResultLanguage = "mer-ke"
-	ContentSearchResultLanguageMfe    ContentSearchResultLanguage = "mfe"
-	ContentSearchResultLanguageMfeMu  ContentSearchResultLanguage = "mfe-mu"
-	ContentSearchResultLanguageMg     ContentSearchResultLanguage = "mg"
-	ContentSearchResultLanguageMgMg   ContentSearchResultLanguage = "mg-mg"
-	ContentSearchResultLanguageMgh    ContentSearchResultLanguage = "mgh"
-	ContentSearchResultLanguageMghMz  ContentSearchResultLanguage = "mgh-mz"
-	ContentSearchResultLanguageMgo    ContentSearchResultLanguage = "mgo"
-	ContentSearchResultLanguageMgoCm  ContentSearchResultLanguage = "mgo-cm"
-	ContentSearchResultLanguageMh     ContentSearchResultLanguage = "mh"
-	ContentSearchResultLanguageMi     ContentSearchResultLanguage = "mi"
-	ContentSearchResultLanguageMiNz   ContentSearchResultLanguage = "mi-nz"
-	ContentSearchResultLanguageMk     ContentSearchResultLanguage = "mk"
-	ContentSearchResultLanguageMkMk   ContentSearchResultLanguage = "mk-mk"
-	ContentSearchResultLanguageMl     ContentSearchResultLanguage = "ml"
-	ContentSearchResultLanguageMlIn   ContentSearchResultLanguage = "ml-in"
-	ContentSearchResultLanguageMn     ContentSearchResultLanguage = "mn"
-	ContentSearchResultLanguageMnMn   ContentSearchResultLanguage = "mn-mn"
-	ContentSearchResultLanguageMni    ContentSearchResultLanguage = "mni"
-	ContentSearchResultLanguageMniIn  ContentSearchResultLanguage = "mni-in"
-	ContentSearchResultLanguageMr     ContentSearchResultLanguage = "mr"
-	ContentSearchResultLanguageMrIn   ContentSearchResultLanguage = "mr-in"
-	ContentSearchResultLanguageMs     ContentSearchResultLanguage = "ms"
-	ContentSearchResultLanguageMsBn   ContentSearchResultLanguage = "ms-bn"
-	ContentSearchResultLanguageMsId   ContentSearchResultLanguage = "ms-id"
-	ContentSearchResultLanguageMsMy   ContentSearchResultLanguage = "ms-my"
-	ContentSearchResultLanguageMsSg   ContentSearchResultLanguage = "ms-sg"
-	ContentSearchResultLanguageMt     ContentSearchResultLanguage = "mt"
-	ContentSearchResultLanguageMtMt   ContentSearchResultLanguage = "mt-mt"
-	ContentSearchResultLanguageMua    ContentSearchResultLanguage = "mua"
-	ContentSearchResultLanguageMuaCm  ContentSearchResultLanguage = "mua-cm"
-	ContentSearchResultLanguageMy     ContentSearchResultLanguage = "my"
-	ContentSearchResultLanguageMyMm   ContentSearchResultLanguage = "my-mm"
-	ContentSearchResultLanguageMzn    ContentSearchResultLanguage = "mzn"
-	ContentSearchResultLanguageMznIr  ContentSearchResultLanguage = "mzn-ir"
-	ContentSearchResultLanguageNa     ContentSearchResultLanguage = "na"
-	ContentSearchResultLanguageNaq    ContentSearchResultLanguage = "naq"
-	ContentSearchResultLanguageNaqNa  ContentSearchResultLanguage = "naq-na"
-	ContentSearchResultLanguageNb     ContentSearchResultLanguage = "nb"
-	ContentSearchResultLanguageNbNo   ContentSearchResultLanguage = "nb-no"
-	ContentSearchResultLanguageNbSj   ContentSearchResultLanguage = "nb-sj"
-	ContentSearchResultLanguageNd     ContentSearchResultLanguage = "nd"
-	ContentSearchResultLanguageNdZw   ContentSearchResultLanguage = "nd-zw"
-	ContentSearchResultLanguageNds    ContentSearchResultLanguage = "nds"
-	ContentSearchResultLanguageNdsDe  ContentSearchResultLanguage = "nds-de"
-	ContentSearchResultLanguageNdsNl  ContentSearchResultLanguage = "nds-nl"
-	ContentSearchResultLanguageNe     ContentSearchResultLanguage = "ne"
-	ContentSearchResultLanguageNeIn   ContentSearchResultLanguage = "ne-in"
-	ContentSearchResultLanguageNeNp   ContentSearchResultLanguage = "ne-np"
-	ContentSearchResultLanguageNg     ContentSearchResultLanguage = "ng"
-	ContentSearchResultLanguageNl     ContentSearchResultLanguage = "nl"
-	ContentSearchResultLanguageNlAw   ContentSearchResultLanguage = "nl-aw"
-	ContentSearchResultLanguageNlBe   ContentSearchResultLanguage = "nl-be"
-	ContentSearchResultLanguageNlBq   ContentSearchResultLanguage = "nl-bq"
-	ContentSearchResultLanguageNlCh   ContentSearchResultLanguage = "nl-ch"
-	ContentSearchResultLanguageNlCw   ContentSearchResultLanguage = "nl-cw"
-	ContentSearchResultLanguageNlLu   ContentSearchResultLanguage = "nl-lu"
-	ContentSearchResultLanguageNlNl   ContentSearchResultLanguage = "nl-nl"
-	ContentSearchResultLanguageNlSr   ContentSearchResultLanguage = "nl-sr"
-	ContentSearchResultLanguageNlSx   ContentSearchResultLanguage = "nl-sx"
-	ContentSearchResultLanguageNmg    ContentSearchResultLanguage = "nmg"
-	ContentSearchResultLanguageNmgCm  ContentSearchResultLanguage = "nmg-cm"
-	ContentSearchResultLanguageNn     ContentSearchResultLanguage = "nn"
-	ContentSearchResultLanguageNnNo   ContentSearchResultLanguage = "nn-no"
-	ContentSearchResultLanguageNnh    ContentSearchResultLanguage = "nnh"
-	ContentSearchResultLanguageNnhCm  ContentSearchResultLanguage = "nnh-cm"
-	ContentSearchResultLanguageNo     ContentSearchResultLanguage = "no"
-	ContentSearchResultLanguageNoNo   ContentSearchResultLanguage = "no-no"
-	ContentSearchResultLanguageNqo    ContentSearchResultLanguage = "nqo"
-	ContentSearchResultLanguageNqoGn  ContentSearchResultLanguage = "nqo-gn"
-	ContentSearchResultLanguageNr     ContentSearchResultLanguage = "nr"
-	ContentSearchResultLanguageNso    ContentSearchResultLanguage = "nso"
-	ContentSearchResultLanguageNsoZa  ContentSearchResultLanguage = "nso-za"
-	ContentSearchResultLanguageNus    ContentSearchResultLanguage = "nus"
-	ContentSearchResultLanguageNusSs  ContentSearchResultLanguage = "nus-ss"
-	ContentSearchResultLanguageNv     ContentSearchResultLanguage = "nv"
-	ContentSearchResultLanguageNy     ContentSearchResultLanguage = "ny"
-	ContentSearchResultLanguageNyn    ContentSearchResultLanguage = "nyn"
-	ContentSearchResultLanguageNynUg  ContentSearchResultLanguage = "nyn-ug"
-	ContentSearchResultLanguageOc     ContentSearchResultLanguage = "oc"
-	ContentSearchResultLanguageOcEs   ContentSearchResultLanguage = "oc-es"
-	ContentSearchResultLanguageOcFr   ContentSearchResultLanguage = "oc-fr"
-	ContentSearchResultLanguageOj     ContentSearchResultLanguage = "oj"
-	ContentSearchResultLanguageOm     ContentSearchResultLanguage = "om"
-	ContentSearchResultLanguageOmEt   ContentSearchResultLanguage = "om-et"
-	ContentSearchResultLanguageOmKe   ContentSearchResultLanguage = "om-ke"
-	ContentSearchResultLanguageOr     ContentSearchResultLanguage = "or"
-	ContentSearchResultLanguageOrIn   ContentSearchResultLanguage = "or-in"
-	ContentSearchResultLanguageOs     ContentSearchResultLanguage = "os"
-	ContentSearchResultLanguageOsGe   ContentSearchResultLanguage = "os-ge"
-	ContentSearchResultLanguageOsRu   ContentSearchResultLanguage = "os-ru"
-	ContentSearchResultLanguagePa     ContentSearchResultLanguage = "pa"
-	ContentSearchResultLanguagePaIn   ContentSearchResultLanguage = "pa-in"
-	ContentSearchResultLanguagePaPk   ContentSearchResultLanguage = "pa-pk"
-	ContentSearchResultLanguagePcm    ContentSearchResultLanguage = "pcm"
-	ContentSearchResultLanguagePcmNg  ContentSearchResultLanguage = "pcm-ng"
-	ContentSearchResultLanguagePi     ContentSearchResultLanguage = "pi"
-	ContentSearchResultLanguagePis    ContentSearchResultLanguage = "pis"
-	ContentSearchResultLanguagePisSb  ContentSearchResultLanguage = "pis-sb"
-	ContentSearchResultLanguagePl     ContentSearchResultLanguage = "pl"
-	ContentSearchResultLanguagePlPl   ContentSearchResultLanguage = "pl-pl"
-	ContentSearchResultLanguagePrg    ContentSearchResultLanguage = "prg"
-	ContentSearchResultLanguagePrg001 ContentSearchResultLanguage = "prg-001"
-	ContentSearchResultLanguagePs     ContentSearchResultLanguage = "ps"
-	ContentSearchResultLanguagePsAf   ContentSearchResultLanguage = "ps-af"
-	ContentSearchResultLanguagePsPk   ContentSearchResultLanguage = "ps-pk"
-	ContentSearchResultLanguagePt     ContentSearchResultLanguage = "pt"
-	ContentSearchResultLanguagePtAo   ContentSearchResultLanguage = "pt-ao"
-	ContentSearchResultLanguagePtBr   ContentSearchResultLanguage = "pt-br"
-	ContentSearchResultLanguagePtCh   ContentSearchResultLanguage = "pt-ch"
-	ContentSearchResultLanguagePtCv   ContentSearchResultLanguage = "pt-cv"
-	ContentSearchResultLanguagePtGq   ContentSearchResultLanguage = "pt-gq"
-	ContentSearchResultLanguagePtGw   ContentSearchResultLanguage = "pt-gw"
-	ContentSearchResultLanguagePtLu   ContentSearchResultLanguage = "pt-lu"
-	ContentSearchResultLanguagePtMo   ContentSearchResultLanguage = "pt-mo"
-	ContentSearchResultLanguagePtMz   ContentSearchResultLanguage = "pt-mz"
-	ContentSearchResultLanguagePtPt   ContentSearchResultLanguage = "pt-pt"
-	ContentSearchResultLanguagePtSt   ContentSearchResultLanguage = "pt-st"
-	ContentSearchResultLanguagePtTl   ContentSearchResultLanguage = "pt-tl"
-	ContentSearchResultLanguageQu     ContentSearchResultLanguage = "qu"
-	ContentSearchResultLanguageQuBo   ContentSearchResultLanguage = "qu-bo"
-	ContentSearchResultLanguageQuEc   ContentSearchResultLanguage = "qu-ec"
-	ContentSearchResultLanguageQuPe   ContentSearchResultLanguage = "qu-pe"
-	ContentSearchResultLanguageRaj    ContentSearchResultLanguage = "raj"
-	ContentSearchResultLanguageRajIn  ContentSearchResultLanguage = "raj-in"
-	ContentSearchResultLanguageRm     ContentSearchResultLanguage = "rm"
-	ContentSearchResultLanguageRmCh   ContentSearchResultLanguage = "rm-ch"
-	ContentSearchResultLanguageRn     ContentSearchResultLanguage = "rn"
-	ContentSearchResultLanguageRnBi   ContentSearchResultLanguage = "rn-bi"
-	ContentSearchResultLanguageRo     ContentSearchResultLanguage = "ro"
-	ContentSearchResultLanguageRoMd   ContentSearchResultLanguage = "ro-md"
-	ContentSearchResultLanguageRoRo   ContentSearchResultLanguage = "ro-ro"
-	ContentSearchResultLanguageRof    ContentSearchResultLanguage = "rof"
-	ContentSearchResultLanguageRofTz  ContentSearchResultLanguage = "rof-tz"
-	ContentSearchResultLanguageRu     ContentSearchResultLanguage = "ru"
-	ContentSearchResultLanguageRuBy   ContentSearchResultLanguage = "ru-by"
-	ContentSearchResultLanguageRuKg   ContentSearchResultLanguage = "ru-kg"
-	ContentSearchResultLanguageRuKz   ContentSearchResultLanguage = "ru-kz"
-	ContentSearchResultLanguageRuMd   ContentSearchResultLanguage = "ru-md"
-	ContentSearchResultLanguageRuRu   ContentSearchResultLanguage = "ru-ru"
-	ContentSearchResultLanguageRuUa   ContentSearchResultLanguage = "ru-ua"
-	ContentSearchResultLanguageRw     ContentSearchResultLanguage = "rw"
-	ContentSearchResultLanguageRwRw   ContentSearchResultLanguage = "rw-rw"
-	ContentSearchResultLanguageRwk    ContentSearchResultLanguage = "rwk"
-	ContentSearchResultLanguageRwkTz  ContentSearchResultLanguage = "rwk-tz"
-	ContentSearchResultLanguageSa     ContentSearchResultLanguage = "sa"
-	ContentSearchResultLanguageSaIn   ContentSearchResultLanguage = "sa-in"
-	ContentSearchResultLanguageSah    ContentSearchResultLanguage = "sah"
-	ContentSearchResultLanguageSahRu  ContentSearchResultLanguage = "sah-ru"
-	ContentSearchResultLanguageSaq    ContentSearchResultLanguage = "saq"
-	ContentSearchResultLanguageSaqKe  ContentSearchResultLanguage = "saq-ke"
-	ContentSearchResultLanguageSat    ContentSearchResultLanguage = "sat"
-	ContentSearchResultLanguageSatIn  ContentSearchResultLanguage = "sat-in"
-	ContentSearchResultLanguageSbp    ContentSearchResultLanguage = "sbp"
-	ContentSearchResultLanguageSbpTz  ContentSearchResultLanguage = "sbp-tz"
-	ContentSearchResultLanguageSc     ContentSearchResultLanguage = "sc"
-	ContentSearchResultLanguageScIt   ContentSearchResultLanguage = "sc-it"
-	ContentSearchResultLanguageSd     ContentSearchResultLanguage = "sd"
-	ContentSearchResultLanguageSdIn   ContentSearchResultLanguage = "sd-in"
-	ContentSearchResultLanguageSdPk   ContentSearchResultLanguage = "sd-pk"
-	ContentSearchResultLanguageSe     ContentSearchResultLanguage = "se"
-	ContentSearchResultLanguageSeFi   ContentSearchResultLanguage = "se-fi"
-	ContentSearchResultLanguageSeNo   ContentSearchResultLanguage = "se-no"
-	ContentSearchResultLanguageSeSe   ContentSearchResultLanguage = "se-se"
-	ContentSearchResultLanguageSeh    ContentSearchResultLanguage = "seh"
-	ContentSearchResultLanguageSehMz  ContentSearchResultLanguage = "seh-mz"
-	ContentSearchResultLanguageSes    ContentSearchResultLanguage = "ses"
-	ContentSearchResultLanguageSesMl  ContentSearchResultLanguage = "ses-ml"
-	ContentSearchResultLanguageSg     ContentSearchResultLanguage = "sg"
-	ContentSearchResultLanguageSgCf   ContentSearchResultLanguage = "sg-cf"
-	ContentSearchResultLanguageShi    ContentSearchResultLanguage = "shi"
-	ContentSearchResultLanguageShiMa  ContentSearchResultLanguage = "shi-ma"
-	ContentSearchResultLanguageSi     ContentSearchResultLanguage = "si"
-	ContentSearchResultLanguageSiLk   ContentSearchResultLanguage = "si-lk"
-	ContentSearchResultLanguageSk     ContentSearchResultLanguage = "sk"
-	ContentSearchResultLanguageSkSk   ContentSearchResultLanguage = "sk-sk"
-	ContentSearchResultLanguageSl     ContentSearchResultLanguage = "sl"
-	ContentSearchResultLanguageSlSi   ContentSearchResultLanguage = "sl-si"
-	ContentSearchResultLanguageSm     ContentSearchResultLanguage = "sm"
-	ContentSearchResultLanguageSmn    ContentSearchResultLanguage = "smn"
-	ContentSearchResultLanguageSmnFi  ContentSearchResultLanguage = "smn-fi"
-	ContentSearchResultLanguageSms    ContentSearchResultLanguage = "sms"
-	ContentSearchResultLanguageSmsFi  ContentSearchResultLanguage = "sms-fi"
-	ContentSearchResultLanguageSn     ContentSearchResultLanguage = "sn"
-	ContentSearchResultLanguageSnZw   ContentSearchResultLanguage = "sn-zw"
-	ContentSearchResultLanguageSo     ContentSearchResultLanguage = "so"
-	ContentSearchResultLanguageSoDj   ContentSearchResultLanguage = "so-dj"
-	ContentSearchResultLanguageSoEt   ContentSearchResultLanguage = "so-et"
-	ContentSearchResultLanguageSoKe   ContentSearchResultLanguage = "so-ke"
-	ContentSearchResultLanguageSoSo   ContentSearchResultLanguage = "so-so"
-	ContentSearchResultLanguageSq     ContentSearchResultLanguage = "sq"
-	ContentSearchResultLanguageSqAl   ContentSearchResultLanguage = "sq-al"
-	ContentSearchResultLanguageSqMk   ContentSearchResultLanguage = "sq-mk"
-	ContentSearchResultLanguageSqXk   ContentSearchResultLanguage = "sq-xk"
-	ContentSearchResultLanguageSr     ContentSearchResultLanguage = "sr"
-	ContentSearchResultLanguageSrBa   ContentSearchResultLanguage = "sr-ba"
-	ContentSearchResultLanguageSrCs   ContentSearchResultLanguage = "sr-cs"
-	ContentSearchResultLanguageSrMe   ContentSearchResultLanguage = "sr-me"
-	ContentSearchResultLanguageSrRs   ContentSearchResultLanguage = "sr-rs"
-	ContentSearchResultLanguageSrXk   ContentSearchResultLanguage = "sr-xk"
-	ContentSearchResultLanguageSs     ContentSearchResultLanguage = "ss"
-	ContentSearchResultLanguageSt     ContentSearchResultLanguage = "st"
-	ContentSearchResultLanguageStLs   ContentSearchResultLanguage = "st-ls"
-	ContentSearchResultLanguageStZa   ContentSearchResultLanguage = "st-za"
-	ContentSearchResultLanguageSu     ContentSearchResultLanguage = "su"
-	ContentSearchResultLanguageSuId   ContentSearchResultLanguage = "su-id"
-	ContentSearchResultLanguageSv     ContentSearchResultLanguage = "sv"
-	ContentSearchResultLanguageSvAx   ContentSearchResultLanguage = "sv-ax"
-	ContentSearchResultLanguageSvFi   ContentSearchResultLanguage = "sv-fi"
-	ContentSearchResultLanguageSvSe   ContentSearchResultLanguage = "sv-se"
-	ContentSearchResultLanguageSw     ContentSearchResultLanguage = "sw"
-	ContentSearchResultLanguageSwCd   ContentSearchResultLanguage = "sw-cd"
-	ContentSearchResultLanguageSwKe   ContentSearchResultLanguage = "sw-ke"
-	ContentSearchResultLanguageSwTz   ContentSearchResultLanguage = "sw-tz"
-	ContentSearchResultLanguageSwUg   ContentSearchResultLanguage = "sw-ug"
-	ContentSearchResultLanguageSy     ContentSearchResultLanguage = "sy"
-	ContentSearchResultLanguageSyr    ContentSearchResultLanguage = "syr"
-	ContentSearchResultLanguageSyrIq  ContentSearchResultLanguage = "syr-iq"
-	ContentSearchResultLanguageSyrSy  ContentSearchResultLanguage = "syr-sy"
-	ContentSearchResultLanguageSzl    ContentSearchResultLanguage = "szl"
-	ContentSearchResultLanguageSzlPl  ContentSearchResultLanguage = "szl-pl"
-	ContentSearchResultLanguageTa     ContentSearchResultLanguage = "ta"
-	ContentSearchResultLanguageTaIn   ContentSearchResultLanguage = "ta-in"
-	ContentSearchResultLanguageTaLk   ContentSearchResultLanguage = "ta-lk"
-	ContentSearchResultLanguageTaMy   ContentSearchResultLanguage = "ta-my"
-	ContentSearchResultLanguageTaSg   ContentSearchResultLanguage = "ta-sg"
-	ContentSearchResultLanguageTe     ContentSearchResultLanguage = "te"
-	ContentSearchResultLanguageTeIn   ContentSearchResultLanguage = "te-in"
-	ContentSearchResultLanguageTeo    ContentSearchResultLanguage = "teo"
-	ContentSearchResultLanguageTeoKe  ContentSearchResultLanguage = "teo-ke"
-	ContentSearchResultLanguageTeoUg  ContentSearchResultLanguage = "teo-ug"
-	ContentSearchResultLanguageTg     ContentSearchResultLanguage = "tg"
-	ContentSearchResultLanguageTgTj   ContentSearchResultLanguage = "tg-tj"
-	ContentSearchResultLanguageTh     ContentSearchResultLanguage = "th"
-	ContentSearchResultLanguageThTh   ContentSearchResultLanguage = "th-th"
-	ContentSearchResultLanguageTi     ContentSearchResultLanguage = "ti"
-	ContentSearchResultLanguageTiEr   ContentSearchResultLanguage = "ti-er"
-	ContentSearchResultLanguageTiEt   ContentSearchResultLanguage = "ti-et"
-	ContentSearchResultLanguageTk     ContentSearchResultLanguage = "tk"
-	ContentSearchResultLanguageTkTm   ContentSearchResultLanguage = "tk-tm"
-	ContentSearchResultLanguageTl     ContentSearchResultLanguage = "tl"
-	ContentSearchResultLanguageTn     ContentSearchResultLanguage = "tn"
-	ContentSearchResultLanguageTnBw   ContentSearchResultLanguage = "tn-bw"
-	ContentSearchResultLanguageTnZa   ContentSearchResultLanguage = "tn-za"
-	ContentSearchResultLanguageTo     ContentSearchResultLanguage = "to"
-	ContentSearchResultLanguageToTo   ContentSearchResultLanguage = "to-to"
-	ContentSearchResultLanguageTok    ContentSearchResultLanguage = "tok"
-	ContentSearchResultLanguageTok001 ContentSearchResultLanguage = "tok-001"
-	ContentSearchResultLanguageTr     ContentSearchResultLanguage = "tr"
-	ContentSearchResultLanguageTrCy   ContentSearchResultLanguage = "tr-cy"
-	ContentSearchResultLanguageTrTr   ContentSearchResultLanguage = "tr-tr"
-	ContentSearchResultLanguageTs     ContentSearchResultLanguage = "ts"
-	ContentSearchResultLanguageTt     ContentSearchResultLanguage = "tt"
-	ContentSearchResultLanguageTtRu   ContentSearchResultLanguage = "tt-ru"
-	ContentSearchResultLanguageTw     ContentSearchResultLanguage = "tw"
-	ContentSearchResultLanguageTwq    ContentSearchResultLanguage = "twq"
-	ContentSearchResultLanguageTwqNe  ContentSearchResultLanguage = "twq-ne"
-	ContentSearchResultLanguageTy     ContentSearchResultLanguage = "ty"
-	ContentSearchResultLanguageTzm    ContentSearchResultLanguage = "tzm"
-	ContentSearchResultLanguageTzmMa  ContentSearchResultLanguage = "tzm-ma"
-	ContentSearchResultLanguageUg     ContentSearchResultLanguage = "ug"
-	ContentSearchResultLanguageUgCn   ContentSearchResultLanguage = "ug-cn"
-	ContentSearchResultLanguageUk     ContentSearchResultLanguage = "uk"
-	ContentSearchResultLanguageUkUa   ContentSearchResultLanguage = "uk-ua"
-	ContentSearchResultLanguageUr     ContentSearchResultLanguage = "ur"
-	ContentSearchResultLanguageUrIn   ContentSearchResultLanguage = "ur-in"
-	ContentSearchResultLanguageUrPk   ContentSearchResultLanguage = "ur-pk"
-	ContentSearchResultLanguageUz     ContentSearchResultLanguage = "uz"
-	ContentSearchResultLanguageUzAf   ContentSearchResultLanguage = "uz-af"
-	ContentSearchResultLanguageUzUz   ContentSearchResultLanguage = "uz-uz"
-	ContentSearchResultLanguageVai    ContentSearchResultLanguage = "vai"
-	ContentSearchResultLanguageVaiLr  ContentSearchResultLanguage = "vai-lr"
-	ContentSearchResultLanguageVe     ContentSearchResultLanguage = "ve"
-	ContentSearchResultLanguageVec    ContentSearchResultLanguage = "vec"
-	ContentSearchResultLanguageVecIt  ContentSearchResultLanguage = "vec-it"
-	ContentSearchResultLanguageVi     ContentSearchResultLanguage = "vi"
-	ContentSearchResultLanguageViVn   ContentSearchResultLanguage = "vi-vn"
-	ContentSearchResultLanguageVmw    ContentSearchResultLanguage = "vmw"
-	ContentSearchResultLanguageVmwMz  ContentSearchResultLanguage = "vmw-mz"
-	ContentSearchResultLanguageVo     ContentSearchResultLanguage = "vo"
-	ContentSearchResultLanguageVo001  ContentSearchResultLanguage = "vo-001"
-	ContentSearchResultLanguageVun    ContentSearchResultLanguage = "vun"
-	ContentSearchResultLanguageVunTz  ContentSearchResultLanguage = "vun-tz"
-	ContentSearchResultLanguageWa     ContentSearchResultLanguage = "wa"
-	ContentSearchResultLanguageWae    ContentSearchResultLanguage = "wae"
-	ContentSearchResultLanguageWaeCh  ContentSearchResultLanguage = "wae-ch"
-	ContentSearchResultLanguageWo     ContentSearchResultLanguage = "wo"
-	ContentSearchResultLanguageWoSn   ContentSearchResultLanguage = "wo-sn"
-	ContentSearchResultLanguageXh     ContentSearchResultLanguage = "xh"
-	ContentSearchResultLanguageXhZa   ContentSearchResultLanguage = "xh-za"
-	ContentSearchResultLanguageXnr    ContentSearchResultLanguage = "xnr"
-	ContentSearchResultLanguageXnrIn  ContentSearchResultLanguage = "xnr-in"
-	ContentSearchResultLanguageXog    ContentSearchResultLanguage = "xog"
-	ContentSearchResultLanguageXogUg  ContentSearchResultLanguage = "xog-ug"
-	ContentSearchResultLanguageYav    ContentSearchResultLanguage = "yav"
-	ContentSearchResultLanguageYavCm  ContentSearchResultLanguage = "yav-cm"
-	ContentSearchResultLanguageYi     ContentSearchResultLanguage = "yi"
-	ContentSearchResultLanguageYi001  ContentSearchResultLanguage = "yi-001"
-	ContentSearchResultLanguageYiUa   ContentSearchResultLanguage = "yi-ua"
-	ContentSearchResultLanguageYo     ContentSearchResultLanguage = "yo"
-	ContentSearchResultLanguageYoBj   ContentSearchResultLanguage = "yo-bj"
-	ContentSearchResultLanguageYoNg   ContentSearchResultLanguage = "yo-ng"
-	ContentSearchResultLanguageYrl    ContentSearchResultLanguage = "yrl"
-	ContentSearchResultLanguageYrlBr  ContentSearchResultLanguage = "yrl-br"
-	ContentSearchResultLanguageYrlCo  ContentSearchResultLanguage = "yrl-co"
-	ContentSearchResultLanguageYrlVe  ContentSearchResultLanguage = "yrl-ve"
-	ContentSearchResultLanguageYue    ContentSearchResultLanguage = "yue"
-	ContentSearchResultLanguageYueCn  ContentSearchResultLanguage = "yue-cn"
-	ContentSearchResultLanguageYueHk  ContentSearchResultLanguage = "yue-hk"
-	ContentSearchResultLanguageYueMo  ContentSearchResultLanguage = "yue-mo"
-	ContentSearchResultLanguageZa     ContentSearchResultLanguage = "za"
-	ContentSearchResultLanguageZaCn   ContentSearchResultLanguage = "za-cn"
-	ContentSearchResultLanguageZgh    ContentSearchResultLanguage = "zgh"
-	ContentSearchResultLanguageZghMa  ContentSearchResultLanguage = "zgh-ma"
-	ContentSearchResultLanguageZh     ContentSearchResultLanguage = "zh"
-	ContentSearchResultLanguageZhCn   ContentSearchResultLanguage = "zh-cn"
-	ContentSearchResultLanguageZhHans ContentSearchResultLanguage = "zh-hans"
-	ContentSearchResultLanguageZhHant ContentSearchResultLanguage = "zh-hant"
-	ContentSearchResultLanguageZhHk   ContentSearchResultLanguage = "zh-hk"
-	ContentSearchResultLanguageZhMo   ContentSearchResultLanguage = "zh-mo"
-	ContentSearchResultLanguageZhMy   ContentSearchResultLanguage = "zh-my"
-	ContentSearchResultLanguageZhSg   ContentSearchResultLanguage = "zh-sg"
-	ContentSearchResultLanguageZhTw   ContentSearchResultLanguage = "zh-tw"
-	ContentSearchResultLanguageZu     ContentSearchResultLanguage = "zu"
-	ContentSearchResultLanguageZuZa   ContentSearchResultLanguage = "zu-za"
+	CurrencyCreateRequestCurrencyCodeAED CurrencyCreateRequestCurrencyCode = "AED"
+	CurrencyCreateRequestCurrencyCodeAFN CurrencyCreateRequestCurrencyCode = "AFN"
+	CurrencyCreateRequestCurrencyCodeALL CurrencyCreateRequestCurrencyCode = "ALL"
+	CurrencyCreateRequestCurrencyCodeAMD CurrencyCreateRequestCurrencyCode = "AMD"
+	CurrencyCreateRequestCurrencyCodeANG CurrencyCreateRequestCurrencyCode = "ANG"
+	CurrencyCreateRequestCurrencyCodeAOA CurrencyCreateRequestCurrencyCode = "AOA"
+	CurrencyCreateRequestCurrencyCodeARS CurrencyCreateRequestCurrencyCode = "ARS"
+	CurrencyCreateRequestCurrencyCodeAUD CurrencyCreateRequestCurrencyCode = "AUD"
+	CurrencyCreateRequestCurrencyCodeAWG CurrencyCreateRequestCurrencyCode = "AWG"
+	CurrencyCreateRequestCurrencyCodeAZN CurrencyCreateRequestCurrencyCode = "AZN"
+	CurrencyCreateRequestCurrencyCodeBAM CurrencyCreateRequestCurrencyCode = "BAM"
+	CurrencyCreateRequestCurrencyCodeBBD CurrencyCreateRequestCurrencyCode = "BBD"
+	CurrencyCreateRequestCurrencyCodeBDT CurrencyCreateRequestCurrencyCode = "BDT"
+	CurrencyCreateRequestCurrencyCodeBGN CurrencyCreateRequestCurrencyCode = "BGN"
+	CurrencyCreateRequestCurrencyCodeBHD CurrencyCreateRequestCurrencyCode = "BHD"
+	CurrencyCreateRequestCurrencyCodeBIF CurrencyCreateRequestCurrencyCode = "BIF"
+	CurrencyCreateRequestCurrencyCodeBMD CurrencyCreateRequestCurrencyCode = "BMD"
+	CurrencyCreateRequestCurrencyCodeBND CurrencyCreateRequestCurrencyCode = "BND"
+	CurrencyCreateRequestCurrencyCodeBOB CurrencyCreateRequestCurrencyCode = "BOB"
+	CurrencyCreateRequestCurrencyCodeBOV CurrencyCreateRequestCurrencyCode = "BOV"
+	CurrencyCreateRequestCurrencyCodeBRL CurrencyCreateRequestCurrencyCode = "BRL"
+	CurrencyCreateRequestCurrencyCodeBSD CurrencyCreateRequestCurrencyCode = "BSD"
+	CurrencyCreateRequestCurrencyCodeBTN CurrencyCreateRequestCurrencyCode = "BTN"
+	CurrencyCreateRequestCurrencyCodeBWP CurrencyCreateRequestCurrencyCode = "BWP"
+	CurrencyCreateRequestCurrencyCodeBYN CurrencyCreateRequestCurrencyCode = "BYN"
+	CurrencyCreateRequestCurrencyCodeBZD CurrencyCreateRequestCurrencyCode = "BZD"
+	CurrencyCreateRequestCurrencyCodeCAD CurrencyCreateRequestCurrencyCode = "CAD"
+	CurrencyCreateRequestCurrencyCodeCDF CurrencyCreateRequestCurrencyCode = "CDF"
+	CurrencyCreateRequestCurrencyCodeCHE CurrencyCreateRequestCurrencyCode = "CHE"
+	CurrencyCreateRequestCurrencyCodeCHF CurrencyCreateRequestCurrencyCode = "CHF"
+	CurrencyCreateRequestCurrencyCodeCHW CurrencyCreateRequestCurrencyCode = "CHW"
+	CurrencyCreateRequestCurrencyCodeCLF CurrencyCreateRequestCurrencyCode = "CLF"
+	CurrencyCreateRequestCurrencyCodeCLP CurrencyCreateRequestCurrencyCode = "CLP"
+	CurrencyCreateRequestCurrencyCodeCNY CurrencyCreateRequestCurrencyCode = "CNY"
+	CurrencyCreateRequestCurrencyCodeCOP CurrencyCreateRequestCurrencyCode = "COP"
+	CurrencyCreateRequestCurrencyCodeCOU CurrencyCreateRequestCurrencyCode = "COU"
+	CurrencyCreateRequestCurrencyCodeCRC CurrencyCreateRequestCurrencyCode = "CRC"
+	CurrencyCreateRequestCurrencyCodeCUC CurrencyCreateRequestCurrencyCode = "CUC"
+	CurrencyCreateRequestCurrencyCodeCUP CurrencyCreateRequestCurrencyCode = "CUP"
+	CurrencyCreateRequestCurrencyCodeCVE CurrencyCreateRequestCurrencyCode = "CVE"
+	CurrencyCreateRequestCurrencyCodeCZK CurrencyCreateRequestCurrencyCode = "CZK"
+	CurrencyCreateRequestCurrencyCodeDJF CurrencyCreateRequestCurrencyCode = "DJF"
+	CurrencyCreateRequestCurrencyCodeDKK CurrencyCreateRequestCurrencyCode = "DKK"
+	CurrencyCreateRequestCurrencyCodeDOP CurrencyCreateRequestCurrencyCode = "DOP"
+	CurrencyCreateRequestCurrencyCodeDZD CurrencyCreateRequestCurrencyCode = "DZD"
+	CurrencyCreateRequestCurrencyCodeEGP CurrencyCreateRequestCurrencyCode = "EGP"
+	CurrencyCreateRequestCurrencyCodeERN CurrencyCreateRequestCurrencyCode = "ERN"
+	CurrencyCreateRequestCurrencyCodeETB CurrencyCreateRequestCurrencyCode = "ETB"
+	CurrencyCreateRequestCurrencyCodeEUR CurrencyCreateRequestCurrencyCode = "EUR"
+	CurrencyCreateRequestCurrencyCodeFJD CurrencyCreateRequestCurrencyCode = "FJD"
+	CurrencyCreateRequestCurrencyCodeFKP CurrencyCreateRequestCurrencyCode = "FKP"
+	CurrencyCreateRequestCurrencyCodeGBP CurrencyCreateRequestCurrencyCode = "GBP"
+	CurrencyCreateRequestCurrencyCodeGEL CurrencyCreateRequestCurrencyCode = "GEL"
+	CurrencyCreateRequestCurrencyCodeGHS CurrencyCreateRequestCurrencyCode = "GHS"
+	CurrencyCreateRequestCurrencyCodeGIP CurrencyCreateRequestCurrencyCode = "GIP"
+	CurrencyCreateRequestCurrencyCodeGMD CurrencyCreateRequestCurrencyCode = "GMD"
+	CurrencyCreateRequestCurrencyCodeGNF CurrencyCreateRequestCurrencyCode = "GNF"
+	CurrencyCreateRequestCurrencyCodeGTQ CurrencyCreateRequestCurrencyCode = "GTQ"
+	CurrencyCreateRequestCurrencyCodeGYD CurrencyCreateRequestCurrencyCode = "GYD"
+	CurrencyCreateRequestCurrencyCodeHKD CurrencyCreateRequestCurrencyCode = "HKD"
+	CurrencyCreateRequestCurrencyCodeHNL CurrencyCreateRequestCurrencyCode = "HNL"
+	CurrencyCreateRequestCurrencyCodeHRK CurrencyCreateRequestCurrencyCode = "HRK"
+	CurrencyCreateRequestCurrencyCodeHTG CurrencyCreateRequestCurrencyCode = "HTG"
+	CurrencyCreateRequestCurrencyCodeHUF CurrencyCreateRequestCurrencyCode = "HUF"
+	CurrencyCreateRequestCurrencyCodeIDR CurrencyCreateRequestCurrencyCode = "IDR"
+	CurrencyCreateRequestCurrencyCodeILS CurrencyCreateRequestCurrencyCode = "ILS"
+	CurrencyCreateRequestCurrencyCodeINR CurrencyCreateRequestCurrencyCode = "INR"
+	CurrencyCreateRequestCurrencyCodeIQD CurrencyCreateRequestCurrencyCode = "IQD"
+	CurrencyCreateRequestCurrencyCodeIRR CurrencyCreateRequestCurrencyCode = "IRR"
+	CurrencyCreateRequestCurrencyCodeISK CurrencyCreateRequestCurrencyCode = "ISK"
+	CurrencyCreateRequestCurrencyCodeJMD CurrencyCreateRequestCurrencyCode = "JMD"
+	CurrencyCreateRequestCurrencyCodeJOD CurrencyCreateRequestCurrencyCode = "JOD"
+	CurrencyCreateRequestCurrencyCodeJPY CurrencyCreateRequestCurrencyCode = "JPY"
+	CurrencyCreateRequestCurrencyCodeKES CurrencyCreateRequestCurrencyCode = "KES"
+	CurrencyCreateRequestCurrencyCodeKGS CurrencyCreateRequestCurrencyCode = "KGS"
+	CurrencyCreateRequestCurrencyCodeKHR CurrencyCreateRequestCurrencyCode = "KHR"
+	CurrencyCreateRequestCurrencyCodeKMF CurrencyCreateRequestCurrencyCode = "KMF"
+	CurrencyCreateRequestCurrencyCodeKPW CurrencyCreateRequestCurrencyCode = "KPW"
+	CurrencyCreateRequestCurrencyCodeKRW CurrencyCreateRequestCurrencyCode = "KRW"
+	CurrencyCreateRequestCurrencyCodeKWD CurrencyCreateRequestCurrencyCode = "KWD"
+	CurrencyCreateRequestCurrencyCodeKYD CurrencyCreateRequestCurrencyCode = "KYD"
+	CurrencyCreateRequestCurrencyCodeKZT CurrencyCreateRequestCurrencyCode = "KZT"
+	CurrencyCreateRequestCurrencyCodeLAK CurrencyCreateRequestCurrencyCode = "LAK"
+	CurrencyCreateRequestCurrencyCodeLBP CurrencyCreateRequestCurrencyCode = "LBP"
+	CurrencyCreateRequestCurrencyCodeLKR CurrencyCreateRequestCurrencyCode = "LKR"
+	CurrencyCreateRequestCurrencyCodeLRD CurrencyCreateRequestCurrencyCode = "LRD"
+	CurrencyCreateRequestCurrencyCodeLSL CurrencyCreateRequestCurrencyCode = "LSL"
+	CurrencyCreateRequestCurrencyCodeLYD CurrencyCreateRequestCurrencyCode = "LYD"
+	CurrencyCreateRequestCurrencyCodeMAD CurrencyCreateRequestCurrencyCode = "MAD"
+	CurrencyCreateRequestCurrencyCodeMDL CurrencyCreateRequestCurrencyCode = "MDL"
+	CurrencyCreateRequestCurrencyCodeMGA CurrencyCreateRequestCurrencyCode = "MGA"
+	CurrencyCreateRequestCurrencyCodeMKD CurrencyCreateRequestCurrencyCode = "MKD"
+	CurrencyCreateRequestCurrencyCodeMMK CurrencyCreateRequestCurrencyCode = "MMK"
+	CurrencyCreateRequestCurrencyCodeMNT CurrencyCreateRequestCurrencyCode = "MNT"
+	CurrencyCreateRequestCurrencyCodeMOP CurrencyCreateRequestCurrencyCode = "MOP"
+	CurrencyCreateRequestCurrencyCodeMRU CurrencyCreateRequestCurrencyCode = "MRU"
+	CurrencyCreateRequestCurrencyCodeMUR CurrencyCreateRequestCurrencyCode = "MUR"
+	CurrencyCreateRequestCurrencyCodeMVR CurrencyCreateRequestCurrencyCode = "MVR"
+	CurrencyCreateRequestCurrencyCodeMWK CurrencyCreateRequestCurrencyCode = "MWK"
+	CurrencyCreateRequestCurrencyCodeMXN CurrencyCreateRequestCurrencyCode = "MXN"
+	CurrencyCreateRequestCurrencyCodeMXV CurrencyCreateRequestCurrencyCode = "MXV"
+	CurrencyCreateRequestCurrencyCodeMYR CurrencyCreateRequestCurrencyCode = "MYR"
+	CurrencyCreateRequestCurrencyCodeMZN CurrencyCreateRequestCurrencyCode = "MZN"
+	CurrencyCreateRequestCurrencyCodeNAD CurrencyCreateRequestCurrencyCode = "NAD"
+	CurrencyCreateRequestCurrencyCodeNGN CurrencyCreateRequestCurrencyCode = "NGN"
+	CurrencyCreateRequestCurrencyCodeNIO CurrencyCreateRequestCurrencyCode = "NIO"
+	CurrencyCreateRequestCurrencyCodeNOK CurrencyCreateRequestCurrencyCode = "NOK"
+	CurrencyCreateRequestCurrencyCodeNPR CurrencyCreateRequestCurrencyCode = "NPR"
+	CurrencyCreateRequestCurrencyCodeNZD CurrencyCreateRequestCurrencyCode = "NZD"
+	CurrencyCreateRequestCurrencyCodeOMR CurrencyCreateRequestCurrencyCode = "OMR"
+	CurrencyCreateRequestCurrencyCodePAB CurrencyCreateRequestCurrencyCode = "PAB"
+	CurrencyCreateRequestCurrencyCodePEN CurrencyCreateRequestCurrencyCode = "PEN"
+	CurrencyCreateRequestCurrencyCodePGK CurrencyCreateRequestCurrencyCode = "PGK"
+	CurrencyCreateRequestCurrencyCodePHP CurrencyCreateRequestCurrencyCode = "PHP"
+	CurrencyCreateRequestCurrencyCodePKR CurrencyCreateRequestCurrencyCode = "PKR"
+	CurrencyCreateRequestCurrencyCodePLN CurrencyCreateRequestCurrencyCode = "PLN"
+	CurrencyCreateRequestCurrencyCodePYG CurrencyCreateRequestCurrencyCode = "PYG"
+	CurrencyCreateRequestCurrencyCodeQAR CurrencyCreateRequestCurrencyCode = "QAR"
+	CurrencyCreateRequestCurrencyCodeRON CurrencyCreateRequestCurrencyCode = "RON"
+	CurrencyCreateRequestCurrencyCodeRSD CurrencyCreateRequestCurrencyCode = "RSD"
+	CurrencyCreateRequestCurrencyCodeRUB CurrencyCreateRequestCurrencyCode = "RUB"
+	CurrencyCreateRequestCurrencyCodeRWF CurrencyCreateRequestCurrencyCode = "RWF"
+	CurrencyCreateRequestCurrencyCodeSAR CurrencyCreateRequestCurrencyCode = "SAR"
+	CurrencyCreateRequestCurrencyCodeSBD CurrencyCreateRequestCurrencyCode = "SBD"
+	CurrencyCreateRequestCurrencyCodeSCR CurrencyCreateRequestCurrencyCode = "SCR"
+	CurrencyCreateRequestCurrencyCodeSDG CurrencyCreateRequestCurrencyCode = "SDG"
+	CurrencyCreateRequestCurrencyCodeSEK CurrencyCreateRequestCurrencyCode = "SEK"
+	CurrencyCreateRequestCurrencyCodeSGD CurrencyCreateRequestCurrencyCode = "SGD"
+	CurrencyCreateRequestCurrencyCodeSHP CurrencyCreateRequestCurrencyCode = "SHP"
+	CurrencyCreateRequestCurrencyCodeSLL CurrencyCreateRequestCurrencyCode = "SLL"
+	CurrencyCreateRequestCurrencyCodeSOS CurrencyCreateRequestCurrencyCode = "SOS"
+	CurrencyCreateRequestCurrencyCodeSRD CurrencyCreateRequestCurrencyCode = "SRD"
+	CurrencyCreateRequestCurrencyCodeSSP CurrencyCreateRequestCurrencyCode = "SSP"
+	CurrencyCreateRequestCurrencyCodeSTN CurrencyCreateRequestCurrencyCode = "STN"
+	CurrencyCreateRequestCurrencyCodeSVC CurrencyCreateRequestCurrencyCode = "SVC"
+	CurrencyCreateRequestCurrencyCodeSYP CurrencyCreateRequestCurrencyCode = "SYP"
+	CurrencyCreateRequestCurrencyCodeSZL CurrencyCreateRequestCurrencyCode = "SZL"
+	CurrencyCreateRequestCurrencyCodeTHB CurrencyCreateRequestCurrencyCode = "THB"
+	CurrencyCreateRequestCurrencyCodeTJS CurrencyCreateRequestCurrencyCode = "TJS"
+	CurrencyCreateRequestCurrencyCodeTMT CurrencyCreateRequestCurrencyCode = "TMT"
+	CurrencyCreateRequestCurrencyCodeTND CurrencyCreateRequestCurrencyCode = "TND"
+	CurrencyCreateRequestCurrencyCodeTOP CurrencyCreateRequestCurrencyCode = "TOP"
+	CurrencyCreateRequestCurrencyCodeTRY CurrencyCreateRequestCurrencyCode = "TRY"
+	CurrencyCreateRequestCurrencyCodeTTD CurrencyCreateRequestCurrencyCode = "TTD"
+	CurrencyCreateRequestCurrencyCodeTWD CurrencyCreateRequestCurrencyCode = "TWD"
+	CurrencyCreateRequestCurrencyCodeTZS CurrencyCreateRequestCurrencyCode = "TZS"
+	CurrencyCreateRequestCurrencyCodeUAH CurrencyCreateRequestCurrencyCode = "UAH"
+	CurrencyCreateRequestCurrencyCodeUGX CurrencyCreateRequestCurrencyCode = "UGX"
+	CurrencyCreateRequestCurrencyCodeUSD CurrencyCreateRequestCurrencyCode = "USD"
+	CurrencyCreateRequestCurrencyCodeUSN CurrencyCreateRequestCurrencyCode = "USN"
+	CurrencyCreateRequestCurrencyCodeUYI CurrencyCreateRequestCurrencyCode = "UYI"
+	CurrencyCreateRequestCurrencyCodeUYU CurrencyCreateRequestCurrencyCode = "UYU"
+	CurrencyCreateRequestCurrencyCodeUZS CurrencyCreateRequestCurrencyCode = "UZS"
+	CurrencyCreateRequestCurrencyCodeVEF CurrencyCreateRequestCurrencyCode = "VEF"
+	CurrencyCreateRequestCurrencyCodeVND CurrencyCreateRequestCurrencyCode = "VND"
+	CurrencyCreateRequestCurrencyCodeVUV CurrencyCreateRequestCurrencyCode = "VUV"
+	CurrencyCreateRequestCurrencyCodeWST CurrencyCreateRequestCurrencyCode = "WST"
+	CurrencyCreateRequestCurrencyCodeXAF CurrencyCreateRequestCurrencyCode = "XAF"
+	CurrencyCreateRequestCurrencyCodeXAG CurrencyCreateRequestCurrencyCode = "XAG"
+	CurrencyCreateRequestCurrencyCodeXAU CurrencyCreateRequestCurrencyCode = "XAU"
+	CurrencyCreateRequestCurrencyCodeXBA CurrencyCreateRequestCurrencyCode = "XBA"
+	CurrencyCreateRequestCurrencyCodeXBB CurrencyCreateRequestCurrencyCode = "XBB"
+	CurrencyCreateRequestCurrencyCodeXBC CurrencyCreateRequestCurrencyCode = "XBC"
+	CurrencyCreateRequestCurrencyCodeXBD CurrencyCreateRequestCurrencyCode = "XBD"
+	CurrencyCreateRequestCurrencyCodeXCD CurrencyCreateRequestCurrencyCode = "XCD"
+	CurrencyCreateRequestCurrencyCodeXDR CurrencyCreateRequestCurrencyCode = "XDR"
+	CurrencyCreateRequestCurrencyCodeXOF CurrencyCreateRequestCurrencyCode = "XOF"
+	CurrencyCreateRequestCurrencyCodeXPD CurrencyCreateRequestCurrencyCode = "XPD"
+	CurrencyCreateRequestCurrencyCodeXPF CurrencyCreateRequestCurrencyCode = "XPF"
+	CurrencyCreateRequestCurrencyCodeXPT CurrencyCreateRequestCurrencyCode = "XPT"
+	CurrencyCreateRequestCurrencyCodeXSU CurrencyCreateRequestCurrencyCode = "XSU"
+	CurrencyCreateRequestCurrencyCodeXUA CurrencyCreateRequestCurrencyCode = "XUA"
+	CurrencyCreateRequestCurrencyCodeYER CurrencyCreateRequestCurrencyCode = "YER"
+	CurrencyCreateRequestCurrencyCodeZAR CurrencyCreateRequestCurrencyCode = "ZAR"
+	CurrencyCreateRequestCurrencyCodeZMW CurrencyCreateRequestCurrencyCode = "ZMW"
+	CurrencyCreateRequestCurrencyCodeZWL CurrencyCreateRequestCurrencyCode = "ZWL"
 )
 
-// Valid indicates whether the value is a known member of the ContentSearchResultLanguage enum.
-func (e ContentSearchResultLanguage) Valid() bool {
+// Valid indicates whether the value is a known member of the CurrencyCreateRequestCurrencyCode enum.
+func (e CurrencyCreateRequestCurrencyCode) Valid() bool {
 	switch e {
-	case ContentSearchResultLanguageAa:
+	case CurrencyCreateRequestCurrencyCodeAED:
 		return true
-	case ContentSearchResultLanguageAb:
+	case CurrencyCreateRequestCurrencyCodeAFN:
 		return true
-	case ContentSearchResultLanguageAe:
+	case CurrencyCreateRequestCurrencyCodeALL:
 		return true
-	case ContentSearchResultLanguageAf:
+	case CurrencyCreateRequestCurrencyCodeAMD:
 		return true
-	case ContentSearchResultLanguageAfNa:
+	case CurrencyCreateRequestCurrencyCodeANG:
 		return true
-	case ContentSearchResultLanguageAfZa:
+	case CurrencyCreateRequestCurrencyCodeAOA:
 		return true
-	case ContentSearchResultLanguageAgq:
+	case CurrencyCreateRequestCurrencyCodeARS:
 		return true
-	case ContentSearchResultLanguageAgqCm:
+	case CurrencyCreateRequestCurrencyCodeAUD:
 		return true
-	case ContentSearchResultLanguageAk:
+	case CurrencyCreateRequestCurrencyCodeAWG:
 		return true
-	case ContentSearchResultLanguageAkGh:
+	case CurrencyCreateRequestCurrencyCodeAZN:
 		return true
-	case ContentSearchResultLanguageAm:
+	case CurrencyCreateRequestCurrencyCodeBAM:
 		return true
-	case ContentSearchResultLanguageAmEt:
+	case CurrencyCreateRequestCurrencyCodeBBD:
 		return true
-	case ContentSearchResultLanguageAn:
+	case CurrencyCreateRequestCurrencyCodeBDT:
 		return true
-	case ContentSearchResultLanguageAnn:
+	case CurrencyCreateRequestCurrencyCodeBGN:
 		return true
-	case ContentSearchResultLanguageAnnNg:
+	case CurrencyCreateRequestCurrencyCodeBHD:
 		return true
-	case ContentSearchResultLanguageAr:
+	case CurrencyCreateRequestCurrencyCodeBIF:
 		return true
-	case ContentSearchResultLanguageAr001:
+	case CurrencyCreateRequestCurrencyCodeBMD:
 		return true
-	case ContentSearchResultLanguageArAe:
+	case CurrencyCreateRequestCurrencyCodeBND:
 		return true
-	case ContentSearchResultLanguageArBh:
+	case CurrencyCreateRequestCurrencyCodeBOB:
 		return true
-	case ContentSearchResultLanguageArDj:
+	case CurrencyCreateRequestCurrencyCodeBOV:
 		return true
-	case ContentSearchResultLanguageArDz:
+	case CurrencyCreateRequestCurrencyCodeBRL:
 		return true
-	case ContentSearchResultLanguageArEg:
+	case CurrencyCreateRequestCurrencyCodeBSD:
 		return true
-	case ContentSearchResultLanguageArEh:
+	case CurrencyCreateRequestCurrencyCodeBTN:
 		return true
-	case ContentSearchResultLanguageArEr:
+	case CurrencyCreateRequestCurrencyCodeBWP:
 		return true
-	case ContentSearchResultLanguageArIl:
+	case CurrencyCreateRequestCurrencyCodeBYN:
 		return true
-	case ContentSearchResultLanguageArIq:
+	case CurrencyCreateRequestCurrencyCodeBZD:
 		return true
-	case ContentSearchResultLanguageArJo:
+	case CurrencyCreateRequestCurrencyCodeCAD:
 		return true
-	case ContentSearchResultLanguageArKm:
+	case CurrencyCreateRequestCurrencyCodeCDF:
 		return true
-	case ContentSearchResultLanguageArKw:
+	case CurrencyCreateRequestCurrencyCodeCHE:
 		return true
-	case ContentSearchResultLanguageArLb:
+	case CurrencyCreateRequestCurrencyCodeCHF:
 		return true
-	case ContentSearchResultLanguageArLy:
+	case CurrencyCreateRequestCurrencyCodeCHW:
 		return true
-	case ContentSearchResultLanguageArMa:
+	case CurrencyCreateRequestCurrencyCodeCLF:
 		return true
-	case ContentSearchResultLanguageArMr:
+	case CurrencyCreateRequestCurrencyCodeCLP:
 		return true
-	case ContentSearchResultLanguageArOm:
+	case CurrencyCreateRequestCurrencyCodeCNY:
 		return true
-	case ContentSearchResultLanguageArPs:
+	case CurrencyCreateRequestCurrencyCodeCOP:
 		return true
-	case ContentSearchResultLanguageArQa:
+	case CurrencyCreateRequestCurrencyCodeCOU:
 		return true
-	case ContentSearchResultLanguageArSa:
+	case CurrencyCreateRequestCurrencyCodeCRC:
 		return true
-	case ContentSearchResultLanguageArSd:
+	case CurrencyCreateRequestCurrencyCodeCUC:
 		return true
-	case ContentSearchResultLanguageArSo:
+	case CurrencyCreateRequestCurrencyCodeCUP:
 		return true
-	case ContentSearchResultLanguageArSs:
+	case CurrencyCreateRequestCurrencyCodeCVE:
 		return true
-	case ContentSearchResultLanguageArSy:
+	case CurrencyCreateRequestCurrencyCodeCZK:
 		return true
-	case ContentSearchResultLanguageArTd:
+	case CurrencyCreateRequestCurrencyCodeDJF:
 		return true
-	case ContentSearchResultLanguageArTn:
+	case CurrencyCreateRequestCurrencyCodeDKK:
 		return true
-	case ContentSearchResultLanguageArYe:
+	case CurrencyCreateRequestCurrencyCodeDOP:
 		return true
-	case ContentSearchResultLanguageAs:
+	case CurrencyCreateRequestCurrencyCodeDZD:
 		return true
-	case ContentSearchResultLanguageAsIn:
+	case CurrencyCreateRequestCurrencyCodeEGP:
 		return true
-	case ContentSearchResultLanguageAsa:
+	case CurrencyCreateRequestCurrencyCodeERN:
 		return true
-	case ContentSearchResultLanguageAsaTz:
+	case CurrencyCreateRequestCurrencyCodeETB:
 		return true
-	case ContentSearchResultLanguageAst:
+	case CurrencyCreateRequestCurrencyCodeEUR:
 		return true
-	case ContentSearchResultLanguageAstEs:
+	case CurrencyCreateRequestCurrencyCodeFJD:
 		return true
-	case ContentSearchResultLanguageAv:
+	case CurrencyCreateRequestCurrencyCodeFKP:
 		return true
-	case ContentSearchResultLanguageAy:
+	case CurrencyCreateRequestCurrencyCodeGBP:
 		return true
-	case ContentSearchResultLanguageAz:
+	case CurrencyCreateRequestCurrencyCodeGEL:
 		return true
-	case ContentSearchResultLanguageAzAz:
+	case CurrencyCreateRequestCurrencyCodeGHS:
 		return true
-	case ContentSearchResultLanguageBa:
+	case CurrencyCreateRequestCurrencyCodeGIP:
 		return true
-	case ContentSearchResultLanguageBal:
+	case CurrencyCreateRequestCurrencyCodeGMD:
 		return true
-	case ContentSearchResultLanguageBalPk:
+	case CurrencyCreateRequestCurrencyCodeGNF:
 		return true
-	case ContentSearchResultLanguageBas:
+	case CurrencyCreateRequestCurrencyCodeGTQ:
 		return true
-	case ContentSearchResultLanguageBasCm:
+	case CurrencyCreateRequestCurrencyCodeGYD:
 		return true
-	case ContentSearchResultLanguageBe:
+	case CurrencyCreateRequestCurrencyCodeHKD:
 		return true
-	case ContentSearchResultLanguageBeBy:
+	case CurrencyCreateRequestCurrencyCodeHNL:
 		return true
-	case ContentSearchResultLanguageBem:
+	case CurrencyCreateRequestCurrencyCodeHRK:
 		return true
-	case ContentSearchResultLanguageBemZm:
+	case CurrencyCreateRequestCurrencyCodeHTG:
 		return true
-	case ContentSearchResultLanguageBez:
+	case CurrencyCreateRequestCurrencyCodeHUF:
 		return true
-	case ContentSearchResultLanguageBezTz:
+	case CurrencyCreateRequestCurrencyCodeIDR:
 		return true
-	case ContentSearchResultLanguageBg:
+	case CurrencyCreateRequestCurrencyCodeILS:
 		return true
-	case ContentSearchResultLanguageBgBg:
+	case CurrencyCreateRequestCurrencyCodeINR:
 		return true
-	case ContentSearchResultLanguageBgc:
+	case CurrencyCreateRequestCurrencyCodeIQD:
 		return true
-	case ContentSearchResultLanguageBgcIn:
+	case CurrencyCreateRequestCurrencyCodeIRR:
 		return true
-	case ContentSearchResultLanguageBho:
+	case CurrencyCreateRequestCurrencyCodeISK:
 		return true
-	case ContentSearchResultLanguageBhoIn:
+	case CurrencyCreateRequestCurrencyCodeJMD:
 		return true
-	case ContentSearchResultLanguageBi:
+	case CurrencyCreateRequestCurrencyCodeJOD:
 		return true
-	case ContentSearchResultLanguageBlo:
+	case CurrencyCreateRequestCurrencyCodeJPY:
 		return true
-	case ContentSearchResultLanguageBloBj:
+	case CurrencyCreateRequestCurrencyCodeKES:
 		return true
-	case ContentSearchResultLanguageBm:
+	case CurrencyCreateRequestCurrencyCodeKGS:
 		return true
-	case ContentSearchResultLanguageBmMl:
+	case CurrencyCreateRequestCurrencyCodeKHR:
 		return true
-	case ContentSearchResultLanguageBn:
+	case CurrencyCreateRequestCurrencyCodeKMF:
 		return true
-	case ContentSearchResultLanguageBnBd:
+	case CurrencyCreateRequestCurrencyCodeKPW:
 		return true
-	case ContentSearchResultLanguageBnIn:
+	case CurrencyCreateRequestCurrencyCodeKRW:
 		return true
-	case ContentSearchResultLanguageBo:
+	case CurrencyCreateRequestCurrencyCodeKWD:
 		return true
-	case ContentSearchResultLanguageBoCn:
+	case CurrencyCreateRequestCurrencyCodeKYD:
 		return true
-	case ContentSearchResultLanguageBoIn:
+	case CurrencyCreateRequestCurrencyCodeKZT:
 		return true
-	case ContentSearchResultLanguageBr:
+	case CurrencyCreateRequestCurrencyCodeLAK:
 		return true
-	case ContentSearchResultLanguageBrFr:
+	case CurrencyCreateRequestCurrencyCodeLBP:
 		return true
-	case ContentSearchResultLanguageBrx:
+	case CurrencyCreateRequestCurrencyCodeLKR:
 		return true
-	case ContentSearchResultLanguageBrxIn:
+	case CurrencyCreateRequestCurrencyCodeLRD:
 		return true
-	case ContentSearchResultLanguageBs:
+	case CurrencyCreateRequestCurrencyCodeLSL:
 		return true
-	case ContentSearchResultLanguageBsBa:
+	case CurrencyCreateRequestCurrencyCodeLYD:
 		return true
-	case ContentSearchResultLanguageCa:
+	case CurrencyCreateRequestCurrencyCodeMAD:
 		return true
-	case ContentSearchResultLanguageCaAd:
+	case CurrencyCreateRequestCurrencyCodeMDL:
 		return true
-	case ContentSearchResultLanguageCaEs:
+	case CurrencyCreateRequestCurrencyCodeMGA:
 		return true
-	case ContentSearchResultLanguageCaFr:
+	case CurrencyCreateRequestCurrencyCodeMKD:
 		return true
-	case ContentSearchResultLanguageCaIt:
+	case CurrencyCreateRequestCurrencyCodeMMK:
 		return true
-	case ContentSearchResultLanguageCcp:
+	case CurrencyCreateRequestCurrencyCodeMNT:
 		return true
-	case ContentSearchResultLanguageCcpBd:
+	case CurrencyCreateRequestCurrencyCodeMOP:
 		return true
-	case ContentSearchResultLanguageCcpIn:
+	case CurrencyCreateRequestCurrencyCodeMRU:
 		return true
-	case ContentSearchResultLanguageCe:
+	case CurrencyCreateRequestCurrencyCodeMUR:
 		return true
-	case ContentSearchResultLanguageCeRu:
+	case CurrencyCreateRequestCurrencyCodeMVR:
 		return true
-	case ContentSearchResultLanguageCeb:
+	case CurrencyCreateRequestCurrencyCodeMWK:
 		return true
-	case ContentSearchResultLanguageCebPh:
+	case CurrencyCreateRequestCurrencyCodeMXN:
 		return true
-	case ContentSearchResultLanguageCgg:
+	case CurrencyCreateRequestCurrencyCodeMXV:
 		return true
-	case ContentSearchResultLanguageCggUg:
+	case CurrencyCreateRequestCurrencyCodeMYR:
 		return true
-	case ContentSearchResultLanguageCh:
+	case CurrencyCreateRequestCurrencyCodeMZN:
 		return true
-	case ContentSearchResultLanguageChr:
+	case CurrencyCreateRequestCurrencyCodeNAD:
 		return true
-	case ContentSearchResultLanguageChrUs:
+	case CurrencyCreateRequestCurrencyCodeNGN:
 		return true
-	case ContentSearchResultLanguageCkb:
+	case CurrencyCreateRequestCurrencyCodeNIO:
 		return true
-	case ContentSearchResultLanguageCkbIq:
+	case CurrencyCreateRequestCurrencyCodeNOK:
 		return true
-	case ContentSearchResultLanguageCkbIr:
+	case CurrencyCreateRequestCurrencyCodeNPR:
 		return true
-	case ContentSearchResultLanguageCo:
+	case CurrencyCreateRequestCurrencyCodeNZD:
 		return true
-	case ContentSearchResultLanguageCr:
+	case CurrencyCreateRequestCurrencyCodeOMR:
 		return true
-	case ContentSearchResultLanguageCs:
+	case CurrencyCreateRequestCurrencyCodePAB:
 		return true
-	case ContentSearchResultLanguageCsCz:
+	case CurrencyCreateRequestCurrencyCodePEN:
 		return true
-	case ContentSearchResultLanguageCsw:
+	case CurrencyCreateRequestCurrencyCodePGK:
 		return true
-	case ContentSearchResultLanguageCswCa:
+	case CurrencyCreateRequestCurrencyCodePHP:
 		return true
-	case ContentSearchResultLanguageCu:
+	case CurrencyCreateRequestCurrencyCodePKR:
 		return true
-	case ContentSearchResultLanguageCuRu:
+	case CurrencyCreateRequestCurrencyCodePLN:
 		return true
-	case ContentSearchResultLanguageCv:
+	case CurrencyCreateRequestCurrencyCodePYG:
 		return true
-	case ContentSearchResultLanguageCvRu:
+	case CurrencyCreateRequestCurrencyCodeQAR:
 		return true
-	case ContentSearchResultLanguageCy:
+	case CurrencyCreateRequestCurrencyCodeRON:
 		return true
-	case ContentSearchResultLanguageCyGb:
+	case CurrencyCreateRequestCurrencyCodeRSD:
 		return true
-	case ContentSearchResultLanguageDa:
+	case CurrencyCreateRequestCurrencyCodeRUB:
 		return true
-	case ContentSearchResultLanguageDaDk:
+	case CurrencyCreateRequestCurrencyCodeRWF:
 		return true
-	case ContentSearchResultLanguageDaGl:
+	case CurrencyCreateRequestCurrencyCodeSAR:
 		return true
-	case ContentSearchResultLanguageDav:
+	case CurrencyCreateRequestCurrencyCodeSBD:
 		return true
-	case ContentSearchResultLanguageDavKe:
+	case CurrencyCreateRequestCurrencyCodeSCR:
 		return true
-	case ContentSearchResultLanguageDe:
+	case CurrencyCreateRequestCurrencyCodeSDG:
 		return true
-	case ContentSearchResultLanguageDeAt:
+	case CurrencyCreateRequestCurrencyCodeSEK:
 		return true
-	case ContentSearchResultLanguageDeBe:
+	case CurrencyCreateRequestCurrencyCodeSGD:
 		return true
-	case ContentSearchResultLanguageDeCh:
+	case CurrencyCreateRequestCurrencyCodeSHP:
 		return true
-	case ContentSearchResultLanguageDeDe:
+	case CurrencyCreateRequestCurrencyCodeSLL:
 		return true
-	case ContentSearchResultLanguageDeGr:
+	case CurrencyCreateRequestCurrencyCodeSOS:
 		return true
-	case ContentSearchResultLanguageDeIt:
+	case CurrencyCreateRequestCurrencyCodeSRD:
 		return true
-	case ContentSearchResultLanguageDeLi:
+	case CurrencyCreateRequestCurrencyCodeSSP:
 		return true
-	case ContentSearchResultLanguageDeLu:
+	case CurrencyCreateRequestCurrencyCodeSTN:
 		return true
-	case ContentSearchResultLanguageDje:
+	case CurrencyCreateRequestCurrencyCodeSVC:
 		return true
-	case ContentSearchResultLanguageDjeNe:
+	case CurrencyCreateRequestCurrencyCodeSYP:
 		return true
-	case ContentSearchResultLanguageDoi:
+	case CurrencyCreateRequestCurrencyCodeSZL:
 		return true
-	case ContentSearchResultLanguageDoiIn:
+	case CurrencyCreateRequestCurrencyCodeTHB:
 		return true
-	case ContentSearchResultLanguageDsb:
+	case CurrencyCreateRequestCurrencyCodeTJS:
 		return true
-	case ContentSearchResultLanguageDsbDe:
+	case CurrencyCreateRequestCurrencyCodeTMT:
 		return true
-	case ContentSearchResultLanguageDua:
+	case CurrencyCreateRequestCurrencyCodeTND:
 		return true
-	case ContentSearchResultLanguageDuaCm:
+	case CurrencyCreateRequestCurrencyCodeTOP:
 		return true
-	case ContentSearchResultLanguageDv:
+	case CurrencyCreateRequestCurrencyCodeTRY:
 		return true
-	case ContentSearchResultLanguageDyo:
+	case CurrencyCreateRequestCurrencyCodeTTD:
 		return true
-	case ContentSearchResultLanguageDyoSn:
+	case CurrencyCreateRequestCurrencyCodeTWD:
 		return true
-	case ContentSearchResultLanguageDz:
+	case CurrencyCreateRequestCurrencyCodeTZS:
 		return true
-	case ContentSearchResultLanguageDzBt:
+	case CurrencyCreateRequestCurrencyCodeUAH:
 		return true
-	case ContentSearchResultLanguageEbu:
+	case CurrencyCreateRequestCurrencyCodeUGX:
 		return true
-	case ContentSearchResultLanguageEbuKe:
+	case CurrencyCreateRequestCurrencyCodeUSD:
 		return true
-	case ContentSearchResultLanguageEe:
+	case CurrencyCreateRequestCurrencyCodeUSN:
 		return true
-	case ContentSearchResultLanguageEeGh:
+	case CurrencyCreateRequestCurrencyCodeUYI:
 		return true
-	case ContentSearchResultLanguageEeTg:
+	case CurrencyCreateRequestCurrencyCodeUYU:
 		return true
-	case ContentSearchResultLanguageEl:
+	case CurrencyCreateRequestCurrencyCodeUZS:
 		return true
-	case ContentSearchResultLanguageElCy:
+	case CurrencyCreateRequestCurrencyCodeVEF:
 		return true
-	case ContentSearchResultLanguageElGr:
+	case CurrencyCreateRequestCurrencyCodeVND:
 		return true
-	case ContentSearchResultLanguageEn:
+	case CurrencyCreateRequestCurrencyCodeVUV:
 		return true
-	case ContentSearchResultLanguageEn001:
+	case CurrencyCreateRequestCurrencyCodeWST:
 		return true
-	case ContentSearchResultLanguageEn150:
+	case CurrencyCreateRequestCurrencyCodeXAF:
 		return true
-	case ContentSearchResultLanguageEnAe:
+	case CurrencyCreateRequestCurrencyCodeXAG:
 		return true
-	case ContentSearchResultLanguageEnAg:
+	case CurrencyCreateRequestCurrencyCodeXAU:
 		return true
-	case ContentSearchResultLanguageEnAi:
+	case CurrencyCreateRequestCurrencyCodeXBA:
 		return true
-	case ContentSearchResultLanguageEnAs:
+	case CurrencyCreateRequestCurrencyCodeXBB:
 		return true
-	case ContentSearchResultLanguageEnAt:
+	case CurrencyCreateRequestCurrencyCodeXBC:
 		return true
-	case ContentSearchResultLanguageEnAu:
+	case CurrencyCreateRequestCurrencyCodeXBD:
 		return true
-	case ContentSearchResultLanguageEnBb:
+	case CurrencyCreateRequestCurrencyCodeXCD:
 		return true
-	case ContentSearchResultLanguageEnBe:
+	case CurrencyCreateRequestCurrencyCodeXDR:
 		return true
-	case ContentSearchResultLanguageEnBi:
+	case CurrencyCreateRequestCurrencyCodeXOF:
 		return true
-	case ContentSearchResultLanguageEnBm:
+	case CurrencyCreateRequestCurrencyCodeXPD:
 		return true
-	case ContentSearchResultLanguageEnBs:
+	case CurrencyCreateRequestCurrencyCodeXPF:
 		return true
-	case ContentSearchResultLanguageEnBw:
+	case CurrencyCreateRequestCurrencyCodeXPT:
 		return true
-	case ContentSearchResultLanguageEnBz:
+	case CurrencyCreateRequestCurrencyCodeXSU:
 		return true
-	case ContentSearchResultLanguageEnCa:
+	case CurrencyCreateRequestCurrencyCodeXUA:
 		return true
-	case ContentSearchResultLanguageEnCc:
+	case CurrencyCreateRequestCurrencyCodeYER:
 		return true
-	case ContentSearchResultLanguageEnCh:
+	case CurrencyCreateRequestCurrencyCodeZAR:
 		return true
-	case ContentSearchResultLanguageEnCk:
+	case CurrencyCreateRequestCurrencyCodeZMW:
 		return true
-	case ContentSearchResultLanguageEnCm:
-		return true
-	case ContentSearchResultLanguageEnCn:
-		return true
-	case ContentSearchResultLanguageEnCx:
-		return true
-	case ContentSearchResultLanguageEnCy:
-		return true
-	case ContentSearchResultLanguageEnCz:
-		return true
-	case ContentSearchResultLanguageEnDe:
-		return true
-	case ContentSearchResultLanguageEnDg:
-		return true
-	case ContentSearchResultLanguageEnDk:
-		return true
-	case ContentSearchResultLanguageEnDm:
-		return true
-	case ContentSearchResultLanguageEnEe:
-		return true
-	case ContentSearchResultLanguageEnEg:
-		return true
-	case ContentSearchResultLanguageEnEr:
-		return true
-	case ContentSearchResultLanguageEnEs:
-		return true
-	case ContentSearchResultLanguageEnFi:
-		return true
-	case ContentSearchResultLanguageEnFj:
-		return true
-	case ContentSearchResultLanguageEnFk:
-		return true
-	case ContentSearchResultLanguageEnFm:
-		return true
-	case ContentSearchResultLanguageEnFr:
-		return true
-	case ContentSearchResultLanguageEnGb:
-		return true
-	case ContentSearchResultLanguageEnGd:
-		return true
-	case ContentSearchResultLanguageEnGg:
-		return true
-	case ContentSearchResultLanguageEnGh:
-		return true
-	case ContentSearchResultLanguageEnGi:
-		return true
-	case ContentSearchResultLanguageEnGm:
-		return true
-	case ContentSearchResultLanguageEnGs:
-		return true
-	case ContentSearchResultLanguageEnGu:
-		return true
-	case ContentSearchResultLanguageEnGy:
-		return true
-	case ContentSearchResultLanguageEnHk:
-		return true
-	case ContentSearchResultLanguageEnHu:
-		return true
-	case ContentSearchResultLanguageEnId:
-		return true
-	case ContentSearchResultLanguageEnIe:
-		return true
-	case ContentSearchResultLanguageEnIl:
-		return true
-	case ContentSearchResultLanguageEnIm:
-		return true
-	case ContentSearchResultLanguageEnIn:
-		return true
-	case ContentSearchResultLanguageEnIo:
-		return true
-	case ContentSearchResultLanguageEnIt:
-		return true
-	case ContentSearchResultLanguageEnJe:
-		return true
-	case ContentSearchResultLanguageEnJm:
-		return true
-	case ContentSearchResultLanguageEnKe:
-		return true
-	case ContentSearchResultLanguageEnKi:
-		return true
-	case ContentSearchResultLanguageEnKn:
-		return true
-	case ContentSearchResultLanguageEnKy:
-		return true
-	case ContentSearchResultLanguageEnLc:
-		return true
-	case ContentSearchResultLanguageEnLr:
-		return true
-	case ContentSearchResultLanguageEnLs:
-		return true
-	case ContentSearchResultLanguageEnLu:
-		return true
-	case ContentSearchResultLanguageEnMg:
-		return true
-	case ContentSearchResultLanguageEnMh:
-		return true
-	case ContentSearchResultLanguageEnMo:
-		return true
-	case ContentSearchResultLanguageEnMp:
-		return true
-	case ContentSearchResultLanguageEnMs:
-		return true
-	case ContentSearchResultLanguageEnMt:
-		return true
-	case ContentSearchResultLanguageEnMu:
-		return true
-	case ContentSearchResultLanguageEnMv:
-		return true
-	case ContentSearchResultLanguageEnMw:
-		return true
-	case ContentSearchResultLanguageEnMx:
-		return true
-	case ContentSearchResultLanguageEnMy:
-		return true
-	case ContentSearchResultLanguageEnNa:
-		return true
-	case ContentSearchResultLanguageEnNf:
-		return true
-	case ContentSearchResultLanguageEnNg:
-		return true
-	case ContentSearchResultLanguageEnNl:
-		return true
-	case ContentSearchResultLanguageEnNo:
-		return true
-	case ContentSearchResultLanguageEnNr:
-		return true
-	case ContentSearchResultLanguageEnNu:
-		return true
-	case ContentSearchResultLanguageEnNz:
-		return true
-	case ContentSearchResultLanguageEnPg:
-		return true
-	case ContentSearchResultLanguageEnPh:
-		return true
-	case ContentSearchResultLanguageEnPk:
-		return true
-	case ContentSearchResultLanguageEnPl:
-		return true
-	case ContentSearchResultLanguageEnPn:
-		return true
-	case ContentSearchResultLanguageEnPr:
-		return true
-	case ContentSearchResultLanguageEnPt:
-		return true
-	case ContentSearchResultLanguageEnPw:
-		return true
-	case ContentSearchResultLanguageEnRo:
-		return true
-	case ContentSearchResultLanguageEnRw:
-		return true
-	case ContentSearchResultLanguageEnSb:
-		return true
-	case ContentSearchResultLanguageEnSc:
-		return true
-	case ContentSearchResultLanguageEnSd:
-		return true
-	case ContentSearchResultLanguageEnSe:
-		return true
-	case ContentSearchResultLanguageEnSg:
-		return true
-	case ContentSearchResultLanguageEnSh:
-		return true
-	case ContentSearchResultLanguageEnSi:
-		return true
-	case ContentSearchResultLanguageEnSk:
-		return true
-	case ContentSearchResultLanguageEnSl:
-		return true
-	case ContentSearchResultLanguageEnSs:
-		return true
-	case ContentSearchResultLanguageEnSx:
-		return true
-	case ContentSearchResultLanguageEnSz:
-		return true
-	case ContentSearchResultLanguageEnTc:
-		return true
-	case ContentSearchResultLanguageEnTh:
-		return true
-	case ContentSearchResultLanguageEnTk:
-		return true
-	case ContentSearchResultLanguageEnTn:
-		return true
-	case ContentSearchResultLanguageEnTo:
-		return true
-	case ContentSearchResultLanguageEnTt:
-		return true
-	case ContentSearchResultLanguageEnTv:
-		return true
-	case ContentSearchResultLanguageEnTz:
-		return true
-	case ContentSearchResultLanguageEnUg:
-		return true
-	case ContentSearchResultLanguageEnUm:
-		return true
-	case ContentSearchResultLanguageEnUs:
-		return true
-	case ContentSearchResultLanguageEnVc:
-		return true
-	case ContentSearchResultLanguageEnVg:
-		return true
-	case ContentSearchResultLanguageEnVi:
-		return true
-	case ContentSearchResultLanguageEnVn:
-		return true
-	case ContentSearchResultLanguageEnVu:
-		return true
-	case ContentSearchResultLanguageEnWs:
-		return true
-	case ContentSearchResultLanguageEnZa:
-		return true
-	case ContentSearchResultLanguageEnZm:
-		return true
-	case ContentSearchResultLanguageEnZw:
-		return true
-	case ContentSearchResultLanguageEo:
-		return true
-	case ContentSearchResultLanguageEo001:
-		return true
-	case ContentSearchResultLanguageEs:
-		return true
-	case ContentSearchResultLanguageEs419:
-		return true
-	case ContentSearchResultLanguageEsAr:
-		return true
-	case ContentSearchResultLanguageEsBo:
-		return true
-	case ContentSearchResultLanguageEsBr:
-		return true
-	case ContentSearchResultLanguageEsBz:
-		return true
-	case ContentSearchResultLanguageEsCl:
-		return true
-	case ContentSearchResultLanguageEsCo:
-		return true
-	case ContentSearchResultLanguageEsCr:
-		return true
-	case ContentSearchResultLanguageEsCu:
-		return true
-	case ContentSearchResultLanguageEsDo:
-		return true
-	case ContentSearchResultLanguageEsEa:
-		return true
-	case ContentSearchResultLanguageEsEc:
-		return true
-	case ContentSearchResultLanguageEsEs:
-		return true
-	case ContentSearchResultLanguageEsGq:
-		return true
-	case ContentSearchResultLanguageEsGt:
-		return true
-	case ContentSearchResultLanguageEsHn:
-		return true
-	case ContentSearchResultLanguageEsIc:
-		return true
-	case ContentSearchResultLanguageEsMx:
-		return true
-	case ContentSearchResultLanguageEsNi:
-		return true
-	case ContentSearchResultLanguageEsPa:
-		return true
-	case ContentSearchResultLanguageEsPe:
-		return true
-	case ContentSearchResultLanguageEsPh:
-		return true
-	case ContentSearchResultLanguageEsPr:
-		return true
-	case ContentSearchResultLanguageEsPy:
-		return true
-	case ContentSearchResultLanguageEsSv:
-		return true
-	case ContentSearchResultLanguageEsUs:
-		return true
-	case ContentSearchResultLanguageEsUy:
-		return true
-	case ContentSearchResultLanguageEsVe:
-		return true
-	case ContentSearchResultLanguageEt:
-		return true
-	case ContentSearchResultLanguageEtEe:
-		return true
-	case ContentSearchResultLanguageEu:
-		return true
-	case ContentSearchResultLanguageEuEs:
-		return true
-	case ContentSearchResultLanguageEwo:
-		return true
-	case ContentSearchResultLanguageEwoCm:
-		return true
-	case ContentSearchResultLanguageFa:
-		return true
-	case ContentSearchResultLanguageFaAf:
-		return true
-	case ContentSearchResultLanguageFaIr:
-		return true
-	case ContentSearchResultLanguageFf:
-		return true
-	case ContentSearchResultLanguageFfBf:
-		return true
-	case ContentSearchResultLanguageFfCm:
-		return true
-	case ContentSearchResultLanguageFfGh:
-		return true
-	case ContentSearchResultLanguageFfGm:
-		return true
-	case ContentSearchResultLanguageFfGn:
-		return true
-	case ContentSearchResultLanguageFfGw:
-		return true
-	case ContentSearchResultLanguageFfLr:
-		return true
-	case ContentSearchResultLanguageFfMr:
-		return true
-	case ContentSearchResultLanguageFfNe:
-		return true
-	case ContentSearchResultLanguageFfNg:
-		return true
-	case ContentSearchResultLanguageFfSl:
-		return true
-	case ContentSearchResultLanguageFfSn:
-		return true
-	case ContentSearchResultLanguageFi:
-		return true
-	case ContentSearchResultLanguageFiFi:
-		return true
-	case ContentSearchResultLanguageFil:
-		return true
-	case ContentSearchResultLanguageFilPh:
-		return true
-	case ContentSearchResultLanguageFj:
-		return true
-	case ContentSearchResultLanguageFo:
-		return true
-	case ContentSearchResultLanguageFoDk:
-		return true
-	case ContentSearchResultLanguageFoFo:
-		return true
-	case ContentSearchResultLanguageFr:
-		return true
-	case ContentSearchResultLanguageFrBe:
-		return true
-	case ContentSearchResultLanguageFrBf:
-		return true
-	case ContentSearchResultLanguageFrBi:
-		return true
-	case ContentSearchResultLanguageFrBj:
-		return true
-	case ContentSearchResultLanguageFrBl:
-		return true
-	case ContentSearchResultLanguageFrCa:
-		return true
-	case ContentSearchResultLanguageFrCd:
-		return true
-	case ContentSearchResultLanguageFrCf:
-		return true
-	case ContentSearchResultLanguageFrCg:
-		return true
-	case ContentSearchResultLanguageFrCh:
-		return true
-	case ContentSearchResultLanguageFrCi:
-		return true
-	case ContentSearchResultLanguageFrCm:
-		return true
-	case ContentSearchResultLanguageFrDj:
-		return true
-	case ContentSearchResultLanguageFrDz:
-		return true
-	case ContentSearchResultLanguageFrFr:
-		return true
-	case ContentSearchResultLanguageFrGa:
-		return true
-	case ContentSearchResultLanguageFrGf:
-		return true
-	case ContentSearchResultLanguageFrGn:
-		return true
-	case ContentSearchResultLanguageFrGp:
-		return true
-	case ContentSearchResultLanguageFrGq:
-		return true
-	case ContentSearchResultLanguageFrHt:
-		return true
-	case ContentSearchResultLanguageFrKm:
-		return true
-	case ContentSearchResultLanguageFrLu:
-		return true
-	case ContentSearchResultLanguageFrMa:
-		return true
-	case ContentSearchResultLanguageFrMc:
-		return true
-	case ContentSearchResultLanguageFrMf:
-		return true
-	case ContentSearchResultLanguageFrMg:
-		return true
-	case ContentSearchResultLanguageFrMl:
-		return true
-	case ContentSearchResultLanguageFrMq:
-		return true
-	case ContentSearchResultLanguageFrMr:
-		return true
-	case ContentSearchResultLanguageFrMu:
-		return true
-	case ContentSearchResultLanguageFrNc:
-		return true
-	case ContentSearchResultLanguageFrNe:
-		return true
-	case ContentSearchResultLanguageFrPf:
-		return true
-	case ContentSearchResultLanguageFrPm:
-		return true
-	case ContentSearchResultLanguageFrRe:
-		return true
-	case ContentSearchResultLanguageFrRw:
-		return true
-	case ContentSearchResultLanguageFrSc:
-		return true
-	case ContentSearchResultLanguageFrSn:
-		return true
-	case ContentSearchResultLanguageFrSy:
-		return true
-	case ContentSearchResultLanguageFrTd:
-		return true
-	case ContentSearchResultLanguageFrTg:
-		return true
-	case ContentSearchResultLanguageFrTn:
-		return true
-	case ContentSearchResultLanguageFrVu:
-		return true
-	case ContentSearchResultLanguageFrWf:
-		return true
-	case ContentSearchResultLanguageFrYt:
-		return true
-	case ContentSearchResultLanguageFrr:
-		return true
-	case ContentSearchResultLanguageFrrDe:
-		return true
-	case ContentSearchResultLanguageFur:
-		return true
-	case ContentSearchResultLanguageFurIt:
-		return true
-	case ContentSearchResultLanguageFy:
-		return true
-	case ContentSearchResultLanguageFyNl:
-		return true
-	case ContentSearchResultLanguageGa:
-		return true
-	case ContentSearchResultLanguageGaGb:
-		return true
-	case ContentSearchResultLanguageGaIe:
-		return true
-	case ContentSearchResultLanguageGaa:
-		return true
-	case ContentSearchResultLanguageGaaGh:
-		return true
-	case ContentSearchResultLanguageGd:
-		return true
-	case ContentSearchResultLanguageGdGb:
-		return true
-	case ContentSearchResultLanguageGl:
-		return true
-	case ContentSearchResultLanguageGlEs:
-		return true
-	case ContentSearchResultLanguageGn:
-		return true
-	case ContentSearchResultLanguageGsw:
-		return true
-	case ContentSearchResultLanguageGswCh:
-		return true
-	case ContentSearchResultLanguageGswFr:
-		return true
-	case ContentSearchResultLanguageGswLi:
-		return true
-	case ContentSearchResultLanguageGu:
-		return true
-	case ContentSearchResultLanguageGuIn:
-		return true
-	case ContentSearchResultLanguageGuz:
-		return true
-	case ContentSearchResultLanguageGuzKe:
-		return true
-	case ContentSearchResultLanguageGv:
-		return true
-	case ContentSearchResultLanguageGvIm:
-		return true
-	case ContentSearchResultLanguageHa:
-		return true
-	case ContentSearchResultLanguageHaGh:
-		return true
-	case ContentSearchResultLanguageHaNe:
-		return true
-	case ContentSearchResultLanguageHaNg:
-		return true
-	case ContentSearchResultLanguageHaw:
-		return true
-	case ContentSearchResultLanguageHawUs:
-		return true
-	case ContentSearchResultLanguageHe:
-		return true
-	case ContentSearchResultLanguageHeIl:
-		return true
-	case ContentSearchResultLanguageHi:
-		return true
-	case ContentSearchResultLanguageHiIn:
-		return true
-	case ContentSearchResultLanguageHmn:
-		return true
-	case ContentSearchResultLanguageHo:
-		return true
-	case ContentSearchResultLanguageHr:
-		return true
-	case ContentSearchResultLanguageHrBa:
-		return true
-	case ContentSearchResultLanguageHrHr:
-		return true
-	case ContentSearchResultLanguageHsb:
-		return true
-	case ContentSearchResultLanguageHsbDe:
-		return true
-	case ContentSearchResultLanguageHt:
-		return true
-	case ContentSearchResultLanguageHtHt:
-		return true
-	case ContentSearchResultLanguageHu:
-		return true
-	case ContentSearchResultLanguageHuHu:
-		return true
-	case ContentSearchResultLanguageHy:
-		return true
-	case ContentSearchResultLanguageHyAm:
-		return true
-	case ContentSearchResultLanguageHz:
-		return true
-	case ContentSearchResultLanguageIa:
-		return true
-	case ContentSearchResultLanguageIa001:
-		return true
-	case ContentSearchResultLanguageId:
-		return true
-	case ContentSearchResultLanguageIdId:
-		return true
-	case ContentSearchResultLanguageIe:
-		return true
-	case ContentSearchResultLanguageIeEe:
-		return true
-	case ContentSearchResultLanguageIg:
-		return true
-	case ContentSearchResultLanguageIgNg:
-		return true
-	case ContentSearchResultLanguageIi:
-		return true
-	case ContentSearchResultLanguageIiCn:
-		return true
-	case ContentSearchResultLanguageIk:
-		return true
-	case ContentSearchResultLanguageIo:
-		return true
-	case ContentSearchResultLanguageIs:
-		return true
-	case ContentSearchResultLanguageIsIs:
-		return true
-	case ContentSearchResultLanguageIt:
-		return true
-	case ContentSearchResultLanguageItCh:
-		return true
-	case ContentSearchResultLanguageItIt:
-		return true
-	case ContentSearchResultLanguageItSm:
-		return true
-	case ContentSearchResultLanguageItVa:
-		return true
-	case ContentSearchResultLanguageIu:
-		return true
-	case ContentSearchResultLanguageJa:
-		return true
-	case ContentSearchResultLanguageJaJp:
-		return true
-	case ContentSearchResultLanguageJgo:
-		return true
-	case ContentSearchResultLanguageJgoCm:
-		return true
-	case ContentSearchResultLanguageJmc:
-		return true
-	case ContentSearchResultLanguageJmcTz:
-		return true
-	case ContentSearchResultLanguageJv:
-		return true
-	case ContentSearchResultLanguageJvId:
-		return true
-	case ContentSearchResultLanguageKa:
-		return true
-	case ContentSearchResultLanguageKaGe:
-		return true
-	case ContentSearchResultLanguageKab:
-		return true
-	case ContentSearchResultLanguageKabDz:
-		return true
-	case ContentSearchResultLanguageKam:
-		return true
-	case ContentSearchResultLanguageKamKe:
-		return true
-	case ContentSearchResultLanguageKar:
-		return true
-	case ContentSearchResultLanguageKde:
-		return true
-	case ContentSearchResultLanguageKdeTz:
-		return true
-	case ContentSearchResultLanguageKea:
-		return true
-	case ContentSearchResultLanguageKeaCv:
-		return true
-	case ContentSearchResultLanguageKg:
-		return true
-	case ContentSearchResultLanguageKgp:
-		return true
-	case ContentSearchResultLanguageKgpBr:
-		return true
-	case ContentSearchResultLanguageKh:
-		return true
-	case ContentSearchResultLanguageKhq:
-		return true
-	case ContentSearchResultLanguageKhqMl:
-		return true
-	case ContentSearchResultLanguageKi:
-		return true
-	case ContentSearchResultLanguageKiKe:
-		return true
-	case ContentSearchResultLanguageKj:
-		return true
-	case ContentSearchResultLanguageKk:
-		return true
-	case ContentSearchResultLanguageKkKz:
-		return true
-	case ContentSearchResultLanguageKkj:
-		return true
-	case ContentSearchResultLanguageKkjCm:
-		return true
-	case ContentSearchResultLanguageKl:
-		return true
-	case ContentSearchResultLanguageKlGl:
-		return true
-	case ContentSearchResultLanguageKln:
-		return true
-	case ContentSearchResultLanguageKlnKe:
-		return true
-	case ContentSearchResultLanguageKm:
-		return true
-	case ContentSearchResultLanguageKmKh:
-		return true
-	case ContentSearchResultLanguageKn:
-		return true
-	case ContentSearchResultLanguageKnIn:
-		return true
-	case ContentSearchResultLanguageKo:
-		return true
-	case ContentSearchResultLanguageKoCn:
-		return true
-	case ContentSearchResultLanguageKoKp:
-		return true
-	case ContentSearchResultLanguageKoKr:
-		return true
-	case ContentSearchResultLanguageKok:
-		return true
-	case ContentSearchResultLanguageKokIn:
-		return true
-	case ContentSearchResultLanguageKr:
-		return true
-	case ContentSearchResultLanguageKs:
-		return true
-	case ContentSearchResultLanguageKsIn:
-		return true
-	case ContentSearchResultLanguageKsb:
-		return true
-	case ContentSearchResultLanguageKsbTz:
-		return true
-	case ContentSearchResultLanguageKsf:
-		return true
-	case ContentSearchResultLanguageKsfCm:
-		return true
-	case ContentSearchResultLanguageKsh:
-		return true
-	case ContentSearchResultLanguageKshDe:
-		return true
-	case ContentSearchResultLanguageKu:
-		return true
-	case ContentSearchResultLanguageKuTr:
-		return true
-	case ContentSearchResultLanguageKv:
-		return true
-	case ContentSearchResultLanguageKw:
-		return true
-	case ContentSearchResultLanguageKwGb:
-		return true
-	case ContentSearchResultLanguageKxv:
-		return true
-	case ContentSearchResultLanguageKxvIn:
-		return true
-	case ContentSearchResultLanguageKy:
-		return true
-	case ContentSearchResultLanguageKyKg:
-		return true
-	case ContentSearchResultLanguageLa:
-		return true
-	case ContentSearchResultLanguageLag:
-		return true
-	case ContentSearchResultLanguageLagTz:
-		return true
-	case ContentSearchResultLanguageLb:
-		return true
-	case ContentSearchResultLanguageLbLu:
-		return true
-	case ContentSearchResultLanguageLg:
-		return true
-	case ContentSearchResultLanguageLgUg:
-		return true
-	case ContentSearchResultLanguageLi:
-		return true
-	case ContentSearchResultLanguageLij:
-		return true
-	case ContentSearchResultLanguageLijIt:
-		return true
-	case ContentSearchResultLanguageLkt:
-		return true
-	case ContentSearchResultLanguageLktUs:
-		return true
-	case ContentSearchResultLanguageLmo:
-		return true
-	case ContentSearchResultLanguageLmoIt:
-		return true
-	case ContentSearchResultLanguageLn:
-		return true
-	case ContentSearchResultLanguageLnAo:
-		return true
-	case ContentSearchResultLanguageLnCd:
-		return true
-	case ContentSearchResultLanguageLnCf:
-		return true
-	case ContentSearchResultLanguageLnCg:
-		return true
-	case ContentSearchResultLanguageLo:
-		return true
-	case ContentSearchResultLanguageLoLa:
-		return true
-	case ContentSearchResultLanguageLrc:
-		return true
-	case ContentSearchResultLanguageLrcIq:
-		return true
-	case ContentSearchResultLanguageLrcIr:
-		return true
-	case ContentSearchResultLanguageLt:
-		return true
-	case ContentSearchResultLanguageLtLt:
-		return true
-	case ContentSearchResultLanguageLu:
-		return true
-	case ContentSearchResultLanguageLuCd:
-		return true
-	case ContentSearchResultLanguageLuo:
-		return true
-	case ContentSearchResultLanguageLuoKe:
-		return true
-	case ContentSearchResultLanguageLuy:
-		return true
-	case ContentSearchResultLanguageLuyKe:
-		return true
-	case ContentSearchResultLanguageLv:
-		return true
-	case ContentSearchResultLanguageLvLv:
-		return true
-	case ContentSearchResultLanguageMai:
-		return true
-	case ContentSearchResultLanguageMaiIn:
-		return true
-	case ContentSearchResultLanguageMas:
-		return true
-	case ContentSearchResultLanguageMasKe:
-		return true
-	case ContentSearchResultLanguageMasTz:
-		return true
-	case ContentSearchResultLanguageMdf:
-		return true
-	case ContentSearchResultLanguageMdfRu:
-		return true
-	case ContentSearchResultLanguageMer:
-		return true
-	case ContentSearchResultLanguageMerKe:
-		return true
-	case ContentSearchResultLanguageMfe:
-		return true
-	case ContentSearchResultLanguageMfeMu:
-		return true
-	case ContentSearchResultLanguageMg:
-		return true
-	case ContentSearchResultLanguageMgMg:
-		return true
-	case ContentSearchResultLanguageMgh:
-		return true
-	case ContentSearchResultLanguageMghMz:
-		return true
-	case ContentSearchResultLanguageMgo:
-		return true
-	case ContentSearchResultLanguageMgoCm:
-		return true
-	case ContentSearchResultLanguageMh:
-		return true
-	case ContentSearchResultLanguageMi:
-		return true
-	case ContentSearchResultLanguageMiNz:
-		return true
-	case ContentSearchResultLanguageMk:
-		return true
-	case ContentSearchResultLanguageMkMk:
-		return true
-	case ContentSearchResultLanguageMl:
-		return true
-	case ContentSearchResultLanguageMlIn:
-		return true
-	case ContentSearchResultLanguageMn:
-		return true
-	case ContentSearchResultLanguageMnMn:
-		return true
-	case ContentSearchResultLanguageMni:
-		return true
-	case ContentSearchResultLanguageMniIn:
-		return true
-	case ContentSearchResultLanguageMr:
-		return true
-	case ContentSearchResultLanguageMrIn:
-		return true
-	case ContentSearchResultLanguageMs:
-		return true
-	case ContentSearchResultLanguageMsBn:
-		return true
-	case ContentSearchResultLanguageMsId:
-		return true
-	case ContentSearchResultLanguageMsMy:
-		return true
-	case ContentSearchResultLanguageMsSg:
-		return true
-	case ContentSearchResultLanguageMt:
-		return true
-	case ContentSearchResultLanguageMtMt:
-		return true
-	case ContentSearchResultLanguageMua:
-		return true
-	case ContentSearchResultLanguageMuaCm:
-		return true
-	case ContentSearchResultLanguageMy:
-		return true
-	case ContentSearchResultLanguageMyMm:
-		return true
-	case ContentSearchResultLanguageMzn:
-		return true
-	case ContentSearchResultLanguageMznIr:
-		return true
-	case ContentSearchResultLanguageNa:
-		return true
-	case ContentSearchResultLanguageNaq:
-		return true
-	case ContentSearchResultLanguageNaqNa:
-		return true
-	case ContentSearchResultLanguageNb:
-		return true
-	case ContentSearchResultLanguageNbNo:
-		return true
-	case ContentSearchResultLanguageNbSj:
-		return true
-	case ContentSearchResultLanguageNd:
-		return true
-	case ContentSearchResultLanguageNdZw:
-		return true
-	case ContentSearchResultLanguageNds:
-		return true
-	case ContentSearchResultLanguageNdsDe:
-		return true
-	case ContentSearchResultLanguageNdsNl:
-		return true
-	case ContentSearchResultLanguageNe:
-		return true
-	case ContentSearchResultLanguageNeIn:
-		return true
-	case ContentSearchResultLanguageNeNp:
-		return true
-	case ContentSearchResultLanguageNg:
-		return true
-	case ContentSearchResultLanguageNl:
-		return true
-	case ContentSearchResultLanguageNlAw:
-		return true
-	case ContentSearchResultLanguageNlBe:
-		return true
-	case ContentSearchResultLanguageNlBq:
-		return true
-	case ContentSearchResultLanguageNlCh:
-		return true
-	case ContentSearchResultLanguageNlCw:
-		return true
-	case ContentSearchResultLanguageNlLu:
-		return true
-	case ContentSearchResultLanguageNlNl:
-		return true
-	case ContentSearchResultLanguageNlSr:
-		return true
-	case ContentSearchResultLanguageNlSx:
-		return true
-	case ContentSearchResultLanguageNmg:
-		return true
-	case ContentSearchResultLanguageNmgCm:
-		return true
-	case ContentSearchResultLanguageNn:
-		return true
-	case ContentSearchResultLanguageNnNo:
-		return true
-	case ContentSearchResultLanguageNnh:
-		return true
-	case ContentSearchResultLanguageNnhCm:
-		return true
-	case ContentSearchResultLanguageNo:
-		return true
-	case ContentSearchResultLanguageNoNo:
-		return true
-	case ContentSearchResultLanguageNqo:
-		return true
-	case ContentSearchResultLanguageNqoGn:
-		return true
-	case ContentSearchResultLanguageNr:
-		return true
-	case ContentSearchResultLanguageNso:
-		return true
-	case ContentSearchResultLanguageNsoZa:
-		return true
-	case ContentSearchResultLanguageNus:
-		return true
-	case ContentSearchResultLanguageNusSs:
-		return true
-	case ContentSearchResultLanguageNv:
-		return true
-	case ContentSearchResultLanguageNy:
-		return true
-	case ContentSearchResultLanguageNyn:
-		return true
-	case ContentSearchResultLanguageNynUg:
-		return true
-	case ContentSearchResultLanguageOc:
-		return true
-	case ContentSearchResultLanguageOcEs:
-		return true
-	case ContentSearchResultLanguageOcFr:
-		return true
-	case ContentSearchResultLanguageOj:
-		return true
-	case ContentSearchResultLanguageOm:
-		return true
-	case ContentSearchResultLanguageOmEt:
-		return true
-	case ContentSearchResultLanguageOmKe:
-		return true
-	case ContentSearchResultLanguageOr:
-		return true
-	case ContentSearchResultLanguageOrIn:
-		return true
-	case ContentSearchResultLanguageOs:
-		return true
-	case ContentSearchResultLanguageOsGe:
-		return true
-	case ContentSearchResultLanguageOsRu:
-		return true
-	case ContentSearchResultLanguagePa:
-		return true
-	case ContentSearchResultLanguagePaIn:
-		return true
-	case ContentSearchResultLanguagePaPk:
-		return true
-	case ContentSearchResultLanguagePcm:
-		return true
-	case ContentSearchResultLanguagePcmNg:
-		return true
-	case ContentSearchResultLanguagePi:
-		return true
-	case ContentSearchResultLanguagePis:
-		return true
-	case ContentSearchResultLanguagePisSb:
-		return true
-	case ContentSearchResultLanguagePl:
-		return true
-	case ContentSearchResultLanguagePlPl:
-		return true
-	case ContentSearchResultLanguagePrg:
-		return true
-	case ContentSearchResultLanguagePrg001:
-		return true
-	case ContentSearchResultLanguagePs:
-		return true
-	case ContentSearchResultLanguagePsAf:
-		return true
-	case ContentSearchResultLanguagePsPk:
-		return true
-	case ContentSearchResultLanguagePt:
-		return true
-	case ContentSearchResultLanguagePtAo:
-		return true
-	case ContentSearchResultLanguagePtBr:
-		return true
-	case ContentSearchResultLanguagePtCh:
-		return true
-	case ContentSearchResultLanguagePtCv:
-		return true
-	case ContentSearchResultLanguagePtGq:
-		return true
-	case ContentSearchResultLanguagePtGw:
-		return true
-	case ContentSearchResultLanguagePtLu:
-		return true
-	case ContentSearchResultLanguagePtMo:
-		return true
-	case ContentSearchResultLanguagePtMz:
-		return true
-	case ContentSearchResultLanguagePtPt:
-		return true
-	case ContentSearchResultLanguagePtSt:
-		return true
-	case ContentSearchResultLanguagePtTl:
-		return true
-	case ContentSearchResultLanguageQu:
-		return true
-	case ContentSearchResultLanguageQuBo:
-		return true
-	case ContentSearchResultLanguageQuEc:
-		return true
-	case ContentSearchResultLanguageQuPe:
-		return true
-	case ContentSearchResultLanguageRaj:
-		return true
-	case ContentSearchResultLanguageRajIn:
-		return true
-	case ContentSearchResultLanguageRm:
-		return true
-	case ContentSearchResultLanguageRmCh:
-		return true
-	case ContentSearchResultLanguageRn:
-		return true
-	case ContentSearchResultLanguageRnBi:
-		return true
-	case ContentSearchResultLanguageRo:
-		return true
-	case ContentSearchResultLanguageRoMd:
-		return true
-	case ContentSearchResultLanguageRoRo:
-		return true
-	case ContentSearchResultLanguageRof:
-		return true
-	case ContentSearchResultLanguageRofTz:
-		return true
-	case ContentSearchResultLanguageRu:
-		return true
-	case ContentSearchResultLanguageRuBy:
-		return true
-	case ContentSearchResultLanguageRuKg:
-		return true
-	case ContentSearchResultLanguageRuKz:
-		return true
-	case ContentSearchResultLanguageRuMd:
-		return true
-	case ContentSearchResultLanguageRuRu:
-		return true
-	case ContentSearchResultLanguageRuUa:
-		return true
-	case ContentSearchResultLanguageRw:
-		return true
-	case ContentSearchResultLanguageRwRw:
-		return true
-	case ContentSearchResultLanguageRwk:
-		return true
-	case ContentSearchResultLanguageRwkTz:
-		return true
-	case ContentSearchResultLanguageSa:
-		return true
-	case ContentSearchResultLanguageSaIn:
-		return true
-	case ContentSearchResultLanguageSah:
-		return true
-	case ContentSearchResultLanguageSahRu:
-		return true
-	case ContentSearchResultLanguageSaq:
-		return true
-	case ContentSearchResultLanguageSaqKe:
-		return true
-	case ContentSearchResultLanguageSat:
-		return true
-	case ContentSearchResultLanguageSatIn:
-		return true
-	case ContentSearchResultLanguageSbp:
-		return true
-	case ContentSearchResultLanguageSbpTz:
-		return true
-	case ContentSearchResultLanguageSc:
-		return true
-	case ContentSearchResultLanguageScIt:
-		return true
-	case ContentSearchResultLanguageSd:
-		return true
-	case ContentSearchResultLanguageSdIn:
-		return true
-	case ContentSearchResultLanguageSdPk:
-		return true
-	case ContentSearchResultLanguageSe:
-		return true
-	case ContentSearchResultLanguageSeFi:
-		return true
-	case ContentSearchResultLanguageSeNo:
-		return true
-	case ContentSearchResultLanguageSeSe:
-		return true
-	case ContentSearchResultLanguageSeh:
-		return true
-	case ContentSearchResultLanguageSehMz:
-		return true
-	case ContentSearchResultLanguageSes:
-		return true
-	case ContentSearchResultLanguageSesMl:
-		return true
-	case ContentSearchResultLanguageSg:
-		return true
-	case ContentSearchResultLanguageSgCf:
-		return true
-	case ContentSearchResultLanguageShi:
-		return true
-	case ContentSearchResultLanguageShiMa:
-		return true
-	case ContentSearchResultLanguageSi:
-		return true
-	case ContentSearchResultLanguageSiLk:
-		return true
-	case ContentSearchResultLanguageSk:
-		return true
-	case ContentSearchResultLanguageSkSk:
-		return true
-	case ContentSearchResultLanguageSl:
-		return true
-	case ContentSearchResultLanguageSlSi:
-		return true
-	case ContentSearchResultLanguageSm:
-		return true
-	case ContentSearchResultLanguageSmn:
-		return true
-	case ContentSearchResultLanguageSmnFi:
-		return true
-	case ContentSearchResultLanguageSms:
-		return true
-	case ContentSearchResultLanguageSmsFi:
-		return true
-	case ContentSearchResultLanguageSn:
-		return true
-	case ContentSearchResultLanguageSnZw:
-		return true
-	case ContentSearchResultLanguageSo:
-		return true
-	case ContentSearchResultLanguageSoDj:
-		return true
-	case ContentSearchResultLanguageSoEt:
-		return true
-	case ContentSearchResultLanguageSoKe:
-		return true
-	case ContentSearchResultLanguageSoSo:
-		return true
-	case ContentSearchResultLanguageSq:
-		return true
-	case ContentSearchResultLanguageSqAl:
-		return true
-	case ContentSearchResultLanguageSqMk:
-		return true
-	case ContentSearchResultLanguageSqXk:
-		return true
-	case ContentSearchResultLanguageSr:
-		return true
-	case ContentSearchResultLanguageSrBa:
-		return true
-	case ContentSearchResultLanguageSrCs:
-		return true
-	case ContentSearchResultLanguageSrMe:
-		return true
-	case ContentSearchResultLanguageSrRs:
-		return true
-	case ContentSearchResultLanguageSrXk:
-		return true
-	case ContentSearchResultLanguageSs:
-		return true
-	case ContentSearchResultLanguageSt:
-		return true
-	case ContentSearchResultLanguageStLs:
-		return true
-	case ContentSearchResultLanguageStZa:
-		return true
-	case ContentSearchResultLanguageSu:
-		return true
-	case ContentSearchResultLanguageSuId:
-		return true
-	case ContentSearchResultLanguageSv:
-		return true
-	case ContentSearchResultLanguageSvAx:
-		return true
-	case ContentSearchResultLanguageSvFi:
-		return true
-	case ContentSearchResultLanguageSvSe:
-		return true
-	case ContentSearchResultLanguageSw:
-		return true
-	case ContentSearchResultLanguageSwCd:
-		return true
-	case ContentSearchResultLanguageSwKe:
-		return true
-	case ContentSearchResultLanguageSwTz:
-		return true
-	case ContentSearchResultLanguageSwUg:
-		return true
-	case ContentSearchResultLanguageSy:
-		return true
-	case ContentSearchResultLanguageSyr:
-		return true
-	case ContentSearchResultLanguageSyrIq:
-		return true
-	case ContentSearchResultLanguageSyrSy:
-		return true
-	case ContentSearchResultLanguageSzl:
-		return true
-	case ContentSearchResultLanguageSzlPl:
-		return true
-	case ContentSearchResultLanguageTa:
-		return true
-	case ContentSearchResultLanguageTaIn:
-		return true
-	case ContentSearchResultLanguageTaLk:
-		return true
-	case ContentSearchResultLanguageTaMy:
-		return true
-	case ContentSearchResultLanguageTaSg:
-		return true
-	case ContentSearchResultLanguageTe:
-		return true
-	case ContentSearchResultLanguageTeIn:
-		return true
-	case ContentSearchResultLanguageTeo:
-		return true
-	case ContentSearchResultLanguageTeoKe:
-		return true
-	case ContentSearchResultLanguageTeoUg:
-		return true
-	case ContentSearchResultLanguageTg:
-		return true
-	case ContentSearchResultLanguageTgTj:
-		return true
-	case ContentSearchResultLanguageTh:
-		return true
-	case ContentSearchResultLanguageThTh:
-		return true
-	case ContentSearchResultLanguageTi:
-		return true
-	case ContentSearchResultLanguageTiEr:
-		return true
-	case ContentSearchResultLanguageTiEt:
-		return true
-	case ContentSearchResultLanguageTk:
-		return true
-	case ContentSearchResultLanguageTkTm:
-		return true
-	case ContentSearchResultLanguageTl:
-		return true
-	case ContentSearchResultLanguageTn:
-		return true
-	case ContentSearchResultLanguageTnBw:
-		return true
-	case ContentSearchResultLanguageTnZa:
-		return true
-	case ContentSearchResultLanguageTo:
-		return true
-	case ContentSearchResultLanguageToTo:
-		return true
-	case ContentSearchResultLanguageTok:
-		return true
-	case ContentSearchResultLanguageTok001:
-		return true
-	case ContentSearchResultLanguageTr:
-		return true
-	case ContentSearchResultLanguageTrCy:
-		return true
-	case ContentSearchResultLanguageTrTr:
-		return true
-	case ContentSearchResultLanguageTs:
-		return true
-	case ContentSearchResultLanguageTt:
-		return true
-	case ContentSearchResultLanguageTtRu:
-		return true
-	case ContentSearchResultLanguageTw:
-		return true
-	case ContentSearchResultLanguageTwq:
-		return true
-	case ContentSearchResultLanguageTwqNe:
-		return true
-	case ContentSearchResultLanguageTy:
-		return true
-	case ContentSearchResultLanguageTzm:
-		return true
-	case ContentSearchResultLanguageTzmMa:
-		return true
-	case ContentSearchResultLanguageUg:
-		return true
-	case ContentSearchResultLanguageUgCn:
-		return true
-	case ContentSearchResultLanguageUk:
-		return true
-	case ContentSearchResultLanguageUkUa:
-		return true
-	case ContentSearchResultLanguageUr:
-		return true
-	case ContentSearchResultLanguageUrIn:
-		return true
-	case ContentSearchResultLanguageUrPk:
-		return true
-	case ContentSearchResultLanguageUz:
-		return true
-	case ContentSearchResultLanguageUzAf:
-		return true
-	case ContentSearchResultLanguageUzUz:
-		return true
-	case ContentSearchResultLanguageVai:
-		return true
-	case ContentSearchResultLanguageVaiLr:
-		return true
-	case ContentSearchResultLanguageVe:
-		return true
-	case ContentSearchResultLanguageVec:
-		return true
-	case ContentSearchResultLanguageVecIt:
-		return true
-	case ContentSearchResultLanguageVi:
-		return true
-	case ContentSearchResultLanguageViVn:
-		return true
-	case ContentSearchResultLanguageVmw:
-		return true
-	case ContentSearchResultLanguageVmwMz:
-		return true
-	case ContentSearchResultLanguageVo:
-		return true
-	case ContentSearchResultLanguageVo001:
-		return true
-	case ContentSearchResultLanguageVun:
-		return true
-	case ContentSearchResultLanguageVunTz:
-		return true
-	case ContentSearchResultLanguageWa:
-		return true
-	case ContentSearchResultLanguageWae:
-		return true
-	case ContentSearchResultLanguageWaeCh:
-		return true
-	case ContentSearchResultLanguageWo:
-		return true
-	case ContentSearchResultLanguageWoSn:
-		return true
-	case ContentSearchResultLanguageXh:
-		return true
-	case ContentSearchResultLanguageXhZa:
-		return true
-	case ContentSearchResultLanguageXnr:
-		return true
-	case ContentSearchResultLanguageXnrIn:
-		return true
-	case ContentSearchResultLanguageXog:
-		return true
-	case ContentSearchResultLanguageXogUg:
-		return true
-	case ContentSearchResultLanguageYav:
-		return true
-	case ContentSearchResultLanguageYavCm:
-		return true
-	case ContentSearchResultLanguageYi:
-		return true
-	case ContentSearchResultLanguageYi001:
-		return true
-	case ContentSearchResultLanguageYiUa:
-		return true
-	case ContentSearchResultLanguageYo:
-		return true
-	case ContentSearchResultLanguageYoBj:
-		return true
-	case ContentSearchResultLanguageYoNg:
-		return true
-	case ContentSearchResultLanguageYrl:
-		return true
-	case ContentSearchResultLanguageYrlBr:
-		return true
-	case ContentSearchResultLanguageYrlCo:
-		return true
-	case ContentSearchResultLanguageYrlVe:
-		return true
-	case ContentSearchResultLanguageYue:
-		return true
-	case ContentSearchResultLanguageYueCn:
-		return true
-	case ContentSearchResultLanguageYueHk:
-		return true
-	case ContentSearchResultLanguageYueMo:
-		return true
-	case ContentSearchResultLanguageZa:
-		return true
-	case ContentSearchResultLanguageZaCn:
-		return true
-	case ContentSearchResultLanguageZgh:
-		return true
-	case ContentSearchResultLanguageZghMa:
-		return true
-	case ContentSearchResultLanguageZh:
-		return true
-	case ContentSearchResultLanguageZhCn:
-		return true
-	case ContentSearchResultLanguageZhHans:
-		return true
-	case ContentSearchResultLanguageZhHant:
-		return true
-	case ContentSearchResultLanguageZhHk:
-		return true
-	case ContentSearchResultLanguageZhMo:
-		return true
-	case ContentSearchResultLanguageZhMy:
-		return true
-	case ContentSearchResultLanguageZhSg:
-		return true
-	case ContentSearchResultLanguageZhTw:
-		return true
-	case ContentSearchResultLanguageZu:
-		return true
-	case ContentSearchResultLanguageZuZa:
+	case CurrencyCreateRequestCurrencyCodeZWL:
 		return true
 	default:
 		return false
 	}
 }
+
+// Defines values for CurrencyPairUpdateFromCurrencyCode.
+const (
+	CurrencyPairUpdateFromCurrencyCodeAED CurrencyPairUpdateFromCurrencyCode = "AED"
+	CurrencyPairUpdateFromCurrencyCodeAFN CurrencyPairUpdateFromCurrencyCode = "AFN"
+	CurrencyPairUpdateFromCurrencyCodeALL CurrencyPairUpdateFromCurrencyCode = "ALL"
+	CurrencyPairUpdateFromCurrencyCodeAMD CurrencyPairUpdateFromCurrencyCode = "AMD"
+	CurrencyPairUpdateFromCurrencyCodeANG CurrencyPairUpdateFromCurrencyCode = "ANG"
+	CurrencyPairUpdateFromCurrencyCodeAOA CurrencyPairUpdateFromCurrencyCode = "AOA"
+	CurrencyPairUpdateFromCurrencyCodeARS CurrencyPairUpdateFromCurrencyCode = "ARS"
+	CurrencyPairUpdateFromCurrencyCodeAUD CurrencyPairUpdateFromCurrencyCode = "AUD"
+	CurrencyPairUpdateFromCurrencyCodeAWG CurrencyPairUpdateFromCurrencyCode = "AWG"
+	CurrencyPairUpdateFromCurrencyCodeAZN CurrencyPairUpdateFromCurrencyCode = "AZN"
+	CurrencyPairUpdateFromCurrencyCodeBAM CurrencyPairUpdateFromCurrencyCode = "BAM"
+	CurrencyPairUpdateFromCurrencyCodeBBD CurrencyPairUpdateFromCurrencyCode = "BBD"
+	CurrencyPairUpdateFromCurrencyCodeBDT CurrencyPairUpdateFromCurrencyCode = "BDT"
+	CurrencyPairUpdateFromCurrencyCodeBGN CurrencyPairUpdateFromCurrencyCode = "BGN"
+	CurrencyPairUpdateFromCurrencyCodeBHD CurrencyPairUpdateFromCurrencyCode = "BHD"
+	CurrencyPairUpdateFromCurrencyCodeBIF CurrencyPairUpdateFromCurrencyCode = "BIF"
+	CurrencyPairUpdateFromCurrencyCodeBMD CurrencyPairUpdateFromCurrencyCode = "BMD"
+	CurrencyPairUpdateFromCurrencyCodeBND CurrencyPairUpdateFromCurrencyCode = "BND"
+	CurrencyPairUpdateFromCurrencyCodeBOB CurrencyPairUpdateFromCurrencyCode = "BOB"
+	CurrencyPairUpdateFromCurrencyCodeBOV CurrencyPairUpdateFromCurrencyCode = "BOV"
+	CurrencyPairUpdateFromCurrencyCodeBRL CurrencyPairUpdateFromCurrencyCode = "BRL"
+	CurrencyPairUpdateFromCurrencyCodeBSD CurrencyPairUpdateFromCurrencyCode = "BSD"
+	CurrencyPairUpdateFromCurrencyCodeBTN CurrencyPairUpdateFromCurrencyCode = "BTN"
+	CurrencyPairUpdateFromCurrencyCodeBWP CurrencyPairUpdateFromCurrencyCode = "BWP"
+	CurrencyPairUpdateFromCurrencyCodeBYN CurrencyPairUpdateFromCurrencyCode = "BYN"
+	CurrencyPairUpdateFromCurrencyCodeBZD CurrencyPairUpdateFromCurrencyCode = "BZD"
+	CurrencyPairUpdateFromCurrencyCodeCAD CurrencyPairUpdateFromCurrencyCode = "CAD"
+	CurrencyPairUpdateFromCurrencyCodeCDF CurrencyPairUpdateFromCurrencyCode = "CDF"
+	CurrencyPairUpdateFromCurrencyCodeCHE CurrencyPairUpdateFromCurrencyCode = "CHE"
+	CurrencyPairUpdateFromCurrencyCodeCHF CurrencyPairUpdateFromCurrencyCode = "CHF"
+	CurrencyPairUpdateFromCurrencyCodeCHW CurrencyPairUpdateFromCurrencyCode = "CHW"
+	CurrencyPairUpdateFromCurrencyCodeCLF CurrencyPairUpdateFromCurrencyCode = "CLF"
+	CurrencyPairUpdateFromCurrencyCodeCLP CurrencyPairUpdateFromCurrencyCode = "CLP"
+	CurrencyPairUpdateFromCurrencyCodeCNY CurrencyPairUpdateFromCurrencyCode = "CNY"
+	CurrencyPairUpdateFromCurrencyCodeCOP CurrencyPairUpdateFromCurrencyCode = "COP"
+	CurrencyPairUpdateFromCurrencyCodeCOU CurrencyPairUpdateFromCurrencyCode = "COU"
+	CurrencyPairUpdateFromCurrencyCodeCRC CurrencyPairUpdateFromCurrencyCode = "CRC"
+	CurrencyPairUpdateFromCurrencyCodeCUC CurrencyPairUpdateFromCurrencyCode = "CUC"
+	CurrencyPairUpdateFromCurrencyCodeCUP CurrencyPairUpdateFromCurrencyCode = "CUP"
+	CurrencyPairUpdateFromCurrencyCodeCVE CurrencyPairUpdateFromCurrencyCode = "CVE"
+	CurrencyPairUpdateFromCurrencyCodeCZK CurrencyPairUpdateFromCurrencyCode = "CZK"
+	CurrencyPairUpdateFromCurrencyCodeDJF CurrencyPairUpdateFromCurrencyCode = "DJF"
+	CurrencyPairUpdateFromCurrencyCodeDKK CurrencyPairUpdateFromCurrencyCode = "DKK"
+	CurrencyPairUpdateFromCurrencyCodeDOP CurrencyPairUpdateFromCurrencyCode = "DOP"
+	CurrencyPairUpdateFromCurrencyCodeDZD CurrencyPairUpdateFromCurrencyCode = "DZD"
+	CurrencyPairUpdateFromCurrencyCodeEGP CurrencyPairUpdateFromCurrencyCode = "EGP"
+	CurrencyPairUpdateFromCurrencyCodeERN CurrencyPairUpdateFromCurrencyCode = "ERN"
+	CurrencyPairUpdateFromCurrencyCodeETB CurrencyPairUpdateFromCurrencyCode = "ETB"
+	CurrencyPairUpdateFromCurrencyCodeEUR CurrencyPairUpdateFromCurrencyCode = "EUR"
+	CurrencyPairUpdateFromCurrencyCodeFJD CurrencyPairUpdateFromCurrencyCode = "FJD"
+	CurrencyPairUpdateFromCurrencyCodeFKP CurrencyPairUpdateFromCurrencyCode = "FKP"
+	CurrencyPairUpdateFromCurrencyCodeGBP CurrencyPairUpdateFromCurrencyCode = "GBP"
+	CurrencyPairUpdateFromCurrencyCodeGEL CurrencyPairUpdateFromCurrencyCode = "GEL"
+	CurrencyPairUpdateFromCurrencyCodeGHS CurrencyPairUpdateFromCurrencyCode = "GHS"
+	CurrencyPairUpdateFromCurrencyCodeGIP CurrencyPairUpdateFromCurrencyCode = "GIP"
+	CurrencyPairUpdateFromCurrencyCodeGMD CurrencyPairUpdateFromCurrencyCode = "GMD"
+	CurrencyPairUpdateFromCurrencyCodeGNF CurrencyPairUpdateFromCurrencyCode = "GNF"
+	CurrencyPairUpdateFromCurrencyCodeGTQ CurrencyPairUpdateFromCurrencyCode = "GTQ"
+	CurrencyPairUpdateFromCurrencyCodeGYD CurrencyPairUpdateFromCurrencyCode = "GYD"
+	CurrencyPairUpdateFromCurrencyCodeHKD CurrencyPairUpdateFromCurrencyCode = "HKD"
+	CurrencyPairUpdateFromCurrencyCodeHNL CurrencyPairUpdateFromCurrencyCode = "HNL"
+	CurrencyPairUpdateFromCurrencyCodeHRK CurrencyPairUpdateFromCurrencyCode = "HRK"
+	CurrencyPairUpdateFromCurrencyCodeHTG CurrencyPairUpdateFromCurrencyCode = "HTG"
+	CurrencyPairUpdateFromCurrencyCodeHUF CurrencyPairUpdateFromCurrencyCode = "HUF"
+	CurrencyPairUpdateFromCurrencyCodeIDR CurrencyPairUpdateFromCurrencyCode = "IDR"
+	CurrencyPairUpdateFromCurrencyCodeILS CurrencyPairUpdateFromCurrencyCode = "ILS"
+	CurrencyPairUpdateFromCurrencyCodeINR CurrencyPairUpdateFromCurrencyCode = "INR"
+	CurrencyPairUpdateFromCurrencyCodeIQD CurrencyPairUpdateFromCurrencyCode = "IQD"
+	CurrencyPairUpdateFromCurrencyCodeIRR CurrencyPairUpdateFromCurrencyCode = "IRR"
+	CurrencyPairUpdateFromCurrencyCodeISK CurrencyPairUpdateFromCurrencyCode = "ISK"
+	CurrencyPairUpdateFromCurrencyCodeJMD CurrencyPairUpdateFromCurrencyCode = "JMD"
+	CurrencyPairUpdateFromCurrencyCodeJOD CurrencyPairUpdateFromCurrencyCode = "JOD"
+	CurrencyPairUpdateFromCurrencyCodeJPY CurrencyPairUpdateFromCurrencyCode = "JPY"
+	CurrencyPairUpdateFromCurrencyCodeKES CurrencyPairUpdateFromCurrencyCode = "KES"
+	CurrencyPairUpdateFromCurrencyCodeKGS CurrencyPairUpdateFromCurrencyCode = "KGS"
+	CurrencyPairUpdateFromCurrencyCodeKHR CurrencyPairUpdateFromCurrencyCode = "KHR"
+	CurrencyPairUpdateFromCurrencyCodeKMF CurrencyPairUpdateFromCurrencyCode = "KMF"
+	CurrencyPairUpdateFromCurrencyCodeKPW CurrencyPairUpdateFromCurrencyCode = "KPW"
+	CurrencyPairUpdateFromCurrencyCodeKRW CurrencyPairUpdateFromCurrencyCode = "KRW"
+	CurrencyPairUpdateFromCurrencyCodeKWD CurrencyPairUpdateFromCurrencyCode = "KWD"
+	CurrencyPairUpdateFromCurrencyCodeKYD CurrencyPairUpdateFromCurrencyCode = "KYD"
+	CurrencyPairUpdateFromCurrencyCodeKZT CurrencyPairUpdateFromCurrencyCode = "KZT"
+	CurrencyPairUpdateFromCurrencyCodeLAK CurrencyPairUpdateFromCurrencyCode = "LAK"
+	CurrencyPairUpdateFromCurrencyCodeLBP CurrencyPairUpdateFromCurrencyCode = "LBP"
+	CurrencyPairUpdateFromCurrencyCodeLKR CurrencyPairUpdateFromCurrencyCode = "LKR"
+	CurrencyPairUpdateFromCurrencyCodeLRD CurrencyPairUpdateFromCurrencyCode = "LRD"
+	CurrencyPairUpdateFromCurrencyCodeLSL CurrencyPairUpdateFromCurrencyCode = "LSL"
+	CurrencyPairUpdateFromCurrencyCodeLYD CurrencyPairUpdateFromCurrencyCode = "LYD"
+	CurrencyPairUpdateFromCurrencyCodeMAD CurrencyPairUpdateFromCurrencyCode = "MAD"
+	CurrencyPairUpdateFromCurrencyCodeMDL CurrencyPairUpdateFromCurrencyCode = "MDL"
+	CurrencyPairUpdateFromCurrencyCodeMGA CurrencyPairUpdateFromCurrencyCode = "MGA"
+	CurrencyPairUpdateFromCurrencyCodeMKD CurrencyPairUpdateFromCurrencyCode = "MKD"
+	CurrencyPairUpdateFromCurrencyCodeMMK CurrencyPairUpdateFromCurrencyCode = "MMK"
+	CurrencyPairUpdateFromCurrencyCodeMNT CurrencyPairUpdateFromCurrencyCode = "MNT"
+	CurrencyPairUpdateFromCurrencyCodeMOP CurrencyPairUpdateFromCurrencyCode = "MOP"
+	CurrencyPairUpdateFromCurrencyCodeMRU CurrencyPairUpdateFromCurrencyCode = "MRU"
+	CurrencyPairUpdateFromCurrencyCodeMUR CurrencyPairUpdateFromCurrencyCode = "MUR"
+	CurrencyPairUpdateFromCurrencyCodeMVR CurrencyPairUpdateFromCurrencyCode = "MVR"
+	CurrencyPairUpdateFromCurrencyCodeMWK CurrencyPairUpdateFromCurrencyCode = "MWK"
+	CurrencyPairUpdateFromCurrencyCodeMXN CurrencyPairUpdateFromCurrencyCode = "MXN"
+	CurrencyPairUpdateFromCurrencyCodeMXV CurrencyPairUpdateFromCurrencyCode = "MXV"
+	CurrencyPairUpdateFromCurrencyCodeMYR CurrencyPairUpdateFromCurrencyCode = "MYR"
+	CurrencyPairUpdateFromCurrencyCodeMZN CurrencyPairUpdateFromCurrencyCode = "MZN"
+	CurrencyPairUpdateFromCurrencyCodeNAD CurrencyPairUpdateFromCurrencyCode = "NAD"
+	CurrencyPairUpdateFromCurrencyCodeNGN CurrencyPairUpdateFromCurrencyCode = "NGN"
+	CurrencyPairUpdateFromCurrencyCodeNIO CurrencyPairUpdateFromCurrencyCode = "NIO"
+	CurrencyPairUpdateFromCurrencyCodeNOK CurrencyPairUpdateFromCurrencyCode = "NOK"
+	CurrencyPairUpdateFromCurrencyCodeNPR CurrencyPairUpdateFromCurrencyCode = "NPR"
+	CurrencyPairUpdateFromCurrencyCodeNZD CurrencyPairUpdateFromCurrencyCode = "NZD"
+	CurrencyPairUpdateFromCurrencyCodeOMR CurrencyPairUpdateFromCurrencyCode = "OMR"
+	CurrencyPairUpdateFromCurrencyCodePAB CurrencyPairUpdateFromCurrencyCode = "PAB"
+	CurrencyPairUpdateFromCurrencyCodePEN CurrencyPairUpdateFromCurrencyCode = "PEN"
+	CurrencyPairUpdateFromCurrencyCodePGK CurrencyPairUpdateFromCurrencyCode = "PGK"
+	CurrencyPairUpdateFromCurrencyCodePHP CurrencyPairUpdateFromCurrencyCode = "PHP"
+	CurrencyPairUpdateFromCurrencyCodePKR CurrencyPairUpdateFromCurrencyCode = "PKR"
+	CurrencyPairUpdateFromCurrencyCodePLN CurrencyPairUpdateFromCurrencyCode = "PLN"
+	CurrencyPairUpdateFromCurrencyCodePYG CurrencyPairUpdateFromCurrencyCode = "PYG"
+	CurrencyPairUpdateFromCurrencyCodeQAR CurrencyPairUpdateFromCurrencyCode = "QAR"
+	CurrencyPairUpdateFromCurrencyCodeRON CurrencyPairUpdateFromCurrencyCode = "RON"
+	CurrencyPairUpdateFromCurrencyCodeRSD CurrencyPairUpdateFromCurrencyCode = "RSD"
+	CurrencyPairUpdateFromCurrencyCodeRUB CurrencyPairUpdateFromCurrencyCode = "RUB"
+	CurrencyPairUpdateFromCurrencyCodeRWF CurrencyPairUpdateFromCurrencyCode = "RWF"
+	CurrencyPairUpdateFromCurrencyCodeSAR CurrencyPairUpdateFromCurrencyCode = "SAR"
+	CurrencyPairUpdateFromCurrencyCodeSBD CurrencyPairUpdateFromCurrencyCode = "SBD"
+	CurrencyPairUpdateFromCurrencyCodeSCR CurrencyPairUpdateFromCurrencyCode = "SCR"
+	CurrencyPairUpdateFromCurrencyCodeSDG CurrencyPairUpdateFromCurrencyCode = "SDG"
+	CurrencyPairUpdateFromCurrencyCodeSEK CurrencyPairUpdateFromCurrencyCode = "SEK"
+	CurrencyPairUpdateFromCurrencyCodeSGD CurrencyPairUpdateFromCurrencyCode = "SGD"
+	CurrencyPairUpdateFromCurrencyCodeSHP CurrencyPairUpdateFromCurrencyCode = "SHP"
+	CurrencyPairUpdateFromCurrencyCodeSLL CurrencyPairUpdateFromCurrencyCode = "SLL"
+	CurrencyPairUpdateFromCurrencyCodeSOS CurrencyPairUpdateFromCurrencyCode = "SOS"
+	CurrencyPairUpdateFromCurrencyCodeSRD CurrencyPairUpdateFromCurrencyCode = "SRD"
+	CurrencyPairUpdateFromCurrencyCodeSSP CurrencyPairUpdateFromCurrencyCode = "SSP"
+	CurrencyPairUpdateFromCurrencyCodeSTN CurrencyPairUpdateFromCurrencyCode = "STN"
+	CurrencyPairUpdateFromCurrencyCodeSVC CurrencyPairUpdateFromCurrencyCode = "SVC"
+	CurrencyPairUpdateFromCurrencyCodeSYP CurrencyPairUpdateFromCurrencyCode = "SYP"
+	CurrencyPairUpdateFromCurrencyCodeSZL CurrencyPairUpdateFromCurrencyCode = "SZL"
+	CurrencyPairUpdateFromCurrencyCodeTHB CurrencyPairUpdateFromCurrencyCode = "THB"
+	CurrencyPairUpdateFromCurrencyCodeTJS CurrencyPairUpdateFromCurrencyCode = "TJS"
+	CurrencyPairUpdateFromCurrencyCodeTMT CurrencyPairUpdateFromCurrencyCode = "TMT"
+	CurrencyPairUpdateFromCurrencyCodeTND CurrencyPairUpdateFromCurrencyCode = "TND"
+	CurrencyPairUpdateFromCurrencyCodeTOP CurrencyPairUpdateFromCurrencyCode = "TOP"
+	CurrencyPairUpdateFromCurrencyCodeTRY CurrencyPairUpdateFromCurrencyCode = "TRY"
+	CurrencyPairUpdateFromCurrencyCodeTTD CurrencyPairUpdateFromCurrencyCode = "TTD"
+	CurrencyPairUpdateFromCurrencyCodeTWD CurrencyPairUpdateFromCurrencyCode = "TWD"
+	CurrencyPairUpdateFromCurrencyCodeTZS CurrencyPairUpdateFromCurrencyCode = "TZS"
+	CurrencyPairUpdateFromCurrencyCodeUAH CurrencyPairUpdateFromCurrencyCode = "UAH"
+	CurrencyPairUpdateFromCurrencyCodeUGX CurrencyPairUpdateFromCurrencyCode = "UGX"
+	CurrencyPairUpdateFromCurrencyCodeUSD CurrencyPairUpdateFromCurrencyCode = "USD"
+	CurrencyPairUpdateFromCurrencyCodeUSN CurrencyPairUpdateFromCurrencyCode = "USN"
+	CurrencyPairUpdateFromCurrencyCodeUYI CurrencyPairUpdateFromCurrencyCode = "UYI"
+	CurrencyPairUpdateFromCurrencyCodeUYU CurrencyPairUpdateFromCurrencyCode = "UYU"
+	CurrencyPairUpdateFromCurrencyCodeUZS CurrencyPairUpdateFromCurrencyCode = "UZS"
+	CurrencyPairUpdateFromCurrencyCodeVEF CurrencyPairUpdateFromCurrencyCode = "VEF"
+	CurrencyPairUpdateFromCurrencyCodeVND CurrencyPairUpdateFromCurrencyCode = "VND"
+	CurrencyPairUpdateFromCurrencyCodeVUV CurrencyPairUpdateFromCurrencyCode = "VUV"
+	CurrencyPairUpdateFromCurrencyCodeWST CurrencyPairUpdateFromCurrencyCode = "WST"
+	CurrencyPairUpdateFromCurrencyCodeXAF CurrencyPairUpdateFromCurrencyCode = "XAF"
+	CurrencyPairUpdateFromCurrencyCodeXAG CurrencyPairUpdateFromCurrencyCode = "XAG"
+	CurrencyPairUpdateFromCurrencyCodeXAU CurrencyPairUpdateFromCurrencyCode = "XAU"
+	CurrencyPairUpdateFromCurrencyCodeXBA CurrencyPairUpdateFromCurrencyCode = "XBA"
+	CurrencyPairUpdateFromCurrencyCodeXBB CurrencyPairUpdateFromCurrencyCode = "XBB"
+	CurrencyPairUpdateFromCurrencyCodeXBC CurrencyPairUpdateFromCurrencyCode = "XBC"
+	CurrencyPairUpdateFromCurrencyCodeXBD CurrencyPairUpdateFromCurrencyCode = "XBD"
+	CurrencyPairUpdateFromCurrencyCodeXCD CurrencyPairUpdateFromCurrencyCode = "XCD"
+	CurrencyPairUpdateFromCurrencyCodeXDR CurrencyPairUpdateFromCurrencyCode = "XDR"
+	CurrencyPairUpdateFromCurrencyCodeXOF CurrencyPairUpdateFromCurrencyCode = "XOF"
+	CurrencyPairUpdateFromCurrencyCodeXPD CurrencyPairUpdateFromCurrencyCode = "XPD"
+	CurrencyPairUpdateFromCurrencyCodeXPF CurrencyPairUpdateFromCurrencyCode = "XPF"
+	CurrencyPairUpdateFromCurrencyCodeXPT CurrencyPairUpdateFromCurrencyCode = "XPT"
+	CurrencyPairUpdateFromCurrencyCodeXSU CurrencyPairUpdateFromCurrencyCode = "XSU"
+	CurrencyPairUpdateFromCurrencyCodeXUA CurrencyPairUpdateFromCurrencyCode = "XUA"
+	CurrencyPairUpdateFromCurrencyCodeYER CurrencyPairUpdateFromCurrencyCode = "YER"
+	CurrencyPairUpdateFromCurrencyCodeZAR CurrencyPairUpdateFromCurrencyCode = "ZAR"
+	CurrencyPairUpdateFromCurrencyCodeZMW CurrencyPairUpdateFromCurrencyCode = "ZMW"
+	CurrencyPairUpdateFromCurrencyCodeZWL CurrencyPairUpdateFromCurrencyCode = "ZWL"
+)
+
+// Valid indicates whether the value is a known member of the CurrencyPairUpdateFromCurrencyCode enum.
+func (e CurrencyPairUpdateFromCurrencyCode) Valid() bool {
+	switch e {
+	case CurrencyPairUpdateFromCurrencyCodeAED:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeAFN:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeALL:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeAMD:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeANG:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeAOA:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeARS:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeAUD:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeAWG:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeAZN:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeBAM:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeBBD:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeBDT:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeBGN:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeBHD:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeBIF:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeBMD:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeBND:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeBOB:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeBOV:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeBRL:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeBSD:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeBTN:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeBWP:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeBYN:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeBZD:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeCAD:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeCDF:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeCHE:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeCHF:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeCHW:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeCLF:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeCLP:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeCNY:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeCOP:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeCOU:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeCRC:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeCUC:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeCUP:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeCVE:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeCZK:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeDJF:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeDKK:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeDOP:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeDZD:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeEGP:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeERN:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeETB:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeEUR:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeFJD:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeFKP:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeGBP:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeGEL:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeGHS:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeGIP:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeGMD:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeGNF:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeGTQ:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeGYD:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeHKD:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeHNL:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeHRK:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeHTG:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeHUF:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeIDR:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeILS:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeINR:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeIQD:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeIRR:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeISK:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeJMD:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeJOD:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeJPY:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeKES:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeKGS:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeKHR:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeKMF:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeKPW:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeKRW:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeKWD:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeKYD:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeKZT:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeLAK:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeLBP:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeLKR:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeLRD:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeLSL:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeLYD:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeMAD:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeMDL:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeMGA:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeMKD:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeMMK:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeMNT:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeMOP:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeMRU:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeMUR:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeMVR:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeMWK:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeMXN:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeMXV:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeMYR:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeMZN:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeNAD:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeNGN:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeNIO:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeNOK:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeNPR:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeNZD:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeOMR:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodePAB:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodePEN:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodePGK:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodePHP:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodePKR:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodePLN:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodePYG:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeQAR:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeRON:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeRSD:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeRUB:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeRWF:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeSAR:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeSBD:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeSCR:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeSDG:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeSEK:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeSGD:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeSHP:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeSLL:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeSOS:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeSRD:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeSSP:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeSTN:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeSVC:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeSYP:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeSZL:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeTHB:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeTJS:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeTMT:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeTND:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeTOP:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeTRY:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeTTD:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeTWD:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeTZS:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeUAH:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeUGX:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeUSD:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeUSN:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeUYI:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeUYU:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeUZS:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeVEF:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeVND:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeVUV:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeWST:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeXAF:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeXAG:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeXAU:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeXBA:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeXBB:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeXBC:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeXBD:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeXCD:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeXDR:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeXOF:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeXPD:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeXPF:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeXPT:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeXSU:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeXUA:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeYER:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeZAR:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeZMW:
+		return true
+	case CurrencyPairUpdateFromCurrencyCodeZWL:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CurrencyPairUpdateToCurrencyCode.
+const (
+	CurrencyPairUpdateToCurrencyCodeAED CurrencyPairUpdateToCurrencyCode = "AED"
+	CurrencyPairUpdateToCurrencyCodeAFN CurrencyPairUpdateToCurrencyCode = "AFN"
+	CurrencyPairUpdateToCurrencyCodeALL CurrencyPairUpdateToCurrencyCode = "ALL"
+	CurrencyPairUpdateToCurrencyCodeAMD CurrencyPairUpdateToCurrencyCode = "AMD"
+	CurrencyPairUpdateToCurrencyCodeANG CurrencyPairUpdateToCurrencyCode = "ANG"
+	CurrencyPairUpdateToCurrencyCodeAOA CurrencyPairUpdateToCurrencyCode = "AOA"
+	CurrencyPairUpdateToCurrencyCodeARS CurrencyPairUpdateToCurrencyCode = "ARS"
+	CurrencyPairUpdateToCurrencyCodeAUD CurrencyPairUpdateToCurrencyCode = "AUD"
+	CurrencyPairUpdateToCurrencyCodeAWG CurrencyPairUpdateToCurrencyCode = "AWG"
+	CurrencyPairUpdateToCurrencyCodeAZN CurrencyPairUpdateToCurrencyCode = "AZN"
+	CurrencyPairUpdateToCurrencyCodeBAM CurrencyPairUpdateToCurrencyCode = "BAM"
+	CurrencyPairUpdateToCurrencyCodeBBD CurrencyPairUpdateToCurrencyCode = "BBD"
+	CurrencyPairUpdateToCurrencyCodeBDT CurrencyPairUpdateToCurrencyCode = "BDT"
+	CurrencyPairUpdateToCurrencyCodeBGN CurrencyPairUpdateToCurrencyCode = "BGN"
+	CurrencyPairUpdateToCurrencyCodeBHD CurrencyPairUpdateToCurrencyCode = "BHD"
+	CurrencyPairUpdateToCurrencyCodeBIF CurrencyPairUpdateToCurrencyCode = "BIF"
+	CurrencyPairUpdateToCurrencyCodeBMD CurrencyPairUpdateToCurrencyCode = "BMD"
+	CurrencyPairUpdateToCurrencyCodeBND CurrencyPairUpdateToCurrencyCode = "BND"
+	CurrencyPairUpdateToCurrencyCodeBOB CurrencyPairUpdateToCurrencyCode = "BOB"
+	CurrencyPairUpdateToCurrencyCodeBOV CurrencyPairUpdateToCurrencyCode = "BOV"
+	CurrencyPairUpdateToCurrencyCodeBRL CurrencyPairUpdateToCurrencyCode = "BRL"
+	CurrencyPairUpdateToCurrencyCodeBSD CurrencyPairUpdateToCurrencyCode = "BSD"
+	CurrencyPairUpdateToCurrencyCodeBTN CurrencyPairUpdateToCurrencyCode = "BTN"
+	CurrencyPairUpdateToCurrencyCodeBWP CurrencyPairUpdateToCurrencyCode = "BWP"
+	CurrencyPairUpdateToCurrencyCodeBYN CurrencyPairUpdateToCurrencyCode = "BYN"
+	CurrencyPairUpdateToCurrencyCodeBZD CurrencyPairUpdateToCurrencyCode = "BZD"
+	CurrencyPairUpdateToCurrencyCodeCAD CurrencyPairUpdateToCurrencyCode = "CAD"
+	CurrencyPairUpdateToCurrencyCodeCDF CurrencyPairUpdateToCurrencyCode = "CDF"
+	CurrencyPairUpdateToCurrencyCodeCHE CurrencyPairUpdateToCurrencyCode = "CHE"
+	CurrencyPairUpdateToCurrencyCodeCHF CurrencyPairUpdateToCurrencyCode = "CHF"
+	CurrencyPairUpdateToCurrencyCodeCHW CurrencyPairUpdateToCurrencyCode = "CHW"
+	CurrencyPairUpdateToCurrencyCodeCLF CurrencyPairUpdateToCurrencyCode = "CLF"
+	CurrencyPairUpdateToCurrencyCodeCLP CurrencyPairUpdateToCurrencyCode = "CLP"
+	CurrencyPairUpdateToCurrencyCodeCNY CurrencyPairUpdateToCurrencyCode = "CNY"
+	CurrencyPairUpdateToCurrencyCodeCOP CurrencyPairUpdateToCurrencyCode = "COP"
+	CurrencyPairUpdateToCurrencyCodeCOU CurrencyPairUpdateToCurrencyCode = "COU"
+	CurrencyPairUpdateToCurrencyCodeCRC CurrencyPairUpdateToCurrencyCode = "CRC"
+	CurrencyPairUpdateToCurrencyCodeCUC CurrencyPairUpdateToCurrencyCode = "CUC"
+	CurrencyPairUpdateToCurrencyCodeCUP CurrencyPairUpdateToCurrencyCode = "CUP"
+	CurrencyPairUpdateToCurrencyCodeCVE CurrencyPairUpdateToCurrencyCode = "CVE"
+	CurrencyPairUpdateToCurrencyCodeCZK CurrencyPairUpdateToCurrencyCode = "CZK"
+	CurrencyPairUpdateToCurrencyCodeDJF CurrencyPairUpdateToCurrencyCode = "DJF"
+	CurrencyPairUpdateToCurrencyCodeDKK CurrencyPairUpdateToCurrencyCode = "DKK"
+	CurrencyPairUpdateToCurrencyCodeDOP CurrencyPairUpdateToCurrencyCode = "DOP"
+	CurrencyPairUpdateToCurrencyCodeDZD CurrencyPairUpdateToCurrencyCode = "DZD"
+	CurrencyPairUpdateToCurrencyCodeEGP CurrencyPairUpdateToCurrencyCode = "EGP"
+	CurrencyPairUpdateToCurrencyCodeERN CurrencyPairUpdateToCurrencyCode = "ERN"
+	CurrencyPairUpdateToCurrencyCodeETB CurrencyPairUpdateToCurrencyCode = "ETB"
+	CurrencyPairUpdateToCurrencyCodeEUR CurrencyPairUpdateToCurrencyCode = "EUR"
+	CurrencyPairUpdateToCurrencyCodeFJD CurrencyPairUpdateToCurrencyCode = "FJD"
+	CurrencyPairUpdateToCurrencyCodeFKP CurrencyPairUpdateToCurrencyCode = "FKP"
+	CurrencyPairUpdateToCurrencyCodeGBP CurrencyPairUpdateToCurrencyCode = "GBP"
+	CurrencyPairUpdateToCurrencyCodeGEL CurrencyPairUpdateToCurrencyCode = "GEL"
+	CurrencyPairUpdateToCurrencyCodeGHS CurrencyPairUpdateToCurrencyCode = "GHS"
+	CurrencyPairUpdateToCurrencyCodeGIP CurrencyPairUpdateToCurrencyCode = "GIP"
+	CurrencyPairUpdateToCurrencyCodeGMD CurrencyPairUpdateToCurrencyCode = "GMD"
+	CurrencyPairUpdateToCurrencyCodeGNF CurrencyPairUpdateToCurrencyCode = "GNF"
+	CurrencyPairUpdateToCurrencyCodeGTQ CurrencyPairUpdateToCurrencyCode = "GTQ"
+	CurrencyPairUpdateToCurrencyCodeGYD CurrencyPairUpdateToCurrencyCode = "GYD"
+	CurrencyPairUpdateToCurrencyCodeHKD CurrencyPairUpdateToCurrencyCode = "HKD"
+	CurrencyPairUpdateToCurrencyCodeHNL CurrencyPairUpdateToCurrencyCode = "HNL"
+	CurrencyPairUpdateToCurrencyCodeHRK CurrencyPairUpdateToCurrencyCode = "HRK"
+	CurrencyPairUpdateToCurrencyCodeHTG CurrencyPairUpdateToCurrencyCode = "HTG"
+	CurrencyPairUpdateToCurrencyCodeHUF CurrencyPairUpdateToCurrencyCode = "HUF"
+	CurrencyPairUpdateToCurrencyCodeIDR CurrencyPairUpdateToCurrencyCode = "IDR"
+	CurrencyPairUpdateToCurrencyCodeILS CurrencyPairUpdateToCurrencyCode = "ILS"
+	CurrencyPairUpdateToCurrencyCodeINR CurrencyPairUpdateToCurrencyCode = "INR"
+	CurrencyPairUpdateToCurrencyCodeIQD CurrencyPairUpdateToCurrencyCode = "IQD"
+	CurrencyPairUpdateToCurrencyCodeIRR CurrencyPairUpdateToCurrencyCode = "IRR"
+	CurrencyPairUpdateToCurrencyCodeISK CurrencyPairUpdateToCurrencyCode = "ISK"
+	CurrencyPairUpdateToCurrencyCodeJMD CurrencyPairUpdateToCurrencyCode = "JMD"
+	CurrencyPairUpdateToCurrencyCodeJOD CurrencyPairUpdateToCurrencyCode = "JOD"
+	CurrencyPairUpdateToCurrencyCodeJPY CurrencyPairUpdateToCurrencyCode = "JPY"
+	CurrencyPairUpdateToCurrencyCodeKES CurrencyPairUpdateToCurrencyCode = "KES"
+	CurrencyPairUpdateToCurrencyCodeKGS CurrencyPairUpdateToCurrencyCode = "KGS"
+	CurrencyPairUpdateToCurrencyCodeKHR CurrencyPairUpdateToCurrencyCode = "KHR"
+	CurrencyPairUpdateToCurrencyCodeKMF CurrencyPairUpdateToCurrencyCode = "KMF"
+	CurrencyPairUpdateToCurrencyCodeKPW CurrencyPairUpdateToCurrencyCode = "KPW"
+	CurrencyPairUpdateToCurrencyCodeKRW CurrencyPairUpdateToCurrencyCode = "KRW"
+	CurrencyPairUpdateToCurrencyCodeKWD CurrencyPairUpdateToCurrencyCode = "KWD"
+	CurrencyPairUpdateToCurrencyCodeKYD CurrencyPairUpdateToCurrencyCode = "KYD"
+	CurrencyPairUpdateToCurrencyCodeKZT CurrencyPairUpdateToCurrencyCode = "KZT"
+	CurrencyPairUpdateToCurrencyCodeLAK CurrencyPairUpdateToCurrencyCode = "LAK"
+	CurrencyPairUpdateToCurrencyCodeLBP CurrencyPairUpdateToCurrencyCode = "LBP"
+	CurrencyPairUpdateToCurrencyCodeLKR CurrencyPairUpdateToCurrencyCode = "LKR"
+	CurrencyPairUpdateToCurrencyCodeLRD CurrencyPairUpdateToCurrencyCode = "LRD"
+	CurrencyPairUpdateToCurrencyCodeLSL CurrencyPairUpdateToCurrencyCode = "LSL"
+	CurrencyPairUpdateToCurrencyCodeLYD CurrencyPairUpdateToCurrencyCode = "LYD"
+	CurrencyPairUpdateToCurrencyCodeMAD CurrencyPairUpdateToCurrencyCode = "MAD"
+	CurrencyPairUpdateToCurrencyCodeMDL CurrencyPairUpdateToCurrencyCode = "MDL"
+	CurrencyPairUpdateToCurrencyCodeMGA CurrencyPairUpdateToCurrencyCode = "MGA"
+	CurrencyPairUpdateToCurrencyCodeMKD CurrencyPairUpdateToCurrencyCode = "MKD"
+	CurrencyPairUpdateToCurrencyCodeMMK CurrencyPairUpdateToCurrencyCode = "MMK"
+	CurrencyPairUpdateToCurrencyCodeMNT CurrencyPairUpdateToCurrencyCode = "MNT"
+	CurrencyPairUpdateToCurrencyCodeMOP CurrencyPairUpdateToCurrencyCode = "MOP"
+	CurrencyPairUpdateToCurrencyCodeMRU CurrencyPairUpdateToCurrencyCode = "MRU"
+	CurrencyPairUpdateToCurrencyCodeMUR CurrencyPairUpdateToCurrencyCode = "MUR"
+	CurrencyPairUpdateToCurrencyCodeMVR CurrencyPairUpdateToCurrencyCode = "MVR"
+	CurrencyPairUpdateToCurrencyCodeMWK CurrencyPairUpdateToCurrencyCode = "MWK"
+	CurrencyPairUpdateToCurrencyCodeMXN CurrencyPairUpdateToCurrencyCode = "MXN"
+	CurrencyPairUpdateToCurrencyCodeMXV CurrencyPairUpdateToCurrencyCode = "MXV"
+	CurrencyPairUpdateToCurrencyCodeMYR CurrencyPairUpdateToCurrencyCode = "MYR"
+	CurrencyPairUpdateToCurrencyCodeMZN CurrencyPairUpdateToCurrencyCode = "MZN"
+	CurrencyPairUpdateToCurrencyCodeNAD CurrencyPairUpdateToCurrencyCode = "NAD"
+	CurrencyPairUpdateToCurrencyCodeNGN CurrencyPairUpdateToCurrencyCode = "NGN"
+	CurrencyPairUpdateToCurrencyCodeNIO CurrencyPairUpdateToCurrencyCode = "NIO"
+	CurrencyPairUpdateToCurrencyCodeNOK CurrencyPairUpdateToCurrencyCode = "NOK"
+	CurrencyPairUpdateToCurrencyCodeNPR CurrencyPairUpdateToCurrencyCode = "NPR"
+	CurrencyPairUpdateToCurrencyCodeNZD CurrencyPairUpdateToCurrencyCode = "NZD"
+	CurrencyPairUpdateToCurrencyCodeOMR CurrencyPairUpdateToCurrencyCode = "OMR"
+	CurrencyPairUpdateToCurrencyCodePAB CurrencyPairUpdateToCurrencyCode = "PAB"
+	CurrencyPairUpdateToCurrencyCodePEN CurrencyPairUpdateToCurrencyCode = "PEN"
+	CurrencyPairUpdateToCurrencyCodePGK CurrencyPairUpdateToCurrencyCode = "PGK"
+	CurrencyPairUpdateToCurrencyCodePHP CurrencyPairUpdateToCurrencyCode = "PHP"
+	CurrencyPairUpdateToCurrencyCodePKR CurrencyPairUpdateToCurrencyCode = "PKR"
+	CurrencyPairUpdateToCurrencyCodePLN CurrencyPairUpdateToCurrencyCode = "PLN"
+	CurrencyPairUpdateToCurrencyCodePYG CurrencyPairUpdateToCurrencyCode = "PYG"
+	CurrencyPairUpdateToCurrencyCodeQAR CurrencyPairUpdateToCurrencyCode = "QAR"
+	CurrencyPairUpdateToCurrencyCodeRON CurrencyPairUpdateToCurrencyCode = "RON"
+	CurrencyPairUpdateToCurrencyCodeRSD CurrencyPairUpdateToCurrencyCode = "RSD"
+	CurrencyPairUpdateToCurrencyCodeRUB CurrencyPairUpdateToCurrencyCode = "RUB"
+	CurrencyPairUpdateToCurrencyCodeRWF CurrencyPairUpdateToCurrencyCode = "RWF"
+	CurrencyPairUpdateToCurrencyCodeSAR CurrencyPairUpdateToCurrencyCode = "SAR"
+	CurrencyPairUpdateToCurrencyCodeSBD CurrencyPairUpdateToCurrencyCode = "SBD"
+	CurrencyPairUpdateToCurrencyCodeSCR CurrencyPairUpdateToCurrencyCode = "SCR"
+	CurrencyPairUpdateToCurrencyCodeSDG CurrencyPairUpdateToCurrencyCode = "SDG"
+	CurrencyPairUpdateToCurrencyCodeSEK CurrencyPairUpdateToCurrencyCode = "SEK"
+	CurrencyPairUpdateToCurrencyCodeSGD CurrencyPairUpdateToCurrencyCode = "SGD"
+	CurrencyPairUpdateToCurrencyCodeSHP CurrencyPairUpdateToCurrencyCode = "SHP"
+	CurrencyPairUpdateToCurrencyCodeSLL CurrencyPairUpdateToCurrencyCode = "SLL"
+	CurrencyPairUpdateToCurrencyCodeSOS CurrencyPairUpdateToCurrencyCode = "SOS"
+	CurrencyPairUpdateToCurrencyCodeSRD CurrencyPairUpdateToCurrencyCode = "SRD"
+	CurrencyPairUpdateToCurrencyCodeSSP CurrencyPairUpdateToCurrencyCode = "SSP"
+	CurrencyPairUpdateToCurrencyCodeSTN CurrencyPairUpdateToCurrencyCode = "STN"
+	CurrencyPairUpdateToCurrencyCodeSVC CurrencyPairUpdateToCurrencyCode = "SVC"
+	CurrencyPairUpdateToCurrencyCodeSYP CurrencyPairUpdateToCurrencyCode = "SYP"
+	CurrencyPairUpdateToCurrencyCodeSZL CurrencyPairUpdateToCurrencyCode = "SZL"
+	CurrencyPairUpdateToCurrencyCodeTHB CurrencyPairUpdateToCurrencyCode = "THB"
+	CurrencyPairUpdateToCurrencyCodeTJS CurrencyPairUpdateToCurrencyCode = "TJS"
+	CurrencyPairUpdateToCurrencyCodeTMT CurrencyPairUpdateToCurrencyCode = "TMT"
+	CurrencyPairUpdateToCurrencyCodeTND CurrencyPairUpdateToCurrencyCode = "TND"
+	CurrencyPairUpdateToCurrencyCodeTOP CurrencyPairUpdateToCurrencyCode = "TOP"
+	CurrencyPairUpdateToCurrencyCodeTRY CurrencyPairUpdateToCurrencyCode = "TRY"
+	CurrencyPairUpdateToCurrencyCodeTTD CurrencyPairUpdateToCurrencyCode = "TTD"
+	CurrencyPairUpdateToCurrencyCodeTWD CurrencyPairUpdateToCurrencyCode = "TWD"
+	CurrencyPairUpdateToCurrencyCodeTZS CurrencyPairUpdateToCurrencyCode = "TZS"
+	CurrencyPairUpdateToCurrencyCodeUAH CurrencyPairUpdateToCurrencyCode = "UAH"
+	CurrencyPairUpdateToCurrencyCodeUGX CurrencyPairUpdateToCurrencyCode = "UGX"
+	CurrencyPairUpdateToCurrencyCodeUSD CurrencyPairUpdateToCurrencyCode = "USD"
+	CurrencyPairUpdateToCurrencyCodeUSN CurrencyPairUpdateToCurrencyCode = "USN"
+	CurrencyPairUpdateToCurrencyCodeUYI CurrencyPairUpdateToCurrencyCode = "UYI"
+	CurrencyPairUpdateToCurrencyCodeUYU CurrencyPairUpdateToCurrencyCode = "UYU"
+	CurrencyPairUpdateToCurrencyCodeUZS CurrencyPairUpdateToCurrencyCode = "UZS"
+	CurrencyPairUpdateToCurrencyCodeVEF CurrencyPairUpdateToCurrencyCode = "VEF"
+	CurrencyPairUpdateToCurrencyCodeVND CurrencyPairUpdateToCurrencyCode = "VND"
+	CurrencyPairUpdateToCurrencyCodeVUV CurrencyPairUpdateToCurrencyCode = "VUV"
+	CurrencyPairUpdateToCurrencyCodeWST CurrencyPairUpdateToCurrencyCode = "WST"
+	CurrencyPairUpdateToCurrencyCodeXAF CurrencyPairUpdateToCurrencyCode = "XAF"
+	CurrencyPairUpdateToCurrencyCodeXAG CurrencyPairUpdateToCurrencyCode = "XAG"
+	CurrencyPairUpdateToCurrencyCodeXAU CurrencyPairUpdateToCurrencyCode = "XAU"
+	CurrencyPairUpdateToCurrencyCodeXBA CurrencyPairUpdateToCurrencyCode = "XBA"
+	CurrencyPairUpdateToCurrencyCodeXBB CurrencyPairUpdateToCurrencyCode = "XBB"
+	CurrencyPairUpdateToCurrencyCodeXBC CurrencyPairUpdateToCurrencyCode = "XBC"
+	CurrencyPairUpdateToCurrencyCodeXBD CurrencyPairUpdateToCurrencyCode = "XBD"
+	CurrencyPairUpdateToCurrencyCodeXCD CurrencyPairUpdateToCurrencyCode = "XCD"
+	CurrencyPairUpdateToCurrencyCodeXDR CurrencyPairUpdateToCurrencyCode = "XDR"
+	CurrencyPairUpdateToCurrencyCodeXOF CurrencyPairUpdateToCurrencyCode = "XOF"
+	CurrencyPairUpdateToCurrencyCodeXPD CurrencyPairUpdateToCurrencyCode = "XPD"
+	CurrencyPairUpdateToCurrencyCodeXPF CurrencyPairUpdateToCurrencyCode = "XPF"
+	CurrencyPairUpdateToCurrencyCodeXPT CurrencyPairUpdateToCurrencyCode = "XPT"
+	CurrencyPairUpdateToCurrencyCodeXSU CurrencyPairUpdateToCurrencyCode = "XSU"
+	CurrencyPairUpdateToCurrencyCodeXUA CurrencyPairUpdateToCurrencyCode = "XUA"
+	CurrencyPairUpdateToCurrencyCodeYER CurrencyPairUpdateToCurrencyCode = "YER"
+	CurrencyPairUpdateToCurrencyCodeZAR CurrencyPairUpdateToCurrencyCode = "ZAR"
+	CurrencyPairUpdateToCurrencyCodeZMW CurrencyPairUpdateToCurrencyCode = "ZMW"
+	CurrencyPairUpdateToCurrencyCodeZWL CurrencyPairUpdateToCurrencyCode = "ZWL"
+)
+
+// Valid indicates whether the value is a known member of the CurrencyPairUpdateToCurrencyCode enum.
+func (e CurrencyPairUpdateToCurrencyCode) Valid() bool {
+	switch e {
+	case CurrencyPairUpdateToCurrencyCodeAED:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeAFN:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeALL:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeAMD:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeANG:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeAOA:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeARS:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeAUD:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeAWG:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeAZN:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeBAM:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeBBD:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeBDT:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeBGN:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeBHD:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeBIF:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeBMD:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeBND:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeBOB:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeBOV:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeBRL:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeBSD:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeBTN:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeBWP:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeBYN:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeBZD:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeCAD:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeCDF:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeCHE:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeCHF:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeCHW:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeCLF:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeCLP:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeCNY:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeCOP:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeCOU:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeCRC:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeCUC:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeCUP:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeCVE:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeCZK:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeDJF:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeDKK:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeDOP:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeDZD:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeEGP:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeERN:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeETB:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeEUR:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeFJD:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeFKP:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeGBP:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeGEL:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeGHS:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeGIP:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeGMD:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeGNF:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeGTQ:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeGYD:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeHKD:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeHNL:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeHRK:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeHTG:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeHUF:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeIDR:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeILS:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeINR:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeIQD:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeIRR:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeISK:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeJMD:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeJOD:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeJPY:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeKES:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeKGS:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeKHR:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeKMF:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeKPW:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeKRW:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeKWD:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeKYD:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeKZT:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeLAK:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeLBP:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeLKR:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeLRD:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeLSL:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeLYD:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeMAD:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeMDL:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeMGA:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeMKD:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeMMK:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeMNT:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeMOP:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeMRU:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeMUR:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeMVR:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeMWK:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeMXN:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeMXV:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeMYR:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeMZN:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeNAD:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeNGN:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeNIO:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeNOK:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeNPR:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeNZD:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeOMR:
+		return true
+	case CurrencyPairUpdateToCurrencyCodePAB:
+		return true
+	case CurrencyPairUpdateToCurrencyCodePEN:
+		return true
+	case CurrencyPairUpdateToCurrencyCodePGK:
+		return true
+	case CurrencyPairUpdateToCurrencyCodePHP:
+		return true
+	case CurrencyPairUpdateToCurrencyCodePKR:
+		return true
+	case CurrencyPairUpdateToCurrencyCodePLN:
+		return true
+	case CurrencyPairUpdateToCurrencyCodePYG:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeQAR:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeRON:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeRSD:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeRUB:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeRWF:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeSAR:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeSBD:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeSCR:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeSDG:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeSEK:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeSGD:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeSHP:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeSLL:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeSOS:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeSRD:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeSSP:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeSTN:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeSVC:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeSYP:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeSZL:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeTHB:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeTJS:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeTMT:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeTND:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeTOP:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeTRY:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeTTD:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeTWD:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeTZS:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeUAH:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeUGX:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeUSD:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeUSN:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeUYI:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeUYU:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeUZS:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeVEF:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeVND:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeVUV:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeWST:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeXAF:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeXAG:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeXAU:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeXBA:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeXBB:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeXBC:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeXBD:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeXCD:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeXDR:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeXOF:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeXPD:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeXPF:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeXPT:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeXSU:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeXUA:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeYER:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeZAR:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeZMW:
+		return true
+	case CurrencyPairUpdateToCurrencyCodeZWL:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for DatePointTimeType.
+const (
+	DatePointTimeTypeDATE DatePointTimeType = "DATE"
+)
+
+// Valid indicates whether the value is a known member of the DatePointTimeType enum.
+func (e DatePointTimeType) Valid() bool {
+	switch e {
+	case DatePointTimeTypeDATE:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for DatePointTimezoneSource.
+const (
+	DatePointTimezoneSourceCUSTOM DatePointTimezoneSource = "CUSTOM"
+	DatePointTimezoneSourcePORTAL DatePointTimezoneSource = "PORTAL"
+	DatePointTimezoneSourceUSER   DatePointTimezoneSource = "USER"
+)
+
+// Valid indicates whether the value is a known member of the DatePointTimezoneSource enum.
+func (e DatePointTimezoneSource) Valid() bool {
+	switch e {
+	case DatePointTimezoneSourceCUSTOM:
+		return true
+	case DatePointTimezoneSourcePORTAL:
+		return true
+	case DatePointTimezoneSourceUSER:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for DatePropertyOperationMonth.
+const (
+	DatePropertyOperationMonthAPR DatePropertyOperationMonth = "APR"
+	DatePropertyOperationMonthAUG DatePropertyOperationMonth = "AUG"
+	DatePropertyOperationMonthDEC DatePropertyOperationMonth = "DEC"
+	DatePropertyOperationMonthFEB DatePropertyOperationMonth = "FEB"
+	DatePropertyOperationMonthJAN DatePropertyOperationMonth = "JAN"
+	DatePropertyOperationMonthJUL DatePropertyOperationMonth = "JUL"
+	DatePropertyOperationMonthJUN DatePropertyOperationMonth = "JUN"
+	DatePropertyOperationMonthMAR DatePropertyOperationMonth = "MAR"
+	DatePropertyOperationMonthMAY DatePropertyOperationMonth = "MAY"
+	DatePropertyOperationMonthNOV DatePropertyOperationMonth = "NOV"
+	DatePropertyOperationMonthOCT DatePropertyOperationMonth = "OCT"
+	DatePropertyOperationMonthSEP DatePropertyOperationMonth = "SEP"
+)
+
+// Valid indicates whether the value is a known member of the DatePropertyOperationMonth enum.
+func (e DatePropertyOperationMonth) Valid() bool {
+	switch e {
+	case DatePropertyOperationMonthAPR:
+		return true
+	case DatePropertyOperationMonthAUG:
+		return true
+	case DatePropertyOperationMonthDEC:
+		return true
+	case DatePropertyOperationMonthFEB:
+		return true
+	case DatePropertyOperationMonthJAN:
+		return true
+	case DatePropertyOperationMonthJUL:
+		return true
+	case DatePropertyOperationMonthJUN:
+		return true
+	case DatePropertyOperationMonthMAR:
+		return true
+	case DatePropertyOperationMonthMAY:
+		return true
+	case DatePropertyOperationMonthNOV:
+		return true
+	case DatePropertyOperationMonthOCT:
+		return true
+	case DatePropertyOperationMonthSEP:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for DatePropertyOperationOperator.
+const (
+	DatePropertyOperationOperatorAFTER  DatePropertyOperationOperator = "AFTER"
+	DatePropertyOperationOperatorBEFORE DatePropertyOperationOperator = "BEFORE"
+	DatePropertyOperationOperatorEQUAL  DatePropertyOperationOperator = "EQUAL"
+)
+
+// Valid indicates whether the value is a known member of the DatePropertyOperationOperator enum.
+func (e DatePropertyOperationOperator) Valid() bool {
+	switch e {
+	case DatePropertyOperationOperatorAFTER:
+		return true
+	case DatePropertyOperationOperatorBEFORE:
+		return true
+	case DatePropertyOperationOperatorEQUAL:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for DatePropertyOperationPropertyType.
+const (
+	DatePropertyOperationPropertyTypeDate DatePropertyOperationPropertyType = "date"
+)
+
+// Valid indicates whether the value is a known member of the DatePropertyOperationPropertyType enum.
+func (e DatePropertyOperationPropertyType) Valid() bool {
+	switch e {
+	case DatePropertyOperationPropertyTypeDate:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for DateTimePropertyOperationOperator.
+const (
+	DateTimePropertyOperationOperatorISAFTER      DateTimePropertyOperationOperator = "IS_AFTER"
+	DateTimePropertyOperationOperatorISAFTERDATE  DateTimePropertyOperationOperator = "IS_AFTER_DATE"
+	DateTimePropertyOperationOperatorISBEFORE     DateTimePropertyOperationOperator = "IS_BEFORE"
+	DateTimePropertyOperationOperatorISBEFOREDATE DateTimePropertyOperationOperator = "IS_BEFORE_DATE"
+	DateTimePropertyOperationOperatorISEQUALTO    DateTimePropertyOperationOperator = "IS_EQUAL_TO"
+)
+
+// Valid indicates whether the value is a known member of the DateTimePropertyOperationOperator enum.
+func (e DateTimePropertyOperationOperator) Valid() bool {
+	switch e {
+	case DateTimePropertyOperationOperatorISAFTER:
+		return true
+	case DateTimePropertyOperationOperatorISAFTERDATE:
+		return true
+	case DateTimePropertyOperationOperatorISBEFORE:
+		return true
+	case DateTimePropertyOperationOperatorISBEFOREDATE:
+		return true
+	case DateTimePropertyOperationOperatorISEQUALTO:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for DateTimePropertyOperationPropertyType.
+const (
+	DateTimePropertyOperationPropertyTypeDatetime DateTimePropertyOperationPropertyType = "datetime"
+)
+
+// Valid indicates whether the value is a known member of the DateTimePropertyOperationPropertyType enum.
+func (e DateTimePropertyOperationPropertyType) Valid() bool {
+	switch e {
+	case DateTimePropertyOperationPropertyTypeDatetime:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for DefaultRequirementsOperator.
+const (
+	DefaultRequirementsOperatorAND DefaultRequirementsOperator = "AND"
+	DefaultRequirementsOperatorOR  DefaultRequirementsOperator = "OR"
+)
+
+// Valid indicates whether the value is a known member of the DefaultRequirementsOperator enum.
+func (e DefaultRequirementsOperator) Valid() bool {
+	switch e {
+	case DefaultRequirementsOperatorAND:
+		return true
+	case DefaultRequirementsOperatorOR:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for DefinitionSourceType.
+const (
+	DefinitionSourceTypeGLOBAL      DefinitionSourceType = "GLOBAL"
+	DefinitionSourceTypeHAVENBRANCH DefinitionSourceType = "HAVEN_BRANCH"
+	DefinitionSourceTypeOBJECTTYPE  DefinitionSourceType = "OBJECT_TYPE"
+	DefinitionSourceTypePORTAL      DefinitionSourceType = "PORTAL"
+)
+
+// Valid indicates whether the value is a known member of the DefinitionSourceType enum.
+func (e DefinitionSourceType) Valid() bool {
+	switch e {
+	case DefinitionSourceTypeGLOBAL:
+		return true
+	case DefinitionSourceTypeHAVENBRANCH:
+		return true
+	case DefinitionSourceTypeOBJECTTYPE:
+		return true
+	case DefinitionSourceTypePORTAL:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for DisplayOptionType.
+const (
+	DisplayOptionTypeDANGER  DisplayOptionType = "DANGER"
+	DisplayOptionTypeDEFAULT DisplayOptionType = "DEFAULT"
+	DisplayOptionTypeINFO    DisplayOptionType = "INFO"
+	DisplayOptionTypeSUCCESS DisplayOptionType = "SUCCESS"
+	DisplayOptionTypeWARNING DisplayOptionType = "WARNING"
+)
+
+// Valid indicates whether the value is a known member of the DisplayOptionType enum.
+func (e DisplayOptionType) Valid() bool {
+	switch e {
+	case DisplayOptionTypeDANGER:
+		return true
+	case DisplayOptionTypeDEFAULT:
+		return true
+	case DisplayOptionTypeINFO:
+		return true
+	case DisplayOptionTypeSUCCESS:
+		return true
+	case DisplayOptionTypeWARNING:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for DoubleFieldSchemaType.
+const (
+	DoubleFieldSchemaTypeDOUBLE DoubleFieldSchemaType = "DOUBLE"
+)
+
+// Valid indicates whether the value is a known member of the DoubleFieldSchemaType enum.
+func (e DoubleFieldSchemaType) Valid() bool {
+	switch e {
+	case DoubleFieldSchemaTypeDOUBLE:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for EmailCreateRequestLanguage.
+const (
+	EmailCreateRequestLanguageAa     EmailCreateRequestLanguage = "aa"
+	EmailCreateRequestLanguageAb     EmailCreateRequestLanguage = "ab"
+	EmailCreateRequestLanguageAe     EmailCreateRequestLanguage = "ae"
+	EmailCreateRequestLanguageAf     EmailCreateRequestLanguage = "af"
+	EmailCreateRequestLanguageAfNa   EmailCreateRequestLanguage = "af-na"
+	EmailCreateRequestLanguageAfZa   EmailCreateRequestLanguage = "af-za"
+	EmailCreateRequestLanguageAgq    EmailCreateRequestLanguage = "agq"
+	EmailCreateRequestLanguageAgqCm  EmailCreateRequestLanguage = "agq-cm"
+	EmailCreateRequestLanguageAk     EmailCreateRequestLanguage = "ak"
+	EmailCreateRequestLanguageAkGh   EmailCreateRequestLanguage = "ak-gh"
+	EmailCreateRequestLanguageAm     EmailCreateRequestLanguage = "am"
+	EmailCreateRequestLanguageAmEt   EmailCreateRequestLanguage = "am-et"
+	EmailCreateRequestLanguageAn     EmailCreateRequestLanguage = "an"
+	EmailCreateRequestLanguageAnn    EmailCreateRequestLanguage = "ann"
+	EmailCreateRequestLanguageAnnNg  EmailCreateRequestLanguage = "ann-ng"
+	EmailCreateRequestLanguageAr     EmailCreateRequestLanguage = "ar"
+	EmailCreateRequestLanguageAr001  EmailCreateRequestLanguage = "ar-001"
+	EmailCreateRequestLanguageArAe   EmailCreateRequestLanguage = "ar-ae"
+	EmailCreateRequestLanguageArBh   EmailCreateRequestLanguage = "ar-bh"
+	EmailCreateRequestLanguageArDj   EmailCreateRequestLanguage = "ar-dj"
+	EmailCreateRequestLanguageArDz   EmailCreateRequestLanguage = "ar-dz"
+	EmailCreateRequestLanguageArEg   EmailCreateRequestLanguage = "ar-eg"
+	EmailCreateRequestLanguageArEh   EmailCreateRequestLanguage = "ar-eh"
+	EmailCreateRequestLanguageArEr   EmailCreateRequestLanguage = "ar-er"
+	EmailCreateRequestLanguageArIl   EmailCreateRequestLanguage = "ar-il"
+	EmailCreateRequestLanguageArIq   EmailCreateRequestLanguage = "ar-iq"
+	EmailCreateRequestLanguageArJo   EmailCreateRequestLanguage = "ar-jo"
+	EmailCreateRequestLanguageArKm   EmailCreateRequestLanguage = "ar-km"
+	EmailCreateRequestLanguageArKw   EmailCreateRequestLanguage = "ar-kw"
+	EmailCreateRequestLanguageArLb   EmailCreateRequestLanguage = "ar-lb"
+	EmailCreateRequestLanguageArLy   EmailCreateRequestLanguage = "ar-ly"
+	EmailCreateRequestLanguageArMa   EmailCreateRequestLanguage = "ar-ma"
+	EmailCreateRequestLanguageArMr   EmailCreateRequestLanguage = "ar-mr"
+	EmailCreateRequestLanguageArOm   EmailCreateRequestLanguage = "ar-om"
+	EmailCreateRequestLanguageArPs   EmailCreateRequestLanguage = "ar-ps"
+	EmailCreateRequestLanguageArQa   EmailCreateRequestLanguage = "ar-qa"
+	EmailCreateRequestLanguageArSa   EmailCreateRequestLanguage = "ar-sa"
+	EmailCreateRequestLanguageArSd   EmailCreateRequestLanguage = "ar-sd"
+	EmailCreateRequestLanguageArSo   EmailCreateRequestLanguage = "ar-so"
+	EmailCreateRequestLanguageArSs   EmailCreateRequestLanguage = "ar-ss"
+	EmailCreateRequestLanguageArSy   EmailCreateRequestLanguage = "ar-sy"
+	EmailCreateRequestLanguageArTd   EmailCreateRequestLanguage = "ar-td"
+	EmailCreateRequestLanguageArTn   EmailCreateRequestLanguage = "ar-tn"
+	EmailCreateRequestLanguageArYe   EmailCreateRequestLanguage = "ar-ye"
+	EmailCreateRequestLanguageAs     EmailCreateRequestLanguage = "as"
+	EmailCreateRequestLanguageAsIn   EmailCreateRequestLanguage = "as-in"
+	EmailCreateRequestLanguageAsa    EmailCreateRequestLanguage = "asa"
+	EmailCreateRequestLanguageAsaTz  EmailCreateRequestLanguage = "asa-tz"
+	EmailCreateRequestLanguageAst    EmailCreateRequestLanguage = "ast"
+	EmailCreateRequestLanguageAstEs  EmailCreateRequestLanguage = "ast-es"
+	EmailCreateRequestLanguageAv     EmailCreateRequestLanguage = "av"
+	EmailCreateRequestLanguageAy     EmailCreateRequestLanguage = "ay"
+	EmailCreateRequestLanguageAz     EmailCreateRequestLanguage = "az"
+	EmailCreateRequestLanguageAzAz   EmailCreateRequestLanguage = "az-az"
+	EmailCreateRequestLanguageBa     EmailCreateRequestLanguage = "ba"
+	EmailCreateRequestLanguageBal    EmailCreateRequestLanguage = "bal"
+	EmailCreateRequestLanguageBalPk  EmailCreateRequestLanguage = "bal-pk"
+	EmailCreateRequestLanguageBas    EmailCreateRequestLanguage = "bas"
+	EmailCreateRequestLanguageBasCm  EmailCreateRequestLanguage = "bas-cm"
+	EmailCreateRequestLanguageBe     EmailCreateRequestLanguage = "be"
+	EmailCreateRequestLanguageBeBy   EmailCreateRequestLanguage = "be-by"
+	EmailCreateRequestLanguageBem    EmailCreateRequestLanguage = "bem"
+	EmailCreateRequestLanguageBemZm  EmailCreateRequestLanguage = "bem-zm"
+	EmailCreateRequestLanguageBez    EmailCreateRequestLanguage = "bez"
+	EmailCreateRequestLanguageBezTz  EmailCreateRequestLanguage = "bez-tz"
+	EmailCreateRequestLanguageBg     EmailCreateRequestLanguage = "bg"
+	EmailCreateRequestLanguageBgBg   EmailCreateRequestLanguage = "bg-bg"
+	EmailCreateRequestLanguageBgc    EmailCreateRequestLanguage = "bgc"
+	EmailCreateRequestLanguageBgcIn  EmailCreateRequestLanguage = "bgc-in"
+	EmailCreateRequestLanguageBho    EmailCreateRequestLanguage = "bho"
+	EmailCreateRequestLanguageBhoIn  EmailCreateRequestLanguage = "bho-in"
+	EmailCreateRequestLanguageBi     EmailCreateRequestLanguage = "bi"
+	EmailCreateRequestLanguageBlo    EmailCreateRequestLanguage = "blo"
+	EmailCreateRequestLanguageBloBj  EmailCreateRequestLanguage = "blo-bj"
+	EmailCreateRequestLanguageBm     EmailCreateRequestLanguage = "bm"
+	EmailCreateRequestLanguageBmMl   EmailCreateRequestLanguage = "bm-ml"
+	EmailCreateRequestLanguageBn     EmailCreateRequestLanguage = "bn"
+	EmailCreateRequestLanguageBnBd   EmailCreateRequestLanguage = "bn-bd"
+	EmailCreateRequestLanguageBnIn   EmailCreateRequestLanguage = "bn-in"
+	EmailCreateRequestLanguageBo     EmailCreateRequestLanguage = "bo"
+	EmailCreateRequestLanguageBoCn   EmailCreateRequestLanguage = "bo-cn"
+	EmailCreateRequestLanguageBoIn   EmailCreateRequestLanguage = "bo-in"
+	EmailCreateRequestLanguageBr     EmailCreateRequestLanguage = "br"
+	EmailCreateRequestLanguageBrFr   EmailCreateRequestLanguage = "br-fr"
+	EmailCreateRequestLanguageBrx    EmailCreateRequestLanguage = "brx"
+	EmailCreateRequestLanguageBrxIn  EmailCreateRequestLanguage = "brx-in"
+	EmailCreateRequestLanguageBs     EmailCreateRequestLanguage = "bs"
+	EmailCreateRequestLanguageBsBa   EmailCreateRequestLanguage = "bs-ba"
+	EmailCreateRequestLanguageCa     EmailCreateRequestLanguage = "ca"
+	EmailCreateRequestLanguageCaAd   EmailCreateRequestLanguage = "ca-ad"
+	EmailCreateRequestLanguageCaEs   EmailCreateRequestLanguage = "ca-es"
+	EmailCreateRequestLanguageCaFr   EmailCreateRequestLanguage = "ca-fr"
+	EmailCreateRequestLanguageCaIt   EmailCreateRequestLanguage = "ca-it"
+	EmailCreateRequestLanguageCcp    EmailCreateRequestLanguage = "ccp"
+	EmailCreateRequestLanguageCcpBd  EmailCreateRequestLanguage = "ccp-bd"
+	EmailCreateRequestLanguageCcpIn  EmailCreateRequestLanguage = "ccp-in"
+	EmailCreateRequestLanguageCe     EmailCreateRequestLanguage = "ce"
+	EmailCreateRequestLanguageCeRu   EmailCreateRequestLanguage = "ce-ru"
+	EmailCreateRequestLanguageCeb    EmailCreateRequestLanguage = "ceb"
+	EmailCreateRequestLanguageCebPh  EmailCreateRequestLanguage = "ceb-ph"
+	EmailCreateRequestLanguageCgg    EmailCreateRequestLanguage = "cgg"
+	EmailCreateRequestLanguageCggUg  EmailCreateRequestLanguage = "cgg-ug"
+	EmailCreateRequestLanguageCh     EmailCreateRequestLanguage = "ch"
+	EmailCreateRequestLanguageChr    EmailCreateRequestLanguage = "chr"
+	EmailCreateRequestLanguageChrUs  EmailCreateRequestLanguage = "chr-us"
+	EmailCreateRequestLanguageCkb    EmailCreateRequestLanguage = "ckb"
+	EmailCreateRequestLanguageCkbIq  EmailCreateRequestLanguage = "ckb-iq"
+	EmailCreateRequestLanguageCkbIr  EmailCreateRequestLanguage = "ckb-ir"
+	EmailCreateRequestLanguageCo     EmailCreateRequestLanguage = "co"
+	EmailCreateRequestLanguageCr     EmailCreateRequestLanguage = "cr"
+	EmailCreateRequestLanguageCs     EmailCreateRequestLanguage = "cs"
+	EmailCreateRequestLanguageCsCz   EmailCreateRequestLanguage = "cs-cz"
+	EmailCreateRequestLanguageCsw    EmailCreateRequestLanguage = "csw"
+	EmailCreateRequestLanguageCswCa  EmailCreateRequestLanguage = "csw-ca"
+	EmailCreateRequestLanguageCu     EmailCreateRequestLanguage = "cu"
+	EmailCreateRequestLanguageCuRu   EmailCreateRequestLanguage = "cu-ru"
+	EmailCreateRequestLanguageCv     EmailCreateRequestLanguage = "cv"
+	EmailCreateRequestLanguageCvRu   EmailCreateRequestLanguage = "cv-ru"
+	EmailCreateRequestLanguageCy     EmailCreateRequestLanguage = "cy"
+	EmailCreateRequestLanguageCyGb   EmailCreateRequestLanguage = "cy-gb"
+	EmailCreateRequestLanguageDa     EmailCreateRequestLanguage = "da"
+	EmailCreateRequestLanguageDaDk   EmailCreateRequestLanguage = "da-dk"
+	EmailCreateRequestLanguageDaGl   EmailCreateRequestLanguage = "da-gl"
+	EmailCreateRequestLanguageDav    EmailCreateRequestLanguage = "dav"
+	EmailCreateRequestLanguageDavKe  EmailCreateRequestLanguage = "dav-ke"
+	EmailCreateRequestLanguageDe     EmailCreateRequestLanguage = "de"
+	EmailCreateRequestLanguageDeAt   EmailCreateRequestLanguage = "de-at"
+	EmailCreateRequestLanguageDeBe   EmailCreateRequestLanguage = "de-be"
+	EmailCreateRequestLanguageDeCh   EmailCreateRequestLanguage = "de-ch"
+	EmailCreateRequestLanguageDeDe   EmailCreateRequestLanguage = "de-de"
+	EmailCreateRequestLanguageDeGr   EmailCreateRequestLanguage = "de-gr"
+	EmailCreateRequestLanguageDeIt   EmailCreateRequestLanguage = "de-it"
+	EmailCreateRequestLanguageDeLi   EmailCreateRequestLanguage = "de-li"
+	EmailCreateRequestLanguageDeLu   EmailCreateRequestLanguage = "de-lu"
+	EmailCreateRequestLanguageDje    EmailCreateRequestLanguage = "dje"
+	EmailCreateRequestLanguageDjeNe  EmailCreateRequestLanguage = "dje-ne"
+	EmailCreateRequestLanguageDoi    EmailCreateRequestLanguage = "doi"
+	EmailCreateRequestLanguageDoiIn  EmailCreateRequestLanguage = "doi-in"
+	EmailCreateRequestLanguageDsb    EmailCreateRequestLanguage = "dsb"
+	EmailCreateRequestLanguageDsbDe  EmailCreateRequestLanguage = "dsb-de"
+	EmailCreateRequestLanguageDua    EmailCreateRequestLanguage = "dua"
+	EmailCreateRequestLanguageDuaCm  EmailCreateRequestLanguage = "dua-cm"
+	EmailCreateRequestLanguageDv     EmailCreateRequestLanguage = "dv"
+	EmailCreateRequestLanguageDyo    EmailCreateRequestLanguage = "dyo"
+	EmailCreateRequestLanguageDyoSn  EmailCreateRequestLanguage = "dyo-sn"
+	EmailCreateRequestLanguageDz     EmailCreateRequestLanguage = "dz"
+	EmailCreateRequestLanguageDzBt   EmailCreateRequestLanguage = "dz-bt"
+	EmailCreateRequestLanguageEbu    EmailCreateRequestLanguage = "ebu"
+	EmailCreateRequestLanguageEbuKe  EmailCreateRequestLanguage = "ebu-ke"
+	EmailCreateRequestLanguageEe     EmailCreateRequestLanguage = "ee"
+	EmailCreateRequestLanguageEeGh   EmailCreateRequestLanguage = "ee-gh"
+	EmailCreateRequestLanguageEeTg   EmailCreateRequestLanguage = "ee-tg"
+	EmailCreateRequestLanguageEl     EmailCreateRequestLanguage = "el"
+	EmailCreateRequestLanguageElCy   EmailCreateRequestLanguage = "el-cy"
+	EmailCreateRequestLanguageElGr   EmailCreateRequestLanguage = "el-gr"
+	EmailCreateRequestLanguageEn     EmailCreateRequestLanguage = "en"
+	EmailCreateRequestLanguageEn001  EmailCreateRequestLanguage = "en-001"
+	EmailCreateRequestLanguageEn150  EmailCreateRequestLanguage = "en-150"
+	EmailCreateRequestLanguageEnAe   EmailCreateRequestLanguage = "en-ae"
+	EmailCreateRequestLanguageEnAg   EmailCreateRequestLanguage = "en-ag"
+	EmailCreateRequestLanguageEnAi   EmailCreateRequestLanguage = "en-ai"
+	EmailCreateRequestLanguageEnAs   EmailCreateRequestLanguage = "en-as"
+	EmailCreateRequestLanguageEnAt   EmailCreateRequestLanguage = "en-at"
+	EmailCreateRequestLanguageEnAu   EmailCreateRequestLanguage = "en-au"
+	EmailCreateRequestLanguageEnBb   EmailCreateRequestLanguage = "en-bb"
+	EmailCreateRequestLanguageEnBe   EmailCreateRequestLanguage = "en-be"
+	EmailCreateRequestLanguageEnBi   EmailCreateRequestLanguage = "en-bi"
+	EmailCreateRequestLanguageEnBm   EmailCreateRequestLanguage = "en-bm"
+	EmailCreateRequestLanguageEnBs   EmailCreateRequestLanguage = "en-bs"
+	EmailCreateRequestLanguageEnBw   EmailCreateRequestLanguage = "en-bw"
+	EmailCreateRequestLanguageEnBz   EmailCreateRequestLanguage = "en-bz"
+	EmailCreateRequestLanguageEnCa   EmailCreateRequestLanguage = "en-ca"
+	EmailCreateRequestLanguageEnCc   EmailCreateRequestLanguage = "en-cc"
+	EmailCreateRequestLanguageEnCh   EmailCreateRequestLanguage = "en-ch"
+	EmailCreateRequestLanguageEnCk   EmailCreateRequestLanguage = "en-ck"
+	EmailCreateRequestLanguageEnCm   EmailCreateRequestLanguage = "en-cm"
+	EmailCreateRequestLanguageEnCn   EmailCreateRequestLanguage = "en-cn"
+	EmailCreateRequestLanguageEnCx   EmailCreateRequestLanguage = "en-cx"
+	EmailCreateRequestLanguageEnCy   EmailCreateRequestLanguage = "en-cy"
+	EmailCreateRequestLanguageEnCz   EmailCreateRequestLanguage = "en-cz"
+	EmailCreateRequestLanguageEnDe   EmailCreateRequestLanguage = "en-de"
+	EmailCreateRequestLanguageEnDg   EmailCreateRequestLanguage = "en-dg"
+	EmailCreateRequestLanguageEnDk   EmailCreateRequestLanguage = "en-dk"
+	EmailCreateRequestLanguageEnDm   EmailCreateRequestLanguage = "en-dm"
+	EmailCreateRequestLanguageEnEe   EmailCreateRequestLanguage = "en-ee"
+	EmailCreateRequestLanguageEnEg   EmailCreateRequestLanguage = "en-eg"
+	EmailCreateRequestLanguageEnEr   EmailCreateRequestLanguage = "en-er"
+	EmailCreateRequestLanguageEnEs   EmailCreateRequestLanguage = "en-es"
+	EmailCreateRequestLanguageEnFi   EmailCreateRequestLanguage = "en-fi"
+	EmailCreateRequestLanguageEnFj   EmailCreateRequestLanguage = "en-fj"
+	EmailCreateRequestLanguageEnFk   EmailCreateRequestLanguage = "en-fk"
+	EmailCreateRequestLanguageEnFm   EmailCreateRequestLanguage = "en-fm"
+	EmailCreateRequestLanguageEnFr   EmailCreateRequestLanguage = "en-fr"
+	EmailCreateRequestLanguageEnGb   EmailCreateRequestLanguage = "en-gb"
+	EmailCreateRequestLanguageEnGd   EmailCreateRequestLanguage = "en-gd"
+	EmailCreateRequestLanguageEnGg   EmailCreateRequestLanguage = "en-gg"
+	EmailCreateRequestLanguageEnGh   EmailCreateRequestLanguage = "en-gh"
+	EmailCreateRequestLanguageEnGi   EmailCreateRequestLanguage = "en-gi"
+	EmailCreateRequestLanguageEnGm   EmailCreateRequestLanguage = "en-gm"
+	EmailCreateRequestLanguageEnGs   EmailCreateRequestLanguage = "en-gs"
+	EmailCreateRequestLanguageEnGu   EmailCreateRequestLanguage = "en-gu"
+	EmailCreateRequestLanguageEnGy   EmailCreateRequestLanguage = "en-gy"
+	EmailCreateRequestLanguageEnHk   EmailCreateRequestLanguage = "en-hk"
+	EmailCreateRequestLanguageEnHu   EmailCreateRequestLanguage = "en-hu"
+	EmailCreateRequestLanguageEnId   EmailCreateRequestLanguage = "en-id"
+	EmailCreateRequestLanguageEnIe   EmailCreateRequestLanguage = "en-ie"
+	EmailCreateRequestLanguageEnIl   EmailCreateRequestLanguage = "en-il"
+	EmailCreateRequestLanguageEnIm   EmailCreateRequestLanguage = "en-im"
+	EmailCreateRequestLanguageEnIn   EmailCreateRequestLanguage = "en-in"
+	EmailCreateRequestLanguageEnIo   EmailCreateRequestLanguage = "en-io"
+	EmailCreateRequestLanguageEnIt   EmailCreateRequestLanguage = "en-it"
+	EmailCreateRequestLanguageEnJe   EmailCreateRequestLanguage = "en-je"
+	EmailCreateRequestLanguageEnJm   EmailCreateRequestLanguage = "en-jm"
+	EmailCreateRequestLanguageEnKe   EmailCreateRequestLanguage = "en-ke"
+	EmailCreateRequestLanguageEnKi   EmailCreateRequestLanguage = "en-ki"
+	EmailCreateRequestLanguageEnKn   EmailCreateRequestLanguage = "en-kn"
+	EmailCreateRequestLanguageEnKy   EmailCreateRequestLanguage = "en-ky"
+	EmailCreateRequestLanguageEnLc   EmailCreateRequestLanguage = "en-lc"
+	EmailCreateRequestLanguageEnLr   EmailCreateRequestLanguage = "en-lr"
+	EmailCreateRequestLanguageEnLs   EmailCreateRequestLanguage = "en-ls"
+	EmailCreateRequestLanguageEnLu   EmailCreateRequestLanguage = "en-lu"
+	EmailCreateRequestLanguageEnMg   EmailCreateRequestLanguage = "en-mg"
+	EmailCreateRequestLanguageEnMh   EmailCreateRequestLanguage = "en-mh"
+	EmailCreateRequestLanguageEnMo   EmailCreateRequestLanguage = "en-mo"
+	EmailCreateRequestLanguageEnMp   EmailCreateRequestLanguage = "en-mp"
+	EmailCreateRequestLanguageEnMs   EmailCreateRequestLanguage = "en-ms"
+	EmailCreateRequestLanguageEnMt   EmailCreateRequestLanguage = "en-mt"
+	EmailCreateRequestLanguageEnMu   EmailCreateRequestLanguage = "en-mu"
+	EmailCreateRequestLanguageEnMv   EmailCreateRequestLanguage = "en-mv"
+	EmailCreateRequestLanguageEnMw   EmailCreateRequestLanguage = "en-mw"
+	EmailCreateRequestLanguageEnMx   EmailCreateRequestLanguage = "en-mx"
+	EmailCreateRequestLanguageEnMy   EmailCreateRequestLanguage = "en-my"
+	EmailCreateRequestLanguageEnNa   EmailCreateRequestLanguage = "en-na"
+	EmailCreateRequestLanguageEnNf   EmailCreateRequestLanguage = "en-nf"
+	EmailCreateRequestLanguageEnNg   EmailCreateRequestLanguage = "en-ng"
+	EmailCreateRequestLanguageEnNl   EmailCreateRequestLanguage = "en-nl"
+	EmailCreateRequestLanguageEnNo   EmailCreateRequestLanguage = "en-no"
+	EmailCreateRequestLanguageEnNr   EmailCreateRequestLanguage = "en-nr"
+	EmailCreateRequestLanguageEnNu   EmailCreateRequestLanguage = "en-nu"
+	EmailCreateRequestLanguageEnNz   EmailCreateRequestLanguage = "en-nz"
+	EmailCreateRequestLanguageEnPg   EmailCreateRequestLanguage = "en-pg"
+	EmailCreateRequestLanguageEnPh   EmailCreateRequestLanguage = "en-ph"
+	EmailCreateRequestLanguageEnPk   EmailCreateRequestLanguage = "en-pk"
+	EmailCreateRequestLanguageEnPl   EmailCreateRequestLanguage = "en-pl"
+	EmailCreateRequestLanguageEnPn   EmailCreateRequestLanguage = "en-pn"
+	EmailCreateRequestLanguageEnPr   EmailCreateRequestLanguage = "en-pr"
+	EmailCreateRequestLanguageEnPt   EmailCreateRequestLanguage = "en-pt"
+	EmailCreateRequestLanguageEnPw   EmailCreateRequestLanguage = "en-pw"
+	EmailCreateRequestLanguageEnRo   EmailCreateRequestLanguage = "en-ro"
+	EmailCreateRequestLanguageEnRw   EmailCreateRequestLanguage = "en-rw"
+	EmailCreateRequestLanguageEnSb   EmailCreateRequestLanguage = "en-sb"
+	EmailCreateRequestLanguageEnSc   EmailCreateRequestLanguage = "en-sc"
+	EmailCreateRequestLanguageEnSd   EmailCreateRequestLanguage = "en-sd"
+	EmailCreateRequestLanguageEnSe   EmailCreateRequestLanguage = "en-se"
+	EmailCreateRequestLanguageEnSg   EmailCreateRequestLanguage = "en-sg"
+	EmailCreateRequestLanguageEnSh   EmailCreateRequestLanguage = "en-sh"
+	EmailCreateRequestLanguageEnSi   EmailCreateRequestLanguage = "en-si"
+	EmailCreateRequestLanguageEnSk   EmailCreateRequestLanguage = "en-sk"
+	EmailCreateRequestLanguageEnSl   EmailCreateRequestLanguage = "en-sl"
+	EmailCreateRequestLanguageEnSs   EmailCreateRequestLanguage = "en-ss"
+	EmailCreateRequestLanguageEnSx   EmailCreateRequestLanguage = "en-sx"
+	EmailCreateRequestLanguageEnSz   EmailCreateRequestLanguage = "en-sz"
+	EmailCreateRequestLanguageEnTc   EmailCreateRequestLanguage = "en-tc"
+	EmailCreateRequestLanguageEnTh   EmailCreateRequestLanguage = "en-th"
+	EmailCreateRequestLanguageEnTk   EmailCreateRequestLanguage = "en-tk"
+	EmailCreateRequestLanguageEnTn   EmailCreateRequestLanguage = "en-tn"
+	EmailCreateRequestLanguageEnTo   EmailCreateRequestLanguage = "en-to"
+	EmailCreateRequestLanguageEnTt   EmailCreateRequestLanguage = "en-tt"
+	EmailCreateRequestLanguageEnTv   EmailCreateRequestLanguage = "en-tv"
+	EmailCreateRequestLanguageEnTz   EmailCreateRequestLanguage = "en-tz"
+	EmailCreateRequestLanguageEnUg   EmailCreateRequestLanguage = "en-ug"
+	EmailCreateRequestLanguageEnUm   EmailCreateRequestLanguage = "en-um"
+	EmailCreateRequestLanguageEnUs   EmailCreateRequestLanguage = "en-us"
+	EmailCreateRequestLanguageEnVc   EmailCreateRequestLanguage = "en-vc"
+	EmailCreateRequestLanguageEnVg   EmailCreateRequestLanguage = "en-vg"
+	EmailCreateRequestLanguageEnVi   EmailCreateRequestLanguage = "en-vi"
+	EmailCreateRequestLanguageEnVn   EmailCreateRequestLanguage = "en-vn"
+	EmailCreateRequestLanguageEnVu   EmailCreateRequestLanguage = "en-vu"
+	EmailCreateRequestLanguageEnWs   EmailCreateRequestLanguage = "en-ws"
+	EmailCreateRequestLanguageEnZa   EmailCreateRequestLanguage = "en-za"
+	EmailCreateRequestLanguageEnZm   EmailCreateRequestLanguage = "en-zm"
+	EmailCreateRequestLanguageEnZw   EmailCreateRequestLanguage = "en-zw"
+	EmailCreateRequestLanguageEo     EmailCreateRequestLanguage = "eo"
+	EmailCreateRequestLanguageEo001  EmailCreateRequestLanguage = "eo-001"
+	EmailCreateRequestLanguageEs     EmailCreateRequestLanguage = "es"
+	EmailCreateRequestLanguageEs419  EmailCreateRequestLanguage = "es-419"
+	EmailCreateRequestLanguageEsAr   EmailCreateRequestLanguage = "es-ar"
+	EmailCreateRequestLanguageEsBo   EmailCreateRequestLanguage = "es-bo"
+	EmailCreateRequestLanguageEsBr   EmailCreateRequestLanguage = "es-br"
+	EmailCreateRequestLanguageEsBz   EmailCreateRequestLanguage = "es-bz"
+	EmailCreateRequestLanguageEsCl   EmailCreateRequestLanguage = "es-cl"
+	EmailCreateRequestLanguageEsCo   EmailCreateRequestLanguage = "es-co"
+	EmailCreateRequestLanguageEsCr   EmailCreateRequestLanguage = "es-cr"
+	EmailCreateRequestLanguageEsCu   EmailCreateRequestLanguage = "es-cu"
+	EmailCreateRequestLanguageEsDo   EmailCreateRequestLanguage = "es-do"
+	EmailCreateRequestLanguageEsEa   EmailCreateRequestLanguage = "es-ea"
+	EmailCreateRequestLanguageEsEc   EmailCreateRequestLanguage = "es-ec"
+	EmailCreateRequestLanguageEsEs   EmailCreateRequestLanguage = "es-es"
+	EmailCreateRequestLanguageEsGq   EmailCreateRequestLanguage = "es-gq"
+	EmailCreateRequestLanguageEsGt   EmailCreateRequestLanguage = "es-gt"
+	EmailCreateRequestLanguageEsHn   EmailCreateRequestLanguage = "es-hn"
+	EmailCreateRequestLanguageEsIc   EmailCreateRequestLanguage = "es-ic"
+	EmailCreateRequestLanguageEsMx   EmailCreateRequestLanguage = "es-mx"
+	EmailCreateRequestLanguageEsNi   EmailCreateRequestLanguage = "es-ni"
+	EmailCreateRequestLanguageEsPa   EmailCreateRequestLanguage = "es-pa"
+	EmailCreateRequestLanguageEsPe   EmailCreateRequestLanguage = "es-pe"
+	EmailCreateRequestLanguageEsPh   EmailCreateRequestLanguage = "es-ph"
+	EmailCreateRequestLanguageEsPr   EmailCreateRequestLanguage = "es-pr"
+	EmailCreateRequestLanguageEsPy   EmailCreateRequestLanguage = "es-py"
+	EmailCreateRequestLanguageEsSv   EmailCreateRequestLanguage = "es-sv"
+	EmailCreateRequestLanguageEsUs   EmailCreateRequestLanguage = "es-us"
+	EmailCreateRequestLanguageEsUy   EmailCreateRequestLanguage = "es-uy"
+	EmailCreateRequestLanguageEsVe   EmailCreateRequestLanguage = "es-ve"
+	EmailCreateRequestLanguageEt     EmailCreateRequestLanguage = "et"
+	EmailCreateRequestLanguageEtEe   EmailCreateRequestLanguage = "et-ee"
+	EmailCreateRequestLanguageEu     EmailCreateRequestLanguage = "eu"
+	EmailCreateRequestLanguageEuEs   EmailCreateRequestLanguage = "eu-es"
+	EmailCreateRequestLanguageEwo    EmailCreateRequestLanguage = "ewo"
+	EmailCreateRequestLanguageEwoCm  EmailCreateRequestLanguage = "ewo-cm"
+	EmailCreateRequestLanguageFa     EmailCreateRequestLanguage = "fa"
+	EmailCreateRequestLanguageFaAf   EmailCreateRequestLanguage = "fa-af"
+	EmailCreateRequestLanguageFaIr   EmailCreateRequestLanguage = "fa-ir"
+	EmailCreateRequestLanguageFf     EmailCreateRequestLanguage = "ff"
+	EmailCreateRequestLanguageFfBf   EmailCreateRequestLanguage = "ff-bf"
+	EmailCreateRequestLanguageFfCm   EmailCreateRequestLanguage = "ff-cm"
+	EmailCreateRequestLanguageFfGh   EmailCreateRequestLanguage = "ff-gh"
+	EmailCreateRequestLanguageFfGm   EmailCreateRequestLanguage = "ff-gm"
+	EmailCreateRequestLanguageFfGn   EmailCreateRequestLanguage = "ff-gn"
+	EmailCreateRequestLanguageFfGw   EmailCreateRequestLanguage = "ff-gw"
+	EmailCreateRequestLanguageFfLr   EmailCreateRequestLanguage = "ff-lr"
+	EmailCreateRequestLanguageFfMr   EmailCreateRequestLanguage = "ff-mr"
+	EmailCreateRequestLanguageFfNe   EmailCreateRequestLanguage = "ff-ne"
+	EmailCreateRequestLanguageFfNg   EmailCreateRequestLanguage = "ff-ng"
+	EmailCreateRequestLanguageFfSl   EmailCreateRequestLanguage = "ff-sl"
+	EmailCreateRequestLanguageFfSn   EmailCreateRequestLanguage = "ff-sn"
+	EmailCreateRequestLanguageFi     EmailCreateRequestLanguage = "fi"
+	EmailCreateRequestLanguageFiFi   EmailCreateRequestLanguage = "fi-fi"
+	EmailCreateRequestLanguageFil    EmailCreateRequestLanguage = "fil"
+	EmailCreateRequestLanguageFilPh  EmailCreateRequestLanguage = "fil-ph"
+	EmailCreateRequestLanguageFj     EmailCreateRequestLanguage = "fj"
+	EmailCreateRequestLanguageFo     EmailCreateRequestLanguage = "fo"
+	EmailCreateRequestLanguageFoDk   EmailCreateRequestLanguage = "fo-dk"
+	EmailCreateRequestLanguageFoFo   EmailCreateRequestLanguage = "fo-fo"
+	EmailCreateRequestLanguageFr     EmailCreateRequestLanguage = "fr"
+	EmailCreateRequestLanguageFrBe   EmailCreateRequestLanguage = "fr-be"
+	EmailCreateRequestLanguageFrBf   EmailCreateRequestLanguage = "fr-bf"
+	EmailCreateRequestLanguageFrBi   EmailCreateRequestLanguage = "fr-bi"
+	EmailCreateRequestLanguageFrBj   EmailCreateRequestLanguage = "fr-bj"
+	EmailCreateRequestLanguageFrBl   EmailCreateRequestLanguage = "fr-bl"
+	EmailCreateRequestLanguageFrCa   EmailCreateRequestLanguage = "fr-ca"
+	EmailCreateRequestLanguageFrCd   EmailCreateRequestLanguage = "fr-cd"
+	EmailCreateRequestLanguageFrCf   EmailCreateRequestLanguage = "fr-cf"
+	EmailCreateRequestLanguageFrCg   EmailCreateRequestLanguage = "fr-cg"
+	EmailCreateRequestLanguageFrCh   EmailCreateRequestLanguage = "fr-ch"
+	EmailCreateRequestLanguageFrCi   EmailCreateRequestLanguage = "fr-ci"
+	EmailCreateRequestLanguageFrCm   EmailCreateRequestLanguage = "fr-cm"
+	EmailCreateRequestLanguageFrDj   EmailCreateRequestLanguage = "fr-dj"
+	EmailCreateRequestLanguageFrDz   EmailCreateRequestLanguage = "fr-dz"
+	EmailCreateRequestLanguageFrFr   EmailCreateRequestLanguage = "fr-fr"
+	EmailCreateRequestLanguageFrGa   EmailCreateRequestLanguage = "fr-ga"
+	EmailCreateRequestLanguageFrGf   EmailCreateRequestLanguage = "fr-gf"
+	EmailCreateRequestLanguageFrGn   EmailCreateRequestLanguage = "fr-gn"
+	EmailCreateRequestLanguageFrGp   EmailCreateRequestLanguage = "fr-gp"
+	EmailCreateRequestLanguageFrGq   EmailCreateRequestLanguage = "fr-gq"
+	EmailCreateRequestLanguageFrHt   EmailCreateRequestLanguage = "fr-ht"
+	EmailCreateRequestLanguageFrKm   EmailCreateRequestLanguage = "fr-km"
+	EmailCreateRequestLanguageFrLu   EmailCreateRequestLanguage = "fr-lu"
+	EmailCreateRequestLanguageFrMa   EmailCreateRequestLanguage = "fr-ma"
+	EmailCreateRequestLanguageFrMc   EmailCreateRequestLanguage = "fr-mc"
+	EmailCreateRequestLanguageFrMf   EmailCreateRequestLanguage = "fr-mf"
+	EmailCreateRequestLanguageFrMg   EmailCreateRequestLanguage = "fr-mg"
+	EmailCreateRequestLanguageFrMl   EmailCreateRequestLanguage = "fr-ml"
+	EmailCreateRequestLanguageFrMq   EmailCreateRequestLanguage = "fr-mq"
+	EmailCreateRequestLanguageFrMr   EmailCreateRequestLanguage = "fr-mr"
+	EmailCreateRequestLanguageFrMu   EmailCreateRequestLanguage = "fr-mu"
+	EmailCreateRequestLanguageFrNc   EmailCreateRequestLanguage = "fr-nc"
+	EmailCreateRequestLanguageFrNe   EmailCreateRequestLanguage = "fr-ne"
+	EmailCreateRequestLanguageFrPf   EmailCreateRequestLanguage = "fr-pf"
+	EmailCreateRequestLanguageFrPm   EmailCreateRequestLanguage = "fr-pm"
+	EmailCreateRequestLanguageFrRe   EmailCreateRequestLanguage = "fr-re"
+	EmailCreateRequestLanguageFrRw   EmailCreateRequestLanguage = "fr-rw"
+	EmailCreateRequestLanguageFrSc   EmailCreateRequestLanguage = "fr-sc"
+	EmailCreateRequestLanguageFrSn   EmailCreateRequestLanguage = "fr-sn"
+	EmailCreateRequestLanguageFrSy   EmailCreateRequestLanguage = "fr-sy"
+	EmailCreateRequestLanguageFrTd   EmailCreateRequestLanguage = "fr-td"
+	EmailCreateRequestLanguageFrTg   EmailCreateRequestLanguage = "fr-tg"
+	EmailCreateRequestLanguageFrTn   EmailCreateRequestLanguage = "fr-tn"
+	EmailCreateRequestLanguageFrVu   EmailCreateRequestLanguage = "fr-vu"
+	EmailCreateRequestLanguageFrWf   EmailCreateRequestLanguage = "fr-wf"
+	EmailCreateRequestLanguageFrYt   EmailCreateRequestLanguage = "fr-yt"
+	EmailCreateRequestLanguageFrr    EmailCreateRequestLanguage = "frr"
+	EmailCreateRequestLanguageFrrDe  EmailCreateRequestLanguage = "frr-de"
+	EmailCreateRequestLanguageFur    EmailCreateRequestLanguage = "fur"
+	EmailCreateRequestLanguageFurIt  EmailCreateRequestLanguage = "fur-it"
+	EmailCreateRequestLanguageFy     EmailCreateRequestLanguage = "fy"
+	EmailCreateRequestLanguageFyNl   EmailCreateRequestLanguage = "fy-nl"
+	EmailCreateRequestLanguageGa     EmailCreateRequestLanguage = "ga"
+	EmailCreateRequestLanguageGaGb   EmailCreateRequestLanguage = "ga-gb"
+	EmailCreateRequestLanguageGaIe   EmailCreateRequestLanguage = "ga-ie"
+	EmailCreateRequestLanguageGaa    EmailCreateRequestLanguage = "gaa"
+	EmailCreateRequestLanguageGaaGh  EmailCreateRequestLanguage = "gaa-gh"
+	EmailCreateRequestLanguageGd     EmailCreateRequestLanguage = "gd"
+	EmailCreateRequestLanguageGdGb   EmailCreateRequestLanguage = "gd-gb"
+	EmailCreateRequestLanguageGl     EmailCreateRequestLanguage = "gl"
+	EmailCreateRequestLanguageGlEs   EmailCreateRequestLanguage = "gl-es"
+	EmailCreateRequestLanguageGn     EmailCreateRequestLanguage = "gn"
+	EmailCreateRequestLanguageGsw    EmailCreateRequestLanguage = "gsw"
+	EmailCreateRequestLanguageGswCh  EmailCreateRequestLanguage = "gsw-ch"
+	EmailCreateRequestLanguageGswFr  EmailCreateRequestLanguage = "gsw-fr"
+	EmailCreateRequestLanguageGswLi  EmailCreateRequestLanguage = "gsw-li"
+	EmailCreateRequestLanguageGu     EmailCreateRequestLanguage = "gu"
+	EmailCreateRequestLanguageGuIn   EmailCreateRequestLanguage = "gu-in"
+	EmailCreateRequestLanguageGuz    EmailCreateRequestLanguage = "guz"
+	EmailCreateRequestLanguageGuzKe  EmailCreateRequestLanguage = "guz-ke"
+	EmailCreateRequestLanguageGv     EmailCreateRequestLanguage = "gv"
+	EmailCreateRequestLanguageGvIm   EmailCreateRequestLanguage = "gv-im"
+	EmailCreateRequestLanguageHa     EmailCreateRequestLanguage = "ha"
+	EmailCreateRequestLanguageHaGh   EmailCreateRequestLanguage = "ha-gh"
+	EmailCreateRequestLanguageHaNe   EmailCreateRequestLanguage = "ha-ne"
+	EmailCreateRequestLanguageHaNg   EmailCreateRequestLanguage = "ha-ng"
+	EmailCreateRequestLanguageHaw    EmailCreateRequestLanguage = "haw"
+	EmailCreateRequestLanguageHawUs  EmailCreateRequestLanguage = "haw-us"
+	EmailCreateRequestLanguageHe     EmailCreateRequestLanguage = "he"
+	EmailCreateRequestLanguageHeIl   EmailCreateRequestLanguage = "he-il"
+	EmailCreateRequestLanguageHi     EmailCreateRequestLanguage = "hi"
+	EmailCreateRequestLanguageHiIn   EmailCreateRequestLanguage = "hi-in"
+	EmailCreateRequestLanguageHmn    EmailCreateRequestLanguage = "hmn"
+	EmailCreateRequestLanguageHo     EmailCreateRequestLanguage = "ho"
+	EmailCreateRequestLanguageHr     EmailCreateRequestLanguage = "hr"
+	EmailCreateRequestLanguageHrBa   EmailCreateRequestLanguage = "hr-ba"
+	EmailCreateRequestLanguageHrHr   EmailCreateRequestLanguage = "hr-hr"
+	EmailCreateRequestLanguageHsb    EmailCreateRequestLanguage = "hsb"
+	EmailCreateRequestLanguageHsbDe  EmailCreateRequestLanguage = "hsb-de"
+	EmailCreateRequestLanguageHt     EmailCreateRequestLanguage = "ht"
+	EmailCreateRequestLanguageHtHt   EmailCreateRequestLanguage = "ht-ht"
+	EmailCreateRequestLanguageHu     EmailCreateRequestLanguage = "hu"
+	EmailCreateRequestLanguageHuHu   EmailCreateRequestLanguage = "hu-hu"
+	EmailCreateRequestLanguageHy     EmailCreateRequestLanguage = "hy"
+	EmailCreateRequestLanguageHyAm   EmailCreateRequestLanguage = "hy-am"
+	EmailCreateRequestLanguageHz     EmailCreateRequestLanguage = "hz"
+	EmailCreateRequestLanguageIa     EmailCreateRequestLanguage = "ia"
+	EmailCreateRequestLanguageIa001  EmailCreateRequestLanguage = "ia-001"
+	EmailCreateRequestLanguageId     EmailCreateRequestLanguage = "id"
+	EmailCreateRequestLanguageIdId   EmailCreateRequestLanguage = "id-id"
+	EmailCreateRequestLanguageIe     EmailCreateRequestLanguage = "ie"
+	EmailCreateRequestLanguageIeEe   EmailCreateRequestLanguage = "ie-ee"
+	EmailCreateRequestLanguageIg     EmailCreateRequestLanguage = "ig"
+	EmailCreateRequestLanguageIgNg   EmailCreateRequestLanguage = "ig-ng"
+	EmailCreateRequestLanguageIi     EmailCreateRequestLanguage = "ii"
+	EmailCreateRequestLanguageIiCn   EmailCreateRequestLanguage = "ii-cn"
+	EmailCreateRequestLanguageIk     EmailCreateRequestLanguage = "ik"
+	EmailCreateRequestLanguageIo     EmailCreateRequestLanguage = "io"
+	EmailCreateRequestLanguageIs     EmailCreateRequestLanguage = "is"
+	EmailCreateRequestLanguageIsIs   EmailCreateRequestLanguage = "is-is"
+	EmailCreateRequestLanguageIt     EmailCreateRequestLanguage = "it"
+	EmailCreateRequestLanguageItCh   EmailCreateRequestLanguage = "it-ch"
+	EmailCreateRequestLanguageItIt   EmailCreateRequestLanguage = "it-it"
+	EmailCreateRequestLanguageItSm   EmailCreateRequestLanguage = "it-sm"
+	EmailCreateRequestLanguageItVa   EmailCreateRequestLanguage = "it-va"
+	EmailCreateRequestLanguageIu     EmailCreateRequestLanguage = "iu"
+	EmailCreateRequestLanguageJa     EmailCreateRequestLanguage = "ja"
+	EmailCreateRequestLanguageJaJp   EmailCreateRequestLanguage = "ja-jp"
+	EmailCreateRequestLanguageJgo    EmailCreateRequestLanguage = "jgo"
+	EmailCreateRequestLanguageJgoCm  EmailCreateRequestLanguage = "jgo-cm"
+	EmailCreateRequestLanguageJmc    EmailCreateRequestLanguage = "jmc"
+	EmailCreateRequestLanguageJmcTz  EmailCreateRequestLanguage = "jmc-tz"
+	EmailCreateRequestLanguageJv     EmailCreateRequestLanguage = "jv"
+	EmailCreateRequestLanguageJvId   EmailCreateRequestLanguage = "jv-id"
+	EmailCreateRequestLanguageKa     EmailCreateRequestLanguage = "ka"
+	EmailCreateRequestLanguageKaGe   EmailCreateRequestLanguage = "ka-ge"
+	EmailCreateRequestLanguageKab    EmailCreateRequestLanguage = "kab"
+	EmailCreateRequestLanguageKabDz  EmailCreateRequestLanguage = "kab-dz"
+	EmailCreateRequestLanguageKam    EmailCreateRequestLanguage = "kam"
+	EmailCreateRequestLanguageKamKe  EmailCreateRequestLanguage = "kam-ke"
+	EmailCreateRequestLanguageKar    EmailCreateRequestLanguage = "kar"
+	EmailCreateRequestLanguageKde    EmailCreateRequestLanguage = "kde"
+	EmailCreateRequestLanguageKdeTz  EmailCreateRequestLanguage = "kde-tz"
+	EmailCreateRequestLanguageKea    EmailCreateRequestLanguage = "kea"
+	EmailCreateRequestLanguageKeaCv  EmailCreateRequestLanguage = "kea-cv"
+	EmailCreateRequestLanguageKg     EmailCreateRequestLanguage = "kg"
+	EmailCreateRequestLanguageKgp    EmailCreateRequestLanguage = "kgp"
+	EmailCreateRequestLanguageKgpBr  EmailCreateRequestLanguage = "kgp-br"
+	EmailCreateRequestLanguageKh     EmailCreateRequestLanguage = "kh"
+	EmailCreateRequestLanguageKhq    EmailCreateRequestLanguage = "khq"
+	EmailCreateRequestLanguageKhqMl  EmailCreateRequestLanguage = "khq-ml"
+	EmailCreateRequestLanguageKi     EmailCreateRequestLanguage = "ki"
+	EmailCreateRequestLanguageKiKe   EmailCreateRequestLanguage = "ki-ke"
+	EmailCreateRequestLanguageKj     EmailCreateRequestLanguage = "kj"
+	EmailCreateRequestLanguageKk     EmailCreateRequestLanguage = "kk"
+	EmailCreateRequestLanguageKkKz   EmailCreateRequestLanguage = "kk-kz"
+	EmailCreateRequestLanguageKkj    EmailCreateRequestLanguage = "kkj"
+	EmailCreateRequestLanguageKkjCm  EmailCreateRequestLanguage = "kkj-cm"
+	EmailCreateRequestLanguageKl     EmailCreateRequestLanguage = "kl"
+	EmailCreateRequestLanguageKlGl   EmailCreateRequestLanguage = "kl-gl"
+	EmailCreateRequestLanguageKln    EmailCreateRequestLanguage = "kln"
+	EmailCreateRequestLanguageKlnKe  EmailCreateRequestLanguage = "kln-ke"
+	EmailCreateRequestLanguageKm     EmailCreateRequestLanguage = "km"
+	EmailCreateRequestLanguageKmKh   EmailCreateRequestLanguage = "km-kh"
+	EmailCreateRequestLanguageKn     EmailCreateRequestLanguage = "kn"
+	EmailCreateRequestLanguageKnIn   EmailCreateRequestLanguage = "kn-in"
+	EmailCreateRequestLanguageKo     EmailCreateRequestLanguage = "ko"
+	EmailCreateRequestLanguageKoCn   EmailCreateRequestLanguage = "ko-cn"
+	EmailCreateRequestLanguageKoKp   EmailCreateRequestLanguage = "ko-kp"
+	EmailCreateRequestLanguageKoKr   EmailCreateRequestLanguage = "ko-kr"
+	EmailCreateRequestLanguageKok    EmailCreateRequestLanguage = "kok"
+	EmailCreateRequestLanguageKokIn  EmailCreateRequestLanguage = "kok-in"
+	EmailCreateRequestLanguageKr     EmailCreateRequestLanguage = "kr"
+	EmailCreateRequestLanguageKs     EmailCreateRequestLanguage = "ks"
+	EmailCreateRequestLanguageKsIn   EmailCreateRequestLanguage = "ks-in"
+	EmailCreateRequestLanguageKsb    EmailCreateRequestLanguage = "ksb"
+	EmailCreateRequestLanguageKsbTz  EmailCreateRequestLanguage = "ksb-tz"
+	EmailCreateRequestLanguageKsf    EmailCreateRequestLanguage = "ksf"
+	EmailCreateRequestLanguageKsfCm  EmailCreateRequestLanguage = "ksf-cm"
+	EmailCreateRequestLanguageKsh    EmailCreateRequestLanguage = "ksh"
+	EmailCreateRequestLanguageKshDe  EmailCreateRequestLanguage = "ksh-de"
+	EmailCreateRequestLanguageKu     EmailCreateRequestLanguage = "ku"
+	EmailCreateRequestLanguageKuTr   EmailCreateRequestLanguage = "ku-tr"
+	EmailCreateRequestLanguageKv     EmailCreateRequestLanguage = "kv"
+	EmailCreateRequestLanguageKw     EmailCreateRequestLanguage = "kw"
+	EmailCreateRequestLanguageKwGb   EmailCreateRequestLanguage = "kw-gb"
+	EmailCreateRequestLanguageKxv    EmailCreateRequestLanguage = "kxv"
+	EmailCreateRequestLanguageKxvIn  EmailCreateRequestLanguage = "kxv-in"
+	EmailCreateRequestLanguageKy     EmailCreateRequestLanguage = "ky"
+	EmailCreateRequestLanguageKyKg   EmailCreateRequestLanguage = "ky-kg"
+	EmailCreateRequestLanguageLa     EmailCreateRequestLanguage = "la"
+	EmailCreateRequestLanguageLag    EmailCreateRequestLanguage = "lag"
+	EmailCreateRequestLanguageLagTz  EmailCreateRequestLanguage = "lag-tz"
+	EmailCreateRequestLanguageLb     EmailCreateRequestLanguage = "lb"
+	EmailCreateRequestLanguageLbLu   EmailCreateRequestLanguage = "lb-lu"
+	EmailCreateRequestLanguageLg     EmailCreateRequestLanguage = "lg"
+	EmailCreateRequestLanguageLgUg   EmailCreateRequestLanguage = "lg-ug"
+	EmailCreateRequestLanguageLi     EmailCreateRequestLanguage = "li"
+	EmailCreateRequestLanguageLij    EmailCreateRequestLanguage = "lij"
+	EmailCreateRequestLanguageLijIt  EmailCreateRequestLanguage = "lij-it"
+	EmailCreateRequestLanguageLkt    EmailCreateRequestLanguage = "lkt"
+	EmailCreateRequestLanguageLktUs  EmailCreateRequestLanguage = "lkt-us"
+	EmailCreateRequestLanguageLmo    EmailCreateRequestLanguage = "lmo"
+	EmailCreateRequestLanguageLmoIt  EmailCreateRequestLanguage = "lmo-it"
+	EmailCreateRequestLanguageLn     EmailCreateRequestLanguage = "ln"
+	EmailCreateRequestLanguageLnAo   EmailCreateRequestLanguage = "ln-ao"
+	EmailCreateRequestLanguageLnCd   EmailCreateRequestLanguage = "ln-cd"
+	EmailCreateRequestLanguageLnCf   EmailCreateRequestLanguage = "ln-cf"
+	EmailCreateRequestLanguageLnCg   EmailCreateRequestLanguage = "ln-cg"
+	EmailCreateRequestLanguageLo     EmailCreateRequestLanguage = "lo"
+	EmailCreateRequestLanguageLoLa   EmailCreateRequestLanguage = "lo-la"
+	EmailCreateRequestLanguageLrc    EmailCreateRequestLanguage = "lrc"
+	EmailCreateRequestLanguageLrcIq  EmailCreateRequestLanguage = "lrc-iq"
+	EmailCreateRequestLanguageLrcIr  EmailCreateRequestLanguage = "lrc-ir"
+	EmailCreateRequestLanguageLt     EmailCreateRequestLanguage = "lt"
+	EmailCreateRequestLanguageLtLt   EmailCreateRequestLanguage = "lt-lt"
+	EmailCreateRequestLanguageLu     EmailCreateRequestLanguage = "lu"
+	EmailCreateRequestLanguageLuCd   EmailCreateRequestLanguage = "lu-cd"
+	EmailCreateRequestLanguageLuo    EmailCreateRequestLanguage = "luo"
+	EmailCreateRequestLanguageLuoKe  EmailCreateRequestLanguage = "luo-ke"
+	EmailCreateRequestLanguageLuy    EmailCreateRequestLanguage = "luy"
+	EmailCreateRequestLanguageLuyKe  EmailCreateRequestLanguage = "luy-ke"
+	EmailCreateRequestLanguageLv     EmailCreateRequestLanguage = "lv"
+	EmailCreateRequestLanguageLvLv   EmailCreateRequestLanguage = "lv-lv"
+	EmailCreateRequestLanguageMai    EmailCreateRequestLanguage = "mai"
+	EmailCreateRequestLanguageMaiIn  EmailCreateRequestLanguage = "mai-in"
+	EmailCreateRequestLanguageMas    EmailCreateRequestLanguage = "mas"
+	EmailCreateRequestLanguageMasKe  EmailCreateRequestLanguage = "mas-ke"
+	EmailCreateRequestLanguageMasTz  EmailCreateRequestLanguage = "mas-tz"
+	EmailCreateRequestLanguageMdf    EmailCreateRequestLanguage = "mdf"
+	EmailCreateRequestLanguageMdfRu  EmailCreateRequestLanguage = "mdf-ru"
+	EmailCreateRequestLanguageMer    EmailCreateRequestLanguage = "mer"
+	EmailCreateRequestLanguageMerKe  EmailCreateRequestLanguage = "mer-ke"
+	EmailCreateRequestLanguageMfe    EmailCreateRequestLanguage = "mfe"
+	EmailCreateRequestLanguageMfeMu  EmailCreateRequestLanguage = "mfe-mu"
+	EmailCreateRequestLanguageMg     EmailCreateRequestLanguage = "mg"
+	EmailCreateRequestLanguageMgMg   EmailCreateRequestLanguage = "mg-mg"
+	EmailCreateRequestLanguageMgh    EmailCreateRequestLanguage = "mgh"
+	EmailCreateRequestLanguageMghMz  EmailCreateRequestLanguage = "mgh-mz"
+	EmailCreateRequestLanguageMgo    EmailCreateRequestLanguage = "mgo"
+	EmailCreateRequestLanguageMgoCm  EmailCreateRequestLanguage = "mgo-cm"
+	EmailCreateRequestLanguageMh     EmailCreateRequestLanguage = "mh"
+	EmailCreateRequestLanguageMi     EmailCreateRequestLanguage = "mi"
+	EmailCreateRequestLanguageMiNz   EmailCreateRequestLanguage = "mi-nz"
+	EmailCreateRequestLanguageMk     EmailCreateRequestLanguage = "mk"
+	EmailCreateRequestLanguageMkMk   EmailCreateRequestLanguage = "mk-mk"
+	EmailCreateRequestLanguageMl     EmailCreateRequestLanguage = "ml"
+	EmailCreateRequestLanguageMlIn   EmailCreateRequestLanguage = "ml-in"
+	EmailCreateRequestLanguageMn     EmailCreateRequestLanguage = "mn"
+	EmailCreateRequestLanguageMnMn   EmailCreateRequestLanguage = "mn-mn"
+	EmailCreateRequestLanguageMni    EmailCreateRequestLanguage = "mni"
+	EmailCreateRequestLanguageMniIn  EmailCreateRequestLanguage = "mni-in"
+	EmailCreateRequestLanguageMr     EmailCreateRequestLanguage = "mr"
+	EmailCreateRequestLanguageMrIn   EmailCreateRequestLanguage = "mr-in"
+	EmailCreateRequestLanguageMs     EmailCreateRequestLanguage = "ms"
+	EmailCreateRequestLanguageMsBn   EmailCreateRequestLanguage = "ms-bn"
+	EmailCreateRequestLanguageMsId   EmailCreateRequestLanguage = "ms-id"
+	EmailCreateRequestLanguageMsMy   EmailCreateRequestLanguage = "ms-my"
+	EmailCreateRequestLanguageMsSg   EmailCreateRequestLanguage = "ms-sg"
+	EmailCreateRequestLanguageMt     EmailCreateRequestLanguage = "mt"
+	EmailCreateRequestLanguageMtMt   EmailCreateRequestLanguage = "mt-mt"
+	EmailCreateRequestLanguageMua    EmailCreateRequestLanguage = "mua"
+	EmailCreateRequestLanguageMuaCm  EmailCreateRequestLanguage = "mua-cm"
+	EmailCreateRequestLanguageMy     EmailCreateRequestLanguage = "my"
+	EmailCreateRequestLanguageMyMm   EmailCreateRequestLanguage = "my-mm"
+	EmailCreateRequestLanguageMzn    EmailCreateRequestLanguage = "mzn"
+	EmailCreateRequestLanguageMznIr  EmailCreateRequestLanguage = "mzn-ir"
+	EmailCreateRequestLanguageNa     EmailCreateRequestLanguage = "na"
+	EmailCreateRequestLanguageNaq    EmailCreateRequestLanguage = "naq"
+	EmailCreateRequestLanguageNaqNa  EmailCreateRequestLanguage = "naq-na"
+	EmailCreateRequestLanguageNb     EmailCreateRequestLanguage = "nb"
+	EmailCreateRequestLanguageNbNo   EmailCreateRequestLanguage = "nb-no"
+	EmailCreateRequestLanguageNbSj   EmailCreateRequestLanguage = "nb-sj"
+	EmailCreateRequestLanguageNd     EmailCreateRequestLanguage = "nd"
+	EmailCreateRequestLanguageNdZw   EmailCreateRequestLanguage = "nd-zw"
+	EmailCreateRequestLanguageNds    EmailCreateRequestLanguage = "nds"
+	EmailCreateRequestLanguageNdsDe  EmailCreateRequestLanguage = "nds-de"
+	EmailCreateRequestLanguageNdsNl  EmailCreateRequestLanguage = "nds-nl"
+	EmailCreateRequestLanguageNe     EmailCreateRequestLanguage = "ne"
+	EmailCreateRequestLanguageNeIn   EmailCreateRequestLanguage = "ne-in"
+	EmailCreateRequestLanguageNeNp   EmailCreateRequestLanguage = "ne-np"
+	EmailCreateRequestLanguageNg     EmailCreateRequestLanguage = "ng"
+	EmailCreateRequestLanguageNl     EmailCreateRequestLanguage = "nl"
+	EmailCreateRequestLanguageNlAw   EmailCreateRequestLanguage = "nl-aw"
+	EmailCreateRequestLanguageNlBe   EmailCreateRequestLanguage = "nl-be"
+	EmailCreateRequestLanguageNlBq   EmailCreateRequestLanguage = "nl-bq"
+	EmailCreateRequestLanguageNlCh   EmailCreateRequestLanguage = "nl-ch"
+	EmailCreateRequestLanguageNlCw   EmailCreateRequestLanguage = "nl-cw"
+	EmailCreateRequestLanguageNlLu   EmailCreateRequestLanguage = "nl-lu"
+	EmailCreateRequestLanguageNlNl   EmailCreateRequestLanguage = "nl-nl"
+	EmailCreateRequestLanguageNlSr   EmailCreateRequestLanguage = "nl-sr"
+	EmailCreateRequestLanguageNlSx   EmailCreateRequestLanguage = "nl-sx"
+	EmailCreateRequestLanguageNmg    EmailCreateRequestLanguage = "nmg"
+	EmailCreateRequestLanguageNmgCm  EmailCreateRequestLanguage = "nmg-cm"
+	EmailCreateRequestLanguageNn     EmailCreateRequestLanguage = "nn"
+	EmailCreateRequestLanguageNnNo   EmailCreateRequestLanguage = "nn-no"
+	EmailCreateRequestLanguageNnh    EmailCreateRequestLanguage = "nnh"
+	EmailCreateRequestLanguageNnhCm  EmailCreateRequestLanguage = "nnh-cm"
+	EmailCreateRequestLanguageNo     EmailCreateRequestLanguage = "no"
+	EmailCreateRequestLanguageNoNo   EmailCreateRequestLanguage = "no-no"
+	EmailCreateRequestLanguageNqo    EmailCreateRequestLanguage = "nqo"
+	EmailCreateRequestLanguageNqoGn  EmailCreateRequestLanguage = "nqo-gn"
+	EmailCreateRequestLanguageNr     EmailCreateRequestLanguage = "nr"
+	EmailCreateRequestLanguageNso    EmailCreateRequestLanguage = "nso"
+	EmailCreateRequestLanguageNsoZa  EmailCreateRequestLanguage = "nso-za"
+	EmailCreateRequestLanguageNus    EmailCreateRequestLanguage = "nus"
+	EmailCreateRequestLanguageNusSs  EmailCreateRequestLanguage = "nus-ss"
+	EmailCreateRequestLanguageNv     EmailCreateRequestLanguage = "nv"
+	EmailCreateRequestLanguageNy     EmailCreateRequestLanguage = "ny"
+	EmailCreateRequestLanguageNyn    EmailCreateRequestLanguage = "nyn"
+	EmailCreateRequestLanguageNynUg  EmailCreateRequestLanguage = "nyn-ug"
+	EmailCreateRequestLanguageOc     EmailCreateRequestLanguage = "oc"
+	EmailCreateRequestLanguageOcEs   EmailCreateRequestLanguage = "oc-es"
+	EmailCreateRequestLanguageOcFr   EmailCreateRequestLanguage = "oc-fr"
+	EmailCreateRequestLanguageOj     EmailCreateRequestLanguage = "oj"
+	EmailCreateRequestLanguageOm     EmailCreateRequestLanguage = "om"
+	EmailCreateRequestLanguageOmEt   EmailCreateRequestLanguage = "om-et"
+	EmailCreateRequestLanguageOmKe   EmailCreateRequestLanguage = "om-ke"
+	EmailCreateRequestLanguageOr     EmailCreateRequestLanguage = "or"
+	EmailCreateRequestLanguageOrIn   EmailCreateRequestLanguage = "or-in"
+	EmailCreateRequestLanguageOs     EmailCreateRequestLanguage = "os"
+	EmailCreateRequestLanguageOsGe   EmailCreateRequestLanguage = "os-ge"
+	EmailCreateRequestLanguageOsRu   EmailCreateRequestLanguage = "os-ru"
+	EmailCreateRequestLanguagePa     EmailCreateRequestLanguage = "pa"
+	EmailCreateRequestLanguagePaIn   EmailCreateRequestLanguage = "pa-in"
+	EmailCreateRequestLanguagePaPk   EmailCreateRequestLanguage = "pa-pk"
+	EmailCreateRequestLanguagePcm    EmailCreateRequestLanguage = "pcm"
+	EmailCreateRequestLanguagePcmNg  EmailCreateRequestLanguage = "pcm-ng"
+	EmailCreateRequestLanguagePi     EmailCreateRequestLanguage = "pi"
+	EmailCreateRequestLanguagePis    EmailCreateRequestLanguage = "pis"
+	EmailCreateRequestLanguagePisSb  EmailCreateRequestLanguage = "pis-sb"
+	EmailCreateRequestLanguagePl     EmailCreateRequestLanguage = "pl"
+	EmailCreateRequestLanguagePlPl   EmailCreateRequestLanguage = "pl-pl"
+	EmailCreateRequestLanguagePrg    EmailCreateRequestLanguage = "prg"
+	EmailCreateRequestLanguagePrg001 EmailCreateRequestLanguage = "prg-001"
+	EmailCreateRequestLanguagePs     EmailCreateRequestLanguage = "ps"
+	EmailCreateRequestLanguagePsAf   EmailCreateRequestLanguage = "ps-af"
+	EmailCreateRequestLanguagePsPk   EmailCreateRequestLanguage = "ps-pk"
+	EmailCreateRequestLanguagePt     EmailCreateRequestLanguage = "pt"
+	EmailCreateRequestLanguagePtAo   EmailCreateRequestLanguage = "pt-ao"
+	EmailCreateRequestLanguagePtBr   EmailCreateRequestLanguage = "pt-br"
+	EmailCreateRequestLanguagePtCh   EmailCreateRequestLanguage = "pt-ch"
+	EmailCreateRequestLanguagePtCv   EmailCreateRequestLanguage = "pt-cv"
+	EmailCreateRequestLanguagePtGq   EmailCreateRequestLanguage = "pt-gq"
+	EmailCreateRequestLanguagePtGw   EmailCreateRequestLanguage = "pt-gw"
+	EmailCreateRequestLanguagePtLu   EmailCreateRequestLanguage = "pt-lu"
+	EmailCreateRequestLanguagePtMo   EmailCreateRequestLanguage = "pt-mo"
+	EmailCreateRequestLanguagePtMz   EmailCreateRequestLanguage = "pt-mz"
+	EmailCreateRequestLanguagePtPt   EmailCreateRequestLanguage = "pt-pt"
+	EmailCreateRequestLanguagePtSt   EmailCreateRequestLanguage = "pt-st"
+	EmailCreateRequestLanguagePtTl   EmailCreateRequestLanguage = "pt-tl"
+	EmailCreateRequestLanguageQu     EmailCreateRequestLanguage = "qu"
+	EmailCreateRequestLanguageQuBo   EmailCreateRequestLanguage = "qu-bo"
+	EmailCreateRequestLanguageQuEc   EmailCreateRequestLanguage = "qu-ec"
+	EmailCreateRequestLanguageQuPe   EmailCreateRequestLanguage = "qu-pe"
+	EmailCreateRequestLanguageRaj    EmailCreateRequestLanguage = "raj"
+	EmailCreateRequestLanguageRajIn  EmailCreateRequestLanguage = "raj-in"
+	EmailCreateRequestLanguageRm     EmailCreateRequestLanguage = "rm"
+	EmailCreateRequestLanguageRmCh   EmailCreateRequestLanguage = "rm-ch"
+	EmailCreateRequestLanguageRn     EmailCreateRequestLanguage = "rn"
+	EmailCreateRequestLanguageRnBi   EmailCreateRequestLanguage = "rn-bi"
+	EmailCreateRequestLanguageRo     EmailCreateRequestLanguage = "ro"
+	EmailCreateRequestLanguageRoMd   EmailCreateRequestLanguage = "ro-md"
+	EmailCreateRequestLanguageRoRo   EmailCreateRequestLanguage = "ro-ro"
+	EmailCreateRequestLanguageRof    EmailCreateRequestLanguage = "rof"
+	EmailCreateRequestLanguageRofTz  EmailCreateRequestLanguage = "rof-tz"
+	EmailCreateRequestLanguageRu     EmailCreateRequestLanguage = "ru"
+	EmailCreateRequestLanguageRuBy   EmailCreateRequestLanguage = "ru-by"
+	EmailCreateRequestLanguageRuKg   EmailCreateRequestLanguage = "ru-kg"
+	EmailCreateRequestLanguageRuKz   EmailCreateRequestLanguage = "ru-kz"
+	EmailCreateRequestLanguageRuMd   EmailCreateRequestLanguage = "ru-md"
+	EmailCreateRequestLanguageRuRu   EmailCreateRequestLanguage = "ru-ru"
+	EmailCreateRequestLanguageRuUa   EmailCreateRequestLanguage = "ru-ua"
+	EmailCreateRequestLanguageRw     EmailCreateRequestLanguage = "rw"
+	EmailCreateRequestLanguageRwRw   EmailCreateRequestLanguage = "rw-rw"
+	EmailCreateRequestLanguageRwk    EmailCreateRequestLanguage = "rwk"
+	EmailCreateRequestLanguageRwkTz  EmailCreateRequestLanguage = "rwk-tz"
+	EmailCreateRequestLanguageSa     EmailCreateRequestLanguage = "sa"
+	EmailCreateRequestLanguageSaIn   EmailCreateRequestLanguage = "sa-in"
+	EmailCreateRequestLanguageSah    EmailCreateRequestLanguage = "sah"
+	EmailCreateRequestLanguageSahRu  EmailCreateRequestLanguage = "sah-ru"
+	EmailCreateRequestLanguageSaq    EmailCreateRequestLanguage = "saq"
+	EmailCreateRequestLanguageSaqKe  EmailCreateRequestLanguage = "saq-ke"
+	EmailCreateRequestLanguageSat    EmailCreateRequestLanguage = "sat"
+	EmailCreateRequestLanguageSatIn  EmailCreateRequestLanguage = "sat-in"
+	EmailCreateRequestLanguageSbp    EmailCreateRequestLanguage = "sbp"
+	EmailCreateRequestLanguageSbpTz  EmailCreateRequestLanguage = "sbp-tz"
+	EmailCreateRequestLanguageSc     EmailCreateRequestLanguage = "sc"
+	EmailCreateRequestLanguageScIt   EmailCreateRequestLanguage = "sc-it"
+	EmailCreateRequestLanguageSd     EmailCreateRequestLanguage = "sd"
+	EmailCreateRequestLanguageSdIn   EmailCreateRequestLanguage = "sd-in"
+	EmailCreateRequestLanguageSdPk   EmailCreateRequestLanguage = "sd-pk"
+	EmailCreateRequestLanguageSe     EmailCreateRequestLanguage = "se"
+	EmailCreateRequestLanguageSeFi   EmailCreateRequestLanguage = "se-fi"
+	EmailCreateRequestLanguageSeNo   EmailCreateRequestLanguage = "se-no"
+	EmailCreateRequestLanguageSeSe   EmailCreateRequestLanguage = "se-se"
+	EmailCreateRequestLanguageSeh    EmailCreateRequestLanguage = "seh"
+	EmailCreateRequestLanguageSehMz  EmailCreateRequestLanguage = "seh-mz"
+	EmailCreateRequestLanguageSes    EmailCreateRequestLanguage = "ses"
+	EmailCreateRequestLanguageSesMl  EmailCreateRequestLanguage = "ses-ml"
+	EmailCreateRequestLanguageSg     EmailCreateRequestLanguage = "sg"
+	EmailCreateRequestLanguageSgCf   EmailCreateRequestLanguage = "sg-cf"
+	EmailCreateRequestLanguageShi    EmailCreateRequestLanguage = "shi"
+	EmailCreateRequestLanguageShiMa  EmailCreateRequestLanguage = "shi-ma"
+	EmailCreateRequestLanguageSi     EmailCreateRequestLanguage = "si"
+	EmailCreateRequestLanguageSiLk   EmailCreateRequestLanguage = "si-lk"
+	EmailCreateRequestLanguageSk     EmailCreateRequestLanguage = "sk"
+	EmailCreateRequestLanguageSkSk   EmailCreateRequestLanguage = "sk-sk"
+	EmailCreateRequestLanguageSl     EmailCreateRequestLanguage = "sl"
+	EmailCreateRequestLanguageSlSi   EmailCreateRequestLanguage = "sl-si"
+	EmailCreateRequestLanguageSm     EmailCreateRequestLanguage = "sm"
+	EmailCreateRequestLanguageSmn    EmailCreateRequestLanguage = "smn"
+	EmailCreateRequestLanguageSmnFi  EmailCreateRequestLanguage = "smn-fi"
+	EmailCreateRequestLanguageSms    EmailCreateRequestLanguage = "sms"
+	EmailCreateRequestLanguageSmsFi  EmailCreateRequestLanguage = "sms-fi"
+	EmailCreateRequestLanguageSn     EmailCreateRequestLanguage = "sn"
+	EmailCreateRequestLanguageSnZw   EmailCreateRequestLanguage = "sn-zw"
+	EmailCreateRequestLanguageSo     EmailCreateRequestLanguage = "so"
+	EmailCreateRequestLanguageSoDj   EmailCreateRequestLanguage = "so-dj"
+	EmailCreateRequestLanguageSoEt   EmailCreateRequestLanguage = "so-et"
+	EmailCreateRequestLanguageSoKe   EmailCreateRequestLanguage = "so-ke"
+	EmailCreateRequestLanguageSoSo   EmailCreateRequestLanguage = "so-so"
+	EmailCreateRequestLanguageSq     EmailCreateRequestLanguage = "sq"
+	EmailCreateRequestLanguageSqAl   EmailCreateRequestLanguage = "sq-al"
+	EmailCreateRequestLanguageSqMk   EmailCreateRequestLanguage = "sq-mk"
+	EmailCreateRequestLanguageSqXk   EmailCreateRequestLanguage = "sq-xk"
+	EmailCreateRequestLanguageSr     EmailCreateRequestLanguage = "sr"
+	EmailCreateRequestLanguageSrBa   EmailCreateRequestLanguage = "sr-ba"
+	EmailCreateRequestLanguageSrCs   EmailCreateRequestLanguage = "sr-cs"
+	EmailCreateRequestLanguageSrMe   EmailCreateRequestLanguage = "sr-me"
+	EmailCreateRequestLanguageSrRs   EmailCreateRequestLanguage = "sr-rs"
+	EmailCreateRequestLanguageSrXk   EmailCreateRequestLanguage = "sr-xk"
+	EmailCreateRequestLanguageSs     EmailCreateRequestLanguage = "ss"
+	EmailCreateRequestLanguageSt     EmailCreateRequestLanguage = "st"
+	EmailCreateRequestLanguageStLs   EmailCreateRequestLanguage = "st-ls"
+	EmailCreateRequestLanguageStZa   EmailCreateRequestLanguage = "st-za"
+	EmailCreateRequestLanguageSu     EmailCreateRequestLanguage = "su"
+	EmailCreateRequestLanguageSuId   EmailCreateRequestLanguage = "su-id"
+	EmailCreateRequestLanguageSv     EmailCreateRequestLanguage = "sv"
+	EmailCreateRequestLanguageSvAx   EmailCreateRequestLanguage = "sv-ax"
+	EmailCreateRequestLanguageSvFi   EmailCreateRequestLanguage = "sv-fi"
+	EmailCreateRequestLanguageSvSe   EmailCreateRequestLanguage = "sv-se"
+	EmailCreateRequestLanguageSw     EmailCreateRequestLanguage = "sw"
+	EmailCreateRequestLanguageSwCd   EmailCreateRequestLanguage = "sw-cd"
+	EmailCreateRequestLanguageSwKe   EmailCreateRequestLanguage = "sw-ke"
+	EmailCreateRequestLanguageSwTz   EmailCreateRequestLanguage = "sw-tz"
+	EmailCreateRequestLanguageSwUg   EmailCreateRequestLanguage = "sw-ug"
+	EmailCreateRequestLanguageSy     EmailCreateRequestLanguage = "sy"
+	EmailCreateRequestLanguageSyr    EmailCreateRequestLanguage = "syr"
+	EmailCreateRequestLanguageSyrIq  EmailCreateRequestLanguage = "syr-iq"
+	EmailCreateRequestLanguageSyrSy  EmailCreateRequestLanguage = "syr-sy"
+	EmailCreateRequestLanguageSzl    EmailCreateRequestLanguage = "szl"
+	EmailCreateRequestLanguageSzlPl  EmailCreateRequestLanguage = "szl-pl"
+	EmailCreateRequestLanguageTa     EmailCreateRequestLanguage = "ta"
+	EmailCreateRequestLanguageTaIn   EmailCreateRequestLanguage = "ta-in"
+	EmailCreateRequestLanguageTaLk   EmailCreateRequestLanguage = "ta-lk"
+	EmailCreateRequestLanguageTaMy   EmailCreateRequestLanguage = "ta-my"
+	EmailCreateRequestLanguageTaSg   EmailCreateRequestLanguage = "ta-sg"
+	EmailCreateRequestLanguageTe     EmailCreateRequestLanguage = "te"
+	EmailCreateRequestLanguageTeIn   EmailCreateRequestLanguage = "te-in"
+	EmailCreateRequestLanguageTeo    EmailCreateRequestLanguage = "teo"
+	EmailCreateRequestLanguageTeoKe  EmailCreateRequestLanguage = "teo-ke"
+	EmailCreateRequestLanguageTeoUg  EmailCreateRequestLanguage = "teo-ug"
+	EmailCreateRequestLanguageTg     EmailCreateRequestLanguage = "tg"
+	EmailCreateRequestLanguageTgTj   EmailCreateRequestLanguage = "tg-tj"
+	EmailCreateRequestLanguageTh     EmailCreateRequestLanguage = "th"
+	EmailCreateRequestLanguageThTh   EmailCreateRequestLanguage = "th-th"
+	EmailCreateRequestLanguageTi     EmailCreateRequestLanguage = "ti"
+	EmailCreateRequestLanguageTiEr   EmailCreateRequestLanguage = "ti-er"
+	EmailCreateRequestLanguageTiEt   EmailCreateRequestLanguage = "ti-et"
+	EmailCreateRequestLanguageTk     EmailCreateRequestLanguage = "tk"
+	EmailCreateRequestLanguageTkTm   EmailCreateRequestLanguage = "tk-tm"
+	EmailCreateRequestLanguageTl     EmailCreateRequestLanguage = "tl"
+	EmailCreateRequestLanguageTn     EmailCreateRequestLanguage = "tn"
+	EmailCreateRequestLanguageTnBw   EmailCreateRequestLanguage = "tn-bw"
+	EmailCreateRequestLanguageTnZa   EmailCreateRequestLanguage = "tn-za"
+	EmailCreateRequestLanguageTo     EmailCreateRequestLanguage = "to"
+	EmailCreateRequestLanguageToTo   EmailCreateRequestLanguage = "to-to"
+	EmailCreateRequestLanguageTok    EmailCreateRequestLanguage = "tok"
+	EmailCreateRequestLanguageTok001 EmailCreateRequestLanguage = "tok-001"
+	EmailCreateRequestLanguageTr     EmailCreateRequestLanguage = "tr"
+	EmailCreateRequestLanguageTrCy   EmailCreateRequestLanguage = "tr-cy"
+	EmailCreateRequestLanguageTrTr   EmailCreateRequestLanguage = "tr-tr"
+	EmailCreateRequestLanguageTs     EmailCreateRequestLanguage = "ts"
+	EmailCreateRequestLanguageTt     EmailCreateRequestLanguage = "tt"
+	EmailCreateRequestLanguageTtRu   EmailCreateRequestLanguage = "tt-ru"
+	EmailCreateRequestLanguageTw     EmailCreateRequestLanguage = "tw"
+	EmailCreateRequestLanguageTwq    EmailCreateRequestLanguage = "twq"
+	EmailCreateRequestLanguageTwqNe  EmailCreateRequestLanguage = "twq-ne"
+	EmailCreateRequestLanguageTy     EmailCreateRequestLanguage = "ty"
+	EmailCreateRequestLanguageTzm    EmailCreateRequestLanguage = "tzm"
+	EmailCreateRequestLanguageTzmMa  EmailCreateRequestLanguage = "tzm-ma"
+	EmailCreateRequestLanguageUg     EmailCreateRequestLanguage = "ug"
+	EmailCreateRequestLanguageUgCn   EmailCreateRequestLanguage = "ug-cn"
+	EmailCreateRequestLanguageUk     EmailCreateRequestLanguage = "uk"
+	EmailCreateRequestLanguageUkUa   EmailCreateRequestLanguage = "uk-ua"
+	EmailCreateRequestLanguageUr     EmailCreateRequestLanguage = "ur"
+	EmailCreateRequestLanguageUrIn   EmailCreateRequestLanguage = "ur-in"
+	EmailCreateRequestLanguageUrPk   EmailCreateRequestLanguage = "ur-pk"
+	EmailCreateRequestLanguageUz     EmailCreateRequestLanguage = "uz"
+	EmailCreateRequestLanguageUzAf   EmailCreateRequestLanguage = "uz-af"
+	EmailCreateRequestLanguageUzUz   EmailCreateRequestLanguage = "uz-uz"
+	EmailCreateRequestLanguageVai    EmailCreateRequestLanguage = "vai"
+	EmailCreateRequestLanguageVaiLr  EmailCreateRequestLanguage = "vai-lr"
+	EmailCreateRequestLanguageVe     EmailCreateRequestLanguage = "ve"
+	EmailCreateRequestLanguageVec    EmailCreateRequestLanguage = "vec"
+	EmailCreateRequestLanguageVecIt  EmailCreateRequestLanguage = "vec-it"
+	EmailCreateRequestLanguageVi     EmailCreateRequestLanguage = "vi"
+	EmailCreateRequestLanguageViVn   EmailCreateRequestLanguage = "vi-vn"
+	EmailCreateRequestLanguageVmw    EmailCreateRequestLanguage = "vmw"
+	EmailCreateRequestLanguageVmwMz  EmailCreateRequestLanguage = "vmw-mz"
+	EmailCreateRequestLanguageVo     EmailCreateRequestLanguage = "vo"
+	EmailCreateRequestLanguageVo001  EmailCreateRequestLanguage = "vo-001"
+	EmailCreateRequestLanguageVun    EmailCreateRequestLanguage = "vun"
+	EmailCreateRequestLanguageVunTz  EmailCreateRequestLanguage = "vun-tz"
+	EmailCreateRequestLanguageWa     EmailCreateRequestLanguage = "wa"
+	EmailCreateRequestLanguageWae    EmailCreateRequestLanguage = "wae"
+	EmailCreateRequestLanguageWaeCh  EmailCreateRequestLanguage = "wae-ch"
+	EmailCreateRequestLanguageWo     EmailCreateRequestLanguage = "wo"
+	EmailCreateRequestLanguageWoSn   EmailCreateRequestLanguage = "wo-sn"
+	EmailCreateRequestLanguageXh     EmailCreateRequestLanguage = "xh"
+	EmailCreateRequestLanguageXhZa   EmailCreateRequestLanguage = "xh-za"
+	EmailCreateRequestLanguageXnr    EmailCreateRequestLanguage = "xnr"
+	EmailCreateRequestLanguageXnrIn  EmailCreateRequestLanguage = "xnr-in"
+	EmailCreateRequestLanguageXog    EmailCreateRequestLanguage = "xog"
+	EmailCreateRequestLanguageXogUg  EmailCreateRequestLanguage = "xog-ug"
+	EmailCreateRequestLanguageYav    EmailCreateRequestLanguage = "yav"
+	EmailCreateRequestLanguageYavCm  EmailCreateRequestLanguage = "yav-cm"
+	EmailCreateRequestLanguageYi     EmailCreateRequestLanguage = "yi"
+	EmailCreateRequestLanguageYi001  EmailCreateRequestLanguage = "yi-001"
+	EmailCreateRequestLanguageYiUa   EmailCreateRequestLanguage = "yi-ua"
+	EmailCreateRequestLanguageYo     EmailCreateRequestLanguage = "yo"
+	EmailCreateRequestLanguageYoBj   EmailCreateRequestLanguage = "yo-bj"
+	EmailCreateRequestLanguageYoNg   EmailCreateRequestLanguage = "yo-ng"
+	EmailCreateRequestLanguageYrl    EmailCreateRequestLanguage = "yrl"
+	EmailCreateRequestLanguageYrlBr  EmailCreateRequestLanguage = "yrl-br"
+	EmailCreateRequestLanguageYrlCo  EmailCreateRequestLanguage = "yrl-co"
+	EmailCreateRequestLanguageYrlVe  EmailCreateRequestLanguage = "yrl-ve"
+	EmailCreateRequestLanguageYue    EmailCreateRequestLanguage = "yue"
+	EmailCreateRequestLanguageYueCn  EmailCreateRequestLanguage = "yue-cn"
+	EmailCreateRequestLanguageYueHk  EmailCreateRequestLanguage = "yue-hk"
+	EmailCreateRequestLanguageYueMo  EmailCreateRequestLanguage = "yue-mo"
+	EmailCreateRequestLanguageZa     EmailCreateRequestLanguage = "za"
+	EmailCreateRequestLanguageZaCn   EmailCreateRequestLanguage = "za-cn"
+	EmailCreateRequestLanguageZgh    EmailCreateRequestLanguage = "zgh"
+	EmailCreateRequestLanguageZghMa  EmailCreateRequestLanguage = "zgh-ma"
+	EmailCreateRequestLanguageZh     EmailCreateRequestLanguage = "zh"
+	EmailCreateRequestLanguageZhCn   EmailCreateRequestLanguage = "zh-cn"
+	EmailCreateRequestLanguageZhHans EmailCreateRequestLanguage = "zh-hans"
+	EmailCreateRequestLanguageZhHant EmailCreateRequestLanguage = "zh-hant"
+	EmailCreateRequestLanguageZhHk   EmailCreateRequestLanguage = "zh-hk"
+	EmailCreateRequestLanguageZhMo   EmailCreateRequestLanguage = "zh-mo"
+	EmailCreateRequestLanguageZhMy   EmailCreateRequestLanguage = "zh-my"
+	EmailCreateRequestLanguageZhSg   EmailCreateRequestLanguage = "zh-sg"
+	EmailCreateRequestLanguageZhTw   EmailCreateRequestLanguage = "zh-tw"
+	EmailCreateRequestLanguageZu     EmailCreateRequestLanguage = "zu"
+	EmailCreateRequestLanguageZuZa   EmailCreateRequestLanguage = "zu-za"
+)

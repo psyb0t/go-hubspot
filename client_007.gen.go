@@ -17,6 +17,1424 @@ import (
 	openapi_types "github.com/oapi-codegen/runtime/types"
 )
 
+// Postcrmobjects202603usersbatchread Read a batch of users by internal ID, or unique property values
+//
+// Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /crm/objects/2026-03/users/batch/read (the `Postcrmobjects202603usersbatchread` operationId).
+func (c *Client) Postcrmobjects202603usersbatchread(ctx context.Context, params *Postcrmobjects202603usersbatchreadParams, body Postcrmobjects202603usersbatchreadJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmobjects202603usersbatchreadRequest(c.Server, params, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcrmobjects202603usersbatchupdateWithBody Update a batch of users by internal ID, or unique property values
+//
+// Update multiple user records in a single request by specifying their internal IDs or unique property values. This operation allows for batch processing of user data, ensuring efficient updates across multiple user profiles.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /crm/objects/2026-03/users/batch/update (the `Postcrmobjects202603usersbatchupdate` operationId).
+func (c *Client) Postcrmobjects202603usersbatchupdateWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmobjects202603usersbatchupdateRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcrmobjects202603usersbatchupdate Update a batch of users by internal ID, or unique property values
+//
+// Update multiple user records in a single request by specifying their internal IDs or unique property values. This operation allows for batch processing of user data, ensuring efficient updates across multiple user profiles.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /crm/objects/2026-03/users/batch/update (the `Postcrmobjects202603usersbatchupdate` operationId).
+func (c *Client) Postcrmobjects202603usersbatchupdate(ctx context.Context, body Postcrmobjects202603usersbatchupdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmobjects202603usersbatchupdateRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcrmobjects202603usersbatchupsertWithBody Create or update a batch of users by unique property values
+//
+// Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /crm/objects/2026-03/users/batch/upsert (the `Postcrmobjects202603usersbatchupsert` operationId).
+func (c *Client) Postcrmobjects202603usersbatchupsertWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmobjects202603usersbatchupsertRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcrmobjects202603usersbatchupsert Create or update a batch of users by unique property values
+//
+// Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /crm/objects/2026-03/users/batch/upsert (the `Postcrmobjects202603usersbatchupsert` operationId).
+func (c *Client) Postcrmobjects202603usersbatchupsert(ctx context.Context, body Postcrmobjects202603usersbatchupsertJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmobjects202603usersbatchupsertRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcrmobjects202603userssearchWithBody Search for users based on specified criteria.
+//
+// Execute a search for users using defined filters, properties, and sorting options. The request must include a search query and can return up to 200 results per request.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /crm/objects/2026-03/users/search (the `Postcrmobjects202603userssearch` operationId).
+func (c *Client) Postcrmobjects202603userssearchWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmobjects202603userssearchRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcrmobjects202603userssearch Search for users based on specified criteria.
+//
+// Execute a search for users using defined filters, properties, and sorting options. The request must include a search query and can return up to 200 results per request.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /crm/objects/2026-03/users/search (the `Postcrmobjects202603userssearch` operationId).
+func (c *Client) Postcrmobjects202603userssearch(ctx context.Context, body Postcrmobjects202603userssearchJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmobjects202603userssearchRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Deletecrmobjects202603usersUserId Archive
+//
+// Move an Object identified by `{userId}` to the recycling bin.
+//
+// Corresponds with DELETE /crm/objects/2026-03/users/{userId} (the `Deletecrmobjects202603usersUserId` operationId).
+func (c *Client) Deletecrmobjects202603usersUserId(ctx context.Context, userId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDeletecrmobjects202603usersUserIdRequest(c.Server, userId)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Getcrmobjects202603usersUserId Read
+//
+// Read an Object identified by `{userId}`. `{userId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param.
+//
+// Corresponds with GET /crm/objects/2026-03/users/{userId} (the `Getcrmobjects202603usersUserId` operationId).
+func (c *Client) Getcrmobjects202603usersUserId(ctx context.Context, userId string, params *Getcrmobjects202603usersUserIdParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetcrmobjects202603usersUserIdRequest(c.Server, userId, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Patchcrmobjects202603usersUserIdWithBody Update
+//
+// Perform a partial update of an Object identified by `{userId}`or optionally a unique property value as specified by the `idProperty` query param. `{userId}` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with PATCH /crm/objects/2026-03/users/{userId} (the `Patchcrmobjects202603usersUserId` operationId).
+func (c *Client) Patchcrmobjects202603usersUserIdWithBody(ctx context.Context, userId string, params *Patchcrmobjects202603usersUserIdParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPatchcrmobjects202603usersUserIdRequestWithBody(c.Server, userId, params, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Patchcrmobjects202603usersUserId Update
+//
+// Perform a partial update of an Object identified by `{userId}`or optionally a unique property value as specified by the `idProperty` query param. `{userId}` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with PATCH /crm/objects/2026-03/users/{userId} (the `Patchcrmobjects202603usersUserId` operationId).
+func (c *Client) Patchcrmobjects202603usersUserId(ctx context.Context, userId string, params *Patchcrmobjects202603usersUserIdParams, body Patchcrmobjects202603usersUserIdJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPatchcrmobjects202603usersUserIdRequest(c.Server, userId, params, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Putcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectId performs a PUT /crm/objects/2026-03/{fromObjectType}/{fromObjectId}/associations/default/{toObjectType}/{toObjectId} (the `Putcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectId` operationId) request.
+func (c *Client) Putcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectId(ctx context.Context, fromObjectType string, fromObjectId string, toObjectType string, toObjectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPutcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdRequest(c.Server, fromObjectType, fromObjectId, toObjectType, toObjectId)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Getcrmobjects202603ObjectType List
+//
+// Read a page of objects. Control what is returned via the `properties` query param.
+//
+// Corresponds with GET /crm/objects/2026-03/{objectType} (the `Getcrmobjects202603ObjectType` operationId).
+func (c *Client) Getcrmobjects202603ObjectType(ctx context.Context, objectType string, params *Getcrmobjects202603ObjectTypeParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetcrmobjects202603ObjectTypeRequest(c.Server, objectType, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcrmobjects202603ObjectTypeWithBody Create
+//
+// Create a CRM object with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard objects is provided.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /crm/objects/2026-03/{objectType} (the `Postcrmobjects202603ObjectType` operationId).
+func (c *Client) Postcrmobjects202603ObjectTypeWithBody(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmobjects202603ObjectTypeRequestWithBody(c.Server, objectType, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcrmobjects202603ObjectType Create
+//
+// Create a CRM object with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard objects is provided.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /crm/objects/2026-03/{objectType} (the `Postcrmobjects202603ObjectType` operationId).
+func (c *Client) Postcrmobjects202603ObjectType(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypeJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmobjects202603ObjectTypeRequest(c.Server, objectType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcrmobjects202603ObjectTypebatcharchiveWithBody Archive a batch of objects by ID
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/archive (the `Postcrmobjects202603ObjectTypebatcharchive` operationId).
+func (c *Client) Postcrmobjects202603ObjectTypebatcharchiveWithBody(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmobjects202603ObjectTypebatcharchiveRequestWithBody(c.Server, objectType, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcrmobjects202603ObjectTypebatcharchive Archive a batch of objects by ID
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/archive (the `Postcrmobjects202603ObjectTypebatcharchive` operationId).
+func (c *Client) Postcrmobjects202603ObjectTypebatcharchive(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypebatcharchiveJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmobjects202603ObjectTypebatcharchiveRequest(c.Server, objectType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcrmobjects202603ObjectTypebatchcreateWithBody Create a batch of objects
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/create (the `Postcrmobjects202603ObjectTypebatchcreate` operationId).
+func (c *Client) Postcrmobjects202603ObjectTypebatchcreateWithBody(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmobjects202603ObjectTypebatchcreateRequestWithBody(c.Server, objectType, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcrmobjects202603ObjectTypebatchcreate Create a batch of objects
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/create (the `Postcrmobjects202603ObjectTypebatchcreate` operationId).
+func (c *Client) Postcrmobjects202603ObjectTypebatchcreate(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypebatchcreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmobjects202603ObjectTypebatchcreateRequest(c.Server, objectType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcrmobjects202603ObjectTypebatchreadWithBody Read a batch of objects by internal ID, or unique property values
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/read (the `Postcrmobjects202603ObjectTypebatchread` operationId).
+func (c *Client) Postcrmobjects202603ObjectTypebatchreadWithBody(ctx context.Context, objectType string, params *Postcrmobjects202603ObjectTypebatchreadParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmobjects202603ObjectTypebatchreadRequestWithBody(c.Server, objectType, params, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcrmobjects202603ObjectTypebatchread Read a batch of objects by internal ID, or unique property values
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/read (the `Postcrmobjects202603ObjectTypebatchread` operationId).
+func (c *Client) Postcrmobjects202603ObjectTypebatchread(ctx context.Context, objectType string, params *Postcrmobjects202603ObjectTypebatchreadParams, body Postcrmobjects202603ObjectTypebatchreadJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmobjects202603ObjectTypebatchreadRequest(c.Server, objectType, params, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcrmobjects202603ObjectTypebatchupdateWithBody Update a batch of objects
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/update (the `Postcrmobjects202603ObjectTypebatchupdate` operationId).
+func (c *Client) Postcrmobjects202603ObjectTypebatchupdateWithBody(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmobjects202603ObjectTypebatchupdateRequestWithBody(c.Server, objectType, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcrmobjects202603ObjectTypebatchupdate Update a batch of objects
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/update (the `Postcrmobjects202603ObjectTypebatchupdate` operationId).
+func (c *Client) Postcrmobjects202603ObjectTypebatchupdate(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypebatchupdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmobjects202603ObjectTypebatchupdateRequest(c.Server, objectType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcrmobjects202603ObjectTypebatchupsertWithBody Create or update a batch of objects by unique property values
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/upsert (the `Postcrmobjects202603ObjectTypebatchupsert` operationId).
+func (c *Client) Postcrmobjects202603ObjectTypebatchupsertWithBody(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmobjects202603ObjectTypebatchupsertRequestWithBody(c.Server, objectType, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcrmobjects202603ObjectTypebatchupsert Create or update a batch of objects by unique property values
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/upsert (the `Postcrmobjects202603ObjectTypebatchupsert` operationId).
+func (c *Client) Postcrmobjects202603ObjectTypebatchupsert(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypebatchupsertJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmobjects202603ObjectTypebatchupsertRequest(c.Server, objectType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcrmobjects202603ObjectTypegdprDeleteWithBody GDPR DELETE
+//
+// Permanently delete a contact and all associated content to follow GDPR. Use optional property 'idProperty' set to 'email' to identify contact by email address. If email address is not found, the email address will be added to a blocklist and prevent it from being used in the future.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /crm/objects/2026-03/{objectType}/gdpr-delete (the `Postcrmobjects202603ObjectTypegdprDelete` operationId).
+func (c *Client) Postcrmobjects202603ObjectTypegdprDeleteWithBody(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmobjects202603ObjectTypegdprDeleteRequestWithBody(c.Server, objectType, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcrmobjects202603ObjectTypegdprDelete GDPR DELETE
+//
+// Permanently delete a contact and all associated content to follow GDPR. Use optional property 'idProperty' set to 'email' to identify contact by email address. If email address is not found, the email address will be added to a blocklist and prevent it from being used in the future.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /crm/objects/2026-03/{objectType}/gdpr-delete (the `Postcrmobjects202603ObjectTypegdprDelete` operationId).
+func (c *Client) Postcrmobjects202603ObjectTypegdprDelete(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypegdprDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmobjects202603ObjectTypegdprDeleteRequest(c.Server, objectType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcrmobjects202603ObjectTypemergeWithBody Merge two objects with same type
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /crm/objects/2026-03/{objectType}/merge (the `Postcrmobjects202603ObjectTypemerge` operationId).
+func (c *Client) Postcrmobjects202603ObjectTypemergeWithBody(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmobjects202603ObjectTypemergeRequestWithBody(c.Server, objectType, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcrmobjects202603ObjectTypemerge Merge two objects with same type
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /crm/objects/2026-03/{objectType}/merge (the `Postcrmobjects202603ObjectTypemerge` operationId).
+func (c *Client) Postcrmobjects202603ObjectTypemerge(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypemergeJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmobjects202603ObjectTypemergeRequest(c.Server, objectType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcrmobjects202603ObjectTypesearchWithBody performs a POST /crm/objects/2026-03/{objectType}/search (the `Postcrmobjects202603ObjectTypesearch` operationId) request,
+// with any type of body and a specified content type.
+func (c *Client) Postcrmobjects202603ObjectTypesearchWithBody(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmobjects202603ObjectTypesearchRequestWithBody(c.Server, objectType, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcrmobjects202603ObjectTypesearch performs a POST /crm/objects/2026-03/{objectType}/search (the `Postcrmobjects202603ObjectTypesearch` operationId) request.
+// Takes a body of the `application/json` content type.
+func (c *Client) Postcrmobjects202603ObjectTypesearch(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypesearchJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmobjects202603ObjectTypesearchRequest(c.Server, objectType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Deletecrmobjects202603ObjectTypeObjectId Archive
+//
+// Move an Object identified by `{objectId}` to the recycling bin.
+//
+// Corresponds with DELETE /crm/objects/2026-03/{objectType}/{objectId} (the `Deletecrmobjects202603ObjectTypeObjectId` operationId).
+func (c *Client) Deletecrmobjects202603ObjectTypeObjectId(ctx context.Context, objectType string, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDeletecrmobjects202603ObjectTypeObjectIdRequest(c.Server, objectType, objectId)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Getcrmobjects202603ObjectTypeObjectId Read
+//
+// Read an Object identified by `{objectId}`. `{objectId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param.
+//
+// Corresponds with GET /crm/objects/2026-03/{objectType}/{objectId} (the `Getcrmobjects202603ObjectTypeObjectId` operationId).
+func (c *Client) Getcrmobjects202603ObjectTypeObjectId(ctx context.Context, objectType string, objectId string, params *Getcrmobjects202603ObjectTypeObjectIdParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetcrmobjects202603ObjectTypeObjectIdRequest(c.Server, objectType, objectId, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Patchcrmobjects202603ObjectTypeObjectIdWithBody Update
+//
+// Perform a partial update of an Object identified by `{objectId}`. `{objectId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param. Provided property values will be overwritten. Read-only and non-existent properties will be ignored. Properties values can be cleared by passing an empty string.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with PATCH /crm/objects/2026-03/{objectType}/{objectId} (the `Patchcrmobjects202603ObjectTypeObjectId` operationId).
+func (c *Client) Patchcrmobjects202603ObjectTypeObjectIdWithBody(ctx context.Context, objectType string, objectId string, params *Patchcrmobjects202603ObjectTypeObjectIdParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPatchcrmobjects202603ObjectTypeObjectIdRequestWithBody(c.Server, objectType, objectId, params, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Patchcrmobjects202603ObjectTypeObjectId Update
+//
+// Perform a partial update of an Object identified by `{objectId}`. `{objectId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param. Provided property values will be overwritten. Read-only and non-existent properties will be ignored. Properties values can be cleared by passing an empty string.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with PATCH /crm/objects/2026-03/{objectType}/{objectId} (the `Patchcrmobjects202603ObjectTypeObjectId` operationId).
+func (c *Client) Patchcrmobjects202603ObjectTypeObjectId(ctx context.Context, objectType string, objectId string, params *Patchcrmobjects202603ObjectTypeObjectIdParams, body Patchcrmobjects202603ObjectTypeObjectIdJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPatchcrmobjects202603ObjectTypeObjectIdRequest(c.Server, objectType, objectId, params, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Getcrmobjects202603ObjectTypeObjectIdassociationsToObjectType List associations of an object by type
+//
+// Corresponds with GET /crm/objects/2026-03/{objectType}/{objectId}/associations/{toObjectType} (the `Getcrmobjects202603ObjectTypeObjectIdassociationsToObjectType` operationId).
+func (c *Client) Getcrmobjects202603ObjectTypeObjectIdassociationsToObjectType(ctx context.Context, objectType string, objectId string, toObjectType string, params *Getcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeRequest(c.Server, objectType, objectId, toObjectType, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Deletecrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectId performs a DELETE /crm/objects/2026-03/{objectType}/{objectId}/associations/{toObjectType}/{toObjectId} (the `Deletecrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectId` operationId) request.
+func (c *Client) Deletecrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectId(ctx context.Context, objectType string, objectId string, toObjectType string, toObjectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDeletecrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdRequest(c.Server, objectType, objectId, toObjectType, toObjectId)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdWithBody performs a PUT /crm/objects/2026-03/{objectType}/{objectId}/associations/{toObjectType}/{toObjectId} (the `Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectId` operationId) request,
+// with any type of body and a specified content type.
+func (c *Client) Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdWithBody(ctx context.Context, objectType string, objectId string, toObjectType string, toObjectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPutcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdRequestWithBody(c.Server, objectType, objectId, toObjectType, toObjectId, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectId performs a PUT /crm/objects/2026-03/{objectType}/{objectId}/associations/{toObjectType}/{toObjectId} (the `Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectId` operationId) request.
+// Takes a body of the `application/json` content type.
+func (c *Client) Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectId(ctx context.Context, objectType string, objectId string, toObjectType string, toObjectId string, body Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPutcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdRequest(c.Server, objectType, objectId, toObjectType, toObjectId, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Getcrmowners202603crmownersv3 List owners
+//
+// Retrieve a paginated list of owners from your HubSpot account. This endpoint allows filtering by email and supports pagination through the 'after' parameter. You can also specify the maximum number of results per page and choose to include archived owners in the response.
+//
+// Corresponds with GET /crm/owners/2026-03 (the `Getcrmowners202603crmownersv3` operationId).
+func (c *Client) Getcrmowners202603crmownersv3(ctx context.Context, params *Getcrmowners202603crmownersv3Params, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetcrmowners202603crmownersv3Request(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Getcrmowners202603OwnerIdGetById Retrieve a specific owner by ID
+//
+// Retrieve details of a specific owner using either their 'id' or 'userId'.
+//
+// Corresponds with GET /crm/owners/2026-03/{ownerId} (the `Getcrmowners202603OwnerIdGetById` operationId).
+func (c *Client) Getcrmowners202603OwnerIdGetById(ctx context.Context, ownerId int32, params *Getcrmowners202603OwnerIdGetByIdParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetcrmowners202603OwnerIdGetByIdRequest(c.Server, ownerId, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Getcrmpipelines202603ObjectTypeGetAll Retrieve all pipelines
+//
+// Return all pipelines for the object type specified by `{objectType}`.
+//
+// Corresponds with GET /crm/pipelines/2026-03/{objectType} (the `Getcrmpipelines202603ObjectTypeGetAll` operationId).
+func (c *Client) Getcrmpipelines202603ObjectTypeGetAll(ctx context.Context, objectType string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetcrmpipelines202603ObjectTypeGetAllRequest(c.Server, objectType)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcrmpipelines202603ObjectTypeCreateWithBody Create a pipeline
+//
+// Create a new pipeline with the provided property values. The entire pipeline object, including its unique ID, will be returned in the response.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /crm/pipelines/2026-03/{objectType} (the `Postcrmpipelines202603ObjectTypeCreate` operationId).
+func (c *Client) Postcrmpipelines202603ObjectTypeCreateWithBody(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmpipelines202603ObjectTypeCreateRequestWithBody(c.Server, objectType, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcrmpipelines202603ObjectTypeCreate Create a pipeline
+//
+// Create a new pipeline with the provided property values. The entire pipeline object, including its unique ID, will be returned in the response.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /crm/pipelines/2026-03/{objectType} (the `Postcrmpipelines202603ObjectTypeCreate` operationId).
+func (c *Client) Postcrmpipelines202603ObjectTypeCreate(ctx context.Context, objectType string, body Postcrmpipelines202603ObjectTypeCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmpipelines202603ObjectTypeCreateRequest(c.Server, objectType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Deletecrmpipelines202603ObjectTypePipelineIdArchive Delete a pipeline
+//
+// Delete a pipeline identified by its unique pipelineId.
+//
+// Corresponds with DELETE /crm/pipelines/2026-03/{objectType}/{pipelineId} (the `Deletecrmpipelines202603ObjectTypePipelineIdArchive` operationId).
+func (c *Client) Deletecrmpipelines202603ObjectTypePipelineIdArchive(ctx context.Context, objectType string, pipelineId string, params *Deletecrmpipelines202603ObjectTypePipelineIdArchiveParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDeletecrmpipelines202603ObjectTypePipelineIdArchiveRequest(c.Server, objectType, pipelineId, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Getcrmpipelines202603ObjectTypePipelineIdGetById Return a pipeline by ID
+//
+// Return a single pipeline object identified by its unique `{pipelineId}`.
+//
+// Corresponds with GET /crm/pipelines/2026-03/{objectType}/{pipelineId} (the `Getcrmpipelines202603ObjectTypePipelineIdGetById` operationId).
+func (c *Client) Getcrmpipelines202603ObjectTypePipelineIdGetById(ctx context.Context, objectType string, pipelineId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetcrmpipelines202603ObjectTypePipelineIdGetByIdRequest(c.Server, objectType, pipelineId)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Patchcrmpipelines202603ObjectTypePipelineIdUpdateWithBody Perform a partial update of the pipeline identified by pipelineId.
+//
+// Perform a partial update of the pipeline identified by `{pipelineId}`. The updated pipeline will be returned in the response.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with PATCH /crm/pipelines/2026-03/{objectType}/{pipelineId} (the `Patchcrmpipelines202603ObjectTypePipelineIdUpdate` operationId).
+func (c *Client) Patchcrmpipelines202603ObjectTypePipelineIdUpdateWithBody(ctx context.Context, objectType string, pipelineId string, params *Patchcrmpipelines202603ObjectTypePipelineIdUpdateParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPatchcrmpipelines202603ObjectTypePipelineIdUpdateRequestWithBody(c.Server, objectType, pipelineId, params, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Patchcrmpipelines202603ObjectTypePipelineIdUpdate Perform a partial update of the pipeline identified by pipelineId.
+//
+// Perform a partial update of the pipeline identified by `{pipelineId}`. The updated pipeline will be returned in the response.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with PATCH /crm/pipelines/2026-03/{objectType}/{pipelineId} (the `Patchcrmpipelines202603ObjectTypePipelineIdUpdate` operationId).
+func (c *Client) Patchcrmpipelines202603ObjectTypePipelineIdUpdate(ctx context.Context, objectType string, pipelineId string, params *Patchcrmpipelines202603ObjectTypePipelineIdUpdateParams, body Patchcrmpipelines202603ObjectTypePipelineIdUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPatchcrmpipelines202603ObjectTypePipelineIdUpdateRequest(c.Server, objectType, pipelineId, params, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Putcrmpipelines202603ObjectTypePipelineIdReplaceWithBody Replace a pipeline
+//
+// Replace all properties of an existing pipeline with the provided values.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with PUT /crm/pipelines/2026-03/{objectType}/{pipelineId} (the `Putcrmpipelines202603ObjectTypePipelineIdReplace` operationId).
+func (c *Client) Putcrmpipelines202603ObjectTypePipelineIdReplaceWithBody(ctx context.Context, objectType string, pipelineId string, params *Putcrmpipelines202603ObjectTypePipelineIdReplaceParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPutcrmpipelines202603ObjectTypePipelineIdReplaceRequestWithBody(c.Server, objectType, pipelineId, params, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Putcrmpipelines202603ObjectTypePipelineIdReplace Replace a pipeline
+//
+// Replace all properties of an existing pipeline with the provided values.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with PUT /crm/pipelines/2026-03/{objectType}/{pipelineId} (the `Putcrmpipelines202603ObjectTypePipelineIdReplace` operationId).
+func (c *Client) Putcrmpipelines202603ObjectTypePipelineIdReplace(ctx context.Context, objectType string, pipelineId string, params *Putcrmpipelines202603ObjectTypePipelineIdReplaceParams, body Putcrmpipelines202603ObjectTypePipelineIdReplaceJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPutcrmpipelines202603ObjectTypePipelineIdReplaceRequest(c.Server, objectType, pipelineId, params, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Getcrmpipelines202603ObjectTypePipelineIdauditGetAudit Return an audit of all changes to the pipeline
+//
+// Return a reverse chronological list of all mutations that have occurred on the pipeline identified by `{pipelineId}`.
+//
+// Corresponds with GET /crm/pipelines/2026-03/{objectType}/{pipelineId}/audit (the `Getcrmpipelines202603ObjectTypePipelineIdauditGetAudit` operationId).
+func (c *Client) Getcrmpipelines202603ObjectTypePipelineIdauditGetAudit(ctx context.Context, objectType string, pipelineId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetcrmpipelines202603ObjectTypePipelineIdauditGetAuditRequest(c.Server, objectType, pipelineId)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Getcrmpipelines202603ObjectTypePipelineIdstagesGetAll Return all stages of a pipeline
+//
+// Return all the stages associated with the pipeline identified by `{pipelineId}`.
+//
+// Corresponds with GET /crm/pipelines/2026-03/{objectType}/{pipelineId}/stages (the `Getcrmpipelines202603ObjectTypePipelineIdstagesGetAll` operationId).
+func (c *Client) Getcrmpipelines202603ObjectTypePipelineIdstagesGetAll(ctx context.Context, objectType string, pipelineId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetcrmpipelines202603ObjectTypePipelineIdstagesGetAllRequest(c.Server, objectType, pipelineId)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcrmpipelines202603ObjectTypePipelineIdstagesCreateWithBody Create a pipeline stage
+//
+// Create a new stage within the specified pipeline.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /crm/pipelines/2026-03/{objectType}/{pipelineId}/stages (the `Postcrmpipelines202603ObjectTypePipelineIdstagesCreate` operationId).
+func (c *Client) Postcrmpipelines202603ObjectTypePipelineIdstagesCreateWithBody(ctx context.Context, objectType string, pipelineId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmpipelines202603ObjectTypePipelineIdstagesCreateRequestWithBody(c.Server, objectType, pipelineId, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcrmpipelines202603ObjectTypePipelineIdstagesCreate Create a pipeline stage
+//
+// Create a new stage within the specified pipeline.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /crm/pipelines/2026-03/{objectType}/{pipelineId}/stages (the `Postcrmpipelines202603ObjectTypePipelineIdstagesCreate` operationId).
+func (c *Client) Postcrmpipelines202603ObjectTypePipelineIdstagesCreate(ctx context.Context, objectType string, pipelineId string, body Postcrmpipelines202603ObjectTypePipelineIdstagesCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmpipelines202603ObjectTypePipelineIdstagesCreateRequest(c.Server, objectType, pipelineId, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Deletecrmpipelines202603ObjectTypePipelineIdstagesStageIdArchive Delete a pipeline stage
+//
+// Delete a specific stage from a pipeline.
+//
+// Corresponds with DELETE /crm/pipelines/2026-03/{objectType}/{pipelineId}/stages/{stageId} (the `Deletecrmpipelines202603ObjectTypePipelineIdstagesStageIdArchive` operationId).
+func (c *Client) Deletecrmpipelines202603ObjectTypePipelineIdstagesStageIdArchive(ctx context.Context, objectType string, pipelineId string, stageId string, params *Deletecrmpipelines202603ObjectTypePipelineIdstagesStageIdArchiveParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDeletecrmpipelines202603ObjectTypePipelineIdstagesStageIdArchiveRequest(c.Server, objectType, pipelineId, stageId, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Getcrmpipelines202603ObjectTypePipelineIdstagesStageIdGetById Return a pipeline stage by ID
+//
+// Retrieve a specific stage from a pipeline using its ID.
+//
+// Corresponds with GET /crm/pipelines/2026-03/{objectType}/{pipelineId}/stages/{stageId} (the `Getcrmpipelines202603ObjectTypePipelineIdstagesStageIdGetById` operationId).
+func (c *Client) Getcrmpipelines202603ObjectTypePipelineIdstagesStageIdGetById(ctx context.Context, objectType string, pipelineId string, stageId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetcrmpipelines202603ObjectTypePipelineIdstagesStageIdGetByIdRequest(c.Server, objectType, pipelineId, stageId)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdateWithBody Update specific properties of an existing pipeline stage.
+//
+// Perform a partial update on a specific stage of a pipeline.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with PATCH /crm/pipelines/2026-03/{objectType}/{pipelineId}/stages/{stageId} (the `Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdate` operationId).
+func (c *Client) Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdateWithBody(ctx context.Context, objectType string, pipelineId string, stageId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPatchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdateRequestWithBody(c.Server, objectType, pipelineId, stageId, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdate Update specific properties of an existing pipeline stage.
+//
+// Perform a partial update on a specific stage of a pipeline.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with PATCH /crm/pipelines/2026-03/{objectType}/{pipelineId}/stages/{stageId} (the `Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdate` operationId).
+func (c *Client) Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdate(ctx context.Context, objectType string, pipelineId string, stageId string, body Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPatchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdateRequest(c.Server, objectType, pipelineId, stageId, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Putcrmpipelines202603ObjectTypePipelineIdstagesStageIdReplaceWithBody Replace a pipeline stage
+//
+// Replace all the properties of an existing pipeline stage with the values provided. The updated stage will be returned in the response.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with PUT /crm/pipelines/2026-03/{objectType}/{pipelineId}/stages/{stageId} (the `Putcrmpipelines202603ObjectTypePipelineIdstagesStageIdReplace` operationId).
+func (c *Client) Putcrmpipelines202603ObjectTypePipelineIdstagesStageIdReplaceWithBody(ctx context.Context, objectType string, pipelineId string, stageId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPutcrmpipelines202603ObjectTypePipelineIdstagesStageIdReplaceRequestWithBody(c.Server, objectType, pipelineId, stageId, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Putcrmpipelines202603ObjectTypePipelineIdstagesStageIdReplace Replace a pipeline stage
+//
+// Replace all the properties of an existing pipeline stage with the values provided. The updated stage will be returned in the response.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with PUT /crm/pipelines/2026-03/{objectType}/{pipelineId}/stages/{stageId} (the `Putcrmpipelines202603ObjectTypePipelineIdstagesStageIdReplace` operationId).
+func (c *Client) Putcrmpipelines202603ObjectTypePipelineIdstagesStageIdReplace(ctx context.Context, objectType string, pipelineId string, stageId string, body Putcrmpipelines202603ObjectTypePipelineIdstagesStageIdReplaceJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPutcrmpipelines202603ObjectTypePipelineIdstagesStageIdReplaceRequest(c.Server, objectType, pipelineId, stageId, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Getcrmpipelines202603ObjectTypePipelineIdstagesStageIdauditGetAudit Retrieve a reverse chronological list of all changes made to a specific pipeline stage.
+//
+// Return a reverse chronological list of all mutations that have occurred on the pipeline stage identified by `{stageId}`.
+//
+// Corresponds with GET /crm/pipelines/2026-03/{objectType}/{pipelineId}/stages/{stageId}/audit (the `Getcrmpipelines202603ObjectTypePipelineIdstagesStageIdauditGetAudit` operationId).
+func (c *Client) Getcrmpipelines202603ObjectTypePipelineIdstagesStageIdauditGetAudit(ctx context.Context, objectType string, pipelineId string, stageId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetcrmpipelines202603ObjectTypePipelineIdstagesStageIdauditGetAuditRequest(c.Server, objectType, pipelineId, stageId)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Getcrmproperties202603ObjectTypecrmproperties202509ObjectType Read all properties
+//
+// Read all existing properties for the specified object type and HubSpot account.
+//
+// Corresponds with GET /crm/properties/2026-03/{objectType} (the `Getcrmproperties202603ObjectTypecrmproperties202509ObjectType` operationId).
+func (c *Client) Getcrmproperties202603ObjectTypecrmproperties202509ObjectType(ctx context.Context, objectType string, params *Getcrmproperties202603ObjectTypecrmproperties202509ObjectTypeParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetcrmproperties202603ObjectTypecrmproperties202509ObjectTypeRequest(c.Server, objectType, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcrmproperties202603ObjectTypecrmproperties202509ObjectTypeWithBody Create a property
+//
+// Create and return a copy of a new property for the specified object type.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /crm/properties/2026-03/{objectType} (the `Postcrmproperties202603ObjectTypecrmproperties202509ObjectType` operationId).
+func (c *Client) Postcrmproperties202603ObjectTypecrmproperties202509ObjectTypeWithBody(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmproperties202603ObjectTypecrmproperties202509ObjectTypeRequestWithBody(c.Server, objectType, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcrmproperties202603ObjectTypecrmproperties202509ObjectType Create a property
+//
+// Create and return a copy of a new property for the specified object type.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /crm/properties/2026-03/{objectType} (the `Postcrmproperties202603ObjectTypecrmproperties202509ObjectType` operationId).
+func (c *Client) Postcrmproperties202603ObjectTypecrmproperties202509ObjectType(ctx context.Context, objectType string, body Postcrmproperties202603ObjectTypecrmproperties202509ObjectTypeJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmproperties202603ObjectTypecrmproperties202509ObjectTypeRequest(c.Server, objectType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcrmproperties202603ObjectTypebatcharchivecrmproperties202509ObjectTypebatcharchiveWithBody Archive a batch of properties
+//
+// Archive a provided list of properties. This method will return a 204 No Content response on success regardless of the initial state of the property (e.g. active, already archived, non-existent).
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /crm/properties/2026-03/{objectType}/batch/archive (the `Postcrmproperties202603ObjectTypebatcharchivecrmproperties202509ObjectTypebatcharchive` operationId).
+func (c *Client) Postcrmproperties202603ObjectTypebatcharchivecrmproperties202509ObjectTypebatcharchiveWithBody(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmproperties202603ObjectTypebatcharchivecrmproperties202509ObjectTypebatcharchiveRequestWithBody(c.Server, objectType, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcrmproperties202603ObjectTypebatcharchivecrmproperties202509ObjectTypebatcharchive Archive a batch of properties
+//
+// Archive a provided list of properties. This method will return a 204 No Content response on success regardless of the initial state of the property (e.g. active, already archived, non-existent).
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /crm/properties/2026-03/{objectType}/batch/archive (the `Postcrmproperties202603ObjectTypebatcharchivecrmproperties202509ObjectTypebatcharchive` operationId).
+func (c *Client) Postcrmproperties202603ObjectTypebatcharchivecrmproperties202509ObjectTypebatcharchive(ctx context.Context, objectType string, body Postcrmproperties202603ObjectTypebatcharchivecrmproperties202509ObjectTypebatcharchiveJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmproperties202603ObjectTypebatcharchivecrmproperties202509ObjectTypebatcharchiveRequest(c.Server, objectType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcrmproperties202603ObjectTypebatchcreatecrmproperties202509ObjectTypebatchcreateWithBody Create a batch of properties
+//
+// Create a batch of properties using the same rules as when creating an individual property.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /crm/properties/2026-03/{objectType}/batch/create (the `Postcrmproperties202603ObjectTypebatchcreatecrmproperties202509ObjectTypebatchcreate` operationId).
+func (c *Client) Postcrmproperties202603ObjectTypebatchcreatecrmproperties202509ObjectTypebatchcreateWithBody(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmproperties202603ObjectTypebatchcreatecrmproperties202509ObjectTypebatchcreateRequestWithBody(c.Server, objectType, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcrmproperties202603ObjectTypebatchcreatecrmproperties202509ObjectTypebatchcreate Create a batch of properties
+//
+// Create a batch of properties using the same rules as when creating an individual property.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /crm/properties/2026-03/{objectType}/batch/create (the `Postcrmproperties202603ObjectTypebatchcreatecrmproperties202509ObjectTypebatchcreate` operationId).
+func (c *Client) Postcrmproperties202603ObjectTypebatchcreatecrmproperties202509ObjectTypebatchcreate(ctx context.Context, objectType string, body Postcrmproperties202603ObjectTypebatchcreatecrmproperties202509ObjectTypebatchcreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmproperties202603ObjectTypebatchcreatecrmproperties202509ObjectTypebatchcreateRequest(c.Server, objectType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcrmproperties202603ObjectTypebatchreadcrmproperties202509ObjectTypebatchreadWithBody Read a batch of properties
+//
+// Read a provided list of properties.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /crm/properties/2026-03/{objectType}/batch/read (the `Postcrmproperties202603ObjectTypebatchreadcrmproperties202509ObjectTypebatchread` operationId).
+func (c *Client) Postcrmproperties202603ObjectTypebatchreadcrmproperties202509ObjectTypebatchreadWithBody(ctx context.Context, objectType string, params *Postcrmproperties202603ObjectTypebatchreadcrmproperties202509ObjectTypebatchreadParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmproperties202603ObjectTypebatchreadcrmproperties202509ObjectTypebatchreadRequestWithBody(c.Server, objectType, params, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcrmproperties202603ObjectTypebatchreadcrmproperties202509ObjectTypebatchread Read a batch of properties
+//
+// Read a provided list of properties.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /crm/properties/2026-03/{objectType}/batch/read (the `Postcrmproperties202603ObjectTypebatchreadcrmproperties202509ObjectTypebatchread` operationId).
+func (c *Client) Postcrmproperties202603ObjectTypebatchreadcrmproperties202509ObjectTypebatchread(ctx context.Context, objectType string, params *Postcrmproperties202603ObjectTypebatchreadcrmproperties202509ObjectTypebatchreadParams, body Postcrmproperties202603ObjectTypebatchreadcrmproperties202509ObjectTypebatchreadJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmproperties202603ObjectTypebatchreadcrmproperties202509ObjectTypebatchreadRequest(c.Server, objectType, params, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Getcrmproperties202603ObjectTypegroupscrmproperties202509ObjectTypegroups Read all property groups
+//
+// Read all existing property groups for the specified object type and HubSpot account.
+//
+// Corresponds with GET /crm/properties/2026-03/{objectType}/groups (the `Getcrmproperties202603ObjectTypegroupscrmproperties202509ObjectTypegroups` operationId).
+func (c *Client) Getcrmproperties202603ObjectTypegroupscrmproperties202509ObjectTypegroups(ctx context.Context, objectType string, params *Getcrmproperties202603ObjectTypegroupscrmproperties202509ObjectTypegroupsParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetcrmproperties202603ObjectTypegroupscrmproperties202509ObjectTypegroupsRequest(c.Server, objectType, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcrmproperties202603ObjectTypegroupscrmproperties202509ObjectTypegroupsWithBody Create a property group
+//
+// Create and return a copy of a new property group.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /crm/properties/2026-03/{objectType}/groups (the `Postcrmproperties202603ObjectTypegroupscrmproperties202509ObjectTypegroups` operationId).
+func (c *Client) Postcrmproperties202603ObjectTypegroupscrmproperties202509ObjectTypegroupsWithBody(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmproperties202603ObjectTypegroupscrmproperties202509ObjectTypegroupsRequestWithBody(c.Server, objectType, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcrmproperties202603ObjectTypegroupscrmproperties202509ObjectTypegroups Create a property group
+//
+// Create and return a copy of a new property group.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /crm/properties/2026-03/{objectType}/groups (the `Postcrmproperties202603ObjectTypegroupscrmproperties202509ObjectTypegroups` operationId).
+func (c *Client) Postcrmproperties202603ObjectTypegroupscrmproperties202509ObjectTypegroups(ctx context.Context, objectType string, body Postcrmproperties202603ObjectTypegroupscrmproperties202509ObjectTypegroupsJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmproperties202603ObjectTypegroupscrmproperties202509ObjectTypegroupsRequest(c.Server, objectType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Deletecrmproperties202603ObjectTypegroupsGroupNamecrmproperties202509ObjectTypegroupsGroupName Archive a property group
+//
+// Move a property group identified by {groupName} to the recycling bin.
+//
+// Corresponds with DELETE /crm/properties/2026-03/{objectType}/groups/{groupName} (the `Deletecrmproperties202603ObjectTypegroupsGroupNamecrmproperties202509ObjectTypegroupsGroupName` operationId).
+func (c *Client) Deletecrmproperties202603ObjectTypegroupsGroupNamecrmproperties202509ObjectTypegroupsGroupName(ctx context.Context, objectType string, groupName string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDeletecrmproperties202603ObjectTypegroupsGroupNamecrmproperties202509ObjectTypegroupsGroupNameRequest(c.Server, objectType, groupName)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Getcrmproperties202603ObjectTypegroupsGroupNamecrmproperties202509ObjectTypegroupsGroupName Read a property group
+//
+// Read a property group identified by {groupName}.
+//
+// Corresponds with GET /crm/properties/2026-03/{objectType}/groups/{groupName} (the `Getcrmproperties202603ObjectTypegroupsGroupNamecrmproperties202509ObjectTypegroupsGroupName` operationId).
+func (c *Client) Getcrmproperties202603ObjectTypegroupsGroupNamecrmproperties202509ObjectTypegroupsGroupName(ctx context.Context, objectType string, groupName string, params *Getcrmproperties202603ObjectTypegroupsGroupNamecrmproperties202509ObjectTypegroupsGroupNameParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetcrmproperties202603ObjectTypegroupsGroupNamecrmproperties202509ObjectTypegroupsGroupNameRequest(c.Server, objectType, groupName, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Patchcrmproperties202603ObjectTypegroupsGroupNamecrmproperties202509ObjectTypegroupsGroupNameWithBody Update a property group
+//
+// Perform a partial update of a property group identified by {groupName}. Provided fields will be overwritten.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with PATCH /crm/properties/2026-03/{objectType}/groups/{groupName} (the `Patchcrmproperties202603ObjectTypegroupsGroupNamecrmproperties202509ObjectTypegroupsGroupName` operationId).
+func (c *Client) Patchcrmproperties202603ObjectTypegroupsGroupNamecrmproperties202509ObjectTypegroupsGroupNameWithBody(ctx context.Context, objectType string, groupName string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPatchcrmproperties202603ObjectTypegroupsGroupNamecrmproperties202509ObjectTypegroupsGroupNameRequestWithBody(c.Server, objectType, groupName, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Patchcrmproperties202603ObjectTypegroupsGroupNamecrmproperties202509ObjectTypegroupsGroupName Update a property group
+//
+// Perform a partial update of a property group identified by {groupName}. Provided fields will be overwritten.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with PATCH /crm/properties/2026-03/{objectType}/groups/{groupName} (the `Patchcrmproperties202603ObjectTypegroupsGroupNamecrmproperties202509ObjectTypegroupsGroupName` operationId).
+func (c *Client) Patchcrmproperties202603ObjectTypegroupsGroupNamecrmproperties202509ObjectTypegroupsGroupName(ctx context.Context, objectType string, groupName string, body Patchcrmproperties202603ObjectTypegroupsGroupNamecrmproperties202509ObjectTypegroupsGroupNameJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPatchcrmproperties202603ObjectTypegroupsGroupNamecrmproperties202509ObjectTypegroupsGroupNameRequest(c.Server, objectType, groupName, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Deletecrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyName Archive a property
+//
+// Move a property identified by {propertyName} to the recycling bin.
+//
+// Corresponds with DELETE /crm/properties/2026-03/{objectType}/{propertyName} (the `Deletecrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyName` operationId).
+func (c *Client) Deletecrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyName(ctx context.Context, objectType string, propertyName string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDeletecrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyNameRequest(c.Server, objectType, propertyName)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Getcrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyName Read a property
+//
+// Read a property identified by {propertyName}.
+//
+// Corresponds with GET /crm/properties/2026-03/{objectType}/{propertyName} (the `Getcrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyName` operationId).
+func (c *Client) Getcrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyName(ctx context.Context, objectType string, propertyName string, params *Getcrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyNameParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetcrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyNameRequest(c.Server, objectType, propertyName, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Patchcrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyNameWithBody Update a property
+//
+// Perform a partial update of a property identified by { propertyName }. Provided fields will be overwritten.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with PATCH /crm/properties/2026-03/{objectType}/{propertyName} (the `Patchcrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyName` operationId).
+func (c *Client) Patchcrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyNameWithBody(ctx context.Context, objectType string, propertyName string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPatchcrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyNameRequestWithBody(c.Server, objectType, propertyName, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // Patchcrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyName Update a property
 //
 // Perform a partial update of a property identified by { propertyName }. Provided fields will be overwritten.
@@ -8886,6 +10304,17 @@ func NewGetcmsblogs202603authorsGetPageRequest(server string, params *Getcmsblog
 	return req, nil
 }
 
+// NewPostcmsblogs202603authorsCreateRequest calls the generic Postcmsblogs202603authorsCreate builder with application/json body
+func NewPostcmsblogs202603authorsCreateRequest(server string, body Postcmsblogs202603authorsCreateJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmsblogs202603authorsCreateRequestWithBody(server, "application/json", bodyReader)
+}
+
 // NewPostcmsblogs202603authorsCreateRequestWithBody constructs an http.Request for the Postcmsblogs202603authorsCreate method, with any body, and a specified content type
 func NewPostcmsblogs202603authorsCreateRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
@@ -8913,6 +10342,17 @@ func NewPostcmsblogs202603authorsCreateRequestWithBody(server string, contentTyp
 	req.Header.Add("Content-Type", contentType)
 
 	return req, nil
+}
+
+// NewPostcmsblogs202603authorsbatcharchiveArchiveBatchRequest calls the generic Postcmsblogs202603authorsbatcharchiveArchiveBatch builder with application/json body
+func NewPostcmsblogs202603authorsbatcharchiveArchiveBatchRequest(server string, body Postcmsblogs202603authorsbatcharchiveArchiveBatchJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmsblogs202603authorsbatcharchiveArchiveBatchRequestWithBody(server, "application/json", bodyReader)
 }
 
 // NewPostcmsblogs202603authorsbatcharchiveArchiveBatchRequestWithBody constructs an http.Request for the Postcmsblogs202603authorsbatcharchiveArchiveBatch method, with any body, and a specified content type
@@ -8944,6 +10384,17 @@ func NewPostcmsblogs202603authorsbatcharchiveArchiveBatchRequestWithBody(server 
 	return req, nil
 }
 
+// NewPostcmsblogs202603authorsbatchcreateCreateBatchRequest calls the generic Postcmsblogs202603authorsbatchcreateCreateBatch builder with application/json body
+func NewPostcmsblogs202603authorsbatchcreateCreateBatchRequest(server string, body Postcmsblogs202603authorsbatchcreateCreateBatchJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmsblogs202603authorsbatchcreateCreateBatchRequestWithBody(server, "application/json", bodyReader)
+}
+
 // NewPostcmsblogs202603authorsbatchcreateCreateBatchRequestWithBody constructs an http.Request for the Postcmsblogs202603authorsbatchcreateCreateBatch method, with any body, and a specified content type
 func NewPostcmsblogs202603authorsbatchcreateCreateBatchRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
@@ -8971,6 +10422,17 @@ func NewPostcmsblogs202603authorsbatchcreateCreateBatchRequestWithBody(server st
 	req.Header.Add("Content-Type", contentType)
 
 	return req, nil
+}
+
+// NewPostcmsblogs202603authorsbatchreadReadBatchRequest calls the generic Postcmsblogs202603authorsbatchreadReadBatch builder with application/json body
+func NewPostcmsblogs202603authorsbatchreadReadBatchRequest(server string, params *Postcmsblogs202603authorsbatchreadReadBatchParams, body Postcmsblogs202603authorsbatchreadReadBatchJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmsblogs202603authorsbatchreadReadBatchRequestWithBody(server, params, "application/json", bodyReader)
 }
 
 // NewPostcmsblogs202603authorsbatchreadReadBatchRequestWithBody constructs an http.Request for the Postcmsblogs202603authorsbatchreadReadBatch method, with any body, and a specified content type
@@ -9027,6 +10489,17 @@ func NewPostcmsblogs202603authorsbatchreadReadBatchRequestWithBody(server string
 	req.Header.Add("Content-Type", contentType)
 
 	return req, nil
+}
+
+// NewPostcmsblogs202603authorsbatchupdateUpdateBatchRequest calls the generic Postcmsblogs202603authorsbatchupdateUpdateBatch builder with application/json body
+func NewPostcmsblogs202603authorsbatchupdateUpdateBatchRequest(server string, params *Postcmsblogs202603authorsbatchupdateUpdateBatchParams, body Postcmsblogs202603authorsbatchupdateUpdateBatchJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmsblogs202603authorsbatchupdateUpdateBatchRequestWithBody(server, params, "application/json", bodyReader)
 }
 
 // NewPostcmsblogs202603authorsbatchupdateUpdateBatchRequestWithBody constructs an http.Request for the Postcmsblogs202603authorsbatchupdateUpdateBatch method, with any body, and a specified content type
@@ -9433,6 +10906,17 @@ func NewGetcmsblogs202603authorscursorquerycmsblogsv3authorscursorqueryRequest(s
 	return req, nil
 }
 
+// NewPostcmsblogs202603authorsmultiLanguageattachToLangGroupAttachToLangGroupRequest calls the generic Postcmsblogs202603authorsmultiLanguageattachToLangGroupAttachToLangGroup builder with application/json body
+func NewPostcmsblogs202603authorsmultiLanguageattachToLangGroupAttachToLangGroupRequest(server string, body Postcmsblogs202603authorsmultiLanguageattachToLangGroupAttachToLangGroupJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmsblogs202603authorsmultiLanguageattachToLangGroupAttachToLangGroupRequestWithBody(server, "application/json", bodyReader)
+}
+
 // NewPostcmsblogs202603authorsmultiLanguageattachToLangGroupAttachToLangGroupRequestWithBody constructs an http.Request for the Postcmsblogs202603authorsmultiLanguageattachToLangGroupAttachToLangGroup method, with any body, and a specified content type
 func NewPostcmsblogs202603authorsmultiLanguageattachToLangGroupAttachToLangGroupRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
@@ -9460,6 +10944,17 @@ func NewPostcmsblogs202603authorsmultiLanguageattachToLangGroupAttachToLangGroup
 	req.Header.Add("Content-Type", contentType)
 
 	return req, nil
+}
+
+// NewPostcmsblogs202603authorsmultiLanguagecreateLanguageVariationCreateLangVariationRequest calls the generic Postcmsblogs202603authorsmultiLanguagecreateLanguageVariationCreateLangVariation builder with application/json body
+func NewPostcmsblogs202603authorsmultiLanguagecreateLanguageVariationCreateLangVariationRequest(server string, body Postcmsblogs202603authorsmultiLanguagecreateLanguageVariationCreateLangVariationJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmsblogs202603authorsmultiLanguagecreateLanguageVariationCreateLangVariationRequestWithBody(server, "application/json", bodyReader)
 }
 
 // NewPostcmsblogs202603authorsmultiLanguagecreateLanguageVariationCreateLangVariationRequestWithBody constructs an http.Request for the Postcmsblogs202603authorsmultiLanguagecreateLanguageVariationCreateLangVariation method, with any body, and a specified content type
@@ -9491,6 +10986,17 @@ func NewPostcmsblogs202603authorsmultiLanguagecreateLanguageVariationCreateLangV
 	return req, nil
 }
 
+// NewPostcmsblogs202603authorsmultiLanguagedetachFromLangGroupDetachFromLangGroupRequest calls the generic Postcmsblogs202603authorsmultiLanguagedetachFromLangGroupDetachFromLangGroup builder with application/json body
+func NewPostcmsblogs202603authorsmultiLanguagedetachFromLangGroupDetachFromLangGroupRequest(server string, body Postcmsblogs202603authorsmultiLanguagedetachFromLangGroupDetachFromLangGroupJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmsblogs202603authorsmultiLanguagedetachFromLangGroupDetachFromLangGroupRequestWithBody(server, "application/json", bodyReader)
+}
+
 // NewPostcmsblogs202603authorsmultiLanguagedetachFromLangGroupDetachFromLangGroupRequestWithBody constructs an http.Request for the Postcmsblogs202603authorsmultiLanguagedetachFromLangGroupDetachFromLangGroup method, with any body, and a specified content type
 func NewPostcmsblogs202603authorsmultiLanguagedetachFromLangGroupDetachFromLangGroupRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
@@ -9520,6 +11026,17 @@ func NewPostcmsblogs202603authorsmultiLanguagedetachFromLangGroupDetachFromLangG
 	return req, nil
 }
 
+// NewPutcmsblogs202603authorsmultiLanguagesetNewLangPrimarySetLangPrimaryRequest calls the generic Putcmsblogs202603authorsmultiLanguagesetNewLangPrimarySetLangPrimary builder with application/json body
+func NewPutcmsblogs202603authorsmultiLanguagesetNewLangPrimarySetLangPrimaryRequest(server string, body Putcmsblogs202603authorsmultiLanguagesetNewLangPrimarySetLangPrimaryJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPutcmsblogs202603authorsmultiLanguagesetNewLangPrimarySetLangPrimaryRequestWithBody(server, "application/json", bodyReader)
+}
+
 // NewPutcmsblogs202603authorsmultiLanguagesetNewLangPrimarySetLangPrimaryRequestWithBody constructs an http.Request for the Putcmsblogs202603authorsmultiLanguagesetNewLangPrimarySetLangPrimary method, with any body, and a specified content type
 func NewPutcmsblogs202603authorsmultiLanguagesetNewLangPrimarySetLangPrimaryRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
@@ -9547,6 +11064,17 @@ func NewPutcmsblogs202603authorsmultiLanguagesetNewLangPrimarySetLangPrimaryRequ
 	req.Header.Add("Content-Type", contentType)
 
 	return req, nil
+}
+
+// NewPostcmsblogs202603authorsmultiLanguageupdateLanguagesUpdateLangsRequest calls the generic Postcmsblogs202603authorsmultiLanguageupdateLanguagesUpdateLangs builder with application/json body
+func NewPostcmsblogs202603authorsmultiLanguageupdateLanguagesUpdateLangsRequest(server string, body Postcmsblogs202603authorsmultiLanguageupdateLanguagesUpdateLangsJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmsblogs202603authorsmultiLanguageupdateLanguagesUpdateLangsRequestWithBody(server, "application/json", bodyReader)
 }
 
 // NewPostcmsblogs202603authorsmultiLanguageupdateLanguagesUpdateLangsRequestWithBody constructs an http.Request for the Postcmsblogs202603authorsmultiLanguageupdateLanguagesUpdateLangs method, with any body, and a specified content type
@@ -9710,6 +11238,17 @@ func NewGetcmsblogs202603authorsObjectIdGetByIdRequest(server string, objectId s
 	}
 
 	return req, nil
+}
+
+// NewPatchcmsblogs202603authorsObjectIdUpdateRequest calls the generic Patchcmsblogs202603authorsObjectIdUpdate builder with application/json body
+func NewPatchcmsblogs202603authorsObjectIdUpdateRequest(server string, objectId string, params *Patchcmsblogs202603authorsObjectIdUpdateParams, body Patchcmsblogs202603authorsObjectIdUpdateJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPatchcmsblogs202603authorsObjectIdUpdateRequestWithBody(server, objectId, params, "application/json", bodyReader)
 }
 
 // NewPatchcmsblogs202603authorsObjectIdUpdateRequestWithBody constructs an http.Request for the Patchcmsblogs202603authorsObjectIdUpdate method, with any body, and a specified content type
@@ -9949,6 +11488,17 @@ func NewGetcmsblogs202603postsGetPageRequest(server string, params *Getcmsblogs2
 	return req, nil
 }
 
+// NewPostcmsblogs202603postsCreateRequest calls the generic Postcmsblogs202603postsCreate builder with application/json body
+func NewPostcmsblogs202603postsCreateRequest(server string, body Postcmsblogs202603postsCreateJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmsblogs202603postsCreateRequestWithBody(server, "application/json", bodyReader)
+}
+
 // NewPostcmsblogs202603postsCreateRequestWithBody constructs an http.Request for the Postcmsblogs202603postsCreate method, with any body, and a specified content type
 func NewPostcmsblogs202603postsCreateRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
@@ -9976,6 +11526,17 @@ func NewPostcmsblogs202603postsCreateRequestWithBody(server string, contentType 
 	req.Header.Add("Content-Type", contentType)
 
 	return req, nil
+}
+
+// NewPostcmsblogs202603postsbatcharchiveArchiveRequest calls the generic Postcmsblogs202603postsbatcharchiveArchive builder with application/json body
+func NewPostcmsblogs202603postsbatcharchiveArchiveRequest(server string, body Postcmsblogs202603postsbatcharchiveArchiveJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmsblogs202603postsbatcharchiveArchiveRequestWithBody(server, "application/json", bodyReader)
 }
 
 // NewPostcmsblogs202603postsbatcharchiveArchiveRequestWithBody constructs an http.Request for the Postcmsblogs202603postsbatcharchiveArchive method, with any body, and a specified content type
@@ -10007,6 +11568,17 @@ func NewPostcmsblogs202603postsbatcharchiveArchiveRequestWithBody(server string,
 	return req, nil
 }
 
+// NewPostcmsblogs202603postsbatchcreateCreateRequest calls the generic Postcmsblogs202603postsbatchcreateCreate builder with application/json body
+func NewPostcmsblogs202603postsbatchcreateCreateRequest(server string, body Postcmsblogs202603postsbatchcreateCreateJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmsblogs202603postsbatchcreateCreateRequestWithBody(server, "application/json", bodyReader)
+}
+
 // NewPostcmsblogs202603postsbatchcreateCreateRequestWithBody constructs an http.Request for the Postcmsblogs202603postsbatchcreateCreate method, with any body, and a specified content type
 func NewPostcmsblogs202603postsbatchcreateCreateRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
@@ -10034,6 +11606,17 @@ func NewPostcmsblogs202603postsbatchcreateCreateRequestWithBody(server string, c
 	req.Header.Add("Content-Type", contentType)
 
 	return req, nil
+}
+
+// NewPostcmsblogs202603postsbatchreadReadRequest calls the generic Postcmsblogs202603postsbatchreadRead builder with application/json body
+func NewPostcmsblogs202603postsbatchreadReadRequest(server string, params *Postcmsblogs202603postsbatchreadReadParams, body Postcmsblogs202603postsbatchreadReadJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmsblogs202603postsbatchreadReadRequestWithBody(server, params, "application/json", bodyReader)
 }
 
 // NewPostcmsblogs202603postsbatchreadReadRequestWithBody constructs an http.Request for the Postcmsblogs202603postsbatchreadRead method, with any body, and a specified content type
@@ -10092,6 +11675,17 @@ func NewPostcmsblogs202603postsbatchreadReadRequestWithBody(server string, param
 	return req, nil
 }
 
+// NewPostcmsblogs202603postsbatchupdateUpdateRequest calls the generic Postcmsblogs202603postsbatchupdateUpdate builder with application/json body
+func NewPostcmsblogs202603postsbatchupdateUpdateRequest(server string, params *Postcmsblogs202603postsbatchupdateUpdateParams, body Postcmsblogs202603postsbatchupdateUpdateJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmsblogs202603postsbatchupdateUpdateRequestWithBody(server, params, "application/json", bodyReader)
+}
+
 // NewPostcmsblogs202603postsbatchupdateUpdateRequestWithBody constructs an http.Request for the Postcmsblogs202603postsbatchupdateUpdate method, with any body, and a specified content type
 func NewPostcmsblogs202603postsbatchupdateUpdateRequestWithBody(server string, params *Postcmsblogs202603postsbatchupdateUpdateParams, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
@@ -10146,6 +11740,17 @@ func NewPostcmsblogs202603postsbatchupdateUpdateRequestWithBody(server string, p
 	req.Header.Add("Content-Type", contentType)
 
 	return req, nil
+}
+
+// NewPostcmsblogs202603postscloneCloneRequest calls the generic Postcmsblogs202603postscloneClone builder with application/json body
+func NewPostcmsblogs202603postscloneCloneRequest(server string, body Postcmsblogs202603postscloneCloneJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmsblogs202603postscloneCloneRequestWithBody(server, "application/json", bodyReader)
 }
 
 // NewPostcmsblogs202603postscloneCloneRequestWithBody constructs an http.Request for the Postcmsblogs202603postscloneClone method, with any body, and a specified content type
@@ -10525,6 +12130,17 @@ func NewGetcmsblogs202603postscursorquerycmsblogsv3postscursorqueryRequest(serve
 	return req, nil
 }
 
+// NewPostcmsblogs202603postsmultiLanguageattachToLangGroupAttachToLangGroupRequest calls the generic Postcmsblogs202603postsmultiLanguageattachToLangGroupAttachToLangGroup builder with application/json body
+func NewPostcmsblogs202603postsmultiLanguageattachToLangGroupAttachToLangGroupRequest(server string, body Postcmsblogs202603postsmultiLanguageattachToLangGroupAttachToLangGroupJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmsblogs202603postsmultiLanguageattachToLangGroupAttachToLangGroupRequestWithBody(server, "application/json", bodyReader)
+}
+
 // NewPostcmsblogs202603postsmultiLanguageattachToLangGroupAttachToLangGroupRequestWithBody constructs an http.Request for the Postcmsblogs202603postsmultiLanguageattachToLangGroupAttachToLangGroup method, with any body, and a specified content type
 func NewPostcmsblogs202603postsmultiLanguageattachToLangGroupAttachToLangGroupRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
@@ -10552,6 +12168,17 @@ func NewPostcmsblogs202603postsmultiLanguageattachToLangGroupAttachToLangGroupRe
 	req.Header.Add("Content-Type", contentType)
 
 	return req, nil
+}
+
+// NewPostcmsblogs202603postsmultiLanguagecreateLanguageVariationCreateLangVariationRequest calls the generic Postcmsblogs202603postsmultiLanguagecreateLanguageVariationCreateLangVariation builder with application/json body
+func NewPostcmsblogs202603postsmultiLanguagecreateLanguageVariationCreateLangVariationRequest(server string, body Postcmsblogs202603postsmultiLanguagecreateLanguageVariationCreateLangVariationJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmsblogs202603postsmultiLanguagecreateLanguageVariationCreateLangVariationRequestWithBody(server, "application/json", bodyReader)
 }
 
 // NewPostcmsblogs202603postsmultiLanguagecreateLanguageVariationCreateLangVariationRequestWithBody constructs an http.Request for the Postcmsblogs202603postsmultiLanguagecreateLanguageVariationCreateLangVariation method, with any body, and a specified content type
@@ -10583,6 +12210,17 @@ func NewPostcmsblogs202603postsmultiLanguagecreateLanguageVariationCreateLangVar
 	return req, nil
 }
 
+// NewPostcmsblogs202603postsmultiLanguagedetachFromLangGroupDetachFromLangGroupRequest calls the generic Postcmsblogs202603postsmultiLanguagedetachFromLangGroupDetachFromLangGroup builder with application/json body
+func NewPostcmsblogs202603postsmultiLanguagedetachFromLangGroupDetachFromLangGroupRequest(server string, body Postcmsblogs202603postsmultiLanguagedetachFromLangGroupDetachFromLangGroupJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmsblogs202603postsmultiLanguagedetachFromLangGroupDetachFromLangGroupRequestWithBody(server, "application/json", bodyReader)
+}
+
 // NewPostcmsblogs202603postsmultiLanguagedetachFromLangGroupDetachFromLangGroupRequestWithBody constructs an http.Request for the Postcmsblogs202603postsmultiLanguagedetachFromLangGroupDetachFromLangGroup method, with any body, and a specified content type
 func NewPostcmsblogs202603postsmultiLanguagedetachFromLangGroupDetachFromLangGroupRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
@@ -10610,6 +12248,17 @@ func NewPostcmsblogs202603postsmultiLanguagedetachFromLangGroupDetachFromLangGro
 	req.Header.Add("Content-Type", contentType)
 
 	return req, nil
+}
+
+// NewPutcmsblogs202603postsmultiLanguagesetNewLangPrimarySetLangPrimaryRequest calls the generic Putcmsblogs202603postsmultiLanguagesetNewLangPrimarySetLangPrimary builder with application/json body
+func NewPutcmsblogs202603postsmultiLanguagesetNewLangPrimarySetLangPrimaryRequest(server string, body Putcmsblogs202603postsmultiLanguagesetNewLangPrimarySetLangPrimaryJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPutcmsblogs202603postsmultiLanguagesetNewLangPrimarySetLangPrimaryRequestWithBody(server, "application/json", bodyReader)
 }
 
 // NewPutcmsblogs202603postsmultiLanguagesetNewLangPrimarySetLangPrimaryRequestWithBody constructs an http.Request for the Putcmsblogs202603postsmultiLanguagesetNewLangPrimarySetLangPrimary method, with any body, and a specified content type
@@ -10641,6 +12290,17 @@ func NewPutcmsblogs202603postsmultiLanguagesetNewLangPrimarySetLangPrimaryReques
 	return req, nil
 }
 
+// NewPostcmsblogs202603postsmultiLanguageupdateLanguagesUpdateLangsRequest calls the generic Postcmsblogs202603postsmultiLanguageupdateLanguagesUpdateLangs builder with application/json body
+func NewPostcmsblogs202603postsmultiLanguageupdateLanguagesUpdateLangsRequest(server string, body Postcmsblogs202603postsmultiLanguageupdateLanguagesUpdateLangsJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmsblogs202603postsmultiLanguageupdateLanguagesUpdateLangsRequestWithBody(server, "application/json", bodyReader)
+}
+
 // NewPostcmsblogs202603postsmultiLanguageupdateLanguagesUpdateLangsRequestWithBody constructs an http.Request for the Postcmsblogs202603postsmultiLanguageupdateLanguagesUpdateLangs method, with any body, and a specified content type
 func NewPostcmsblogs202603postsmultiLanguageupdateLanguagesUpdateLangsRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
@@ -10668,6 +12328,17 @@ func NewPostcmsblogs202603postsmultiLanguageupdateLanguagesUpdateLangsRequestWit
 	req.Header.Add("Content-Type", contentType)
 
 	return req, nil
+}
+
+// NewPostcmsblogs202603postsscheduleScheduleRequest calls the generic Postcmsblogs202603postsscheduleSchedule builder with application/json body
+func NewPostcmsblogs202603postsscheduleScheduleRequest(server string, body Postcmsblogs202603postsscheduleScheduleJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmsblogs202603postsscheduleScheduleRequestWithBody(server, "application/json", bodyReader)
 }
 
 // NewPostcmsblogs202603postsscheduleScheduleRequestWithBody constructs an http.Request for the Postcmsblogs202603postsscheduleSchedule method, with any body, and a specified content type
@@ -10833,6 +12504,17 @@ func NewGetcmsblogs202603postsObjectIdGetByIdRequest(server string, objectId str
 	return req, nil
 }
 
+// NewPatchcmsblogs202603postsObjectIdUpdateRequest calls the generic Patchcmsblogs202603postsObjectIdUpdate builder with application/json body
+func NewPatchcmsblogs202603postsObjectIdUpdateRequest(server string, objectId string, params *Patchcmsblogs202603postsObjectIdUpdateParams, body Patchcmsblogs202603postsObjectIdUpdateJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPatchcmsblogs202603postsObjectIdUpdateRequestWithBody(server, objectId, params, "application/json", bodyReader)
+}
+
 // NewPatchcmsblogs202603postsObjectIdUpdateRequestWithBody constructs an http.Request for the Patchcmsblogs202603postsObjectIdUpdate method, with any body, and a specified content type
 func NewPatchcmsblogs202603postsObjectIdUpdateRequestWithBody(server string, objectId string, params *Patchcmsblogs202603postsObjectIdUpdateParams, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
@@ -10928,6 +12610,17 @@ func NewGetcmsblogs202603postsObjectIddraftGetDraftByIdRequest(server string, ob
 	}
 
 	return req, nil
+}
+
+// NewPatchcmsblogs202603postsObjectIddraftUpdateDraftRequest calls the generic Patchcmsblogs202603postsObjectIddraftUpdateDraft builder with application/json body
+func NewPatchcmsblogs202603postsObjectIddraftUpdateDraftRequest(server string, objectId string, body Patchcmsblogs202603postsObjectIddraftUpdateDraftJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPatchcmsblogs202603postsObjectIddraftUpdateDraftRequestWithBody(server, objectId, "application/json", bodyReader)
 }
 
 // NewPatchcmsblogs202603postsObjectIddraftUpdateDraftRequestWithBody constructs an http.Request for the Patchcmsblogs202603postsObjectIddraftUpdateDraft method, with any body, and a specified content type
@@ -11416,6 +13109,17 @@ func NewGetcmsblogs202603tagsGetPageRequest(server string, params *Getcmsblogs20
 	return req, nil
 }
 
+// NewPostcmsblogs202603tagsCreateRequest calls the generic Postcmsblogs202603tagsCreate builder with application/json body
+func NewPostcmsblogs202603tagsCreateRequest(server string, body Postcmsblogs202603tagsCreateJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmsblogs202603tagsCreateRequestWithBody(server, "application/json", bodyReader)
+}
+
 // NewPostcmsblogs202603tagsCreateRequestWithBody constructs an http.Request for the Postcmsblogs202603tagsCreate method, with any body, and a specified content type
 func NewPostcmsblogs202603tagsCreateRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
@@ -11443,6 +13147,17 @@ func NewPostcmsblogs202603tagsCreateRequestWithBody(server string, contentType s
 	req.Header.Add("Content-Type", contentType)
 
 	return req, nil
+}
+
+// NewPostcmsblogs202603tagsbatcharchiveArchiveBatchRequest calls the generic Postcmsblogs202603tagsbatcharchiveArchiveBatch builder with application/json body
+func NewPostcmsblogs202603tagsbatcharchiveArchiveBatchRequest(server string, body Postcmsblogs202603tagsbatcharchiveArchiveBatchJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmsblogs202603tagsbatcharchiveArchiveBatchRequestWithBody(server, "application/json", bodyReader)
 }
 
 // NewPostcmsblogs202603tagsbatcharchiveArchiveBatchRequestWithBody constructs an http.Request for the Postcmsblogs202603tagsbatcharchiveArchiveBatch method, with any body, and a specified content type
@@ -11474,6 +13189,17 @@ func NewPostcmsblogs202603tagsbatcharchiveArchiveBatchRequestWithBody(server str
 	return req, nil
 }
 
+// NewPostcmsblogs202603tagsbatchcreateCreateBatchRequest calls the generic Postcmsblogs202603tagsbatchcreateCreateBatch builder with application/json body
+func NewPostcmsblogs202603tagsbatchcreateCreateBatchRequest(server string, body Postcmsblogs202603tagsbatchcreateCreateBatchJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmsblogs202603tagsbatchcreateCreateBatchRequestWithBody(server, "application/json", bodyReader)
+}
+
 // NewPostcmsblogs202603tagsbatchcreateCreateBatchRequestWithBody constructs an http.Request for the Postcmsblogs202603tagsbatchcreateCreateBatch method, with any body, and a specified content type
 func NewPostcmsblogs202603tagsbatchcreateCreateBatchRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
@@ -11501,6 +13227,17 @@ func NewPostcmsblogs202603tagsbatchcreateCreateBatchRequestWithBody(server strin
 	req.Header.Add("Content-Type", contentType)
 
 	return req, nil
+}
+
+// NewPostcmsblogs202603tagsbatchreadReadBatchRequest calls the generic Postcmsblogs202603tagsbatchreadReadBatch builder with application/json body
+func NewPostcmsblogs202603tagsbatchreadReadBatchRequest(server string, params *Postcmsblogs202603tagsbatchreadReadBatchParams, body Postcmsblogs202603tagsbatchreadReadBatchJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmsblogs202603tagsbatchreadReadBatchRequestWithBody(server, params, "application/json", bodyReader)
 }
 
 // NewPostcmsblogs202603tagsbatchreadReadBatchRequestWithBody constructs an http.Request for the Postcmsblogs202603tagsbatchreadReadBatch method, with any body, and a specified content type
@@ -11557,6 +13294,17 @@ func NewPostcmsblogs202603tagsbatchreadReadBatchRequestWithBody(server string, p
 	req.Header.Add("Content-Type", contentType)
 
 	return req, nil
+}
+
+// NewPostcmsblogs202603tagsbatchupdateUpdateBatchRequest calls the generic Postcmsblogs202603tagsbatchupdateUpdateBatch builder with application/json body
+func NewPostcmsblogs202603tagsbatchupdateUpdateBatchRequest(server string, params *Postcmsblogs202603tagsbatchupdateUpdateBatchParams, body Postcmsblogs202603tagsbatchupdateUpdateBatchJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmsblogs202603tagsbatchupdateUpdateBatchRequestWithBody(server, params, "application/json", bodyReader)
 }
 
 // NewPostcmsblogs202603tagsbatchupdateUpdateBatchRequestWithBody constructs an http.Request for the Postcmsblogs202603tagsbatchupdateUpdateBatch method, with any body, and a specified content type
@@ -11963,6 +13711,17 @@ func NewGetcmsblogs202603tagscursorquerycmsblogsv3tagscursorqueryRequest(server 
 	return req, nil
 }
 
+// NewPostcmsblogs202603tagsmultiLanguageattachToLangGroupAttachToLangGroupRequest calls the generic Postcmsblogs202603tagsmultiLanguageattachToLangGroupAttachToLangGroup builder with application/json body
+func NewPostcmsblogs202603tagsmultiLanguageattachToLangGroupAttachToLangGroupRequest(server string, body Postcmsblogs202603tagsmultiLanguageattachToLangGroupAttachToLangGroupJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmsblogs202603tagsmultiLanguageattachToLangGroupAttachToLangGroupRequestWithBody(server, "application/json", bodyReader)
+}
+
 // NewPostcmsblogs202603tagsmultiLanguageattachToLangGroupAttachToLangGroupRequestWithBody constructs an http.Request for the Postcmsblogs202603tagsmultiLanguageattachToLangGroupAttachToLangGroup method, with any body, and a specified content type
 func NewPostcmsblogs202603tagsmultiLanguageattachToLangGroupAttachToLangGroupRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
@@ -11990,6 +13749,17 @@ func NewPostcmsblogs202603tagsmultiLanguageattachToLangGroupAttachToLangGroupReq
 	req.Header.Add("Content-Type", contentType)
 
 	return req, nil
+}
+
+// NewPostcmsblogs202603tagsmultiLanguagecreateLanguageVariationCreateLangVariationRequest calls the generic Postcmsblogs202603tagsmultiLanguagecreateLanguageVariationCreateLangVariation builder with application/json body
+func NewPostcmsblogs202603tagsmultiLanguagecreateLanguageVariationCreateLangVariationRequest(server string, body Postcmsblogs202603tagsmultiLanguagecreateLanguageVariationCreateLangVariationJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmsblogs202603tagsmultiLanguagecreateLanguageVariationCreateLangVariationRequestWithBody(server, "application/json", bodyReader)
 }
 
 // NewPostcmsblogs202603tagsmultiLanguagecreateLanguageVariationCreateLangVariationRequestWithBody constructs an http.Request for the Postcmsblogs202603tagsmultiLanguagecreateLanguageVariationCreateLangVariation method, with any body, and a specified content type
@@ -12021,6 +13791,17 @@ func NewPostcmsblogs202603tagsmultiLanguagecreateLanguageVariationCreateLangVari
 	return req, nil
 }
 
+// NewPostcmsblogs202603tagsmultiLanguagedetachFromLangGroupDetachFromLangGroupRequest calls the generic Postcmsblogs202603tagsmultiLanguagedetachFromLangGroupDetachFromLangGroup builder with application/json body
+func NewPostcmsblogs202603tagsmultiLanguagedetachFromLangGroupDetachFromLangGroupRequest(server string, body Postcmsblogs202603tagsmultiLanguagedetachFromLangGroupDetachFromLangGroupJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmsblogs202603tagsmultiLanguagedetachFromLangGroupDetachFromLangGroupRequestWithBody(server, "application/json", bodyReader)
+}
+
 // NewPostcmsblogs202603tagsmultiLanguagedetachFromLangGroupDetachFromLangGroupRequestWithBody constructs an http.Request for the Postcmsblogs202603tagsmultiLanguagedetachFromLangGroupDetachFromLangGroup method, with any body, and a specified content type
 func NewPostcmsblogs202603tagsmultiLanguagedetachFromLangGroupDetachFromLangGroupRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
@@ -12050,6 +13831,17 @@ func NewPostcmsblogs202603tagsmultiLanguagedetachFromLangGroupDetachFromLangGrou
 	return req, nil
 }
 
+// NewPutcmsblogs202603tagsmultiLanguagesetNewLangPrimarySetLangPrimaryRequest calls the generic Putcmsblogs202603tagsmultiLanguagesetNewLangPrimarySetLangPrimary builder with application/json body
+func NewPutcmsblogs202603tagsmultiLanguagesetNewLangPrimarySetLangPrimaryRequest(server string, body Putcmsblogs202603tagsmultiLanguagesetNewLangPrimarySetLangPrimaryJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPutcmsblogs202603tagsmultiLanguagesetNewLangPrimarySetLangPrimaryRequestWithBody(server, "application/json", bodyReader)
+}
+
 // NewPutcmsblogs202603tagsmultiLanguagesetNewLangPrimarySetLangPrimaryRequestWithBody constructs an http.Request for the Putcmsblogs202603tagsmultiLanguagesetNewLangPrimarySetLangPrimary method, with any body, and a specified content type
 func NewPutcmsblogs202603tagsmultiLanguagesetNewLangPrimarySetLangPrimaryRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
@@ -12077,6 +13869,17 @@ func NewPutcmsblogs202603tagsmultiLanguagesetNewLangPrimarySetLangPrimaryRequest
 	req.Header.Add("Content-Type", contentType)
 
 	return req, nil
+}
+
+// NewPostcmsblogs202603tagsmultiLanguageupdateLanguagesUpdateLangsRequest calls the generic Postcmsblogs202603tagsmultiLanguageupdateLanguagesUpdateLangs builder with application/json body
+func NewPostcmsblogs202603tagsmultiLanguageupdateLanguagesUpdateLangsRequest(server string, body Postcmsblogs202603tagsmultiLanguageupdateLanguagesUpdateLangsJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmsblogs202603tagsmultiLanguageupdateLanguagesUpdateLangsRequestWithBody(server, "application/json", bodyReader)
 }
 
 // NewPostcmsblogs202603tagsmultiLanguageupdateLanguagesUpdateLangsRequestWithBody constructs an http.Request for the Postcmsblogs202603tagsmultiLanguageupdateLanguagesUpdateLangs method, with any body, and a specified content type
@@ -12240,6 +14043,17 @@ func NewGetcmsblogs202603tagsObjectIdGetByIdRequest(server string, objectId stri
 	}
 
 	return req, nil
+}
+
+// NewPatchcmsblogs202603tagsObjectIdUpdateRequest calls the generic Patchcmsblogs202603tagsObjectIdUpdate builder with application/json body
+func NewPatchcmsblogs202603tagsObjectIdUpdateRequest(server string, objectId string, params *Patchcmsblogs202603tagsObjectIdUpdateParams, body Patchcmsblogs202603tagsObjectIdUpdateJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPatchcmsblogs202603tagsObjectIdUpdateRequestWithBody(server, objectId, params, "application/json", bodyReader)
 }
 
 // NewPatchcmsblogs202603tagsObjectIdUpdateRequestWithBody constructs an http.Request for the Patchcmsblogs202603tagsObjectIdUpdate method, with any body, and a specified content type
@@ -14789,6 +16603,17 @@ func NewGetcmspages202603landingPagesGetPageRequest(server string, params *Getcm
 	return req, nil
 }
 
+// NewPostcmspages202603landingPagesCreateRequest calls the generic Postcmspages202603landingPagesCreate builder with application/json body
+func NewPostcmspages202603landingPagesCreateRequest(server string, body Postcmspages202603landingPagesCreateJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmspages202603landingPagesCreateRequestWithBody(server, "application/json", bodyReader)
+}
+
 // NewPostcmspages202603landingPagesCreateRequestWithBody constructs an http.Request for the Postcmspages202603landingPagesCreate method, with any body, and a specified content type
 func NewPostcmspages202603landingPagesCreateRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
@@ -14816,6 +16641,17 @@ func NewPostcmspages202603landingPagesCreateRequestWithBody(server string, conte
 	req.Header.Add("Content-Type", contentType)
 
 	return req, nil
+}
+
+// NewPostcmspages202603landingPagesabTestcreateVariationCreateABTestVariationRequest calls the generic Postcmspages202603landingPagesabTestcreateVariationCreateABTestVariation builder with application/json body
+func NewPostcmspages202603landingPagesabTestcreateVariationCreateABTestVariationRequest(server string, body Postcmspages202603landingPagesabTestcreateVariationCreateABTestVariationJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmspages202603landingPagesabTestcreateVariationCreateABTestVariationRequestWithBody(server, "application/json", bodyReader)
 }
 
 // NewPostcmspages202603landingPagesabTestcreateVariationCreateABTestVariationRequestWithBody constructs an http.Request for the Postcmspages202603landingPagesabTestcreateVariationCreateABTestVariation method, with any body, and a specified content type
@@ -14847,6 +16683,17 @@ func NewPostcmspages202603landingPagesabTestcreateVariationCreateABTestVariation
 	return req, nil
 }
 
+// NewPostcmspages202603landingPagesabTestendEndActiveABTestRequest calls the generic Postcmspages202603landingPagesabTestendEndActiveABTest builder with application/json body
+func NewPostcmspages202603landingPagesabTestendEndActiveABTestRequest(server string, body Postcmspages202603landingPagesabTestendEndActiveABTestJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmspages202603landingPagesabTestendEndActiveABTestRequestWithBody(server, "application/json", bodyReader)
+}
+
 // NewPostcmspages202603landingPagesabTestendEndActiveABTestRequestWithBody constructs an http.Request for the Postcmspages202603landingPagesabTestendEndActiveABTest method, with any body, and a specified content type
 func NewPostcmspages202603landingPagesabTestendEndActiveABTestRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
@@ -14874,6 +16721,17 @@ func NewPostcmspages202603landingPagesabTestendEndActiveABTestRequestWithBody(se
 	req.Header.Add("Content-Type", contentType)
 
 	return req, nil
+}
+
+// NewPostcmspages202603landingPagesabTestrerunRerunPreviousABTestRequest calls the generic Postcmspages202603landingPagesabTestrerunRerunPreviousABTest builder with application/json body
+func NewPostcmspages202603landingPagesabTestrerunRerunPreviousABTestRequest(server string, body Postcmspages202603landingPagesabTestrerunRerunPreviousABTestJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmspages202603landingPagesabTestrerunRerunPreviousABTestRequestWithBody(server, "application/json", bodyReader)
 }
 
 // NewPostcmspages202603landingPagesabTestrerunRerunPreviousABTestRequestWithBody constructs an http.Request for the Postcmspages202603landingPagesabTestrerunRerunPreviousABTest method, with any body, and a specified content type
@@ -14905,6 +16763,17 @@ func NewPostcmspages202603landingPagesabTestrerunRerunPreviousABTestRequestWithB
 	return req, nil
 }
 
+// NewPostcmspages202603landingPagesbatcharchiveArchiveBatchRequest calls the generic Postcmspages202603landingPagesbatcharchiveArchiveBatch builder with application/json body
+func NewPostcmspages202603landingPagesbatcharchiveArchiveBatchRequest(server string, body Postcmspages202603landingPagesbatcharchiveArchiveBatchJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmspages202603landingPagesbatcharchiveArchiveBatchRequestWithBody(server, "application/json", bodyReader)
+}
+
 // NewPostcmspages202603landingPagesbatcharchiveArchiveBatchRequestWithBody constructs an http.Request for the Postcmspages202603landingPagesbatcharchiveArchiveBatch method, with any body, and a specified content type
 func NewPostcmspages202603landingPagesbatcharchiveArchiveBatchRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
@@ -14934,6 +16803,17 @@ func NewPostcmspages202603landingPagesbatcharchiveArchiveBatchRequestWithBody(se
 	return req, nil
 }
 
+// NewPostcmspages202603landingPagesbatchcreateCreateBatchRequest calls the generic Postcmspages202603landingPagesbatchcreateCreateBatch builder with application/json body
+func NewPostcmspages202603landingPagesbatchcreateCreateBatchRequest(server string, body Postcmspages202603landingPagesbatchcreateCreateBatchJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmspages202603landingPagesbatchcreateCreateBatchRequestWithBody(server, "application/json", bodyReader)
+}
+
 // NewPostcmspages202603landingPagesbatchcreateCreateBatchRequestWithBody constructs an http.Request for the Postcmspages202603landingPagesbatchcreateCreateBatch method, with any body, and a specified content type
 func NewPostcmspages202603landingPagesbatchcreateCreateBatchRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
@@ -14961,6 +16841,17 @@ func NewPostcmspages202603landingPagesbatchcreateCreateBatchRequestWithBody(serv
 	req.Header.Add("Content-Type", contentType)
 
 	return req, nil
+}
+
+// NewPostcmspages202603landingPagesbatchreadReadBatchRequest calls the generic Postcmspages202603landingPagesbatchreadReadBatch builder with application/json body
+func NewPostcmspages202603landingPagesbatchreadReadBatchRequest(server string, params *Postcmspages202603landingPagesbatchreadReadBatchParams, body Postcmspages202603landingPagesbatchreadReadBatchJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmspages202603landingPagesbatchreadReadBatchRequestWithBody(server, params, "application/json", bodyReader)
 }
 
 // NewPostcmspages202603landingPagesbatchreadReadBatchRequestWithBody constructs an http.Request for the Postcmspages202603landingPagesbatchreadReadBatch method, with any body, and a specified content type
@@ -15019,6 +16910,17 @@ func NewPostcmspages202603landingPagesbatchreadReadBatchRequestWithBody(server s
 	return req, nil
 }
 
+// NewPostcmspages202603landingPagesbatchupdateUpdateBatchRequest calls the generic Postcmspages202603landingPagesbatchupdateUpdateBatch builder with application/json body
+func NewPostcmspages202603landingPagesbatchupdateUpdateBatchRequest(server string, params *Postcmspages202603landingPagesbatchupdateUpdateBatchParams, body Postcmspages202603landingPagesbatchupdateUpdateBatchJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmspages202603landingPagesbatchupdateUpdateBatchRequestWithBody(server, params, "application/json", bodyReader)
+}
+
 // NewPostcmspages202603landingPagesbatchupdateUpdateBatchRequestWithBody constructs an http.Request for the Postcmspages202603landingPagesbatchupdateUpdateBatch method, with any body, and a specified content type
 func NewPostcmspages202603landingPagesbatchupdateUpdateBatchRequestWithBody(server string, params *Postcmspages202603landingPagesbatchupdateUpdateBatchParams, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
@@ -15073,6 +16975,17 @@ func NewPostcmspages202603landingPagesbatchupdateUpdateBatchRequestWithBody(serv
 	req.Header.Add("Content-Type", contentType)
 
 	return req, nil
+}
+
+// NewPostcmspages202603landingPagescloneCloneRequest calls the generic Postcmspages202603landingPagescloneClone builder with application/json body
+func NewPostcmspages202603landingPagescloneCloneRequest(server string, body Postcmspages202603landingPagescloneCloneJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmspages202603landingPagescloneCloneRequestWithBody(server, "application/json", bodyReader)
 }
 
 // NewPostcmspages202603landingPagescloneCloneRequestWithBody constructs an http.Request for the Postcmspages202603landingPagescloneClone method, with any body, and a specified content type
@@ -15278,6 +17191,17 @@ func NewGetcmspages202603landingPagesfoldersGetFoldersPageRequest(server string,
 	return req, nil
 }
 
+// NewPostcmspages202603landingPagesfoldersCreateFolderRequest calls the generic Postcmspages202603landingPagesfoldersCreateFolder builder with application/json body
+func NewPostcmspages202603landingPagesfoldersCreateFolderRequest(server string, body Postcmspages202603landingPagesfoldersCreateFolderJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmspages202603landingPagesfoldersCreateFolderRequestWithBody(server, "application/json", bodyReader)
+}
+
 // NewPostcmspages202603landingPagesfoldersCreateFolderRequestWithBody constructs an http.Request for the Postcmspages202603landingPagesfoldersCreateFolder method, with any body, and a specified content type
 func NewPostcmspages202603landingPagesfoldersCreateFolderRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
@@ -15305,6 +17229,17 @@ func NewPostcmspages202603landingPagesfoldersCreateFolderRequestWithBody(server 
 	req.Header.Add("Content-Type", contentType)
 
 	return req, nil
+}
+
+// NewPostcmspages202603landingPagesfoldersbatcharchiveArchiveFoldersRequest calls the generic Postcmspages202603landingPagesfoldersbatcharchiveArchiveFolders builder with application/json body
+func NewPostcmspages202603landingPagesfoldersbatcharchiveArchiveFoldersRequest(server string, body Postcmspages202603landingPagesfoldersbatcharchiveArchiveFoldersJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmspages202603landingPagesfoldersbatcharchiveArchiveFoldersRequestWithBody(server, "application/json", bodyReader)
 }
 
 // NewPostcmspages202603landingPagesfoldersbatcharchiveArchiveFoldersRequestWithBody constructs an http.Request for the Postcmspages202603landingPagesfoldersbatcharchiveArchiveFolders method, with any body, and a specified content type
@@ -15336,6 +17271,17 @@ func NewPostcmspages202603landingPagesfoldersbatcharchiveArchiveFoldersRequestWi
 	return req, nil
 }
 
+// NewPostcmspages202603landingPagesfoldersbatchcreateCreateFoldersRequest calls the generic Postcmspages202603landingPagesfoldersbatchcreateCreateFolders builder with application/json body
+func NewPostcmspages202603landingPagesfoldersbatchcreateCreateFoldersRequest(server string, body Postcmspages202603landingPagesfoldersbatchcreateCreateFoldersJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmspages202603landingPagesfoldersbatchcreateCreateFoldersRequestWithBody(server, "application/json", bodyReader)
+}
+
 // NewPostcmspages202603landingPagesfoldersbatchcreateCreateFoldersRequestWithBody constructs an http.Request for the Postcmspages202603landingPagesfoldersbatchcreateCreateFolders method, with any body, and a specified content type
 func NewPostcmspages202603landingPagesfoldersbatchcreateCreateFoldersRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
@@ -15363,6 +17309,17 @@ func NewPostcmspages202603landingPagesfoldersbatchcreateCreateFoldersRequestWith
 	req.Header.Add("Content-Type", contentType)
 
 	return req, nil
+}
+
+// NewPostcmspages202603landingPagesfoldersbatchreadReadFoldersRequest calls the generic Postcmspages202603landingPagesfoldersbatchreadReadFolders builder with application/json body
+func NewPostcmspages202603landingPagesfoldersbatchreadReadFoldersRequest(server string, params *Postcmspages202603landingPagesfoldersbatchreadReadFoldersParams, body Postcmspages202603landingPagesfoldersbatchreadReadFoldersJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmspages202603landingPagesfoldersbatchreadReadFoldersRequestWithBody(server, params, "application/json", bodyReader)
 }
 
 // NewPostcmspages202603landingPagesfoldersbatchreadReadFoldersRequestWithBody constructs an http.Request for the Postcmspages202603landingPagesfoldersbatchreadReadFolders method, with any body, and a specified content type
@@ -15419,6 +17376,17 @@ func NewPostcmspages202603landingPagesfoldersbatchreadReadFoldersRequestWithBody
 	req.Header.Add("Content-Type", contentType)
 
 	return req, nil
+}
+
+// NewPostcmspages202603landingPagesfoldersbatchupdateUpdateFoldersRequest calls the generic Postcmspages202603landingPagesfoldersbatchupdateUpdateFolders builder with application/json body
+func NewPostcmspages202603landingPagesfoldersbatchupdateUpdateFoldersRequest(server string, params *Postcmspages202603landingPagesfoldersbatchupdateUpdateFoldersParams, body Postcmspages202603landingPagesfoldersbatchupdateUpdateFoldersJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmspages202603landingPagesfoldersbatchupdateUpdateFoldersRequestWithBody(server, params, "application/json", bodyReader)
 }
 
 // NewPostcmspages202603landingPagesfoldersbatchupdateUpdateFoldersRequestWithBody constructs an http.Request for the Postcmspages202603landingPagesfoldersbatchupdateUpdateFolders method, with any body, and a specified content type
@@ -15609,6 +17577,17 @@ func NewGetcmspages202603landingPagesfoldersObjectIdGetFolderByIdRequest(server 
 	}
 
 	return req, nil
+}
+
+// NewPatchcmspages202603landingPagesfoldersObjectIdUpdateFolderRequest calls the generic Patchcmspages202603landingPagesfoldersObjectIdUpdateFolder builder with application/json body
+func NewPatchcmspages202603landingPagesfoldersObjectIdUpdateFolderRequest(server string, objectId string, params *Patchcmspages202603landingPagesfoldersObjectIdUpdateFolderParams, body Patchcmspages202603landingPagesfoldersObjectIdUpdateFolderJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPatchcmspages202603landingPagesfoldersObjectIdUpdateFolderRequestWithBody(server, objectId, params, "application/json", bodyReader)
 }
 
 // NewPatchcmspages202603landingPagesfoldersObjectIdUpdateFolderRequestWithBody constructs an http.Request for the Patchcmspages202603landingPagesfoldersObjectIdUpdateFolder method, with any body, and a specified content type
@@ -15841,6 +17820,17 @@ func NewPostcmspages202603landingPagesfoldersObjectIdrevisionsRevisionIdrestoreR
 	return req, nil
 }
 
+// NewPostcmspages202603landingPagesmultiLanguageattachToLangGroupAttachToLangGroupRequest calls the generic Postcmspages202603landingPagesmultiLanguageattachToLangGroupAttachToLangGroup builder with application/json body
+func NewPostcmspages202603landingPagesmultiLanguageattachToLangGroupAttachToLangGroupRequest(server string, body Postcmspages202603landingPagesmultiLanguageattachToLangGroupAttachToLangGroupJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmspages202603landingPagesmultiLanguageattachToLangGroupAttachToLangGroupRequestWithBody(server, "application/json", bodyReader)
+}
+
 // NewPostcmspages202603landingPagesmultiLanguageattachToLangGroupAttachToLangGroupRequestWithBody constructs an http.Request for the Postcmspages202603landingPagesmultiLanguageattachToLangGroupAttachToLangGroup method, with any body, and a specified content type
 func NewPostcmspages202603landingPagesmultiLanguageattachToLangGroupAttachToLangGroupRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
@@ -15868,6 +17858,17 @@ func NewPostcmspages202603landingPagesmultiLanguageattachToLangGroupAttachToLang
 	req.Header.Add("Content-Type", contentType)
 
 	return req, nil
+}
+
+// NewPostcmspages202603landingPagesmultiLanguagecreateLanguageVariationCreateLangVariationRequest calls the generic Postcmspages202603landingPagesmultiLanguagecreateLanguageVariationCreateLangVariation builder with application/json body
+func NewPostcmspages202603landingPagesmultiLanguagecreateLanguageVariationCreateLangVariationRequest(server string, body Postcmspages202603landingPagesmultiLanguagecreateLanguageVariationCreateLangVariationJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmspages202603landingPagesmultiLanguagecreateLanguageVariationCreateLangVariationRequestWithBody(server, "application/json", bodyReader)
 }
 
 // NewPostcmspages202603landingPagesmultiLanguagecreateLanguageVariationCreateLangVariationRequestWithBody constructs an http.Request for the Postcmspages202603landingPagesmultiLanguagecreateLanguageVariationCreateLangVariation method, with any body, and a specified content type
@@ -15899,6 +17900,17 @@ func NewPostcmspages202603landingPagesmultiLanguagecreateLanguageVariationCreate
 	return req, nil
 }
 
+// NewPostcmspages202603landingPagesmultiLanguagedetachFromLangGroupDetachFromLangGroupRequest calls the generic Postcmspages202603landingPagesmultiLanguagedetachFromLangGroupDetachFromLangGroup builder with application/json body
+func NewPostcmspages202603landingPagesmultiLanguagedetachFromLangGroupDetachFromLangGroupRequest(server string, body Postcmspages202603landingPagesmultiLanguagedetachFromLangGroupDetachFromLangGroupJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmspages202603landingPagesmultiLanguagedetachFromLangGroupDetachFromLangGroupRequestWithBody(server, "application/json", bodyReader)
+}
+
 // NewPostcmspages202603landingPagesmultiLanguagedetachFromLangGroupDetachFromLangGroupRequestWithBody constructs an http.Request for the Postcmspages202603landingPagesmultiLanguagedetachFromLangGroupDetachFromLangGroup method, with any body, and a specified content type
 func NewPostcmspages202603landingPagesmultiLanguagedetachFromLangGroupDetachFromLangGroupRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
@@ -15926,6 +17938,17 @@ func NewPostcmspages202603landingPagesmultiLanguagedetachFromLangGroupDetachFrom
 	req.Header.Add("Content-Type", contentType)
 
 	return req, nil
+}
+
+// NewPutcmspages202603landingPagesmultiLanguagesetNewLangPrimarySetLangPrimaryRequest calls the generic Putcmspages202603landingPagesmultiLanguagesetNewLangPrimarySetLangPrimary builder with application/json body
+func NewPutcmspages202603landingPagesmultiLanguagesetNewLangPrimarySetLangPrimaryRequest(server string, body Putcmspages202603landingPagesmultiLanguagesetNewLangPrimarySetLangPrimaryJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPutcmspages202603landingPagesmultiLanguagesetNewLangPrimarySetLangPrimaryRequestWithBody(server, "application/json", bodyReader)
 }
 
 // NewPutcmspages202603landingPagesmultiLanguagesetNewLangPrimarySetLangPrimaryRequestWithBody constructs an http.Request for the Putcmspages202603landingPagesmultiLanguagesetNewLangPrimarySetLangPrimary method, with any body, and a specified content type
@@ -15957,6 +17980,17 @@ func NewPutcmspages202603landingPagesmultiLanguagesetNewLangPrimarySetLangPrimar
 	return req, nil
 }
 
+// NewPostcmspages202603landingPagesmultiLanguageupdateLanguagesUpdateLangsRequest calls the generic Postcmspages202603landingPagesmultiLanguageupdateLanguagesUpdateLangs builder with application/json body
+func NewPostcmspages202603landingPagesmultiLanguageupdateLanguagesUpdateLangsRequest(server string, body Postcmspages202603landingPagesmultiLanguageupdateLanguagesUpdateLangsJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmspages202603landingPagesmultiLanguageupdateLanguagesUpdateLangsRequestWithBody(server, "application/json", bodyReader)
+}
+
 // NewPostcmspages202603landingPagesmultiLanguageupdateLanguagesUpdateLangsRequestWithBody constructs an http.Request for the Postcmspages202603landingPagesmultiLanguageupdateLanguagesUpdateLangs method, with any body, and a specified content type
 func NewPostcmspages202603landingPagesmultiLanguageupdateLanguagesUpdateLangsRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
@@ -15984,6 +18018,17 @@ func NewPostcmspages202603landingPagesmultiLanguageupdateLanguagesUpdateLangsReq
 	req.Header.Add("Content-Type", contentType)
 
 	return req, nil
+}
+
+// NewPostcmspages202603landingPagesscheduleScheduleRequest calls the generic Postcmspages202603landingPagesscheduleSchedule builder with application/json body
+func NewPostcmspages202603landingPagesscheduleScheduleRequest(server string, body Postcmspages202603landingPagesscheduleScheduleJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmspages202603landingPagesscheduleScheduleRequestWithBody(server, "application/json", bodyReader)
 }
 
 // NewPostcmspages202603landingPagesscheduleScheduleRequestWithBody constructs an http.Request for the Postcmspages202603landingPagesscheduleSchedule method, with any body, and a specified content type
@@ -16149,6 +18194,17 @@ func NewGetcmspages202603landingPagesObjectIdGetByIdRequest(server string, objec
 	return req, nil
 }
 
+// NewPatchcmspages202603landingPagesObjectIdUpdateRequest calls the generic Patchcmspages202603landingPagesObjectIdUpdate builder with application/json body
+func NewPatchcmspages202603landingPagesObjectIdUpdateRequest(server string, objectId string, params *Patchcmspages202603landingPagesObjectIdUpdateParams, body Patchcmspages202603landingPagesObjectIdUpdateJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPatchcmspages202603landingPagesObjectIdUpdateRequestWithBody(server, objectId, params, "application/json", bodyReader)
+}
+
 // NewPatchcmspages202603landingPagesObjectIdUpdateRequestWithBody constructs an http.Request for the Patchcmspages202603landingPagesObjectIdUpdate method, with any body, and a specified content type
 func NewPatchcmspages202603landingPagesObjectIdUpdateRequestWithBody(server string, objectId string, params *Patchcmspages202603landingPagesObjectIdUpdateParams, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
@@ -16244,6 +18300,17 @@ func NewGetcmspages202603landingPagesObjectIddraftGetDraftByIdRequest(server str
 	}
 
 	return req, nil
+}
+
+// NewPatchcmspages202603landingPagesObjectIddraftUpdateDraftRequest calls the generic Patchcmspages202603landingPagesObjectIddraftUpdateDraft builder with application/json body
+func NewPatchcmspages202603landingPagesObjectIddraftUpdateDraftRequest(server string, objectId string, body Patchcmspages202603landingPagesObjectIddraftUpdateDraftJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPatchcmspages202603landingPagesObjectIddraftUpdateDraftRequestWithBody(server, objectId, "application/json", bodyReader)
 }
 
 // NewPatchcmspages202603landingPagesObjectIddraftUpdateDraftRequestWithBody constructs an http.Request for the Patchcmspages202603landingPagesObjectIddraftUpdateDraft method, with any body, and a specified content type
@@ -16732,6 +18799,17 @@ func NewGetcmspages202603sitePagesGetPageRequest(server string, params *Getcmspa
 	return req, nil
 }
 
+// NewPostcmspages202603sitePagesCreateRequest calls the generic Postcmspages202603sitePagesCreate builder with application/json body
+func NewPostcmspages202603sitePagesCreateRequest(server string, body Postcmspages202603sitePagesCreateJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmspages202603sitePagesCreateRequestWithBody(server, "application/json", bodyReader)
+}
+
 // NewPostcmspages202603sitePagesCreateRequestWithBody constructs an http.Request for the Postcmspages202603sitePagesCreate method, with any body, and a specified content type
 func NewPostcmspages202603sitePagesCreateRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
@@ -16759,6 +18837,17 @@ func NewPostcmspages202603sitePagesCreateRequestWithBody(server string, contentT
 	req.Header.Add("Content-Type", contentType)
 
 	return req, nil
+}
+
+// NewPostcmspages202603sitePagesabTestcreateVariationCreateABTestVariationRequest calls the generic Postcmspages202603sitePagesabTestcreateVariationCreateABTestVariation builder with application/json body
+func NewPostcmspages202603sitePagesabTestcreateVariationCreateABTestVariationRequest(server string, body Postcmspages202603sitePagesabTestcreateVariationCreateABTestVariationJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmspages202603sitePagesabTestcreateVariationCreateABTestVariationRequestWithBody(server, "application/json", bodyReader)
 }
 
 // NewPostcmspages202603sitePagesabTestcreateVariationCreateABTestVariationRequestWithBody constructs an http.Request for the Postcmspages202603sitePagesabTestcreateVariationCreateABTestVariation method, with any body, and a specified content type
@@ -16790,6 +18879,17 @@ func NewPostcmspages202603sitePagesabTestcreateVariationCreateABTestVariationReq
 	return req, nil
 }
 
+// NewPostcmspages202603sitePagesabTestendEndActiveABTestRequest calls the generic Postcmspages202603sitePagesabTestendEndActiveABTest builder with application/json body
+func NewPostcmspages202603sitePagesabTestendEndActiveABTestRequest(server string, body Postcmspages202603sitePagesabTestendEndActiveABTestJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmspages202603sitePagesabTestendEndActiveABTestRequestWithBody(server, "application/json", bodyReader)
+}
+
 // NewPostcmspages202603sitePagesabTestendEndActiveABTestRequestWithBody constructs an http.Request for the Postcmspages202603sitePagesabTestendEndActiveABTest method, with any body, and a specified content type
 func NewPostcmspages202603sitePagesabTestendEndActiveABTestRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
@@ -16817,6 +18917,17 @@ func NewPostcmspages202603sitePagesabTestendEndActiveABTestRequestWithBody(serve
 	req.Header.Add("Content-Type", contentType)
 
 	return req, nil
+}
+
+// NewPostcmspages202603sitePagesabTestrerunRerunPreviousABTestRequest calls the generic Postcmspages202603sitePagesabTestrerunRerunPreviousABTest builder with application/json body
+func NewPostcmspages202603sitePagesabTestrerunRerunPreviousABTestRequest(server string, body Postcmspages202603sitePagesabTestrerunRerunPreviousABTestJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmspages202603sitePagesabTestrerunRerunPreviousABTestRequestWithBody(server, "application/json", bodyReader)
 }
 
 // NewPostcmspages202603sitePagesabTestrerunRerunPreviousABTestRequestWithBody constructs an http.Request for the Postcmspages202603sitePagesabTestrerunRerunPreviousABTest method, with any body, and a specified content type
@@ -16848,6 +18959,17 @@ func NewPostcmspages202603sitePagesabTestrerunRerunPreviousABTestRequestWithBody
 	return req, nil
 }
 
+// NewPostcmspages202603sitePagesbatcharchiveArchiveBatchRequest calls the generic Postcmspages202603sitePagesbatcharchiveArchiveBatch builder with application/json body
+func NewPostcmspages202603sitePagesbatcharchiveArchiveBatchRequest(server string, body Postcmspages202603sitePagesbatcharchiveArchiveBatchJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmspages202603sitePagesbatcharchiveArchiveBatchRequestWithBody(server, "application/json", bodyReader)
+}
+
 // NewPostcmspages202603sitePagesbatcharchiveArchiveBatchRequestWithBody constructs an http.Request for the Postcmspages202603sitePagesbatcharchiveArchiveBatch method, with any body, and a specified content type
 func NewPostcmspages202603sitePagesbatcharchiveArchiveBatchRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
@@ -16877,6 +18999,17 @@ func NewPostcmspages202603sitePagesbatcharchiveArchiveBatchRequestWithBody(serve
 	return req, nil
 }
 
+// NewPostcmspages202603sitePagesbatchcreateCreateBatchRequest calls the generic Postcmspages202603sitePagesbatchcreateCreateBatch builder with application/json body
+func NewPostcmspages202603sitePagesbatchcreateCreateBatchRequest(server string, body Postcmspages202603sitePagesbatchcreateCreateBatchJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmspages202603sitePagesbatchcreateCreateBatchRequestWithBody(server, "application/json", bodyReader)
+}
+
 // NewPostcmspages202603sitePagesbatchcreateCreateBatchRequestWithBody constructs an http.Request for the Postcmspages202603sitePagesbatchcreateCreateBatch method, with any body, and a specified content type
 func NewPostcmspages202603sitePagesbatchcreateCreateBatchRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
@@ -16904,6 +19037,17 @@ func NewPostcmspages202603sitePagesbatchcreateCreateBatchRequestWithBody(server 
 	req.Header.Add("Content-Type", contentType)
 
 	return req, nil
+}
+
+// NewPostcmspages202603sitePagesbatchreadReadBatchRequest calls the generic Postcmspages202603sitePagesbatchreadReadBatch builder with application/json body
+func NewPostcmspages202603sitePagesbatchreadReadBatchRequest(server string, params *Postcmspages202603sitePagesbatchreadReadBatchParams, body Postcmspages202603sitePagesbatchreadReadBatchJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmspages202603sitePagesbatchreadReadBatchRequestWithBody(server, params, "application/json", bodyReader)
 }
 
 // NewPostcmspages202603sitePagesbatchreadReadBatchRequestWithBody constructs an http.Request for the Postcmspages202603sitePagesbatchreadReadBatch method, with any body, and a specified content type
@@ -16962,6 +19106,17 @@ func NewPostcmspages202603sitePagesbatchreadReadBatchRequestWithBody(server stri
 	return req, nil
 }
 
+// NewPostcmspages202603sitePagesbatchupdateUpdateBatchRequest calls the generic Postcmspages202603sitePagesbatchupdateUpdateBatch builder with application/json body
+func NewPostcmspages202603sitePagesbatchupdateUpdateBatchRequest(server string, params *Postcmspages202603sitePagesbatchupdateUpdateBatchParams, body Postcmspages202603sitePagesbatchupdateUpdateBatchJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmspages202603sitePagesbatchupdateUpdateBatchRequestWithBody(server, params, "application/json", bodyReader)
+}
+
 // NewPostcmspages202603sitePagesbatchupdateUpdateBatchRequestWithBody constructs an http.Request for the Postcmspages202603sitePagesbatchupdateUpdateBatch method, with any body, and a specified content type
 func NewPostcmspages202603sitePagesbatchupdateUpdateBatchRequestWithBody(server string, params *Postcmspages202603sitePagesbatchupdateUpdateBatchParams, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
@@ -17018,6 +19173,17 @@ func NewPostcmspages202603sitePagesbatchupdateUpdateBatchRequestWithBody(server 
 	return req, nil
 }
 
+// NewPostcmspages202603sitePagescloneCloneRequest calls the generic Postcmspages202603sitePagescloneClone builder with application/json body
+func NewPostcmspages202603sitePagescloneCloneRequest(server string, body Postcmspages202603sitePagescloneCloneJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmspages202603sitePagescloneCloneRequestWithBody(server, "application/json", bodyReader)
+}
+
 // NewPostcmspages202603sitePagescloneCloneRequestWithBody constructs an http.Request for the Postcmspages202603sitePagescloneClone method, with any body, and a specified content type
 func NewPostcmspages202603sitePagescloneCloneRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
@@ -17045,6 +19211,17 @@ func NewPostcmspages202603sitePagescloneCloneRequestWithBody(server string, cont
 	req.Header.Add("Content-Type", contentType)
 
 	return req, nil
+}
+
+// NewPostcmspages202603sitePagesmultiLanguageattachToLangGroupAttachToLangGroupRequest calls the generic Postcmspages202603sitePagesmultiLanguageattachToLangGroupAttachToLangGroup builder with application/json body
+func NewPostcmspages202603sitePagesmultiLanguageattachToLangGroupAttachToLangGroupRequest(server string, body Postcmspages202603sitePagesmultiLanguageattachToLangGroupAttachToLangGroupJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmspages202603sitePagesmultiLanguageattachToLangGroupAttachToLangGroupRequestWithBody(server, "application/json", bodyReader)
 }
 
 // NewPostcmspages202603sitePagesmultiLanguageattachToLangGroupAttachToLangGroupRequestWithBody constructs an http.Request for the Postcmspages202603sitePagesmultiLanguageattachToLangGroupAttachToLangGroup method, with any body, and a specified content type
@@ -17076,6 +19253,17 @@ func NewPostcmspages202603sitePagesmultiLanguageattachToLangGroupAttachToLangGro
 	return req, nil
 }
 
+// NewPostcmspages202603sitePagesmultiLanguagecreateLanguageVariationCreateLangVariationRequest calls the generic Postcmspages202603sitePagesmultiLanguagecreateLanguageVariationCreateLangVariation builder with application/json body
+func NewPostcmspages202603sitePagesmultiLanguagecreateLanguageVariationCreateLangVariationRequest(server string, body Postcmspages202603sitePagesmultiLanguagecreateLanguageVariationCreateLangVariationJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmspages202603sitePagesmultiLanguagecreateLanguageVariationCreateLangVariationRequestWithBody(server, "application/json", bodyReader)
+}
+
 // NewPostcmspages202603sitePagesmultiLanguagecreateLanguageVariationCreateLangVariationRequestWithBody constructs an http.Request for the Postcmspages202603sitePagesmultiLanguagecreateLanguageVariationCreateLangVariation method, with any body, and a specified content type
 func NewPostcmspages202603sitePagesmultiLanguagecreateLanguageVariationCreateLangVariationRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
@@ -17103,6 +19291,17 @@ func NewPostcmspages202603sitePagesmultiLanguagecreateLanguageVariationCreateLan
 	req.Header.Add("Content-Type", contentType)
 
 	return req, nil
+}
+
+// NewPostcmspages202603sitePagesmultiLanguagedetachFromLangGroupDetachFromLangGroupRequest calls the generic Postcmspages202603sitePagesmultiLanguagedetachFromLangGroupDetachFromLangGroup builder with application/json body
+func NewPostcmspages202603sitePagesmultiLanguagedetachFromLangGroupDetachFromLangGroupRequest(server string, body Postcmspages202603sitePagesmultiLanguagedetachFromLangGroupDetachFromLangGroupJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmspages202603sitePagesmultiLanguagedetachFromLangGroupDetachFromLangGroupRequestWithBody(server, "application/json", bodyReader)
 }
 
 // NewPostcmspages202603sitePagesmultiLanguagedetachFromLangGroupDetachFromLangGroupRequestWithBody constructs an http.Request for the Postcmspages202603sitePagesmultiLanguagedetachFromLangGroupDetachFromLangGroup method, with any body, and a specified content type
@@ -17134,6 +19333,17 @@ func NewPostcmspages202603sitePagesmultiLanguagedetachFromLangGroupDetachFromLan
 	return req, nil
 }
 
+// NewPutcmspages202603sitePagesmultiLanguagesetNewLangPrimarySetLangPrimaryRequest calls the generic Putcmspages202603sitePagesmultiLanguagesetNewLangPrimarySetLangPrimary builder with application/json body
+func NewPutcmspages202603sitePagesmultiLanguagesetNewLangPrimarySetLangPrimaryRequest(server string, body Putcmspages202603sitePagesmultiLanguagesetNewLangPrimarySetLangPrimaryJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPutcmspages202603sitePagesmultiLanguagesetNewLangPrimarySetLangPrimaryRequestWithBody(server, "application/json", bodyReader)
+}
+
 // NewPutcmspages202603sitePagesmultiLanguagesetNewLangPrimarySetLangPrimaryRequestWithBody constructs an http.Request for the Putcmspages202603sitePagesmultiLanguagesetNewLangPrimarySetLangPrimary method, with any body, and a specified content type
 func NewPutcmspages202603sitePagesmultiLanguagesetNewLangPrimarySetLangPrimaryRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
@@ -17163,6 +19373,17 @@ func NewPutcmspages202603sitePagesmultiLanguagesetNewLangPrimarySetLangPrimaryRe
 	return req, nil
 }
 
+// NewPostcmspages202603sitePagesmultiLanguageupdateLanguagesUpdateLangsRequest calls the generic Postcmspages202603sitePagesmultiLanguageupdateLanguagesUpdateLangs builder with application/json body
+func NewPostcmspages202603sitePagesmultiLanguageupdateLanguagesUpdateLangsRequest(server string, body Postcmspages202603sitePagesmultiLanguageupdateLanguagesUpdateLangsJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmspages202603sitePagesmultiLanguageupdateLanguagesUpdateLangsRequestWithBody(server, "application/json", bodyReader)
+}
+
 // NewPostcmspages202603sitePagesmultiLanguageupdateLanguagesUpdateLangsRequestWithBody constructs an http.Request for the Postcmspages202603sitePagesmultiLanguageupdateLanguagesUpdateLangs method, with any body, and a specified content type
 func NewPostcmspages202603sitePagesmultiLanguageupdateLanguagesUpdateLangsRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
@@ -17190,6 +19411,17 @@ func NewPostcmspages202603sitePagesmultiLanguageupdateLanguagesUpdateLangsReques
 	req.Header.Add("Content-Type", contentType)
 
 	return req, nil
+}
+
+// NewPostcmspages202603sitePagesscheduleScheduleRequest calls the generic Postcmspages202603sitePagesscheduleSchedule builder with application/json body
+func NewPostcmspages202603sitePagesscheduleScheduleRequest(server string, body Postcmspages202603sitePagesscheduleScheduleJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostcmspages202603sitePagesscheduleScheduleRequestWithBody(server, "application/json", bodyReader)
 }
 
 // NewPostcmspages202603sitePagesscheduleScheduleRequestWithBody constructs an http.Request for the Postcmspages202603sitePagesscheduleSchedule method, with any body, and a specified content type
@@ -17355,6 +19587,17 @@ func NewGetcmspages202603sitePagesObjectIdGetByIdRequest(server string, objectId
 	return req, nil
 }
 
+// NewPatchcmspages202603sitePagesObjectIdUpdateRequest calls the generic Patchcmspages202603sitePagesObjectIdUpdate builder with application/json body
+func NewPatchcmspages202603sitePagesObjectIdUpdateRequest(server string, objectId string, params *Patchcmspages202603sitePagesObjectIdUpdateParams, body Patchcmspages202603sitePagesObjectIdUpdateJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPatchcmspages202603sitePagesObjectIdUpdateRequestWithBody(server, objectId, params, "application/json", bodyReader)
+}
+
 // NewPatchcmspages202603sitePagesObjectIdUpdateRequestWithBody constructs an http.Request for the Patchcmspages202603sitePagesObjectIdUpdate method, with any body, and a specified content type
 func NewPatchcmspages202603sitePagesObjectIdUpdateRequestWithBody(server string, objectId string, params *Patchcmspages202603sitePagesObjectIdUpdateParams, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
@@ -17450,6 +19693,17 @@ func NewGetcmspages202603sitePagesObjectIddraftGetDraftByIdRequest(server string
 	}
 
 	return req, nil
+}
+
+// NewPatchcmspages202603sitePagesObjectIddraftUpdateDraftRequest calls the generic Patchcmspages202603sitePagesObjectIddraftUpdateDraft builder with application/json body
+func NewPatchcmspages202603sitePagesObjectIddraftUpdateDraftRequest(server string, objectId string, body Patchcmspages202603sitePagesObjectIddraftUpdateDraftJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPatchcmspages202603sitePagesObjectIddraftUpdateDraftRequestWithBody(server, objectId, "application/json", bodyReader)
 }
 
 // NewPatchcmspages202603sitePagesObjectIddraftUpdateDraftRequestWithBody constructs an http.Request for the Patchcmspages202603sitePagesObjectIddraftUpdateDraft method, with any body, and a specified content type
@@ -17757,2259 +20011,6 @@ func NewPostcmspages202603sitePagesObjectIdrevisionsRevisionIdrestoreToDraftRest
 	}
 
 	req, err := http.NewRequest(http.MethodPost, queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
-}
-
-// NewGetcmssiteSearch202603indexedDataContentIdGetByIdRequest constructs an http.Request for the GetcmssiteSearch202603indexedDataContentIdGetById method
-func NewGetcmssiteSearch202603indexedDataContentIdGetByIdRequest(server string, contentId string, params *GetcmssiteSearch202603indexedDataContentIdGetByIdParams) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "contentId", contentId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/cms/site-search/2026-03/indexed-data/%s", pathParam0)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	if params != nil {
-		// queryValues collects non-styled parameters (passthrough, JSON)
-		// that are safe to round-trip through url.Values.Encode().
-		queryValues := queryURL.Query()
-		// rawQueryFragments collects pre-encoded query fragments from
-		// styled parameters, preserving literal commas as delimiters
-		// per the OpenAPI spec (e.g. "color=blue,black,brown").
-		var rawQueryFragments []string
-
-		if params.Type != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "type", *params.Type, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if encoded := queryValues.Encode(); encoded != "" {
-			rawQueryFragments = append(rawQueryFragments, encoded)
-		}
-		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
-	}
-
-	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
-}
-
-// NewGetcmssiteSearch202603searchRequest constructs an http.Request for the GetcmssiteSearch202603search method
-func NewGetcmssiteSearch202603searchRequest(server string, params *GetcmssiteSearch202603searchParams) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/cms/site-search/2026-03/search")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	if params != nil {
-		// queryValues collects non-styled parameters (passthrough, JSON)
-		// that are safe to round-trip through url.Values.Encode().
-		queryValues := queryURL.Query()
-		// rawQueryFragments collects pre-encoded query fragments from
-		// styled parameters, preserving literal commas as delimiters
-		// per the OpenAPI spec (e.g. "color=blue,black,brown").
-		var rawQueryFragments []string
-
-		if params.Analytics != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "analytics", *params.Analytics, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "boolean", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.Autocomplete != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "autocomplete", *params.Autocomplete, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "boolean", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.BoostLimit != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "boostLimit", *params.BoostLimit, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "number", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.BoostRecent != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "boostRecent", *params.BoostRecent, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.Domain != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "domain", *params.Domain, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.GroupId != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "groupId", *params.GroupId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.HubdbQuery != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "hubdbQuery", *params.HubdbQuery, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.Language != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "language", *params.Language, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.Length != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "length", *params.Length, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.Limit != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "limit", *params.Limit, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: "int32"}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.MatchPrefix != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "matchPrefix", *params.MatchPrefix, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "boolean", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.Offset != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "offset", *params.Offset, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: "int32"}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.PathPrefix != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "pathPrefix", *params.PathPrefix, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.PopularityBoost != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "popularityBoost", *params.PopularityBoost, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "number", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.Property != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "property", *params.Property, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.Q != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "q", *params.Q, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.TableId != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "tableId", *params.TableId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: "int64"}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.Type != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "type", *params.Type, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.Types != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "types", *params.Types, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if encoded := queryValues.Encode(); encoded != "" {
-			rawQueryFragments = append(rawQueryFragments, encoded)
-		}
-		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
-	}
-
-	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
-}
-
-// NewPostcmssourceCode202603extractasyncDoAsyncRequest calls the generic PostcmssourceCode202603extractasyncDoAsync builder with application/json body
-func NewPostcmssourceCode202603extractasyncDoAsyncRequest(server string, body PostcmssourceCode202603extractasyncDoAsyncJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewPostcmssourceCode202603extractasyncDoAsyncRequestWithBody(server, "application/json", bodyReader)
-}
-
-// NewPostcmssourceCode202603extractasyncDoAsyncRequestWithBody constructs an http.Request for the PostcmssourceCode202603extractasyncDoAsync method, with any body, and a specified content type
-func NewPostcmssourceCode202603extractasyncDoAsyncRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/cms/source-code/2026-03/extract/async")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
-}
-
-// NewGetcmssourceCode202603extractasynctasksTaskIdstatusGetAsyncStatusRequest constructs an http.Request for the GetcmssourceCode202603extractasynctasksTaskIdstatusGetAsyncStatus method
-func NewGetcmssourceCode202603extractasynctasksTaskIdstatusGetAsyncStatusRequest(server string, taskId int32) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "taskId", taskId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: "int32"})
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/cms/source-code/2026-03/extract/async/tasks/%s/status", pathParam0)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
-}
-
-// NewDeletecmssourceCode202603EnvironmentcontentPathArchiveRequest constructs an http.Request for the DeletecmssourceCode202603EnvironmentcontentPathArchive method
-func NewDeletecmssourceCode202603EnvironmentcontentPathArchiveRequest(server string, environment string, path string) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "environment", environment, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
-	if err != nil {
-		return nil, err
-	}
-
-	var pathParam1 string
-
-	pathParam1, err = runtime.StyleParamWithOptions("simple", false, "path", path, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/cms/source-code/2026-03/%s/content/%s", pathParam0, pathParam1)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodDelete, queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
-}
-
-// NewGetcmssourceCode202603EnvironmentcontentPathDownloadRequest constructs an http.Request for the GetcmssourceCode202603EnvironmentcontentPathDownload method
-func NewGetcmssourceCode202603EnvironmentcontentPathDownloadRequest(server string, environment string, path string) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "environment", environment, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
-	if err != nil {
-		return nil, err
-	}
-
-	var pathParam1 string
-
-	pathParam1, err = runtime.StyleParamWithOptions("simple", false, "path", path, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/cms/source-code/2026-03/%s/content/%s", pathParam0, pathParam1)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
-}
-
-// NewPostcmssourceCode202603EnvironmentcontentPathCreateRequestWithBody constructs an http.Request for the PostcmssourceCode202603EnvironmentcontentPathCreate method, with any body, and a specified content type
-func NewPostcmssourceCode202603EnvironmentcontentPathCreateRequestWithBody(server string, environment string, path string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "environment", environment, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
-	if err != nil {
-		return nil, err
-	}
-
-	var pathParam1 string
-
-	pathParam1, err = runtime.StyleParamWithOptions("simple", false, "path", path, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/cms/source-code/2026-03/%s/content/%s", pathParam0, pathParam1)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
-}
-
-// NewPutcmssourceCode202603EnvironmentcontentPathCreateOrUpdateRequestWithBody constructs an http.Request for the PutcmssourceCode202603EnvironmentcontentPathCreateOrUpdate method, with any body, and a specified content type
-func NewPutcmssourceCode202603EnvironmentcontentPathCreateOrUpdateRequestWithBody(server string, environment string, path string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "environment", environment, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
-	if err != nil {
-		return nil, err
-	}
-
-	var pathParam1 string
-
-	pathParam1, err = runtime.StyleParamWithOptions("simple", false, "path", path, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/cms/source-code/2026-03/%s/content/%s", pathParam0, pathParam1)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodPut, queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
-}
-
-// NewGetcmssourceCode202603EnvironmentmetadataPathGetRequest constructs an http.Request for the GetcmssourceCode202603EnvironmentmetadataPathGet method
-func NewGetcmssourceCode202603EnvironmentmetadataPathGetRequest(server string, environment string, path string, params *GetcmssourceCode202603EnvironmentmetadataPathGetParams) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "environment", environment, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
-	if err != nil {
-		return nil, err
-	}
-
-	var pathParam1 string
-
-	pathParam1, err = runtime.StyleParamWithOptions("simple", false, "path", path, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/cms/source-code/2026-03/%s/metadata/%s", pathParam0, pathParam1)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	if params != nil {
-		// queryValues collects non-styled parameters (passthrough, JSON)
-		// that are safe to round-trip through url.Values.Encode().
-		queryValues := queryURL.Query()
-		// rawQueryFragments collects pre-encoded query fragments from
-		// styled parameters, preserving literal commas as delimiters
-		// per the OpenAPI spec (e.g. "color=blue,black,brown").
-		var rawQueryFragments []string
-
-		if params.Properties != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "properties", *params.Properties, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if encoded := queryValues.Encode(); encoded != "" {
-			rawQueryFragments = append(rawQueryFragments, encoded)
-		}
-		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
-	}
-
-	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
-}
-
-// NewPostcmssourceCode202603EnvironmentvalidatePathDoValidateRequestWithBody constructs an http.Request for the PostcmssourceCode202603EnvironmentvalidatePathDoValidate method, with any body, and a specified content type
-func NewPostcmssourceCode202603EnvironmentvalidatePathDoValidateRequestWithBody(server string, environment string, path string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "environment", environment, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
-	if err != nil {
-		return nil, err
-	}
-
-	var pathParam1 string
-
-	pathParam1, err = runtime.StyleParamWithOptions("simple", false, "path", path, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/cms/source-code/2026-03/%s/validate/%s", pathParam0, pathParam1)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
-}
-
-// NewGetcmsurlRedirects202603cmsurlRedirectsv3Request constructs an http.Request for the GetcmsurlRedirects202603cmsurlRedirectsv3 method
-func NewGetcmsurlRedirects202603cmsurlRedirectsv3Request(server string, params *GetcmsurlRedirects202603cmsurlRedirectsv3Params) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/cms/url-redirects/2026-03")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	if params != nil {
-		// queryValues collects non-styled parameters (passthrough, JSON)
-		// that are safe to round-trip through url.Values.Encode().
-		queryValues := queryURL.Query()
-		// rawQueryFragments collects pre-encoded query fragments from
-		// styled parameters, preserving literal commas as delimiters
-		// per the OpenAPI spec (e.g. "color=blue,black,brown").
-		var rawQueryFragments []string
-
-		if params.After != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "after", *params.After, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.Archived != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "archived", *params.Archived, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "boolean", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.CreatedAfter != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "createdAfter", *params.CreatedAfter, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: "date-time"}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.CreatedAt != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "createdAt", *params.CreatedAt, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: "date-time"}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.CreatedBefore != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "createdBefore", *params.CreatedBefore, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: "date-time"}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.Limit != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "limit", *params.Limit, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: "int32"}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.Sort != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "sort", *params.Sort, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.UpdatedAfter != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "updatedAfter", *params.UpdatedAfter, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: "date-time"}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.UpdatedAt != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "updatedAt", *params.UpdatedAt, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: "date-time"}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.UpdatedBefore != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "updatedBefore", *params.UpdatedBefore, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: "date-time"}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if encoded := queryValues.Encode(); encoded != "" {
-			rawQueryFragments = append(rawQueryFragments, encoded)
-		}
-		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
-	}
-
-	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
-}
-
-// NewPostcmsurlRedirects202603cmsurlRedirectsv3Request calls the generic PostcmsurlRedirects202603cmsurlRedirectsv3 builder with application/json body
-func NewPostcmsurlRedirects202603cmsurlRedirectsv3Request(server string, body PostcmsurlRedirects202603cmsurlRedirectsv3JSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewPostcmsurlRedirects202603cmsurlRedirectsv3RequestWithBody(server, "application/json", bodyReader)
-}
-
-// NewPostcmsurlRedirects202603cmsurlRedirectsv3RequestWithBody constructs an http.Request for the PostcmsurlRedirects202603cmsurlRedirectsv3 method, with any body, and a specified content type
-func NewPostcmsurlRedirects202603cmsurlRedirectsv3RequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/cms/url-redirects/2026-03")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
-}
-
-// NewGetcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappingsRequest constructs an http.Request for the GetcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappings method
-func NewGetcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappingsRequest(server string) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/cms/url-redirects/2026-03/url-mappings")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
-}
-
-// NewPostcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappingsRequestWithBody constructs an http.Request for the PostcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappings method, with any body, and a specified content type
-func NewPostcmsurlRedirects202603urlMappingscmsurlRedirects202603urlMappingsRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/cms/url-redirects/2026-03/url-mappings")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
-}
-
-// NewDeletecmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsIdRequest constructs an http.Request for the DeletecmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsId method
-func NewDeletecmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsIdRequest(server string, id int64) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "id", id, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: "int64"})
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/cms/url-redirects/2026-03/url-mappings/%s", pathParam0)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodDelete, queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
-}
-
-// NewGetcmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsIdRequest constructs an http.Request for the GetcmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsId method
-func NewGetcmsurlRedirects202603urlMappingsIdcmsurlRedirects202603urlMappingsIdRequest(server string, id int64) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "id", id, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: "int64"})
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/cms/url-redirects/2026-03/url-mappings/%s", pathParam0)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
-}
-
-// NewDeletecmsurlRedirects202603UrlRedirectIdArchiveRequest constructs an http.Request for the DeletecmsurlRedirects202603UrlRedirectIdArchive method
-func NewDeletecmsurlRedirects202603UrlRedirectIdArchiveRequest(server string, urlRedirectId string) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "urlRedirectId", urlRedirectId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/cms/url-redirects/2026-03/%s", pathParam0)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodDelete, queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
-}
-
-// NewGetcmsurlRedirects202603UrlRedirectIdGetByIdRequest constructs an http.Request for the GetcmsurlRedirects202603UrlRedirectIdGetById method
-func NewGetcmsurlRedirects202603UrlRedirectIdGetByIdRequest(server string, urlRedirectId string) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "urlRedirectId", urlRedirectId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/cms/url-redirects/2026-03/%s", pathParam0)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
-}
-
-// NewPatchcmsurlRedirects202603UrlRedirectIdUpdateRequest calls the generic PatchcmsurlRedirects202603UrlRedirectIdUpdate builder with application/json body
-func NewPatchcmsurlRedirects202603UrlRedirectIdUpdateRequest(server string, urlRedirectId string, body PatchcmsurlRedirects202603UrlRedirectIdUpdateJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewPatchcmsurlRedirects202603UrlRedirectIdUpdateRequestWithBody(server, urlRedirectId, "application/json", bodyReader)
-}
-
-// NewPatchcmsurlRedirects202603UrlRedirectIdUpdateRequestWithBody constructs an http.Request for the PatchcmsurlRedirects202603UrlRedirectIdUpdate method, with any body, and a specified content type
-func NewPatchcmsurlRedirects202603UrlRedirectIdUpdateRequestWithBody(server string, urlRedirectId string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "urlRedirectId", urlRedirectId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/cms/url-redirects/2026-03/%s", pathParam0)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodPatch, queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
-}
-
-// NewGetcommunicationPreferences202603definitionsRequest constructs an http.Request for the GetcommunicationPreferences202603definitions method
-func NewGetcommunicationPreferences202603definitionsRequest(server string, params *GetcommunicationPreferences202603definitionsParams) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/communication-preferences/2026-03/definitions")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	if params != nil {
-		// queryValues collects non-styled parameters (passthrough, JSON)
-		// that are safe to round-trip through url.Values.Encode().
-		queryValues := queryURL.Query()
-		// rawQueryFragments collects pre-encoded query fragments from
-		// styled parameters, preserving literal commas as delimiters
-		// per the OpenAPI spec (e.g. "color=blue,black,brown").
-		var rawQueryFragments []string
-
-		if params.BusinessUnitId != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "businessUnitId", *params.BusinessUnitId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: "int64"}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.IncludeTranslations != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "includeTranslations", *params.IncludeTranslations, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "boolean", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if encoded := queryValues.Encode(); encoded != "" {
-			rawQueryFragments = append(rawQueryFragments, encoded)
-		}
-		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
-	}
-
-	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
-}
-
-// NewPostcommunicationPreferences202603linksgeneratecommunicationPreferencesv4linksgenerateRequest calls the generic PostcommunicationPreferences202603linksgeneratecommunicationPreferencesv4linksgenerate builder with application/json body
-func NewPostcommunicationPreferences202603linksgeneratecommunicationPreferencesv4linksgenerateRequest(server string, params *PostcommunicationPreferences202603linksgeneratecommunicationPreferencesv4linksgenerateParams, body PostcommunicationPreferences202603linksgeneratecommunicationPreferencesv4linksgenerateJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewPostcommunicationPreferences202603linksgeneratecommunicationPreferencesv4linksgenerateRequestWithBody(server, params, "application/json", bodyReader)
-}
-
-// NewPostcommunicationPreferences202603linksgeneratecommunicationPreferencesv4linksgenerateRequestWithBody constructs an http.Request for the PostcommunicationPreferences202603linksgeneratecommunicationPreferencesv4linksgenerate method, with any body, and a specified content type
-func NewPostcommunicationPreferences202603linksgeneratecommunicationPreferencesv4linksgenerateRequestWithBody(server string, params *PostcommunicationPreferences202603linksgeneratecommunicationPreferencesv4linksgenerateParams, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/communication-preferences/2026-03/links/generate")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	if params != nil {
-		// queryValues collects non-styled parameters (passthrough, JSON)
-		// that are safe to round-trip through url.Values.Encode().
-		queryValues := queryURL.Query()
-		// rawQueryFragments collects pre-encoded query fragments from
-		// styled parameters, preserving literal commas as delimiters
-		// per the OpenAPI spec (e.g. "color=blue,black,brown").
-		var rawQueryFragments []string
-
-		if queryFrag, err := runtime.StyleParamWithOptions("form", true, "channel", params.Channel, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
-			return nil, err
-		} else {
-			for _, qp := range strings.Split(queryFrag, "&") {
-				rawQueryFragments = append(rawQueryFragments, qp)
-			}
-		}
-
-		if params.BusinessUnitId != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "businessUnitId", *params.BusinessUnitId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: "int64"}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if encoded := queryValues.Encode(); encoded != "" {
-			rawQueryFragments = append(rawQueryFragments, encoded)
-		}
-		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
-	}
-
-	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
-}
-
-// NewPostcommunicationPreferences202603statusesbatchreadRequest calls the generic PostcommunicationPreferences202603statusesbatchread builder with application/json body
-func NewPostcommunicationPreferences202603statusesbatchreadRequest(server string, params *PostcommunicationPreferences202603statusesbatchreadParams, body PostcommunicationPreferences202603statusesbatchreadJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewPostcommunicationPreferences202603statusesbatchreadRequestWithBody(server, params, "application/json", bodyReader)
-}
-
-// NewPostcommunicationPreferences202603statusesbatchreadRequestWithBody constructs an http.Request for the PostcommunicationPreferences202603statusesbatchread method, with any body, and a specified content type
-func NewPostcommunicationPreferences202603statusesbatchreadRequestWithBody(server string, params *PostcommunicationPreferences202603statusesbatchreadParams, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/communication-preferences/2026-03/statuses/batch/read")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	if params != nil {
-		// queryValues collects non-styled parameters (passthrough, JSON)
-		// that are safe to round-trip through url.Values.Encode().
-		queryValues := queryURL.Query()
-		// rawQueryFragments collects pre-encoded query fragments from
-		// styled parameters, preserving literal commas as delimiters
-		// per the OpenAPI spec (e.g. "color=blue,black,brown").
-		var rawQueryFragments []string
-
-		if queryFrag, err := runtime.StyleParamWithOptions("form", true, "channel", params.Channel, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
-			return nil, err
-		} else {
-			for _, qp := range strings.Split(queryFrag, "&") {
-				rawQueryFragments = append(rawQueryFragments, qp)
-			}
-		}
-
-		if params.BusinessUnitId != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "businessUnitId", *params.BusinessUnitId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: "int64"}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if encoded := queryValues.Encode(); encoded != "" {
-			rawQueryFragments = append(rawQueryFragments, encoded)
-		}
-		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
-	}
-
-	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
-}
-
-// NewPostcommunicationPreferences202603statusesbatchunsubscribeAllRequest calls the generic PostcommunicationPreferences202603statusesbatchunsubscribeAll builder with application/json body
-func NewPostcommunicationPreferences202603statusesbatchunsubscribeAllRequest(server string, params *PostcommunicationPreferences202603statusesbatchunsubscribeAllParams, body PostcommunicationPreferences202603statusesbatchunsubscribeAllJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewPostcommunicationPreferences202603statusesbatchunsubscribeAllRequestWithBody(server, params, "application/json", bodyReader)
-}
-
-// NewPostcommunicationPreferences202603statusesbatchunsubscribeAllRequestWithBody constructs an http.Request for the PostcommunicationPreferences202603statusesbatchunsubscribeAll method, with any body, and a specified content type
-func NewPostcommunicationPreferences202603statusesbatchunsubscribeAllRequestWithBody(server string, params *PostcommunicationPreferences202603statusesbatchunsubscribeAllParams, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/communication-preferences/2026-03/statuses/batch/unsubscribe-all")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	if params != nil {
-		// queryValues collects non-styled parameters (passthrough, JSON)
-		// that are safe to round-trip through url.Values.Encode().
-		queryValues := queryURL.Query()
-		// rawQueryFragments collects pre-encoded query fragments from
-		// styled parameters, preserving literal commas as delimiters
-		// per the OpenAPI spec (e.g. "color=blue,black,brown").
-		var rawQueryFragments []string
-
-		if queryFrag, err := runtime.StyleParamWithOptions("form", true, "channel", params.Channel, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
-			return nil, err
-		} else {
-			for _, qp := range strings.Split(queryFrag, "&") {
-				rawQueryFragments = append(rawQueryFragments, qp)
-			}
-		}
-
-		if params.BusinessUnitId != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "businessUnitId", *params.BusinessUnitId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: "int64"}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.Verbose != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "verbose", *params.Verbose, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "boolean", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if encoded := queryValues.Encode(); encoded != "" {
-			rawQueryFragments = append(rawQueryFragments, encoded)
-		}
-		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
-	}
-
-	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
-}
-
-// NewPostcommunicationPreferences202603statusesbatchunsubscribeAllreadRequest calls the generic PostcommunicationPreferences202603statusesbatchunsubscribeAllread builder with application/json body
-func NewPostcommunicationPreferences202603statusesbatchunsubscribeAllreadRequest(server string, params *PostcommunicationPreferences202603statusesbatchunsubscribeAllreadParams, body PostcommunicationPreferences202603statusesbatchunsubscribeAllreadJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewPostcommunicationPreferences202603statusesbatchunsubscribeAllreadRequestWithBody(server, params, "application/json", bodyReader)
-}
-
-// NewPostcommunicationPreferences202603statusesbatchunsubscribeAllreadRequestWithBody constructs an http.Request for the PostcommunicationPreferences202603statusesbatchunsubscribeAllread method, with any body, and a specified content type
-func NewPostcommunicationPreferences202603statusesbatchunsubscribeAllreadRequestWithBody(server string, params *PostcommunicationPreferences202603statusesbatchunsubscribeAllreadParams, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/communication-preferences/2026-03/statuses/batch/unsubscribe-all/read")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	if params != nil {
-		// queryValues collects non-styled parameters (passthrough, JSON)
-		// that are safe to round-trip through url.Values.Encode().
-		queryValues := queryURL.Query()
-		// rawQueryFragments collects pre-encoded query fragments from
-		// styled parameters, preserving literal commas as delimiters
-		// per the OpenAPI spec (e.g. "color=blue,black,brown").
-		var rawQueryFragments []string
-
-		if queryFrag, err := runtime.StyleParamWithOptions("form", true, "channel", params.Channel, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
-			return nil, err
-		} else {
-			for _, qp := range strings.Split(queryFrag, "&") {
-				rawQueryFragments = append(rawQueryFragments, qp)
-			}
-		}
-
-		if params.BusinessUnitId != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "businessUnitId", *params.BusinessUnitId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: "int64"}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if encoded := queryValues.Encode(); encoded != "" {
-			rawQueryFragments = append(rawQueryFragments, encoded)
-		}
-		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
-	}
-
-	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
-}
-
-// NewPostcommunicationPreferences202603statusesbatchwriteRequest calls the generic PostcommunicationPreferences202603statusesbatchwrite builder with application/json body
-func NewPostcommunicationPreferences202603statusesbatchwriteRequest(server string, body PostcommunicationPreferences202603statusesbatchwriteJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewPostcommunicationPreferences202603statusesbatchwriteRequestWithBody(server, "application/json", bodyReader)
-}
-
-// NewPostcommunicationPreferences202603statusesbatchwriteRequestWithBody constructs an http.Request for the PostcommunicationPreferences202603statusesbatchwrite method, with any body, and a specified content type
-func NewPostcommunicationPreferences202603statusesbatchwriteRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/communication-preferences/2026-03/statuses/batch/write")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
-}
-
-// NewGetcommunicationPreferences202603statusesSubscriberIdStringRequest constructs an http.Request for the GetcommunicationPreferences202603statusesSubscriberIdString method
-func NewGetcommunicationPreferences202603statusesSubscriberIdStringRequest(server string, subscriberIdString string, params *GetcommunicationPreferences202603statusesSubscriberIdStringParams) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "subscriberIdString", subscriberIdString, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/communication-preferences/2026-03/statuses/%s", pathParam0)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	if params != nil {
-		// queryValues collects non-styled parameters (passthrough, JSON)
-		// that are safe to round-trip through url.Values.Encode().
-		queryValues := queryURL.Query()
-		// rawQueryFragments collects pre-encoded query fragments from
-		// styled parameters, preserving literal commas as delimiters
-		// per the OpenAPI spec (e.g. "color=blue,black,brown").
-		var rawQueryFragments []string
-
-		if queryFrag, err := runtime.StyleParamWithOptions("form", true, "channel", params.Channel, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
-			return nil, err
-		} else {
-			for _, qp := range strings.Split(queryFrag, "&") {
-				rawQueryFragments = append(rawQueryFragments, qp)
-			}
-		}
-
-		if params.BusinessUnitId != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "businessUnitId", *params.BusinessUnitId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: "int64"}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if encoded := queryValues.Encode(); encoded != "" {
-			rawQueryFragments = append(rawQueryFragments, encoded)
-		}
-		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
-	}
-
-	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
-}
-
-// NewPostcommunicationPreferences202603statusesSubscriberIdStringRequest calls the generic PostcommunicationPreferences202603statusesSubscriberIdString builder with application/json body
-func NewPostcommunicationPreferences202603statusesSubscriberIdStringRequest(server string, subscriberIdString string, body PostcommunicationPreferences202603statusesSubscriberIdStringJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewPostcommunicationPreferences202603statusesSubscriberIdStringRequestWithBody(server, subscriberIdString, "application/json", bodyReader)
-}
-
-// NewPostcommunicationPreferences202603statusesSubscriberIdStringRequestWithBody constructs an http.Request for the PostcommunicationPreferences202603statusesSubscriberIdString method, with any body, and a specified content type
-func NewPostcommunicationPreferences202603statusesSubscriberIdStringRequestWithBody(server string, subscriberIdString string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "subscriberIdString", subscriberIdString, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/communication-preferences/2026-03/statuses/%s", pathParam0)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
-}
-
-// NewGetcommunicationPreferences202603statusesSubscriberIdStringunsubscribeAllRequest constructs an http.Request for the GetcommunicationPreferences202603statusesSubscriberIdStringunsubscribeAll method
-func NewGetcommunicationPreferences202603statusesSubscriberIdStringunsubscribeAllRequest(server string, subscriberIdString string, params *GetcommunicationPreferences202603statusesSubscriberIdStringunsubscribeAllParams) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "subscriberIdString", subscriberIdString, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/communication-preferences/2026-03/statuses/%s/unsubscribe-all", pathParam0)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	if params != nil {
-		// queryValues collects non-styled parameters (passthrough, JSON)
-		// that are safe to round-trip through url.Values.Encode().
-		queryValues := queryURL.Query()
-		// rawQueryFragments collects pre-encoded query fragments from
-		// styled parameters, preserving literal commas as delimiters
-		// per the OpenAPI spec (e.g. "color=blue,black,brown").
-		var rawQueryFragments []string
-
-		if queryFrag, err := runtime.StyleParamWithOptions("form", true, "channel", params.Channel, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
-			return nil, err
-		} else {
-			for _, qp := range strings.Split(queryFrag, "&") {
-				rawQueryFragments = append(rawQueryFragments, qp)
-			}
-		}
-
-		if params.BusinessUnitId != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "businessUnitId", *params.BusinessUnitId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: "int64"}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.Verbose != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "verbose", *params.Verbose, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "boolean", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if encoded := queryValues.Encode(); encoded != "" {
-			rawQueryFragments = append(rawQueryFragments, encoded)
-		}
-		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
-	}
-
-	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
-}
-
-// NewPostcommunicationPreferences202603statusesSubscriberIdStringunsubscribeAllRequest constructs an http.Request for the PostcommunicationPreferences202603statusesSubscriberIdStringunsubscribeAll method
-func NewPostcommunicationPreferences202603statusesSubscriberIdStringunsubscribeAllRequest(server string, subscriberIdString string, params *PostcommunicationPreferences202603statusesSubscriberIdStringunsubscribeAllParams) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "subscriberIdString", subscriberIdString, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/communication-preferences/2026-03/statuses/%s/unsubscribe-all", pathParam0)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	if params != nil {
-		// queryValues collects non-styled parameters (passthrough, JSON)
-		// that are safe to round-trip through url.Values.Encode().
-		queryValues := queryURL.Query()
-		// rawQueryFragments collects pre-encoded query fragments from
-		// styled parameters, preserving literal commas as delimiters
-		// per the OpenAPI spec (e.g. "color=blue,black,brown").
-		var rawQueryFragments []string
-
-		if queryFrag, err := runtime.StyleParamWithOptions("form", true, "channel", params.Channel, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
-			return nil, err
-		} else {
-			for _, qp := range strings.Split(queryFrag, "&") {
-				rawQueryFragments = append(rawQueryFragments, qp)
-			}
-		}
-
-		if params.BusinessUnitId != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "businessUnitId", *params.BusinessUnitId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: "int64"}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.Verbose != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "verbose", *params.Verbose, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "boolean", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if encoded := queryValues.Encode(); encoded != "" {
-			rawQueryFragments = append(rawQueryFragments, encoded)
-		}
-		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
-	}
-
-	req, err := http.NewRequest(http.MethodPost, queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
-}
-
-// NewGetconversationscustomChannels202603conversationscustomChannelsv3Request constructs an http.Request for the GetconversationscustomChannels202603conversationscustomChannelsv3 method
-func NewGetconversationscustomChannels202603conversationscustomChannelsv3Request(server string, params *GetconversationscustomChannels202603conversationscustomChannelsv3Params) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/conversations/custom-channels/2026-03")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	if params != nil {
-		// queryValues collects non-styled parameters (passthrough, JSON)
-		// that are safe to round-trip through url.Values.Encode().
-		queryValues := queryURL.Query()
-		// rawQueryFragments collects pre-encoded query fragments from
-		// styled parameters, preserving literal commas as delimiters
-		// per the OpenAPI spec (e.g. "color=blue,black,brown").
-		var rawQueryFragments []string
-
-		if params.After != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "after", *params.After, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.DefaultPageLength != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "defaultPageLength", *params.DefaultPageLength, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: "int32"}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.Limit != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "limit", *params.Limit, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: "int32"}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.Sort != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "sort", *params.Sort, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if encoded := queryValues.Encode(); encoded != "" {
-			rawQueryFragments = append(rawQueryFragments, encoded)
-		}
-		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
-	}
-
-	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
-}
-
-// NewPostconversationscustomChannels202603conversationscustomChannelsv3Request calls the generic PostconversationscustomChannels202603conversationscustomChannelsv3 builder with application/json body
-func NewPostconversationscustomChannels202603conversationscustomChannelsv3Request(server string, body PostconversationscustomChannels202603conversationscustomChannelsv3JSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewPostconversationscustomChannels202603conversationscustomChannelsv3RequestWithBody(server, "application/json", bodyReader)
-}
-
-// NewPostconversationscustomChannels202603conversationscustomChannelsv3RequestWithBody constructs an http.Request for the PostconversationscustomChannels202603conversationscustomChannelsv3 method, with any body, and a specified content type
-func NewPostconversationscustomChannels202603conversationscustomChannelsv3RequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/conversations/custom-channels/2026-03")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
-}
-
-// NewDeleteconversationscustomChannels202603ChannelIdRequest constructs an http.Request for the DeleteconversationscustomChannels202603ChannelId method
-func NewDeleteconversationscustomChannels202603ChannelIdRequest(server string, channelId int32) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "channelId", channelId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: "int32"})
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/conversations/custom-channels/2026-03/%s", pathParam0)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodDelete, queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
-}
-
-// NewGetconversationscustomChannels202603ChannelIdRequest constructs an http.Request for the GetconversationscustomChannels202603ChannelId method
-func NewGetconversationscustomChannels202603ChannelIdRequest(server string, channelId int32) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "channelId", channelId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: "int32"})
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/conversations/custom-channels/2026-03/%s", pathParam0)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
-}
-
-// NewPatchconversationscustomChannels202603ChannelIdRequest calls the generic PatchconversationscustomChannels202603ChannelId builder with application/json body
-func NewPatchconversationscustomChannels202603ChannelIdRequest(server string, channelId int32, body PatchconversationscustomChannels202603ChannelIdJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewPatchconversationscustomChannels202603ChannelIdRequestWithBody(server, channelId, "application/json", bodyReader)
-}
-
-// NewPatchconversationscustomChannels202603ChannelIdRequestWithBody constructs an http.Request for the PatchconversationscustomChannels202603ChannelId method, with any body, and a specified content type
-func NewPatchconversationscustomChannels202603ChannelIdRequestWithBody(server string, channelId int32, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "channelId", channelId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: "int32"})
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/conversations/custom-channels/2026-03/%s", pathParam0)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodPatch, queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
-}
-
-// NewPatchconversationscustomChannels202603ChannelIdchannelAccountStagingTokensAccountTokenRequest calls the generic PatchconversationscustomChannels202603ChannelIdchannelAccountStagingTokensAccountToken builder with application/json body
-func NewPatchconversationscustomChannels202603ChannelIdchannelAccountStagingTokensAccountTokenRequest(server string, channelId int32, accountToken string, body PatchconversationscustomChannels202603ChannelIdchannelAccountStagingTokensAccountTokenJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewPatchconversationscustomChannels202603ChannelIdchannelAccountStagingTokensAccountTokenRequestWithBody(server, channelId, accountToken, "application/json", bodyReader)
-}
-
-// NewPatchconversationscustomChannels202603ChannelIdchannelAccountStagingTokensAccountTokenRequestWithBody constructs an http.Request for the PatchconversationscustomChannels202603ChannelIdchannelAccountStagingTokensAccountToken method, with any body, and a specified content type
-func NewPatchconversationscustomChannels202603ChannelIdchannelAccountStagingTokensAccountTokenRequestWithBody(server string, channelId int32, accountToken string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "channelId", channelId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: "int32"})
-	if err != nil {
-		return nil, err
-	}
-
-	var pathParam1 string
-
-	pathParam1, err = runtime.StyleParamWithOptions("simple", false, "accountToken", accountToken, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/conversations/custom-channels/2026-03/%s/channel-account-staging-tokens/%s", pathParam0, pathParam1)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodPatch, queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
-}
-
-// NewGetconversationscustomChannels202603ChannelIdchannelAccountsRequest constructs an http.Request for the GetconversationscustomChannels202603ChannelIdchannelAccounts method
-func NewGetconversationscustomChannels202603ChannelIdchannelAccountsRequest(server string, channelId int32, params *GetconversationscustomChannels202603ChannelIdchannelAccountsParams) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "channelId", channelId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: "int32"})
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/conversations/custom-channels/2026-03/%s/channel-accounts", pathParam0)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	if params != nil {
-		// queryValues collects non-styled parameters (passthrough, JSON)
-		// that are safe to round-trip through url.Values.Encode().
-		queryValues := queryURL.Query()
-		// rawQueryFragments collects pre-encoded query fragments from
-		// styled parameters, preserving literal commas as delimiters
-		// per the OpenAPI spec (e.g. "color=blue,black,brown").
-		var rawQueryFragments []string
-
-		if params.After != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "after", *params.After, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.Archived != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "archived", *params.Archived, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "boolean", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.DefaultPageLength != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "defaultPageLength", *params.DefaultPageLength, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: "int32"}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.DeliveryIdentifierType != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "deliveryIdentifierType", *params.DeliveryIdentifierType, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.DeliveryIdentifierValue != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "deliveryIdentifierValue", *params.DeliveryIdentifierValue, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.Limit != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "limit", *params.Limit, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: "int32"}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if params.Sort != nil {
-
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "sort", *params.Sort, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
-				return nil, err
-			} else {
-				for _, qp := range strings.Split(queryFrag, "&") {
-					rawQueryFragments = append(rawQueryFragments, qp)
-				}
-			}
-
-		}
-
-		if encoded := queryValues.Encode(); encoded != "" {
-			rawQueryFragments = append(rawQueryFragments, encoded)
-		}
-		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
-	}
-
-	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
 	if err != nil {
 		return nil, err
 	}

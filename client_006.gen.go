@@ -1015,6 +1015,25 @@ func (c *Client) Postcmsblogs202603authorsCreateWithBody(ctx context.Context, co
 	return c.Client.Do(req)
 }
 
+// Postcmsblogs202603authorsCreate Create a new Blog Author
+//
+// Create a new Blog Author.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/blogs/2026-03/authors (the `Postcmsblogs202603authorsCreate` operationId).
+func (c *Client) Postcmsblogs202603authorsCreate(ctx context.Context, body Postcmsblogs202603authorsCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmsblogs202603authorsCreateRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // Postcmsblogs202603authorsbatcharchiveArchiveBatchWithBody Delete a batch of Blog Authors
 //
 // Delete the Blog Author objects identified in the request body.
@@ -1024,6 +1043,25 @@ func (c *Client) Postcmsblogs202603authorsCreateWithBody(ctx context.Context, co
 // Corresponds with POST /cms/blogs/2026-03/authors/batch/archive (the `Postcmsblogs202603authorsbatcharchiveArchiveBatch` operationId).
 func (c *Client) Postcmsblogs202603authorsbatcharchiveArchiveBatchWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcmsblogs202603authorsbatcharchiveArchiveBatchRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcmsblogs202603authorsbatcharchiveArchiveBatch Delete a batch of Blog Authors
+//
+// Delete the Blog Author objects identified in the request body.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/blogs/2026-03/authors/batch/archive (the `Postcmsblogs202603authorsbatcharchiveArchiveBatch` operationId).
+func (c *Client) Postcmsblogs202603authorsbatcharchiveArchiveBatch(ctx context.Context, body Postcmsblogs202603authorsbatcharchiveArchiveBatchJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmsblogs202603authorsbatcharchiveArchiveBatchRequest(c.Server, body)
 	if err != nil {
 		return nil, err
 	}
@@ -1053,6 +1091,25 @@ func (c *Client) Postcmsblogs202603authorsbatchcreateCreateBatchWithBody(ctx con
 	return c.Client.Do(req)
 }
 
+// Postcmsblogs202603authorsbatchcreateCreateBatch Create a batch of Blog Authors
+//
+// Create the Blog Author objects detailed in the request body.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/blogs/2026-03/authors/batch/create (the `Postcmsblogs202603authorsbatchcreateCreateBatch` operationId).
+func (c *Client) Postcmsblogs202603authorsbatchcreateCreateBatch(ctx context.Context, body Postcmsblogs202603authorsbatchcreateCreateBatchJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmsblogs202603authorsbatchcreateCreateBatchRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // Postcmsblogs202603authorsbatchreadReadBatchWithBody Retrieve a batch of Blog Authors
 //
 // Retrieve the Blog Author objects identified in the request body.
@@ -1072,6 +1129,25 @@ func (c *Client) Postcmsblogs202603authorsbatchreadReadBatchWithBody(ctx context
 	return c.Client.Do(req)
 }
 
+// Postcmsblogs202603authorsbatchreadReadBatch Retrieve a batch of Blog Authors
+//
+// Retrieve the Blog Author objects identified in the request body.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/blogs/2026-03/authors/batch/read (the `Postcmsblogs202603authorsbatchreadReadBatch` operationId).
+func (c *Client) Postcmsblogs202603authorsbatchreadReadBatch(ctx context.Context, params *Postcmsblogs202603authorsbatchreadReadBatchParams, body Postcmsblogs202603authorsbatchreadReadBatchJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmsblogs202603authorsbatchreadReadBatchRequest(c.Server, params, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // Postcmsblogs202603authorsbatchupdateUpdateBatchWithBody Update a batch of Blog Authors
 //
 // Update the Blog Author objects identified in the request body.
@@ -1081,6 +1157,25 @@ func (c *Client) Postcmsblogs202603authorsbatchreadReadBatchWithBody(ctx context
 // Corresponds with POST /cms/blogs/2026-03/authors/batch/update (the `Postcmsblogs202603authorsbatchupdateUpdateBatch` operationId).
 func (c *Client) Postcmsblogs202603authorsbatchupdateUpdateBatchWithBody(ctx context.Context, params *Postcmsblogs202603authorsbatchupdateUpdateBatchParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcmsblogs202603authorsbatchupdateUpdateBatchRequestWithBody(c.Server, params, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcmsblogs202603authorsbatchupdateUpdateBatch Update a batch of Blog Authors
+//
+// Update the Blog Author objects identified in the request body.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/blogs/2026-03/authors/batch/update (the `Postcmsblogs202603authorsbatchupdateUpdateBatch` operationId).
+func (c *Client) Postcmsblogs202603authorsbatchupdateUpdateBatch(ctx context.Context, params *Postcmsblogs202603authorsbatchupdateUpdateBatchParams, body Postcmsblogs202603authorsbatchupdateUpdateBatchJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmsblogs202603authorsbatchupdateUpdateBatchRequest(c.Server, params, body)
 	if err != nil {
 		return nil, err
 	}
@@ -1144,6 +1239,25 @@ func (c *Client) Postcmsblogs202603authorsmultiLanguageattachToLangGroupAttachTo
 	return c.Client.Do(req)
 }
 
+// Postcmsblogs202603authorsmultiLanguageattachToLangGroupAttachToLangGroup Attach a Blog Author to a multi-language group
+//
+// Attach a Blog Author to a multi-language group.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/blogs/2026-03/authors/multi-language/attach-to-lang-group (the `Postcmsblogs202603authorsmultiLanguageattachToLangGroupAttachToLangGroup` operationId).
+func (c *Client) Postcmsblogs202603authorsmultiLanguageattachToLangGroupAttachToLangGroup(ctx context.Context, body Postcmsblogs202603authorsmultiLanguageattachToLangGroupAttachToLangGroupJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmsblogs202603authorsmultiLanguageattachToLangGroupAttachToLangGroupRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // Postcmsblogs202603authorsmultiLanguagecreateLanguageVariationCreateLangVariationWithBody Create a new language variation
 //
 // Create a new language variation from an existing Blog Author.
@@ -1153,6 +1267,25 @@ func (c *Client) Postcmsblogs202603authorsmultiLanguageattachToLangGroupAttachTo
 // Corresponds with POST /cms/blogs/2026-03/authors/multi-language/create-language-variation (the `Postcmsblogs202603authorsmultiLanguagecreateLanguageVariationCreateLangVariation` operationId).
 func (c *Client) Postcmsblogs202603authorsmultiLanguagecreateLanguageVariationCreateLangVariationWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcmsblogs202603authorsmultiLanguagecreateLanguageVariationCreateLangVariationRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcmsblogs202603authorsmultiLanguagecreateLanguageVariationCreateLangVariation Create a new language variation
+//
+// Create a new language variation from an existing Blog Author.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/blogs/2026-03/authors/multi-language/create-language-variation (the `Postcmsblogs202603authorsmultiLanguagecreateLanguageVariationCreateLangVariation` operationId).
+func (c *Client) Postcmsblogs202603authorsmultiLanguagecreateLanguageVariationCreateLangVariation(ctx context.Context, body Postcmsblogs202603authorsmultiLanguagecreateLanguageVariationCreateLangVariationJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmsblogs202603authorsmultiLanguagecreateLanguageVariationCreateLangVariationRequest(c.Server, body)
 	if err != nil {
 		return nil, err
 	}
@@ -1182,6 +1315,25 @@ func (c *Client) Postcmsblogs202603authorsmultiLanguagedetachFromLangGroupDetach
 	return c.Client.Do(req)
 }
 
+// Postcmsblogs202603authorsmultiLanguagedetachFromLangGroupDetachFromLangGroup Detach a Blog Author from a multi-language group
+//
+// Detach a Blog Author from a multi-language group.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/blogs/2026-03/authors/multi-language/detach-from-lang-group (the `Postcmsblogs202603authorsmultiLanguagedetachFromLangGroupDetachFromLangGroup` operationId).
+func (c *Client) Postcmsblogs202603authorsmultiLanguagedetachFromLangGroupDetachFromLangGroup(ctx context.Context, body Postcmsblogs202603authorsmultiLanguagedetachFromLangGroupDetachFromLangGroupJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmsblogs202603authorsmultiLanguagedetachFromLangGroupDetachFromLangGroupRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // Putcmsblogs202603authorsmultiLanguagesetNewLangPrimarySetLangPrimaryWithBody Set a new primary language
 //
 // Set a Blog Author as the primary language of a multi-language group.
@@ -1201,6 +1353,25 @@ func (c *Client) Putcmsblogs202603authorsmultiLanguagesetNewLangPrimarySetLangPr
 	return c.Client.Do(req)
 }
 
+// Putcmsblogs202603authorsmultiLanguagesetNewLangPrimarySetLangPrimary Set a new primary language
+//
+// Set a Blog Author as the primary language of a multi-language group.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with PUT /cms/blogs/2026-03/authors/multi-language/set-new-lang-primary (the `Putcmsblogs202603authorsmultiLanguagesetNewLangPrimarySetLangPrimary` operationId).
+func (c *Client) Putcmsblogs202603authorsmultiLanguagesetNewLangPrimarySetLangPrimary(ctx context.Context, body Putcmsblogs202603authorsmultiLanguagesetNewLangPrimarySetLangPrimaryJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPutcmsblogs202603authorsmultiLanguagesetNewLangPrimarySetLangPrimaryRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // Postcmsblogs202603authorsmultiLanguageupdateLanguagesUpdateLangsWithBody Update languages of multi-language group
 //
 // Explicitly set new languages for each Blog Author in a multi-language group.
@@ -1210,6 +1381,25 @@ func (c *Client) Putcmsblogs202603authorsmultiLanguagesetNewLangPrimarySetLangPr
 // Corresponds with POST /cms/blogs/2026-03/authors/multi-language/update-languages (the `Postcmsblogs202603authorsmultiLanguageupdateLanguagesUpdateLangs` operationId).
 func (c *Client) Postcmsblogs202603authorsmultiLanguageupdateLanguagesUpdateLangsWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcmsblogs202603authorsmultiLanguageupdateLanguagesUpdateLangsRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcmsblogs202603authorsmultiLanguageupdateLanguagesUpdateLangs Update languages of multi-language group
+//
+// Explicitly set new languages for each Blog Author in a multi-language group.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/blogs/2026-03/authors/multi-language/update-languages (the `Postcmsblogs202603authorsmultiLanguageupdateLanguagesUpdateLangs` operationId).
+func (c *Client) Postcmsblogs202603authorsmultiLanguageupdateLanguagesUpdateLangs(ctx context.Context, body Postcmsblogs202603authorsmultiLanguageupdateLanguagesUpdateLangsJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmsblogs202603authorsmultiLanguageupdateLanguagesUpdateLangsRequest(c.Server, body)
 	if err != nil {
 		return nil, err
 	}
@@ -1274,6 +1464,26 @@ func (c *Client) Patchcmsblogs202603authorsObjectIdUpdateWithBody(ctx context.Co
 	return c.Client.Do(req)
 }
 
+// Patchcmsblogs202603authorsObjectIdUpdate Update a Blog Author
+//
+// Sparse updates a single Blog Author object identified by the id in the path.
+// All the column values need not be specified. Only the that need to be modified can be specified.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with PATCH /cms/blogs/2026-03/authors/{objectId} (the `Patchcmsblogs202603authorsObjectIdUpdate` operationId).
+func (c *Client) Patchcmsblogs202603authorsObjectIdUpdate(ctx context.Context, objectId string, params *Patchcmsblogs202603authorsObjectIdUpdateParams, body Patchcmsblogs202603authorsObjectIdUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPatchcmsblogs202603authorsObjectIdUpdateRequest(c.Server, objectId, params, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // Getcmsblogs202603postsGetPage Get all posts
 //
 // Retrieve all blog posts, with paging and filtering options. This method would be useful for an integration that ingests posts and suggests edits.
@@ -1310,6 +1520,25 @@ func (c *Client) Postcmsblogs202603postsCreateWithBody(ctx context.Context, cont
 	return c.Client.Do(req)
 }
 
+// Postcmsblogs202603postsCreate Create a new post
+//
+// Create a new blog post, specifying its content in the request body.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/blogs/2026-03/posts (the `Postcmsblogs202603postsCreate` operationId).
+func (c *Client) Postcmsblogs202603postsCreate(ctx context.Context, body Postcmsblogs202603postsCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmsblogs202603postsCreateRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // Postcmsblogs202603postsbatcharchiveArchiveWithBody Delete a batch of blog posts
 //
 // Delete a blog post by ID.
@@ -1320,6 +1549,26 @@ func (c *Client) Postcmsblogs202603postsCreateWithBody(ctx context.Context, cont
 // Corresponds with POST /cms/blogs/2026-03/posts/batch/archive (the `Postcmsblogs202603postsbatcharchiveArchive` operationId).
 func (c *Client) Postcmsblogs202603postsbatcharchiveArchiveWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcmsblogs202603postsbatcharchiveArchiveRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcmsblogs202603postsbatcharchiveArchive Delete a batch of blog posts
+//
+// Delete a blog post by ID.
+// Note: This is not the same as the in-app `archive` function. To perform a dashboard `archive` send an normal update with the `archivedInDashboard` field set to `true`.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/blogs/2026-03/posts/batch/archive (the `Postcmsblogs202603postsbatcharchiveArchive` operationId).
+func (c *Client) Postcmsblogs202603postsbatcharchiveArchive(ctx context.Context, body Postcmsblogs202603postsbatcharchiveArchiveJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmsblogs202603postsbatcharchiveArchiveRequest(c.Server, body)
 	if err != nil {
 		return nil, err
 	}
@@ -1349,6 +1598,25 @@ func (c *Client) Postcmsblogs202603postsbatchcreateCreateWithBody(ctx context.Co
 	return c.Client.Do(req)
 }
 
+// Postcmsblogs202603postsbatchcreateCreate Create a batch of blog posts
+//
+// Create a batch of blog posts, specifying their content in the request body.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/blogs/2026-03/posts/batch/create (the `Postcmsblogs202603postsbatchcreateCreate` operationId).
+func (c *Client) Postcmsblogs202603postsbatchcreateCreate(ctx context.Context, body Postcmsblogs202603postsbatchcreateCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmsblogs202603postsbatchcreateCreateRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // Postcmsblogs202603postsbatchreadReadWithBody Retrieve a batch of Blog Posts
 //
 // Retrieve a batch of blog posts by ID. identified in the request body.
@@ -1358,6 +1626,25 @@ func (c *Client) Postcmsblogs202603postsbatchcreateCreateWithBody(ctx context.Co
 // Corresponds with POST /cms/blogs/2026-03/posts/batch/read (the `Postcmsblogs202603postsbatchreadRead` operationId).
 func (c *Client) Postcmsblogs202603postsbatchreadReadWithBody(ctx context.Context, params *Postcmsblogs202603postsbatchreadReadParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcmsblogs202603postsbatchreadReadRequestWithBody(c.Server, params, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcmsblogs202603postsbatchreadRead Retrieve a batch of Blog Posts
+//
+// Retrieve a batch of blog posts by ID. identified in the request body.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/blogs/2026-03/posts/batch/read (the `Postcmsblogs202603postsbatchreadRead` operationId).
+func (c *Client) Postcmsblogs202603postsbatchreadRead(ctx context.Context, params *Postcmsblogs202603postsbatchreadReadParams, body Postcmsblogs202603postsbatchreadReadJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmsblogs202603postsbatchreadReadRequest(c.Server, params, body)
 	if err != nil {
 		return nil, err
 	}
@@ -1387,6 +1674,25 @@ func (c *Client) Postcmsblogs202603postsbatchupdateUpdateWithBody(ctx context.Co
 	return c.Client.Do(req)
 }
 
+// Postcmsblogs202603postsbatchupdateUpdate Update a batch of Blog Posts
+//
+// Update a batch of blog posts.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/blogs/2026-03/posts/batch/update (the `Postcmsblogs202603postsbatchupdateUpdate` operationId).
+func (c *Client) Postcmsblogs202603postsbatchupdateUpdate(ctx context.Context, params *Postcmsblogs202603postsbatchupdateUpdateParams, body Postcmsblogs202603postsbatchupdateUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmsblogs202603postsbatchupdateUpdateRequest(c.Server, params, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // Postcmsblogs202603postscloneCloneWithBody Clone a blog post
 //
 // Clone a blog post, making a copy of it in a new blog post.
@@ -1396,6 +1702,25 @@ func (c *Client) Postcmsblogs202603postsbatchupdateUpdateWithBody(ctx context.Co
 // Corresponds with POST /cms/blogs/2026-03/posts/clone (the `Postcmsblogs202603postscloneClone` operationId).
 func (c *Client) Postcmsblogs202603postscloneCloneWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcmsblogs202603postscloneCloneRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcmsblogs202603postscloneClone Clone a blog post
+//
+// Clone a blog post, making a copy of it in a new blog post.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/blogs/2026-03/posts/clone (the `Postcmsblogs202603postscloneClone` operationId).
+func (c *Client) Postcmsblogs202603postscloneClone(ctx context.Context, body Postcmsblogs202603postscloneCloneJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmsblogs202603postscloneCloneRequest(c.Server, body)
 	if err != nil {
 		return nil, err
 	}
@@ -1459,6 +1784,25 @@ func (c *Client) Postcmsblogs202603postsmultiLanguageattachToLangGroupAttachToLa
 	return c.Client.Do(req)
 }
 
+// Postcmsblogs202603postsmultiLanguageattachToLangGroupAttachToLangGroup Attach post to a multi-language group
+//
+// Attach a blog post to a [multi-language group](https://developers.hubspot.com/docs/guides/cms/content/multi-language-content).
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/blogs/2026-03/posts/multi-language/attach-to-lang-group (the `Postcmsblogs202603postsmultiLanguageattachToLangGroupAttachToLangGroup` operationId).
+func (c *Client) Postcmsblogs202603postsmultiLanguageattachToLangGroupAttachToLangGroup(ctx context.Context, body Postcmsblogs202603postsmultiLanguageattachToLangGroupAttachToLangGroupJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmsblogs202603postsmultiLanguageattachToLangGroupAttachToLangGroupRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // Postcmsblogs202603postsmultiLanguagecreateLanguageVariationCreateLangVariationWithBody Create a language variation
 //
 // Create a new language variation from an existing blog post.
@@ -1468,6 +1812,25 @@ func (c *Client) Postcmsblogs202603postsmultiLanguageattachToLangGroupAttachToLa
 // Corresponds with POST /cms/blogs/2026-03/posts/multi-language/create-language-variation (the `Postcmsblogs202603postsmultiLanguagecreateLanguageVariationCreateLangVariation` operationId).
 func (c *Client) Postcmsblogs202603postsmultiLanguagecreateLanguageVariationCreateLangVariationWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcmsblogs202603postsmultiLanguagecreateLanguageVariationCreateLangVariationRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcmsblogs202603postsmultiLanguagecreateLanguageVariationCreateLangVariation Create a language variation
+//
+// Create a new language variation from an existing blog post.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/blogs/2026-03/posts/multi-language/create-language-variation (the `Postcmsblogs202603postsmultiLanguagecreateLanguageVariationCreateLangVariation` operationId).
+func (c *Client) Postcmsblogs202603postsmultiLanguagecreateLanguageVariationCreateLangVariation(ctx context.Context, body Postcmsblogs202603postsmultiLanguagecreateLanguageVariationCreateLangVariationJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmsblogs202603postsmultiLanguagecreateLanguageVariationCreateLangVariationRequest(c.Server, body)
 	if err != nil {
 		return nil, err
 	}
@@ -1497,6 +1860,25 @@ func (c *Client) Postcmsblogs202603postsmultiLanguagedetachFromLangGroupDetachFr
 	return c.Client.Do(req)
 }
 
+// Postcmsblogs202603postsmultiLanguagedetachFromLangGroupDetachFromLangGroup Detach post from a multi-language group
+//
+// Detach a blog post from a [multi-language group](https://developers.hubspot.com/docs/guides/cms/content/multi-language-content).
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/blogs/2026-03/posts/multi-language/detach-from-lang-group (the `Postcmsblogs202603postsmultiLanguagedetachFromLangGroupDetachFromLangGroup` operationId).
+func (c *Client) Postcmsblogs202603postsmultiLanguagedetachFromLangGroupDetachFromLangGroup(ctx context.Context, body Postcmsblogs202603postsmultiLanguagedetachFromLangGroupDetachFromLangGroupJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmsblogs202603postsmultiLanguagedetachFromLangGroupDetachFromLangGroupRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // Putcmsblogs202603postsmultiLanguagesetNewLangPrimarySetLangPrimaryWithBody Set a new primary language
 //
 // Set the primary language of a [multi-language group](https://developers.hubspot.com/docs/guides/cms/content/multi-language-content) to the language of the provided post (specified as an ID in the request body)
@@ -1506,6 +1888,25 @@ func (c *Client) Postcmsblogs202603postsmultiLanguagedetachFromLangGroupDetachFr
 // Corresponds with PUT /cms/blogs/2026-03/posts/multi-language/set-new-lang-primary (the `Putcmsblogs202603postsmultiLanguagesetNewLangPrimarySetLangPrimary` operationId).
 func (c *Client) Putcmsblogs202603postsmultiLanguagesetNewLangPrimarySetLangPrimaryWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPutcmsblogs202603postsmultiLanguagesetNewLangPrimarySetLangPrimaryRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Putcmsblogs202603postsmultiLanguagesetNewLangPrimarySetLangPrimary Set a new primary language
+//
+// Set the primary language of a [multi-language group](https://developers.hubspot.com/docs/guides/cms/content/multi-language-content) to the language of the provided post (specified as an ID in the request body)
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with PUT /cms/blogs/2026-03/posts/multi-language/set-new-lang-primary (the `Putcmsblogs202603postsmultiLanguagesetNewLangPrimarySetLangPrimary` operationId).
+func (c *Client) Putcmsblogs202603postsmultiLanguagesetNewLangPrimarySetLangPrimary(ctx context.Context, body Putcmsblogs202603postsmultiLanguagesetNewLangPrimarySetLangPrimaryJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPutcmsblogs202603postsmultiLanguagesetNewLangPrimarySetLangPrimaryRequest(c.Server, body)
 	if err != nil {
 		return nil, err
 	}
@@ -1535,6 +1936,25 @@ func (c *Client) Postcmsblogs202603postsmultiLanguageupdateLanguagesUpdateLangsW
 	return c.Client.Do(req)
 }
 
+// Postcmsblogs202603postsmultiLanguageupdateLanguagesUpdateLangs Update languages of multi-language group
+//
+// Explicitly set new languages for each post in a [multi-language group](https://developers.hubspot.com/docs/guides/cms/content/multi-language-content).
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/blogs/2026-03/posts/multi-language/update-languages (the `Postcmsblogs202603postsmultiLanguageupdateLanguagesUpdateLangs` operationId).
+func (c *Client) Postcmsblogs202603postsmultiLanguageupdateLanguagesUpdateLangs(ctx context.Context, body Postcmsblogs202603postsmultiLanguageupdateLanguagesUpdateLangsJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmsblogs202603postsmultiLanguageupdateLanguagesUpdateLangsRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // Postcmsblogs202603postsscheduleScheduleWithBody Schedule a post to be published
 //
 // Schedule a blog post to be published at a specified time.
@@ -1544,6 +1964,25 @@ func (c *Client) Postcmsblogs202603postsmultiLanguageupdateLanguagesUpdateLangsW
 // Corresponds with POST /cms/blogs/2026-03/posts/schedule (the `Postcmsblogs202603postsscheduleSchedule` operationId).
 func (c *Client) Postcmsblogs202603postsscheduleScheduleWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcmsblogs202603postsscheduleScheduleRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcmsblogs202603postsscheduleSchedule Schedule a post to be published
+//
+// Schedule a blog post to be published at a specified time.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/blogs/2026-03/posts/schedule (the `Postcmsblogs202603postsscheduleSchedule` operationId).
+func (c *Client) Postcmsblogs202603postsscheduleSchedule(ctx context.Context, body Postcmsblogs202603postsscheduleScheduleJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmsblogs202603postsscheduleScheduleRequest(c.Server, body)
 	if err != nil {
 		return nil, err
 	}
@@ -1607,6 +2046,25 @@ func (c *Client) Patchcmsblogs202603postsObjectIdUpdateWithBody(ctx context.Cont
 	return c.Client.Do(req)
 }
 
+// Patchcmsblogs202603postsObjectIdUpdate Update a post
+//
+// Partially updates a single blog post by ID. You only need to specify the values that you want to update.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with PATCH /cms/blogs/2026-03/posts/{objectId} (the `Patchcmsblogs202603postsObjectIdUpdate` operationId).
+func (c *Client) Patchcmsblogs202603postsObjectIdUpdate(ctx context.Context, objectId string, params *Patchcmsblogs202603postsObjectIdUpdateParams, body Patchcmsblogs202603postsObjectIdUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPatchcmsblogs202603postsObjectIdUpdateRequest(c.Server, objectId, params, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // Getcmsblogs202603postsObjectIddraftGetDraftById Retrieve the full draft version of the Blog Post
 //
 // Retrieve the full draft version of a blog post.
@@ -1633,6 +2091,25 @@ func (c *Client) Getcmsblogs202603postsObjectIddraftGetDraftById(ctx context.Con
 // Corresponds with PATCH /cms/blogs/2026-03/posts/{objectId}/draft (the `Patchcmsblogs202603postsObjectIddraftUpdateDraft` operationId).
 func (c *Client) Patchcmsblogs202603postsObjectIddraftUpdateDraftWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPatchcmsblogs202603postsObjectIddraftUpdateDraftRequestWithBody(c.Server, objectId, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Patchcmsblogs202603postsObjectIddraftUpdateDraft Update the draft of a post
+//
+// Partially updates the draft version of a single blog post by ID. You only need to specify the values that you want to update.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with PATCH /cms/blogs/2026-03/posts/{objectId}/draft (the `Patchcmsblogs202603postsObjectIddraftUpdateDraft` operationId).
+func (c *Client) Patchcmsblogs202603postsObjectIddraftUpdateDraft(ctx context.Context, objectId string, body Patchcmsblogs202603postsObjectIddraftUpdateDraftJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPatchcmsblogs202603postsObjectIddraftUpdateDraftRequest(c.Server, objectId, body)
 	if err != nil {
 		return nil, err
 	}
@@ -1781,6 +2258,25 @@ func (c *Client) Postcmsblogs202603tagsCreateWithBody(ctx context.Context, conte
 	return c.Client.Do(req)
 }
 
+// Postcmsblogs202603tagsCreate Create a new Blog Tag
+//
+// Create a new Blog Tag.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/blogs/2026-03/tags (the `Postcmsblogs202603tagsCreate` operationId).
+func (c *Client) Postcmsblogs202603tagsCreate(ctx context.Context, body Postcmsblogs202603tagsCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmsblogs202603tagsCreateRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // Postcmsblogs202603tagsbatcharchiveArchiveBatchWithBody Delete a batch of Blog Tags
 //
 // Delete the Blog Tag objects identified in the request body.
@@ -1790,6 +2286,25 @@ func (c *Client) Postcmsblogs202603tagsCreateWithBody(ctx context.Context, conte
 // Corresponds with POST /cms/blogs/2026-03/tags/batch/archive (the `Postcmsblogs202603tagsbatcharchiveArchiveBatch` operationId).
 func (c *Client) Postcmsblogs202603tagsbatcharchiveArchiveBatchWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcmsblogs202603tagsbatcharchiveArchiveBatchRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcmsblogs202603tagsbatcharchiveArchiveBatch Delete a batch of Blog Tags
+//
+// Delete the Blog Tag objects identified in the request body.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/blogs/2026-03/tags/batch/archive (the `Postcmsblogs202603tagsbatcharchiveArchiveBatch` operationId).
+func (c *Client) Postcmsblogs202603tagsbatcharchiveArchiveBatch(ctx context.Context, body Postcmsblogs202603tagsbatcharchiveArchiveBatchJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmsblogs202603tagsbatcharchiveArchiveBatchRequest(c.Server, body)
 	if err != nil {
 		return nil, err
 	}
@@ -1819,6 +2334,25 @@ func (c *Client) Postcmsblogs202603tagsbatchcreateCreateBatchWithBody(ctx contex
 	return c.Client.Do(req)
 }
 
+// Postcmsblogs202603tagsbatchcreateCreateBatch Create a batch of Blog Tags
+//
+// Create the Blog Tag objects detailed in the request body.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/blogs/2026-03/tags/batch/create (the `Postcmsblogs202603tagsbatchcreateCreateBatch` operationId).
+func (c *Client) Postcmsblogs202603tagsbatchcreateCreateBatch(ctx context.Context, body Postcmsblogs202603tagsbatchcreateCreateBatchJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmsblogs202603tagsbatchcreateCreateBatchRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // Postcmsblogs202603tagsbatchreadReadBatchWithBody Retrieve a batch of Blog Tags
 //
 // Retrieve the Blog Tag objects identified in the request body.
@@ -1838,6 +2372,25 @@ func (c *Client) Postcmsblogs202603tagsbatchreadReadBatchWithBody(ctx context.Co
 	return c.Client.Do(req)
 }
 
+// Postcmsblogs202603tagsbatchreadReadBatch Retrieve a batch of Blog Tags
+//
+// Retrieve the Blog Tag objects identified in the request body.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/blogs/2026-03/tags/batch/read (the `Postcmsblogs202603tagsbatchreadReadBatch` operationId).
+func (c *Client) Postcmsblogs202603tagsbatchreadReadBatch(ctx context.Context, params *Postcmsblogs202603tagsbatchreadReadBatchParams, body Postcmsblogs202603tagsbatchreadReadBatchJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmsblogs202603tagsbatchreadReadBatchRequest(c.Server, params, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // Postcmsblogs202603tagsbatchupdateUpdateBatchWithBody Update a batch of Blog Tags
 //
 // Update the Blog Tag objects identified in the request body.
@@ -1847,6 +2400,25 @@ func (c *Client) Postcmsblogs202603tagsbatchreadReadBatchWithBody(ctx context.Co
 // Corresponds with POST /cms/blogs/2026-03/tags/batch/update (the `Postcmsblogs202603tagsbatchupdateUpdateBatch` operationId).
 func (c *Client) Postcmsblogs202603tagsbatchupdateUpdateBatchWithBody(ctx context.Context, params *Postcmsblogs202603tagsbatchupdateUpdateBatchParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcmsblogs202603tagsbatchupdateUpdateBatchRequestWithBody(c.Server, params, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcmsblogs202603tagsbatchupdateUpdateBatch Update a batch of Blog Tags
+//
+// Update the Blog Tag objects identified in the request body.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/blogs/2026-03/tags/batch/update (the `Postcmsblogs202603tagsbatchupdateUpdateBatch` operationId).
+func (c *Client) Postcmsblogs202603tagsbatchupdateUpdateBatch(ctx context.Context, params *Postcmsblogs202603tagsbatchupdateUpdateBatchParams, body Postcmsblogs202603tagsbatchupdateUpdateBatchJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmsblogs202603tagsbatchupdateUpdateBatchRequest(c.Server, params, body)
 	if err != nil {
 		return nil, err
 	}
@@ -1910,6 +2482,25 @@ func (c *Client) Postcmsblogs202603tagsmultiLanguageattachToLangGroupAttachToLan
 	return c.Client.Do(req)
 }
 
+// Postcmsblogs202603tagsmultiLanguageattachToLangGroupAttachToLangGroup Attach a Blog Tag to a multi-language group
+//
+// Attach a Blog Tag to a multi-language group.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/blogs/2026-03/tags/multi-language/attach-to-lang-group (the `Postcmsblogs202603tagsmultiLanguageattachToLangGroupAttachToLangGroup` operationId).
+func (c *Client) Postcmsblogs202603tagsmultiLanguageattachToLangGroupAttachToLangGroup(ctx context.Context, body Postcmsblogs202603tagsmultiLanguageattachToLangGroupAttachToLangGroupJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmsblogs202603tagsmultiLanguageattachToLangGroupAttachToLangGroupRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // Postcmsblogs202603tagsmultiLanguagecreateLanguageVariationCreateLangVariationWithBody Create a new language variation
 //
 // Create a new language variation from an existing Blog Tag.
@@ -1919,6 +2510,25 @@ func (c *Client) Postcmsblogs202603tagsmultiLanguageattachToLangGroupAttachToLan
 // Corresponds with POST /cms/blogs/2026-03/tags/multi-language/create-language-variation (the `Postcmsblogs202603tagsmultiLanguagecreateLanguageVariationCreateLangVariation` operationId).
 func (c *Client) Postcmsblogs202603tagsmultiLanguagecreateLanguageVariationCreateLangVariationWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcmsblogs202603tagsmultiLanguagecreateLanguageVariationCreateLangVariationRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcmsblogs202603tagsmultiLanguagecreateLanguageVariationCreateLangVariation Create a new language variation
+//
+// Create a new language variation from an existing Blog Tag.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/blogs/2026-03/tags/multi-language/create-language-variation (the `Postcmsblogs202603tagsmultiLanguagecreateLanguageVariationCreateLangVariation` operationId).
+func (c *Client) Postcmsblogs202603tagsmultiLanguagecreateLanguageVariationCreateLangVariation(ctx context.Context, body Postcmsblogs202603tagsmultiLanguagecreateLanguageVariationCreateLangVariationJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmsblogs202603tagsmultiLanguagecreateLanguageVariationCreateLangVariationRequest(c.Server, body)
 	if err != nil {
 		return nil, err
 	}
@@ -1948,6 +2558,25 @@ func (c *Client) Postcmsblogs202603tagsmultiLanguagedetachFromLangGroupDetachFro
 	return c.Client.Do(req)
 }
 
+// Postcmsblogs202603tagsmultiLanguagedetachFromLangGroupDetachFromLangGroup Detach a Blog Tag from a multi-language group
+//
+// Detach a Blog Tag from a multi-language group.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/blogs/2026-03/tags/multi-language/detach-from-lang-group (the `Postcmsblogs202603tagsmultiLanguagedetachFromLangGroupDetachFromLangGroup` operationId).
+func (c *Client) Postcmsblogs202603tagsmultiLanguagedetachFromLangGroupDetachFromLangGroup(ctx context.Context, body Postcmsblogs202603tagsmultiLanguagedetachFromLangGroupDetachFromLangGroupJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmsblogs202603tagsmultiLanguagedetachFromLangGroupDetachFromLangGroupRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // Putcmsblogs202603tagsmultiLanguagesetNewLangPrimarySetLangPrimaryWithBody Set a new primary language
 //
 // Set a Blog Tag as the primary language of a multi-language group.
@@ -1967,6 +2596,25 @@ func (c *Client) Putcmsblogs202603tagsmultiLanguagesetNewLangPrimarySetLangPrima
 	return c.Client.Do(req)
 }
 
+// Putcmsblogs202603tagsmultiLanguagesetNewLangPrimarySetLangPrimary Set a new primary language
+//
+// Set a Blog Tag as the primary language of a multi-language group.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with PUT /cms/blogs/2026-03/tags/multi-language/set-new-lang-primary (the `Putcmsblogs202603tagsmultiLanguagesetNewLangPrimarySetLangPrimary` operationId).
+func (c *Client) Putcmsblogs202603tagsmultiLanguagesetNewLangPrimarySetLangPrimary(ctx context.Context, body Putcmsblogs202603tagsmultiLanguagesetNewLangPrimarySetLangPrimaryJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPutcmsblogs202603tagsmultiLanguagesetNewLangPrimarySetLangPrimaryRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // Postcmsblogs202603tagsmultiLanguageupdateLanguagesUpdateLangsWithBody Update languages of multi-language group
 //
 // Explicitly set new languages for each Blog Tag in a multi-language group.
@@ -1976,6 +2624,25 @@ func (c *Client) Putcmsblogs202603tagsmultiLanguagesetNewLangPrimarySetLangPrima
 // Corresponds with POST /cms/blogs/2026-03/tags/multi-language/update-languages (the `Postcmsblogs202603tagsmultiLanguageupdateLanguagesUpdateLangs` operationId).
 func (c *Client) Postcmsblogs202603tagsmultiLanguageupdateLanguagesUpdateLangsWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcmsblogs202603tagsmultiLanguageupdateLanguagesUpdateLangsRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcmsblogs202603tagsmultiLanguageupdateLanguagesUpdateLangs Update languages of multi-language group
+//
+// Explicitly set new languages for each Blog Tag in a multi-language group.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/blogs/2026-03/tags/multi-language/update-languages (the `Postcmsblogs202603tagsmultiLanguageupdateLanguagesUpdateLangs` operationId).
+func (c *Client) Postcmsblogs202603tagsmultiLanguageupdateLanguagesUpdateLangs(ctx context.Context, body Postcmsblogs202603tagsmultiLanguageupdateLanguagesUpdateLangsJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmsblogs202603tagsmultiLanguageupdateLanguagesUpdateLangsRequest(c.Server, body)
 	if err != nil {
 		return nil, err
 	}
@@ -2030,6 +2697,26 @@ func (c *Client) Getcmsblogs202603tagsObjectIdGetById(ctx context.Context, objec
 // Corresponds with PATCH /cms/blogs/2026-03/tags/{objectId} (the `Patchcmsblogs202603tagsObjectIdUpdate` operationId).
 func (c *Client) Patchcmsblogs202603tagsObjectIdUpdateWithBody(ctx context.Context, objectId string, params *Patchcmsblogs202603tagsObjectIdUpdateParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPatchcmsblogs202603tagsObjectIdUpdateRequestWithBody(c.Server, objectId, params, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Patchcmsblogs202603tagsObjectIdUpdate Update a Blog Tag
+//
+// Sparse updates a single Blog Tag object identified by the id in the path.
+// All the column values need not be specified. Only the that need to be modified can be specified.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with PATCH /cms/blogs/2026-03/tags/{objectId} (the `Patchcmsblogs202603tagsObjectIdUpdate` operationId).
+func (c *Client) Patchcmsblogs202603tagsObjectIdUpdate(ctx context.Context, objectId string, params *Patchcmsblogs202603tagsObjectIdUpdateParams, body Patchcmsblogs202603tagsObjectIdUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPatchcmsblogs202603tagsObjectIdUpdateRequest(c.Server, objectId, params, body)
 	if err != nil {
 		return nil, err
 	}
@@ -2927,6 +3614,25 @@ func (c *Client) Postcmspages202603landingPagesCreateWithBody(ctx context.Contex
 	return c.Client.Do(req)
 }
 
+// Postcmspages202603landingPagesCreate Create a landing page
+//
+// Create a new landing page.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/pages/2026-03/landing-pages (the `Postcmspages202603landingPagesCreate` operationId).
+func (c *Client) Postcmspages202603landingPagesCreate(ctx context.Context, body Postcmspages202603landingPagesCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmspages202603landingPagesCreateRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // Postcmspages202603landingPagesabTestcreateVariationCreateABTestVariationWithBody Create a new A/B test variation
 //
 // Create a new A/B test variation based on the information provided in the request body.
@@ -2936,6 +3642,25 @@ func (c *Client) Postcmspages202603landingPagesCreateWithBody(ctx context.Contex
 // Corresponds with POST /cms/pages/2026-03/landing-pages/ab-test/create-variation (the `Postcmspages202603landingPagesabTestcreateVariationCreateABTestVariation` operationId).
 func (c *Client) Postcmspages202603landingPagesabTestcreateVariationCreateABTestVariationWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcmspages202603landingPagesabTestcreateVariationCreateABTestVariationRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcmspages202603landingPagesabTestcreateVariationCreateABTestVariation Create a new A/B test variation
+//
+// Create a new A/B test variation based on the information provided in the request body.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/pages/2026-03/landing-pages/ab-test/create-variation (the `Postcmspages202603landingPagesabTestcreateVariationCreateABTestVariation` operationId).
+func (c *Client) Postcmspages202603landingPagesabTestcreateVariationCreateABTestVariation(ctx context.Context, body Postcmspages202603landingPagesabTestcreateVariationCreateABTestVariationJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmspages202603landingPagesabTestcreateVariationCreateABTestVariationRequest(c.Server, body)
 	if err != nil {
 		return nil, err
 	}
@@ -2965,6 +3690,25 @@ func (c *Client) Postcmspages202603landingPagesabTestendEndActiveABTestWithBody(
 	return c.Client.Do(req)
 }
 
+// Postcmspages202603landingPagesabTestendEndActiveABTest End an active A/B test
+//
+// End an active A/B test and designate a winner.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/pages/2026-03/landing-pages/ab-test/end (the `Postcmspages202603landingPagesabTestendEndActiveABTest` operationId).
+func (c *Client) Postcmspages202603landingPagesabTestendEndActiveABTest(ctx context.Context, body Postcmspages202603landingPagesabTestendEndActiveABTestJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmspages202603landingPagesabTestendEndActiveABTestRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // Postcmspages202603landingPagesabTestrerunRerunPreviousABTestWithBody Rerun a previous A/B test
 //
 // Rerun a previous A/B test.
@@ -2974,6 +3718,25 @@ func (c *Client) Postcmspages202603landingPagesabTestendEndActiveABTestWithBody(
 // Corresponds with POST /cms/pages/2026-03/landing-pages/ab-test/rerun (the `Postcmspages202603landingPagesabTestrerunRerunPreviousABTest` operationId).
 func (c *Client) Postcmspages202603landingPagesabTestrerunRerunPreviousABTestWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcmspages202603landingPagesabTestrerunRerunPreviousABTestRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcmspages202603landingPagesabTestrerunRerunPreviousABTest Rerun a previous A/B test
+//
+// Rerun a previous A/B test.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/pages/2026-03/landing-pages/ab-test/rerun (the `Postcmspages202603landingPagesabTestrerunRerunPreviousABTest` operationId).
+func (c *Client) Postcmspages202603landingPagesabTestrerunRerunPreviousABTest(ctx context.Context, body Postcmspages202603landingPagesabTestrerunRerunPreviousABTestJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmspages202603landingPagesabTestrerunRerunPreviousABTestRequest(c.Server, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3003,6 +3766,25 @@ func (c *Client) Postcmspages202603landingPagesbatcharchiveArchiveBatchWithBody(
 	return c.Client.Do(req)
 }
 
+// Postcmspages202603landingPagesbatcharchiveArchiveBatch Delete landing pages
+//
+// Delete landing pages specified by ID in the request body. Note: this is not the same as the dashboard `archive` function. To perform a dashboard `archive` send an normal update with the `archivedInDashboard` field set to `true`.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/pages/2026-03/landing-pages/batch/archive (the `Postcmspages202603landingPagesbatcharchiveArchiveBatch` operationId).
+func (c *Client) Postcmspages202603landingPagesbatcharchiveArchiveBatch(ctx context.Context, body Postcmspages202603landingPagesbatcharchiveArchiveBatchJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmspages202603landingPagesbatcharchiveArchiveBatchRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // Postcmspages202603landingPagesbatchcreateCreateBatchWithBody Create landing pages
 //
 // Create a batch of landing pages as detailed in the request body.
@@ -3012,6 +3794,25 @@ func (c *Client) Postcmspages202603landingPagesbatcharchiveArchiveBatchWithBody(
 // Corresponds with POST /cms/pages/2026-03/landing-pages/batch/create (the `Postcmspages202603landingPagesbatchcreateCreateBatch` operationId).
 func (c *Client) Postcmspages202603landingPagesbatchcreateCreateBatchWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcmspages202603landingPagesbatchcreateCreateBatchRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcmspages202603landingPagesbatchcreateCreateBatch Create landing pages
+//
+// Create a batch of landing pages as detailed in the request body.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/pages/2026-03/landing-pages/batch/create (the `Postcmspages202603landingPagesbatchcreateCreateBatch` operationId).
+func (c *Client) Postcmspages202603landingPagesbatchcreateCreateBatch(ctx context.Context, body Postcmspages202603landingPagesbatchcreateCreateBatchJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmspages202603landingPagesbatchcreateCreateBatchRequest(c.Server, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3041,6 +3842,25 @@ func (c *Client) Postcmspages202603landingPagesbatchreadReadBatchWithBody(ctx co
 	return c.Client.Do(req)
 }
 
+// Postcmspages202603landingPagesbatchreadReadBatch Retrieve landing pages
+//
+// Retrieve a batch of landing pages as specified in the request body.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/pages/2026-03/landing-pages/batch/read (the `Postcmspages202603landingPagesbatchreadReadBatch` operationId).
+func (c *Client) Postcmspages202603landingPagesbatchreadReadBatch(ctx context.Context, params *Postcmspages202603landingPagesbatchreadReadBatchParams, body Postcmspages202603landingPagesbatchreadReadBatchJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmspages202603landingPagesbatchreadReadBatchRequest(c.Server, params, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // Postcmspages202603landingPagesbatchupdateUpdateBatchWithBody Update landing pages
 //
 // Update a batch of landing pages as specified in the request body.
@@ -3060,6 +3880,25 @@ func (c *Client) Postcmspages202603landingPagesbatchupdateUpdateBatchWithBody(ct
 	return c.Client.Do(req)
 }
 
+// Postcmspages202603landingPagesbatchupdateUpdateBatch Update landing pages
+//
+// Update a batch of landing pages as specified in the request body.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/pages/2026-03/landing-pages/batch/update (the `Postcmspages202603landingPagesbatchupdateUpdateBatch` operationId).
+func (c *Client) Postcmspages202603landingPagesbatchupdateUpdateBatch(ctx context.Context, params *Postcmspages202603landingPagesbatchupdateUpdateBatchParams, body Postcmspages202603landingPagesbatchupdateUpdateBatchJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmspages202603landingPagesbatchupdateUpdateBatchRequest(c.Server, params, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // Postcmspages202603landingPagescloneCloneWithBody Clone a landing page
 //
 // Create a copy of an existing landing page.
@@ -3069,6 +3908,25 @@ func (c *Client) Postcmspages202603landingPagesbatchupdateUpdateBatchWithBody(ct
 // Corresponds with POST /cms/pages/2026-03/landing-pages/clone (the `Postcmspages202603landingPagescloneClone` operationId).
 func (c *Client) Postcmspages202603landingPagescloneCloneWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcmspages202603landingPagescloneCloneRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcmspages202603landingPagescloneClone Clone a landing page
+//
+// Create a copy of an existing landing page.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/pages/2026-03/landing-pages/clone (the `Postcmspages202603landingPagescloneClone` operationId).
+func (c *Client) Postcmspages202603landingPagescloneClone(ctx context.Context, body Postcmspages202603landingPagescloneCloneJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmspages202603landingPagescloneCloneRequest(c.Server, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3115,6 +3973,25 @@ func (c *Client) Postcmspages202603landingPagesfoldersCreateFolderWithBody(ctx c
 	return c.Client.Do(req)
 }
 
+// Postcmspages202603landingPagesfoldersCreateFolder Create a landing page folder
+//
+// Create a new folder for landing pages.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/pages/2026-03/landing-pages/folders (the `Postcmspages202603landingPagesfoldersCreateFolder` operationId).
+func (c *Client) Postcmspages202603landingPagesfoldersCreateFolder(ctx context.Context, body Postcmspages202603landingPagesfoldersCreateFolderJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmspages202603landingPagesfoldersCreateFolderRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // Postcmspages202603landingPagesfoldersbatcharchiveArchiveFoldersWithBody Delete folders
 //
 // Delete a batch of folders as specified in the request body.
@@ -3124,6 +4001,25 @@ func (c *Client) Postcmspages202603landingPagesfoldersCreateFolderWithBody(ctx c
 // Corresponds with POST /cms/pages/2026-03/landing-pages/folders/batch/archive (the `Postcmspages202603landingPagesfoldersbatcharchiveArchiveFolders` operationId).
 func (c *Client) Postcmspages202603landingPagesfoldersbatcharchiveArchiveFoldersWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcmspages202603landingPagesfoldersbatcharchiveArchiveFoldersRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcmspages202603landingPagesfoldersbatcharchiveArchiveFolders Delete folders
+//
+// Delete a batch of folders as specified in the request body.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/pages/2026-03/landing-pages/folders/batch/archive (the `Postcmspages202603landingPagesfoldersbatcharchiveArchiveFolders` operationId).
+func (c *Client) Postcmspages202603landingPagesfoldersbatcharchiveArchiveFolders(ctx context.Context, body Postcmspages202603landingPagesfoldersbatcharchiveArchiveFoldersJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmspages202603landingPagesfoldersbatcharchiveArchiveFoldersRequest(c.Server, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3153,6 +4049,25 @@ func (c *Client) Postcmspages202603landingPagesfoldersbatchcreateCreateFoldersWi
 	return c.Client.Do(req)
 }
 
+// Postcmspages202603landingPagesfoldersbatchcreateCreateFolders Create folders
+//
+// Create a batch of folders as detailed in the request body.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/pages/2026-03/landing-pages/folders/batch/create (the `Postcmspages202603landingPagesfoldersbatchcreateCreateFolders` operationId).
+func (c *Client) Postcmspages202603landingPagesfoldersbatchcreateCreateFolders(ctx context.Context, body Postcmspages202603landingPagesfoldersbatchcreateCreateFoldersJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmspages202603landingPagesfoldersbatchcreateCreateFoldersRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // Postcmspages202603landingPagesfoldersbatchreadReadFoldersWithBody Retrieve folders
 //
 // Retrieve a batch of landing page folders as identified in the request body.
@@ -3172,6 +4087,25 @@ func (c *Client) Postcmspages202603landingPagesfoldersbatchreadReadFoldersWithBo
 	return c.Client.Do(req)
 }
 
+// Postcmspages202603landingPagesfoldersbatchreadReadFolders Retrieve folders
+//
+// Retrieve a batch of landing page folders as identified in the request body.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/pages/2026-03/landing-pages/folders/batch/read (the `Postcmspages202603landingPagesfoldersbatchreadReadFolders` operationId).
+func (c *Client) Postcmspages202603landingPagesfoldersbatchreadReadFolders(ctx context.Context, params *Postcmspages202603landingPagesfoldersbatchreadReadFoldersParams, body Postcmspages202603landingPagesfoldersbatchreadReadFoldersJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmspages202603landingPagesfoldersbatchreadReadFoldersRequest(c.Server, params, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // Postcmspages202603landingPagesfoldersbatchupdateUpdateFoldersWithBody Update folders
 //
 // Update a batch of landing page folders as specified in the request body.
@@ -3181,6 +4115,25 @@ func (c *Client) Postcmspages202603landingPagesfoldersbatchreadReadFoldersWithBo
 // Corresponds with POST /cms/pages/2026-03/landing-pages/folders/batch/update (the `Postcmspages202603landingPagesfoldersbatchupdateUpdateFolders` operationId).
 func (c *Client) Postcmspages202603landingPagesfoldersbatchupdateUpdateFoldersWithBody(ctx context.Context, params *Postcmspages202603landingPagesfoldersbatchupdateUpdateFoldersParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcmspages202603landingPagesfoldersbatchupdateUpdateFoldersRequestWithBody(c.Server, params, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcmspages202603landingPagesfoldersbatchupdateUpdateFolders Update folders
+//
+// Update a batch of landing page folders as specified in the request body.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/pages/2026-03/landing-pages/folders/batch/update (the `Postcmspages202603landingPagesfoldersbatchupdateUpdateFolders` operationId).
+func (c *Client) Postcmspages202603landingPagesfoldersbatchupdateUpdateFolders(ctx context.Context, params *Postcmspages202603landingPagesfoldersbatchupdateUpdateFoldersParams, body Postcmspages202603landingPagesfoldersbatchupdateUpdateFoldersJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmspages202603landingPagesfoldersbatchupdateUpdateFoldersRequest(c.Server, params, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3234,6 +4187,25 @@ func (c *Client) Getcmspages202603landingPagesfoldersObjectIdGetFolderById(ctx c
 // Corresponds with PATCH /cms/pages/2026-03/landing-pages/folders/{objectId} (the `Patchcmspages202603landingPagesfoldersObjectIdUpdateFolder` operationId).
 func (c *Client) Patchcmspages202603landingPagesfoldersObjectIdUpdateFolderWithBody(ctx context.Context, objectId string, params *Patchcmspages202603landingPagesfoldersObjectIdUpdateFolderParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPatchcmspages202603landingPagesfoldersObjectIdUpdateFolderRequestWithBody(c.Server, objectId, params, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Patchcmspages202603landingPagesfoldersObjectIdUpdateFolder Update a landing page folder
+//
+// Partially update a landing page folder, specified by the folder ID. You only need to specify the details values that you are modifying.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with PATCH /cms/pages/2026-03/landing-pages/folders/{objectId} (the `Patchcmspages202603landingPagesfoldersObjectIdUpdateFolder` operationId).
+func (c *Client) Patchcmspages202603landingPagesfoldersObjectIdUpdateFolder(ctx context.Context, objectId string, params *Patchcmspages202603landingPagesfoldersObjectIdUpdateFolderParams, body Patchcmspages202603landingPagesfoldersObjectIdUpdateFolderJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPatchcmspages202603landingPagesfoldersObjectIdUpdateFolderRequest(c.Server, objectId, params, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3314,6 +4286,25 @@ func (c *Client) Postcmspages202603landingPagesmultiLanguageattachToLangGroupAtt
 	return c.Client.Do(req)
 }
 
+// Postcmspages202603landingPagesmultiLanguageattachToLangGroupAttachToLangGroup Add a landing page to a multi-language group
+//
+// Attach a landing page to a multi-language group.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/pages/2026-03/landing-pages/multi-language/attach-to-lang-group (the `Postcmspages202603landingPagesmultiLanguageattachToLangGroupAttachToLangGroup` operationId).
+func (c *Client) Postcmspages202603landingPagesmultiLanguageattachToLangGroupAttachToLangGroup(ctx context.Context, body Postcmspages202603landingPagesmultiLanguageattachToLangGroupAttachToLangGroupJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmspages202603landingPagesmultiLanguageattachToLangGroupAttachToLangGroupRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // Postcmspages202603landingPagesmultiLanguagecreateLanguageVariationCreateLangVariationWithBody Create a new language variation
 //
 // Create a new language variation from an existing landing page. The variation will be a copy of the draft state of the source page. To preview the content, you can [retrieve the draft of the source landing page](/api-reference/latest/cms/pages/landing-pages/drafts/get-landing-page-draft).
@@ -3323,6 +4314,25 @@ func (c *Client) Postcmspages202603landingPagesmultiLanguageattachToLangGroupAtt
 // Corresponds with POST /cms/pages/2026-03/landing-pages/multi-language/create-language-variation (the `Postcmspages202603landingPagesmultiLanguagecreateLanguageVariationCreateLangVariation` operationId).
 func (c *Client) Postcmspages202603landingPagesmultiLanguagecreateLanguageVariationCreateLangVariationWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcmspages202603landingPagesmultiLanguagecreateLanguageVariationCreateLangVariationRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcmspages202603landingPagesmultiLanguagecreateLanguageVariationCreateLangVariation Create a new language variation
+//
+// Create a new language variation from an existing landing page. The variation will be a copy of the draft state of the source page. To preview the content, you can [retrieve the draft of the source landing page](/api-reference/latest/cms/pages/landing-pages/drafts/get-landing-page-draft).
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/pages/2026-03/landing-pages/multi-language/create-language-variation (the `Postcmspages202603landingPagesmultiLanguagecreateLanguageVariationCreateLangVariation` operationId).
+func (c *Client) Postcmspages202603landingPagesmultiLanguagecreateLanguageVariationCreateLangVariation(ctx context.Context, body Postcmspages202603landingPagesmultiLanguagecreateLanguageVariationCreateLangVariationJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmspages202603landingPagesmultiLanguagecreateLanguageVariationCreateLangVariationRequest(c.Server, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3352,6 +4362,25 @@ func (c *Client) Postcmspages202603landingPagesmultiLanguagedetachFromLangGroupD
 	return c.Client.Do(req)
 }
 
+// Postcmspages202603landingPagesmultiLanguagedetachFromLangGroupDetachFromLangGroup Remove a landing page from a multi-language group
+//
+// Detach a landing page from a multi-language group.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/pages/2026-03/landing-pages/multi-language/detach-from-lang-group (the `Postcmspages202603landingPagesmultiLanguagedetachFromLangGroupDetachFromLangGroup` operationId).
+func (c *Client) Postcmspages202603landingPagesmultiLanguagedetachFromLangGroupDetachFromLangGroup(ctx context.Context, body Postcmspages202603landingPagesmultiLanguagedetachFromLangGroupDetachFromLangGroupJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmspages202603landingPagesmultiLanguagedetachFromLangGroupDetachFromLangGroupRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // Putcmspages202603landingPagesmultiLanguagesetNewLangPrimarySetLangPrimaryWithBody Set a new primary language
 //
 // Set a landing page as the primary language of a multi-language group.
@@ -3361,6 +4390,25 @@ func (c *Client) Postcmspages202603landingPagesmultiLanguagedetachFromLangGroupD
 // Corresponds with PUT /cms/pages/2026-03/landing-pages/multi-language/set-new-lang-primary (the `Putcmspages202603landingPagesmultiLanguagesetNewLangPrimarySetLangPrimary` operationId).
 func (c *Client) Putcmspages202603landingPagesmultiLanguagesetNewLangPrimarySetLangPrimaryWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPutcmspages202603landingPagesmultiLanguagesetNewLangPrimarySetLangPrimaryRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Putcmspages202603landingPagesmultiLanguagesetNewLangPrimarySetLangPrimary Set a new primary language
+//
+// Set a landing page as the primary language of a multi-language group.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with PUT /cms/pages/2026-03/landing-pages/multi-language/set-new-lang-primary (the `Putcmspages202603landingPagesmultiLanguagesetNewLangPrimarySetLangPrimary` operationId).
+func (c *Client) Putcmspages202603landingPagesmultiLanguagesetNewLangPrimarySetLangPrimary(ctx context.Context, body Putcmspages202603landingPagesmultiLanguagesetNewLangPrimarySetLangPrimaryJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPutcmspages202603landingPagesmultiLanguagesetNewLangPrimarySetLangPrimaryRequest(c.Server, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3390,6 +4438,25 @@ func (c *Client) Postcmspages202603landingPagesmultiLanguageupdateLanguagesUpdat
 	return c.Client.Do(req)
 }
 
+// Postcmspages202603landingPagesmultiLanguageupdateLanguagesUpdateLangs Update languages of multi-language group
+//
+// Explicitly set new languages for each landing page in a multi-language group.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/pages/2026-03/landing-pages/multi-language/update-languages (the `Postcmspages202603landingPagesmultiLanguageupdateLanguagesUpdateLangs` operationId).
+func (c *Client) Postcmspages202603landingPagesmultiLanguageupdateLanguagesUpdateLangs(ctx context.Context, body Postcmspages202603landingPagesmultiLanguageupdateLanguagesUpdateLangsJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmspages202603landingPagesmultiLanguageupdateLanguagesUpdateLangsRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // Postcmspages202603landingPagesscheduleScheduleWithBody Schedule landing page publishing
 //
 // Schedule a landing page to be published.
@@ -3399,6 +4466,25 @@ func (c *Client) Postcmspages202603landingPagesmultiLanguageupdateLanguagesUpdat
 // Corresponds with POST /cms/pages/2026-03/landing-pages/schedule (the `Postcmspages202603landingPagesscheduleSchedule` operationId).
 func (c *Client) Postcmspages202603landingPagesscheduleScheduleWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcmspages202603landingPagesscheduleScheduleRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcmspages202603landingPagesscheduleSchedule Schedule landing page publishing
+//
+// Schedule a landing page to be published.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/pages/2026-03/landing-pages/schedule (the `Postcmspages202603landingPagesscheduleSchedule` operationId).
+func (c *Client) Postcmspages202603landingPagesscheduleSchedule(ctx context.Context, body Postcmspages202603landingPagesscheduleScheduleJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmspages202603landingPagesscheduleScheduleRequest(c.Server, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3463,6 +4549,26 @@ func (c *Client) Patchcmspages202603landingPagesObjectIdUpdateWithBody(ctx conte
 	return c.Client.Do(req)
 }
 
+// Patchcmspages202603landingPagesObjectIdUpdate Update a landing page
+//
+// Sparse updates a single Landing Page object identified by the id in the path.
+// You only need to specify the column values that you are modifying.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with PATCH /cms/pages/2026-03/landing-pages/{objectId} (the `Patchcmspages202603landingPagesObjectIdUpdate` operationId).
+func (c *Client) Patchcmspages202603landingPagesObjectIdUpdate(ctx context.Context, objectId string, params *Patchcmspages202603landingPagesObjectIdUpdateParams, body Patchcmspages202603landingPagesObjectIdUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPatchcmspages202603landingPagesObjectIdUpdateRequest(c.Server, objectId, params, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // Getcmspages202603landingPagesObjectIddraftGetDraftById Retrieve a landing page draft
 //
 // Retrieve the full draft version of a landing page, specified by page ID.
@@ -3489,6 +4595,25 @@ func (c *Client) Getcmspages202603landingPagesObjectIddraftGetDraftById(ctx cont
 // Corresponds with PATCH /cms/pages/2026-03/landing-pages/{objectId}/draft (the `Patchcmspages202603landingPagesObjectIddraftUpdateDraft` operationId).
 func (c *Client) Patchcmspages202603landingPagesObjectIddraftUpdateDraftWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPatchcmspages202603landingPagesObjectIddraftUpdateDraftRequestWithBody(c.Server, objectId, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Patchcmspages202603landingPagesObjectIddraftUpdateDraft Update the draft of a landing page
+//
+// Partially updates the draft version of a single landing page, specified by its ID. You only need to specify the column values that you are modifying.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with PATCH /cms/pages/2026-03/landing-pages/{objectId}/draft (the `Patchcmspages202603landingPagesObjectIddraftUpdateDraft` operationId).
+func (c *Client) Patchcmspages202603landingPagesObjectIddraftUpdateDraft(ctx context.Context, objectId string, body Patchcmspages202603landingPagesObjectIddraftUpdateDraftJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPatchcmspages202603landingPagesObjectIddraftUpdateDraftRequest(c.Server, objectId, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3637,6 +4762,25 @@ func (c *Client) Postcmspages202603sitePagesCreateWithBody(ctx context.Context, 
 	return c.Client.Do(req)
 }
 
+// Postcmspages202603sitePagesCreate Create a website page
+//
+// Create a new website page.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/pages/2026-03/site-pages (the `Postcmspages202603sitePagesCreate` operationId).
+func (c *Client) Postcmspages202603sitePagesCreate(ctx context.Context, body Postcmspages202603sitePagesCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmspages202603sitePagesCreateRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // Postcmspages202603sitePagesabTestcreateVariationCreateABTestVariationWithBody Create a new A/B test variation
 //
 // Create a new A/B test variation based on the information provided in the request body.
@@ -3646,6 +4790,25 @@ func (c *Client) Postcmspages202603sitePagesCreateWithBody(ctx context.Context, 
 // Corresponds with POST /cms/pages/2026-03/site-pages/ab-test/create-variation (the `Postcmspages202603sitePagesabTestcreateVariationCreateABTestVariation` operationId).
 func (c *Client) Postcmspages202603sitePagesabTestcreateVariationCreateABTestVariationWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcmspages202603sitePagesabTestcreateVariationCreateABTestVariationRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcmspages202603sitePagesabTestcreateVariationCreateABTestVariation Create a new A/B test variation
+//
+// Create a new A/B test variation based on the information provided in the request body.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/pages/2026-03/site-pages/ab-test/create-variation (the `Postcmspages202603sitePagesabTestcreateVariationCreateABTestVariation` operationId).
+func (c *Client) Postcmspages202603sitePagesabTestcreateVariationCreateABTestVariation(ctx context.Context, body Postcmspages202603sitePagesabTestcreateVariationCreateABTestVariationJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmspages202603sitePagesabTestcreateVariationCreateABTestVariationRequest(c.Server, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3675,6 +4838,25 @@ func (c *Client) Postcmspages202603sitePagesabTestendEndActiveABTestWithBody(ctx
 	return c.Client.Do(req)
 }
 
+// Postcmspages202603sitePagesabTestendEndActiveABTest End an active A/B test
+//
+// End an active A/B test and designate a winner.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/pages/2026-03/site-pages/ab-test/end (the `Postcmspages202603sitePagesabTestendEndActiveABTest` operationId).
+func (c *Client) Postcmspages202603sitePagesabTestendEndActiveABTest(ctx context.Context, body Postcmspages202603sitePagesabTestendEndActiveABTestJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmspages202603sitePagesabTestendEndActiveABTestRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // Postcmspages202603sitePagesabTestrerunRerunPreviousABTestWithBody Rerun a previous A/B test
 //
 // Rerun a previous A/B test.
@@ -3684,6 +4866,25 @@ func (c *Client) Postcmspages202603sitePagesabTestendEndActiveABTestWithBody(ctx
 // Corresponds with POST /cms/pages/2026-03/site-pages/ab-test/rerun (the `Postcmspages202603sitePagesabTestrerunRerunPreviousABTest` operationId).
 func (c *Client) Postcmspages202603sitePagesabTestrerunRerunPreviousABTestWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcmspages202603sitePagesabTestrerunRerunPreviousABTestRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcmspages202603sitePagesabTestrerunRerunPreviousABTest Rerun a previous A/B test
+//
+// Rerun a previous A/B test.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/pages/2026-03/site-pages/ab-test/rerun (the `Postcmspages202603sitePagesabTestrerunRerunPreviousABTest` operationId).
+func (c *Client) Postcmspages202603sitePagesabTestrerunRerunPreviousABTest(ctx context.Context, body Postcmspages202603sitePagesabTestrerunRerunPreviousABTestJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmspages202603sitePagesabTestrerunRerunPreviousABTestRequest(c.Server, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3713,6 +4914,25 @@ func (c *Client) Postcmspages202603sitePagesbatcharchiveArchiveBatchWithBody(ctx
 	return c.Client.Do(req)
 }
 
+// Postcmspages202603sitePagesbatcharchiveArchiveBatch Delete website pages
+//
+// Delete a batch of website pages as specified in the request body. Note that this is not the same as the dashboard `archive` function. To perform a dashboard `archive` send an normal update with the `archivedInDashboard` field set to `true`.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/pages/2026-03/site-pages/batch/archive (the `Postcmspages202603sitePagesbatcharchiveArchiveBatch` operationId).
+func (c *Client) Postcmspages202603sitePagesbatcharchiveArchiveBatch(ctx context.Context, body Postcmspages202603sitePagesbatcharchiveArchiveBatchJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmspages202603sitePagesbatcharchiveArchiveBatchRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // Postcmspages202603sitePagesbatchcreateCreateBatchWithBody Create website pages
 //
 // Create a batch of website pages as specified in the request body.
@@ -3722,6 +4942,25 @@ func (c *Client) Postcmspages202603sitePagesbatcharchiveArchiveBatchWithBody(ctx
 // Corresponds with POST /cms/pages/2026-03/site-pages/batch/create (the `Postcmspages202603sitePagesbatchcreateCreateBatch` operationId).
 func (c *Client) Postcmspages202603sitePagesbatchcreateCreateBatchWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcmspages202603sitePagesbatchcreateCreateBatchRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcmspages202603sitePagesbatchcreateCreateBatch Create website pages
+//
+// Create a batch of website pages as specified in the request body.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/pages/2026-03/site-pages/batch/create (the `Postcmspages202603sitePagesbatchcreateCreateBatch` operationId).
+func (c *Client) Postcmspages202603sitePagesbatchcreateCreateBatch(ctx context.Context, body Postcmspages202603sitePagesbatchcreateCreateBatchJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmspages202603sitePagesbatchcreateCreateBatchRequest(c.Server, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3751,6 +4990,25 @@ func (c *Client) Postcmspages202603sitePagesbatchreadReadBatchWithBody(ctx conte
 	return c.Client.Do(req)
 }
 
+// Postcmspages202603sitePagesbatchreadReadBatch Retrieve website pages
+//
+// Retrieve a batch of website pages as specified in the request body.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/pages/2026-03/site-pages/batch/read (the `Postcmspages202603sitePagesbatchreadReadBatch` operationId).
+func (c *Client) Postcmspages202603sitePagesbatchreadReadBatch(ctx context.Context, params *Postcmspages202603sitePagesbatchreadReadBatchParams, body Postcmspages202603sitePagesbatchreadReadBatchJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmspages202603sitePagesbatchreadReadBatchRequest(c.Server, params, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // Postcmspages202603sitePagesbatchupdateUpdateBatchWithBody Update website pages
 //
 // Update a batch of website pages as specified in the request body.
@@ -3760,6 +5018,25 @@ func (c *Client) Postcmspages202603sitePagesbatchreadReadBatchWithBody(ctx conte
 // Corresponds with POST /cms/pages/2026-03/site-pages/batch/update (the `Postcmspages202603sitePagesbatchupdateUpdateBatch` operationId).
 func (c *Client) Postcmspages202603sitePagesbatchupdateUpdateBatchWithBody(ctx context.Context, params *Postcmspages202603sitePagesbatchupdateUpdateBatchParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcmspages202603sitePagesbatchupdateUpdateBatchRequestWithBody(c.Server, params, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcmspages202603sitePagesbatchupdateUpdateBatch Update website pages
+//
+// Update a batch of website pages as specified in the request body.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/pages/2026-03/site-pages/batch/update (the `Postcmspages202603sitePagesbatchupdateUpdateBatch` operationId).
+func (c *Client) Postcmspages202603sitePagesbatchupdateUpdateBatch(ctx context.Context, params *Postcmspages202603sitePagesbatchupdateUpdateBatchParams, body Postcmspages202603sitePagesbatchupdateUpdateBatchJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmspages202603sitePagesbatchupdateUpdateBatchRequest(c.Server, params, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3789,6 +5066,25 @@ func (c *Client) Postcmspages202603sitePagescloneCloneWithBody(ctx context.Conte
 	return c.Client.Do(req)
 }
 
+// Postcmspages202603sitePagescloneClone Clone a website page
+//
+// Create a copy of an existing website page.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/pages/2026-03/site-pages/clone (the `Postcmspages202603sitePagescloneClone` operationId).
+func (c *Client) Postcmspages202603sitePagescloneClone(ctx context.Context, body Postcmspages202603sitePagescloneCloneJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmspages202603sitePagescloneCloneRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // Postcmspages202603sitePagesmultiLanguageattachToLangGroupAttachToLangGroupWithBody Add a website page to a multi-language group
 //
 // Attach a site page to a multi-language group.
@@ -3798,6 +5094,25 @@ func (c *Client) Postcmspages202603sitePagescloneCloneWithBody(ctx context.Conte
 // Corresponds with POST /cms/pages/2026-03/site-pages/multi-language/attach-to-lang-group (the `Postcmspages202603sitePagesmultiLanguageattachToLangGroupAttachToLangGroup` operationId).
 func (c *Client) Postcmspages202603sitePagesmultiLanguageattachToLangGroupAttachToLangGroupWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcmspages202603sitePagesmultiLanguageattachToLangGroupAttachToLangGroupRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcmspages202603sitePagesmultiLanguageattachToLangGroupAttachToLangGroup Add a website page to a multi-language group
+//
+// Attach a site page to a multi-language group.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/pages/2026-03/site-pages/multi-language/attach-to-lang-group (the `Postcmspages202603sitePagesmultiLanguageattachToLangGroupAttachToLangGroup` operationId).
+func (c *Client) Postcmspages202603sitePagesmultiLanguageattachToLangGroupAttachToLangGroup(ctx context.Context, body Postcmspages202603sitePagesmultiLanguageattachToLangGroupAttachToLangGroupJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmspages202603sitePagesmultiLanguageattachToLangGroupAttachToLangGroupRequest(c.Server, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3827,6 +5142,25 @@ func (c *Client) Postcmspages202603sitePagesmultiLanguagecreateLanguageVariation
 	return c.Client.Do(req)
 }
 
+// Postcmspages202603sitePagesmultiLanguagecreateLanguageVariationCreateLangVariation Create a new language variation
+//
+// Create a new language variation from an existing website page. The variation will be a copy of the draft state of the source page. To preview the content, you can [retrieve the draft of the source website page](/api-reference/latest/cms/pages/website-pages/drafts/get-website-page-draft).
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/pages/2026-03/site-pages/multi-language/create-language-variation (the `Postcmspages202603sitePagesmultiLanguagecreateLanguageVariationCreateLangVariation` operationId).
+func (c *Client) Postcmspages202603sitePagesmultiLanguagecreateLanguageVariationCreateLangVariation(ctx context.Context, body Postcmspages202603sitePagesmultiLanguagecreateLanguageVariationCreateLangVariationJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmspages202603sitePagesmultiLanguagecreateLanguageVariationCreateLangVariationRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // Postcmspages202603sitePagesmultiLanguagedetachFromLangGroupDetachFromLangGroupWithBody Remove a website page from a multi-language group
 //
 // Detach a website page from a multi-language group.
@@ -3836,6 +5170,25 @@ func (c *Client) Postcmspages202603sitePagesmultiLanguagecreateLanguageVariation
 // Corresponds with POST /cms/pages/2026-03/site-pages/multi-language/detach-from-lang-group (the `Postcmspages202603sitePagesmultiLanguagedetachFromLangGroupDetachFromLangGroup` operationId).
 func (c *Client) Postcmspages202603sitePagesmultiLanguagedetachFromLangGroupDetachFromLangGroupWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcmspages202603sitePagesmultiLanguagedetachFromLangGroupDetachFromLangGroupRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcmspages202603sitePagesmultiLanguagedetachFromLangGroupDetachFromLangGroup Remove a website page from a multi-language group
+//
+// Detach a website page from a multi-language group.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/pages/2026-03/site-pages/multi-language/detach-from-lang-group (the `Postcmspages202603sitePagesmultiLanguagedetachFromLangGroupDetachFromLangGroup` operationId).
+func (c *Client) Postcmspages202603sitePagesmultiLanguagedetachFromLangGroupDetachFromLangGroup(ctx context.Context, body Postcmspages202603sitePagesmultiLanguagedetachFromLangGroupDetachFromLangGroupJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmspages202603sitePagesmultiLanguagedetachFromLangGroupDetachFromLangGroupRequest(c.Server, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3865,6 +5218,25 @@ func (c *Client) Putcmspages202603sitePagesmultiLanguagesetNewLangPrimarySetLang
 	return c.Client.Do(req)
 }
 
+// Putcmspages202603sitePagesmultiLanguagesetNewLangPrimarySetLangPrimary Set a new primary language
+//
+// Set a site page as the primary language of a multi-language group.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with PUT /cms/pages/2026-03/site-pages/multi-language/set-new-lang-primary (the `Putcmspages202603sitePagesmultiLanguagesetNewLangPrimarySetLangPrimary` operationId).
+func (c *Client) Putcmspages202603sitePagesmultiLanguagesetNewLangPrimarySetLangPrimary(ctx context.Context, body Putcmspages202603sitePagesmultiLanguagesetNewLangPrimarySetLangPrimaryJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPutcmspages202603sitePagesmultiLanguagesetNewLangPrimarySetLangPrimaryRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // Postcmspages202603sitePagesmultiLanguageupdateLanguagesUpdateLangsWithBody Update languages of multi-language group
 //
 // Explicitly set new languages for each site page in a multi-language group.
@@ -3884,6 +5256,25 @@ func (c *Client) Postcmspages202603sitePagesmultiLanguageupdateLanguagesUpdateLa
 	return c.Client.Do(req)
 }
 
+// Postcmspages202603sitePagesmultiLanguageupdateLanguagesUpdateLangs Update languages of multi-language group
+//
+// Explicitly set new languages for each site page in a multi-language group.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/pages/2026-03/site-pages/multi-language/update-languages (the `Postcmspages202603sitePagesmultiLanguageupdateLanguagesUpdateLangs` operationId).
+func (c *Client) Postcmspages202603sitePagesmultiLanguageupdateLanguagesUpdateLangs(ctx context.Context, body Postcmspages202603sitePagesmultiLanguageupdateLanguagesUpdateLangsJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmspages202603sitePagesmultiLanguageupdateLanguagesUpdateLangsRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // Postcmspages202603sitePagesscheduleScheduleWithBody Schedule a website page to be published
 //
 // Schedule a website page to published at a future time.
@@ -3893,6 +5284,25 @@ func (c *Client) Postcmspages202603sitePagesmultiLanguageupdateLanguagesUpdateLa
 // Corresponds with POST /cms/pages/2026-03/site-pages/schedule (the `Postcmspages202603sitePagesscheduleSchedule` operationId).
 func (c *Client) Postcmspages202603sitePagesscheduleScheduleWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcmspages202603sitePagesscheduleScheduleRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Postcmspages202603sitePagesscheduleSchedule Schedule a website page to be published
+//
+// Schedule a website page to published at a future time.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /cms/pages/2026-03/site-pages/schedule (the `Postcmspages202603sitePagesscheduleSchedule` operationId).
+func (c *Client) Postcmspages202603sitePagesscheduleSchedule(ctx context.Context, body Postcmspages202603sitePagesscheduleScheduleJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcmspages202603sitePagesscheduleScheduleRequest(c.Server, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3956,6 +5366,25 @@ func (c *Client) Patchcmspages202603sitePagesObjectIdUpdateWithBody(ctx context.
 	return c.Client.Do(req)
 }
 
+// Patchcmspages202603sitePagesObjectIdUpdate Update a website page
+//
+// Partially updates a single website page, specified by its ID. You only need to specify the column values that you are modifying.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with PATCH /cms/pages/2026-03/site-pages/{objectId} (the `Patchcmspages202603sitePagesObjectIdUpdate` operationId).
+func (c *Client) Patchcmspages202603sitePagesObjectIdUpdate(ctx context.Context, objectId string, params *Patchcmspages202603sitePagesObjectIdUpdateParams, body Patchcmspages202603sitePagesObjectIdUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPatchcmspages202603sitePagesObjectIdUpdateRequest(c.Server, objectId, params, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // Getcmspages202603sitePagesObjectIddraftGetDraftById Retrieve a website page draft
 //
 // Retrieve the full draft version of a website page, specified by its ID.
@@ -3982,6 +5411,25 @@ func (c *Client) Getcmspages202603sitePagesObjectIddraftGetDraftById(ctx context
 // Corresponds with PATCH /cms/pages/2026-03/site-pages/{objectId}/draft (the `Patchcmspages202603sitePagesObjectIddraftUpdateDraft` operationId).
 func (c *Client) Patchcmspages202603sitePagesObjectIddraftUpdateDraftWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPatchcmspages202603sitePagesObjectIddraftUpdateDraftRequestWithBody(c.Server, objectId, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Patchcmspages202603sitePagesObjectIddraftUpdateDraft Update a website page draft
+//
+// Partially update the draft version of a website page, specified by page ID. You only need to specify the values for the details that you're modifying.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with PATCH /cms/pages/2026-03/site-pages/{objectId}/draft (the `Patchcmspages202603sitePagesObjectIddraftUpdateDraft` operationId).
+func (c *Client) Patchcmspages202603sitePagesObjectIddraftUpdateDraft(ctx context.Context, objectId string, body Patchcmspages202603sitePagesObjectIddraftUpdateDraftJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPatchcmspages202603sitePagesObjectIddraftUpdateDraftRequest(c.Server, objectId, body)
 	if err != nil {
 		return nil, err
 	}
@@ -4101,23 +5549,6 @@ func (c *Client) Postcmspages202603sitePagesObjectIdrevisionsRevisionIdrestoreTo
 // Corresponds with GET /cms/site-search/2026-03/indexed-data/{contentId} (the `GetcmssiteSearch202603indexedDataContentIdGetById` operationId).
 func (c *Client) GetcmssiteSearch202603indexedDataContentIdGetById(ctx context.Context, contentId string, params *GetcmssiteSearch202603indexedDataContentIdGetByIdParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewGetcmssiteSearch202603indexedDataContentIdGetByIdRequest(c.Server, contentId, params)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// GetcmssiteSearch202603search Search your site
-//
-// Returns any website content matching the given search criteria for a given HubSpot account. Searches can be filtered by content type, domain, or URL path. Includes options for weighing results by recency and popularity, along with language support.
-//
-// Corresponds with GET /cms/site-search/2026-03/search (the `GetcmssiteSearch202603search` operationId).
-func (c *Client) GetcmssiteSearch202603search(ctx context.Context, params *GetcmssiteSearch202603searchParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewGetcmssiteSearch202603searchRequest(c.Server, params)
 	if err != nil {
 		return nil, err
 	}
@@ -18581,1424 +20012,6 @@ func (c *Client) Postcrmobjects202603usersbatchcreate(ctx context.Context, body 
 // Corresponds with POST /crm/objects/2026-03/users/batch/read (the `Postcrmobjects202603usersbatchread` operationId).
 func (c *Client) Postcrmobjects202603usersbatchreadWithBody(ctx context.Context, params *Postcrmobjects202603usersbatchreadParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcrmobjects202603usersbatchreadRequestWithBody(c.Server, params, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Postcrmobjects202603usersbatchread Read a batch of users by internal ID, or unique property values
-//
-// Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
-//
-// Takes a body of the `application/json` content type.
-//
-// Corresponds with POST /crm/objects/2026-03/users/batch/read (the `Postcrmobjects202603usersbatchread` operationId).
-func (c *Client) Postcrmobjects202603usersbatchread(ctx context.Context, params *Postcrmobjects202603usersbatchreadParams, body Postcrmobjects202603usersbatchreadJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmobjects202603usersbatchreadRequest(c.Server, params, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Postcrmobjects202603usersbatchupdateWithBody Update a batch of users by internal ID, or unique property values
-//
-// Update multiple user records in a single request by specifying their internal IDs or unique property values. This operation allows for batch processing of user data, ensuring efficient updates across multiple user profiles.
-//
-// Takes any type of body and a specified content type.
-//
-// Corresponds with POST /crm/objects/2026-03/users/batch/update (the `Postcrmobjects202603usersbatchupdate` operationId).
-func (c *Client) Postcrmobjects202603usersbatchupdateWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmobjects202603usersbatchupdateRequestWithBody(c.Server, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Postcrmobjects202603usersbatchupdate Update a batch of users by internal ID, or unique property values
-//
-// Update multiple user records in a single request by specifying their internal IDs or unique property values. This operation allows for batch processing of user data, ensuring efficient updates across multiple user profiles.
-//
-// Takes a body of the `application/json` content type.
-//
-// Corresponds with POST /crm/objects/2026-03/users/batch/update (the `Postcrmobjects202603usersbatchupdate` operationId).
-func (c *Client) Postcrmobjects202603usersbatchupdate(ctx context.Context, body Postcrmobjects202603usersbatchupdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmobjects202603usersbatchupdateRequest(c.Server, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Postcrmobjects202603usersbatchupsertWithBody Create or update a batch of users by unique property values
-//
-// Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
-//
-// Takes any type of body and a specified content type.
-//
-// Corresponds with POST /crm/objects/2026-03/users/batch/upsert (the `Postcrmobjects202603usersbatchupsert` operationId).
-func (c *Client) Postcrmobjects202603usersbatchupsertWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmobjects202603usersbatchupsertRequestWithBody(c.Server, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Postcrmobjects202603usersbatchupsert Create or update a batch of users by unique property values
-//
-// Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.
-//
-// Takes a body of the `application/json` content type.
-//
-// Corresponds with POST /crm/objects/2026-03/users/batch/upsert (the `Postcrmobjects202603usersbatchupsert` operationId).
-func (c *Client) Postcrmobjects202603usersbatchupsert(ctx context.Context, body Postcrmobjects202603usersbatchupsertJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmobjects202603usersbatchupsertRequest(c.Server, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Postcrmobjects202603userssearchWithBody Search for users based on specified criteria.
-//
-// Execute a search for users using defined filters, properties, and sorting options. The request must include a search query and can return up to 200 results per request.
-//
-// Takes any type of body and a specified content type.
-//
-// Corresponds with POST /crm/objects/2026-03/users/search (the `Postcrmobjects202603userssearch` operationId).
-func (c *Client) Postcrmobjects202603userssearchWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmobjects202603userssearchRequestWithBody(c.Server, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Postcrmobjects202603userssearch Search for users based on specified criteria.
-//
-// Execute a search for users using defined filters, properties, and sorting options. The request must include a search query and can return up to 200 results per request.
-//
-// Takes a body of the `application/json` content type.
-//
-// Corresponds with POST /crm/objects/2026-03/users/search (the `Postcrmobjects202603userssearch` operationId).
-func (c *Client) Postcrmobjects202603userssearch(ctx context.Context, body Postcrmobjects202603userssearchJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmobjects202603userssearchRequest(c.Server, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Deletecrmobjects202603usersUserId Archive
-//
-// Move an Object identified by `{userId}` to the recycling bin.
-//
-// Corresponds with DELETE /crm/objects/2026-03/users/{userId} (the `Deletecrmobjects202603usersUserId` operationId).
-func (c *Client) Deletecrmobjects202603usersUserId(ctx context.Context, userId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDeletecrmobjects202603usersUserIdRequest(c.Server, userId)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Getcrmobjects202603usersUserId Read
-//
-// Read an Object identified by `{userId}`. `{userId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param.
-//
-// Corresponds with GET /crm/objects/2026-03/users/{userId} (the `Getcrmobjects202603usersUserId` operationId).
-func (c *Client) Getcrmobjects202603usersUserId(ctx context.Context, userId string, params *Getcrmobjects202603usersUserIdParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewGetcrmobjects202603usersUserIdRequest(c.Server, userId, params)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Patchcrmobjects202603usersUserIdWithBody Update
-//
-// Perform a partial update of an Object identified by `{userId}`or optionally a unique property value as specified by the `idProperty` query param. `{userId}` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
-//
-// Takes any type of body and a specified content type.
-//
-// Corresponds with PATCH /crm/objects/2026-03/users/{userId} (the `Patchcrmobjects202603usersUserId` operationId).
-func (c *Client) Patchcrmobjects202603usersUserIdWithBody(ctx context.Context, userId string, params *Patchcrmobjects202603usersUserIdParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPatchcrmobjects202603usersUserIdRequestWithBody(c.Server, userId, params, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Patchcrmobjects202603usersUserId Update
-//
-// Perform a partial update of an Object identified by `{userId}`or optionally a unique property value as specified by the `idProperty` query param. `{userId}` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.
-//
-// Takes a body of the `application/json` content type.
-//
-// Corresponds with PATCH /crm/objects/2026-03/users/{userId} (the `Patchcrmobjects202603usersUserId` operationId).
-func (c *Client) Patchcrmobjects202603usersUserId(ctx context.Context, userId string, params *Patchcrmobjects202603usersUserIdParams, body Patchcrmobjects202603usersUserIdJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPatchcrmobjects202603usersUserIdRequest(c.Server, userId, params, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Putcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectId performs a PUT /crm/objects/2026-03/{fromObjectType}/{fromObjectId}/associations/default/{toObjectType}/{toObjectId} (the `Putcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectId` operationId) request.
-func (c *Client) Putcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectId(ctx context.Context, fromObjectType string, fromObjectId string, toObjectType string, toObjectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPutcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdcrmobjects202603FromObjectTypeFromObjectIdassociationsdefaultToObjectTypeToObjectIdRequest(c.Server, fromObjectType, fromObjectId, toObjectType, toObjectId)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Getcrmobjects202603ObjectType List
-//
-// Read a page of objects. Control what is returned via the `properties` query param.
-//
-// Corresponds with GET /crm/objects/2026-03/{objectType} (the `Getcrmobjects202603ObjectType` operationId).
-func (c *Client) Getcrmobjects202603ObjectType(ctx context.Context, objectType string, params *Getcrmobjects202603ObjectTypeParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewGetcrmobjects202603ObjectTypeRequest(c.Server, objectType, params)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Postcrmobjects202603ObjectTypeWithBody Create
-//
-// Create a CRM object with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard objects is provided.
-//
-// Takes any type of body and a specified content type.
-//
-// Corresponds with POST /crm/objects/2026-03/{objectType} (the `Postcrmobjects202603ObjectType` operationId).
-func (c *Client) Postcrmobjects202603ObjectTypeWithBody(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmobjects202603ObjectTypeRequestWithBody(c.Server, objectType, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Postcrmobjects202603ObjectType Create
-//
-// Create a CRM object with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard objects is provided.
-//
-// Takes a body of the `application/json` content type.
-//
-// Corresponds with POST /crm/objects/2026-03/{objectType} (the `Postcrmobjects202603ObjectType` operationId).
-func (c *Client) Postcrmobjects202603ObjectType(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypeJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmobjects202603ObjectTypeRequest(c.Server, objectType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Postcrmobjects202603ObjectTypebatcharchiveWithBody Archive a batch of objects by ID
-//
-// Takes any type of body and a specified content type.
-//
-// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/archive (the `Postcrmobjects202603ObjectTypebatcharchive` operationId).
-func (c *Client) Postcrmobjects202603ObjectTypebatcharchiveWithBody(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmobjects202603ObjectTypebatcharchiveRequestWithBody(c.Server, objectType, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Postcrmobjects202603ObjectTypebatcharchive Archive a batch of objects by ID
-//
-// Takes a body of the `application/json` content type.
-//
-// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/archive (the `Postcrmobjects202603ObjectTypebatcharchive` operationId).
-func (c *Client) Postcrmobjects202603ObjectTypebatcharchive(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypebatcharchiveJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmobjects202603ObjectTypebatcharchiveRequest(c.Server, objectType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Postcrmobjects202603ObjectTypebatchcreateWithBody Create a batch of objects
-//
-// Takes any type of body and a specified content type.
-//
-// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/create (the `Postcrmobjects202603ObjectTypebatchcreate` operationId).
-func (c *Client) Postcrmobjects202603ObjectTypebatchcreateWithBody(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmobjects202603ObjectTypebatchcreateRequestWithBody(c.Server, objectType, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Postcrmobjects202603ObjectTypebatchcreate Create a batch of objects
-//
-// Takes a body of the `application/json` content type.
-//
-// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/create (the `Postcrmobjects202603ObjectTypebatchcreate` operationId).
-func (c *Client) Postcrmobjects202603ObjectTypebatchcreate(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypebatchcreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmobjects202603ObjectTypebatchcreateRequest(c.Server, objectType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Postcrmobjects202603ObjectTypebatchreadWithBody Read a batch of objects by internal ID, or unique property values
-//
-// Takes any type of body and a specified content type.
-//
-// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/read (the `Postcrmobjects202603ObjectTypebatchread` operationId).
-func (c *Client) Postcrmobjects202603ObjectTypebatchreadWithBody(ctx context.Context, objectType string, params *Postcrmobjects202603ObjectTypebatchreadParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmobjects202603ObjectTypebatchreadRequestWithBody(c.Server, objectType, params, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Postcrmobjects202603ObjectTypebatchread Read a batch of objects by internal ID, or unique property values
-//
-// Takes a body of the `application/json` content type.
-//
-// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/read (the `Postcrmobjects202603ObjectTypebatchread` operationId).
-func (c *Client) Postcrmobjects202603ObjectTypebatchread(ctx context.Context, objectType string, params *Postcrmobjects202603ObjectTypebatchreadParams, body Postcrmobjects202603ObjectTypebatchreadJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmobjects202603ObjectTypebatchreadRequest(c.Server, objectType, params, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Postcrmobjects202603ObjectTypebatchupdateWithBody Update a batch of objects
-//
-// Takes any type of body and a specified content type.
-//
-// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/update (the `Postcrmobjects202603ObjectTypebatchupdate` operationId).
-func (c *Client) Postcrmobjects202603ObjectTypebatchupdateWithBody(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmobjects202603ObjectTypebatchupdateRequestWithBody(c.Server, objectType, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Postcrmobjects202603ObjectTypebatchupdate Update a batch of objects
-//
-// Takes a body of the `application/json` content type.
-//
-// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/update (the `Postcrmobjects202603ObjectTypebatchupdate` operationId).
-func (c *Client) Postcrmobjects202603ObjectTypebatchupdate(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypebatchupdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmobjects202603ObjectTypebatchupdateRequest(c.Server, objectType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Postcrmobjects202603ObjectTypebatchupsertWithBody Create or update a batch of objects by unique property values
-//
-// Takes any type of body and a specified content type.
-//
-// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/upsert (the `Postcrmobjects202603ObjectTypebatchupsert` operationId).
-func (c *Client) Postcrmobjects202603ObjectTypebatchupsertWithBody(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmobjects202603ObjectTypebatchupsertRequestWithBody(c.Server, objectType, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Postcrmobjects202603ObjectTypebatchupsert Create or update a batch of objects by unique property values
-//
-// Takes a body of the `application/json` content type.
-//
-// Corresponds with POST /crm/objects/2026-03/{objectType}/batch/upsert (the `Postcrmobjects202603ObjectTypebatchupsert` operationId).
-func (c *Client) Postcrmobjects202603ObjectTypebatchupsert(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypebatchupsertJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmobjects202603ObjectTypebatchupsertRequest(c.Server, objectType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Postcrmobjects202603ObjectTypegdprDeleteWithBody GDPR DELETE
-//
-// Permanently delete a contact and all associated content to follow GDPR. Use optional property 'idProperty' set to 'email' to identify contact by email address. If email address is not found, the email address will be added to a blocklist and prevent it from being used in the future.
-//
-// Takes any type of body and a specified content type.
-//
-// Corresponds with POST /crm/objects/2026-03/{objectType}/gdpr-delete (the `Postcrmobjects202603ObjectTypegdprDelete` operationId).
-func (c *Client) Postcrmobjects202603ObjectTypegdprDeleteWithBody(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmobjects202603ObjectTypegdprDeleteRequestWithBody(c.Server, objectType, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Postcrmobjects202603ObjectTypegdprDelete GDPR DELETE
-//
-// Permanently delete a contact and all associated content to follow GDPR. Use optional property 'idProperty' set to 'email' to identify contact by email address. If email address is not found, the email address will be added to a blocklist and prevent it from being used in the future.
-//
-// Takes a body of the `application/json` content type.
-//
-// Corresponds with POST /crm/objects/2026-03/{objectType}/gdpr-delete (the `Postcrmobjects202603ObjectTypegdprDelete` operationId).
-func (c *Client) Postcrmobjects202603ObjectTypegdprDelete(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypegdprDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmobjects202603ObjectTypegdprDeleteRequest(c.Server, objectType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Postcrmobjects202603ObjectTypemergeWithBody Merge two objects with same type
-//
-// Takes any type of body and a specified content type.
-//
-// Corresponds with POST /crm/objects/2026-03/{objectType}/merge (the `Postcrmobjects202603ObjectTypemerge` operationId).
-func (c *Client) Postcrmobjects202603ObjectTypemergeWithBody(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmobjects202603ObjectTypemergeRequestWithBody(c.Server, objectType, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Postcrmobjects202603ObjectTypemerge Merge two objects with same type
-//
-// Takes a body of the `application/json` content type.
-//
-// Corresponds with POST /crm/objects/2026-03/{objectType}/merge (the `Postcrmobjects202603ObjectTypemerge` operationId).
-func (c *Client) Postcrmobjects202603ObjectTypemerge(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypemergeJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmobjects202603ObjectTypemergeRequest(c.Server, objectType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Postcrmobjects202603ObjectTypesearchWithBody performs a POST /crm/objects/2026-03/{objectType}/search (the `Postcrmobjects202603ObjectTypesearch` operationId) request,
-// with any type of body and a specified content type.
-func (c *Client) Postcrmobjects202603ObjectTypesearchWithBody(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmobjects202603ObjectTypesearchRequestWithBody(c.Server, objectType, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Postcrmobjects202603ObjectTypesearch performs a POST /crm/objects/2026-03/{objectType}/search (the `Postcrmobjects202603ObjectTypesearch` operationId) request.
-// Takes a body of the `application/json` content type.
-func (c *Client) Postcrmobjects202603ObjectTypesearch(ctx context.Context, objectType string, body Postcrmobjects202603ObjectTypesearchJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmobjects202603ObjectTypesearchRequest(c.Server, objectType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Deletecrmobjects202603ObjectTypeObjectId Archive
-//
-// Move an Object identified by `{objectId}` to the recycling bin.
-//
-// Corresponds with DELETE /crm/objects/2026-03/{objectType}/{objectId} (the `Deletecrmobjects202603ObjectTypeObjectId` operationId).
-func (c *Client) Deletecrmobjects202603ObjectTypeObjectId(ctx context.Context, objectType string, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDeletecrmobjects202603ObjectTypeObjectIdRequest(c.Server, objectType, objectId)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Getcrmobjects202603ObjectTypeObjectId Read
-//
-// Read an Object identified by `{objectId}`. `{objectId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param.
-//
-// Corresponds with GET /crm/objects/2026-03/{objectType}/{objectId} (the `Getcrmobjects202603ObjectTypeObjectId` operationId).
-func (c *Client) Getcrmobjects202603ObjectTypeObjectId(ctx context.Context, objectType string, objectId string, params *Getcrmobjects202603ObjectTypeObjectIdParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewGetcrmobjects202603ObjectTypeObjectIdRequest(c.Server, objectType, objectId, params)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Patchcrmobjects202603ObjectTypeObjectIdWithBody Update
-//
-// Perform a partial update of an Object identified by `{objectId}`. `{objectId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param. Provided property values will be overwritten. Read-only and non-existent properties will be ignored. Properties values can be cleared by passing an empty string.
-//
-// Takes any type of body and a specified content type.
-//
-// Corresponds with PATCH /crm/objects/2026-03/{objectType}/{objectId} (the `Patchcrmobjects202603ObjectTypeObjectId` operationId).
-func (c *Client) Patchcrmobjects202603ObjectTypeObjectIdWithBody(ctx context.Context, objectType string, objectId string, params *Patchcrmobjects202603ObjectTypeObjectIdParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPatchcrmobjects202603ObjectTypeObjectIdRequestWithBody(c.Server, objectType, objectId, params, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Patchcrmobjects202603ObjectTypeObjectId Update
-//
-// Perform a partial update of an Object identified by `{objectId}`. `{objectId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param. Provided property values will be overwritten. Read-only and non-existent properties will be ignored. Properties values can be cleared by passing an empty string.
-//
-// Takes a body of the `application/json` content type.
-//
-// Corresponds with PATCH /crm/objects/2026-03/{objectType}/{objectId} (the `Patchcrmobjects202603ObjectTypeObjectId` operationId).
-func (c *Client) Patchcrmobjects202603ObjectTypeObjectId(ctx context.Context, objectType string, objectId string, params *Patchcrmobjects202603ObjectTypeObjectIdParams, body Patchcrmobjects202603ObjectTypeObjectIdJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPatchcrmobjects202603ObjectTypeObjectIdRequest(c.Server, objectType, objectId, params, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Getcrmobjects202603ObjectTypeObjectIdassociationsToObjectType List associations of an object by type
-//
-// Corresponds with GET /crm/objects/2026-03/{objectType}/{objectId}/associations/{toObjectType} (the `Getcrmobjects202603ObjectTypeObjectIdassociationsToObjectType` operationId).
-func (c *Client) Getcrmobjects202603ObjectTypeObjectIdassociationsToObjectType(ctx context.Context, objectType string, objectId string, toObjectType string, params *Getcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewGetcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeRequest(c.Server, objectType, objectId, toObjectType, params)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Deletecrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectId performs a DELETE /crm/objects/2026-03/{objectType}/{objectId}/associations/{toObjectType}/{toObjectId} (the `Deletecrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectId` operationId) request.
-func (c *Client) Deletecrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectId(ctx context.Context, objectType string, objectId string, toObjectType string, toObjectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDeletecrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdRequest(c.Server, objectType, objectId, toObjectType, toObjectId)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdWithBody performs a PUT /crm/objects/2026-03/{objectType}/{objectId}/associations/{toObjectType}/{toObjectId} (the `Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectId` operationId) request,
-// with any type of body and a specified content type.
-func (c *Client) Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdWithBody(ctx context.Context, objectType string, objectId string, toObjectType string, toObjectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPutcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdRequestWithBody(c.Server, objectType, objectId, toObjectType, toObjectId, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectId performs a PUT /crm/objects/2026-03/{objectType}/{objectId}/associations/{toObjectType}/{toObjectId} (the `Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectId` operationId) request.
-// Takes a body of the `application/json` content type.
-func (c *Client) Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectId(ctx context.Context, objectType string, objectId string, toObjectType string, toObjectId string, body Putcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPutcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdcrmobjects202603ObjectTypeObjectIdassociationsToObjectTypeToObjectIdRequest(c.Server, objectType, objectId, toObjectType, toObjectId, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Getcrmowners202603crmownersv3 List owners
-//
-// Retrieve a paginated list of owners from your HubSpot account. This endpoint allows filtering by email and supports pagination through the 'after' parameter. You can also specify the maximum number of results per page and choose to include archived owners in the response.
-//
-// Corresponds with GET /crm/owners/2026-03 (the `Getcrmowners202603crmownersv3` operationId).
-func (c *Client) Getcrmowners202603crmownersv3(ctx context.Context, params *Getcrmowners202603crmownersv3Params, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewGetcrmowners202603crmownersv3Request(c.Server, params)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Getcrmowners202603OwnerIdGetById Retrieve a specific owner by ID
-//
-// Retrieve details of a specific owner using either their 'id' or 'userId'.
-//
-// Corresponds with GET /crm/owners/2026-03/{ownerId} (the `Getcrmowners202603OwnerIdGetById` operationId).
-func (c *Client) Getcrmowners202603OwnerIdGetById(ctx context.Context, ownerId int32, params *Getcrmowners202603OwnerIdGetByIdParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewGetcrmowners202603OwnerIdGetByIdRequest(c.Server, ownerId, params)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Getcrmpipelines202603ObjectTypeGetAll Retrieve all pipelines
-//
-// Return all pipelines for the object type specified by `{objectType}`.
-//
-// Corresponds with GET /crm/pipelines/2026-03/{objectType} (the `Getcrmpipelines202603ObjectTypeGetAll` operationId).
-func (c *Client) Getcrmpipelines202603ObjectTypeGetAll(ctx context.Context, objectType string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewGetcrmpipelines202603ObjectTypeGetAllRequest(c.Server, objectType)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Postcrmpipelines202603ObjectTypeCreateWithBody Create a pipeline
-//
-// Create a new pipeline with the provided property values. The entire pipeline object, including its unique ID, will be returned in the response.
-//
-// Takes any type of body and a specified content type.
-//
-// Corresponds with POST /crm/pipelines/2026-03/{objectType} (the `Postcrmpipelines202603ObjectTypeCreate` operationId).
-func (c *Client) Postcrmpipelines202603ObjectTypeCreateWithBody(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmpipelines202603ObjectTypeCreateRequestWithBody(c.Server, objectType, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Postcrmpipelines202603ObjectTypeCreate Create a pipeline
-//
-// Create a new pipeline with the provided property values. The entire pipeline object, including its unique ID, will be returned in the response.
-//
-// Takes a body of the `application/json` content type.
-//
-// Corresponds with POST /crm/pipelines/2026-03/{objectType} (the `Postcrmpipelines202603ObjectTypeCreate` operationId).
-func (c *Client) Postcrmpipelines202603ObjectTypeCreate(ctx context.Context, objectType string, body Postcrmpipelines202603ObjectTypeCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmpipelines202603ObjectTypeCreateRequest(c.Server, objectType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Deletecrmpipelines202603ObjectTypePipelineIdArchive Delete a pipeline
-//
-// Delete a pipeline identified by its unique pipelineId.
-//
-// Corresponds with DELETE /crm/pipelines/2026-03/{objectType}/{pipelineId} (the `Deletecrmpipelines202603ObjectTypePipelineIdArchive` operationId).
-func (c *Client) Deletecrmpipelines202603ObjectTypePipelineIdArchive(ctx context.Context, objectType string, pipelineId string, params *Deletecrmpipelines202603ObjectTypePipelineIdArchiveParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDeletecrmpipelines202603ObjectTypePipelineIdArchiveRequest(c.Server, objectType, pipelineId, params)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Getcrmpipelines202603ObjectTypePipelineIdGetById Return a pipeline by ID
-//
-// Return a single pipeline object identified by its unique `{pipelineId}`.
-//
-// Corresponds with GET /crm/pipelines/2026-03/{objectType}/{pipelineId} (the `Getcrmpipelines202603ObjectTypePipelineIdGetById` operationId).
-func (c *Client) Getcrmpipelines202603ObjectTypePipelineIdGetById(ctx context.Context, objectType string, pipelineId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewGetcrmpipelines202603ObjectTypePipelineIdGetByIdRequest(c.Server, objectType, pipelineId)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Patchcrmpipelines202603ObjectTypePipelineIdUpdateWithBody Perform a partial update of the pipeline identified by pipelineId.
-//
-// Perform a partial update of the pipeline identified by `{pipelineId}`. The updated pipeline will be returned in the response.
-//
-// Takes any type of body and a specified content type.
-//
-// Corresponds with PATCH /crm/pipelines/2026-03/{objectType}/{pipelineId} (the `Patchcrmpipelines202603ObjectTypePipelineIdUpdate` operationId).
-func (c *Client) Patchcrmpipelines202603ObjectTypePipelineIdUpdateWithBody(ctx context.Context, objectType string, pipelineId string, params *Patchcrmpipelines202603ObjectTypePipelineIdUpdateParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPatchcrmpipelines202603ObjectTypePipelineIdUpdateRequestWithBody(c.Server, objectType, pipelineId, params, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Patchcrmpipelines202603ObjectTypePipelineIdUpdate Perform a partial update of the pipeline identified by pipelineId.
-//
-// Perform a partial update of the pipeline identified by `{pipelineId}`. The updated pipeline will be returned in the response.
-//
-// Takes a body of the `application/json` content type.
-//
-// Corresponds with PATCH /crm/pipelines/2026-03/{objectType}/{pipelineId} (the `Patchcrmpipelines202603ObjectTypePipelineIdUpdate` operationId).
-func (c *Client) Patchcrmpipelines202603ObjectTypePipelineIdUpdate(ctx context.Context, objectType string, pipelineId string, params *Patchcrmpipelines202603ObjectTypePipelineIdUpdateParams, body Patchcrmpipelines202603ObjectTypePipelineIdUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPatchcrmpipelines202603ObjectTypePipelineIdUpdateRequest(c.Server, objectType, pipelineId, params, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Putcrmpipelines202603ObjectTypePipelineIdReplaceWithBody Replace a pipeline
-//
-// Replace all properties of an existing pipeline with the provided values.
-//
-// Takes any type of body and a specified content type.
-//
-// Corresponds with PUT /crm/pipelines/2026-03/{objectType}/{pipelineId} (the `Putcrmpipelines202603ObjectTypePipelineIdReplace` operationId).
-func (c *Client) Putcrmpipelines202603ObjectTypePipelineIdReplaceWithBody(ctx context.Context, objectType string, pipelineId string, params *Putcrmpipelines202603ObjectTypePipelineIdReplaceParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPutcrmpipelines202603ObjectTypePipelineIdReplaceRequestWithBody(c.Server, objectType, pipelineId, params, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Putcrmpipelines202603ObjectTypePipelineIdReplace Replace a pipeline
-//
-// Replace all properties of an existing pipeline with the provided values.
-//
-// Takes a body of the `application/json` content type.
-//
-// Corresponds with PUT /crm/pipelines/2026-03/{objectType}/{pipelineId} (the `Putcrmpipelines202603ObjectTypePipelineIdReplace` operationId).
-func (c *Client) Putcrmpipelines202603ObjectTypePipelineIdReplace(ctx context.Context, objectType string, pipelineId string, params *Putcrmpipelines202603ObjectTypePipelineIdReplaceParams, body Putcrmpipelines202603ObjectTypePipelineIdReplaceJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPutcrmpipelines202603ObjectTypePipelineIdReplaceRequest(c.Server, objectType, pipelineId, params, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Getcrmpipelines202603ObjectTypePipelineIdauditGetAudit Return an audit of all changes to the pipeline
-//
-// Return a reverse chronological list of all mutations that have occurred on the pipeline identified by `{pipelineId}`.
-//
-// Corresponds with GET /crm/pipelines/2026-03/{objectType}/{pipelineId}/audit (the `Getcrmpipelines202603ObjectTypePipelineIdauditGetAudit` operationId).
-func (c *Client) Getcrmpipelines202603ObjectTypePipelineIdauditGetAudit(ctx context.Context, objectType string, pipelineId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewGetcrmpipelines202603ObjectTypePipelineIdauditGetAuditRequest(c.Server, objectType, pipelineId)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Getcrmpipelines202603ObjectTypePipelineIdstagesGetAll Return all stages of a pipeline
-//
-// Return all the stages associated with the pipeline identified by `{pipelineId}`.
-//
-// Corresponds with GET /crm/pipelines/2026-03/{objectType}/{pipelineId}/stages (the `Getcrmpipelines202603ObjectTypePipelineIdstagesGetAll` operationId).
-func (c *Client) Getcrmpipelines202603ObjectTypePipelineIdstagesGetAll(ctx context.Context, objectType string, pipelineId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewGetcrmpipelines202603ObjectTypePipelineIdstagesGetAllRequest(c.Server, objectType, pipelineId)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Postcrmpipelines202603ObjectTypePipelineIdstagesCreateWithBody Create a pipeline stage
-//
-// Create a new stage within the specified pipeline.
-//
-// Takes any type of body and a specified content type.
-//
-// Corresponds with POST /crm/pipelines/2026-03/{objectType}/{pipelineId}/stages (the `Postcrmpipelines202603ObjectTypePipelineIdstagesCreate` operationId).
-func (c *Client) Postcrmpipelines202603ObjectTypePipelineIdstagesCreateWithBody(ctx context.Context, objectType string, pipelineId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmpipelines202603ObjectTypePipelineIdstagesCreateRequestWithBody(c.Server, objectType, pipelineId, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Postcrmpipelines202603ObjectTypePipelineIdstagesCreate Create a pipeline stage
-//
-// Create a new stage within the specified pipeline.
-//
-// Takes a body of the `application/json` content type.
-//
-// Corresponds with POST /crm/pipelines/2026-03/{objectType}/{pipelineId}/stages (the `Postcrmpipelines202603ObjectTypePipelineIdstagesCreate` operationId).
-func (c *Client) Postcrmpipelines202603ObjectTypePipelineIdstagesCreate(ctx context.Context, objectType string, pipelineId string, body Postcrmpipelines202603ObjectTypePipelineIdstagesCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmpipelines202603ObjectTypePipelineIdstagesCreateRequest(c.Server, objectType, pipelineId, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Deletecrmpipelines202603ObjectTypePipelineIdstagesStageIdArchive Delete a pipeline stage
-//
-// Delete a specific stage from a pipeline.
-//
-// Corresponds with DELETE /crm/pipelines/2026-03/{objectType}/{pipelineId}/stages/{stageId} (the `Deletecrmpipelines202603ObjectTypePipelineIdstagesStageIdArchive` operationId).
-func (c *Client) Deletecrmpipelines202603ObjectTypePipelineIdstagesStageIdArchive(ctx context.Context, objectType string, pipelineId string, stageId string, params *Deletecrmpipelines202603ObjectTypePipelineIdstagesStageIdArchiveParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDeletecrmpipelines202603ObjectTypePipelineIdstagesStageIdArchiveRequest(c.Server, objectType, pipelineId, stageId, params)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Getcrmpipelines202603ObjectTypePipelineIdstagesStageIdGetById Return a pipeline stage by ID
-//
-// Retrieve a specific stage from a pipeline using its ID.
-//
-// Corresponds with GET /crm/pipelines/2026-03/{objectType}/{pipelineId}/stages/{stageId} (the `Getcrmpipelines202603ObjectTypePipelineIdstagesStageIdGetById` operationId).
-func (c *Client) Getcrmpipelines202603ObjectTypePipelineIdstagesStageIdGetById(ctx context.Context, objectType string, pipelineId string, stageId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewGetcrmpipelines202603ObjectTypePipelineIdstagesStageIdGetByIdRequest(c.Server, objectType, pipelineId, stageId)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdateWithBody Update specific properties of an existing pipeline stage.
-//
-// Perform a partial update on a specific stage of a pipeline.
-//
-// Takes any type of body and a specified content type.
-//
-// Corresponds with PATCH /crm/pipelines/2026-03/{objectType}/{pipelineId}/stages/{stageId} (the `Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdate` operationId).
-func (c *Client) Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdateWithBody(ctx context.Context, objectType string, pipelineId string, stageId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPatchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdateRequestWithBody(c.Server, objectType, pipelineId, stageId, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdate Update specific properties of an existing pipeline stage.
-//
-// Perform a partial update on a specific stage of a pipeline.
-//
-// Takes a body of the `application/json` content type.
-//
-// Corresponds with PATCH /crm/pipelines/2026-03/{objectType}/{pipelineId}/stages/{stageId} (the `Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdate` operationId).
-func (c *Client) Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdate(ctx context.Context, objectType string, pipelineId string, stageId string, body Patchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPatchcrmpipelines202603ObjectTypePipelineIdstagesStageIdUpdateRequest(c.Server, objectType, pipelineId, stageId, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Putcrmpipelines202603ObjectTypePipelineIdstagesStageIdReplaceWithBody Replace a pipeline stage
-//
-// Replace all the properties of an existing pipeline stage with the values provided. The updated stage will be returned in the response.
-//
-// Takes any type of body and a specified content type.
-//
-// Corresponds with PUT /crm/pipelines/2026-03/{objectType}/{pipelineId}/stages/{stageId} (the `Putcrmpipelines202603ObjectTypePipelineIdstagesStageIdReplace` operationId).
-func (c *Client) Putcrmpipelines202603ObjectTypePipelineIdstagesStageIdReplaceWithBody(ctx context.Context, objectType string, pipelineId string, stageId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPutcrmpipelines202603ObjectTypePipelineIdstagesStageIdReplaceRequestWithBody(c.Server, objectType, pipelineId, stageId, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Putcrmpipelines202603ObjectTypePipelineIdstagesStageIdReplace Replace a pipeline stage
-//
-// Replace all the properties of an existing pipeline stage with the values provided. The updated stage will be returned in the response.
-//
-// Takes a body of the `application/json` content type.
-//
-// Corresponds with PUT /crm/pipelines/2026-03/{objectType}/{pipelineId}/stages/{stageId} (the `Putcrmpipelines202603ObjectTypePipelineIdstagesStageIdReplace` operationId).
-func (c *Client) Putcrmpipelines202603ObjectTypePipelineIdstagesStageIdReplace(ctx context.Context, objectType string, pipelineId string, stageId string, body Putcrmpipelines202603ObjectTypePipelineIdstagesStageIdReplaceJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPutcrmpipelines202603ObjectTypePipelineIdstagesStageIdReplaceRequest(c.Server, objectType, pipelineId, stageId, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Getcrmpipelines202603ObjectTypePipelineIdstagesStageIdauditGetAudit Retrieve a reverse chronological list of all changes made to a specific pipeline stage.
-//
-// Return a reverse chronological list of all mutations that have occurred on the pipeline stage identified by `{stageId}`.
-//
-// Corresponds with GET /crm/pipelines/2026-03/{objectType}/{pipelineId}/stages/{stageId}/audit (the `Getcrmpipelines202603ObjectTypePipelineIdstagesStageIdauditGetAudit` operationId).
-func (c *Client) Getcrmpipelines202603ObjectTypePipelineIdstagesStageIdauditGetAudit(ctx context.Context, objectType string, pipelineId string, stageId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewGetcrmpipelines202603ObjectTypePipelineIdstagesStageIdauditGetAuditRequest(c.Server, objectType, pipelineId, stageId)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Getcrmproperties202603ObjectTypecrmproperties202509ObjectType Read all properties
-//
-// Read all existing properties for the specified object type and HubSpot account.
-//
-// Corresponds with GET /crm/properties/2026-03/{objectType} (the `Getcrmproperties202603ObjectTypecrmproperties202509ObjectType` operationId).
-func (c *Client) Getcrmproperties202603ObjectTypecrmproperties202509ObjectType(ctx context.Context, objectType string, params *Getcrmproperties202603ObjectTypecrmproperties202509ObjectTypeParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewGetcrmproperties202603ObjectTypecrmproperties202509ObjectTypeRequest(c.Server, objectType, params)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Postcrmproperties202603ObjectTypecrmproperties202509ObjectTypeWithBody Create a property
-//
-// Create and return a copy of a new property for the specified object type.
-//
-// Takes any type of body and a specified content type.
-//
-// Corresponds with POST /crm/properties/2026-03/{objectType} (the `Postcrmproperties202603ObjectTypecrmproperties202509ObjectType` operationId).
-func (c *Client) Postcrmproperties202603ObjectTypecrmproperties202509ObjectTypeWithBody(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmproperties202603ObjectTypecrmproperties202509ObjectTypeRequestWithBody(c.Server, objectType, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Postcrmproperties202603ObjectTypecrmproperties202509ObjectType Create a property
-//
-// Create and return a copy of a new property for the specified object type.
-//
-// Takes a body of the `application/json` content type.
-//
-// Corresponds with POST /crm/properties/2026-03/{objectType} (the `Postcrmproperties202603ObjectTypecrmproperties202509ObjectType` operationId).
-func (c *Client) Postcrmproperties202603ObjectTypecrmproperties202509ObjectType(ctx context.Context, objectType string, body Postcrmproperties202603ObjectTypecrmproperties202509ObjectTypeJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmproperties202603ObjectTypecrmproperties202509ObjectTypeRequest(c.Server, objectType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Postcrmproperties202603ObjectTypebatcharchivecrmproperties202509ObjectTypebatcharchiveWithBody Archive a batch of properties
-//
-// Archive a provided list of properties. This method will return a 204 No Content response on success regardless of the initial state of the property (e.g. active, already archived, non-existent).
-//
-// Takes any type of body and a specified content type.
-//
-// Corresponds with POST /crm/properties/2026-03/{objectType}/batch/archive (the `Postcrmproperties202603ObjectTypebatcharchivecrmproperties202509ObjectTypebatcharchive` operationId).
-func (c *Client) Postcrmproperties202603ObjectTypebatcharchivecrmproperties202509ObjectTypebatcharchiveWithBody(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmproperties202603ObjectTypebatcharchivecrmproperties202509ObjectTypebatcharchiveRequestWithBody(c.Server, objectType, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Postcrmproperties202603ObjectTypebatcharchivecrmproperties202509ObjectTypebatcharchive Archive a batch of properties
-//
-// Archive a provided list of properties. This method will return a 204 No Content response on success regardless of the initial state of the property (e.g. active, already archived, non-existent).
-//
-// Takes a body of the `application/json` content type.
-//
-// Corresponds with POST /crm/properties/2026-03/{objectType}/batch/archive (the `Postcrmproperties202603ObjectTypebatcharchivecrmproperties202509ObjectTypebatcharchive` operationId).
-func (c *Client) Postcrmproperties202603ObjectTypebatcharchivecrmproperties202509ObjectTypebatcharchive(ctx context.Context, objectType string, body Postcrmproperties202603ObjectTypebatcharchivecrmproperties202509ObjectTypebatcharchiveJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmproperties202603ObjectTypebatcharchivecrmproperties202509ObjectTypebatcharchiveRequest(c.Server, objectType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Postcrmproperties202603ObjectTypebatchcreatecrmproperties202509ObjectTypebatchcreateWithBody Create a batch of properties
-//
-// Create a batch of properties using the same rules as when creating an individual property.
-//
-// Takes any type of body and a specified content type.
-//
-// Corresponds with POST /crm/properties/2026-03/{objectType}/batch/create (the `Postcrmproperties202603ObjectTypebatchcreatecrmproperties202509ObjectTypebatchcreate` operationId).
-func (c *Client) Postcrmproperties202603ObjectTypebatchcreatecrmproperties202509ObjectTypebatchcreateWithBody(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmproperties202603ObjectTypebatchcreatecrmproperties202509ObjectTypebatchcreateRequestWithBody(c.Server, objectType, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Postcrmproperties202603ObjectTypebatchcreatecrmproperties202509ObjectTypebatchcreate Create a batch of properties
-//
-// Create a batch of properties using the same rules as when creating an individual property.
-//
-// Takes a body of the `application/json` content type.
-//
-// Corresponds with POST /crm/properties/2026-03/{objectType}/batch/create (the `Postcrmproperties202603ObjectTypebatchcreatecrmproperties202509ObjectTypebatchcreate` operationId).
-func (c *Client) Postcrmproperties202603ObjectTypebatchcreatecrmproperties202509ObjectTypebatchcreate(ctx context.Context, objectType string, body Postcrmproperties202603ObjectTypebatchcreatecrmproperties202509ObjectTypebatchcreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmproperties202603ObjectTypebatchcreatecrmproperties202509ObjectTypebatchcreateRequest(c.Server, objectType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Postcrmproperties202603ObjectTypebatchreadcrmproperties202509ObjectTypebatchreadWithBody Read a batch of properties
-//
-// Read a provided list of properties.
-//
-// Takes any type of body and a specified content type.
-//
-// Corresponds with POST /crm/properties/2026-03/{objectType}/batch/read (the `Postcrmproperties202603ObjectTypebatchreadcrmproperties202509ObjectTypebatchread` operationId).
-func (c *Client) Postcrmproperties202603ObjectTypebatchreadcrmproperties202509ObjectTypebatchreadWithBody(ctx context.Context, objectType string, params *Postcrmproperties202603ObjectTypebatchreadcrmproperties202509ObjectTypebatchreadParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmproperties202603ObjectTypebatchreadcrmproperties202509ObjectTypebatchreadRequestWithBody(c.Server, objectType, params, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Postcrmproperties202603ObjectTypebatchreadcrmproperties202509ObjectTypebatchread Read a batch of properties
-//
-// Read a provided list of properties.
-//
-// Takes a body of the `application/json` content type.
-//
-// Corresponds with POST /crm/properties/2026-03/{objectType}/batch/read (the `Postcrmproperties202603ObjectTypebatchreadcrmproperties202509ObjectTypebatchread` operationId).
-func (c *Client) Postcrmproperties202603ObjectTypebatchreadcrmproperties202509ObjectTypebatchread(ctx context.Context, objectType string, params *Postcrmproperties202603ObjectTypebatchreadcrmproperties202509ObjectTypebatchreadParams, body Postcrmproperties202603ObjectTypebatchreadcrmproperties202509ObjectTypebatchreadJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmproperties202603ObjectTypebatchreadcrmproperties202509ObjectTypebatchreadRequest(c.Server, objectType, params, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Getcrmproperties202603ObjectTypegroupscrmproperties202509ObjectTypegroups Read all property groups
-//
-// Read all existing property groups for the specified object type and HubSpot account.
-//
-// Corresponds with GET /crm/properties/2026-03/{objectType}/groups (the `Getcrmproperties202603ObjectTypegroupscrmproperties202509ObjectTypegroups` operationId).
-func (c *Client) Getcrmproperties202603ObjectTypegroupscrmproperties202509ObjectTypegroups(ctx context.Context, objectType string, params *Getcrmproperties202603ObjectTypegroupscrmproperties202509ObjectTypegroupsParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewGetcrmproperties202603ObjectTypegroupscrmproperties202509ObjectTypegroupsRequest(c.Server, objectType, params)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Postcrmproperties202603ObjectTypegroupscrmproperties202509ObjectTypegroupsWithBody Create a property group
-//
-// Create and return a copy of a new property group.
-//
-// Takes any type of body and a specified content type.
-//
-// Corresponds with POST /crm/properties/2026-03/{objectType}/groups (the `Postcrmproperties202603ObjectTypegroupscrmproperties202509ObjectTypegroups` operationId).
-func (c *Client) Postcrmproperties202603ObjectTypegroupscrmproperties202509ObjectTypegroupsWithBody(ctx context.Context, objectType string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmproperties202603ObjectTypegroupscrmproperties202509ObjectTypegroupsRequestWithBody(c.Server, objectType, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Postcrmproperties202603ObjectTypegroupscrmproperties202509ObjectTypegroups Create a property group
-//
-// Create and return a copy of a new property group.
-//
-// Takes a body of the `application/json` content type.
-//
-// Corresponds with POST /crm/properties/2026-03/{objectType}/groups (the `Postcrmproperties202603ObjectTypegroupscrmproperties202509ObjectTypegroups` operationId).
-func (c *Client) Postcrmproperties202603ObjectTypegroupscrmproperties202509ObjectTypegroups(ctx context.Context, objectType string, body Postcrmproperties202603ObjectTypegroupscrmproperties202509ObjectTypegroupsJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmproperties202603ObjectTypegroupscrmproperties202509ObjectTypegroupsRequest(c.Server, objectType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Deletecrmproperties202603ObjectTypegroupsGroupNamecrmproperties202509ObjectTypegroupsGroupName Archive a property group
-//
-// Move a property group identified by {groupName} to the recycling bin.
-//
-// Corresponds with DELETE /crm/properties/2026-03/{objectType}/groups/{groupName} (the `Deletecrmproperties202603ObjectTypegroupsGroupNamecrmproperties202509ObjectTypegroupsGroupName` operationId).
-func (c *Client) Deletecrmproperties202603ObjectTypegroupsGroupNamecrmproperties202509ObjectTypegroupsGroupName(ctx context.Context, objectType string, groupName string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDeletecrmproperties202603ObjectTypegroupsGroupNamecrmproperties202509ObjectTypegroupsGroupNameRequest(c.Server, objectType, groupName)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Getcrmproperties202603ObjectTypegroupsGroupNamecrmproperties202509ObjectTypegroupsGroupName Read a property group
-//
-// Read a property group identified by {groupName}.
-//
-// Corresponds with GET /crm/properties/2026-03/{objectType}/groups/{groupName} (the `Getcrmproperties202603ObjectTypegroupsGroupNamecrmproperties202509ObjectTypegroupsGroupName` operationId).
-func (c *Client) Getcrmproperties202603ObjectTypegroupsGroupNamecrmproperties202509ObjectTypegroupsGroupName(ctx context.Context, objectType string, groupName string, params *Getcrmproperties202603ObjectTypegroupsGroupNamecrmproperties202509ObjectTypegroupsGroupNameParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewGetcrmproperties202603ObjectTypegroupsGroupNamecrmproperties202509ObjectTypegroupsGroupNameRequest(c.Server, objectType, groupName, params)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Patchcrmproperties202603ObjectTypegroupsGroupNamecrmproperties202509ObjectTypegroupsGroupNameWithBody Update a property group
-//
-// Perform a partial update of a property group identified by {groupName}. Provided fields will be overwritten.
-//
-// Takes any type of body and a specified content type.
-//
-// Corresponds with PATCH /crm/properties/2026-03/{objectType}/groups/{groupName} (the `Patchcrmproperties202603ObjectTypegroupsGroupNamecrmproperties202509ObjectTypegroupsGroupName` operationId).
-func (c *Client) Patchcrmproperties202603ObjectTypegroupsGroupNamecrmproperties202509ObjectTypegroupsGroupNameWithBody(ctx context.Context, objectType string, groupName string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPatchcrmproperties202603ObjectTypegroupsGroupNamecrmproperties202509ObjectTypegroupsGroupNameRequestWithBody(c.Server, objectType, groupName, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Patchcrmproperties202603ObjectTypegroupsGroupNamecrmproperties202509ObjectTypegroupsGroupName Update a property group
-//
-// Perform a partial update of a property group identified by {groupName}. Provided fields will be overwritten.
-//
-// Takes a body of the `application/json` content type.
-//
-// Corresponds with PATCH /crm/properties/2026-03/{objectType}/groups/{groupName} (the `Patchcrmproperties202603ObjectTypegroupsGroupNamecrmproperties202509ObjectTypegroupsGroupName` operationId).
-func (c *Client) Patchcrmproperties202603ObjectTypegroupsGroupNamecrmproperties202509ObjectTypegroupsGroupName(ctx context.Context, objectType string, groupName string, body Patchcrmproperties202603ObjectTypegroupsGroupNamecrmproperties202509ObjectTypegroupsGroupNameJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPatchcrmproperties202603ObjectTypegroupsGroupNamecrmproperties202509ObjectTypegroupsGroupNameRequest(c.Server, objectType, groupName, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Deletecrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyName Archive a property
-//
-// Move a property identified by {propertyName} to the recycling bin.
-//
-// Corresponds with DELETE /crm/properties/2026-03/{objectType}/{propertyName} (the `Deletecrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyName` operationId).
-func (c *Client) Deletecrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyName(ctx context.Context, objectType string, propertyName string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDeletecrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyNameRequest(c.Server, objectType, propertyName)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Getcrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyName Read a property
-//
-// Read a property identified by {propertyName}.
-//
-// Corresponds with GET /crm/properties/2026-03/{objectType}/{propertyName} (the `Getcrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyName` operationId).
-func (c *Client) Getcrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyName(ctx context.Context, objectType string, propertyName string, params *Getcrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyNameParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewGetcrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyNameRequest(c.Server, objectType, propertyName, params)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Patchcrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyNameWithBody Update a property
-//
-// Perform a partial update of a property identified by { propertyName }. Provided fields will be overwritten.
-//
-// Takes any type of body and a specified content type.
-//
-// Corresponds with PATCH /crm/properties/2026-03/{objectType}/{propertyName} (the `Patchcrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyName` operationId).
-func (c *Client) Patchcrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyNameWithBody(ctx context.Context, objectType string, propertyName string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPatchcrmproperties202603ObjectTypePropertyNamecrmproperties202509ObjectTypePropertyNameRequestWithBody(c.Server, objectType, propertyName, contentType, body)
 	if err != nil {
 		return nil, err
 	}

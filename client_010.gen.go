@@ -17,6 +17,1986 @@ import (
 	openapi_types "github.com/oapi-codegen/runtime/types"
 )
 
+// NewPostoauth202603tokenoauthv3tokenRequestWithFormdataBody calls the generic Postoauth202603tokenoauthv3token builder with application/x-www-form-urlencoded body
+func NewPostoauth202603tokenoauthv3tokenRequestWithFormdataBody(server string, body Postoauth202603tokenoauthv3tokenFormdataRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	bodyStr, err := runtime.MarshalForm(body, nil)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = strings.NewReader(bodyStr.Encode())
+	return NewPostoauth202603tokenoauthv3tokenRequestWithBody(server, "application/x-www-form-urlencoded", bodyReader)
+}
+
+// NewPostoauth202603tokenoauthv3tokenRequestWithBody constructs an http.Request for the Postoauth202603tokenoauthv3token method, with any body, and a specified content type
+func NewPostoauth202603tokenoauthv3tokenRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/oauth/2026-03/token")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewPostoauth202603tokenintrospectoauthv3tokenintrospectRequestWithFormdataBody calls the generic Postoauth202603tokenintrospectoauthv3tokenintrospect builder with application/x-www-form-urlencoded body
+func NewPostoauth202603tokenintrospectoauthv3tokenintrospectRequestWithFormdataBody(server string, body Postoauth202603tokenintrospectoauthv3tokenintrospectFormdataRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	bodyStr, err := runtime.MarshalForm(body, nil)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = strings.NewReader(bodyStr.Encode())
+	return NewPostoauth202603tokenintrospectoauthv3tokenintrospectRequestWithBody(server, "application/x-www-form-urlencoded", bodyReader)
+}
+
+// NewPostoauth202603tokenintrospectoauthv3tokenintrospectRequestWithBody constructs an http.Request for the Postoauth202603tokenintrospectoauthv3tokenintrospect method, with any body, and a specified content type
+func NewPostoauth202603tokenintrospectoauthv3tokenintrospectRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/oauth/2026-03/token/introspect")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewPostoauth202603tokenrevokeoauthv3tokenrevokeRequestWithFormdataBody calls the generic Postoauth202603tokenrevokeoauthv3tokenrevoke builder with application/x-www-form-urlencoded body
+func NewPostoauth202603tokenrevokeoauthv3tokenrevokeRequestWithFormdataBody(server string, body Postoauth202603tokenrevokeoauthv3tokenrevokeFormdataRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	bodyStr, err := runtime.MarshalForm(body, nil)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = strings.NewReader(bodyStr.Encode())
+	return NewPostoauth202603tokenrevokeoauthv3tokenrevokeRequestWithBody(server, "application/x-www-form-urlencoded", bodyReader)
+}
+
+// NewPostoauth202603tokenrevokeoauthv3tokenrevokeRequestWithBody constructs an http.Request for the Postoauth202603tokenrevokeoauthv3tokenrevoke method, with any body, and a specified content type
+func NewPostoauth202603tokenrevokeoauthv3tokenrevokeRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/oauth/2026-03/token/revoke")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewPostscheduler202603meetingscalendarRequest calls the generic Postscheduler202603meetingscalendar builder with application/json body
+func NewPostscheduler202603meetingscalendarRequest(server string, params *Postscheduler202603meetingscalendarParams, body Postscheduler202603meetingscalendarJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostscheduler202603meetingscalendarRequestWithBody(server, params, "application/json", bodyReader)
+}
+
+// NewPostscheduler202603meetingscalendarRequestWithBody constructs an http.Request for the Postscheduler202603meetingscalendar method, with any body, and a specified content type
+func NewPostscheduler202603meetingscalendarRequestWithBody(server string, params *Postscheduler202603meetingscalendarParams, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/scheduler/2026-03/meetings/calendar")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if queryFrag, err := runtime.StyleParamWithOptions("form", true, "organizerUserId", params.OrganizerUserId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+			return nil, err
+		} else {
+			for _, qp := range strings.Split(queryFrag, "&") {
+				rawQueryFragments = append(rawQueryFragments, qp)
+			}
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewGetscheduler202603meetingsmeetingLinksRequest constructs an http.Request for the Getscheduler202603meetingsmeetingLinks method
+func NewGetscheduler202603meetingsmeetingLinksRequest(server string, params *Getscheduler202603meetingsmeetingLinksParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/scheduler/2026-03/meetings/meeting-links")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.After != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "after", *params.After, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "limit", *params.Limit, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: "int32"}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Name != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "name", *params.Name, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.OrganizerUserId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "organizerUserId", *params.OrganizerUserId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Type != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "type", *params.Type, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewPostscheduler202603meetingsmeetingLinksbookRequest calls the generic Postscheduler202603meetingsmeetingLinksbook builder with application/json body
+func NewPostscheduler202603meetingsmeetingLinksbookRequest(server string, body Postscheduler202603meetingsmeetingLinksbookJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostscheduler202603meetingsmeetingLinksbookRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewPostscheduler202603meetingsmeetingLinksbookRequestWithBody constructs an http.Request for the Postscheduler202603meetingsmeetingLinksbook method, with any body, and a specified content type
+func NewPostscheduler202603meetingsmeetingLinksbookRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/scheduler/2026-03/meetings/meeting-links/book")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewGetscheduler202603meetingsmeetingLinksbookavailabilityPageSlugRequest constructs an http.Request for the Getscheduler202603meetingsmeetingLinksbookavailabilityPageSlug method
+func NewGetscheduler202603meetingsmeetingLinksbookavailabilityPageSlugRequest(server string, slug string, params *Getscheduler202603meetingsmeetingLinksbookavailabilityPageSlugParams) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "slug", slug, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/scheduler/2026-03/meetings/meeting-links/book/availability-page/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if queryFrag, err := runtime.StyleParamWithOptions("form", true, "timezone", params.Timezone, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+			return nil, err
+		} else {
+			for _, qp := range strings.Split(queryFrag, "&") {
+				rawQueryFragments = append(rawQueryFragments, qp)
+			}
+		}
+
+		if params.MonthOffset != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "monthOffset", *params.MonthOffset, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: "int32"}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGetscheduler202603meetingsmeetingLinksbookSlugRequest constructs an http.Request for the Getscheduler202603meetingsmeetingLinksbookSlug method
+func NewGetscheduler202603meetingsmeetingLinksbookSlugRequest(server string, slug string, params *Getscheduler202603meetingsmeetingLinksbookSlugParams) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "slug", slug, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/scheduler/2026-03/meetings/meeting-links/book/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if queryFrag, err := runtime.StyleParamWithOptions("form", true, "timezone", params.Timezone, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+			return nil, err
+		} else {
+			for _, qp := range strings.Split(queryFrag, "&") {
+				rawQueryFragments = append(rawQueryFragments, qp)
+			}
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewPostsettingscurrencies202603centralFxRatesaddCurrencysettingsv3currenciescentralFxRatesaddCurrencyRequest calls the generic Postsettingscurrencies202603centralFxRatesaddCurrencysettingsv3currenciescentralFxRatesaddCurrency builder with application/json body
+func NewPostsettingscurrencies202603centralFxRatesaddCurrencysettingsv3currenciescentralFxRatesaddCurrencyRequest(server string, body Postsettingscurrencies202603centralFxRatesaddCurrencysettingsv3currenciescentralFxRatesaddCurrencyJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostsettingscurrencies202603centralFxRatesaddCurrencysettingsv3currenciescentralFxRatesaddCurrencyRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewPostsettingscurrencies202603centralFxRatesaddCurrencysettingsv3currenciescentralFxRatesaddCurrencyRequestWithBody constructs an http.Request for the Postsettingscurrencies202603centralFxRatesaddCurrencysettingsv3currenciescentralFxRatesaddCurrency method, with any body, and a specified content type
+func NewPostsettingscurrencies202603centralFxRatesaddCurrencysettingsv3currenciescentralFxRatesaddCurrencyRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/settings/currencies/2026-03/central-fx-rates/add-currency")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewGetsettingscurrencies202603centralFxRatesinformationsettingsv3currenciescentralFxRatesinformationRequest constructs an http.Request for the Getsettingscurrencies202603centralFxRatesinformationsettingsv3currenciescentralFxRatesinformation method
+func NewGetsettingscurrencies202603centralFxRatesinformationsettingsv3currenciescentralFxRatesinformationRequest(server string) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/settings/currencies/2026-03/central-fx-rates/information")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGetsettingscurrencies202603centralFxRatesunsupportedCurrenciessettingsv3currenciescentralFxRatesunsupportedCurrenciesRequest constructs an http.Request for the Getsettingscurrencies202603centralFxRatesunsupportedCurrenciessettingsv3currenciescentralFxRatesunsupportedCurrencies method
+func NewGetsettingscurrencies202603centralFxRatesunsupportedCurrenciessettingsv3currenciescentralFxRatesunsupportedCurrenciesRequest(server string) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/settings/currencies/2026-03/central-fx-rates/unsupported-currencies")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGetsettingscurrencies202603codesRequest constructs an http.Request for the Getsettingscurrencies202603codes method
+func NewGetsettingscurrencies202603codesRequest(server string) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/settings/currencies/2026-03/codes")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGetsettingscurrencies202603companyCurrencyRequest constructs an http.Request for the Getsettingscurrencies202603companyCurrency method
+func NewGetsettingscurrencies202603companyCurrencyRequest(server string) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/settings/currencies/2026-03/company-currency")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewPutsettingscurrencies202603companyCurrencyRequest calls the generic Putsettingscurrencies202603companyCurrency builder with application/json body
+func NewPutsettingscurrencies202603companyCurrencyRequest(server string, body Putsettingscurrencies202603companyCurrencyJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPutsettingscurrencies202603companyCurrencyRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewPutsettingscurrencies202603companyCurrencyRequestWithBody constructs an http.Request for the Putsettingscurrencies202603companyCurrency method, with any body, and a specified content type
+func NewPutsettingscurrencies202603companyCurrencyRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/settings/currencies/2026-03/company-currency")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPut, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewGetsettingscurrencies202603exchangeRatesRequest constructs an http.Request for the Getsettingscurrencies202603exchangeRates method
+func NewGetsettingscurrencies202603exchangeRatesRequest(server string, params *Getsettingscurrencies202603exchangeRatesParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/settings/currencies/2026-03/exchange-rates")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.After != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "after", *params.After, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.FromCurrencyCode != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "fromCurrencyCode", *params.FromCurrencyCode, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "limit", *params.Limit, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: "int32"}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.ToCurrencyCode != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "toCurrencyCode", *params.ToCurrencyCode, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewPostsettingscurrencies202603exchangeRatesRequest calls the generic Postsettingscurrencies202603exchangeRates builder with application/json body
+func NewPostsettingscurrencies202603exchangeRatesRequest(server string, body Postsettingscurrencies202603exchangeRatesJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostsettingscurrencies202603exchangeRatesRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewPostsettingscurrencies202603exchangeRatesRequestWithBody constructs an http.Request for the Postsettingscurrencies202603exchangeRates method, with any body, and a specified content type
+func NewPostsettingscurrencies202603exchangeRatesRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/settings/currencies/2026-03/exchange-rates")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewPostsettingscurrencies202603exchangeRatesbatchcreateRequest calls the generic Postsettingscurrencies202603exchangeRatesbatchcreate builder with application/json body
+func NewPostsettingscurrencies202603exchangeRatesbatchcreateRequest(server string, body Postsettingscurrencies202603exchangeRatesbatchcreateJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostsettingscurrencies202603exchangeRatesbatchcreateRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewPostsettingscurrencies202603exchangeRatesbatchcreateRequestWithBody constructs an http.Request for the Postsettingscurrencies202603exchangeRatesbatchcreate method, with any body, and a specified content type
+func NewPostsettingscurrencies202603exchangeRatesbatchcreateRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/settings/currencies/2026-03/exchange-rates/batch/create")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewPostsettingscurrencies202603exchangeRatesbatchreadRequest calls the generic Postsettingscurrencies202603exchangeRatesbatchread builder with application/json body
+func NewPostsettingscurrencies202603exchangeRatesbatchreadRequest(server string, body Postsettingscurrencies202603exchangeRatesbatchreadJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostsettingscurrencies202603exchangeRatesbatchreadRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewPostsettingscurrencies202603exchangeRatesbatchreadRequestWithBody constructs an http.Request for the Postsettingscurrencies202603exchangeRatesbatchread method, with any body, and a specified content type
+func NewPostsettingscurrencies202603exchangeRatesbatchreadRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/settings/currencies/2026-03/exchange-rates/batch/read")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewPostsettingscurrencies202603exchangeRatesbatchupdateRequest calls the generic Postsettingscurrencies202603exchangeRatesbatchupdate builder with application/json body
+func NewPostsettingscurrencies202603exchangeRatesbatchupdateRequest(server string, body Postsettingscurrencies202603exchangeRatesbatchupdateJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostsettingscurrencies202603exchangeRatesbatchupdateRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewPostsettingscurrencies202603exchangeRatesbatchupdateRequestWithBody constructs an http.Request for the Postsettingscurrencies202603exchangeRatesbatchupdate method, with any body, and a specified content type
+func NewPostsettingscurrencies202603exchangeRatesbatchupdateRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/settings/currencies/2026-03/exchange-rates/batch/update")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewGetsettingscurrencies202603exchangeRatescurrentRequest constructs an http.Request for the Getsettingscurrencies202603exchangeRatescurrent method
+func NewGetsettingscurrencies202603exchangeRatescurrentRequest(server string) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/settings/currencies/2026-03/exchange-rates/current")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewPostsettingscurrencies202603exchangeRatesupdateVisibilityRequest calls the generic Postsettingscurrencies202603exchangeRatesupdateVisibility builder with application/json body
+func NewPostsettingscurrencies202603exchangeRatesupdateVisibilityRequest(server string, body Postsettingscurrencies202603exchangeRatesupdateVisibilityJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostsettingscurrencies202603exchangeRatesupdateVisibilityRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewPostsettingscurrencies202603exchangeRatesupdateVisibilityRequestWithBody constructs an http.Request for the Postsettingscurrencies202603exchangeRatesupdateVisibility method, with any body, and a specified content type
+func NewPostsettingscurrencies202603exchangeRatesupdateVisibilityRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/settings/currencies/2026-03/exchange-rates/update-visibility")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewGetsettingscurrencies202603exchangeRatesExchangeRateIdRequest constructs an http.Request for the Getsettingscurrencies202603exchangeRatesExchangeRateId method
+func NewGetsettingscurrencies202603exchangeRatesExchangeRateIdRequest(server string, exchangeRateId string) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "exchangeRateId", exchangeRateId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/settings/currencies/2026-03/exchange-rates/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewPatchsettingscurrencies202603exchangeRatesExchangeRateIdRequest calls the generic Patchsettingscurrencies202603exchangeRatesExchangeRateId builder with application/json body
+func NewPatchsettingscurrencies202603exchangeRatesExchangeRateIdRequest(server string, exchangeRateId string, body Patchsettingscurrencies202603exchangeRatesExchangeRateIdJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPatchsettingscurrencies202603exchangeRatesExchangeRateIdRequestWithBody(server, exchangeRateId, "application/json", bodyReader)
+}
+
+// NewPatchsettingscurrencies202603exchangeRatesExchangeRateIdRequestWithBody constructs an http.Request for the Patchsettingscurrencies202603exchangeRatesExchangeRateId method, with any body, and a specified content type
+func NewPatchsettingscurrencies202603exchangeRatesExchangeRateIdRequestWithBody(server string, exchangeRateId string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "exchangeRateId", exchangeRateId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/settings/currencies/2026-03/exchange-rates/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPatch, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewGetsettingsusers202603settingsusersv3Request constructs an http.Request for the Getsettingsusers202603settingsusersv3 method
+func NewGetsettingsusers202603settingsusersv3Request(server string, params *Getsettingsusers202603settingsusersv3Params) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/settings/users/2026-03")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.After != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "after", *params.After, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "limit", *params.Limit, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: "int32"}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewPostsettingsusers202603settingsusersv3Request calls the generic Postsettingsusers202603settingsusersv3 builder with application/json body
+func NewPostsettingsusers202603settingsusersv3Request(server string, body Postsettingsusers202603settingsusersv3JSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostsettingsusers202603settingsusersv3RequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewPostsettingsusers202603settingsusersv3RequestWithBody constructs an http.Request for the Postsettingsusers202603settingsusersv3 method, with any body, and a specified content type
+func NewPostsettingsusers202603settingsusersv3RequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/settings/users/2026-03")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewGetsettingsusers202603rolesGetAllRequest constructs an http.Request for the Getsettingsusers202603rolesGetAll method
+func NewGetsettingsusers202603rolesGetAllRequest(server string) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/settings/users/2026-03/roles")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGetsettingsusers202603teamsGetAllRequest constructs an http.Request for the Getsettingsusers202603teamsGetAll method
+func NewGetsettingsusers202603teamsGetAllRequest(server string) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/settings/users/2026-03/teams")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewDeletesettingsusers202603UserIdArchiveRequest constructs an http.Request for the Deletesettingsusers202603UserIdArchive method
+func NewDeletesettingsusers202603UserIdArchiveRequest(server string, userId string, params *Deletesettingsusers202603UserIdArchiveParams) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "userId", userId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/settings/users/2026-03/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.IdProperty != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "idProperty", *params.IdProperty, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodDelete, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGetsettingsusers202603UserIdGetByIdRequest constructs an http.Request for the Getsettingsusers202603UserIdGetById method
+func NewGetsettingsusers202603UserIdGetByIdRequest(server string, userId string, params *Getsettingsusers202603UserIdGetByIdParams) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "userId", userId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/settings/users/2026-03/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.IdProperty != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "idProperty", *params.IdProperty, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewPutsettingsusers202603UserIdUpdateRequest calls the generic Putsettingsusers202603UserIdUpdate builder with application/json body
+func NewPutsettingsusers202603UserIdUpdateRequest(server string, userId string, params *Putsettingsusers202603UserIdUpdateParams, body Putsettingsusers202603UserIdUpdateJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPutsettingsusers202603UserIdUpdateRequestWithBody(server, userId, params, "application/json", bodyReader)
+}
+
+// NewPutsettingsusers202603UserIdUpdateRequestWithBody constructs an http.Request for the Putsettingsusers202603UserIdUpdate method, with any body, and a specified content type
+func NewPutsettingsusers202603UserIdUpdateRequestWithBody(server string, userId string, params *Putsettingsusers202603UserIdUpdateParams, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "userId", userId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/settings/users/2026-03/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.IdProperty != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "idProperty", *params.IdProperty, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodPut, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewGettaxRates202603taxRatesRequest constructs an http.Request for the GettaxRates202603taxRates method
+func NewGettaxRates202603taxRatesRequest(server string, params *GettaxRates202603taxRatesParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/tax-rates/2026-03/tax-rates")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.Active != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "active", *params.Active, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "boolean", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.After != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "after", *params.After, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "limit", *params.Limit, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: "int32"}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGettaxRates202603taxRatesTaxRateGroupIdRequest constructs an http.Request for the GettaxRates202603taxRatesTaxRateGroupId method
+func NewGettaxRates202603taxRatesTaxRateGroupIdRequest(server string, taxRateGroupId string) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "taxRateGroupId", taxRateGroupId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/tax-rates/2026-03/tax-rates/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGeturlMappings202603urlMappingsurlMappingsv3urlMappingsRequest constructs an http.Request for the GeturlMappings202603urlMappingsurlMappingsv3urlMappings method
+func NewGeturlMappings202603urlMappingsurlMappingsv3urlMappingsRequest(server string) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/url-mappings/2026-03/url-mappings")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewPosturlMappings202603urlMappingsurlMappingsv3urlMappingsRequestWithBody constructs an http.Request for the PosturlMappings202603urlMappingsurlMappingsv3urlMappings method, with any body, and a specified content type
+func NewPosturlMappings202603urlMappingsurlMappingsv3urlMappingsRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/url-mappings/2026-03/url-mappings")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewDeleteurlMappings202603urlMappingsIdurlMappingsv3urlMappingsIdRequest constructs an http.Request for the DeleteurlMappings202603urlMappingsIdurlMappingsv3urlMappingsId method
+func NewDeleteurlMappings202603urlMappingsIdurlMappingsv3urlMappingsIdRequest(server string, id int64) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "id", id, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: "int64"})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/url-mappings/2026-03/url-mappings/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodDelete, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGeturlMappings202603urlMappingsIdurlMappingsv3urlMappingsIdRequest constructs an http.Request for the GeturlMappings202603urlMappingsIdurlMappingsv3urlMappingsId method
+func NewGeturlMappings202603urlMappingsIdurlMappingsv3urlMappingsIdRequest(server string, id int64) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "id", id, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: "int64"})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/url-mappings/2026-03/url-mappings/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewPostvisitorIdentification202603tokenscreateGenerateTokenRequest calls the generic PostvisitorIdentification202603tokenscreateGenerateToken builder with application/json body
+func NewPostvisitorIdentification202603tokenscreateGenerateTokenRequest(server string, body PostvisitorIdentification202603tokenscreateGenerateTokenJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostvisitorIdentification202603tokenscreateGenerateTokenRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewPostvisitorIdentification202603tokenscreateGenerateTokenRequestWithBody constructs an http.Request for the PostvisitorIdentification202603tokenscreateGenerateToken method, with any body, and a specified content type
+func NewPostvisitorIdentification202603tokenscreateGenerateTokenRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/visitor-identification/2026-03/tokens/create")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewGetwebhooksJournaljournalLocal202603batchearliestCountRequest constructs an http.Request for the GetwebhooksJournaljournalLocal202603batchearliestCount method
+func NewGetwebhooksJournaljournalLocal202603batchearliestCountRequest(server string, count int32, params *GetwebhooksJournaljournalLocal202603batchearliestCountParams) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "count", count, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: "int32"})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/webhooks-journal/journal-local/2026-03/batch/earliest/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.InstallPortalId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "installPortalId", *params.InstallPortalId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: "int32"}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGetwebhooksJournaljournalLocal202603batchlatestCountRequest constructs an http.Request for the GetwebhooksJournaljournalLocal202603batchlatestCount method
+func NewGetwebhooksJournaljournalLocal202603batchlatestCountRequest(server string, count int32, params *GetwebhooksJournaljournalLocal202603batchlatestCountParams) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "count", count, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: "int32"})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/webhooks-journal/journal-local/2026-03/batch/latest/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.InstallPortalId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "installPortalId", *params.InstallPortalId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: "int32"}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewPostwebhooksJournaljournalLocal202603batchreadRequest calls the generic PostwebhooksJournaljournalLocal202603batchread builder with application/json body
+func NewPostwebhooksJournaljournalLocal202603batchreadRequest(server string, params *PostwebhooksJournaljournalLocal202603batchreadParams, body PostwebhooksJournaljournalLocal202603batchreadJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostwebhooksJournaljournalLocal202603batchreadRequestWithBody(server, params, "application/json", bodyReader)
+}
+
+// NewPostwebhooksJournaljournalLocal202603batchreadRequestWithBody constructs an http.Request for the PostwebhooksJournaljournalLocal202603batchread method, with any body, and a specified content type
+func NewPostwebhooksJournaljournalLocal202603batchreadRequestWithBody(server string, params *PostwebhooksJournaljournalLocal202603batchreadParams, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/webhooks-journal/journal-local/2026-03/batch/read")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.InstallPortalId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "installPortalId", *params.InstallPortalId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: "int32"}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewGetwebhooksJournaljournalLocal202603batchOffsetnextCountRequest constructs an http.Request for the GetwebhooksJournaljournalLocal202603batchOffsetnextCount method
+func NewGetwebhooksJournaljournalLocal202603batchOffsetnextCountRequest(server string, offset string, count int32, params *GetwebhooksJournaljournalLocal202603batchOffsetnextCountParams) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "offset", offset, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	var pathParam1 string
+
+	pathParam1, err = runtime.StyleParamWithOptions("simple", false, "count", count, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: "int32"})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/webhooks-journal/journal-local/2026-03/batch/%s/next/%s", pathParam0, pathParam1)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.InstallPortalId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "installPortalId", *params.InstallPortalId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: "int32"}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGetwebhooksJournaljournalLocal202603earliestRequest constructs an http.Request for the GetwebhooksJournaljournalLocal202603earliest method
+func NewGetwebhooksJournaljournalLocal202603earliestRequest(server string, params *GetwebhooksJournaljournalLocal202603earliestParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/webhooks-journal/journal-local/2026-03/earliest")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.InstallPortalId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "installPortalId", *params.InstallPortalId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: "int32"}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
 // NewGetwebhooksJournaljournalLocal202603latestRequest constructs an http.Request for the GetwebhooksJournaljournalLocal202603latest method
 func NewGetwebhooksJournaljournalLocal202603latestRequest(server string, params *GetwebhooksJournaljournalLocal202603latestParams) (*http.Request, error) {
 	var err error
@@ -1900,6 +3880,15 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /cms/blogs/2026-03/authors (the `Postcmsblogs202603authorsCreate` operationId).
 	Postcmsblogs202603authorsCreateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmsblogs202603authorsCreateResponse, error)
 
+	// Postcmsblogs202603authorsCreateWithResponse Create a new Blog Author
+	//
+	// Create a new Blog Author.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/blogs/2026-03/authors (the `Postcmsblogs202603authorsCreate` operationId).
+	Postcmsblogs202603authorsCreateWithResponse(ctx context.Context, body Postcmsblogs202603authorsCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmsblogs202603authorsCreateResponse, error)
+
 	// Postcmsblogs202603authorsbatcharchiveArchiveBatchWithBodyWithResponse Delete a batch of Blog Authors
 	//
 	// Delete the Blog Author objects identified in the request body.
@@ -1908,6 +3897,15 @@ type ClientWithResponsesInterface interface {
 	//
 	// Corresponds with POST /cms/blogs/2026-03/authors/batch/archive (the `Postcmsblogs202603authorsbatcharchiveArchiveBatch` operationId).
 	Postcmsblogs202603authorsbatcharchiveArchiveBatchWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmsblogs202603authorsbatcharchiveArchiveBatchResponse, error)
+
+	// Postcmsblogs202603authorsbatcharchiveArchiveBatchWithResponse Delete a batch of Blog Authors
+	//
+	// Delete the Blog Author objects identified in the request body.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/blogs/2026-03/authors/batch/archive (the `Postcmsblogs202603authorsbatcharchiveArchiveBatch` operationId).
+	Postcmsblogs202603authorsbatcharchiveArchiveBatchWithResponse(ctx context.Context, body Postcmsblogs202603authorsbatcharchiveArchiveBatchJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmsblogs202603authorsbatcharchiveArchiveBatchResponse, error)
 
 	// Postcmsblogs202603authorsbatchcreateCreateBatchWithBodyWithResponse Create a batch of Blog Authors
 	//
@@ -1918,6 +3916,15 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /cms/blogs/2026-03/authors/batch/create (the `Postcmsblogs202603authorsbatchcreateCreateBatch` operationId).
 	Postcmsblogs202603authorsbatchcreateCreateBatchWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmsblogs202603authorsbatchcreateCreateBatchResponse, error)
 
+	// Postcmsblogs202603authorsbatchcreateCreateBatchWithResponse Create a batch of Blog Authors
+	//
+	// Create the Blog Author objects detailed in the request body.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/blogs/2026-03/authors/batch/create (the `Postcmsblogs202603authorsbatchcreateCreateBatch` operationId).
+	Postcmsblogs202603authorsbatchcreateCreateBatchWithResponse(ctx context.Context, body Postcmsblogs202603authorsbatchcreateCreateBatchJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmsblogs202603authorsbatchcreateCreateBatchResponse, error)
+
 	// Postcmsblogs202603authorsbatchreadReadBatchWithBodyWithResponse Retrieve a batch of Blog Authors
 	//
 	// Retrieve the Blog Author objects identified in the request body.
@@ -1927,6 +3934,15 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /cms/blogs/2026-03/authors/batch/read (the `Postcmsblogs202603authorsbatchreadReadBatch` operationId).
 	Postcmsblogs202603authorsbatchreadReadBatchWithBodyWithResponse(ctx context.Context, params *Postcmsblogs202603authorsbatchreadReadBatchParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmsblogs202603authorsbatchreadReadBatchResponse, error)
 
+	// Postcmsblogs202603authorsbatchreadReadBatchWithResponse Retrieve a batch of Blog Authors
+	//
+	// Retrieve the Blog Author objects identified in the request body.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/blogs/2026-03/authors/batch/read (the `Postcmsblogs202603authorsbatchreadReadBatch` operationId).
+	Postcmsblogs202603authorsbatchreadReadBatchWithResponse(ctx context.Context, params *Postcmsblogs202603authorsbatchreadReadBatchParams, body Postcmsblogs202603authorsbatchreadReadBatchJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmsblogs202603authorsbatchreadReadBatchResponse, error)
+
 	// Postcmsblogs202603authorsbatchupdateUpdateBatchWithBodyWithResponse Update a batch of Blog Authors
 	//
 	// Update the Blog Author objects identified in the request body.
@@ -1935,6 +3951,15 @@ type ClientWithResponsesInterface interface {
 	//
 	// Corresponds with POST /cms/blogs/2026-03/authors/batch/update (the `Postcmsblogs202603authorsbatchupdateUpdateBatch` operationId).
 	Postcmsblogs202603authorsbatchupdateUpdateBatchWithBodyWithResponse(ctx context.Context, params *Postcmsblogs202603authorsbatchupdateUpdateBatchParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmsblogs202603authorsbatchupdateUpdateBatchResponse, error)
+
+	// Postcmsblogs202603authorsbatchupdateUpdateBatchWithResponse Update a batch of Blog Authors
+	//
+	// Update the Blog Author objects identified in the request body.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/blogs/2026-03/authors/batch/update (the `Postcmsblogs202603authorsbatchupdateUpdateBatch` operationId).
+	Postcmsblogs202603authorsbatchupdateUpdateBatchWithResponse(ctx context.Context, params *Postcmsblogs202603authorsbatchupdateUpdateBatchParams, body Postcmsblogs202603authorsbatchupdateUpdateBatchJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmsblogs202603authorsbatchupdateUpdateBatchResponse, error)
 
 	// Getcmsblogs202603authorscursorcmsblogsv3authorscursorWithResponse List Authors
 	//
@@ -1963,6 +3988,15 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /cms/blogs/2026-03/authors/multi-language/attach-to-lang-group (the `Postcmsblogs202603authorsmultiLanguageattachToLangGroupAttachToLangGroup` operationId).
 	Postcmsblogs202603authorsmultiLanguageattachToLangGroupAttachToLangGroupWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmsblogs202603authorsmultiLanguageattachToLangGroupAttachToLangGroupResponse, error)
 
+	// Postcmsblogs202603authorsmultiLanguageattachToLangGroupAttachToLangGroupWithResponse Attach a Blog Author to a multi-language group
+	//
+	// Attach a Blog Author to a multi-language group.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/blogs/2026-03/authors/multi-language/attach-to-lang-group (the `Postcmsblogs202603authorsmultiLanguageattachToLangGroupAttachToLangGroup` operationId).
+	Postcmsblogs202603authorsmultiLanguageattachToLangGroupAttachToLangGroupWithResponse(ctx context.Context, body Postcmsblogs202603authorsmultiLanguageattachToLangGroupAttachToLangGroupJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmsblogs202603authorsmultiLanguageattachToLangGroupAttachToLangGroupResponse, error)
+
 	// Postcmsblogs202603authorsmultiLanguagecreateLanguageVariationCreateLangVariationWithBodyWithResponse Create a new language variation
 	//
 	// Create a new language variation from an existing Blog Author.
@@ -1971,6 +4005,15 @@ type ClientWithResponsesInterface interface {
 	//
 	// Corresponds with POST /cms/blogs/2026-03/authors/multi-language/create-language-variation (the `Postcmsblogs202603authorsmultiLanguagecreateLanguageVariationCreateLangVariation` operationId).
 	Postcmsblogs202603authorsmultiLanguagecreateLanguageVariationCreateLangVariationWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmsblogs202603authorsmultiLanguagecreateLanguageVariationCreateLangVariationResponse, error)
+
+	// Postcmsblogs202603authorsmultiLanguagecreateLanguageVariationCreateLangVariationWithResponse Create a new language variation
+	//
+	// Create a new language variation from an existing Blog Author.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/blogs/2026-03/authors/multi-language/create-language-variation (the `Postcmsblogs202603authorsmultiLanguagecreateLanguageVariationCreateLangVariation` operationId).
+	Postcmsblogs202603authorsmultiLanguagecreateLanguageVariationCreateLangVariationWithResponse(ctx context.Context, body Postcmsblogs202603authorsmultiLanguagecreateLanguageVariationCreateLangVariationJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmsblogs202603authorsmultiLanguagecreateLanguageVariationCreateLangVariationResponse, error)
 
 	// Postcmsblogs202603authorsmultiLanguagedetachFromLangGroupDetachFromLangGroupWithBodyWithResponse Detach a Blog Author from a multi-language group
 	//
@@ -1981,6 +4024,15 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /cms/blogs/2026-03/authors/multi-language/detach-from-lang-group (the `Postcmsblogs202603authorsmultiLanguagedetachFromLangGroupDetachFromLangGroup` operationId).
 	Postcmsblogs202603authorsmultiLanguagedetachFromLangGroupDetachFromLangGroupWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmsblogs202603authorsmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse, error)
 
+	// Postcmsblogs202603authorsmultiLanguagedetachFromLangGroupDetachFromLangGroupWithResponse Detach a Blog Author from a multi-language group
+	//
+	// Detach a Blog Author from a multi-language group.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/blogs/2026-03/authors/multi-language/detach-from-lang-group (the `Postcmsblogs202603authorsmultiLanguagedetachFromLangGroupDetachFromLangGroup` operationId).
+	Postcmsblogs202603authorsmultiLanguagedetachFromLangGroupDetachFromLangGroupWithResponse(ctx context.Context, body Postcmsblogs202603authorsmultiLanguagedetachFromLangGroupDetachFromLangGroupJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmsblogs202603authorsmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse, error)
+
 	// Putcmsblogs202603authorsmultiLanguagesetNewLangPrimarySetLangPrimaryWithBodyWithResponse Set a new primary language
 	//
 	// Set a Blog Author as the primary language of a multi-language group.
@@ -1990,6 +4042,15 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with PUT /cms/blogs/2026-03/authors/multi-language/set-new-lang-primary (the `Putcmsblogs202603authorsmultiLanguagesetNewLangPrimarySetLangPrimary` operationId).
 	Putcmsblogs202603authorsmultiLanguagesetNewLangPrimarySetLangPrimaryWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Putcmsblogs202603authorsmultiLanguagesetNewLangPrimarySetLangPrimaryResponse, error)
 
+	// Putcmsblogs202603authorsmultiLanguagesetNewLangPrimarySetLangPrimaryWithResponse Set a new primary language
+	//
+	// Set a Blog Author as the primary language of a multi-language group.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PUT /cms/blogs/2026-03/authors/multi-language/set-new-lang-primary (the `Putcmsblogs202603authorsmultiLanguagesetNewLangPrimarySetLangPrimary` operationId).
+	Putcmsblogs202603authorsmultiLanguagesetNewLangPrimarySetLangPrimaryWithResponse(ctx context.Context, body Putcmsblogs202603authorsmultiLanguagesetNewLangPrimarySetLangPrimaryJSONRequestBody, reqEditors ...RequestEditorFn) (*Putcmsblogs202603authorsmultiLanguagesetNewLangPrimarySetLangPrimaryResponse, error)
+
 	// Postcmsblogs202603authorsmultiLanguageupdateLanguagesUpdateLangsWithBodyWithResponse Update languages of multi-language group
 	//
 	// Explicitly set new languages for each Blog Author in a multi-language group.
@@ -1998,6 +4059,15 @@ type ClientWithResponsesInterface interface {
 	//
 	// Corresponds with POST /cms/blogs/2026-03/authors/multi-language/update-languages (the `Postcmsblogs202603authorsmultiLanguageupdateLanguagesUpdateLangs` operationId).
 	Postcmsblogs202603authorsmultiLanguageupdateLanguagesUpdateLangsWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmsblogs202603authorsmultiLanguageupdateLanguagesUpdateLangsResponse, error)
+
+	// Postcmsblogs202603authorsmultiLanguageupdateLanguagesUpdateLangsWithResponse Update languages of multi-language group
+	//
+	// Explicitly set new languages for each Blog Author in a multi-language group.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/blogs/2026-03/authors/multi-language/update-languages (the `Postcmsblogs202603authorsmultiLanguageupdateLanguagesUpdateLangs` operationId).
+	Postcmsblogs202603authorsmultiLanguageupdateLanguagesUpdateLangsWithResponse(ctx context.Context, body Postcmsblogs202603authorsmultiLanguageupdateLanguagesUpdateLangsJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmsblogs202603authorsmultiLanguageupdateLanguagesUpdateLangsResponse, error)
 
 	// Deletecmsblogs202603authorsObjectIdArchiveWithResponse Delete a Blog Author
 	//
@@ -2027,6 +4097,16 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with PATCH /cms/blogs/2026-03/authors/{objectId} (the `Patchcmsblogs202603authorsObjectIdUpdate` operationId).
 	Patchcmsblogs202603authorsObjectIdUpdateWithBodyWithResponse(ctx context.Context, objectId string, params *Patchcmsblogs202603authorsObjectIdUpdateParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Patchcmsblogs202603authorsObjectIdUpdateResponse, error)
 
+	// Patchcmsblogs202603authorsObjectIdUpdateWithResponse Update a Blog Author
+	//
+	// Sparse updates a single Blog Author object identified by the id in the path.
+	// All the column values need not be specified. Only the that need to be modified can be specified.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PATCH /cms/blogs/2026-03/authors/{objectId} (the `Patchcmsblogs202603authorsObjectIdUpdate` operationId).
+	Patchcmsblogs202603authorsObjectIdUpdateWithResponse(ctx context.Context, objectId string, params *Patchcmsblogs202603authorsObjectIdUpdateParams, body Patchcmsblogs202603authorsObjectIdUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*Patchcmsblogs202603authorsObjectIdUpdateResponse, error)
+
 	// Getcmsblogs202603postsGetPageWithResponse Get all posts
 	//
 	// Retrieve all blog posts, with paging and filtering options. This method would be useful for an integration that ingests posts and suggests edits.
@@ -2045,6 +4125,15 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /cms/blogs/2026-03/posts (the `Postcmsblogs202603postsCreate` operationId).
 	Postcmsblogs202603postsCreateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmsblogs202603postsCreateResponse, error)
 
+	// Postcmsblogs202603postsCreateWithResponse Create a new post
+	//
+	// Create a new blog post, specifying its content in the request body.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/blogs/2026-03/posts (the `Postcmsblogs202603postsCreate` operationId).
+	Postcmsblogs202603postsCreateWithResponse(ctx context.Context, body Postcmsblogs202603postsCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmsblogs202603postsCreateResponse, error)
+
 	// Postcmsblogs202603postsbatcharchiveArchiveWithBodyWithResponse Delete a batch of blog posts
 	//
 	// Delete a blog post by ID.
@@ -2055,6 +4144,16 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /cms/blogs/2026-03/posts/batch/archive (the `Postcmsblogs202603postsbatcharchiveArchive` operationId).
 	Postcmsblogs202603postsbatcharchiveArchiveWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmsblogs202603postsbatcharchiveArchiveResponse, error)
 
+	// Postcmsblogs202603postsbatcharchiveArchiveWithResponse Delete a batch of blog posts
+	//
+	// Delete a blog post by ID.
+	// Note: This is not the same as the in-app `archive` function. To perform a dashboard `archive` send an normal update with the `archivedInDashboard` field set to `true`.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/blogs/2026-03/posts/batch/archive (the `Postcmsblogs202603postsbatcharchiveArchive` operationId).
+	Postcmsblogs202603postsbatcharchiveArchiveWithResponse(ctx context.Context, body Postcmsblogs202603postsbatcharchiveArchiveJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmsblogs202603postsbatcharchiveArchiveResponse, error)
+
 	// Postcmsblogs202603postsbatchcreateCreateWithBodyWithResponse Create a batch of blog posts
 	//
 	// Create a batch of blog posts, specifying their content in the request body.
@@ -2063,6 +4162,15 @@ type ClientWithResponsesInterface interface {
 	//
 	// Corresponds with POST /cms/blogs/2026-03/posts/batch/create (the `Postcmsblogs202603postsbatchcreateCreate` operationId).
 	Postcmsblogs202603postsbatchcreateCreateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmsblogs202603postsbatchcreateCreateResponse, error)
+
+	// Postcmsblogs202603postsbatchcreateCreateWithResponse Create a batch of blog posts
+	//
+	// Create a batch of blog posts, specifying their content in the request body.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/blogs/2026-03/posts/batch/create (the `Postcmsblogs202603postsbatchcreateCreate` operationId).
+	Postcmsblogs202603postsbatchcreateCreateWithResponse(ctx context.Context, body Postcmsblogs202603postsbatchcreateCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmsblogs202603postsbatchcreateCreateResponse, error)
 
 	// Postcmsblogs202603postsbatchreadReadWithBodyWithResponse Retrieve a batch of Blog Posts
 	//
@@ -2073,6 +4181,15 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /cms/blogs/2026-03/posts/batch/read (the `Postcmsblogs202603postsbatchreadRead` operationId).
 	Postcmsblogs202603postsbatchreadReadWithBodyWithResponse(ctx context.Context, params *Postcmsblogs202603postsbatchreadReadParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmsblogs202603postsbatchreadReadResponse, error)
 
+	// Postcmsblogs202603postsbatchreadReadWithResponse Retrieve a batch of Blog Posts
+	//
+	// Retrieve a batch of blog posts by ID. identified in the request body.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/blogs/2026-03/posts/batch/read (the `Postcmsblogs202603postsbatchreadRead` operationId).
+	Postcmsblogs202603postsbatchreadReadWithResponse(ctx context.Context, params *Postcmsblogs202603postsbatchreadReadParams, body Postcmsblogs202603postsbatchreadReadJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmsblogs202603postsbatchreadReadResponse, error)
+
 	// Postcmsblogs202603postsbatchupdateUpdateWithBodyWithResponse Update a batch of Blog Posts
 	//
 	// Update a batch of blog posts.
@@ -2082,6 +4199,15 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /cms/blogs/2026-03/posts/batch/update (the `Postcmsblogs202603postsbatchupdateUpdate` operationId).
 	Postcmsblogs202603postsbatchupdateUpdateWithBodyWithResponse(ctx context.Context, params *Postcmsblogs202603postsbatchupdateUpdateParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmsblogs202603postsbatchupdateUpdateResponse, error)
 
+	// Postcmsblogs202603postsbatchupdateUpdateWithResponse Update a batch of Blog Posts
+	//
+	// Update a batch of blog posts.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/blogs/2026-03/posts/batch/update (the `Postcmsblogs202603postsbatchupdateUpdate` operationId).
+	Postcmsblogs202603postsbatchupdateUpdateWithResponse(ctx context.Context, params *Postcmsblogs202603postsbatchupdateUpdateParams, body Postcmsblogs202603postsbatchupdateUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmsblogs202603postsbatchupdateUpdateResponse, error)
+
 	// Postcmsblogs202603postscloneCloneWithBodyWithResponse Clone a blog post
 	//
 	// Clone a blog post, making a copy of it in a new blog post.
@@ -2090,6 +4216,15 @@ type ClientWithResponsesInterface interface {
 	//
 	// Corresponds with POST /cms/blogs/2026-03/posts/clone (the `Postcmsblogs202603postscloneClone` operationId).
 	Postcmsblogs202603postscloneCloneWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmsblogs202603postscloneCloneResponse, error)
+
+	// Postcmsblogs202603postscloneCloneWithResponse Clone a blog post
+	//
+	// Clone a blog post, making a copy of it in a new blog post.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/blogs/2026-03/posts/clone (the `Postcmsblogs202603postscloneClone` operationId).
+	Postcmsblogs202603postscloneCloneWithResponse(ctx context.Context, body Postcmsblogs202603postscloneCloneJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmsblogs202603postscloneCloneResponse, error)
 
 	// Getcmsblogs202603postscursorcmsblogsv3postscursorWithResponse List posts
 	//
@@ -2118,6 +4253,15 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /cms/blogs/2026-03/posts/multi-language/attach-to-lang-group (the `Postcmsblogs202603postsmultiLanguageattachToLangGroupAttachToLangGroup` operationId).
 	Postcmsblogs202603postsmultiLanguageattachToLangGroupAttachToLangGroupWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmsblogs202603postsmultiLanguageattachToLangGroupAttachToLangGroupResponse, error)
 
+	// Postcmsblogs202603postsmultiLanguageattachToLangGroupAttachToLangGroupWithResponse Attach post to a multi-language group
+	//
+	// Attach a blog post to a [multi-language group](https://developers.hubspot.com/docs/guides/cms/content/multi-language-content).
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/blogs/2026-03/posts/multi-language/attach-to-lang-group (the `Postcmsblogs202603postsmultiLanguageattachToLangGroupAttachToLangGroup` operationId).
+	Postcmsblogs202603postsmultiLanguageattachToLangGroupAttachToLangGroupWithResponse(ctx context.Context, body Postcmsblogs202603postsmultiLanguageattachToLangGroupAttachToLangGroupJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmsblogs202603postsmultiLanguageattachToLangGroupAttachToLangGroupResponse, error)
+
 	// Postcmsblogs202603postsmultiLanguagecreateLanguageVariationCreateLangVariationWithBodyWithResponse Create a language variation
 	//
 	// Create a new language variation from an existing blog post.
@@ -2126,6 +4270,15 @@ type ClientWithResponsesInterface interface {
 	//
 	// Corresponds with POST /cms/blogs/2026-03/posts/multi-language/create-language-variation (the `Postcmsblogs202603postsmultiLanguagecreateLanguageVariationCreateLangVariation` operationId).
 	Postcmsblogs202603postsmultiLanguagecreateLanguageVariationCreateLangVariationWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmsblogs202603postsmultiLanguagecreateLanguageVariationCreateLangVariationResponse, error)
+
+	// Postcmsblogs202603postsmultiLanguagecreateLanguageVariationCreateLangVariationWithResponse Create a language variation
+	//
+	// Create a new language variation from an existing blog post.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/blogs/2026-03/posts/multi-language/create-language-variation (the `Postcmsblogs202603postsmultiLanguagecreateLanguageVariationCreateLangVariation` operationId).
+	Postcmsblogs202603postsmultiLanguagecreateLanguageVariationCreateLangVariationWithResponse(ctx context.Context, body Postcmsblogs202603postsmultiLanguagecreateLanguageVariationCreateLangVariationJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmsblogs202603postsmultiLanguagecreateLanguageVariationCreateLangVariationResponse, error)
 
 	// Postcmsblogs202603postsmultiLanguagedetachFromLangGroupDetachFromLangGroupWithBodyWithResponse Detach post from a multi-language group
 	//
@@ -2136,6 +4289,15 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /cms/blogs/2026-03/posts/multi-language/detach-from-lang-group (the `Postcmsblogs202603postsmultiLanguagedetachFromLangGroupDetachFromLangGroup` operationId).
 	Postcmsblogs202603postsmultiLanguagedetachFromLangGroupDetachFromLangGroupWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmsblogs202603postsmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse, error)
 
+	// Postcmsblogs202603postsmultiLanguagedetachFromLangGroupDetachFromLangGroupWithResponse Detach post from a multi-language group
+	//
+	// Detach a blog post from a [multi-language group](https://developers.hubspot.com/docs/guides/cms/content/multi-language-content).
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/blogs/2026-03/posts/multi-language/detach-from-lang-group (the `Postcmsblogs202603postsmultiLanguagedetachFromLangGroupDetachFromLangGroup` operationId).
+	Postcmsblogs202603postsmultiLanguagedetachFromLangGroupDetachFromLangGroupWithResponse(ctx context.Context, body Postcmsblogs202603postsmultiLanguagedetachFromLangGroupDetachFromLangGroupJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmsblogs202603postsmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse, error)
+
 	// Putcmsblogs202603postsmultiLanguagesetNewLangPrimarySetLangPrimaryWithBodyWithResponse Set a new primary language
 	//
 	// Set the primary language of a [multi-language group](https://developers.hubspot.com/docs/guides/cms/content/multi-language-content) to the language of the provided post (specified as an ID in the request body)
@@ -2144,6 +4306,15 @@ type ClientWithResponsesInterface interface {
 	//
 	// Corresponds with PUT /cms/blogs/2026-03/posts/multi-language/set-new-lang-primary (the `Putcmsblogs202603postsmultiLanguagesetNewLangPrimarySetLangPrimary` operationId).
 	Putcmsblogs202603postsmultiLanguagesetNewLangPrimarySetLangPrimaryWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Putcmsblogs202603postsmultiLanguagesetNewLangPrimarySetLangPrimaryResponse, error)
+
+	// Putcmsblogs202603postsmultiLanguagesetNewLangPrimarySetLangPrimaryWithResponse Set a new primary language
+	//
+	// Set the primary language of a [multi-language group](https://developers.hubspot.com/docs/guides/cms/content/multi-language-content) to the language of the provided post (specified as an ID in the request body)
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PUT /cms/blogs/2026-03/posts/multi-language/set-new-lang-primary (the `Putcmsblogs202603postsmultiLanguagesetNewLangPrimarySetLangPrimary` operationId).
+	Putcmsblogs202603postsmultiLanguagesetNewLangPrimarySetLangPrimaryWithResponse(ctx context.Context, body Putcmsblogs202603postsmultiLanguagesetNewLangPrimarySetLangPrimaryJSONRequestBody, reqEditors ...RequestEditorFn) (*Putcmsblogs202603postsmultiLanguagesetNewLangPrimarySetLangPrimaryResponse, error)
 
 	// Postcmsblogs202603postsmultiLanguageupdateLanguagesUpdateLangsWithBodyWithResponse Update languages of multi-language group
 	//
@@ -2154,6 +4325,15 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /cms/blogs/2026-03/posts/multi-language/update-languages (the `Postcmsblogs202603postsmultiLanguageupdateLanguagesUpdateLangs` operationId).
 	Postcmsblogs202603postsmultiLanguageupdateLanguagesUpdateLangsWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmsblogs202603postsmultiLanguageupdateLanguagesUpdateLangsResponse, error)
 
+	// Postcmsblogs202603postsmultiLanguageupdateLanguagesUpdateLangsWithResponse Update languages of multi-language group
+	//
+	// Explicitly set new languages for each post in a [multi-language group](https://developers.hubspot.com/docs/guides/cms/content/multi-language-content).
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/blogs/2026-03/posts/multi-language/update-languages (the `Postcmsblogs202603postsmultiLanguageupdateLanguagesUpdateLangs` operationId).
+	Postcmsblogs202603postsmultiLanguageupdateLanguagesUpdateLangsWithResponse(ctx context.Context, body Postcmsblogs202603postsmultiLanguageupdateLanguagesUpdateLangsJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmsblogs202603postsmultiLanguageupdateLanguagesUpdateLangsResponse, error)
+
 	// Postcmsblogs202603postsscheduleScheduleWithBodyWithResponse Schedule a post to be published
 	//
 	// Schedule a blog post to be published at a specified time.
@@ -2162,6 +4342,15 @@ type ClientWithResponsesInterface interface {
 	//
 	// Corresponds with POST /cms/blogs/2026-03/posts/schedule (the `Postcmsblogs202603postsscheduleSchedule` operationId).
 	Postcmsblogs202603postsscheduleScheduleWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmsblogs202603postsscheduleScheduleResponse, error)
+
+	// Postcmsblogs202603postsscheduleScheduleWithResponse Schedule a post to be published
+	//
+	// Schedule a blog post to be published at a specified time.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/blogs/2026-03/posts/schedule (the `Postcmsblogs202603postsscheduleSchedule` operationId).
+	Postcmsblogs202603postsscheduleScheduleWithResponse(ctx context.Context, body Postcmsblogs202603postsscheduleScheduleJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmsblogs202603postsscheduleScheduleResponse, error)
 
 	// Deletecmsblogs202603postsObjectIdArchiveWithResponse Delete a blog post
 	//
@@ -2190,6 +4379,15 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with PATCH /cms/blogs/2026-03/posts/{objectId} (the `Patchcmsblogs202603postsObjectIdUpdate` operationId).
 	Patchcmsblogs202603postsObjectIdUpdateWithBodyWithResponse(ctx context.Context, objectId string, params *Patchcmsblogs202603postsObjectIdUpdateParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Patchcmsblogs202603postsObjectIdUpdateResponse, error)
 
+	// Patchcmsblogs202603postsObjectIdUpdateWithResponse Update a post
+	//
+	// Partially updates a single blog post by ID. You only need to specify the values that you want to update.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PATCH /cms/blogs/2026-03/posts/{objectId} (the `Patchcmsblogs202603postsObjectIdUpdate` operationId).
+	Patchcmsblogs202603postsObjectIdUpdateWithResponse(ctx context.Context, objectId string, params *Patchcmsblogs202603postsObjectIdUpdateParams, body Patchcmsblogs202603postsObjectIdUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*Patchcmsblogs202603postsObjectIdUpdateResponse, error)
+
 	// Getcmsblogs202603postsObjectIddraftGetDraftByIdWithResponse Retrieve the full draft version of the Blog Post
 	//
 	// Retrieve the full draft version of a blog post.
@@ -2207,6 +4405,15 @@ type ClientWithResponsesInterface interface {
 	//
 	// Corresponds with PATCH /cms/blogs/2026-03/posts/{objectId}/draft (the `Patchcmsblogs202603postsObjectIddraftUpdateDraft` operationId).
 	Patchcmsblogs202603postsObjectIddraftUpdateDraftWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Patchcmsblogs202603postsObjectIddraftUpdateDraftResponse, error)
+
+	// Patchcmsblogs202603postsObjectIddraftUpdateDraftWithResponse Update the draft of a post
+	//
+	// Partially updates the draft version of a single blog post by ID. You only need to specify the values that you want to update.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PATCH /cms/blogs/2026-03/posts/{objectId}/draft (the `Patchcmsblogs202603postsObjectIddraftUpdateDraft` operationId).
+	Patchcmsblogs202603postsObjectIddraftUpdateDraftWithResponse(ctx context.Context, objectId string, body Patchcmsblogs202603postsObjectIddraftUpdateDraftJSONRequestBody, reqEditors ...RequestEditorFn) (*Patchcmsblogs202603postsObjectIddraftUpdateDraftResponse, error)
 
 	// Postcmsblogs202603postsObjectIddraftpushLivePushLiveWithResponse Publish blog post draft
 	//
@@ -2280,6 +4487,15 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /cms/blogs/2026-03/tags (the `Postcmsblogs202603tagsCreate` operationId).
 	Postcmsblogs202603tagsCreateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmsblogs202603tagsCreateResponse, error)
 
+	// Postcmsblogs202603tagsCreateWithResponse Create a new Blog Tag
+	//
+	// Create a new Blog Tag.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/blogs/2026-03/tags (the `Postcmsblogs202603tagsCreate` operationId).
+	Postcmsblogs202603tagsCreateWithResponse(ctx context.Context, body Postcmsblogs202603tagsCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmsblogs202603tagsCreateResponse, error)
+
 	// Postcmsblogs202603tagsbatcharchiveArchiveBatchWithBodyWithResponse Delete a batch of Blog Tags
 	//
 	// Delete the Blog Tag objects identified in the request body.
@@ -2288,6 +4504,15 @@ type ClientWithResponsesInterface interface {
 	//
 	// Corresponds with POST /cms/blogs/2026-03/tags/batch/archive (the `Postcmsblogs202603tagsbatcharchiveArchiveBatch` operationId).
 	Postcmsblogs202603tagsbatcharchiveArchiveBatchWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmsblogs202603tagsbatcharchiveArchiveBatchResponse, error)
+
+	// Postcmsblogs202603tagsbatcharchiveArchiveBatchWithResponse Delete a batch of Blog Tags
+	//
+	// Delete the Blog Tag objects identified in the request body.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/blogs/2026-03/tags/batch/archive (the `Postcmsblogs202603tagsbatcharchiveArchiveBatch` operationId).
+	Postcmsblogs202603tagsbatcharchiveArchiveBatchWithResponse(ctx context.Context, body Postcmsblogs202603tagsbatcharchiveArchiveBatchJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmsblogs202603tagsbatcharchiveArchiveBatchResponse, error)
 
 	// Postcmsblogs202603tagsbatchcreateCreateBatchWithBodyWithResponse Create a batch of Blog Tags
 	//
@@ -2298,6 +4523,15 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /cms/blogs/2026-03/tags/batch/create (the `Postcmsblogs202603tagsbatchcreateCreateBatch` operationId).
 	Postcmsblogs202603tagsbatchcreateCreateBatchWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmsblogs202603tagsbatchcreateCreateBatchResponse, error)
 
+	// Postcmsblogs202603tagsbatchcreateCreateBatchWithResponse Create a batch of Blog Tags
+	//
+	// Create the Blog Tag objects detailed in the request body.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/blogs/2026-03/tags/batch/create (the `Postcmsblogs202603tagsbatchcreateCreateBatch` operationId).
+	Postcmsblogs202603tagsbatchcreateCreateBatchWithResponse(ctx context.Context, body Postcmsblogs202603tagsbatchcreateCreateBatchJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmsblogs202603tagsbatchcreateCreateBatchResponse, error)
+
 	// Postcmsblogs202603tagsbatchreadReadBatchWithBodyWithResponse Retrieve a batch of Blog Tags
 	//
 	// Retrieve the Blog Tag objects identified in the request body.
@@ -2307,6 +4541,15 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /cms/blogs/2026-03/tags/batch/read (the `Postcmsblogs202603tagsbatchreadReadBatch` operationId).
 	Postcmsblogs202603tagsbatchreadReadBatchWithBodyWithResponse(ctx context.Context, params *Postcmsblogs202603tagsbatchreadReadBatchParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmsblogs202603tagsbatchreadReadBatchResponse, error)
 
+	// Postcmsblogs202603tagsbatchreadReadBatchWithResponse Retrieve a batch of Blog Tags
+	//
+	// Retrieve the Blog Tag objects identified in the request body.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/blogs/2026-03/tags/batch/read (the `Postcmsblogs202603tagsbatchreadReadBatch` operationId).
+	Postcmsblogs202603tagsbatchreadReadBatchWithResponse(ctx context.Context, params *Postcmsblogs202603tagsbatchreadReadBatchParams, body Postcmsblogs202603tagsbatchreadReadBatchJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmsblogs202603tagsbatchreadReadBatchResponse, error)
+
 	// Postcmsblogs202603tagsbatchupdateUpdateBatchWithBodyWithResponse Update a batch of Blog Tags
 	//
 	// Update the Blog Tag objects identified in the request body.
@@ -2315,6 +4558,15 @@ type ClientWithResponsesInterface interface {
 	//
 	// Corresponds with POST /cms/blogs/2026-03/tags/batch/update (the `Postcmsblogs202603tagsbatchupdateUpdateBatch` operationId).
 	Postcmsblogs202603tagsbatchupdateUpdateBatchWithBodyWithResponse(ctx context.Context, params *Postcmsblogs202603tagsbatchupdateUpdateBatchParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmsblogs202603tagsbatchupdateUpdateBatchResponse, error)
+
+	// Postcmsblogs202603tagsbatchupdateUpdateBatchWithResponse Update a batch of Blog Tags
+	//
+	// Update the Blog Tag objects identified in the request body.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/blogs/2026-03/tags/batch/update (the `Postcmsblogs202603tagsbatchupdateUpdateBatch` operationId).
+	Postcmsblogs202603tagsbatchupdateUpdateBatchWithResponse(ctx context.Context, params *Postcmsblogs202603tagsbatchupdateUpdateBatchParams, body Postcmsblogs202603tagsbatchupdateUpdateBatchJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmsblogs202603tagsbatchupdateUpdateBatchResponse, error)
 
 	// Getcmsblogs202603tagscursorcmsblogsv3tagscursorWithResponse List tags
 	//
@@ -2343,6 +4595,15 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /cms/blogs/2026-03/tags/multi-language/attach-to-lang-group (the `Postcmsblogs202603tagsmultiLanguageattachToLangGroupAttachToLangGroup` operationId).
 	Postcmsblogs202603tagsmultiLanguageattachToLangGroupAttachToLangGroupWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmsblogs202603tagsmultiLanguageattachToLangGroupAttachToLangGroupResponse, error)
 
+	// Postcmsblogs202603tagsmultiLanguageattachToLangGroupAttachToLangGroupWithResponse Attach a Blog Tag to a multi-language group
+	//
+	// Attach a Blog Tag to a multi-language group.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/blogs/2026-03/tags/multi-language/attach-to-lang-group (the `Postcmsblogs202603tagsmultiLanguageattachToLangGroupAttachToLangGroup` operationId).
+	Postcmsblogs202603tagsmultiLanguageattachToLangGroupAttachToLangGroupWithResponse(ctx context.Context, body Postcmsblogs202603tagsmultiLanguageattachToLangGroupAttachToLangGroupJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmsblogs202603tagsmultiLanguageattachToLangGroupAttachToLangGroupResponse, error)
+
 	// Postcmsblogs202603tagsmultiLanguagecreateLanguageVariationCreateLangVariationWithBodyWithResponse Create a new language variation
 	//
 	// Create a new language variation from an existing Blog Tag.
@@ -2351,6 +4612,15 @@ type ClientWithResponsesInterface interface {
 	//
 	// Corresponds with POST /cms/blogs/2026-03/tags/multi-language/create-language-variation (the `Postcmsblogs202603tagsmultiLanguagecreateLanguageVariationCreateLangVariation` operationId).
 	Postcmsblogs202603tagsmultiLanguagecreateLanguageVariationCreateLangVariationWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmsblogs202603tagsmultiLanguagecreateLanguageVariationCreateLangVariationResponse, error)
+
+	// Postcmsblogs202603tagsmultiLanguagecreateLanguageVariationCreateLangVariationWithResponse Create a new language variation
+	//
+	// Create a new language variation from an existing Blog Tag.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/blogs/2026-03/tags/multi-language/create-language-variation (the `Postcmsblogs202603tagsmultiLanguagecreateLanguageVariationCreateLangVariation` operationId).
+	Postcmsblogs202603tagsmultiLanguagecreateLanguageVariationCreateLangVariationWithResponse(ctx context.Context, body Postcmsblogs202603tagsmultiLanguagecreateLanguageVariationCreateLangVariationJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmsblogs202603tagsmultiLanguagecreateLanguageVariationCreateLangVariationResponse, error)
 
 	// Postcmsblogs202603tagsmultiLanguagedetachFromLangGroupDetachFromLangGroupWithBodyWithResponse Detach a Blog Tag from a multi-language group
 	//
@@ -2361,6 +4631,15 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /cms/blogs/2026-03/tags/multi-language/detach-from-lang-group (the `Postcmsblogs202603tagsmultiLanguagedetachFromLangGroupDetachFromLangGroup` operationId).
 	Postcmsblogs202603tagsmultiLanguagedetachFromLangGroupDetachFromLangGroupWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmsblogs202603tagsmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse, error)
 
+	// Postcmsblogs202603tagsmultiLanguagedetachFromLangGroupDetachFromLangGroupWithResponse Detach a Blog Tag from a multi-language group
+	//
+	// Detach a Blog Tag from a multi-language group.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/blogs/2026-03/tags/multi-language/detach-from-lang-group (the `Postcmsblogs202603tagsmultiLanguagedetachFromLangGroupDetachFromLangGroup` operationId).
+	Postcmsblogs202603tagsmultiLanguagedetachFromLangGroupDetachFromLangGroupWithResponse(ctx context.Context, body Postcmsblogs202603tagsmultiLanguagedetachFromLangGroupDetachFromLangGroupJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmsblogs202603tagsmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse, error)
+
 	// Putcmsblogs202603tagsmultiLanguagesetNewLangPrimarySetLangPrimaryWithBodyWithResponse Set a new primary language
 	//
 	// Set a Blog Tag as the primary language of a multi-language group.
@@ -2370,6 +4649,15 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with PUT /cms/blogs/2026-03/tags/multi-language/set-new-lang-primary (the `Putcmsblogs202603tagsmultiLanguagesetNewLangPrimarySetLangPrimary` operationId).
 	Putcmsblogs202603tagsmultiLanguagesetNewLangPrimarySetLangPrimaryWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Putcmsblogs202603tagsmultiLanguagesetNewLangPrimarySetLangPrimaryResponse, error)
 
+	// Putcmsblogs202603tagsmultiLanguagesetNewLangPrimarySetLangPrimaryWithResponse Set a new primary language
+	//
+	// Set a Blog Tag as the primary language of a multi-language group.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PUT /cms/blogs/2026-03/tags/multi-language/set-new-lang-primary (the `Putcmsblogs202603tagsmultiLanguagesetNewLangPrimarySetLangPrimary` operationId).
+	Putcmsblogs202603tagsmultiLanguagesetNewLangPrimarySetLangPrimaryWithResponse(ctx context.Context, body Putcmsblogs202603tagsmultiLanguagesetNewLangPrimarySetLangPrimaryJSONRequestBody, reqEditors ...RequestEditorFn) (*Putcmsblogs202603tagsmultiLanguagesetNewLangPrimarySetLangPrimaryResponse, error)
+
 	// Postcmsblogs202603tagsmultiLanguageupdateLanguagesUpdateLangsWithBodyWithResponse Update languages of multi-language group
 	//
 	// Explicitly set new languages for each Blog Tag in a multi-language group.
@@ -2378,6 +4666,15 @@ type ClientWithResponsesInterface interface {
 	//
 	// Corresponds with POST /cms/blogs/2026-03/tags/multi-language/update-languages (the `Postcmsblogs202603tagsmultiLanguageupdateLanguagesUpdateLangs` operationId).
 	Postcmsblogs202603tagsmultiLanguageupdateLanguagesUpdateLangsWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmsblogs202603tagsmultiLanguageupdateLanguagesUpdateLangsResponse, error)
+
+	// Postcmsblogs202603tagsmultiLanguageupdateLanguagesUpdateLangsWithResponse Update languages of multi-language group
+	//
+	// Explicitly set new languages for each Blog Tag in a multi-language group.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/blogs/2026-03/tags/multi-language/update-languages (the `Postcmsblogs202603tagsmultiLanguageupdateLanguagesUpdateLangs` operationId).
+	Postcmsblogs202603tagsmultiLanguageupdateLanguagesUpdateLangsWithResponse(ctx context.Context, body Postcmsblogs202603tagsmultiLanguageupdateLanguagesUpdateLangsJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmsblogs202603tagsmultiLanguageupdateLanguagesUpdateLangsResponse, error)
 
 	// Deletecmsblogs202603tagsObjectIdArchiveWithResponse Delete a Blog Tag
 	//
@@ -2406,6 +4703,16 @@ type ClientWithResponsesInterface interface {
 	//
 	// Corresponds with PATCH /cms/blogs/2026-03/tags/{objectId} (the `Patchcmsblogs202603tagsObjectIdUpdate` operationId).
 	Patchcmsblogs202603tagsObjectIdUpdateWithBodyWithResponse(ctx context.Context, objectId string, params *Patchcmsblogs202603tagsObjectIdUpdateParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Patchcmsblogs202603tagsObjectIdUpdateResponse, error)
+
+	// Patchcmsblogs202603tagsObjectIdUpdateWithResponse Update a Blog Tag
+	//
+	// Sparse updates a single Blog Tag object identified by the id in the path.
+	// All the column values need not be specified. Only the that need to be modified can be specified.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PATCH /cms/blogs/2026-03/tags/{objectId} (the `Patchcmsblogs202603tagsObjectIdUpdate` operationId).
+	Patchcmsblogs202603tagsObjectIdUpdateWithResponse(ctx context.Context, objectId string, params *Patchcmsblogs202603tagsObjectIdUpdateParams, body Patchcmsblogs202603tagsObjectIdUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*Patchcmsblogs202603tagsObjectIdUpdateResponse, error)
 
 	// Getcmsdomains202603cmsdomainsv3WithResponse List Domains
 	//
@@ -2854,6 +5161,15 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /cms/pages/2026-03/landing-pages (the `Postcmspages202603landingPagesCreate` operationId).
 	Postcmspages202603landingPagesCreateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmspages202603landingPagesCreateResponse, error)
 
+	// Postcmspages202603landingPagesCreateWithResponse Create a landing page
+	//
+	// Create a new landing page.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/pages/2026-03/landing-pages (the `Postcmspages202603landingPagesCreate` operationId).
+	Postcmspages202603landingPagesCreateWithResponse(ctx context.Context, body Postcmspages202603landingPagesCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmspages202603landingPagesCreateResponse, error)
+
 	// Postcmspages202603landingPagesabTestcreateVariationCreateABTestVariationWithBodyWithResponse Create a new A/B test variation
 	//
 	// Create a new A/B test variation based on the information provided in the request body.
@@ -2862,6 +5178,15 @@ type ClientWithResponsesInterface interface {
 	//
 	// Corresponds with POST /cms/pages/2026-03/landing-pages/ab-test/create-variation (the `Postcmspages202603landingPagesabTestcreateVariationCreateABTestVariation` operationId).
 	Postcmspages202603landingPagesabTestcreateVariationCreateABTestVariationWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmspages202603landingPagesabTestcreateVariationCreateABTestVariationResponse, error)
+
+	// Postcmspages202603landingPagesabTestcreateVariationCreateABTestVariationWithResponse Create a new A/B test variation
+	//
+	// Create a new A/B test variation based on the information provided in the request body.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/pages/2026-03/landing-pages/ab-test/create-variation (the `Postcmspages202603landingPagesabTestcreateVariationCreateABTestVariation` operationId).
+	Postcmspages202603landingPagesabTestcreateVariationCreateABTestVariationWithResponse(ctx context.Context, body Postcmspages202603landingPagesabTestcreateVariationCreateABTestVariationJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmspages202603landingPagesabTestcreateVariationCreateABTestVariationResponse, error)
 
 	// Postcmspages202603landingPagesabTestendEndActiveABTestWithBodyWithResponse End an active A/B test
 	//
@@ -2872,6 +5197,15 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /cms/pages/2026-03/landing-pages/ab-test/end (the `Postcmspages202603landingPagesabTestendEndActiveABTest` operationId).
 	Postcmspages202603landingPagesabTestendEndActiveABTestWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmspages202603landingPagesabTestendEndActiveABTestResponse, error)
 
+	// Postcmspages202603landingPagesabTestendEndActiveABTestWithResponse End an active A/B test
+	//
+	// End an active A/B test and designate a winner.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/pages/2026-03/landing-pages/ab-test/end (the `Postcmspages202603landingPagesabTestendEndActiveABTest` operationId).
+	Postcmspages202603landingPagesabTestendEndActiveABTestWithResponse(ctx context.Context, body Postcmspages202603landingPagesabTestendEndActiveABTestJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmspages202603landingPagesabTestendEndActiveABTestResponse, error)
+
 	// Postcmspages202603landingPagesabTestrerunRerunPreviousABTestWithBodyWithResponse Rerun a previous A/B test
 	//
 	// Rerun a previous A/B test.
@@ -2880,6 +5214,15 @@ type ClientWithResponsesInterface interface {
 	//
 	// Corresponds with POST /cms/pages/2026-03/landing-pages/ab-test/rerun (the `Postcmspages202603landingPagesabTestrerunRerunPreviousABTest` operationId).
 	Postcmspages202603landingPagesabTestrerunRerunPreviousABTestWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmspages202603landingPagesabTestrerunRerunPreviousABTestResponse, error)
+
+	// Postcmspages202603landingPagesabTestrerunRerunPreviousABTestWithResponse Rerun a previous A/B test
+	//
+	// Rerun a previous A/B test.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/pages/2026-03/landing-pages/ab-test/rerun (the `Postcmspages202603landingPagesabTestrerunRerunPreviousABTest` operationId).
+	Postcmspages202603landingPagesabTestrerunRerunPreviousABTestWithResponse(ctx context.Context, body Postcmspages202603landingPagesabTestrerunRerunPreviousABTestJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmspages202603landingPagesabTestrerunRerunPreviousABTestResponse, error)
 
 	// Postcmspages202603landingPagesbatcharchiveArchiveBatchWithBodyWithResponse Delete landing pages
 	//
@@ -2890,6 +5233,15 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /cms/pages/2026-03/landing-pages/batch/archive (the `Postcmspages202603landingPagesbatcharchiveArchiveBatch` operationId).
 	Postcmspages202603landingPagesbatcharchiveArchiveBatchWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmspages202603landingPagesbatcharchiveArchiveBatchResponse, error)
 
+	// Postcmspages202603landingPagesbatcharchiveArchiveBatchWithResponse Delete landing pages
+	//
+	// Delete landing pages specified by ID in the request body. Note: this is not the same as the dashboard `archive` function. To perform a dashboard `archive` send an normal update with the `archivedInDashboard` field set to `true`.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/pages/2026-03/landing-pages/batch/archive (the `Postcmspages202603landingPagesbatcharchiveArchiveBatch` operationId).
+	Postcmspages202603landingPagesbatcharchiveArchiveBatchWithResponse(ctx context.Context, body Postcmspages202603landingPagesbatcharchiveArchiveBatchJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmspages202603landingPagesbatcharchiveArchiveBatchResponse, error)
+
 	// Postcmspages202603landingPagesbatchcreateCreateBatchWithBodyWithResponse Create landing pages
 	//
 	// Create a batch of landing pages as detailed in the request body.
@@ -2898,6 +5250,15 @@ type ClientWithResponsesInterface interface {
 	//
 	// Corresponds with POST /cms/pages/2026-03/landing-pages/batch/create (the `Postcmspages202603landingPagesbatchcreateCreateBatch` operationId).
 	Postcmspages202603landingPagesbatchcreateCreateBatchWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmspages202603landingPagesbatchcreateCreateBatchResponse, error)
+
+	// Postcmspages202603landingPagesbatchcreateCreateBatchWithResponse Create landing pages
+	//
+	// Create a batch of landing pages as detailed in the request body.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/pages/2026-03/landing-pages/batch/create (the `Postcmspages202603landingPagesbatchcreateCreateBatch` operationId).
+	Postcmspages202603landingPagesbatchcreateCreateBatchWithResponse(ctx context.Context, body Postcmspages202603landingPagesbatchcreateCreateBatchJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmspages202603landingPagesbatchcreateCreateBatchResponse, error)
 
 	// Postcmspages202603landingPagesbatchreadReadBatchWithBodyWithResponse Retrieve landing pages
 	//
@@ -2908,6 +5269,15 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /cms/pages/2026-03/landing-pages/batch/read (the `Postcmspages202603landingPagesbatchreadReadBatch` operationId).
 	Postcmspages202603landingPagesbatchreadReadBatchWithBodyWithResponse(ctx context.Context, params *Postcmspages202603landingPagesbatchreadReadBatchParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmspages202603landingPagesbatchreadReadBatchResponse, error)
 
+	// Postcmspages202603landingPagesbatchreadReadBatchWithResponse Retrieve landing pages
+	//
+	// Retrieve a batch of landing pages as specified in the request body.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/pages/2026-03/landing-pages/batch/read (the `Postcmspages202603landingPagesbatchreadReadBatch` operationId).
+	Postcmspages202603landingPagesbatchreadReadBatchWithResponse(ctx context.Context, params *Postcmspages202603landingPagesbatchreadReadBatchParams, body Postcmspages202603landingPagesbatchreadReadBatchJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmspages202603landingPagesbatchreadReadBatchResponse, error)
+
 	// Postcmspages202603landingPagesbatchupdateUpdateBatchWithBodyWithResponse Update landing pages
 	//
 	// Update a batch of landing pages as specified in the request body.
@@ -2917,6 +5287,15 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /cms/pages/2026-03/landing-pages/batch/update (the `Postcmspages202603landingPagesbatchupdateUpdateBatch` operationId).
 	Postcmspages202603landingPagesbatchupdateUpdateBatchWithBodyWithResponse(ctx context.Context, params *Postcmspages202603landingPagesbatchupdateUpdateBatchParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmspages202603landingPagesbatchupdateUpdateBatchResponse, error)
 
+	// Postcmspages202603landingPagesbatchupdateUpdateBatchWithResponse Update landing pages
+	//
+	// Update a batch of landing pages as specified in the request body.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/pages/2026-03/landing-pages/batch/update (the `Postcmspages202603landingPagesbatchupdateUpdateBatch` operationId).
+	Postcmspages202603landingPagesbatchupdateUpdateBatchWithResponse(ctx context.Context, params *Postcmspages202603landingPagesbatchupdateUpdateBatchParams, body Postcmspages202603landingPagesbatchupdateUpdateBatchJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmspages202603landingPagesbatchupdateUpdateBatchResponse, error)
+
 	// Postcmspages202603landingPagescloneCloneWithBodyWithResponse Clone a landing page
 	//
 	// Create a copy of an existing landing page.
@@ -2925,6 +5304,15 @@ type ClientWithResponsesInterface interface {
 	//
 	// Corresponds with POST /cms/pages/2026-03/landing-pages/clone (the `Postcmspages202603landingPagescloneClone` operationId).
 	Postcmspages202603landingPagescloneCloneWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmspages202603landingPagescloneCloneResponse, error)
+
+	// Postcmspages202603landingPagescloneCloneWithResponse Clone a landing page
+	//
+	// Create a copy of an existing landing page.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/pages/2026-03/landing-pages/clone (the `Postcmspages202603landingPagescloneClone` operationId).
+	Postcmspages202603landingPagescloneCloneWithResponse(ctx context.Context, body Postcmspages202603landingPagescloneCloneJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmspages202603landingPagescloneCloneResponse, error)
 
 	// Getcmspages202603landingPagesfoldersGetFoldersPageWithResponse Get all landing page folders
 	//
@@ -2944,6 +5332,15 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /cms/pages/2026-03/landing-pages/folders (the `Postcmspages202603landingPagesfoldersCreateFolder` operationId).
 	Postcmspages202603landingPagesfoldersCreateFolderWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmspages202603landingPagesfoldersCreateFolderResponse, error)
 
+	// Postcmspages202603landingPagesfoldersCreateFolderWithResponse Create a landing page folder
+	//
+	// Create a new folder for landing pages.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/pages/2026-03/landing-pages/folders (the `Postcmspages202603landingPagesfoldersCreateFolder` operationId).
+	Postcmspages202603landingPagesfoldersCreateFolderWithResponse(ctx context.Context, body Postcmspages202603landingPagesfoldersCreateFolderJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmspages202603landingPagesfoldersCreateFolderResponse, error)
+
 	// Postcmspages202603landingPagesfoldersbatcharchiveArchiveFoldersWithBodyWithResponse Delete folders
 	//
 	// Delete a batch of folders as specified in the request body.
@@ -2952,6 +5349,15 @@ type ClientWithResponsesInterface interface {
 	//
 	// Corresponds with POST /cms/pages/2026-03/landing-pages/folders/batch/archive (the `Postcmspages202603landingPagesfoldersbatcharchiveArchiveFolders` operationId).
 	Postcmspages202603landingPagesfoldersbatcharchiveArchiveFoldersWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmspages202603landingPagesfoldersbatcharchiveArchiveFoldersResponse, error)
+
+	// Postcmspages202603landingPagesfoldersbatcharchiveArchiveFoldersWithResponse Delete folders
+	//
+	// Delete a batch of folders as specified in the request body.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/pages/2026-03/landing-pages/folders/batch/archive (the `Postcmspages202603landingPagesfoldersbatcharchiveArchiveFolders` operationId).
+	Postcmspages202603landingPagesfoldersbatcharchiveArchiveFoldersWithResponse(ctx context.Context, body Postcmspages202603landingPagesfoldersbatcharchiveArchiveFoldersJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmspages202603landingPagesfoldersbatcharchiveArchiveFoldersResponse, error)
 
 	// Postcmspages202603landingPagesfoldersbatchcreateCreateFoldersWithBodyWithResponse Create folders
 	//
@@ -2962,6 +5368,15 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /cms/pages/2026-03/landing-pages/folders/batch/create (the `Postcmspages202603landingPagesfoldersbatchcreateCreateFolders` operationId).
 	Postcmspages202603landingPagesfoldersbatchcreateCreateFoldersWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmspages202603landingPagesfoldersbatchcreateCreateFoldersResponse, error)
 
+	// Postcmspages202603landingPagesfoldersbatchcreateCreateFoldersWithResponse Create folders
+	//
+	// Create a batch of folders as detailed in the request body.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/pages/2026-03/landing-pages/folders/batch/create (the `Postcmspages202603landingPagesfoldersbatchcreateCreateFolders` operationId).
+	Postcmspages202603landingPagesfoldersbatchcreateCreateFoldersWithResponse(ctx context.Context, body Postcmspages202603landingPagesfoldersbatchcreateCreateFoldersJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmspages202603landingPagesfoldersbatchcreateCreateFoldersResponse, error)
+
 	// Postcmspages202603landingPagesfoldersbatchreadReadFoldersWithBodyWithResponse Retrieve folders
 	//
 	// Retrieve a batch of landing page folders as identified in the request body.
@@ -2971,6 +5386,15 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /cms/pages/2026-03/landing-pages/folders/batch/read (the `Postcmspages202603landingPagesfoldersbatchreadReadFolders` operationId).
 	Postcmspages202603landingPagesfoldersbatchreadReadFoldersWithBodyWithResponse(ctx context.Context, params *Postcmspages202603landingPagesfoldersbatchreadReadFoldersParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmspages202603landingPagesfoldersbatchreadReadFoldersResponse, error)
 
+	// Postcmspages202603landingPagesfoldersbatchreadReadFoldersWithResponse Retrieve folders
+	//
+	// Retrieve a batch of landing page folders as identified in the request body.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/pages/2026-03/landing-pages/folders/batch/read (the `Postcmspages202603landingPagesfoldersbatchreadReadFolders` operationId).
+	Postcmspages202603landingPagesfoldersbatchreadReadFoldersWithResponse(ctx context.Context, params *Postcmspages202603landingPagesfoldersbatchreadReadFoldersParams, body Postcmspages202603landingPagesfoldersbatchreadReadFoldersJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmspages202603landingPagesfoldersbatchreadReadFoldersResponse, error)
+
 	// Postcmspages202603landingPagesfoldersbatchupdateUpdateFoldersWithBodyWithResponse Update folders
 	//
 	// Update a batch of landing page folders as specified in the request body.
@@ -2979,6 +5403,15 @@ type ClientWithResponsesInterface interface {
 	//
 	// Corresponds with POST /cms/pages/2026-03/landing-pages/folders/batch/update (the `Postcmspages202603landingPagesfoldersbatchupdateUpdateFolders` operationId).
 	Postcmspages202603landingPagesfoldersbatchupdateUpdateFoldersWithBodyWithResponse(ctx context.Context, params *Postcmspages202603landingPagesfoldersbatchupdateUpdateFoldersParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmspages202603landingPagesfoldersbatchupdateUpdateFoldersResponse, error)
+
+	// Postcmspages202603landingPagesfoldersbatchupdateUpdateFoldersWithResponse Update folders
+	//
+	// Update a batch of landing page folders as specified in the request body.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/pages/2026-03/landing-pages/folders/batch/update (the `Postcmspages202603landingPagesfoldersbatchupdateUpdateFolders` operationId).
+	Postcmspages202603landingPagesfoldersbatchupdateUpdateFoldersWithResponse(ctx context.Context, params *Postcmspages202603landingPagesfoldersbatchupdateUpdateFoldersParams, body Postcmspages202603landingPagesfoldersbatchupdateUpdateFoldersJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmspages202603landingPagesfoldersbatchupdateUpdateFoldersResponse, error)
 
 	// Deletecmspages202603landingPagesfoldersObjectIdArchiveFolderWithResponse Delete a landing page folder
 	//
@@ -3006,6 +5439,15 @@ type ClientWithResponsesInterface interface {
 	//
 	// Corresponds with PATCH /cms/pages/2026-03/landing-pages/folders/{objectId} (the `Patchcmspages202603landingPagesfoldersObjectIdUpdateFolder` operationId).
 	Patchcmspages202603landingPagesfoldersObjectIdUpdateFolderWithBodyWithResponse(ctx context.Context, objectId string, params *Patchcmspages202603landingPagesfoldersObjectIdUpdateFolderParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Patchcmspages202603landingPagesfoldersObjectIdUpdateFolderResponse, error)
+
+	// Patchcmspages202603landingPagesfoldersObjectIdUpdateFolderWithResponse Update a landing page folder
+	//
+	// Partially update a landing page folder, specified by the folder ID. You only need to specify the details values that you are modifying.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PATCH /cms/pages/2026-03/landing-pages/folders/{objectId} (the `Patchcmspages202603landingPagesfoldersObjectIdUpdateFolder` operationId).
+	Patchcmspages202603landingPagesfoldersObjectIdUpdateFolderWithResponse(ctx context.Context, objectId string, params *Patchcmspages202603landingPagesfoldersObjectIdUpdateFolderParams, body Patchcmspages202603landingPagesfoldersObjectIdUpdateFolderJSONRequestBody, reqEditors ...RequestEditorFn) (*Patchcmspages202603landingPagesfoldersObjectIdUpdateFolderResponse, error)
 
 	// Getcmspages202603landingPagesfoldersObjectIdrevisionsGetFolderPreviousVersionsWithResponse Retrieves previous versions of a folder
 	//
@@ -3043,6 +5485,15 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /cms/pages/2026-03/landing-pages/multi-language/attach-to-lang-group (the `Postcmspages202603landingPagesmultiLanguageattachToLangGroupAttachToLangGroup` operationId).
 	Postcmspages202603landingPagesmultiLanguageattachToLangGroupAttachToLangGroupWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmspages202603landingPagesmultiLanguageattachToLangGroupAttachToLangGroupResponse, error)
 
+	// Postcmspages202603landingPagesmultiLanguageattachToLangGroupAttachToLangGroupWithResponse Add a landing page to a multi-language group
+	//
+	// Attach a landing page to a multi-language group.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/pages/2026-03/landing-pages/multi-language/attach-to-lang-group (the `Postcmspages202603landingPagesmultiLanguageattachToLangGroupAttachToLangGroup` operationId).
+	Postcmspages202603landingPagesmultiLanguageattachToLangGroupAttachToLangGroupWithResponse(ctx context.Context, body Postcmspages202603landingPagesmultiLanguageattachToLangGroupAttachToLangGroupJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmspages202603landingPagesmultiLanguageattachToLangGroupAttachToLangGroupResponse, error)
+
 	// Postcmspages202603landingPagesmultiLanguagecreateLanguageVariationCreateLangVariationWithBodyWithResponse Create a new language variation
 	//
 	// Create a new language variation from an existing landing page. The variation will be a copy of the draft state of the source page. To preview the content, you can [retrieve the draft of the source landing page](/api-reference/latest/cms/pages/landing-pages/drafts/get-landing-page-draft).
@@ -3051,6 +5502,15 @@ type ClientWithResponsesInterface interface {
 	//
 	// Corresponds with POST /cms/pages/2026-03/landing-pages/multi-language/create-language-variation (the `Postcmspages202603landingPagesmultiLanguagecreateLanguageVariationCreateLangVariation` operationId).
 	Postcmspages202603landingPagesmultiLanguagecreateLanguageVariationCreateLangVariationWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmspages202603landingPagesmultiLanguagecreateLanguageVariationCreateLangVariationResponse, error)
+
+	// Postcmspages202603landingPagesmultiLanguagecreateLanguageVariationCreateLangVariationWithResponse Create a new language variation
+	//
+	// Create a new language variation from an existing landing page. The variation will be a copy of the draft state of the source page. To preview the content, you can [retrieve the draft of the source landing page](/api-reference/latest/cms/pages/landing-pages/drafts/get-landing-page-draft).
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/pages/2026-03/landing-pages/multi-language/create-language-variation (the `Postcmspages202603landingPagesmultiLanguagecreateLanguageVariationCreateLangVariation` operationId).
+	Postcmspages202603landingPagesmultiLanguagecreateLanguageVariationCreateLangVariationWithResponse(ctx context.Context, body Postcmspages202603landingPagesmultiLanguagecreateLanguageVariationCreateLangVariationJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmspages202603landingPagesmultiLanguagecreateLanguageVariationCreateLangVariationResponse, error)
 
 	// Postcmspages202603landingPagesmultiLanguagedetachFromLangGroupDetachFromLangGroupWithBodyWithResponse Remove a landing page from a multi-language group
 	//
@@ -3061,6 +5521,15 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /cms/pages/2026-03/landing-pages/multi-language/detach-from-lang-group (the `Postcmspages202603landingPagesmultiLanguagedetachFromLangGroupDetachFromLangGroup` operationId).
 	Postcmspages202603landingPagesmultiLanguagedetachFromLangGroupDetachFromLangGroupWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmspages202603landingPagesmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse, error)
 
+	// Postcmspages202603landingPagesmultiLanguagedetachFromLangGroupDetachFromLangGroupWithResponse Remove a landing page from a multi-language group
+	//
+	// Detach a landing page from a multi-language group.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/pages/2026-03/landing-pages/multi-language/detach-from-lang-group (the `Postcmspages202603landingPagesmultiLanguagedetachFromLangGroupDetachFromLangGroup` operationId).
+	Postcmspages202603landingPagesmultiLanguagedetachFromLangGroupDetachFromLangGroupWithResponse(ctx context.Context, body Postcmspages202603landingPagesmultiLanguagedetachFromLangGroupDetachFromLangGroupJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmspages202603landingPagesmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse, error)
+
 	// Putcmspages202603landingPagesmultiLanguagesetNewLangPrimarySetLangPrimaryWithBodyWithResponse Set a new primary language
 	//
 	// Set a landing page as the primary language of a multi-language group.
@@ -3069,6 +5538,15 @@ type ClientWithResponsesInterface interface {
 	//
 	// Corresponds with PUT /cms/pages/2026-03/landing-pages/multi-language/set-new-lang-primary (the `Putcmspages202603landingPagesmultiLanguagesetNewLangPrimarySetLangPrimary` operationId).
 	Putcmspages202603landingPagesmultiLanguagesetNewLangPrimarySetLangPrimaryWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Putcmspages202603landingPagesmultiLanguagesetNewLangPrimarySetLangPrimaryResponse, error)
+
+	// Putcmspages202603landingPagesmultiLanguagesetNewLangPrimarySetLangPrimaryWithResponse Set a new primary language
+	//
+	// Set a landing page as the primary language of a multi-language group.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PUT /cms/pages/2026-03/landing-pages/multi-language/set-new-lang-primary (the `Putcmspages202603landingPagesmultiLanguagesetNewLangPrimarySetLangPrimary` operationId).
+	Putcmspages202603landingPagesmultiLanguagesetNewLangPrimarySetLangPrimaryWithResponse(ctx context.Context, body Putcmspages202603landingPagesmultiLanguagesetNewLangPrimarySetLangPrimaryJSONRequestBody, reqEditors ...RequestEditorFn) (*Putcmspages202603landingPagesmultiLanguagesetNewLangPrimarySetLangPrimaryResponse, error)
 
 	// Postcmspages202603landingPagesmultiLanguageupdateLanguagesUpdateLangsWithBodyWithResponse Update languages of multi-language group
 	//
@@ -3079,6 +5557,15 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /cms/pages/2026-03/landing-pages/multi-language/update-languages (the `Postcmspages202603landingPagesmultiLanguageupdateLanguagesUpdateLangs` operationId).
 	Postcmspages202603landingPagesmultiLanguageupdateLanguagesUpdateLangsWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmspages202603landingPagesmultiLanguageupdateLanguagesUpdateLangsResponse, error)
 
+	// Postcmspages202603landingPagesmultiLanguageupdateLanguagesUpdateLangsWithResponse Update languages of multi-language group
+	//
+	// Explicitly set new languages for each landing page in a multi-language group.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/pages/2026-03/landing-pages/multi-language/update-languages (the `Postcmspages202603landingPagesmultiLanguageupdateLanguagesUpdateLangs` operationId).
+	Postcmspages202603landingPagesmultiLanguageupdateLanguagesUpdateLangsWithResponse(ctx context.Context, body Postcmspages202603landingPagesmultiLanguageupdateLanguagesUpdateLangsJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmspages202603landingPagesmultiLanguageupdateLanguagesUpdateLangsResponse, error)
+
 	// Postcmspages202603landingPagesscheduleScheduleWithBodyWithResponse Schedule landing page publishing
 	//
 	// Schedule a landing page to be published.
@@ -3087,6 +5574,15 @@ type ClientWithResponsesInterface interface {
 	//
 	// Corresponds with POST /cms/pages/2026-03/landing-pages/schedule (the `Postcmspages202603landingPagesscheduleSchedule` operationId).
 	Postcmspages202603landingPagesscheduleScheduleWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmspages202603landingPagesscheduleScheduleResponse, error)
+
+	// Postcmspages202603landingPagesscheduleScheduleWithResponse Schedule landing page publishing
+	//
+	// Schedule a landing page to be published.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/pages/2026-03/landing-pages/schedule (the `Postcmspages202603landingPagesscheduleSchedule` operationId).
+	Postcmspages202603landingPagesscheduleScheduleWithResponse(ctx context.Context, body Postcmspages202603landingPagesscheduleScheduleJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmspages202603landingPagesscheduleScheduleResponse, error)
 
 	// Deletecmspages202603landingPagesObjectIdArchiveWithResponse Delete a landing page
 	//
@@ -3116,6 +5612,16 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with PATCH /cms/pages/2026-03/landing-pages/{objectId} (the `Patchcmspages202603landingPagesObjectIdUpdate` operationId).
 	Patchcmspages202603landingPagesObjectIdUpdateWithBodyWithResponse(ctx context.Context, objectId string, params *Patchcmspages202603landingPagesObjectIdUpdateParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Patchcmspages202603landingPagesObjectIdUpdateResponse, error)
 
+	// Patchcmspages202603landingPagesObjectIdUpdateWithResponse Update a landing page
+	//
+	// Sparse updates a single Landing Page object identified by the id in the path.
+	// You only need to specify the column values that you are modifying.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PATCH /cms/pages/2026-03/landing-pages/{objectId} (the `Patchcmspages202603landingPagesObjectIdUpdate` operationId).
+	Patchcmspages202603landingPagesObjectIdUpdateWithResponse(ctx context.Context, objectId string, params *Patchcmspages202603landingPagesObjectIdUpdateParams, body Patchcmspages202603landingPagesObjectIdUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*Patchcmspages202603landingPagesObjectIdUpdateResponse, error)
+
 	// Getcmspages202603landingPagesObjectIddraftGetDraftByIdWithResponse Retrieve a landing page draft
 	//
 	// Retrieve the full draft version of a landing page, specified by page ID.
@@ -3133,6 +5639,15 @@ type ClientWithResponsesInterface interface {
 	//
 	// Corresponds with PATCH /cms/pages/2026-03/landing-pages/{objectId}/draft (the `Patchcmspages202603landingPagesObjectIddraftUpdateDraft` operationId).
 	Patchcmspages202603landingPagesObjectIddraftUpdateDraftWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Patchcmspages202603landingPagesObjectIddraftUpdateDraftResponse, error)
+
+	// Patchcmspages202603landingPagesObjectIddraftUpdateDraftWithResponse Update the draft of a landing page
+	//
+	// Partially updates the draft version of a single landing page, specified by its ID. You only need to specify the column values that you are modifying.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PATCH /cms/pages/2026-03/landing-pages/{objectId}/draft (the `Patchcmspages202603landingPagesObjectIddraftUpdateDraft` operationId).
+	Patchcmspages202603landingPagesObjectIddraftUpdateDraftWithResponse(ctx context.Context, objectId string, body Patchcmspages202603landingPagesObjectIddraftUpdateDraftJSONRequestBody, reqEditors ...RequestEditorFn) (*Patchcmspages202603landingPagesObjectIddraftUpdateDraftResponse, error)
 
 	// Postcmspages202603landingPagesObjectIddraftpushLivePushLiveWithResponse Push Landing Page draft edits live
 	//
@@ -3206,6 +5721,15 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /cms/pages/2026-03/site-pages (the `Postcmspages202603sitePagesCreate` operationId).
 	Postcmspages202603sitePagesCreateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmspages202603sitePagesCreateResponse, error)
 
+	// Postcmspages202603sitePagesCreateWithResponse Create a website page
+	//
+	// Create a new website page.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/pages/2026-03/site-pages (the `Postcmspages202603sitePagesCreate` operationId).
+	Postcmspages202603sitePagesCreateWithResponse(ctx context.Context, body Postcmspages202603sitePagesCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmspages202603sitePagesCreateResponse, error)
+
 	// Postcmspages202603sitePagesabTestcreateVariationCreateABTestVariationWithBodyWithResponse Create a new A/B test variation
 	//
 	// Create a new A/B test variation based on the information provided in the request body.
@@ -3214,6 +5738,15 @@ type ClientWithResponsesInterface interface {
 	//
 	// Corresponds with POST /cms/pages/2026-03/site-pages/ab-test/create-variation (the `Postcmspages202603sitePagesabTestcreateVariationCreateABTestVariation` operationId).
 	Postcmspages202603sitePagesabTestcreateVariationCreateABTestVariationWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmspages202603sitePagesabTestcreateVariationCreateABTestVariationResponse, error)
+
+	// Postcmspages202603sitePagesabTestcreateVariationCreateABTestVariationWithResponse Create a new A/B test variation
+	//
+	// Create a new A/B test variation based on the information provided in the request body.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/pages/2026-03/site-pages/ab-test/create-variation (the `Postcmspages202603sitePagesabTestcreateVariationCreateABTestVariation` operationId).
+	Postcmspages202603sitePagesabTestcreateVariationCreateABTestVariationWithResponse(ctx context.Context, body Postcmspages202603sitePagesabTestcreateVariationCreateABTestVariationJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmspages202603sitePagesabTestcreateVariationCreateABTestVariationResponse, error)
 
 	// Postcmspages202603sitePagesabTestendEndActiveABTestWithBodyWithResponse End an active A/B test
 	//
@@ -3224,6 +5757,15 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /cms/pages/2026-03/site-pages/ab-test/end (the `Postcmspages202603sitePagesabTestendEndActiveABTest` operationId).
 	Postcmspages202603sitePagesabTestendEndActiveABTestWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmspages202603sitePagesabTestendEndActiveABTestResponse, error)
 
+	// Postcmspages202603sitePagesabTestendEndActiveABTestWithResponse End an active A/B test
+	//
+	// End an active A/B test and designate a winner.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/pages/2026-03/site-pages/ab-test/end (the `Postcmspages202603sitePagesabTestendEndActiveABTest` operationId).
+	Postcmspages202603sitePagesabTestendEndActiveABTestWithResponse(ctx context.Context, body Postcmspages202603sitePagesabTestendEndActiveABTestJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmspages202603sitePagesabTestendEndActiveABTestResponse, error)
+
 	// Postcmspages202603sitePagesabTestrerunRerunPreviousABTestWithBodyWithResponse Rerun a previous A/B test
 	//
 	// Rerun a previous A/B test.
@@ -3232,6 +5774,15 @@ type ClientWithResponsesInterface interface {
 	//
 	// Corresponds with POST /cms/pages/2026-03/site-pages/ab-test/rerun (the `Postcmspages202603sitePagesabTestrerunRerunPreviousABTest` operationId).
 	Postcmspages202603sitePagesabTestrerunRerunPreviousABTestWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmspages202603sitePagesabTestrerunRerunPreviousABTestResponse, error)
+
+	// Postcmspages202603sitePagesabTestrerunRerunPreviousABTestWithResponse Rerun a previous A/B test
+	//
+	// Rerun a previous A/B test.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/pages/2026-03/site-pages/ab-test/rerun (the `Postcmspages202603sitePagesabTestrerunRerunPreviousABTest` operationId).
+	Postcmspages202603sitePagesabTestrerunRerunPreviousABTestWithResponse(ctx context.Context, body Postcmspages202603sitePagesabTestrerunRerunPreviousABTestJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmspages202603sitePagesabTestrerunRerunPreviousABTestResponse, error)
 
 	// Postcmspages202603sitePagesbatcharchiveArchiveBatchWithBodyWithResponse Delete website pages
 	//
@@ -3242,6 +5793,15 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /cms/pages/2026-03/site-pages/batch/archive (the `Postcmspages202603sitePagesbatcharchiveArchiveBatch` operationId).
 	Postcmspages202603sitePagesbatcharchiveArchiveBatchWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmspages202603sitePagesbatcharchiveArchiveBatchResponse, error)
 
+	// Postcmspages202603sitePagesbatcharchiveArchiveBatchWithResponse Delete website pages
+	//
+	// Delete a batch of website pages as specified in the request body. Note that this is not the same as the dashboard `archive` function. To perform a dashboard `archive` send an normal update with the `archivedInDashboard` field set to `true`.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/pages/2026-03/site-pages/batch/archive (the `Postcmspages202603sitePagesbatcharchiveArchiveBatch` operationId).
+	Postcmspages202603sitePagesbatcharchiveArchiveBatchWithResponse(ctx context.Context, body Postcmspages202603sitePagesbatcharchiveArchiveBatchJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmspages202603sitePagesbatcharchiveArchiveBatchResponse, error)
+
 	// Postcmspages202603sitePagesbatchcreateCreateBatchWithBodyWithResponse Create website pages
 	//
 	// Create a batch of website pages as specified in the request body.
@@ -3250,6 +5810,15 @@ type ClientWithResponsesInterface interface {
 	//
 	// Corresponds with POST /cms/pages/2026-03/site-pages/batch/create (the `Postcmspages202603sitePagesbatchcreateCreateBatch` operationId).
 	Postcmspages202603sitePagesbatchcreateCreateBatchWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmspages202603sitePagesbatchcreateCreateBatchResponse, error)
+
+	// Postcmspages202603sitePagesbatchcreateCreateBatchWithResponse Create website pages
+	//
+	// Create a batch of website pages as specified in the request body.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/pages/2026-03/site-pages/batch/create (the `Postcmspages202603sitePagesbatchcreateCreateBatch` operationId).
+	Postcmspages202603sitePagesbatchcreateCreateBatchWithResponse(ctx context.Context, body Postcmspages202603sitePagesbatchcreateCreateBatchJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmspages202603sitePagesbatchcreateCreateBatchResponse, error)
 
 	// Postcmspages202603sitePagesbatchreadReadBatchWithBodyWithResponse Retrieve website pages
 	//
@@ -3260,6 +5829,15 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /cms/pages/2026-03/site-pages/batch/read (the `Postcmspages202603sitePagesbatchreadReadBatch` operationId).
 	Postcmspages202603sitePagesbatchreadReadBatchWithBodyWithResponse(ctx context.Context, params *Postcmspages202603sitePagesbatchreadReadBatchParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmspages202603sitePagesbatchreadReadBatchResponse, error)
 
+	// Postcmspages202603sitePagesbatchreadReadBatchWithResponse Retrieve website pages
+	//
+	// Retrieve a batch of website pages as specified in the request body.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/pages/2026-03/site-pages/batch/read (the `Postcmspages202603sitePagesbatchreadReadBatch` operationId).
+	Postcmspages202603sitePagesbatchreadReadBatchWithResponse(ctx context.Context, params *Postcmspages202603sitePagesbatchreadReadBatchParams, body Postcmspages202603sitePagesbatchreadReadBatchJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmspages202603sitePagesbatchreadReadBatchResponse, error)
+
 	// Postcmspages202603sitePagesbatchupdateUpdateBatchWithBodyWithResponse Update website pages
 	//
 	// Update a batch of website pages as specified in the request body.
@@ -3268,6 +5846,15 @@ type ClientWithResponsesInterface interface {
 	//
 	// Corresponds with POST /cms/pages/2026-03/site-pages/batch/update (the `Postcmspages202603sitePagesbatchupdateUpdateBatch` operationId).
 	Postcmspages202603sitePagesbatchupdateUpdateBatchWithBodyWithResponse(ctx context.Context, params *Postcmspages202603sitePagesbatchupdateUpdateBatchParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmspages202603sitePagesbatchupdateUpdateBatchResponse, error)
+
+	// Postcmspages202603sitePagesbatchupdateUpdateBatchWithResponse Update website pages
+	//
+	// Update a batch of website pages as specified in the request body.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/pages/2026-03/site-pages/batch/update (the `Postcmspages202603sitePagesbatchupdateUpdateBatch` operationId).
+	Postcmspages202603sitePagesbatchupdateUpdateBatchWithResponse(ctx context.Context, params *Postcmspages202603sitePagesbatchupdateUpdateBatchParams, body Postcmspages202603sitePagesbatchupdateUpdateBatchJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmspages202603sitePagesbatchupdateUpdateBatchResponse, error)
 
 	// Postcmspages202603sitePagescloneCloneWithBodyWithResponse Clone a website page
 	//
@@ -3278,6 +5865,15 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /cms/pages/2026-03/site-pages/clone (the `Postcmspages202603sitePagescloneClone` operationId).
 	Postcmspages202603sitePagescloneCloneWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmspages202603sitePagescloneCloneResponse, error)
 
+	// Postcmspages202603sitePagescloneCloneWithResponse Clone a website page
+	//
+	// Create a copy of an existing website page.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/pages/2026-03/site-pages/clone (the `Postcmspages202603sitePagescloneClone` operationId).
+	Postcmspages202603sitePagescloneCloneWithResponse(ctx context.Context, body Postcmspages202603sitePagescloneCloneJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmspages202603sitePagescloneCloneResponse, error)
+
 	// Postcmspages202603sitePagesmultiLanguageattachToLangGroupAttachToLangGroupWithBodyWithResponse Add a website page to a multi-language group
 	//
 	// Attach a site page to a multi-language group.
@@ -3286,6 +5882,15 @@ type ClientWithResponsesInterface interface {
 	//
 	// Corresponds with POST /cms/pages/2026-03/site-pages/multi-language/attach-to-lang-group (the `Postcmspages202603sitePagesmultiLanguageattachToLangGroupAttachToLangGroup` operationId).
 	Postcmspages202603sitePagesmultiLanguageattachToLangGroupAttachToLangGroupWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmspages202603sitePagesmultiLanguageattachToLangGroupAttachToLangGroupResponse, error)
+
+	// Postcmspages202603sitePagesmultiLanguageattachToLangGroupAttachToLangGroupWithResponse Add a website page to a multi-language group
+	//
+	// Attach a site page to a multi-language group.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/pages/2026-03/site-pages/multi-language/attach-to-lang-group (the `Postcmspages202603sitePagesmultiLanguageattachToLangGroupAttachToLangGroup` operationId).
+	Postcmspages202603sitePagesmultiLanguageattachToLangGroupAttachToLangGroupWithResponse(ctx context.Context, body Postcmspages202603sitePagesmultiLanguageattachToLangGroupAttachToLangGroupJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmspages202603sitePagesmultiLanguageattachToLangGroupAttachToLangGroupResponse, error)
 
 	// Postcmspages202603sitePagesmultiLanguagecreateLanguageVariationCreateLangVariationWithBodyWithResponse Create a new language variation
 	//
@@ -3296,6 +5901,15 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /cms/pages/2026-03/site-pages/multi-language/create-language-variation (the `Postcmspages202603sitePagesmultiLanguagecreateLanguageVariationCreateLangVariation` operationId).
 	Postcmspages202603sitePagesmultiLanguagecreateLanguageVariationCreateLangVariationWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmspages202603sitePagesmultiLanguagecreateLanguageVariationCreateLangVariationResponse, error)
 
+	// Postcmspages202603sitePagesmultiLanguagecreateLanguageVariationCreateLangVariationWithResponse Create a new language variation
+	//
+	// Create a new language variation from an existing website page. The variation will be a copy of the draft state of the source page. To preview the content, you can [retrieve the draft of the source website page](/api-reference/latest/cms/pages/website-pages/drafts/get-website-page-draft).
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/pages/2026-03/site-pages/multi-language/create-language-variation (the `Postcmspages202603sitePagesmultiLanguagecreateLanguageVariationCreateLangVariation` operationId).
+	Postcmspages202603sitePagesmultiLanguagecreateLanguageVariationCreateLangVariationWithResponse(ctx context.Context, body Postcmspages202603sitePagesmultiLanguagecreateLanguageVariationCreateLangVariationJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmspages202603sitePagesmultiLanguagecreateLanguageVariationCreateLangVariationResponse, error)
+
 	// Postcmspages202603sitePagesmultiLanguagedetachFromLangGroupDetachFromLangGroupWithBodyWithResponse Remove a website page from a multi-language group
 	//
 	// Detach a website page from a multi-language group.
@@ -3304,6 +5918,15 @@ type ClientWithResponsesInterface interface {
 	//
 	// Corresponds with POST /cms/pages/2026-03/site-pages/multi-language/detach-from-lang-group (the `Postcmspages202603sitePagesmultiLanguagedetachFromLangGroupDetachFromLangGroup` operationId).
 	Postcmspages202603sitePagesmultiLanguagedetachFromLangGroupDetachFromLangGroupWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmspages202603sitePagesmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse, error)
+
+	// Postcmspages202603sitePagesmultiLanguagedetachFromLangGroupDetachFromLangGroupWithResponse Remove a website page from a multi-language group
+	//
+	// Detach a website page from a multi-language group.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/pages/2026-03/site-pages/multi-language/detach-from-lang-group (the `Postcmspages202603sitePagesmultiLanguagedetachFromLangGroupDetachFromLangGroup` operationId).
+	Postcmspages202603sitePagesmultiLanguagedetachFromLangGroupDetachFromLangGroupWithResponse(ctx context.Context, body Postcmspages202603sitePagesmultiLanguagedetachFromLangGroupDetachFromLangGroupJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmspages202603sitePagesmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse, error)
 
 	// Putcmspages202603sitePagesmultiLanguagesetNewLangPrimarySetLangPrimaryWithBodyWithResponse Set a new primary language
 	//
@@ -3314,6 +5937,15 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with PUT /cms/pages/2026-03/site-pages/multi-language/set-new-lang-primary (the `Putcmspages202603sitePagesmultiLanguagesetNewLangPrimarySetLangPrimary` operationId).
 	Putcmspages202603sitePagesmultiLanguagesetNewLangPrimarySetLangPrimaryWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Putcmspages202603sitePagesmultiLanguagesetNewLangPrimarySetLangPrimaryResponse, error)
 
+	// Putcmspages202603sitePagesmultiLanguagesetNewLangPrimarySetLangPrimaryWithResponse Set a new primary language
+	//
+	// Set a site page as the primary language of a multi-language group.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PUT /cms/pages/2026-03/site-pages/multi-language/set-new-lang-primary (the `Putcmspages202603sitePagesmultiLanguagesetNewLangPrimarySetLangPrimary` operationId).
+	Putcmspages202603sitePagesmultiLanguagesetNewLangPrimarySetLangPrimaryWithResponse(ctx context.Context, body Putcmspages202603sitePagesmultiLanguagesetNewLangPrimarySetLangPrimaryJSONRequestBody, reqEditors ...RequestEditorFn) (*Putcmspages202603sitePagesmultiLanguagesetNewLangPrimarySetLangPrimaryResponse, error)
+
 	// Postcmspages202603sitePagesmultiLanguageupdateLanguagesUpdateLangsWithBodyWithResponse Update languages of multi-language group
 	//
 	// Explicitly set new languages for each site page in a multi-language group.
@@ -3323,6 +5955,15 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /cms/pages/2026-03/site-pages/multi-language/update-languages (the `Postcmspages202603sitePagesmultiLanguageupdateLanguagesUpdateLangs` operationId).
 	Postcmspages202603sitePagesmultiLanguageupdateLanguagesUpdateLangsWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmspages202603sitePagesmultiLanguageupdateLanguagesUpdateLangsResponse, error)
 
+	// Postcmspages202603sitePagesmultiLanguageupdateLanguagesUpdateLangsWithResponse Update languages of multi-language group
+	//
+	// Explicitly set new languages for each site page in a multi-language group.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/pages/2026-03/site-pages/multi-language/update-languages (the `Postcmspages202603sitePagesmultiLanguageupdateLanguagesUpdateLangs` operationId).
+	Postcmspages202603sitePagesmultiLanguageupdateLanguagesUpdateLangsWithResponse(ctx context.Context, body Postcmspages202603sitePagesmultiLanguageupdateLanguagesUpdateLangsJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmspages202603sitePagesmultiLanguageupdateLanguagesUpdateLangsResponse, error)
+
 	// Postcmspages202603sitePagesscheduleScheduleWithBodyWithResponse Schedule a website page to be published
 	//
 	// Schedule a website page to published at a future time.
@@ -3331,6 +5972,15 @@ type ClientWithResponsesInterface interface {
 	//
 	// Corresponds with POST /cms/pages/2026-03/site-pages/schedule (the `Postcmspages202603sitePagesscheduleSchedule` operationId).
 	Postcmspages202603sitePagesscheduleScheduleWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmspages202603sitePagesscheduleScheduleResponse, error)
+
+	// Postcmspages202603sitePagesscheduleScheduleWithResponse Schedule a website page to be published
+	//
+	// Schedule a website page to published at a future time.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /cms/pages/2026-03/site-pages/schedule (the `Postcmspages202603sitePagesscheduleSchedule` operationId).
+	Postcmspages202603sitePagesscheduleScheduleWithResponse(ctx context.Context, body Postcmspages202603sitePagesscheduleScheduleJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmspages202603sitePagesscheduleScheduleResponse, error)
 
 	// Deletecmspages202603sitePagesObjectIdArchiveWithResponse Delete a website page
 	//
@@ -3359,6 +6009,15 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with PATCH /cms/pages/2026-03/site-pages/{objectId} (the `Patchcmspages202603sitePagesObjectIdUpdate` operationId).
 	Patchcmspages202603sitePagesObjectIdUpdateWithBodyWithResponse(ctx context.Context, objectId string, params *Patchcmspages202603sitePagesObjectIdUpdateParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Patchcmspages202603sitePagesObjectIdUpdateResponse, error)
 
+	// Patchcmspages202603sitePagesObjectIdUpdateWithResponse Update a website page
+	//
+	// Partially updates a single website page, specified by its ID. You only need to specify the column values that you are modifying.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PATCH /cms/pages/2026-03/site-pages/{objectId} (the `Patchcmspages202603sitePagesObjectIdUpdate` operationId).
+	Patchcmspages202603sitePagesObjectIdUpdateWithResponse(ctx context.Context, objectId string, params *Patchcmspages202603sitePagesObjectIdUpdateParams, body Patchcmspages202603sitePagesObjectIdUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*Patchcmspages202603sitePagesObjectIdUpdateResponse, error)
+
 	// Getcmspages202603sitePagesObjectIddraftGetDraftByIdWithResponse Retrieve a website page draft
 	//
 	// Retrieve the full draft version of a website page, specified by its ID.
@@ -3376,6 +6035,15 @@ type ClientWithResponsesInterface interface {
 	//
 	// Corresponds with PATCH /cms/pages/2026-03/site-pages/{objectId}/draft (the `Patchcmspages202603sitePagesObjectIddraftUpdateDraft` operationId).
 	Patchcmspages202603sitePagesObjectIddraftUpdateDraftWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Patchcmspages202603sitePagesObjectIddraftUpdateDraftResponse, error)
+
+	// Patchcmspages202603sitePagesObjectIddraftUpdateDraftWithResponse Update a website page draft
+	//
+	// Partially update the draft version of a website page, specified by page ID. You only need to specify the values for the details that you're modifying.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PATCH /cms/pages/2026-03/site-pages/{objectId}/draft (the `Patchcmspages202603sitePagesObjectIddraftUpdateDraft` operationId).
+	Patchcmspages202603sitePagesObjectIddraftUpdateDraftWithResponse(ctx context.Context, objectId string, body Patchcmspages202603sitePagesObjectIddraftUpdateDraftJSONRequestBody, reqEditors ...RequestEditorFn) (*Patchcmspages202603sitePagesObjectIddraftUpdateDraftResponse, error)
 
 	// Postcmspages202603sitePagesObjectIddraftpushLivePushLiveWithResponse Publish website page draft
 	//
@@ -3439,15 +6107,6 @@ type ClientWithResponsesInterface interface {
 	//
 	// Corresponds with GET /cms/site-search/2026-03/indexed-data/{contentId} (the `GetcmssiteSearch202603indexedDataContentIdGetById` operationId).
 	GetcmssiteSearch202603indexedDataContentIdGetByIdWithResponse(ctx context.Context, contentId string, params *GetcmssiteSearch202603indexedDataContentIdGetByIdParams, reqEditors ...RequestEditorFn) (*GetcmssiteSearch202603indexedDataContentIdGetByIdResponse, error)
-
-	// GetcmssiteSearch202603searchWithResponse Search your site
-	//
-	// Returns any website content matching the given search criteria for a given HubSpot account. Searches can be filtered by content type, domain, or URL path. Includes options for weighing results by recency and popularity, along with language support.
-	//
-	// Returns a wrapper object for the known response body format(s).
-	//
-	// Corresponds with GET /cms/site-search/2026-03/search (the `GetcmssiteSearch202603search` operationId).
-	GetcmssiteSearch202603searchWithResponse(ctx context.Context, params *GetcmssiteSearch202603searchParams, reqEditors ...RequestEditorFn) (*GetcmssiteSearch202603searchResponse, error)
 
 	// PostcmssourceCode202603extractasyncDoAsyncWithBodyWithResponse Extract a zip file
 	//
@@ -15862,6 +18521,13 @@ func (r GetcmsblogSettings202603settingsBlogIdrevisionsRevisionIdResponse) Conte
 type Getcmsblogs202603authorsGetPageResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *CollectionResponseWithTotalBlogAuthorForwardPaging
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Getcmsblogs202603authorsGetPageResponse) GetJSON200() *CollectionResponseWithTotalBlogAuthorForwardPaging {
+	return r.JSON200
 }
 
 // GetBody returns the raw response body bytes
@@ -15901,8 +18567,15 @@ type Postcmsblogs202603authorsCreateResponse201Headers struct {
 type Postcmsblogs202603authorsCreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
+	// JSON201 the response for an HTTP 201 `application/json` response
+	JSON201 *BlogAuthor
 	// Headers201 the parsed response headers for an HTTP 201 response
 	Headers201 *Postcmsblogs202603authorsCreateResponse201Headers
+}
+
+// GetJSON201 returns the response for an HTTP 201 `application/json` response
+func (r Postcmsblogs202603authorsCreateResponse) GetJSON201() *BlogAuthor {
+	return r.JSON201
 }
 
 // GetBody returns the raw response body bytes
@@ -15937,6 +18610,13 @@ func (r Postcmsblogs202603authorsCreateResponse) ContentType() string {
 type Postcmsblogs202603authorsbatcharchiveArchiveBatchResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
+	// JSON207 the response for an HTTP 207 `application/json` response
+	JSON207 *BatchResponseBlogAuthorWithErrors
+}
+
+// GetJSON207 returns the response for an HTTP 207 `application/json` response
+func (r Postcmsblogs202603authorsbatcharchiveArchiveBatchResponse) GetJSON207() *BatchResponseBlogAuthorWithErrors {
+	return r.JSON207
 }
 
 // GetBody returns the raw response body bytes
@@ -15971,6 +18651,20 @@ func (r Postcmsblogs202603authorsbatcharchiveArchiveBatchResponse) ContentType()
 type Postcmsblogs202603authorsbatchcreateCreateBatchResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
+	// JSON201 the response for an HTTP 201 `application/json` response
+	JSON201 *BatchResponseBlogAuthor
+	// JSON207 the response for an HTTP 207 `application/json` response
+	JSON207 *BatchResponseBlogAuthorWithErrors
+}
+
+// GetJSON201 returns the response for an HTTP 201 `application/json` response
+func (r Postcmsblogs202603authorsbatchcreateCreateBatchResponse) GetJSON201() *BatchResponseBlogAuthor {
+	return r.JSON201
+}
+
+// GetJSON207 returns the response for an HTTP 207 `application/json` response
+func (r Postcmsblogs202603authorsbatchcreateCreateBatchResponse) GetJSON207() *BatchResponseBlogAuthorWithErrors {
+	return r.JSON207
 }
 
 // GetBody returns the raw response body bytes
@@ -16005,6 +18699,20 @@ func (r Postcmsblogs202603authorsbatchcreateCreateBatchResponse) ContentType() s
 type Postcmsblogs202603authorsbatchreadReadBatchResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *BatchResponseBlogAuthor
+	// JSON207 the response for an HTTP 207 `application/json` response
+	JSON207 *BatchResponseBlogAuthorWithErrors
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Postcmsblogs202603authorsbatchreadReadBatchResponse) GetJSON200() *BatchResponseBlogAuthor {
+	return r.JSON200
+}
+
+// GetJSON207 returns the response for an HTTP 207 `application/json` response
+func (r Postcmsblogs202603authorsbatchreadReadBatchResponse) GetJSON207() *BatchResponseBlogAuthorWithErrors {
+	return r.JSON207
 }
 
 // GetBody returns the raw response body bytes
@@ -16039,6 +18747,20 @@ func (r Postcmsblogs202603authorsbatchreadReadBatchResponse) ContentType() strin
 type Postcmsblogs202603authorsbatchupdateUpdateBatchResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *BatchResponseBlogAuthor
+	// JSON207 the response for an HTTP 207 `application/json` response
+	JSON207 *BatchResponseBlogAuthorWithErrors
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Postcmsblogs202603authorsbatchupdateUpdateBatchResponse) GetJSON200() *BatchResponseBlogAuthor {
+	return r.JSON200
+}
+
+// GetJSON207 returns the response for an HTTP 207 `application/json` response
+func (r Postcmsblogs202603authorsbatchupdateUpdateBatchResponse) GetJSON207() *BatchResponseBlogAuthorWithErrors {
+	return r.JSON207
 }
 
 // GetBody returns the raw response body bytes
@@ -16073,6 +18795,13 @@ func (r Postcmsblogs202603authorsbatchupdateUpdateBatchResponse) ContentType() s
 type Getcmsblogs202603authorscursorcmsblogsv3authorscursorResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *CursorPagedResultBlogAuthorLong
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Getcmsblogs202603authorscursorcmsblogsv3authorscursorResponse) GetJSON200() *CursorPagedResultBlogAuthorLong {
+	return r.JSON200
 }
 
 // GetBody returns the raw response body bytes
@@ -16107,6 +18836,13 @@ func (r Getcmsblogs202603authorscursorcmsblogsv3authorscursorResponse) ContentTy
 type Getcmsblogs202603authorscursorquerycmsblogsv3authorscursorqueryResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *CursorPagedResultBlogAuthorLong
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Getcmsblogs202603authorscursorquerycmsblogsv3authorscursorqueryResponse) GetJSON200() *CursorPagedResultBlogAuthorLong {
+	return r.JSON200
 }
 
 // GetBody returns the raw response body bytes
@@ -16175,6 +18911,13 @@ func (r Postcmsblogs202603authorsmultiLanguageattachToLangGroupAttachToLangGroup
 type Postcmsblogs202603authorsmultiLanguagecreateLanguageVariationCreateLangVariationResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *BlogAuthor
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Postcmsblogs202603authorsmultiLanguagecreateLanguageVariationCreateLangVariationResponse) GetJSON200() *BlogAuthor {
+	return r.JSON200
 }
 
 // GetBody returns the raw response body bytes
@@ -16345,6 +19088,13 @@ func (r Deletecmsblogs202603authorsObjectIdArchiveResponse) ContentType() string
 type Getcmsblogs202603authorsObjectIdGetByIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *BlogAuthor
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Getcmsblogs202603authorsObjectIdGetByIdResponse) GetJSON200() *BlogAuthor {
+	return r.JSON200
 }
 
 // GetBody returns the raw response body bytes
@@ -16379,6 +19129,13 @@ func (r Getcmsblogs202603authorsObjectIdGetByIdResponse) ContentType() string {
 type Patchcmsblogs202603authorsObjectIdUpdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *BlogAuthor
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Patchcmsblogs202603authorsObjectIdUpdateResponse) GetJSON200() *BlogAuthor {
+	return r.JSON200
 }
 
 // GetBody returns the raw response body bytes
@@ -16413,6 +19170,13 @@ func (r Patchcmsblogs202603authorsObjectIdUpdateResponse) ContentType() string {
 type Getcmsblogs202603postsGetPageResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *CollectionResponseWithTotalBlogPostForwardPaging
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Getcmsblogs202603postsGetPageResponse) GetJSON200() *CollectionResponseWithTotalBlogPostForwardPaging {
+	return r.JSON200
 }
 
 // GetBody returns the raw response body bytes
@@ -16452,8 +19216,15 @@ type Postcmsblogs202603postsCreateResponse201Headers struct {
 type Postcmsblogs202603postsCreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
+	// JSON201 the response for an HTTP 201 `application/json` response
+	JSON201 *BlogPost
 	// Headers201 the parsed response headers for an HTTP 201 response
 	Headers201 *Postcmsblogs202603postsCreateResponse201Headers
+}
+
+// GetJSON201 returns the response for an HTTP 201 `application/json` response
+func (r Postcmsblogs202603postsCreateResponse) GetJSON201() *BlogPost {
+	return r.JSON201
 }
 
 // GetBody returns the raw response body bytes
@@ -16488,6 +19259,13 @@ func (r Postcmsblogs202603postsCreateResponse) ContentType() string {
 type Postcmsblogs202603postsbatcharchiveArchiveResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
+	// JSON207 the response for an HTTP 207 `application/json` response
+	JSON207 *BatchResponseBlogPostWithErrors
+}
+
+// GetJSON207 returns the response for an HTTP 207 `application/json` response
+func (r Postcmsblogs202603postsbatcharchiveArchiveResponse) GetJSON207() *BatchResponseBlogPostWithErrors {
+	return r.JSON207
 }
 
 // GetBody returns the raw response body bytes
@@ -16522,6 +19300,20 @@ func (r Postcmsblogs202603postsbatcharchiveArchiveResponse) ContentType() string
 type Postcmsblogs202603postsbatchcreateCreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
+	// JSON201 the response for an HTTP 201 `application/json` response
+	JSON201 *BatchResponseBlogPost
+	// JSON207 the response for an HTTP 207 `application/json` response
+	JSON207 *BatchResponseBlogPostWithErrors
+}
+
+// GetJSON201 returns the response for an HTTP 201 `application/json` response
+func (r Postcmsblogs202603postsbatchcreateCreateResponse) GetJSON201() *BatchResponseBlogPost {
+	return r.JSON201
+}
+
+// GetJSON207 returns the response for an HTTP 207 `application/json` response
+func (r Postcmsblogs202603postsbatchcreateCreateResponse) GetJSON207() *BatchResponseBlogPostWithErrors {
+	return r.JSON207
 }
 
 // GetBody returns the raw response body bytes
@@ -16556,6 +19348,20 @@ func (r Postcmsblogs202603postsbatchcreateCreateResponse) ContentType() string {
 type Postcmsblogs202603postsbatchreadReadResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *BatchResponseBlogPost
+	// JSON207 the response for an HTTP 207 `application/json` response
+	JSON207 *BatchResponseBlogPostWithErrors
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Postcmsblogs202603postsbatchreadReadResponse) GetJSON200() *BatchResponseBlogPost {
+	return r.JSON200
+}
+
+// GetJSON207 returns the response for an HTTP 207 `application/json` response
+func (r Postcmsblogs202603postsbatchreadReadResponse) GetJSON207() *BatchResponseBlogPostWithErrors {
+	return r.JSON207
 }
 
 // GetBody returns the raw response body bytes
@@ -16590,6 +19396,20 @@ func (r Postcmsblogs202603postsbatchreadReadResponse) ContentType() string {
 type Postcmsblogs202603postsbatchupdateUpdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *BatchResponseBlogPost
+	// JSON207 the response for an HTTP 207 `application/json` response
+	JSON207 *BatchResponseBlogPostWithErrors
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Postcmsblogs202603postsbatchupdateUpdateResponse) GetJSON200() *BatchResponseBlogPost {
+	return r.JSON200
+}
+
+// GetJSON207 returns the response for an HTTP 207 `application/json` response
+func (r Postcmsblogs202603postsbatchupdateUpdateResponse) GetJSON207() *BatchResponseBlogPostWithErrors {
+	return r.JSON207
 }
 
 // GetBody returns the raw response body bytes
@@ -16624,6 +19444,13 @@ func (r Postcmsblogs202603postsbatchupdateUpdateResponse) ContentType() string {
 type Postcmsblogs202603postscloneCloneResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *BlogPost
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Postcmsblogs202603postscloneCloneResponse) GetJSON200() *BlogPost {
+	return r.JSON200
 }
 
 // GetBody returns the raw response body bytes
@@ -16658,6 +19485,13 @@ func (r Postcmsblogs202603postscloneCloneResponse) ContentType() string {
 type Getcmsblogs202603postscursorcmsblogsv3postscursorResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *CursorPagedResultBlogPostLong
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Getcmsblogs202603postscursorcmsblogsv3postscursorResponse) GetJSON200() *CursorPagedResultBlogPostLong {
+	return r.JSON200
 }
 
 // GetBody returns the raw response body bytes
@@ -16692,6 +19526,13 @@ func (r Getcmsblogs202603postscursorcmsblogsv3postscursorResponse) ContentType()
 type Getcmsblogs202603postscursorquerycmsblogsv3postscursorqueryResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *CursorPagedResultBlogPostLong
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Getcmsblogs202603postscursorquerycmsblogsv3postscursorqueryResponse) GetJSON200() *CursorPagedResultBlogPostLong {
+	return r.JSON200
 }
 
 // GetBody returns the raw response body bytes
@@ -16760,6 +19601,13 @@ func (r Postcmsblogs202603postsmultiLanguageattachToLangGroupAttachToLangGroupRe
 type Postcmsblogs202603postsmultiLanguagecreateLanguageVariationCreateLangVariationResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *BlogPost
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Postcmsblogs202603postsmultiLanguagecreateLanguageVariationCreateLangVariationResponse) GetJSON200() *BlogPost {
+	return r.JSON200
 }
 
 // GetBody returns the raw response body bytes
@@ -16964,6 +19812,13 @@ func (r Deletecmsblogs202603postsObjectIdArchiveResponse) ContentType() string {
 type Getcmsblogs202603postsObjectIdGetByIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *BlogPost
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Getcmsblogs202603postsObjectIdGetByIdResponse) GetJSON200() *BlogPost {
+	return r.JSON200
 }
 
 // GetBody returns the raw response body bytes
@@ -16998,6 +19853,13 @@ func (r Getcmsblogs202603postsObjectIdGetByIdResponse) ContentType() string {
 type Patchcmsblogs202603postsObjectIdUpdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *BlogPost
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Patchcmsblogs202603postsObjectIdUpdateResponse) GetJSON200() *BlogPost {
+	return r.JSON200
 }
 
 // GetBody returns the raw response body bytes
@@ -17032,6 +19894,13 @@ func (r Patchcmsblogs202603postsObjectIdUpdateResponse) ContentType() string {
 type Getcmsblogs202603postsObjectIddraftGetDraftByIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *BlogPost
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Getcmsblogs202603postsObjectIddraftGetDraftByIdResponse) GetJSON200() *BlogPost {
+	return r.JSON200
 }
 
 // GetBody returns the raw response body bytes
@@ -17066,6 +19935,13 @@ func (r Getcmsblogs202603postsObjectIddraftGetDraftByIdResponse) ContentType() s
 type Patchcmsblogs202603postsObjectIddraftUpdateDraftResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *BlogPost
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Patchcmsblogs202603postsObjectIddraftUpdateDraftResponse) GetJSON200() *BlogPost {
+	return r.JSON200
 }
 
 // GetBody returns the raw response body bytes
@@ -17139,2882 +20015,4 @@ type Postcmsblogs202603postsObjectIddraftresetResetDraftResponse struct {
 // GetBody returns the raw response body bytes
 func (r Postcmsblogs202603postsObjectIddraftresetResetDraftResponse) GetBody() []byte {
 	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmsblogs202603postsObjectIddraftresetResetDraftResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmsblogs202603postsObjectIddraftresetResetDraftResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmsblogs202603postsObjectIddraftresetResetDraftResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcmsblogs202603postsObjectIdrevisionsGetPreviousVersionsResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcmsblogs202603postsObjectIdrevisionsGetPreviousVersionsResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcmsblogs202603postsObjectIdrevisionsGetPreviousVersionsResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcmsblogs202603postsObjectIdrevisionsGetPreviousVersionsResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcmsblogs202603postsObjectIdrevisionsGetPreviousVersionsResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcmsblogs202603postsObjectIdrevisionsRevisionIdGetPreviousVersionResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcmsblogs202603postsObjectIdrevisionsRevisionIdGetPreviousVersionResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcmsblogs202603postsObjectIdrevisionsRevisionIdGetPreviousVersionResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcmsblogs202603postsObjectIdrevisionsRevisionIdGetPreviousVersionResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcmsblogs202603postsObjectIdrevisionsRevisionIdGetPreviousVersionResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmsblogs202603postsObjectIdrevisionsRevisionIdrestoreRestorePreviousVersionResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmsblogs202603postsObjectIdrevisionsRevisionIdrestoreRestorePreviousVersionResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmsblogs202603postsObjectIdrevisionsRevisionIdrestoreRestorePreviousVersionResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmsblogs202603postsObjectIdrevisionsRevisionIdrestoreRestorePreviousVersionResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmsblogs202603postsObjectIdrevisionsRevisionIdrestoreRestorePreviousVersionResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmsblogs202603postsObjectIdrevisionsRevisionIdrestoreToDraftRestorePreviousVersionToDraftResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmsblogs202603postsObjectIdrevisionsRevisionIdrestoreToDraftRestorePreviousVersionToDraftResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmsblogs202603postsObjectIdrevisionsRevisionIdrestoreToDraftRestorePreviousVersionToDraftResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmsblogs202603postsObjectIdrevisionsRevisionIdrestoreToDraftRestorePreviousVersionToDraftResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmsblogs202603postsObjectIdrevisionsRevisionIdrestoreToDraftRestorePreviousVersionToDraftResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcmsblogs202603tagsGetPageResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcmsblogs202603tagsGetPageResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcmsblogs202603tagsGetPageResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcmsblogs202603tagsGetPageResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcmsblogs202603tagsGetPageResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-// Postcmsblogs202603tagsCreateResponse201Headers the declared response headers of an HTTP 201 response for Postcmsblogs202603tagsCreate
-type Postcmsblogs202603tagsCreateResponse201Headers struct {
-	Location *string
-}
-
-type Postcmsblogs202603tagsCreateResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// Headers201 the parsed response headers for an HTTP 201 response
-	Headers201 *Postcmsblogs202603tagsCreateResponse201Headers
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmsblogs202603tagsCreateResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmsblogs202603tagsCreateResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmsblogs202603tagsCreateResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmsblogs202603tagsCreateResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmsblogs202603tagsbatcharchiveArchiveBatchResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmsblogs202603tagsbatcharchiveArchiveBatchResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmsblogs202603tagsbatcharchiveArchiveBatchResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmsblogs202603tagsbatcharchiveArchiveBatchResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmsblogs202603tagsbatcharchiveArchiveBatchResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmsblogs202603tagsbatchcreateCreateBatchResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmsblogs202603tagsbatchcreateCreateBatchResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmsblogs202603tagsbatchcreateCreateBatchResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmsblogs202603tagsbatchcreateCreateBatchResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmsblogs202603tagsbatchcreateCreateBatchResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmsblogs202603tagsbatchreadReadBatchResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmsblogs202603tagsbatchreadReadBatchResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmsblogs202603tagsbatchreadReadBatchResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmsblogs202603tagsbatchreadReadBatchResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmsblogs202603tagsbatchreadReadBatchResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmsblogs202603tagsbatchupdateUpdateBatchResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmsblogs202603tagsbatchupdateUpdateBatchResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmsblogs202603tagsbatchupdateUpdateBatchResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmsblogs202603tagsbatchupdateUpdateBatchResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmsblogs202603tagsbatchupdateUpdateBatchResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcmsblogs202603tagscursorcmsblogsv3tagscursorResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcmsblogs202603tagscursorcmsblogsv3tagscursorResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcmsblogs202603tagscursorcmsblogsv3tagscursorResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcmsblogs202603tagscursorcmsblogsv3tagscursorResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcmsblogs202603tagscursorcmsblogsv3tagscursorResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcmsblogs202603tagscursorquerycmsblogsv3tagscursorqueryResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcmsblogs202603tagscursorquerycmsblogsv3tagscursorqueryResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcmsblogs202603tagscursorquerycmsblogsv3tagscursorqueryResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcmsblogs202603tagscursorquerycmsblogsv3tagscursorqueryResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcmsblogs202603tagscursorquerycmsblogsv3tagscursorqueryResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmsblogs202603tagsmultiLanguageattachToLangGroupAttachToLangGroupResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmsblogs202603tagsmultiLanguageattachToLangGroupAttachToLangGroupResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmsblogs202603tagsmultiLanguageattachToLangGroupAttachToLangGroupResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmsblogs202603tagsmultiLanguageattachToLangGroupAttachToLangGroupResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmsblogs202603tagsmultiLanguageattachToLangGroupAttachToLangGroupResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmsblogs202603tagsmultiLanguagecreateLanguageVariationCreateLangVariationResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmsblogs202603tagsmultiLanguagecreateLanguageVariationCreateLangVariationResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmsblogs202603tagsmultiLanguagecreateLanguageVariationCreateLangVariationResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmsblogs202603tagsmultiLanguagecreateLanguageVariationCreateLangVariationResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmsblogs202603tagsmultiLanguagecreateLanguageVariationCreateLangVariationResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmsblogs202603tagsmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmsblogs202603tagsmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmsblogs202603tagsmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmsblogs202603tagsmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmsblogs202603tagsmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Putcmsblogs202603tagsmultiLanguagesetNewLangPrimarySetLangPrimaryResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Putcmsblogs202603tagsmultiLanguagesetNewLangPrimarySetLangPrimaryResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Putcmsblogs202603tagsmultiLanguagesetNewLangPrimarySetLangPrimaryResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Putcmsblogs202603tagsmultiLanguagesetNewLangPrimarySetLangPrimaryResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Putcmsblogs202603tagsmultiLanguagesetNewLangPrimarySetLangPrimaryResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmsblogs202603tagsmultiLanguageupdateLanguagesUpdateLangsResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmsblogs202603tagsmultiLanguageupdateLanguagesUpdateLangsResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmsblogs202603tagsmultiLanguageupdateLanguagesUpdateLangsResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmsblogs202603tagsmultiLanguageupdateLanguagesUpdateLangsResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmsblogs202603tagsmultiLanguageupdateLanguagesUpdateLangsResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Deletecmsblogs202603tagsObjectIdArchiveResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Deletecmsblogs202603tagsObjectIdArchiveResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Deletecmsblogs202603tagsObjectIdArchiveResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Deletecmsblogs202603tagsObjectIdArchiveResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Deletecmsblogs202603tagsObjectIdArchiveResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcmsblogs202603tagsObjectIdGetByIdResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcmsblogs202603tagsObjectIdGetByIdResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcmsblogs202603tagsObjectIdGetByIdResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcmsblogs202603tagsObjectIdGetByIdResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcmsblogs202603tagsObjectIdGetByIdResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Patchcmsblogs202603tagsObjectIdUpdateResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Patchcmsblogs202603tagsObjectIdUpdateResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Patchcmsblogs202603tagsObjectIdUpdateResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Patchcmsblogs202603tagsObjectIdUpdateResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Patchcmsblogs202603tagsObjectIdUpdateResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcmsdomains202603cmsdomainsv3Response struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CollectionResponseWithTotalDomain
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcmsdomains202603cmsdomainsv3Response) GetJSON200() *CollectionResponseWithTotalDomain {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcmsdomains202603cmsdomainsv3Response) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcmsdomains202603cmsdomainsv3Response) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcmsdomains202603cmsdomainsv3Response) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcmsdomains202603cmsdomainsv3Response) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcmsdomains202603DomainIdGetByIdResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *Domain
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcmsdomains202603DomainIdGetByIdResponse) GetJSON200() *Domain {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcmsdomains202603DomainIdGetByIdResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcmsdomains202603DomainIdGetByIdResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcmsdomains202603DomainIdGetByIdResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcmsdomains202603DomainIdGetByIdResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcmshubdb202603tablesGetAllTablesResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CollectionResponseWithTotalHubDbTableV3
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcmshubdb202603tablesGetAllTablesResponse) GetJSON200() *CollectionResponseWithTotalHubDbTableV3 {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcmshubdb202603tablesGetAllTablesResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcmshubdb202603tablesGetAllTablesResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcmshubdb202603tablesGetAllTablesResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcmshubdb202603tablesGetAllTablesResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-// Postcmshubdb202603tablesCreateTableResponse201Headers the declared response headers of an HTTP 201 response for Postcmshubdb202603tablesCreateTable
-type Postcmshubdb202603tablesCreateTableResponse201Headers struct {
-	Location *string
-}
-
-type Postcmshubdb202603tablesCreateTableResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *HubDbTableV3
-	// Headers201 the parsed response headers for an HTTP 201 response
-	Headers201 *Postcmshubdb202603tablesCreateTableResponse201Headers
-}
-
-// GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcmshubdb202603tablesCreateTableResponse) GetJSON201() *HubDbTableV3 {
-	return r.JSON201
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmshubdb202603tablesCreateTableResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmshubdb202603tablesCreateTableResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmshubdb202603tablesCreateTableResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmshubdb202603tablesCreateTableResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcmshubdb202603tablesdraftGetAllDraftTablesResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CollectionResponseWithTotalHubDbTableV3
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcmshubdb202603tablesdraftGetAllDraftTablesResponse) GetJSON200() *CollectionResponseWithTotalHubDbTableV3 {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcmshubdb202603tablesdraftGetAllDraftTablesResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcmshubdb202603tablesdraftGetAllDraftTablesResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcmshubdb202603tablesdraftGetAllDraftTablesResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcmshubdb202603tablesdraftGetAllDraftTablesResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Deletecmshubdb202603tablesTableIdOrNameArchiveTableResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Deletecmshubdb202603tablesTableIdOrNameArchiveTableResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Deletecmshubdb202603tablesTableIdOrNameArchiveTableResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Deletecmshubdb202603tablesTableIdOrNameArchiveTableResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Deletecmshubdb202603tablesTableIdOrNameArchiveTableResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcmshubdb202603tablesTableIdOrNameGetTableDetailsResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *HubDbTableV3
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcmshubdb202603tablesTableIdOrNameGetTableDetailsResponse) GetJSON200() *HubDbTableV3 {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcmshubdb202603tablesTableIdOrNameGetTableDetailsResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcmshubdb202603tablesTableIdOrNameGetTableDetailsResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcmshubdb202603tablesTableIdOrNameGetTableDetailsResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcmshubdb202603tablesTableIdOrNameGetTableDetailsResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcmshubdb202603tablesTableIdOrNamedraftGetDraftTableDetailsByIdResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *HubDbTableV3
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcmshubdb202603tablesTableIdOrNamedraftGetDraftTableDetailsByIdResponse) GetJSON200() *HubDbTableV3 {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcmshubdb202603tablesTableIdOrNamedraftGetDraftTableDetailsByIdResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcmshubdb202603tablesTableIdOrNamedraftGetDraftTableDetailsByIdResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcmshubdb202603tablesTableIdOrNamedraftGetDraftTableDetailsByIdResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcmshubdb202603tablesTableIdOrNamedraftGetDraftTableDetailsByIdResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Patchcmshubdb202603tablesTableIdOrNamedraftUpdateDraftTableResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *HubDbTableV3
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Patchcmshubdb202603tablesTableIdOrNamedraftUpdateDraftTableResponse) GetJSON200() *HubDbTableV3 {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Patchcmshubdb202603tablesTableIdOrNamedraftUpdateDraftTableResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Patchcmshubdb202603tablesTableIdOrNamedraftUpdateDraftTableResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Patchcmshubdb202603tablesTableIdOrNamedraftUpdateDraftTableResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Patchcmshubdb202603tablesTableIdOrNamedraftUpdateDraftTableResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmshubdb202603tablesTableIdOrNamedraftcloneCloneDraftTableResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *HubDbTableV3
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcmshubdb202603tablesTableIdOrNamedraftcloneCloneDraftTableResponse) GetJSON200() *HubDbTableV3 {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmshubdb202603tablesTableIdOrNamedraftcloneCloneDraftTableResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmshubdb202603tablesTableIdOrNamedraftcloneCloneDraftTableResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmshubdb202603tablesTableIdOrNamedraftcloneCloneDraftTableResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmshubdb202603tablesTableIdOrNamedraftcloneCloneDraftTableResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcmshubdb202603tablesTableIdOrNamedraftexportExportDraftTableResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcmshubdb202603tablesTableIdOrNamedraftexportExportDraftTableResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcmshubdb202603tablesTableIdOrNamedraftexportExportDraftTableResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcmshubdb202603tablesTableIdOrNamedraftexportExportDraftTableResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcmshubdb202603tablesTableIdOrNamedraftexportExportDraftTableResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmshubdb202603tablesTableIdOrNamedraftimportImportDraftTableResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *ImportResult
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcmshubdb202603tablesTableIdOrNamedraftimportImportDraftTableResponse) GetJSON200() *ImportResult {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmshubdb202603tablesTableIdOrNamedraftimportImportDraftTableResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmshubdb202603tablesTableIdOrNamedraftimportImportDraftTableResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmshubdb202603tablesTableIdOrNamedraftimportImportDraftTableResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmshubdb202603tablesTableIdOrNamedraftimportImportDraftTableResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmshubdb202603tablesTableIdOrNamedraftpublishPublishDraftTableResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *HubDbTableV3
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcmshubdb202603tablesTableIdOrNamedraftpublishPublishDraftTableResponse) GetJSON200() *HubDbTableV3 {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmshubdb202603tablesTableIdOrNamedraftpublishPublishDraftTableResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmshubdb202603tablesTableIdOrNamedraftpublishPublishDraftTableResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmshubdb202603tablesTableIdOrNamedraftpublishPublishDraftTableResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmshubdb202603tablesTableIdOrNamedraftpublishPublishDraftTableResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmshubdb202603tablesTableIdOrNamedraftresetResetDraftTableResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *HubDbTableV3
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcmshubdb202603tablesTableIdOrNamedraftresetResetDraftTableResponse) GetJSON200() *HubDbTableV3 {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmshubdb202603tablesTableIdOrNamedraftresetResetDraftTableResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmshubdb202603tablesTableIdOrNamedraftresetResetDraftTableResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmshubdb202603tablesTableIdOrNamedraftresetResetDraftTableResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmshubdb202603tablesTableIdOrNamedraftresetResetDraftTableResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcmshubdb202603tablesTableIdOrNameexportExportTableResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcmshubdb202603tablesTableIdOrNameexportExportTableResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcmshubdb202603tablesTableIdOrNameexportExportTableResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcmshubdb202603tablesTableIdOrNameexportExportTableResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcmshubdb202603tablesTableIdOrNameexportExportTableResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcmshubdb202603tablesTableIdOrNamerowsGetTableRowsResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *UnifiedCollectionResponseWithTotalBaseHubDbTableRowV3
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcmshubdb202603tablesTableIdOrNamerowsGetTableRowsResponse) GetJSON200() *UnifiedCollectionResponseWithTotalBaseHubDbTableRowV3 {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcmshubdb202603tablesTableIdOrNamerowsGetTableRowsResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcmshubdb202603tablesTableIdOrNamerowsGetTableRowsResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcmshubdb202603tablesTableIdOrNamerowsGetTableRowsResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcmshubdb202603tablesTableIdOrNamerowsGetTableRowsResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-// Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowResponse201Headers the declared response headers of an HTTP 201 response for Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRow
-type Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowResponse201Headers struct {
-	Location *string
-}
-
-type Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *HubDbTableRowV3
-	// Headers201 the parsed response headers for an HTTP 201 response
-	Headers201 *Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowResponse201Headers
-}
-
-// GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowResponse) GetJSON201() *HubDbTableRowV3 {
-	return r.JSON201
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmshubdb202603tablesTableIdOrNamerowsbatchreadReadTableRowsResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *BatchResponseHubDbTableRowV3
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *BatchResponseHubDbTableRowV3WithErrors
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcmshubdb202603tablesTableIdOrNamerowsbatchreadReadTableRowsResponse) GetJSON200() *BatchResponseHubDbTableRowV3 {
-	return r.JSON200
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcmshubdb202603tablesTableIdOrNamerowsbatchreadReadTableRowsResponse) GetJSON207() *BatchResponseHubDbTableRowV3WithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmshubdb202603tablesTableIdOrNamerowsbatchreadReadTableRowsResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmshubdb202603tablesTableIdOrNamerowsbatchreadReadTableRowsResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmshubdb202603tablesTableIdOrNamerowsbatchreadReadTableRowsResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmshubdb202603tablesTableIdOrNamerowsbatchreadReadTableRowsResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcmshubdb202603tablesTableIdOrNamerowsdraftReadDraftTableRowsResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *UnifiedCollectionResponseWithTotalBaseHubDbTableRowV3
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcmshubdb202603tablesTableIdOrNamerowsdraftReadDraftTableRowsResponse) GetJSON200() *UnifiedCollectionResponseWithTotalBaseHubDbTableRowV3 {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcmshubdb202603tablesTableIdOrNamerowsdraftReadDraftTableRowsResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcmshubdb202603tablesTableIdOrNamerowsdraftReadDraftTableRowsResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcmshubdb202603tablesTableIdOrNamerowsdraftReadDraftTableRowsResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcmshubdb202603tablesTableIdOrNamerowsdraftReadDraftTableRowsResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcloneCloneDraftTableRowsResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *BatchResponseHubDbTableRowV3
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcloneCloneDraftTableRowsResponse) GetJSON200() *BatchResponseHubDbTableRowV3 {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcloneCloneDraftTableRowsResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcloneCloneDraftTableRowsResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcloneCloneDraftTableRowsResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcloneCloneDraftTableRowsResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcreateCreateDraftTableRowsResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *BatchResponseHubDbTableRowV3
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *BatchResponseHubDbTableRowV3WithErrors
-}
-
-// GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcreateCreateDraftTableRowsResponse) GetJSON201() *BatchResponseHubDbTableRowV3 {
-	return r.JSON201
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcreateCreateDraftTableRowsResponse) GetJSON207() *BatchResponseHubDbTableRowV3WithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcreateCreateDraftTableRowsResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcreateCreateDraftTableRowsResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcreateCreateDraftTableRowsResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcreateCreateDraftTableRowsResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchpurgePurgeDraftTableRowsResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchpurgePurgeDraftTableRowsResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchpurgePurgeDraftTableRowsResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchpurgePurgeDraftTableRowsResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchpurgePurgeDraftTableRowsResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreadReadDraftTableRowsResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *BatchResponseHubDbTableRowV3
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *BatchResponseHubDbTableRowV3WithErrors
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreadReadDraftTableRowsResponse) GetJSON200() *BatchResponseHubDbTableRowV3 {
-	return r.JSON200
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreadReadDraftTableRowsResponse) GetJSON207() *BatchResponseHubDbTableRowV3WithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreadReadDraftTableRowsResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreadReadDraftTableRowsResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreadReadDraftTableRowsResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreadReadDraftTableRowsResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreplaceReplaceDraftTableRowsResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *BatchResponseHubDbTableRowV3
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *BatchResponseHubDbTableRowV3WithErrors
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreplaceReplaceDraftTableRowsResponse) GetJSON200() *BatchResponseHubDbTableRowV3 {
-	return r.JSON200
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreplaceReplaceDraftTableRowsResponse) GetJSON207() *BatchResponseHubDbTableRowV3WithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreplaceReplaceDraftTableRowsResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreplaceReplaceDraftTableRowsResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreplaceReplaceDraftTableRowsResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreplaceReplaceDraftTableRowsResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchupdateUpdateDraftTableRowsResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *BatchResponseHubDbTableRowV3
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *BatchResponseHubDbTableRowV3WithErrors
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchupdateUpdateDraftTableRowsResponse) GetJSON200() *BatchResponseHubDbTableRowV3 {
-	return r.JSON200
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchupdateUpdateDraftTableRowsResponse) GetJSON207() *BatchResponseHubDbTableRowV3WithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchupdateUpdateDraftTableRowsResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchupdateUpdateDraftTableRowsResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchupdateUpdateDraftTableRowsResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchupdateUpdateDraftTableRowsResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcmshubdb202603tablesTableIdOrNamerowsRowIdGetTableRowResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *HubDbTableRowV3
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcmshubdb202603tablesTableIdOrNamerowsRowIdGetTableRowResponse) GetJSON200() *HubDbTableRowV3 {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcmshubdb202603tablesTableIdOrNamerowsRowIdGetTableRowResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcmshubdb202603tablesTableIdOrNamerowsRowIdGetTableRowResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcmshubdb202603tablesTableIdOrNamerowsRowIdGetTableRowResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcmshubdb202603tablesTableIdOrNamerowsRowIdGetTableRowResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Deletecmshubdb202603tablesTableIdOrNamerowsRowIddraftPurgeDraftTableRowResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Deletecmshubdb202603tablesTableIdOrNamerowsRowIddraftPurgeDraftTableRowResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Deletecmshubdb202603tablesTableIdOrNamerowsRowIddraftPurgeDraftTableRowResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Deletecmshubdb202603tablesTableIdOrNamerowsRowIddraftPurgeDraftTableRowResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Deletecmshubdb202603tablesTableIdOrNamerowsRowIddraftPurgeDraftTableRowResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcmshubdb202603tablesTableIdOrNamerowsRowIddraftGetDraftTableRowByIdResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *HubDbTableRowV3
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcmshubdb202603tablesTableIdOrNamerowsRowIddraftGetDraftTableRowByIdResponse) GetJSON200() *HubDbTableRowV3 {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcmshubdb202603tablesTableIdOrNamerowsRowIddraftGetDraftTableRowByIdResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcmshubdb202603tablesTableIdOrNamerowsRowIddraftGetDraftTableRowByIdResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcmshubdb202603tablesTableIdOrNamerowsRowIddraftGetDraftTableRowByIdResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcmshubdb202603tablesTableIdOrNamerowsRowIddraftGetDraftTableRowByIdResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Patchcmshubdb202603tablesTableIdOrNamerowsRowIddraftUpdateDraftTableRowResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *HubDbTableRowV3
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Patchcmshubdb202603tablesTableIdOrNamerowsRowIddraftUpdateDraftTableRowResponse) GetJSON200() *HubDbTableRowV3 {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Patchcmshubdb202603tablesTableIdOrNamerowsRowIddraftUpdateDraftTableRowResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Patchcmshubdb202603tablesTableIdOrNamerowsRowIddraftUpdateDraftTableRowResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Patchcmshubdb202603tablesTableIdOrNamerowsRowIddraftUpdateDraftTableRowResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Patchcmshubdb202603tablesTableIdOrNamerowsRowIddraftUpdateDraftTableRowResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Putcmshubdb202603tablesTableIdOrNamerowsRowIddraftReplaceDraftTableRowResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *HubDbTableRowV3
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Putcmshubdb202603tablesTableIdOrNamerowsRowIddraftReplaceDraftTableRowResponse) GetJSON200() *HubDbTableRowV3 {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Putcmshubdb202603tablesTableIdOrNamerowsRowIddraftReplaceDraftTableRowResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Putcmshubdb202603tablesTableIdOrNamerowsRowIddraftReplaceDraftTableRowResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Putcmshubdb202603tablesTableIdOrNamerowsRowIddraftReplaceDraftTableRowResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Putcmshubdb202603tablesTableIdOrNamerowsRowIddraftReplaceDraftTableRowResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmshubdb202603tablesTableIdOrNamerowsRowIddraftcloneCloneDraftTableRowResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *HubDbTableRowV3
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcmshubdb202603tablesTableIdOrNamerowsRowIddraftcloneCloneDraftTableRowResponse) GetJSON200() *HubDbTableRowV3 {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmshubdb202603tablesTableIdOrNamerowsRowIddraftcloneCloneDraftTableRowResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmshubdb202603tablesTableIdOrNamerowsRowIddraftcloneCloneDraftTableRowResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmshubdb202603tablesTableIdOrNamerowsRowIddraftcloneCloneDraftTableRowResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmshubdb202603tablesTableIdOrNamerowsRowIddraftcloneCloneDraftTableRowResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmshubdb202603tablesTableIdOrNameunpublishUnpublishTableResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *HubDbTableV3
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcmshubdb202603tablesTableIdOrNameunpublishUnpublishTableResponse) GetJSON200() *HubDbTableV3 {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmshubdb202603tablesTableIdOrNameunpublishUnpublishTableResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmshubdb202603tablesTableIdOrNameunpublishUnpublishTableResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmshubdb202603tablesTableIdOrNameunpublishUnpublishTableResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmshubdb202603tablesTableIdOrNameunpublishUnpublishTableResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Deletecmshubdb202603tablesTableIdOrNameversionsVersionIdRemoveTableVersionResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Deletecmshubdb202603tablesTableIdOrNameversionsVersionIdRemoveTableVersionResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Deletecmshubdb202603tablesTableIdOrNameversionsVersionIdRemoveTableVersionResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Deletecmshubdb202603tablesTableIdOrNameversionsVersionIdRemoveTableVersionResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Deletecmshubdb202603tablesTableIdOrNameversionsVersionIdRemoveTableVersionResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcmspages202603landingPagesGetPageResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CollectionResponseWithTotalPageForwardPaging
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcmspages202603landingPagesGetPageResponse) GetJSON200() *CollectionResponseWithTotalPageForwardPaging {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcmspages202603landingPagesGetPageResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcmspages202603landingPagesGetPageResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcmspages202603landingPagesGetPageResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcmspages202603landingPagesGetPageResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-// Postcmspages202603landingPagesCreateResponse201Headers the declared response headers of an HTTP 201 response for Postcmspages202603landingPagesCreate
-type Postcmspages202603landingPagesCreateResponse201Headers struct {
-	Location *string
-}
-
-type Postcmspages202603landingPagesCreateResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *Page
-	// Headers201 the parsed response headers for an HTTP 201 response
-	Headers201 *Postcmspages202603landingPagesCreateResponse201Headers
-}
-
-// GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcmspages202603landingPagesCreateResponse) GetJSON201() *Page {
-	return r.JSON201
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmspages202603landingPagesCreateResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmspages202603landingPagesCreateResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmspages202603landingPagesCreateResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmspages202603landingPagesCreateResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-// Postcmspages202603landingPagesabTestcreateVariationCreateABTestVariationResponse201Headers the declared response headers of an HTTP 201 response for Postcmspages202603landingPagesabTestcreateVariationCreateABTestVariation
-type Postcmspages202603landingPagesabTestcreateVariationCreateABTestVariationResponse201Headers struct {
-	Location *string
-}
-
-type Postcmspages202603landingPagesabTestcreateVariationCreateABTestVariationResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *Page
-	// Headers201 the parsed response headers for an HTTP 201 response
-	Headers201 *Postcmspages202603landingPagesabTestcreateVariationCreateABTestVariationResponse201Headers
-}
-
-// GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcmspages202603landingPagesabTestcreateVariationCreateABTestVariationResponse) GetJSON201() *Page {
-	return r.JSON201
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmspages202603landingPagesabTestcreateVariationCreateABTestVariationResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmspages202603landingPagesabTestcreateVariationCreateABTestVariationResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmspages202603landingPagesabTestcreateVariationCreateABTestVariationResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmspages202603landingPagesabTestcreateVariationCreateABTestVariationResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmspages202603landingPagesabTestendEndActiveABTestResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmspages202603landingPagesabTestendEndActiveABTestResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmspages202603landingPagesabTestendEndActiveABTestResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmspages202603landingPagesabTestendEndActiveABTestResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmspages202603landingPagesabTestendEndActiveABTestResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmspages202603landingPagesabTestrerunRerunPreviousABTestResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmspages202603landingPagesabTestrerunRerunPreviousABTestResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmspages202603landingPagesabTestrerunRerunPreviousABTestResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmspages202603landingPagesabTestrerunRerunPreviousABTestResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmspages202603landingPagesabTestrerunRerunPreviousABTestResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmspages202603landingPagesbatcharchiveArchiveBatchResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmspages202603landingPagesbatcharchiveArchiveBatchResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmspages202603landingPagesbatcharchiveArchiveBatchResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmspages202603landingPagesbatcharchiveArchiveBatchResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmspages202603landingPagesbatcharchiveArchiveBatchResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmspages202603landingPagesbatchcreateCreateBatchResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *BatchResponsePage
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *BatchResponsePageWithErrors
-}
-
-// GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcmspages202603landingPagesbatchcreateCreateBatchResponse) GetJSON201() *BatchResponsePage {
-	return r.JSON201
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcmspages202603landingPagesbatchcreateCreateBatchResponse) GetJSON207() *BatchResponsePageWithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmspages202603landingPagesbatchcreateCreateBatchResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmspages202603landingPagesbatchcreateCreateBatchResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmspages202603landingPagesbatchcreateCreateBatchResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmspages202603landingPagesbatchcreateCreateBatchResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmspages202603landingPagesbatchreadReadBatchResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *BatchResponsePage
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *BatchResponsePageWithErrors
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcmspages202603landingPagesbatchreadReadBatchResponse) GetJSON200() *BatchResponsePage {
-	return r.JSON200
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcmspages202603landingPagesbatchreadReadBatchResponse) GetJSON207() *BatchResponsePageWithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmspages202603landingPagesbatchreadReadBatchResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmspages202603landingPagesbatchreadReadBatchResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmspages202603landingPagesbatchreadReadBatchResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmspages202603landingPagesbatchreadReadBatchResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmspages202603landingPagesbatchupdateUpdateBatchResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *BatchResponsePage
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *BatchResponsePageWithErrors
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcmspages202603landingPagesbatchupdateUpdateBatchResponse) GetJSON200() *BatchResponsePage {
-	return r.JSON200
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcmspages202603landingPagesbatchupdateUpdateBatchResponse) GetJSON207() *BatchResponsePageWithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmspages202603landingPagesbatchupdateUpdateBatchResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmspages202603landingPagesbatchupdateUpdateBatchResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmspages202603landingPagesbatchupdateUpdateBatchResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmspages202603landingPagesbatchupdateUpdateBatchResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmspages202603landingPagescloneCloneResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *Page
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcmspages202603landingPagescloneCloneResponse) GetJSON200() *Page {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmspages202603landingPagescloneCloneResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmspages202603landingPagescloneCloneResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmspages202603landingPagescloneCloneResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmspages202603landingPagescloneCloneResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcmspages202603landingPagesfoldersGetFoldersPageResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CollectionResponseWithTotalContentFolderForwardPaging
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcmspages202603landingPagesfoldersGetFoldersPageResponse) GetJSON200() *CollectionResponseWithTotalContentFolderForwardPaging {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcmspages202603landingPagesfoldersGetFoldersPageResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcmspages202603landingPagesfoldersGetFoldersPageResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcmspages202603landingPagesfoldersGetFoldersPageResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcmspages202603landingPagesfoldersGetFoldersPageResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-// Postcmspages202603landingPagesfoldersCreateFolderResponse201Headers the declared response headers of an HTTP 201 response for Postcmspages202603landingPagesfoldersCreateFolder
-type Postcmspages202603landingPagesfoldersCreateFolderResponse201Headers struct {
-	Location *string
-}
-
-type Postcmspages202603landingPagesfoldersCreateFolderResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *ContentFolder
-	// Headers201 the parsed response headers for an HTTP 201 response
-	Headers201 *Postcmspages202603landingPagesfoldersCreateFolderResponse201Headers
-}
-
-// GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcmspages202603landingPagesfoldersCreateFolderResponse) GetJSON201() *ContentFolder {
-	return r.JSON201
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmspages202603landingPagesfoldersCreateFolderResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmspages202603landingPagesfoldersCreateFolderResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmspages202603landingPagesfoldersCreateFolderResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmspages202603landingPagesfoldersCreateFolderResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmspages202603landingPagesfoldersbatcharchiveArchiveFoldersResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmspages202603landingPagesfoldersbatcharchiveArchiveFoldersResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmspages202603landingPagesfoldersbatcharchiveArchiveFoldersResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmspages202603landingPagesfoldersbatcharchiveArchiveFoldersResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmspages202603landingPagesfoldersbatcharchiveArchiveFoldersResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmspages202603landingPagesfoldersbatchcreateCreateFoldersResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON201 the response for an HTTP 201 `application/json` response
-	JSON201 *BatchResponseContentFolder
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *BatchResponseContentFolderWithErrors
-}
-
-// GetJSON201 returns the response for an HTTP 201 `application/json` response
-func (r Postcmspages202603landingPagesfoldersbatchcreateCreateFoldersResponse) GetJSON201() *BatchResponseContentFolder {
-	return r.JSON201
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcmspages202603landingPagesfoldersbatchcreateCreateFoldersResponse) GetJSON207() *BatchResponseContentFolderWithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmspages202603landingPagesfoldersbatchcreateCreateFoldersResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmspages202603landingPagesfoldersbatchcreateCreateFoldersResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmspages202603landingPagesfoldersbatchcreateCreateFoldersResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmspages202603landingPagesfoldersbatchcreateCreateFoldersResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmspages202603landingPagesfoldersbatchreadReadFoldersResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *BatchResponseContentFolder
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *BatchResponseContentFolderWithErrors
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcmspages202603landingPagesfoldersbatchreadReadFoldersResponse) GetJSON200() *BatchResponseContentFolder {
-	return r.JSON200
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcmspages202603landingPagesfoldersbatchreadReadFoldersResponse) GetJSON207() *BatchResponseContentFolderWithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmspages202603landingPagesfoldersbatchreadReadFoldersResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmspages202603landingPagesfoldersbatchreadReadFoldersResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmspages202603landingPagesfoldersbatchreadReadFoldersResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmspages202603landingPagesfoldersbatchreadReadFoldersResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmspages202603landingPagesfoldersbatchupdateUpdateFoldersResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *BatchResponseContentFolder
-	// JSON207 the response for an HTTP 207 `application/json` response
-	JSON207 *BatchResponseContentFolderWithErrors
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Postcmspages202603landingPagesfoldersbatchupdateUpdateFoldersResponse) GetJSON200() *BatchResponseContentFolder {
-	return r.JSON200
-}
-
-// GetJSON207 returns the response for an HTTP 207 `application/json` response
-func (r Postcmspages202603landingPagesfoldersbatchupdateUpdateFoldersResponse) GetJSON207() *BatchResponseContentFolderWithErrors {
-	return r.JSON207
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmspages202603landingPagesfoldersbatchupdateUpdateFoldersResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmspages202603landingPagesfoldersbatchupdateUpdateFoldersResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmspages202603landingPagesfoldersbatchupdateUpdateFoldersResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmspages202603landingPagesfoldersbatchupdateUpdateFoldersResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Deletecmspages202603landingPagesfoldersObjectIdArchiveFolderResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Deletecmspages202603landingPagesfoldersObjectIdArchiveFolderResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Deletecmspages202603landingPagesfoldersObjectIdArchiveFolderResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Deletecmspages202603landingPagesfoldersObjectIdArchiveFolderResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Deletecmspages202603landingPagesfoldersObjectIdArchiveFolderResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcmspages202603landingPagesfoldersObjectIdGetFolderByIdResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *ContentFolder
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcmspages202603landingPagesfoldersObjectIdGetFolderByIdResponse) GetJSON200() *ContentFolder {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcmspages202603landingPagesfoldersObjectIdGetFolderByIdResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcmspages202603landingPagesfoldersObjectIdGetFolderByIdResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcmspages202603landingPagesfoldersObjectIdGetFolderByIdResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcmspages202603landingPagesfoldersObjectIdGetFolderByIdResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Patchcmspages202603landingPagesfoldersObjectIdUpdateFolderResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *ContentFolder
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Patchcmspages202603landingPagesfoldersObjectIdUpdateFolderResponse) GetJSON200() *ContentFolder {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Patchcmspages202603landingPagesfoldersObjectIdUpdateFolderResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Patchcmspages202603landingPagesfoldersObjectIdUpdateFolderResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Patchcmspages202603landingPagesfoldersObjectIdUpdateFolderResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Patchcmspages202603landingPagesfoldersObjectIdUpdateFolderResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
 }

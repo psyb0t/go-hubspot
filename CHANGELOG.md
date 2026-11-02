@@ -2,6 +2,17 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.4.0, 2026-11-02
+
+- Breaking: removed the CMS site search operation for spec version 2026-03: `GetcmssiteSearch202603search` on `Client`, `GetcmssiteSearch202603searchWithResponse` on `ClientWithResponses`, and the matching methods on `ClientInterface` and `ClientWithResponsesInterface`. The spec no longer has this endpoint.
+- Breaking: removed the types that belonged to that operation: `PublicSearchResults`, `ContentSearchResult`, `ContentSearchResultLanguage` and its language constants, and `ContentSearchResultType` with its constants (`ContentSearchResultTypeBLOGPOST` and the others).
+- Added CMS blog write operations for authors, posts and tags, for example `Postcmsblogs202603postsCreate`, `Patchcmsblogs202603postsObjectIdUpdate`, `Postcmsblogs202603postsscheduleSchedule` and `Postcmsblogs202603postscloneClone`. Each has a `WithResponse` variant, a `NewPost...Request` or `NewPatch...Request` builder and a parser. Posts also get `Patchcmsblogs202603postsObjectIddraftUpdateDraft`.
+- Added CMS pages write operations for landing pages, site pages and landing page folders, for example `Postcmspages202603landingPagesCreate`, `Patchcmspages202603sitePagesObjectIdUpdate`, `Postcmspages202603sitePagesscheduleSchedule` and `Postcmspages202603landingPagesfoldersCreateFolder`. The A/B test operations are `...abTestcreateVariationCreateABTestVariation`, `...abTestendEndActiveABTest` and `...abTestrerunRerunPreviousABTest`.
+- Added batch operations (`...batchcreate...`, `...batchread...`, `...batchupdate...`, `...batcharchive...`) and multi-language operations (attach to and detach from a language group, create a language variation, update languages, and `Putcms...multiLanguagesetNewLangPrimarySetLangPrimary`) for the same blog and page resources.
+- Added the fields `JSON200` and the methods `GetJSON200` on the response types of the CMS blog author, post and tag read operations, such as `Getcmsblogs202603postsGetPageResponse` and `Getcmsblogs202603tagsObjectIdGetByIdResponse`.
+- Types that implement `ClientInterface` or `ClientWithResponsesInterface`, such as test mocks, need the new methods.
+- Generated code moved between `client_NNN.gen.go` files, and a new `client_015.gen.go` file was added. This has no effect on callers.
+
 ## v0.3.4, 2026-11-01
 
 - Added the CMS site search operation for spec version 2026-03: `GetcmssiteSearch202603search` and `GetcmssiteSearch202603searchWithResponse` on `Client`, `ClientWithResponses`, `ClientInterface` and `ClientWithResponsesInterface`. The request builder is `NewGetcmssiteSearch202603searchRequest` and the response parser is `ParseGetcmssiteSearch202603searchResponse`.

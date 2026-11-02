@@ -12,6 +12,4666 @@ import (
 	"github.com/oapi-codegen/runtime"
 )
 
+// ParseGetautomationactions202603AppIdDefinitionIdGetByIdResponse parses an HTTP response from a Getautomationactions202603AppIdDefinitionIdGetByIdWithResponse call
+func ParseGetautomationactions202603AppIdDefinitionIdGetByIdResponse(rsp *http.Response) (*Getautomationactions202603AppIdDefinitionIdGetByIdResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getautomationactions202603AppIdDefinitionIdGetByIdResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest PublicActionDefinition
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePatchautomationactions202603AppIdDefinitionIdUpdateResponse parses an HTTP response from a Patchautomationactions202603AppIdDefinitionIdUpdateWithResponse call
+func ParsePatchautomationactions202603AppIdDefinitionIdUpdateResponse(rsp *http.Response) (*Patchautomationactions202603AppIdDefinitionIdUpdateResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Patchautomationactions202603AppIdDefinitionIdUpdateResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest PublicActionDefinition
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetautomationactions202603AppIdDefinitionIdfunctionsGetPageResponse parses an HTTP response from a Getautomationactions202603AppIdDefinitionIdfunctionsGetPageWithResponse call
+func ParseGetautomationactions202603AppIdDefinitionIdfunctionsGetPageResponse(rsp *http.Response) (*Getautomationactions202603AppIdDefinitionIdfunctionsGetPageResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getautomationactions202603AppIdDefinitionIdfunctionsGetPageResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CollectionResponsePublicActionFunctionIdentifierNoPaging
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseDeleteautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeArchiveByFunctionTypeResponse parses an HTTP response from a Deleteautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeArchiveByFunctionTypeWithResponse call
+func ParseDeleteautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeArchiveByFunctionTypeResponse(rsp *http.Response) (*Deleteautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeArchiveByFunctionTypeResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Deleteautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeArchiveByFunctionTypeResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParseGetautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeGetByFunctionTypeResponse parses an HTTP response from a Getautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeGetByFunctionTypeWithResponse call
+func ParseGetautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeGetByFunctionTypeResponse(rsp *http.Response) (*Getautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeGetByFunctionTypeResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeGetByFunctionTypeResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest PublicActionFunction
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePutautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeCreateOrReplaceByFunctionTypeResponse parses an HTTP response from a Putautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeCreateOrReplaceByFunctionTypeWithResponse call
+func ParsePutautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeCreateOrReplaceByFunctionTypeResponse(rsp *http.Response) (*Putautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeCreateOrReplaceByFunctionTypeResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Putautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeCreateOrReplaceByFunctionTypeResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest PublicActionFunctionIdentifier
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseDeleteautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeFunctionIdArchiveResponse parses an HTTP response from a Deleteautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeFunctionIdArchiveWithResponse call
+func ParseDeleteautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeFunctionIdArchiveResponse(rsp *http.Response) (*Deleteautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeFunctionIdArchiveResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Deleteautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeFunctionIdArchiveResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParseGetautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeFunctionIdGetByIdResponse parses an HTTP response from a Getautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeFunctionIdGetByIdWithResponse call
+func ParseGetautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeFunctionIdGetByIdResponse(rsp *http.Response) (*Getautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeFunctionIdGetByIdResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeFunctionIdGetByIdResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest PublicActionFunction
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePutautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeFunctionIdCreateOrReplaceResponse parses an HTTP response from a Putautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeFunctionIdCreateOrReplaceWithResponse call
+func ParsePutautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeFunctionIdCreateOrReplaceResponse(rsp *http.Response) (*Putautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeFunctionIdCreateOrReplaceResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Putautomationactions202603AppIdDefinitionIdfunctionsFunctionTypeFunctionIdCreateOrReplaceResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest PublicActionFunctionIdentifier
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetautomationactions202603AppIdDefinitionIdrequiresObjectautomationv4actionsAppIdDefinitionIdrequiresObjectResponse parses an HTTP response from a Getautomationactions202603AppIdDefinitionIdrequiresObjectautomationv4actionsAppIdDefinitionIdrequiresObjectWithResponse call
+func ParseGetautomationactions202603AppIdDefinitionIdrequiresObjectautomationv4actionsAppIdDefinitionIdrequiresObjectResponse(rsp *http.Response) (*Getautomationactions202603AppIdDefinitionIdrequiresObjectautomationv4actionsAppIdDefinitionIdrequiresObjectResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getautomationactions202603AppIdDefinitionIdrequiresObjectautomationv4actionsAppIdDefinitionIdrequiresObjectResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest PublicActionDefinitionRequiresObjectResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostautomationactions202603AppIdDefinitionIdrequiresObjectautomationv4actionsAppIdDefinitionIdrequiresObjectResponse parses an HTTP response from a Postautomationactions202603AppIdDefinitionIdrequiresObjectautomationv4actionsAppIdDefinitionIdrequiresObjectWithResponse call
+func ParsePostautomationactions202603AppIdDefinitionIdrequiresObjectautomationv4actionsAppIdDefinitionIdrequiresObjectResponse(rsp *http.Response) (*Postautomationactions202603AppIdDefinitionIdrequiresObjectautomationv4actionsAppIdDefinitionIdrequiresObjectResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postautomationactions202603AppIdDefinitionIdrequiresObjectautomationv4actionsAppIdDefinitionIdrequiresObjectResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParseGetautomationactions202603AppIdDefinitionIdrevisionsGetPageResponse parses an HTTP response from a Getautomationactions202603AppIdDefinitionIdrevisionsGetPageWithResponse call
+func ParseGetautomationactions202603AppIdDefinitionIdrevisionsGetPageResponse(rsp *http.Response) (*Getautomationactions202603AppIdDefinitionIdrevisionsGetPageResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getautomationactions202603AppIdDefinitionIdrevisionsGetPageResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CollectionResponsePublicActionRevisionForwardPaging
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetautomationactions202603AppIdDefinitionIdrevisionsRevisionIdGetByIdResponse parses an HTTP response from a Getautomationactions202603AppIdDefinitionIdrevisionsRevisionIdGetByIdWithResponse call
+func ParseGetautomationactions202603AppIdDefinitionIdrevisionsRevisionIdGetByIdResponse(rsp *http.Response) (*Getautomationactions202603AppIdDefinitionIdrevisionsRevisionIdGetByIdResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getautomationactions202603AppIdDefinitionIdrevisionsRevisionIdGetByIdResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest PublicActionRevision
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostautomationactionscallbacks202603completeCompleteBatchResponse parses an HTTP response from a Postautomationactionscallbacks202603completeCompleteBatchWithResponse call
+func ParsePostautomationactionscallbacks202603completeCompleteBatchResponse(rsp *http.Response) (*Postautomationactionscallbacks202603completeCompleteBatchResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postautomationactionscallbacks202603completeCompleteBatchResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParsePostautomationactionscallbacks202603CallbackIdcompleteCompleteResponse parses an HTTP response from a Postautomationactionscallbacks202603CallbackIdcompleteCompleteWithResponse call
+func ParsePostautomationactionscallbacks202603CallbackIdcompleteCompleteResponse(rsp *http.Response) (*Postautomationactionscallbacks202603CallbackIdcompleteCompleteResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postautomationactionscallbacks202603CallbackIdcompleteCompleteResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParseGetautomationsequences202603automationsequences202603Response parses an HTTP response from a Getautomationsequences202603automationsequences202603WithResponse call
+func ParseGetautomationsequences202603automationsequences202603Response(rsp *http.Response) (*Getautomationsequences202603automationsequences202603Response, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getautomationsequences202603automationsequences202603Response{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CollectionResponseWithTotalPublicSequenceLiteResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostautomationsequences202603enrollmentsResponse parses an HTTP response from a Postautomationsequences202603enrollmentsWithResponse call
+func ParsePostautomationsequences202603enrollmentsResponse(rsp *http.Response) (*Postautomationsequences202603enrollmentsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postautomationsequences202603enrollmentsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest PublicSequenceEnrollmentLiteResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetautomationsequences202603enrollmentscontactContactIdResponse parses an HTTP response from a Getautomationsequences202603enrollmentscontactContactIdWithResponse call
+func ParseGetautomationsequences202603enrollmentscontactContactIdResponse(rsp *http.Response) (*Getautomationsequences202603enrollmentscontactContactIdResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getautomationsequences202603enrollmentscontactContactIdResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest PublicSequenceEnrollmentResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetautomationsequences202603SequenceIdResponse parses an HTTP response from a Getautomationsequences202603SequenceIdWithResponse call
+func ParseGetautomationsequences202603SequenceIdResponse(rsp *http.Response) (*Getautomationsequences202603SequenceIdResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getautomationsequences202603SequenceIdResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest PublicSequenceResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetbusinessUnitspublic202603businessUnitsuserUserIdGetByUserIDResponse parses an HTTP response from a GetbusinessUnitspublic202603businessUnitsuserUserIdGetByUserIDWithResponse call
+func ParseGetbusinessUnitspublic202603businessUnitsuserUserIdGetByUserIDResponse(rsp *http.Response) (*GetbusinessUnitspublic202603businessUnitsuserUserIdGetByUserIDResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetbusinessUnitspublic202603businessUnitsuserUserIdGetByUserIDResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CollectionResponsePublicBusinessUnitNoPaging
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcmsauditLogs202603cmsauditLogsv3Response parses an HTTP response from a GetcmsauditLogs202603cmsauditLogsv3WithResponse call
+func ParseGetcmsauditLogs202603cmsauditLogsv3Response(rsp *http.Response) (*GetcmsauditLogs202603cmsauditLogsv3Response, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetcmsauditLogs202603cmsauditLogsv3Response{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CollectionResponsePublicAuditLog
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmsauditLogs202603exportcmsauditLogs202603exportResponse parses an HTTP response from a PostcmsauditLogs202603exportcmsauditLogs202603exportWithResponse call
+func ParsePostcmsauditLogs202603exportcmsauditLogs202603exportResponse(rsp *http.Response) (*PostcmsauditLogs202603exportcmsauditLogs202603exportResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &PostcmsauditLogs202603exportcmsauditLogs202603exportResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParseGetcmsblogSettings202603settingsResponse parses an HTTP response from a GetcmsblogSettings202603settingsWithResponse call
+func ParseGetcmsblogSettings202603settingsResponse(rsp *http.Response) (*GetcmsblogSettings202603settingsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetcmsblogSettings202603settingsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CollectionResponseWithTotalBlog
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmsblogSettings202603settingsmultiLanguageattachToLangGroupResponse parses an HTTP response from a PostcmsblogSettings202603settingsmultiLanguageattachToLangGroupWithResponse call
+func ParsePostcmsblogSettings202603settingsmultiLanguageattachToLangGroupResponse(rsp *http.Response) (*PostcmsblogSettings202603settingsmultiLanguageattachToLangGroupResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &PostcmsblogSettings202603settingsmultiLanguageattachToLangGroupResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParsePostcmsblogSettings202603settingsmultiLanguagecreateLanguageVariationResponse parses an HTTP response from a PostcmsblogSettings202603settingsmultiLanguagecreateLanguageVariationWithResponse call
+func ParsePostcmsblogSettings202603settingsmultiLanguagecreateLanguageVariationResponse(rsp *http.Response) (*PostcmsblogSettings202603settingsmultiLanguagecreateLanguageVariationResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &PostcmsblogSettings202603settingsmultiLanguagecreateLanguageVariationResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest Blog
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmsblogSettings202603settingsmultiLanguagedetachFromLangGroupResponse parses an HTTP response from a PostcmsblogSettings202603settingsmultiLanguagedetachFromLangGroupWithResponse call
+func ParsePostcmsblogSettings202603settingsmultiLanguagedetachFromLangGroupResponse(rsp *http.Response) (*PostcmsblogSettings202603settingsmultiLanguagedetachFromLangGroupResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &PostcmsblogSettings202603settingsmultiLanguagedetachFromLangGroupResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParsePutcmsblogSettings202603settingsmultiLanguagesetNewLangPrimaryResponse parses an HTTP response from a PutcmsblogSettings202603settingsmultiLanguagesetNewLangPrimaryWithResponse call
+func ParsePutcmsblogSettings202603settingsmultiLanguagesetNewLangPrimaryResponse(rsp *http.Response) (*PutcmsblogSettings202603settingsmultiLanguagesetNewLangPrimaryResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &PutcmsblogSettings202603settingsmultiLanguagesetNewLangPrimaryResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParsePostcmsblogSettings202603settingsmultiLanguageupdateLanguagesResponse parses an HTTP response from a PostcmsblogSettings202603settingsmultiLanguageupdateLanguagesWithResponse call
+func ParsePostcmsblogSettings202603settingsmultiLanguageupdateLanguagesResponse(rsp *http.Response) (*PostcmsblogSettings202603settingsmultiLanguageupdateLanguagesResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &PostcmsblogSettings202603settingsmultiLanguageupdateLanguagesResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParseGetcmsblogSettings202603settingsBlogIdResponse parses an HTTP response from a GetcmsblogSettings202603settingsBlogIdWithResponse call
+func ParseGetcmsblogSettings202603settingsBlogIdResponse(rsp *http.Response) (*GetcmsblogSettings202603settingsBlogIdResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetcmsblogSettings202603settingsBlogIdResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest Blog
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcmsblogSettings202603settingsBlogIdrevisionsResponse parses an HTTP response from a GetcmsblogSettings202603settingsBlogIdrevisionsWithResponse call
+func ParseGetcmsblogSettings202603settingsBlogIdrevisionsResponse(rsp *http.Response) (*GetcmsblogSettings202603settingsBlogIdrevisionsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetcmsblogSettings202603settingsBlogIdrevisionsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CollectionResponseWithTotalBlogVersion
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcmsblogSettings202603settingsBlogIdrevisionsRevisionIdResponse parses an HTTP response from a GetcmsblogSettings202603settingsBlogIdrevisionsRevisionIdWithResponse call
+func ParseGetcmsblogSettings202603settingsBlogIdrevisionsRevisionIdResponse(rsp *http.Response) (*GetcmsblogSettings202603settingsBlogIdrevisionsRevisionIdResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetcmsblogSettings202603settingsBlogIdrevisionsRevisionIdResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BlogVersion
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcmsblogs202603authorsGetPageResponse parses an HTTP response from a Getcmsblogs202603authorsGetPageWithResponse call
+func ParseGetcmsblogs202603authorsGetPageResponse(rsp *http.Response) (*Getcmsblogs202603authorsGetPageResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcmsblogs202603authorsGetPageResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CollectionResponseWithTotalBlogAuthorForwardPaging
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmsblogs202603authorsCreateResponse parses an HTTP response from a Postcmsblogs202603authorsCreateWithResponse call
+func ParsePostcmsblogs202603authorsCreateResponse(rsp *http.Response) (*Postcmsblogs202603authorsCreateResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmsblogs202603authorsCreateResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
+		var dest BlogAuthor
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON201 = &dest
+
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcmsblogs202603authorsCreateResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
+	}
+
+	return response, nil
+}
+
+// ParsePostcmsblogs202603authorsbatcharchiveArchiveBatchResponse parses an HTTP response from a Postcmsblogs202603authorsbatcharchiveArchiveBatchWithResponse call
+func ParsePostcmsblogs202603authorsbatcharchiveArchiveBatchResponse(rsp *http.Response) (*Postcmsblogs202603authorsbatcharchiveArchiveBatchResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmsblogs202603authorsbatcharchiveArchiveBatchResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case rsp.StatusCode == 204:
+		break // No content-type
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
+		var dest BatchResponseBlogAuthorWithErrors
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON207 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmsblogs202603authorsbatchcreateCreateBatchResponse parses an HTTP response from a Postcmsblogs202603authorsbatchcreateCreateBatchWithResponse call
+func ParsePostcmsblogs202603authorsbatchcreateCreateBatchResponse(rsp *http.Response) (*Postcmsblogs202603authorsbatchcreateCreateBatchResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmsblogs202603authorsbatchcreateCreateBatchResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
+		var dest BatchResponseBlogAuthor
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON201 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
+		var dest BatchResponseBlogAuthorWithErrors
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON207 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmsblogs202603authorsbatchreadReadBatchResponse parses an HTTP response from a Postcmsblogs202603authorsbatchreadReadBatchWithResponse call
+func ParsePostcmsblogs202603authorsbatchreadReadBatchResponse(rsp *http.Response) (*Postcmsblogs202603authorsbatchreadReadBatchResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmsblogs202603authorsbatchreadReadBatchResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BatchResponseBlogAuthor
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
+		var dest BatchResponseBlogAuthorWithErrors
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON207 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmsblogs202603authorsbatchupdateUpdateBatchResponse parses an HTTP response from a Postcmsblogs202603authorsbatchupdateUpdateBatchWithResponse call
+func ParsePostcmsblogs202603authorsbatchupdateUpdateBatchResponse(rsp *http.Response) (*Postcmsblogs202603authorsbatchupdateUpdateBatchResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmsblogs202603authorsbatchupdateUpdateBatchResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BatchResponseBlogAuthor
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
+		var dest BatchResponseBlogAuthorWithErrors
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON207 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcmsblogs202603authorscursorcmsblogsv3authorscursorResponse parses an HTTP response from a Getcmsblogs202603authorscursorcmsblogsv3authorscursorWithResponse call
+func ParseGetcmsblogs202603authorscursorcmsblogsv3authorscursorResponse(rsp *http.Response) (*Getcmsblogs202603authorscursorcmsblogsv3authorscursorResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcmsblogs202603authorscursorcmsblogsv3authorscursorResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CursorPagedResultBlogAuthorLong
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcmsblogs202603authorscursorquerycmsblogsv3authorscursorqueryResponse parses an HTTP response from a Getcmsblogs202603authorscursorquerycmsblogsv3authorscursorqueryWithResponse call
+func ParseGetcmsblogs202603authorscursorquerycmsblogsv3authorscursorqueryResponse(rsp *http.Response) (*Getcmsblogs202603authorscursorquerycmsblogsv3authorscursorqueryResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcmsblogs202603authorscursorquerycmsblogsv3authorscursorqueryResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CursorPagedResultBlogAuthorLong
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmsblogs202603authorsmultiLanguageattachToLangGroupAttachToLangGroupResponse parses an HTTP response from a Postcmsblogs202603authorsmultiLanguageattachToLangGroupAttachToLangGroupWithResponse call
+func ParsePostcmsblogs202603authorsmultiLanguageattachToLangGroupAttachToLangGroupResponse(rsp *http.Response) (*Postcmsblogs202603authorsmultiLanguageattachToLangGroupAttachToLangGroupResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmsblogs202603authorsmultiLanguageattachToLangGroupAttachToLangGroupResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParsePostcmsblogs202603authorsmultiLanguagecreateLanguageVariationCreateLangVariationResponse parses an HTTP response from a Postcmsblogs202603authorsmultiLanguagecreateLanguageVariationCreateLangVariationWithResponse call
+func ParsePostcmsblogs202603authorsmultiLanguagecreateLanguageVariationCreateLangVariationResponse(rsp *http.Response) (*Postcmsblogs202603authorsmultiLanguagecreateLanguageVariationCreateLangVariationResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmsblogs202603authorsmultiLanguagecreateLanguageVariationCreateLangVariationResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BlogAuthor
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmsblogs202603authorsmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse parses an HTTP response from a Postcmsblogs202603authorsmultiLanguagedetachFromLangGroupDetachFromLangGroupWithResponse call
+func ParsePostcmsblogs202603authorsmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse(rsp *http.Response) (*Postcmsblogs202603authorsmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmsblogs202603authorsmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParsePutcmsblogs202603authorsmultiLanguagesetNewLangPrimarySetLangPrimaryResponse parses an HTTP response from a Putcmsblogs202603authorsmultiLanguagesetNewLangPrimarySetLangPrimaryWithResponse call
+func ParsePutcmsblogs202603authorsmultiLanguagesetNewLangPrimarySetLangPrimaryResponse(rsp *http.Response) (*Putcmsblogs202603authorsmultiLanguagesetNewLangPrimarySetLangPrimaryResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Putcmsblogs202603authorsmultiLanguagesetNewLangPrimarySetLangPrimaryResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParsePostcmsblogs202603authorsmultiLanguageupdateLanguagesUpdateLangsResponse parses an HTTP response from a Postcmsblogs202603authorsmultiLanguageupdateLanguagesUpdateLangsWithResponse call
+func ParsePostcmsblogs202603authorsmultiLanguageupdateLanguagesUpdateLangsResponse(rsp *http.Response) (*Postcmsblogs202603authorsmultiLanguageupdateLanguagesUpdateLangsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmsblogs202603authorsmultiLanguageupdateLanguagesUpdateLangsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParseDeletecmsblogs202603authorsObjectIdArchiveResponse parses an HTTP response from a Deletecmsblogs202603authorsObjectIdArchiveWithResponse call
+func ParseDeletecmsblogs202603authorsObjectIdArchiveResponse(rsp *http.Response) (*Deletecmsblogs202603authorsObjectIdArchiveResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Deletecmsblogs202603authorsObjectIdArchiveResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParseGetcmsblogs202603authorsObjectIdGetByIdResponse parses an HTTP response from a Getcmsblogs202603authorsObjectIdGetByIdWithResponse call
+func ParseGetcmsblogs202603authorsObjectIdGetByIdResponse(rsp *http.Response) (*Getcmsblogs202603authorsObjectIdGetByIdResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcmsblogs202603authorsObjectIdGetByIdResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BlogAuthor
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePatchcmsblogs202603authorsObjectIdUpdateResponse parses an HTTP response from a Patchcmsblogs202603authorsObjectIdUpdateWithResponse call
+func ParsePatchcmsblogs202603authorsObjectIdUpdateResponse(rsp *http.Response) (*Patchcmsblogs202603authorsObjectIdUpdateResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Patchcmsblogs202603authorsObjectIdUpdateResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BlogAuthor
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcmsblogs202603postsGetPageResponse parses an HTTP response from a Getcmsblogs202603postsGetPageWithResponse call
+func ParseGetcmsblogs202603postsGetPageResponse(rsp *http.Response) (*Getcmsblogs202603postsGetPageResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcmsblogs202603postsGetPageResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CollectionResponseWithTotalBlogPostForwardPaging
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmsblogs202603postsCreateResponse parses an HTTP response from a Postcmsblogs202603postsCreateWithResponse call
+func ParsePostcmsblogs202603postsCreateResponse(rsp *http.Response) (*Postcmsblogs202603postsCreateResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmsblogs202603postsCreateResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
+		var dest BlogPost
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON201 = &dest
+
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcmsblogs202603postsCreateResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
+	}
+
+	return response, nil
+}
+
+// ParsePostcmsblogs202603postsbatcharchiveArchiveResponse parses an HTTP response from a Postcmsblogs202603postsbatcharchiveArchiveWithResponse call
+func ParsePostcmsblogs202603postsbatcharchiveArchiveResponse(rsp *http.Response) (*Postcmsblogs202603postsbatcharchiveArchiveResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmsblogs202603postsbatcharchiveArchiveResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case rsp.StatusCode == 204:
+		break // No content-type
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
+		var dest BatchResponseBlogPostWithErrors
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON207 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmsblogs202603postsbatchcreateCreateResponse parses an HTTP response from a Postcmsblogs202603postsbatchcreateCreateWithResponse call
+func ParsePostcmsblogs202603postsbatchcreateCreateResponse(rsp *http.Response) (*Postcmsblogs202603postsbatchcreateCreateResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmsblogs202603postsbatchcreateCreateResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
+		var dest BatchResponseBlogPost
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON201 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
+		var dest BatchResponseBlogPostWithErrors
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON207 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmsblogs202603postsbatchreadReadResponse parses an HTTP response from a Postcmsblogs202603postsbatchreadReadWithResponse call
+func ParsePostcmsblogs202603postsbatchreadReadResponse(rsp *http.Response) (*Postcmsblogs202603postsbatchreadReadResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmsblogs202603postsbatchreadReadResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BatchResponseBlogPost
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
+		var dest BatchResponseBlogPostWithErrors
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON207 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmsblogs202603postsbatchupdateUpdateResponse parses an HTTP response from a Postcmsblogs202603postsbatchupdateUpdateWithResponse call
+func ParsePostcmsblogs202603postsbatchupdateUpdateResponse(rsp *http.Response) (*Postcmsblogs202603postsbatchupdateUpdateResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmsblogs202603postsbatchupdateUpdateResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BatchResponseBlogPost
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
+		var dest BatchResponseBlogPostWithErrors
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON207 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmsblogs202603postscloneCloneResponse parses an HTTP response from a Postcmsblogs202603postscloneCloneWithResponse call
+func ParsePostcmsblogs202603postscloneCloneResponse(rsp *http.Response) (*Postcmsblogs202603postscloneCloneResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmsblogs202603postscloneCloneResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BlogPost
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcmsblogs202603postscursorcmsblogsv3postscursorResponse parses an HTTP response from a Getcmsblogs202603postscursorcmsblogsv3postscursorWithResponse call
+func ParseGetcmsblogs202603postscursorcmsblogsv3postscursorResponse(rsp *http.Response) (*Getcmsblogs202603postscursorcmsblogsv3postscursorResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcmsblogs202603postscursorcmsblogsv3postscursorResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CursorPagedResultBlogPostLong
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcmsblogs202603postscursorquerycmsblogsv3postscursorqueryResponse parses an HTTP response from a Getcmsblogs202603postscursorquerycmsblogsv3postscursorqueryWithResponse call
+func ParseGetcmsblogs202603postscursorquerycmsblogsv3postscursorqueryResponse(rsp *http.Response) (*Getcmsblogs202603postscursorquerycmsblogsv3postscursorqueryResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcmsblogs202603postscursorquerycmsblogsv3postscursorqueryResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CursorPagedResultBlogPostLong
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmsblogs202603postsmultiLanguageattachToLangGroupAttachToLangGroupResponse parses an HTTP response from a Postcmsblogs202603postsmultiLanguageattachToLangGroupAttachToLangGroupWithResponse call
+func ParsePostcmsblogs202603postsmultiLanguageattachToLangGroupAttachToLangGroupResponse(rsp *http.Response) (*Postcmsblogs202603postsmultiLanguageattachToLangGroupAttachToLangGroupResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmsblogs202603postsmultiLanguageattachToLangGroupAttachToLangGroupResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParsePostcmsblogs202603postsmultiLanguagecreateLanguageVariationCreateLangVariationResponse parses an HTTP response from a Postcmsblogs202603postsmultiLanguagecreateLanguageVariationCreateLangVariationWithResponse call
+func ParsePostcmsblogs202603postsmultiLanguagecreateLanguageVariationCreateLangVariationResponse(rsp *http.Response) (*Postcmsblogs202603postsmultiLanguagecreateLanguageVariationCreateLangVariationResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmsblogs202603postsmultiLanguagecreateLanguageVariationCreateLangVariationResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BlogPost
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmsblogs202603postsmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse parses an HTTP response from a Postcmsblogs202603postsmultiLanguagedetachFromLangGroupDetachFromLangGroupWithResponse call
+func ParsePostcmsblogs202603postsmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse(rsp *http.Response) (*Postcmsblogs202603postsmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmsblogs202603postsmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParsePutcmsblogs202603postsmultiLanguagesetNewLangPrimarySetLangPrimaryResponse parses an HTTP response from a Putcmsblogs202603postsmultiLanguagesetNewLangPrimarySetLangPrimaryWithResponse call
+func ParsePutcmsblogs202603postsmultiLanguagesetNewLangPrimarySetLangPrimaryResponse(rsp *http.Response) (*Putcmsblogs202603postsmultiLanguagesetNewLangPrimarySetLangPrimaryResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Putcmsblogs202603postsmultiLanguagesetNewLangPrimarySetLangPrimaryResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParsePostcmsblogs202603postsmultiLanguageupdateLanguagesUpdateLangsResponse parses an HTTP response from a Postcmsblogs202603postsmultiLanguageupdateLanguagesUpdateLangsWithResponse call
+func ParsePostcmsblogs202603postsmultiLanguageupdateLanguagesUpdateLangsResponse(rsp *http.Response) (*Postcmsblogs202603postsmultiLanguageupdateLanguagesUpdateLangsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmsblogs202603postsmultiLanguageupdateLanguagesUpdateLangsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParsePostcmsblogs202603postsscheduleScheduleResponse parses an HTTP response from a Postcmsblogs202603postsscheduleScheduleWithResponse call
+func ParsePostcmsblogs202603postsscheduleScheduleResponse(rsp *http.Response) (*Postcmsblogs202603postsscheduleScheduleResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmsblogs202603postsscheduleScheduleResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParseDeletecmsblogs202603postsObjectIdArchiveResponse parses an HTTP response from a Deletecmsblogs202603postsObjectIdArchiveWithResponse call
+func ParseDeletecmsblogs202603postsObjectIdArchiveResponse(rsp *http.Response) (*Deletecmsblogs202603postsObjectIdArchiveResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Deletecmsblogs202603postsObjectIdArchiveResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParseGetcmsblogs202603postsObjectIdGetByIdResponse parses an HTTP response from a Getcmsblogs202603postsObjectIdGetByIdWithResponse call
+func ParseGetcmsblogs202603postsObjectIdGetByIdResponse(rsp *http.Response) (*Getcmsblogs202603postsObjectIdGetByIdResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcmsblogs202603postsObjectIdGetByIdResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BlogPost
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePatchcmsblogs202603postsObjectIdUpdateResponse parses an HTTP response from a Patchcmsblogs202603postsObjectIdUpdateWithResponse call
+func ParsePatchcmsblogs202603postsObjectIdUpdateResponse(rsp *http.Response) (*Patchcmsblogs202603postsObjectIdUpdateResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Patchcmsblogs202603postsObjectIdUpdateResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BlogPost
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcmsblogs202603postsObjectIddraftGetDraftByIdResponse parses an HTTP response from a Getcmsblogs202603postsObjectIddraftGetDraftByIdWithResponse call
+func ParseGetcmsblogs202603postsObjectIddraftGetDraftByIdResponse(rsp *http.Response) (*Getcmsblogs202603postsObjectIddraftGetDraftByIdResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcmsblogs202603postsObjectIddraftGetDraftByIdResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BlogPost
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePatchcmsblogs202603postsObjectIddraftUpdateDraftResponse parses an HTTP response from a Patchcmsblogs202603postsObjectIddraftUpdateDraftWithResponse call
+func ParsePatchcmsblogs202603postsObjectIddraftUpdateDraftResponse(rsp *http.Response) (*Patchcmsblogs202603postsObjectIddraftUpdateDraftResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Patchcmsblogs202603postsObjectIddraftUpdateDraftResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BlogPost
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmsblogs202603postsObjectIddraftpushLivePushLiveResponse parses an HTTP response from a Postcmsblogs202603postsObjectIddraftpushLivePushLiveWithResponse call
+func ParsePostcmsblogs202603postsObjectIddraftpushLivePushLiveResponse(rsp *http.Response) (*Postcmsblogs202603postsObjectIddraftpushLivePushLiveResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmsblogs202603postsObjectIddraftpushLivePushLiveResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParsePostcmsblogs202603postsObjectIddraftresetResetDraftResponse parses an HTTP response from a Postcmsblogs202603postsObjectIddraftresetResetDraftWithResponse call
+func ParsePostcmsblogs202603postsObjectIddraftresetResetDraftResponse(rsp *http.Response) (*Postcmsblogs202603postsObjectIddraftresetResetDraftResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmsblogs202603postsObjectIddraftresetResetDraftResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParseGetcmsblogs202603postsObjectIdrevisionsGetPreviousVersionsResponse parses an HTTP response from a Getcmsblogs202603postsObjectIdrevisionsGetPreviousVersionsWithResponse call
+func ParseGetcmsblogs202603postsObjectIdrevisionsGetPreviousVersionsResponse(rsp *http.Response) (*Getcmsblogs202603postsObjectIdrevisionsGetPreviousVersionsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcmsblogs202603postsObjectIdrevisionsGetPreviousVersionsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CollectionResponseWithTotalBlogPostVersion
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcmsblogs202603postsObjectIdrevisionsRevisionIdGetPreviousVersionResponse parses an HTTP response from a Getcmsblogs202603postsObjectIdrevisionsRevisionIdGetPreviousVersionWithResponse call
+func ParseGetcmsblogs202603postsObjectIdrevisionsRevisionIdGetPreviousVersionResponse(rsp *http.Response) (*Getcmsblogs202603postsObjectIdrevisionsRevisionIdGetPreviousVersionResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcmsblogs202603postsObjectIdrevisionsRevisionIdGetPreviousVersionResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BlogPostVersion
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmsblogs202603postsObjectIdrevisionsRevisionIdrestoreRestorePreviousVersionResponse parses an HTTP response from a Postcmsblogs202603postsObjectIdrevisionsRevisionIdrestoreRestorePreviousVersionWithResponse call
+func ParsePostcmsblogs202603postsObjectIdrevisionsRevisionIdrestoreRestorePreviousVersionResponse(rsp *http.Response) (*Postcmsblogs202603postsObjectIdrevisionsRevisionIdrestoreRestorePreviousVersionResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmsblogs202603postsObjectIdrevisionsRevisionIdrestoreRestorePreviousVersionResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BlogPost
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmsblogs202603postsObjectIdrevisionsRevisionIdrestoreToDraftRestorePreviousVersionToDraftResponse parses an HTTP response from a Postcmsblogs202603postsObjectIdrevisionsRevisionIdrestoreToDraftRestorePreviousVersionToDraftWithResponse call
+func ParsePostcmsblogs202603postsObjectIdrevisionsRevisionIdrestoreToDraftRestorePreviousVersionToDraftResponse(rsp *http.Response) (*Postcmsblogs202603postsObjectIdrevisionsRevisionIdrestoreToDraftRestorePreviousVersionToDraftResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmsblogs202603postsObjectIdrevisionsRevisionIdrestoreToDraftRestorePreviousVersionToDraftResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BlogPost
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcmsblogs202603tagsGetPageResponse parses an HTTP response from a Getcmsblogs202603tagsGetPageWithResponse call
+func ParseGetcmsblogs202603tagsGetPageResponse(rsp *http.Response) (*Getcmsblogs202603tagsGetPageResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcmsblogs202603tagsGetPageResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CollectionResponseWithTotalTagForwardPaging
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmsblogs202603tagsCreateResponse parses an HTTP response from a Postcmsblogs202603tagsCreateWithResponse call
+func ParsePostcmsblogs202603tagsCreateResponse(rsp *http.Response) (*Postcmsblogs202603tagsCreateResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmsblogs202603tagsCreateResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
+		var dest Tag
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON201 = &dest
+
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcmsblogs202603tagsCreateResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
+	}
+
+	return response, nil
+}
+
+// ParsePostcmsblogs202603tagsbatcharchiveArchiveBatchResponse parses an HTTP response from a Postcmsblogs202603tagsbatcharchiveArchiveBatchWithResponse call
+func ParsePostcmsblogs202603tagsbatcharchiveArchiveBatchResponse(rsp *http.Response) (*Postcmsblogs202603tagsbatcharchiveArchiveBatchResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmsblogs202603tagsbatcharchiveArchiveBatchResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case rsp.StatusCode == 204:
+		break // No content-type
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
+		var dest BatchResponseTagWithErrors
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON207 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmsblogs202603tagsbatchcreateCreateBatchResponse parses an HTTP response from a Postcmsblogs202603tagsbatchcreateCreateBatchWithResponse call
+func ParsePostcmsblogs202603tagsbatchcreateCreateBatchResponse(rsp *http.Response) (*Postcmsblogs202603tagsbatchcreateCreateBatchResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmsblogs202603tagsbatchcreateCreateBatchResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
+		var dest BatchResponseTag
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON201 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
+		var dest BatchResponseTagWithErrors
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON207 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmsblogs202603tagsbatchreadReadBatchResponse parses an HTTP response from a Postcmsblogs202603tagsbatchreadReadBatchWithResponse call
+func ParsePostcmsblogs202603tagsbatchreadReadBatchResponse(rsp *http.Response) (*Postcmsblogs202603tagsbatchreadReadBatchResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmsblogs202603tagsbatchreadReadBatchResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BatchResponseTag
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
+		var dest BatchResponseTagWithErrors
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON207 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmsblogs202603tagsbatchupdateUpdateBatchResponse parses an HTTP response from a Postcmsblogs202603tagsbatchupdateUpdateBatchWithResponse call
+func ParsePostcmsblogs202603tagsbatchupdateUpdateBatchResponse(rsp *http.Response) (*Postcmsblogs202603tagsbatchupdateUpdateBatchResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmsblogs202603tagsbatchupdateUpdateBatchResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BatchResponseTag
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
+		var dest BatchResponseTagWithErrors
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON207 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcmsblogs202603tagscursorcmsblogsv3tagscursorResponse parses an HTTP response from a Getcmsblogs202603tagscursorcmsblogsv3tagscursorWithResponse call
+func ParseGetcmsblogs202603tagscursorcmsblogsv3tagscursorResponse(rsp *http.Response) (*Getcmsblogs202603tagscursorcmsblogsv3tagscursorResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcmsblogs202603tagscursorcmsblogsv3tagscursorResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CursorPagedResultTagLong
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcmsblogs202603tagscursorquerycmsblogsv3tagscursorqueryResponse parses an HTTP response from a Getcmsblogs202603tagscursorquerycmsblogsv3tagscursorqueryWithResponse call
+func ParseGetcmsblogs202603tagscursorquerycmsblogsv3tagscursorqueryResponse(rsp *http.Response) (*Getcmsblogs202603tagscursorquerycmsblogsv3tagscursorqueryResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcmsblogs202603tagscursorquerycmsblogsv3tagscursorqueryResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CursorPagedResultTagLong
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmsblogs202603tagsmultiLanguageattachToLangGroupAttachToLangGroupResponse parses an HTTP response from a Postcmsblogs202603tagsmultiLanguageattachToLangGroupAttachToLangGroupWithResponse call
+func ParsePostcmsblogs202603tagsmultiLanguageattachToLangGroupAttachToLangGroupResponse(rsp *http.Response) (*Postcmsblogs202603tagsmultiLanguageattachToLangGroupAttachToLangGroupResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmsblogs202603tagsmultiLanguageattachToLangGroupAttachToLangGroupResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParsePostcmsblogs202603tagsmultiLanguagecreateLanguageVariationCreateLangVariationResponse parses an HTTP response from a Postcmsblogs202603tagsmultiLanguagecreateLanguageVariationCreateLangVariationWithResponse call
+func ParsePostcmsblogs202603tagsmultiLanguagecreateLanguageVariationCreateLangVariationResponse(rsp *http.Response) (*Postcmsblogs202603tagsmultiLanguagecreateLanguageVariationCreateLangVariationResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmsblogs202603tagsmultiLanguagecreateLanguageVariationCreateLangVariationResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest Tag
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmsblogs202603tagsmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse parses an HTTP response from a Postcmsblogs202603tagsmultiLanguagedetachFromLangGroupDetachFromLangGroupWithResponse call
+func ParsePostcmsblogs202603tagsmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse(rsp *http.Response) (*Postcmsblogs202603tagsmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmsblogs202603tagsmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParsePutcmsblogs202603tagsmultiLanguagesetNewLangPrimarySetLangPrimaryResponse parses an HTTP response from a Putcmsblogs202603tagsmultiLanguagesetNewLangPrimarySetLangPrimaryWithResponse call
+func ParsePutcmsblogs202603tagsmultiLanguagesetNewLangPrimarySetLangPrimaryResponse(rsp *http.Response) (*Putcmsblogs202603tagsmultiLanguagesetNewLangPrimarySetLangPrimaryResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Putcmsblogs202603tagsmultiLanguagesetNewLangPrimarySetLangPrimaryResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParsePostcmsblogs202603tagsmultiLanguageupdateLanguagesUpdateLangsResponse parses an HTTP response from a Postcmsblogs202603tagsmultiLanguageupdateLanguagesUpdateLangsWithResponse call
+func ParsePostcmsblogs202603tagsmultiLanguageupdateLanguagesUpdateLangsResponse(rsp *http.Response) (*Postcmsblogs202603tagsmultiLanguageupdateLanguagesUpdateLangsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmsblogs202603tagsmultiLanguageupdateLanguagesUpdateLangsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParseDeletecmsblogs202603tagsObjectIdArchiveResponse parses an HTTP response from a Deletecmsblogs202603tagsObjectIdArchiveWithResponse call
+func ParseDeletecmsblogs202603tagsObjectIdArchiveResponse(rsp *http.Response) (*Deletecmsblogs202603tagsObjectIdArchiveResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Deletecmsblogs202603tagsObjectIdArchiveResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParseGetcmsblogs202603tagsObjectIdGetByIdResponse parses an HTTP response from a Getcmsblogs202603tagsObjectIdGetByIdWithResponse call
+func ParseGetcmsblogs202603tagsObjectIdGetByIdResponse(rsp *http.Response) (*Getcmsblogs202603tagsObjectIdGetByIdResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcmsblogs202603tagsObjectIdGetByIdResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest Tag
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePatchcmsblogs202603tagsObjectIdUpdateResponse parses an HTTP response from a Patchcmsblogs202603tagsObjectIdUpdateWithResponse call
+func ParsePatchcmsblogs202603tagsObjectIdUpdateResponse(rsp *http.Response) (*Patchcmsblogs202603tagsObjectIdUpdateResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Patchcmsblogs202603tagsObjectIdUpdateResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest Tag
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcmsdomains202603cmsdomainsv3Response parses an HTTP response from a Getcmsdomains202603cmsdomainsv3WithResponse call
+func ParseGetcmsdomains202603cmsdomainsv3Response(rsp *http.Response) (*Getcmsdomains202603cmsdomainsv3Response, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcmsdomains202603cmsdomainsv3Response{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CollectionResponseWithTotalDomain
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcmsdomains202603DomainIdGetByIdResponse parses an HTTP response from a Getcmsdomains202603DomainIdGetByIdWithResponse call
+func ParseGetcmsdomains202603DomainIdGetByIdResponse(rsp *http.Response) (*Getcmsdomains202603DomainIdGetByIdResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcmsdomains202603DomainIdGetByIdResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest Domain
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcmshubdb202603tablesGetAllTablesResponse parses an HTTP response from a Getcmshubdb202603tablesGetAllTablesWithResponse call
+func ParseGetcmshubdb202603tablesGetAllTablesResponse(rsp *http.Response) (*Getcmshubdb202603tablesGetAllTablesResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcmshubdb202603tablesGetAllTablesResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CollectionResponseWithTotalHubDbTableV3
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmshubdb202603tablesCreateTableResponse parses an HTTP response from a Postcmshubdb202603tablesCreateTableWithResponse call
+func ParsePostcmshubdb202603tablesCreateTableResponse(rsp *http.Response) (*Postcmshubdb202603tablesCreateTableResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmshubdb202603tablesCreateTableResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
+		var dest HubDbTableV3
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON201 = &dest
+
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcmshubdb202603tablesCreateTableResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
+	}
+
+	return response, nil
+}
+
+// ParseGetcmshubdb202603tablesdraftGetAllDraftTablesResponse parses an HTTP response from a Getcmshubdb202603tablesdraftGetAllDraftTablesWithResponse call
+func ParseGetcmshubdb202603tablesdraftGetAllDraftTablesResponse(rsp *http.Response) (*Getcmshubdb202603tablesdraftGetAllDraftTablesResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcmshubdb202603tablesdraftGetAllDraftTablesResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CollectionResponseWithTotalHubDbTableV3
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseDeletecmshubdb202603tablesTableIdOrNameArchiveTableResponse parses an HTTP response from a Deletecmshubdb202603tablesTableIdOrNameArchiveTableWithResponse call
+func ParseDeletecmshubdb202603tablesTableIdOrNameArchiveTableResponse(rsp *http.Response) (*Deletecmshubdb202603tablesTableIdOrNameArchiveTableResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Deletecmshubdb202603tablesTableIdOrNameArchiveTableResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParseGetcmshubdb202603tablesTableIdOrNameGetTableDetailsResponse parses an HTTP response from a Getcmshubdb202603tablesTableIdOrNameGetTableDetailsWithResponse call
+func ParseGetcmshubdb202603tablesTableIdOrNameGetTableDetailsResponse(rsp *http.Response) (*Getcmshubdb202603tablesTableIdOrNameGetTableDetailsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcmshubdb202603tablesTableIdOrNameGetTableDetailsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest HubDbTableV3
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcmshubdb202603tablesTableIdOrNamedraftGetDraftTableDetailsByIdResponse parses an HTTP response from a Getcmshubdb202603tablesTableIdOrNamedraftGetDraftTableDetailsByIdWithResponse call
+func ParseGetcmshubdb202603tablesTableIdOrNamedraftGetDraftTableDetailsByIdResponse(rsp *http.Response) (*Getcmshubdb202603tablesTableIdOrNamedraftGetDraftTableDetailsByIdResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcmshubdb202603tablesTableIdOrNamedraftGetDraftTableDetailsByIdResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest HubDbTableV3
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePatchcmshubdb202603tablesTableIdOrNamedraftUpdateDraftTableResponse parses an HTTP response from a Patchcmshubdb202603tablesTableIdOrNamedraftUpdateDraftTableWithResponse call
+func ParsePatchcmshubdb202603tablesTableIdOrNamedraftUpdateDraftTableResponse(rsp *http.Response) (*Patchcmshubdb202603tablesTableIdOrNamedraftUpdateDraftTableResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Patchcmshubdb202603tablesTableIdOrNamedraftUpdateDraftTableResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest HubDbTableV3
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmshubdb202603tablesTableIdOrNamedraftcloneCloneDraftTableResponse parses an HTTP response from a Postcmshubdb202603tablesTableIdOrNamedraftcloneCloneDraftTableWithResponse call
+func ParsePostcmshubdb202603tablesTableIdOrNamedraftcloneCloneDraftTableResponse(rsp *http.Response) (*Postcmshubdb202603tablesTableIdOrNamedraftcloneCloneDraftTableResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmshubdb202603tablesTableIdOrNamedraftcloneCloneDraftTableResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest HubDbTableV3
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcmshubdb202603tablesTableIdOrNamedraftexportExportDraftTableResponse parses an HTTP response from a Getcmshubdb202603tablesTableIdOrNamedraftexportExportDraftTableWithResponse call
+func ParseGetcmshubdb202603tablesTableIdOrNamedraftexportExportDraftTableResponse(rsp *http.Response) (*Getcmshubdb202603tablesTableIdOrNamedraftexportExportDraftTableResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcmshubdb202603tablesTableIdOrNamedraftexportExportDraftTableResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParsePostcmshubdb202603tablesTableIdOrNamedraftimportImportDraftTableResponse parses an HTTP response from a Postcmshubdb202603tablesTableIdOrNamedraftimportImportDraftTableWithResponse call
+func ParsePostcmshubdb202603tablesTableIdOrNamedraftimportImportDraftTableResponse(rsp *http.Response) (*Postcmshubdb202603tablesTableIdOrNamedraftimportImportDraftTableResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmshubdb202603tablesTableIdOrNamedraftimportImportDraftTableResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest ImportResult
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmshubdb202603tablesTableIdOrNamedraftpublishPublishDraftTableResponse parses an HTTP response from a Postcmshubdb202603tablesTableIdOrNamedraftpublishPublishDraftTableWithResponse call
+func ParsePostcmshubdb202603tablesTableIdOrNamedraftpublishPublishDraftTableResponse(rsp *http.Response) (*Postcmshubdb202603tablesTableIdOrNamedraftpublishPublishDraftTableResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmshubdb202603tablesTableIdOrNamedraftpublishPublishDraftTableResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest HubDbTableV3
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmshubdb202603tablesTableIdOrNamedraftresetResetDraftTableResponse parses an HTTP response from a Postcmshubdb202603tablesTableIdOrNamedraftresetResetDraftTableWithResponse call
+func ParsePostcmshubdb202603tablesTableIdOrNamedraftresetResetDraftTableResponse(rsp *http.Response) (*Postcmshubdb202603tablesTableIdOrNamedraftresetResetDraftTableResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmshubdb202603tablesTableIdOrNamedraftresetResetDraftTableResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest HubDbTableV3
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcmshubdb202603tablesTableIdOrNameexportExportTableResponse parses an HTTP response from a Getcmshubdb202603tablesTableIdOrNameexportExportTableWithResponse call
+func ParseGetcmshubdb202603tablesTableIdOrNameexportExportTableResponse(rsp *http.Response) (*Getcmshubdb202603tablesTableIdOrNameexportExportTableResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcmshubdb202603tablesTableIdOrNameexportExportTableResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParseGetcmshubdb202603tablesTableIdOrNamerowsGetTableRowsResponse parses an HTTP response from a Getcmshubdb202603tablesTableIdOrNamerowsGetTableRowsWithResponse call
+func ParseGetcmshubdb202603tablesTableIdOrNamerowsGetTableRowsResponse(rsp *http.Response) (*Getcmshubdb202603tablesTableIdOrNamerowsGetTableRowsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcmshubdb202603tablesTableIdOrNamerowsGetTableRowsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest UnifiedCollectionResponseWithTotalBaseHubDbTableRowV3
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmshubdb202603tablesTableIdOrNamerowsCreateTableRowResponse parses an HTTP response from a Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowWithResponse call
+func ParsePostcmshubdb202603tablesTableIdOrNamerowsCreateTableRowResponse(rsp *http.Response) (*Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
+		var dest HubDbTableRowV3
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON201 = &dest
+
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
+	}
+
+	return response, nil
+}
+
+// ParsePostcmshubdb202603tablesTableIdOrNamerowsbatchreadReadTableRowsResponse parses an HTTP response from a Postcmshubdb202603tablesTableIdOrNamerowsbatchreadReadTableRowsWithResponse call
+func ParsePostcmshubdb202603tablesTableIdOrNamerowsbatchreadReadTableRowsResponse(rsp *http.Response) (*Postcmshubdb202603tablesTableIdOrNamerowsbatchreadReadTableRowsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmshubdb202603tablesTableIdOrNamerowsbatchreadReadTableRowsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BatchResponseHubDbTableRowV3
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
+		var dest BatchResponseHubDbTableRowV3WithErrors
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON207 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcmshubdb202603tablesTableIdOrNamerowsdraftReadDraftTableRowsResponse parses an HTTP response from a Getcmshubdb202603tablesTableIdOrNamerowsdraftReadDraftTableRowsWithResponse call
+func ParseGetcmshubdb202603tablesTableIdOrNamerowsdraftReadDraftTableRowsResponse(rsp *http.Response) (*Getcmshubdb202603tablesTableIdOrNamerowsdraftReadDraftTableRowsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcmshubdb202603tablesTableIdOrNamerowsdraftReadDraftTableRowsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest UnifiedCollectionResponseWithTotalBaseHubDbTableRowV3
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmshubdb202603tablesTableIdOrNamerowsdraftbatchcloneCloneDraftTableRowsResponse parses an HTTP response from a Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcloneCloneDraftTableRowsWithResponse call
+func ParsePostcmshubdb202603tablesTableIdOrNamerowsdraftbatchcloneCloneDraftTableRowsResponse(rsp *http.Response) (*Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcloneCloneDraftTableRowsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcloneCloneDraftTableRowsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BatchResponseHubDbTableRowV3
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmshubdb202603tablesTableIdOrNamerowsdraftbatchcreateCreateDraftTableRowsResponse parses an HTTP response from a Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcreateCreateDraftTableRowsWithResponse call
+func ParsePostcmshubdb202603tablesTableIdOrNamerowsdraftbatchcreateCreateDraftTableRowsResponse(rsp *http.Response) (*Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcreateCreateDraftTableRowsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcreateCreateDraftTableRowsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
+		var dest BatchResponseHubDbTableRowV3
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON201 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
+		var dest BatchResponseHubDbTableRowV3WithErrors
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON207 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmshubdb202603tablesTableIdOrNamerowsdraftbatchpurgePurgeDraftTableRowsResponse parses an HTTP response from a Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchpurgePurgeDraftTableRowsWithResponse call
+func ParsePostcmshubdb202603tablesTableIdOrNamerowsdraftbatchpurgePurgeDraftTableRowsResponse(rsp *http.Response) (*Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchpurgePurgeDraftTableRowsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchpurgePurgeDraftTableRowsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case rsp.StatusCode == 204:
+		break // No content-type
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
+		var dest BatchResponseHubDbTableRowV3WithErrors
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON207 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmshubdb202603tablesTableIdOrNamerowsdraftbatchreadReadDraftTableRowsResponse parses an HTTP response from a Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreadReadDraftTableRowsWithResponse call
+func ParsePostcmshubdb202603tablesTableIdOrNamerowsdraftbatchreadReadDraftTableRowsResponse(rsp *http.Response) (*Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreadReadDraftTableRowsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreadReadDraftTableRowsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BatchResponseHubDbTableRowV3
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
+		var dest BatchResponseHubDbTableRowV3WithErrors
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON207 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmshubdb202603tablesTableIdOrNamerowsdraftbatchreplaceReplaceDraftTableRowsResponse parses an HTTP response from a Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreplaceReplaceDraftTableRowsWithResponse call
+func ParsePostcmshubdb202603tablesTableIdOrNamerowsdraftbatchreplaceReplaceDraftTableRowsResponse(rsp *http.Response) (*Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreplaceReplaceDraftTableRowsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreplaceReplaceDraftTableRowsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BatchResponseHubDbTableRowV3
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
+		var dest BatchResponseHubDbTableRowV3WithErrors
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON207 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmshubdb202603tablesTableIdOrNamerowsdraftbatchupdateUpdateDraftTableRowsResponse parses an HTTP response from a Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchupdateUpdateDraftTableRowsWithResponse call
+func ParsePostcmshubdb202603tablesTableIdOrNamerowsdraftbatchupdateUpdateDraftTableRowsResponse(rsp *http.Response) (*Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchupdateUpdateDraftTableRowsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchupdateUpdateDraftTableRowsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BatchResponseHubDbTableRowV3
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
+		var dest BatchResponseHubDbTableRowV3WithErrors
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON207 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcmshubdb202603tablesTableIdOrNamerowsRowIdGetTableRowResponse parses an HTTP response from a Getcmshubdb202603tablesTableIdOrNamerowsRowIdGetTableRowWithResponse call
+func ParseGetcmshubdb202603tablesTableIdOrNamerowsRowIdGetTableRowResponse(rsp *http.Response) (*Getcmshubdb202603tablesTableIdOrNamerowsRowIdGetTableRowResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcmshubdb202603tablesTableIdOrNamerowsRowIdGetTableRowResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest HubDbTableRowV3
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseDeletecmshubdb202603tablesTableIdOrNamerowsRowIddraftPurgeDraftTableRowResponse parses an HTTP response from a Deletecmshubdb202603tablesTableIdOrNamerowsRowIddraftPurgeDraftTableRowWithResponse call
+func ParseDeletecmshubdb202603tablesTableIdOrNamerowsRowIddraftPurgeDraftTableRowResponse(rsp *http.Response) (*Deletecmshubdb202603tablesTableIdOrNamerowsRowIddraftPurgeDraftTableRowResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Deletecmshubdb202603tablesTableIdOrNamerowsRowIddraftPurgeDraftTableRowResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParseGetcmshubdb202603tablesTableIdOrNamerowsRowIddraftGetDraftTableRowByIdResponse parses an HTTP response from a Getcmshubdb202603tablesTableIdOrNamerowsRowIddraftGetDraftTableRowByIdWithResponse call
+func ParseGetcmshubdb202603tablesTableIdOrNamerowsRowIddraftGetDraftTableRowByIdResponse(rsp *http.Response) (*Getcmshubdb202603tablesTableIdOrNamerowsRowIddraftGetDraftTableRowByIdResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcmshubdb202603tablesTableIdOrNamerowsRowIddraftGetDraftTableRowByIdResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest HubDbTableRowV3
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePatchcmshubdb202603tablesTableIdOrNamerowsRowIddraftUpdateDraftTableRowResponse parses an HTTP response from a Patchcmshubdb202603tablesTableIdOrNamerowsRowIddraftUpdateDraftTableRowWithResponse call
+func ParsePatchcmshubdb202603tablesTableIdOrNamerowsRowIddraftUpdateDraftTableRowResponse(rsp *http.Response) (*Patchcmshubdb202603tablesTableIdOrNamerowsRowIddraftUpdateDraftTableRowResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Patchcmshubdb202603tablesTableIdOrNamerowsRowIddraftUpdateDraftTableRowResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest HubDbTableRowV3
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePutcmshubdb202603tablesTableIdOrNamerowsRowIddraftReplaceDraftTableRowResponse parses an HTTP response from a Putcmshubdb202603tablesTableIdOrNamerowsRowIddraftReplaceDraftTableRowWithResponse call
+func ParsePutcmshubdb202603tablesTableIdOrNamerowsRowIddraftReplaceDraftTableRowResponse(rsp *http.Response) (*Putcmshubdb202603tablesTableIdOrNamerowsRowIddraftReplaceDraftTableRowResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Putcmshubdb202603tablesTableIdOrNamerowsRowIddraftReplaceDraftTableRowResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest HubDbTableRowV3
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmshubdb202603tablesTableIdOrNamerowsRowIddraftcloneCloneDraftTableRowResponse parses an HTTP response from a Postcmshubdb202603tablesTableIdOrNamerowsRowIddraftcloneCloneDraftTableRowWithResponse call
+func ParsePostcmshubdb202603tablesTableIdOrNamerowsRowIddraftcloneCloneDraftTableRowResponse(rsp *http.Response) (*Postcmshubdb202603tablesTableIdOrNamerowsRowIddraftcloneCloneDraftTableRowResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmshubdb202603tablesTableIdOrNamerowsRowIddraftcloneCloneDraftTableRowResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest HubDbTableRowV3
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmshubdb202603tablesTableIdOrNameunpublishUnpublishTableResponse parses an HTTP response from a Postcmshubdb202603tablesTableIdOrNameunpublishUnpublishTableWithResponse call
+func ParsePostcmshubdb202603tablesTableIdOrNameunpublishUnpublishTableResponse(rsp *http.Response) (*Postcmshubdb202603tablesTableIdOrNameunpublishUnpublishTableResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmshubdb202603tablesTableIdOrNameunpublishUnpublishTableResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest HubDbTableV3
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseDeletecmshubdb202603tablesTableIdOrNameversionsVersionIdRemoveTableVersionResponse parses an HTTP response from a Deletecmshubdb202603tablesTableIdOrNameversionsVersionIdRemoveTableVersionWithResponse call
+func ParseDeletecmshubdb202603tablesTableIdOrNameversionsVersionIdRemoveTableVersionResponse(rsp *http.Response) (*Deletecmshubdb202603tablesTableIdOrNameversionsVersionIdRemoveTableVersionResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Deletecmshubdb202603tablesTableIdOrNameversionsVersionIdRemoveTableVersionResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParseGetcmspages202603landingPagesGetPageResponse parses an HTTP response from a Getcmspages202603landingPagesGetPageWithResponse call
+func ParseGetcmspages202603landingPagesGetPageResponse(rsp *http.Response) (*Getcmspages202603landingPagesGetPageResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcmspages202603landingPagesGetPageResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CollectionResponseWithTotalPageForwardPaging
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmspages202603landingPagesCreateResponse parses an HTTP response from a Postcmspages202603landingPagesCreateWithResponse call
+func ParsePostcmspages202603landingPagesCreateResponse(rsp *http.Response) (*Postcmspages202603landingPagesCreateResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmspages202603landingPagesCreateResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
+		var dest Page
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON201 = &dest
+
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcmspages202603landingPagesCreateResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
+	}
+
+	return response, nil
+}
+
+// ParsePostcmspages202603landingPagesabTestcreateVariationCreateABTestVariationResponse parses an HTTP response from a Postcmspages202603landingPagesabTestcreateVariationCreateABTestVariationWithResponse call
+func ParsePostcmspages202603landingPagesabTestcreateVariationCreateABTestVariationResponse(rsp *http.Response) (*Postcmspages202603landingPagesabTestcreateVariationCreateABTestVariationResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmspages202603landingPagesabTestcreateVariationCreateABTestVariationResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
+		var dest Page
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON201 = &dest
+
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcmspages202603landingPagesabTestcreateVariationCreateABTestVariationResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
+	}
+
+	return response, nil
+}
+
+// ParsePostcmspages202603landingPagesabTestendEndActiveABTestResponse parses an HTTP response from a Postcmspages202603landingPagesabTestendEndActiveABTestWithResponse call
+func ParsePostcmspages202603landingPagesabTestendEndActiveABTestResponse(rsp *http.Response) (*Postcmspages202603landingPagesabTestendEndActiveABTestResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmspages202603landingPagesabTestendEndActiveABTestResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParsePostcmspages202603landingPagesabTestrerunRerunPreviousABTestResponse parses an HTTP response from a Postcmspages202603landingPagesabTestrerunRerunPreviousABTestWithResponse call
+func ParsePostcmspages202603landingPagesabTestrerunRerunPreviousABTestResponse(rsp *http.Response) (*Postcmspages202603landingPagesabTestrerunRerunPreviousABTestResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmspages202603landingPagesabTestrerunRerunPreviousABTestResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParsePostcmspages202603landingPagesbatcharchiveArchiveBatchResponse parses an HTTP response from a Postcmspages202603landingPagesbatcharchiveArchiveBatchWithResponse call
+func ParsePostcmspages202603landingPagesbatcharchiveArchiveBatchResponse(rsp *http.Response) (*Postcmspages202603landingPagesbatcharchiveArchiveBatchResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmspages202603landingPagesbatcharchiveArchiveBatchResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case rsp.StatusCode == 204:
+		break // No content-type
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
+		var dest BatchResponsePageWithErrors
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON207 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmspages202603landingPagesbatchcreateCreateBatchResponse parses an HTTP response from a Postcmspages202603landingPagesbatchcreateCreateBatchWithResponse call
+func ParsePostcmspages202603landingPagesbatchcreateCreateBatchResponse(rsp *http.Response) (*Postcmspages202603landingPagesbatchcreateCreateBatchResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmspages202603landingPagesbatchcreateCreateBatchResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
+		var dest BatchResponsePage
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON201 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
+		var dest BatchResponsePageWithErrors
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON207 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmspages202603landingPagesbatchreadReadBatchResponse parses an HTTP response from a Postcmspages202603landingPagesbatchreadReadBatchWithResponse call
+func ParsePostcmspages202603landingPagesbatchreadReadBatchResponse(rsp *http.Response) (*Postcmspages202603landingPagesbatchreadReadBatchResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmspages202603landingPagesbatchreadReadBatchResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BatchResponsePage
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
+		var dest BatchResponsePageWithErrors
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON207 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmspages202603landingPagesbatchupdateUpdateBatchResponse parses an HTTP response from a Postcmspages202603landingPagesbatchupdateUpdateBatchWithResponse call
+func ParsePostcmspages202603landingPagesbatchupdateUpdateBatchResponse(rsp *http.Response) (*Postcmspages202603landingPagesbatchupdateUpdateBatchResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmspages202603landingPagesbatchupdateUpdateBatchResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BatchResponsePage
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
+		var dest BatchResponsePageWithErrors
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON207 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmspages202603landingPagescloneCloneResponse parses an HTTP response from a Postcmspages202603landingPagescloneCloneWithResponse call
+func ParsePostcmspages202603landingPagescloneCloneResponse(rsp *http.Response) (*Postcmspages202603landingPagescloneCloneResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmspages202603landingPagescloneCloneResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest Page
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcmspages202603landingPagesfoldersGetFoldersPageResponse parses an HTTP response from a Getcmspages202603landingPagesfoldersGetFoldersPageWithResponse call
+func ParseGetcmspages202603landingPagesfoldersGetFoldersPageResponse(rsp *http.Response) (*Getcmspages202603landingPagesfoldersGetFoldersPageResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcmspages202603landingPagesfoldersGetFoldersPageResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CollectionResponseWithTotalContentFolderForwardPaging
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmspages202603landingPagesfoldersCreateFolderResponse parses an HTTP response from a Postcmspages202603landingPagesfoldersCreateFolderWithResponse call
+func ParsePostcmspages202603landingPagesfoldersCreateFolderResponse(rsp *http.Response) (*Postcmspages202603landingPagesfoldersCreateFolderResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmspages202603landingPagesfoldersCreateFolderResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
+		var dest ContentFolder
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON201 = &dest
+
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcmspages202603landingPagesfoldersCreateFolderResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
+	}
+
+	return response, nil
+}
+
+// ParsePostcmspages202603landingPagesfoldersbatcharchiveArchiveFoldersResponse parses an HTTP response from a Postcmspages202603landingPagesfoldersbatcharchiveArchiveFoldersWithResponse call
+func ParsePostcmspages202603landingPagesfoldersbatcharchiveArchiveFoldersResponse(rsp *http.Response) (*Postcmspages202603landingPagesfoldersbatcharchiveArchiveFoldersResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmspages202603landingPagesfoldersbatcharchiveArchiveFoldersResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case rsp.StatusCode == 204:
+		break // No content-type
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
+		var dest BatchResponseContentFolderWithErrors
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON207 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmspages202603landingPagesfoldersbatchcreateCreateFoldersResponse parses an HTTP response from a Postcmspages202603landingPagesfoldersbatchcreateCreateFoldersWithResponse call
+func ParsePostcmspages202603landingPagesfoldersbatchcreateCreateFoldersResponse(rsp *http.Response) (*Postcmspages202603landingPagesfoldersbatchcreateCreateFoldersResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmspages202603landingPagesfoldersbatchcreateCreateFoldersResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
+		var dest BatchResponseContentFolder
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON201 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
+		var dest BatchResponseContentFolderWithErrors
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON207 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmspages202603landingPagesfoldersbatchreadReadFoldersResponse parses an HTTP response from a Postcmspages202603landingPagesfoldersbatchreadReadFoldersWithResponse call
+func ParsePostcmspages202603landingPagesfoldersbatchreadReadFoldersResponse(rsp *http.Response) (*Postcmspages202603landingPagesfoldersbatchreadReadFoldersResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmspages202603landingPagesfoldersbatchreadReadFoldersResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BatchResponseContentFolder
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
+		var dest BatchResponseContentFolderWithErrors
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON207 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmspages202603landingPagesfoldersbatchupdateUpdateFoldersResponse parses an HTTP response from a Postcmspages202603landingPagesfoldersbatchupdateUpdateFoldersWithResponse call
+func ParsePostcmspages202603landingPagesfoldersbatchupdateUpdateFoldersResponse(rsp *http.Response) (*Postcmspages202603landingPagesfoldersbatchupdateUpdateFoldersResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmspages202603landingPagesfoldersbatchupdateUpdateFoldersResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BatchResponseContentFolder
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
+		var dest BatchResponseContentFolderWithErrors
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON207 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseDeletecmspages202603landingPagesfoldersObjectIdArchiveFolderResponse parses an HTTP response from a Deletecmspages202603landingPagesfoldersObjectIdArchiveFolderWithResponse call
+func ParseDeletecmspages202603landingPagesfoldersObjectIdArchiveFolderResponse(rsp *http.Response) (*Deletecmspages202603landingPagesfoldersObjectIdArchiveFolderResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Deletecmspages202603landingPagesfoldersObjectIdArchiveFolderResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParseGetcmspages202603landingPagesfoldersObjectIdGetFolderByIdResponse parses an HTTP response from a Getcmspages202603landingPagesfoldersObjectIdGetFolderByIdWithResponse call
+func ParseGetcmspages202603landingPagesfoldersObjectIdGetFolderByIdResponse(rsp *http.Response) (*Getcmspages202603landingPagesfoldersObjectIdGetFolderByIdResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcmspages202603landingPagesfoldersObjectIdGetFolderByIdResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest ContentFolder
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePatchcmspages202603landingPagesfoldersObjectIdUpdateFolderResponse parses an HTTP response from a Patchcmspages202603landingPagesfoldersObjectIdUpdateFolderWithResponse call
+func ParsePatchcmspages202603landingPagesfoldersObjectIdUpdateFolderResponse(rsp *http.Response) (*Patchcmspages202603landingPagesfoldersObjectIdUpdateFolderResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Patchcmspages202603landingPagesfoldersObjectIdUpdateFolderResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest ContentFolder
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcmspages202603landingPagesfoldersObjectIdrevisionsGetFolderPreviousVersionsResponse parses an HTTP response from a Getcmspages202603landingPagesfoldersObjectIdrevisionsGetFolderPreviousVersionsWithResponse call
+func ParseGetcmspages202603landingPagesfoldersObjectIdrevisionsGetFolderPreviousVersionsResponse(rsp *http.Response) (*Getcmspages202603landingPagesfoldersObjectIdrevisionsGetFolderPreviousVersionsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcmspages202603landingPagesfoldersObjectIdrevisionsGetFolderPreviousVersionsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CollectionResponseWithTotalContentFolderVersion
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcmspages202603landingPagesfoldersObjectIdrevisionsRevisionIdGetFolderPreviousVersionResponse parses an HTTP response from a Getcmspages202603landingPagesfoldersObjectIdrevisionsRevisionIdGetFolderPreviousVersionWithResponse call
+func ParseGetcmspages202603landingPagesfoldersObjectIdrevisionsRevisionIdGetFolderPreviousVersionResponse(rsp *http.Response) (*Getcmspages202603landingPagesfoldersObjectIdrevisionsRevisionIdGetFolderPreviousVersionResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcmspages202603landingPagesfoldersObjectIdrevisionsRevisionIdGetFolderPreviousVersionResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest ContentFolderVersion
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmspages202603landingPagesfoldersObjectIdrevisionsRevisionIdrestoreRestoreFolderPreviousVersionResponse parses an HTTP response from a Postcmspages202603landingPagesfoldersObjectIdrevisionsRevisionIdrestoreRestoreFolderPreviousVersionWithResponse call
+func ParsePostcmspages202603landingPagesfoldersObjectIdrevisionsRevisionIdrestoreRestoreFolderPreviousVersionResponse(rsp *http.Response) (*Postcmspages202603landingPagesfoldersObjectIdrevisionsRevisionIdrestoreRestoreFolderPreviousVersionResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmspages202603landingPagesfoldersObjectIdrevisionsRevisionIdrestoreRestoreFolderPreviousVersionResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest ContentFolder
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmspages202603landingPagesmultiLanguageattachToLangGroupAttachToLangGroupResponse parses an HTTP response from a Postcmspages202603landingPagesmultiLanguageattachToLangGroupAttachToLangGroupWithResponse call
+func ParsePostcmspages202603landingPagesmultiLanguageattachToLangGroupAttachToLangGroupResponse(rsp *http.Response) (*Postcmspages202603landingPagesmultiLanguageattachToLangGroupAttachToLangGroupResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmspages202603landingPagesmultiLanguageattachToLangGroupAttachToLangGroupResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParsePostcmspages202603landingPagesmultiLanguagecreateLanguageVariationCreateLangVariationResponse parses an HTTP response from a Postcmspages202603landingPagesmultiLanguagecreateLanguageVariationCreateLangVariationWithResponse call
+func ParsePostcmspages202603landingPagesmultiLanguagecreateLanguageVariationCreateLangVariationResponse(rsp *http.Response) (*Postcmspages202603landingPagesmultiLanguagecreateLanguageVariationCreateLangVariationResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmspages202603landingPagesmultiLanguagecreateLanguageVariationCreateLangVariationResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest Page
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmspages202603landingPagesmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse parses an HTTP response from a Postcmspages202603landingPagesmultiLanguagedetachFromLangGroupDetachFromLangGroupWithResponse call
+func ParsePostcmspages202603landingPagesmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse(rsp *http.Response) (*Postcmspages202603landingPagesmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmspages202603landingPagesmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParsePutcmspages202603landingPagesmultiLanguagesetNewLangPrimarySetLangPrimaryResponse parses an HTTP response from a Putcmspages202603landingPagesmultiLanguagesetNewLangPrimarySetLangPrimaryWithResponse call
+func ParsePutcmspages202603landingPagesmultiLanguagesetNewLangPrimarySetLangPrimaryResponse(rsp *http.Response) (*Putcmspages202603landingPagesmultiLanguagesetNewLangPrimarySetLangPrimaryResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Putcmspages202603landingPagesmultiLanguagesetNewLangPrimarySetLangPrimaryResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParsePostcmspages202603landingPagesmultiLanguageupdateLanguagesUpdateLangsResponse parses an HTTP response from a Postcmspages202603landingPagesmultiLanguageupdateLanguagesUpdateLangsWithResponse call
+func ParsePostcmspages202603landingPagesmultiLanguageupdateLanguagesUpdateLangsResponse(rsp *http.Response) (*Postcmspages202603landingPagesmultiLanguageupdateLanguagesUpdateLangsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmspages202603landingPagesmultiLanguageupdateLanguagesUpdateLangsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParsePostcmspages202603landingPagesscheduleScheduleResponse parses an HTTP response from a Postcmspages202603landingPagesscheduleScheduleWithResponse call
+func ParsePostcmspages202603landingPagesscheduleScheduleResponse(rsp *http.Response) (*Postcmspages202603landingPagesscheduleScheduleResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmspages202603landingPagesscheduleScheduleResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParseDeletecmspages202603landingPagesObjectIdArchiveResponse parses an HTTP response from a Deletecmspages202603landingPagesObjectIdArchiveWithResponse call
+func ParseDeletecmspages202603landingPagesObjectIdArchiveResponse(rsp *http.Response) (*Deletecmspages202603landingPagesObjectIdArchiveResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Deletecmspages202603landingPagesObjectIdArchiveResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParseGetcmspages202603landingPagesObjectIdGetByIdResponse parses an HTTP response from a Getcmspages202603landingPagesObjectIdGetByIdWithResponse call
+func ParseGetcmspages202603landingPagesObjectIdGetByIdResponse(rsp *http.Response) (*Getcmspages202603landingPagesObjectIdGetByIdResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcmspages202603landingPagesObjectIdGetByIdResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest Page
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePatchcmspages202603landingPagesObjectIdUpdateResponse parses an HTTP response from a Patchcmspages202603landingPagesObjectIdUpdateWithResponse call
+func ParsePatchcmspages202603landingPagesObjectIdUpdateResponse(rsp *http.Response) (*Patchcmspages202603landingPagesObjectIdUpdateResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Patchcmspages202603landingPagesObjectIdUpdateResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest Page
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcmspages202603landingPagesObjectIddraftGetDraftByIdResponse parses an HTTP response from a Getcmspages202603landingPagesObjectIddraftGetDraftByIdWithResponse call
+func ParseGetcmspages202603landingPagesObjectIddraftGetDraftByIdResponse(rsp *http.Response) (*Getcmspages202603landingPagesObjectIddraftGetDraftByIdResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcmspages202603landingPagesObjectIddraftGetDraftByIdResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest Page
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePatchcmspages202603landingPagesObjectIddraftUpdateDraftResponse parses an HTTP response from a Patchcmspages202603landingPagesObjectIddraftUpdateDraftWithResponse call
+func ParsePatchcmspages202603landingPagesObjectIddraftUpdateDraftResponse(rsp *http.Response) (*Patchcmspages202603landingPagesObjectIddraftUpdateDraftResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Patchcmspages202603landingPagesObjectIddraftUpdateDraftResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest Page
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmspages202603landingPagesObjectIddraftpushLivePushLiveResponse parses an HTTP response from a Postcmspages202603landingPagesObjectIddraftpushLivePushLiveWithResponse call
+func ParsePostcmspages202603landingPagesObjectIddraftpushLivePushLiveResponse(rsp *http.Response) (*Postcmspages202603landingPagesObjectIddraftpushLivePushLiveResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmspages202603landingPagesObjectIddraftpushLivePushLiveResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParsePostcmspages202603landingPagesObjectIddraftresetResetDraftResponse parses an HTTP response from a Postcmspages202603landingPagesObjectIddraftresetResetDraftWithResponse call
+func ParsePostcmspages202603landingPagesObjectIddraftresetResetDraftResponse(rsp *http.Response) (*Postcmspages202603landingPagesObjectIddraftresetResetDraftResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmspages202603landingPagesObjectIddraftresetResetDraftResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParseGetcmspages202603landingPagesObjectIdrevisionsGetPreviousVersionsResponse parses an HTTP response from a Getcmspages202603landingPagesObjectIdrevisionsGetPreviousVersionsWithResponse call
+func ParseGetcmspages202603landingPagesObjectIdrevisionsGetPreviousVersionsResponse(rsp *http.Response) (*Getcmspages202603landingPagesObjectIdrevisionsGetPreviousVersionsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcmspages202603landingPagesObjectIdrevisionsGetPreviousVersionsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CollectionResponseWithTotalPageVersion
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcmspages202603landingPagesObjectIdrevisionsRevisionIdGetPreviousVersionResponse parses an HTTP response from a Getcmspages202603landingPagesObjectIdrevisionsRevisionIdGetPreviousVersionWithResponse call
+func ParseGetcmspages202603landingPagesObjectIdrevisionsRevisionIdGetPreviousVersionResponse(rsp *http.Response) (*Getcmspages202603landingPagesObjectIdrevisionsRevisionIdGetPreviousVersionResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcmspages202603landingPagesObjectIdrevisionsRevisionIdGetPreviousVersionResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest PageVersion
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmspages202603landingPagesObjectIdrevisionsRevisionIdrestoreRestorePreviousVersionResponse parses an HTTP response from a Postcmspages202603landingPagesObjectIdrevisionsRevisionIdrestoreRestorePreviousVersionWithResponse call
+func ParsePostcmspages202603landingPagesObjectIdrevisionsRevisionIdrestoreRestorePreviousVersionResponse(rsp *http.Response) (*Postcmspages202603landingPagesObjectIdrevisionsRevisionIdrestoreRestorePreviousVersionResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmspages202603landingPagesObjectIdrevisionsRevisionIdrestoreRestorePreviousVersionResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest Page
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmspages202603landingPagesObjectIdrevisionsRevisionIdrestoreToDraftRestorePreviousVersionToDraftResponse parses an HTTP response from a Postcmspages202603landingPagesObjectIdrevisionsRevisionIdrestoreToDraftRestorePreviousVersionToDraftWithResponse call
+func ParsePostcmspages202603landingPagesObjectIdrevisionsRevisionIdrestoreToDraftRestorePreviousVersionToDraftResponse(rsp *http.Response) (*Postcmspages202603landingPagesObjectIdrevisionsRevisionIdrestoreToDraftRestorePreviousVersionToDraftResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmspages202603landingPagesObjectIdrevisionsRevisionIdrestoreToDraftRestorePreviousVersionToDraftResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest Page
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcmspages202603sitePagesGetPageResponse parses an HTTP response from a Getcmspages202603sitePagesGetPageWithResponse call
+func ParseGetcmspages202603sitePagesGetPageResponse(rsp *http.Response) (*Getcmspages202603sitePagesGetPageResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcmspages202603sitePagesGetPageResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CollectionResponseWithTotalPageForwardPaging
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmspages202603sitePagesCreateResponse parses an HTTP response from a Postcmspages202603sitePagesCreateWithResponse call
+func ParsePostcmspages202603sitePagesCreateResponse(rsp *http.Response) (*Postcmspages202603sitePagesCreateResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmspages202603sitePagesCreateResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
+		var dest Page
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON201 = &dest
+
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcmspages202603sitePagesCreateResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
+	}
+
+	return response, nil
+}
+
+// ParsePostcmspages202603sitePagesabTestcreateVariationCreateABTestVariationResponse parses an HTTP response from a Postcmspages202603sitePagesabTestcreateVariationCreateABTestVariationWithResponse call
+func ParsePostcmspages202603sitePagesabTestcreateVariationCreateABTestVariationResponse(rsp *http.Response) (*Postcmspages202603sitePagesabTestcreateVariationCreateABTestVariationResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmspages202603sitePagesabTestcreateVariationCreateABTestVariationResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
+		var dest Page
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON201 = &dest
+
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers Postcmspages202603sitePagesabTestcreateVariationCreateABTestVariationResponse201Headers
+		if values := rsp.Header.Values("Location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
+	}
+
+	return response, nil
+}
+
+// ParsePostcmspages202603sitePagesabTestendEndActiveABTestResponse parses an HTTP response from a Postcmspages202603sitePagesabTestendEndActiveABTestWithResponse call
+func ParsePostcmspages202603sitePagesabTestendEndActiveABTestResponse(rsp *http.Response) (*Postcmspages202603sitePagesabTestendEndActiveABTestResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmspages202603sitePagesabTestendEndActiveABTestResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParsePostcmspages202603sitePagesabTestrerunRerunPreviousABTestResponse parses an HTTP response from a Postcmspages202603sitePagesabTestrerunRerunPreviousABTestWithResponse call
+func ParsePostcmspages202603sitePagesabTestrerunRerunPreviousABTestResponse(rsp *http.Response) (*Postcmspages202603sitePagesabTestrerunRerunPreviousABTestResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmspages202603sitePagesabTestrerunRerunPreviousABTestResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParsePostcmspages202603sitePagesbatcharchiveArchiveBatchResponse parses an HTTP response from a Postcmspages202603sitePagesbatcharchiveArchiveBatchWithResponse call
+func ParsePostcmspages202603sitePagesbatcharchiveArchiveBatchResponse(rsp *http.Response) (*Postcmspages202603sitePagesbatcharchiveArchiveBatchResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmspages202603sitePagesbatcharchiveArchiveBatchResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case rsp.StatusCode == 204:
+		break // No content-type
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
+		var dest BatchResponsePageWithErrors
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON207 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmspages202603sitePagesbatchcreateCreateBatchResponse parses an HTTP response from a Postcmspages202603sitePagesbatchcreateCreateBatchWithResponse call
+func ParsePostcmspages202603sitePagesbatchcreateCreateBatchResponse(rsp *http.Response) (*Postcmspages202603sitePagesbatchcreateCreateBatchResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmspages202603sitePagesbatchcreateCreateBatchResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
+		var dest BatchResponsePage
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON201 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
+		var dest BatchResponsePageWithErrors
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON207 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmspages202603sitePagesbatchreadReadBatchResponse parses an HTTP response from a Postcmspages202603sitePagesbatchreadReadBatchWithResponse call
+func ParsePostcmspages202603sitePagesbatchreadReadBatchResponse(rsp *http.Response) (*Postcmspages202603sitePagesbatchreadReadBatchResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmspages202603sitePagesbatchreadReadBatchResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BatchResponsePage
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
+		var dest BatchResponsePageWithErrors
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON207 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmspages202603sitePagesbatchupdateUpdateBatchResponse parses an HTTP response from a Postcmspages202603sitePagesbatchupdateUpdateBatchWithResponse call
+func ParsePostcmspages202603sitePagesbatchupdateUpdateBatchResponse(rsp *http.Response) (*Postcmspages202603sitePagesbatchupdateUpdateBatchResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmspages202603sitePagesbatchupdateUpdateBatchResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BatchResponsePage
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
+		var dest BatchResponsePageWithErrors
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON207 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmspages202603sitePagescloneCloneResponse parses an HTTP response from a Postcmspages202603sitePagescloneCloneWithResponse call
+func ParsePostcmspages202603sitePagescloneCloneResponse(rsp *http.Response) (*Postcmspages202603sitePagescloneCloneResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmspages202603sitePagescloneCloneResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest Page
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmspages202603sitePagesmultiLanguageattachToLangGroupAttachToLangGroupResponse parses an HTTP response from a Postcmspages202603sitePagesmultiLanguageattachToLangGroupAttachToLangGroupWithResponse call
+func ParsePostcmspages202603sitePagesmultiLanguageattachToLangGroupAttachToLangGroupResponse(rsp *http.Response) (*Postcmspages202603sitePagesmultiLanguageattachToLangGroupAttachToLangGroupResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmspages202603sitePagesmultiLanguageattachToLangGroupAttachToLangGroupResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParsePostcmspages202603sitePagesmultiLanguagecreateLanguageVariationCreateLangVariationResponse parses an HTTP response from a Postcmspages202603sitePagesmultiLanguagecreateLanguageVariationCreateLangVariationWithResponse call
+func ParsePostcmspages202603sitePagesmultiLanguagecreateLanguageVariationCreateLangVariationResponse(rsp *http.Response) (*Postcmspages202603sitePagesmultiLanguagecreateLanguageVariationCreateLangVariationResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmspages202603sitePagesmultiLanguagecreateLanguageVariationCreateLangVariationResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest Page
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmspages202603sitePagesmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse parses an HTTP response from a Postcmspages202603sitePagesmultiLanguagedetachFromLangGroupDetachFromLangGroupWithResponse call
+func ParsePostcmspages202603sitePagesmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse(rsp *http.Response) (*Postcmspages202603sitePagesmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmspages202603sitePagesmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParsePutcmspages202603sitePagesmultiLanguagesetNewLangPrimarySetLangPrimaryResponse parses an HTTP response from a Putcmspages202603sitePagesmultiLanguagesetNewLangPrimarySetLangPrimaryWithResponse call
+func ParsePutcmspages202603sitePagesmultiLanguagesetNewLangPrimarySetLangPrimaryResponse(rsp *http.Response) (*Putcmspages202603sitePagesmultiLanguagesetNewLangPrimarySetLangPrimaryResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Putcmspages202603sitePagesmultiLanguagesetNewLangPrimarySetLangPrimaryResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParsePostcmspages202603sitePagesmultiLanguageupdateLanguagesUpdateLangsResponse parses an HTTP response from a Postcmspages202603sitePagesmultiLanguageupdateLanguagesUpdateLangsWithResponse call
+func ParsePostcmspages202603sitePagesmultiLanguageupdateLanguagesUpdateLangsResponse(rsp *http.Response) (*Postcmspages202603sitePagesmultiLanguageupdateLanguagesUpdateLangsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmspages202603sitePagesmultiLanguageupdateLanguagesUpdateLangsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParsePostcmspages202603sitePagesscheduleScheduleResponse parses an HTTP response from a Postcmspages202603sitePagesscheduleScheduleWithResponse call
+func ParsePostcmspages202603sitePagesscheduleScheduleResponse(rsp *http.Response) (*Postcmspages202603sitePagesscheduleScheduleResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmspages202603sitePagesscheduleScheduleResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParseDeletecmspages202603sitePagesObjectIdArchiveResponse parses an HTTP response from a Deletecmspages202603sitePagesObjectIdArchiveWithResponse call
+func ParseDeletecmspages202603sitePagesObjectIdArchiveResponse(rsp *http.Response) (*Deletecmspages202603sitePagesObjectIdArchiveResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Deletecmspages202603sitePagesObjectIdArchiveResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParseGetcmspages202603sitePagesObjectIdGetByIdResponse parses an HTTP response from a Getcmspages202603sitePagesObjectIdGetByIdWithResponse call
+func ParseGetcmspages202603sitePagesObjectIdGetByIdResponse(rsp *http.Response) (*Getcmspages202603sitePagesObjectIdGetByIdResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcmspages202603sitePagesObjectIdGetByIdResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest Page
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePatchcmspages202603sitePagesObjectIdUpdateResponse parses an HTTP response from a Patchcmspages202603sitePagesObjectIdUpdateWithResponse call
+func ParsePatchcmspages202603sitePagesObjectIdUpdateResponse(rsp *http.Response) (*Patchcmspages202603sitePagesObjectIdUpdateResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Patchcmspages202603sitePagesObjectIdUpdateResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest Page
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcmspages202603sitePagesObjectIddraftGetDraftByIdResponse parses an HTTP response from a Getcmspages202603sitePagesObjectIddraftGetDraftByIdWithResponse call
+func ParseGetcmspages202603sitePagesObjectIddraftGetDraftByIdResponse(rsp *http.Response) (*Getcmspages202603sitePagesObjectIddraftGetDraftByIdResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcmspages202603sitePagesObjectIddraftGetDraftByIdResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest Page
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePatchcmspages202603sitePagesObjectIddraftUpdateDraftResponse parses an HTTP response from a Patchcmspages202603sitePagesObjectIddraftUpdateDraftWithResponse call
+func ParsePatchcmspages202603sitePagesObjectIddraftUpdateDraftResponse(rsp *http.Response) (*Patchcmspages202603sitePagesObjectIddraftUpdateDraftResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Patchcmspages202603sitePagesObjectIddraftUpdateDraftResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest Page
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmspages202603sitePagesObjectIddraftpushLivePushLiveResponse parses an HTTP response from a Postcmspages202603sitePagesObjectIddraftpushLivePushLiveWithResponse call
+func ParsePostcmspages202603sitePagesObjectIddraftpushLivePushLiveResponse(rsp *http.Response) (*Postcmspages202603sitePagesObjectIddraftpushLivePushLiveResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmspages202603sitePagesObjectIddraftpushLivePushLiveResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParsePostcmspages202603sitePagesObjectIddraftresetResetDraftResponse parses an HTTP response from a Postcmspages202603sitePagesObjectIddraftresetResetDraftWithResponse call
+func ParsePostcmspages202603sitePagesObjectIddraftresetResetDraftResponse(rsp *http.Response) (*Postcmspages202603sitePagesObjectIddraftresetResetDraftResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmspages202603sitePagesObjectIddraftresetResetDraftResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParseGetcmspages202603sitePagesObjectIdrevisionsGetPreviousVersionsResponse parses an HTTP response from a Getcmspages202603sitePagesObjectIdrevisionsGetPreviousVersionsWithResponse call
+func ParseGetcmspages202603sitePagesObjectIdrevisionsGetPreviousVersionsResponse(rsp *http.Response) (*Getcmspages202603sitePagesObjectIdrevisionsGetPreviousVersionsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcmspages202603sitePagesObjectIdrevisionsGetPreviousVersionsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CollectionResponseWithTotalPageVersion
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetcmspages202603sitePagesObjectIdrevisionsRevisionIdGetPreviousVersionResponse parses an HTTP response from a Getcmspages202603sitePagesObjectIdrevisionsRevisionIdGetPreviousVersionWithResponse call
+func ParseGetcmspages202603sitePagesObjectIdrevisionsRevisionIdGetPreviousVersionResponse(rsp *http.Response) (*Getcmspages202603sitePagesObjectIdrevisionsRevisionIdGetPreviousVersionResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Getcmspages202603sitePagesObjectIdrevisionsRevisionIdGetPreviousVersionResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest PageVersion
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmspages202603sitePagesObjectIdrevisionsRevisionIdrestoreRestorePreviousVersionResponse parses an HTTP response from a Postcmspages202603sitePagesObjectIdrevisionsRevisionIdrestoreRestorePreviousVersionWithResponse call
+func ParsePostcmspages202603sitePagesObjectIdrevisionsRevisionIdrestoreRestorePreviousVersionResponse(rsp *http.Response) (*Postcmspages202603sitePagesObjectIdrevisionsRevisionIdrestoreRestorePreviousVersionResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmspages202603sitePagesObjectIdrevisionsRevisionIdrestoreRestorePreviousVersionResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest Page
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostcmspages202603sitePagesObjectIdrevisionsRevisionIdrestoreToDraftRestorePreviousVersionToDraftResponse parses an HTTP response from a Postcmspages202603sitePagesObjectIdrevisionsRevisionIdrestoreToDraftRestorePreviousVersionToDraftWithResponse call
+func ParsePostcmspages202603sitePagesObjectIdrevisionsRevisionIdrestoreToDraftRestorePreviousVersionToDraftResponse(rsp *http.Response) (*Postcmspages202603sitePagesObjectIdrevisionsRevisionIdrestoreToDraftRestorePreviousVersionToDraftResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &Postcmspages202603sitePagesObjectIdrevisionsRevisionIdrestoreToDraftRestorePreviousVersionToDraftResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest Page
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
 // ParseGetcmssiteSearch202603indexedDataContentIdGetByIdResponse parses an HTTP response from a GetcmssiteSearch202603indexedDataContentIdGetByIdWithResponse call
 func ParseGetcmssiteSearch202603indexedDataContentIdGetByIdResponse(rsp *http.Response) (*GetcmssiteSearch202603indexedDataContentIdGetByIdResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
@@ -28,32 +4688,6 @@ func ParseGetcmssiteSearch202603indexedDataContentIdGetByIdResponse(rsp *http.Re
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
 		var dest IndexedData
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetcmssiteSearch202603searchResponse parses an HTTP response from a GetcmssiteSearch202603searchWithResponse call
-func ParseGetcmssiteSearch202603searchResponse(rsp *http.Response) (*GetcmssiteSearch202603searchResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetcmssiteSearch202603searchResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest PublicSearchResults
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -15379,4637 +20013,6 @@ func ParsePatchfiles202603filesFileIdUpdatePropertiesResponse(rsp *http.Response
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
 		var dest File
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePutfiles202603filesFileIdReplaceResponse parses an HTTP response from a Putfiles202603filesFileIdReplaceWithResponse call
-func ParsePutfiles202603filesFileIdReplaceResponse(rsp *http.Response) (*Putfiles202603filesFileIdReplaceResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Putfiles202603filesFileIdReplaceResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest File
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseDeletefiles202603filesFileIdgdprDeleteDeleteResponse parses an HTTP response from a Deletefiles202603filesFileIdgdprDeleteDeleteWithResponse call
-func ParseDeletefiles202603filesFileIdgdprDeleteDeleteResponse(rsp *http.Response) (*Deletefiles202603filesFileIdgdprDeleteDeleteResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Deletefiles202603filesFileIdgdprDeleteDeleteResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParseGetfiles202603filesFileIdsignedUrlGetSignedUrlResponse parses an HTTP response from a Getfiles202603filesFileIdsignedUrlGetSignedUrlWithResponse call
-func ParseGetfiles202603filesFileIdsignedUrlGetSignedUrlResponse(rsp *http.Response) (*Getfiles202603filesFileIdsignedUrlGetSignedUrlResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getfiles202603filesFileIdsignedUrlGetSignedUrlResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest SignedUrl
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostfiles202603foldersCreateResponse parses an HTTP response from a Postfiles202603foldersCreateWithResponse call
-func ParsePostfiles202603foldersCreateResponse(rsp *http.Response) (*Postfiles202603foldersCreateResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postfiles202603foldersCreateResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest Folder
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON201 = &dest
-
-	}
-
-	switch {
-	case rsp.StatusCode == 201:
-		var headers Postfiles202603foldersCreateResponse201Headers
-		if values := rsp.Header.Values("Location"); len(values) > 0 {
-			var value string
-			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
-				return nil, err
-			}
-			headers.Location = &value
-		}
-		response.Headers201 = &headers
-	}
-
-	return response, nil
-}
-
-// ParseGetfiles202603folderssearchDoSearchResponse parses an HTTP response from a Getfiles202603folderssearchDoSearchWithResponse call
-func ParseGetfiles202603folderssearchDoSearchResponse(rsp *http.Response) (*Getfiles202603folderssearchDoSearchResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getfiles202603folderssearchDoSearchResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CollectionResponseFolder
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostfiles202603foldersupdateasyncUpdatePropertiesRecursivelyResponse parses an HTTP response from a Postfiles202603foldersupdateasyncUpdatePropertiesRecursivelyWithResponse call
-func ParsePostfiles202603foldersupdateasyncUpdatePropertiesRecursivelyResponse(rsp *http.Response) (*Postfiles202603foldersupdateasyncUpdatePropertiesRecursivelyResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postfiles202603foldersupdateasyncUpdatePropertiesRecursivelyResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 202:
-		var dest FolderUpdateTaskLocator
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON202 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetfiles202603foldersupdateasynctasksTaskIdstatusCheckUpdateStatusResponse parses an HTTP response from a Getfiles202603foldersupdateasynctasksTaskIdstatusCheckUpdateStatusWithResponse call
-func ParseGetfiles202603foldersupdateasynctasksTaskIdstatusCheckUpdateStatusResponse(rsp *http.Response) (*Getfiles202603foldersupdateasynctasksTaskIdstatusCheckUpdateStatusResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getfiles202603foldersupdateasynctasksTaskIdstatusCheckUpdateStatusResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest FolderActionResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseDeletefiles202603foldersFolderIdArchiveResponse parses an HTTP response from a Deletefiles202603foldersFolderIdArchiveWithResponse call
-func ParseDeletefiles202603foldersFolderIdArchiveResponse(rsp *http.Response) (*Deletefiles202603foldersFolderIdArchiveResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Deletefiles202603foldersFolderIdArchiveResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParseGetfiles202603foldersFolderIdGetByIdResponse parses an HTTP response from a Getfiles202603foldersFolderIdGetByIdWithResponse call
-func ParseGetfiles202603foldersFolderIdGetByIdResponse(rsp *http.Response) (*Getfiles202603foldersFolderIdGetByIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getfiles202603foldersFolderIdGetByIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest Folder
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePatchfiles202603foldersFolderIdUpdatePropertiesResponse parses an HTTP response from a Patchfiles202603foldersFolderIdUpdatePropertiesWithResponse call
-func ParsePatchfiles202603foldersFolderIdUpdatePropertiesResponse(rsp *http.Response) (*Patchfiles202603foldersFolderIdUpdatePropertiesResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Patchfiles202603foldersFolderIdUpdatePropertiesResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest Folder
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseDeletefiles202603foldersFolderPathArchiveByPathResponse parses an HTTP response from a Deletefiles202603foldersFolderPathArchiveByPathWithResponse call
-func ParseDeletefiles202603foldersFolderPathArchiveByPathResponse(rsp *http.Response) (*Deletefiles202603foldersFolderPathArchiveByPathResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Deletefiles202603foldersFolderPathArchiveByPathResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParseGetfiles202603foldersFolderPathGetByPathResponse parses an HTTP response from a Getfiles202603foldersFolderPathGetByPathWithResponse call
-func ParseGetfiles202603foldersFolderPathGetByPathResponse(rsp *http.Response) (*Getfiles202603foldersFolderPathGetByPathResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getfiles202603foldersFolderPathGetByPathResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest Folder
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostintegratorstimeline202603eventsCreateResponse parses an HTTP response from a Postintegratorstimeline202603eventsCreateWithResponse call
-func ParsePostintegratorstimeline202603eventsCreateResponse(rsp *http.Response) (*Postintegratorstimeline202603eventsCreateResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postintegratorstimeline202603eventsCreateResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case rsp.StatusCode == 200:
-		break // No content-type
-
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest AppEventOccurrence
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON201 = &dest
-
-	case rsp.StatusCode == 400:
-		break // No content-type
-
-	case rsp.StatusCode == 409:
-		break // No content-type
-
-	}
-
-	switch {
-	case rsp.StatusCode == 201:
-		var headers Postintegratorstimeline202603eventsCreateResponse201Headers
-		if values := rsp.Header.Values("Location"); len(values) > 0 {
-			var value string
-			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
-				return nil, err
-			}
-			headers.Location = &value
-		}
-		response.Headers201 = &headers
-	}
-
-	return response, nil
-}
-
-// ParsePostintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatchResponse parses an HTTP response from a Postintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatchWithResponse call
-func ParsePostintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatchResponse(rsp *http.Response) (*Postintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatchResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postintegratorstimeline202603eventsbatchintegratorstimeline202603eventsbatchResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest BatchResponseAppEventOccurrence
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	case rsp.StatusCode == 400:
-		break // No content-type
-
-	case rsp.StatusCode == 409:
-		break // No content-type
-
-	}
-
-	return response, nil
-}
-
-// ParsePostintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojectsResponse parses an HTTP response from a Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojectsWithResponse call
-func ParsePostintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojectsResponse(rsp *http.Response) (*Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojectsResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojectsResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest AppEventResolutionResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	case rsp.StatusCode == 404:
-		break // No content-type
-
-	}
-
-	return response, nil
-}
-
-// ParseGetmarketingcampaigns202603marketingcampaignsv3Response parses an HTTP response from a Getmarketingcampaigns202603marketingcampaignsv3WithResponse call
-func ParseGetmarketingcampaigns202603marketingcampaignsv3Response(rsp *http.Response) (*Getmarketingcampaigns202603marketingcampaignsv3Response, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getmarketingcampaigns202603marketingcampaignsv3Response{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CollectionResponseWithTotalPublicCampaign
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostmarketingcampaigns202603marketingcampaignsv3Response parses an HTTP response from a Postmarketingcampaigns202603marketingcampaignsv3WithResponse call
-func ParsePostmarketingcampaigns202603marketingcampaignsv3Response(rsp *http.Response) (*Postmarketingcampaigns202603marketingcampaignsv3Response, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postmarketingcampaigns202603marketingcampaignsv3Response{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest PublicCampaign
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON201 = &dest
-
-	}
-
-	switch {
-	case rsp.StatusCode == 201:
-		var headers Postmarketingcampaigns202603marketingcampaignsv3Response201Headers
-		if values := rsp.Header.Values("Location"); len(values) > 0 {
-			var value string
-			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
-				return nil, err
-			}
-			headers.Location = &value
-		}
-		response.Headers201 = &headers
-	}
-
-	return response, nil
-}
-
-// ParsePostmarketingcampaigns202603batcharchiveResponse parses an HTTP response from a Postmarketingcampaigns202603batcharchiveWithResponse call
-func ParsePostmarketingcampaigns202603batcharchiveResponse(rsp *http.Response) (*Postmarketingcampaigns202603batcharchiveResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postmarketingcampaigns202603batcharchiveResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParsePostmarketingcampaigns202603batchcreateResponse parses an HTTP response from a Postmarketingcampaigns202603batchcreateWithResponse call
-func ParsePostmarketingcampaigns202603batchcreateResponse(rsp *http.Response) (*Postmarketingcampaigns202603batchcreateResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postmarketingcampaigns202603batchcreateResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest BatchResponsePublicCampaign
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON201 = &dest
-
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest BatchResponsePublicCampaignWithErrors
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON207 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostmarketingcampaigns202603batchreadResponse parses an HTTP response from a Postmarketingcampaigns202603batchreadWithResponse call
-func ParsePostmarketingcampaigns202603batchreadResponse(rsp *http.Response) (*Postmarketingcampaigns202603batchreadResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postmarketingcampaigns202603batchreadResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest BatchResponsePublicCampaignWithAssets
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest BatchResponsePublicCampaignWithAssetsWithErrors
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON207 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostmarketingcampaigns202603batchupdateResponse parses an HTTP response from a Postmarketingcampaigns202603batchupdateWithResponse call
-func ParsePostmarketingcampaigns202603batchupdateResponse(rsp *http.Response) (*Postmarketingcampaigns202603batchupdateResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postmarketingcampaigns202603batchupdateResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest BatchResponsePublicCampaign
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest BatchResponsePublicCampaignWithErrors
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON207 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseDeletemarketingcampaigns202603CampaignGuidResponse parses an HTTP response from a Deletemarketingcampaigns202603CampaignGuidWithResponse call
-func ParseDeletemarketingcampaigns202603CampaignGuidResponse(rsp *http.Response) (*Deletemarketingcampaigns202603CampaignGuidResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Deletemarketingcampaigns202603CampaignGuidResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParseGetmarketingcampaigns202603CampaignGuidResponse parses an HTTP response from a Getmarketingcampaigns202603CampaignGuidWithResponse call
-func ParseGetmarketingcampaigns202603CampaignGuidResponse(rsp *http.Response) (*Getmarketingcampaigns202603CampaignGuidResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getmarketingcampaigns202603CampaignGuidResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest PublicCampaignWithAssets
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePatchmarketingcampaigns202603CampaignGuidResponse parses an HTTP response from a Patchmarketingcampaigns202603CampaignGuidWithResponse call
-func ParsePatchmarketingcampaigns202603CampaignGuidResponse(rsp *http.Response) (*Patchmarketingcampaigns202603CampaignGuidResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Patchmarketingcampaigns202603CampaignGuidResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest PublicCampaign
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetmarketingcampaigns202603CampaignGuidassetsAssetTypeResponse parses an HTTP response from a Getmarketingcampaigns202603CampaignGuidassetsAssetTypeWithResponse call
-func ParseGetmarketingcampaigns202603CampaignGuidassetsAssetTypeResponse(rsp *http.Response) (*Getmarketingcampaigns202603CampaignGuidassetsAssetTypeResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getmarketingcampaigns202603CampaignGuidassetsAssetTypeResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CollectionResponsePublicCampaignAssetForwardPaging
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseDeletemarketingcampaigns202603CampaignGuidassetsAssetTypeAssetIdResponse parses an HTTP response from a Deletemarketingcampaigns202603CampaignGuidassetsAssetTypeAssetIdWithResponse call
-func ParseDeletemarketingcampaigns202603CampaignGuidassetsAssetTypeAssetIdResponse(rsp *http.Response) (*Deletemarketingcampaigns202603CampaignGuidassetsAssetTypeAssetIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Deletemarketingcampaigns202603CampaignGuidassetsAssetTypeAssetIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParsePutmarketingcampaigns202603CampaignGuidassetsAssetTypeAssetIdResponse parses an HTTP response from a Putmarketingcampaigns202603CampaignGuidassetsAssetTypeAssetIdWithResponse call
-func ParsePutmarketingcampaigns202603CampaignGuidassetsAssetTypeAssetIdResponse(rsp *http.Response) (*Putmarketingcampaigns202603CampaignGuidassetsAssetTypeAssetIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Putmarketingcampaigns202603CampaignGuidassetsAssetTypeAssetIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParsePostmarketingcampaigns202603CampaignGuidbudgetResponse parses an HTTP response from a Postmarketingcampaigns202603CampaignGuidbudgetWithResponse call
-func ParsePostmarketingcampaigns202603CampaignGuidbudgetResponse(rsp *http.Response) (*Postmarketingcampaigns202603CampaignGuidbudgetResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postmarketingcampaigns202603CampaignGuidbudgetResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest PublicBudgetItem
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON201 = &dest
-
-	}
-
-	switch {
-	case rsp.StatusCode == 201:
-		var headers Postmarketingcampaigns202603CampaignGuidbudgetResponse201Headers
-		if values := rsp.Header.Values("Location"); len(values) > 0 {
-			var value string
-			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
-				return nil, err
-			}
-			headers.Location = &value
-		}
-		response.Headers201 = &headers
-	}
-
-	return response, nil
-}
-
-// ParseGetmarketingcampaigns202603CampaignGuidbudgettotalsResponse parses an HTTP response from a Getmarketingcampaigns202603CampaignGuidbudgettotalsWithResponse call
-func ParseGetmarketingcampaigns202603CampaignGuidbudgettotalsResponse(rsp *http.Response) (*Getmarketingcampaigns202603CampaignGuidbudgettotalsResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getmarketingcampaigns202603CampaignGuidbudgettotalsResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest PublicBudgetTotals
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseDeletemarketingcampaigns202603CampaignGuidbudgetBudgetIdResponse parses an HTTP response from a Deletemarketingcampaigns202603CampaignGuidbudgetBudgetIdWithResponse call
-func ParseDeletemarketingcampaigns202603CampaignGuidbudgetBudgetIdResponse(rsp *http.Response) (*Deletemarketingcampaigns202603CampaignGuidbudgetBudgetIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Deletemarketingcampaigns202603CampaignGuidbudgetBudgetIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParseGetmarketingcampaigns202603CampaignGuidbudgetBudgetIdResponse parses an HTTP response from a Getmarketingcampaigns202603CampaignGuidbudgetBudgetIdWithResponse call
-func ParseGetmarketingcampaigns202603CampaignGuidbudgetBudgetIdResponse(rsp *http.Response) (*Getmarketingcampaigns202603CampaignGuidbudgetBudgetIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getmarketingcampaigns202603CampaignGuidbudgetBudgetIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest PublicBudgetItem
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePutmarketingcampaigns202603CampaignGuidbudgetBudgetIdResponse parses an HTTP response from a Putmarketingcampaigns202603CampaignGuidbudgetBudgetIdWithResponse call
-func ParsePutmarketingcampaigns202603CampaignGuidbudgetBudgetIdResponse(rsp *http.Response) (*Putmarketingcampaigns202603CampaignGuidbudgetBudgetIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Putmarketingcampaigns202603CampaignGuidbudgetBudgetIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest PublicBudgetItem
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetmarketingcampaigns202603CampaignGuidreportscontactsContactTypeResponse parses an HTTP response from a Getmarketingcampaigns202603CampaignGuidreportscontactsContactTypeWithResponse call
-func ParseGetmarketingcampaigns202603CampaignGuidreportscontactsContactTypeResponse(rsp *http.Response) (*Getmarketingcampaigns202603CampaignGuidreportscontactsContactTypeResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getmarketingcampaigns202603CampaignGuidreportscontactsContactTypeResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CollectionResponseContactReferenceForwardPaging
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetmarketingcampaigns202603CampaignGuidreportsmetricsResponse parses an HTTP response from a Getmarketingcampaigns202603CampaignGuidreportsmetricsWithResponse call
-func ParseGetmarketingcampaigns202603CampaignGuidreportsmetricsResponse(rsp *http.Response) (*Getmarketingcampaigns202603CampaignGuidreportsmetricsResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getmarketingcampaigns202603CampaignGuidreportsmetricsResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MetricsCounters
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetmarketingcampaigns202603CampaignGuidreportsrevenueResponse parses an HTTP response from a Getmarketingcampaigns202603CampaignGuidreportsrevenueWithResponse call
-func ParseGetmarketingcampaigns202603CampaignGuidreportsrevenueResponse(rsp *http.Response) (*Getmarketingcampaigns202603CampaignGuidreportsrevenueResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getmarketingcampaigns202603CampaignGuidreportsrevenueResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest RevenueAttributionAggregate
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostmarketingcampaigns202603CampaignGuidspendResponse parses an HTTP response from a Postmarketingcampaigns202603CampaignGuidspendWithResponse call
-func ParsePostmarketingcampaigns202603CampaignGuidspendResponse(rsp *http.Response) (*Postmarketingcampaigns202603CampaignGuidspendResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postmarketingcampaigns202603CampaignGuidspendResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest PublicSpendItem
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON201 = &dest
-
-	}
-
-	switch {
-	case rsp.StatusCode == 201:
-		var headers Postmarketingcampaigns202603CampaignGuidspendResponse201Headers
-		if values := rsp.Header.Values("Location"); len(values) > 0 {
-			var value string
-			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
-				return nil, err
-			}
-			headers.Location = &value
-		}
-		response.Headers201 = &headers
-	}
-
-	return response, nil
-}
-
-// ParseDeletemarketingcampaigns202603CampaignGuidspendSpendIdResponse parses an HTTP response from a Deletemarketingcampaigns202603CampaignGuidspendSpendIdWithResponse call
-func ParseDeletemarketingcampaigns202603CampaignGuidspendSpendIdResponse(rsp *http.Response) (*Deletemarketingcampaigns202603CampaignGuidspendSpendIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Deletemarketingcampaigns202603CampaignGuidspendSpendIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParseGetmarketingcampaigns202603CampaignGuidspendSpendIdResponse parses an HTTP response from a Getmarketingcampaigns202603CampaignGuidspendSpendIdWithResponse call
-func ParseGetmarketingcampaigns202603CampaignGuidspendSpendIdResponse(rsp *http.Response) (*Getmarketingcampaigns202603CampaignGuidspendSpendIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getmarketingcampaigns202603CampaignGuidspendSpendIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest PublicSpendItem
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePutmarketingcampaigns202603CampaignGuidspendSpendIdResponse parses an HTTP response from a Putmarketingcampaigns202603CampaignGuidspendSpendIdWithResponse call
-func ParsePutmarketingcampaigns202603CampaignGuidspendSpendIdResponse(rsp *http.Response) (*Putmarketingcampaigns202603CampaignGuidspendSpendIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Putmarketingcampaigns202603CampaignGuidspendSpendIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest PublicSpendItem
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostmarketingemailCampaigns202603singleSendmarketingv4emailsingleSendResponse parses an HTTP response from a PostmarketingemailCampaigns202603singleSendmarketingv4emailsingleSendWithResponse call
-func ParsePostmarketingemailCampaigns202603singleSendmarketingv4emailsingleSendResponse(rsp *http.Response) (*PostmarketingemailCampaigns202603singleSendmarketingv4emailsingleSendResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostmarketingemailCampaigns202603singleSendmarketingv4emailsingleSendResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest EmailSendStatusView
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetmarketingemails202603marketingemailsv3Response parses an HTTP response from a Getmarketingemails202603marketingemailsv3WithResponse call
-func ParseGetmarketingemails202603marketingemailsv3Response(rsp *http.Response) (*Getmarketingemails202603marketingemailsv3Response, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getmarketingemails202603marketingemailsv3Response{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CollectionResponseWithTotalPublicEmail
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostmarketingemails202603marketingemailsv3Response parses an HTTP response from a Postmarketingemails202603marketingemailsv3WithResponse call
-func ParsePostmarketingemails202603marketingemailsv3Response(rsp *http.Response) (*Postmarketingemails202603marketingemailsv3Response, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postmarketingemails202603marketingemailsv3Response{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest PublicEmail
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON201 = &dest
-
-	}
-
-	switch {
-	case rsp.StatusCode == 201:
-		var headers Postmarketingemails202603marketingemailsv3Response201Headers
-		if values := rsp.Header.Values("Location"); len(values) > 0 {
-			var value string
-			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
-				return nil, err
-			}
-			headers.Location = &value
-		}
-		response.Headers201 = &headers
-	}
-
-	return response, nil
-}
-
-// ParsePostmarketingemails202603abTestcreateVariationCreateAbTestVariationResponse parses an HTTP response from a Postmarketingemails202603abTestcreateVariationCreateAbTestVariationWithResponse call
-func ParsePostmarketingemails202603abTestcreateVariationCreateAbTestVariationResponse(rsp *http.Response) (*Postmarketingemails202603abTestcreateVariationCreateAbTestVariationResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postmarketingemails202603abTestcreateVariationCreateAbTestVariationResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest PublicEmail
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON201 = &dest
-
-	}
-
-	switch {
-	case rsp.StatusCode == 201:
-		var headers Postmarketingemails202603abTestcreateVariationCreateAbTestVariationResponse201Headers
-		if values := rsp.Header.Values("Location"); len(values) > 0 {
-			var value string
-			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
-				return nil, err
-			}
-			headers.Location = &value
-		}
-		response.Headers201 = &headers
-	}
-
-	return response, nil
-}
-
-// ParsePostmarketingemails202603cloneCloneResponse parses an HTTP response from a Postmarketingemails202603cloneCloneWithResponse call
-func ParsePostmarketingemails202603cloneCloneResponse(rsp *http.Response) (*Postmarketingemails202603cloneCloneResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postmarketingemails202603cloneCloneResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest PublicEmail
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetmarketingemails202603statisticshistogramGetHistogramResponse parses an HTTP response from a Getmarketingemails202603statisticshistogramGetHistogramWithResponse call
-func ParseGetmarketingemails202603statisticshistogramGetHistogramResponse(rsp *http.Response) (*Getmarketingemails202603statisticshistogramGetHistogramResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getmarketingemails202603statisticshistogramGetHistogramResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CollectionResponseWithTotalEmailStatisticInterval
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetmarketingemails202603statisticslistGetEmailsListResponse parses an HTTP response from a Getmarketingemails202603statisticslistGetEmailsListWithResponse call
-func ParseGetmarketingemails202603statisticslistGetEmailsListResponse(rsp *http.Response) (*Getmarketingemails202603statisticslistGetEmailsListResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getmarketingemails202603statisticslistGetEmailsListResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest AggregateEmailStatistics
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseDeletemarketingemails202603EmailIdArchiveResponse parses an HTTP response from a Deletemarketingemails202603EmailIdArchiveWithResponse call
-func ParseDeletemarketingemails202603EmailIdArchiveResponse(rsp *http.Response) (*Deletemarketingemails202603EmailIdArchiveResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Deletemarketingemails202603EmailIdArchiveResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParseGetmarketingemails202603EmailIdGetByIdResponse parses an HTTP response from a Getmarketingemails202603EmailIdGetByIdWithResponse call
-func ParseGetmarketingemails202603EmailIdGetByIdResponse(rsp *http.Response) (*Getmarketingemails202603EmailIdGetByIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getmarketingemails202603EmailIdGetByIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest PublicEmail
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePatchmarketingemails202603EmailIdUpdateResponse parses an HTTP response from a Patchmarketingemails202603EmailIdUpdateWithResponse call
-func ParsePatchmarketingemails202603EmailIdUpdateResponse(rsp *http.Response) (*Patchmarketingemails202603EmailIdUpdateResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Patchmarketingemails202603EmailIdUpdateResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest PublicEmail
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetmarketingemails202603EmailIdabTestgetVariationGetAbTestVariationResponse parses an HTTP response from a Getmarketingemails202603EmailIdabTestgetVariationGetAbTestVariationWithResponse call
-func ParseGetmarketingemails202603EmailIdabTestgetVariationGetAbTestVariationResponse(rsp *http.Response) (*Getmarketingemails202603EmailIdabTestgetVariationGetAbTestVariationResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getmarketingemails202603EmailIdabTestgetVariationGetAbTestVariationResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest PublicEmail
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetmarketingemails202603EmailIddraftGetDraftResponse parses an HTTP response from a Getmarketingemails202603EmailIddraftGetDraftWithResponse call
-func ParseGetmarketingemails202603EmailIddraftGetDraftResponse(rsp *http.Response) (*Getmarketingemails202603EmailIddraftGetDraftResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getmarketingemails202603EmailIddraftGetDraftResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest PublicEmail
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePatchmarketingemails202603EmailIddraftUpsertDraftResponse parses an HTTP response from a Patchmarketingemails202603EmailIddraftUpsertDraftWithResponse call
-func ParsePatchmarketingemails202603EmailIddraftUpsertDraftResponse(rsp *http.Response) (*Patchmarketingemails202603EmailIddraftUpsertDraftResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Patchmarketingemails202603EmailIddraftUpsertDraftResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest PublicEmail
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostmarketingemails202603EmailIddraftresetResetDraftResponse parses an HTTP response from a Postmarketingemails202603EmailIddraftresetResetDraftWithResponse call
-func ParsePostmarketingemails202603EmailIddraftresetResetDraftResponse(rsp *http.Response) (*Postmarketingemails202603EmailIddraftresetResetDraftResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postmarketingemails202603EmailIddraftresetResetDraftResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParsePostmarketingemails202603EmailIdpublishPublishOrSendResponse parses an HTTP response from a Postmarketingemails202603EmailIdpublishPublishOrSendWithResponse call
-func ParsePostmarketingemails202603EmailIdpublishPublishOrSendResponse(rsp *http.Response) (*Postmarketingemails202603EmailIdpublishPublishOrSendResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postmarketingemails202603EmailIdpublishPublishOrSendResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParseGetmarketingemails202603EmailIdrevisionsGetRevisionsResponse parses an HTTP response from a Getmarketingemails202603EmailIdrevisionsGetRevisionsWithResponse call
-func ParseGetmarketingemails202603EmailIdrevisionsGetRevisionsResponse(rsp *http.Response) (*Getmarketingemails202603EmailIdrevisionsGetRevisionsResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getmarketingemails202603EmailIdrevisionsGetRevisionsResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CollectionResponseWithTotalPublicEmailVersion
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetmarketingemails202603EmailIdrevisionsRevisionIdGetRevisionByIdResponse parses an HTTP response from a Getmarketingemails202603EmailIdrevisionsRevisionIdGetRevisionByIdWithResponse call
-func ParseGetmarketingemails202603EmailIdrevisionsRevisionIdGetRevisionByIdResponse(rsp *http.Response) (*Getmarketingemails202603EmailIdrevisionsRevisionIdGetRevisionByIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getmarketingemails202603EmailIdrevisionsRevisionIdGetRevisionByIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest PublicEmailVersion
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostmarketingemails202603EmailIdrevisionsRevisionIdrestoreRestoreRevisionResponse parses an HTTP response from a Postmarketingemails202603EmailIdrevisionsRevisionIdrestoreRestoreRevisionWithResponse call
-func ParsePostmarketingemails202603EmailIdrevisionsRevisionIdrestoreRestoreRevisionResponse(rsp *http.Response) (*Postmarketingemails202603EmailIdrevisionsRevisionIdrestoreRestoreRevisionResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postmarketingemails202603EmailIdrevisionsRevisionIdrestoreRestoreRevisionResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParsePostmarketingemails202603EmailIdrevisionsRevisionIdrestoreToDraftRestoreDraftRevisionResponse parses an HTTP response from a Postmarketingemails202603EmailIdrevisionsRevisionIdrestoreToDraftRestoreDraftRevisionWithResponse call
-func ParsePostmarketingemails202603EmailIdrevisionsRevisionIdrestoreToDraftRestoreDraftRevisionResponse(rsp *http.Response) (*Postmarketingemails202603EmailIdrevisionsRevisionIdrestoreToDraftRestoreDraftRevisionResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postmarketingemails202603EmailIdrevisionsRevisionIdrestoreToDraftRestoreDraftRevisionResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest PublicEmail
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostmarketingemails202603EmailIdunpublishUnpublishOrCancelResponse parses an HTTP response from a Postmarketingemails202603EmailIdunpublishUnpublishOrCancelWithResponse call
-func ParsePostmarketingemails202603EmailIdunpublishUnpublishOrCancelResponse(rsp *http.Response) (*Postmarketingemails202603EmailIdunpublishUnpublishOrCancelResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postmarketingemails202603EmailIdunpublishUnpublishOrCancelResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParseGetmarketingmarketingEvents202603marketingmarketingEventsv3Response parses an HTTP response from a GetmarketingmarketingEvents202603marketingmarketingEventsv3WithResponse call
-func ParseGetmarketingmarketingEvents202603marketingmarketingEventsv3Response(rsp *http.Response) (*GetmarketingmarketingEvents202603marketingmarketingEventsv3Response, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetmarketingmarketingEvents202603marketingmarketingEventsv3Response{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CollectionResponseMarketingEventPublicReadResponseV2ForwardPaging
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetmarketingmarketingEvents202603associationsExternalAccountIdExternalEventIdlistsGetAllByExternalAccountAndEventIdsResponse parses an HTTP response from a GetmarketingmarketingEvents202603associationsExternalAccountIdExternalEventIdlistsGetAllByExternalAccountAndEventIdsWithResponse call
-func ParseGetmarketingmarketingEvents202603associationsExternalAccountIdExternalEventIdlistsGetAllByExternalAccountAndEventIdsResponse(rsp *http.Response) (*GetmarketingmarketingEvents202603associationsExternalAccountIdExternalEventIdlistsGetAllByExternalAccountAndEventIdsResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetmarketingmarketingEvents202603associationsExternalAccountIdExternalEventIdlistsGetAllByExternalAccountAndEventIdsResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CollectionResponseWithTotalPublicList
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseDeletemarketingmarketingEvents202603associationsExternalAccountIdExternalEventIdlistsListIdDisassociateByExternalAccountAndEventIdsResponse parses an HTTP response from a DeletemarketingmarketingEvents202603associationsExternalAccountIdExternalEventIdlistsListIdDisassociateByExternalAccountAndEventIdsWithResponse call
-func ParseDeletemarketingmarketingEvents202603associationsExternalAccountIdExternalEventIdlistsListIdDisassociateByExternalAccountAndEventIdsResponse(rsp *http.Response) (*DeletemarketingmarketingEvents202603associationsExternalAccountIdExternalEventIdlistsListIdDisassociateByExternalAccountAndEventIdsResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &DeletemarketingmarketingEvents202603associationsExternalAccountIdExternalEventIdlistsListIdDisassociateByExternalAccountAndEventIdsResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParsePutmarketingmarketingEvents202603associationsExternalAccountIdExternalEventIdlistsListIdAssociateByExternalAccountAndEventIdsResponse parses an HTTP response from a PutmarketingmarketingEvents202603associationsExternalAccountIdExternalEventIdlistsListIdAssociateByExternalAccountAndEventIdsWithResponse call
-func ParsePutmarketingmarketingEvents202603associationsExternalAccountIdExternalEventIdlistsListIdAssociateByExternalAccountAndEventIdsResponse(rsp *http.Response) (*PutmarketingmarketingEvents202603associationsExternalAccountIdExternalEventIdlistsListIdAssociateByExternalAccountAndEventIdsResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PutmarketingmarketingEvents202603associationsExternalAccountIdExternalEventIdlistsListIdAssociateByExternalAccountAndEventIdsResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParseGetmarketingmarketingEvents202603associationsMarketingEventIdlistsGetAllByMarketingEventIdResponse parses an HTTP response from a GetmarketingmarketingEvents202603associationsMarketingEventIdlistsGetAllByMarketingEventIdWithResponse call
-func ParseGetmarketingmarketingEvents202603associationsMarketingEventIdlistsGetAllByMarketingEventIdResponse(rsp *http.Response) (*GetmarketingmarketingEvents202603associationsMarketingEventIdlistsGetAllByMarketingEventIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetmarketingmarketingEvents202603associationsMarketingEventIdlistsGetAllByMarketingEventIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CollectionResponseWithTotalPublicList
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseDeletemarketingmarketingEvents202603associationsMarketingEventIdlistsListIdDisassociateByMarketingEventIdResponse parses an HTTP response from a DeletemarketingmarketingEvents202603associationsMarketingEventIdlistsListIdDisassociateByMarketingEventIdWithResponse call
-func ParseDeletemarketingmarketingEvents202603associationsMarketingEventIdlistsListIdDisassociateByMarketingEventIdResponse(rsp *http.Response) (*DeletemarketingmarketingEvents202603associationsMarketingEventIdlistsListIdDisassociateByMarketingEventIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &DeletemarketingmarketingEvents202603associationsMarketingEventIdlistsListIdDisassociateByMarketingEventIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParsePutmarketingmarketingEvents202603associationsMarketingEventIdlistsListIdAssociateByMarketingEventIdResponse parses an HTTP response from a PutmarketingmarketingEvents202603associationsMarketingEventIdlistsListIdAssociateByMarketingEventIdWithResponse call
-func ParsePutmarketingmarketingEvents202603associationsMarketingEventIdlistsListIdAssociateByMarketingEventIdResponse(rsp *http.Response) (*PutmarketingmarketingEvents202603associationsMarketingEventIdlistsListIdAssociateByMarketingEventIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PutmarketingmarketingEvents202603associationsMarketingEventIdlistsListIdAssociateByMarketingEventIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParsePostmarketingmarketingEvents202603attendanceExternalEventIdSubscriberStatecreateRecordByContactIdsResponse parses an HTTP response from a PostmarketingmarketingEvents202603attendanceExternalEventIdSubscriberStatecreateRecordByContactIdsWithResponse call
-func ParsePostmarketingmarketingEvents202603attendanceExternalEventIdSubscriberStatecreateRecordByContactIdsResponse(rsp *http.Response) (*PostmarketingmarketingEvents202603attendanceExternalEventIdSubscriberStatecreateRecordByContactIdsResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostmarketingmarketingEvents202603attendanceExternalEventIdSubscriberStatecreateRecordByContactIdsResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest BatchResponseSubscriberVidResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostmarketingmarketingEvents202603attendanceExternalEventIdSubscriberStateemailCreateRecordByContactEmailsResponse parses an HTTP response from a PostmarketingmarketingEvents202603attendanceExternalEventIdSubscriberStateemailCreateRecordByContactEmailsWithResponse call
-func ParsePostmarketingmarketingEvents202603attendanceExternalEventIdSubscriberStateemailCreateRecordByContactEmailsResponse(rsp *http.Response) (*PostmarketingmarketingEvents202603attendanceExternalEventIdSubscriberStateemailCreateRecordByContactEmailsResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostmarketingmarketingEvents202603attendanceExternalEventIdSubscriberStateemailCreateRecordByContactEmailsResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest BatchResponseSubscriberEmailResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostmarketingmarketingEvents202603batcharchiveArchiveByObjectIdResponse parses an HTTP response from a PostmarketingmarketingEvents202603batcharchiveArchiveByObjectIdWithResponse call
-func ParsePostmarketingmarketingEvents202603batcharchiveArchiveByObjectIdResponse(rsp *http.Response) (*PostmarketingmarketingEvents202603batcharchiveArchiveByObjectIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostmarketingmarketingEvents202603batcharchiveArchiveByObjectIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParsePostmarketingmarketingEvents202603batchupdateUpdateByObjectIdResponse parses an HTTP response from a PostmarketingmarketingEvents202603batchupdateUpdateByObjectIdWithResponse call
-func ParsePostmarketingmarketingEvents202603batchupdateUpdateByObjectIdResponse(rsp *http.Response) (*PostmarketingmarketingEvents202603batchupdateUpdateByObjectIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostmarketingmarketingEvents202603batchupdateUpdateByObjectIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest BatchResponseMarketingEventPublicDefaultResponseV2
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest BatchResponseMarketingEventPublicDefaultResponseV2WithErrors
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON207 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostmarketingmarketingEvents202603eventsCreateResponse parses an HTTP response from a PostmarketingmarketingEvents202603eventsCreateWithResponse call
-func ParsePostmarketingmarketingEvents202603eventsCreateResponse(rsp *http.Response) (*PostmarketingmarketingEvents202603eventsCreateResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostmarketingmarketingEvents202603eventsCreateResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingEventDefaultResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostmarketingmarketingEvents202603eventsdeleteArchiveResponse parses an HTTP response from a PostmarketingmarketingEvents202603eventsdeleteArchiveWithResponse call
-func ParsePostmarketingmarketingEvents202603eventsdeleteArchiveResponse(rsp *http.Response) (*PostmarketingmarketingEvents202603eventsdeleteArchiveResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostmarketingmarketingEvents202603eventsdeleteArchiveResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParseGetmarketingmarketingEvents202603eventssearchDoSearchResponse parses an HTTP response from a GetmarketingmarketingEvents202603eventssearchDoSearchWithResponse call
-func ParseGetmarketingmarketingEvents202603eventssearchDoSearchResponse(rsp *http.Response) (*GetmarketingmarketingEvents202603eventssearchDoSearchResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetmarketingmarketingEvents202603eventssearchDoSearchResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CollectionResponseSearchPublicResponseWrapperNoPaging
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostmarketingmarketingEvents202603eventsupsertUpsertResponse parses an HTTP response from a PostmarketingmarketingEvents202603eventsupsertUpsertWithResponse call
-func ParsePostmarketingmarketingEvents202603eventsupsertUpsertResponse(rsp *http.Response) (*PostmarketingmarketingEvents202603eventsupsertUpsertResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostmarketingmarketingEvents202603eventsupsertUpsertResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest BatchResponseMarketingEventPublicDefaultResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseDeletemarketingmarketingEvents202603eventsExternalEventIdArchiveResponse parses an HTTP response from a DeletemarketingmarketingEvents202603eventsExternalEventIdArchiveWithResponse call
-func ParseDeletemarketingmarketingEvents202603eventsExternalEventIdArchiveResponse(rsp *http.Response) (*DeletemarketingmarketingEvents202603eventsExternalEventIdArchiveResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &DeletemarketingmarketingEvents202603eventsExternalEventIdArchiveResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParseGetmarketingmarketingEvents202603eventsExternalEventIdGetDetailsResponse parses an HTTP response from a GetmarketingmarketingEvents202603eventsExternalEventIdGetDetailsWithResponse call
-func ParseGetmarketingmarketingEvents202603eventsExternalEventIdGetDetailsResponse(rsp *http.Response) (*GetmarketingmarketingEvents202603eventsExternalEventIdGetDetailsResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetmarketingmarketingEvents202603eventsExternalEventIdGetDetailsResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingEventPublicReadResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePatchmarketingmarketingEvents202603eventsExternalEventIdUpdateResponse parses an HTTP response from a PatchmarketingmarketingEvents202603eventsExternalEventIdUpdateWithResponse call
-func ParsePatchmarketingmarketingEvents202603eventsExternalEventIdUpdateResponse(rsp *http.Response) (*PatchmarketingmarketingEvents202603eventsExternalEventIdUpdateResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PatchmarketingmarketingEvents202603eventsExternalEventIdUpdateResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingEventPublicDefaultResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePutmarketingmarketingEvents202603eventsExternalEventIdUpsertResponse parses an HTTP response from a PutmarketingmarketingEvents202603eventsExternalEventIdUpsertWithResponse call
-func ParsePutmarketingmarketingEvents202603eventsExternalEventIdUpsertResponse(rsp *http.Response) (*PutmarketingmarketingEvents202603eventsExternalEventIdUpsertResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PutmarketingmarketingEvents202603eventsExternalEventIdUpsertResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingEventPublicDefaultResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostmarketingmarketingEvents202603eventsExternalEventIdcancelCancelResponse parses an HTTP response from a PostmarketingmarketingEvents202603eventsExternalEventIdcancelCancelWithResponse call
-func ParsePostmarketingmarketingEvents202603eventsExternalEventIdcancelCancelResponse(rsp *http.Response) (*PostmarketingmarketingEvents202603eventsExternalEventIdcancelCancelResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostmarketingmarketingEvents202603eventsExternalEventIdcancelCancelResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingEventDefaultResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostmarketingmarketingEvents202603eventsExternalEventIdcompleteCompleteResponse parses an HTTP response from a PostmarketingmarketingEvents202603eventsExternalEventIdcompleteCompleteWithResponse call
-func ParsePostmarketingmarketingEvents202603eventsExternalEventIdcompleteCompleteResponse(rsp *http.Response) (*PostmarketingmarketingEvents202603eventsExternalEventIdcompleteCompleteResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostmarketingmarketingEvents202603eventsExternalEventIdcompleteCompleteResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingEventDefaultResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostmarketingmarketingEvents202603eventsExternalEventIdSubscriberStateemailUpsertUpsertByContactEmailResponse parses an HTTP response from a PostmarketingmarketingEvents202603eventsExternalEventIdSubscriberStateemailUpsertUpsertByContactEmailWithResponse call
-func ParsePostmarketingmarketingEvents202603eventsExternalEventIdSubscriberStateemailUpsertUpsertByContactEmailResponse(rsp *http.Response) (*PostmarketingmarketingEvents202603eventsExternalEventIdSubscriberStateemailUpsertUpsertByContactEmailResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostmarketingmarketingEvents202603eventsExternalEventIdSubscriberStateemailUpsertUpsertByContactEmailResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParsePostmarketingmarketingEvents202603eventsExternalEventIdSubscriberStateupsertUpsertByContactIdResponse parses an HTTP response from a PostmarketingmarketingEvents202603eventsExternalEventIdSubscriberStateupsertUpsertByContactIdWithResponse call
-func ParsePostmarketingmarketingEvents202603eventsExternalEventIdSubscriberStateupsertUpsertByContactIdResponse(rsp *http.Response) (*PostmarketingmarketingEvents202603eventsExternalEventIdSubscriberStateupsertUpsertByContactIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostmarketingmarketingEvents202603eventsExternalEventIdSubscriberStateupsertUpsertByContactIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParseGetmarketingmarketingEvents202603participationscontactsContactIdentifierbreakdownGetParticipationsBreakdownByContactIdResponse parses an HTTP response from a GetmarketingmarketingEvents202603participationscontactsContactIdentifierbreakdownGetParticipationsBreakdownByContactIdWithResponse call
-func ParseGetmarketingmarketingEvents202603participationscontactsContactIdentifierbreakdownGetParticipationsBreakdownByContactIdResponse(rsp *http.Response) (*GetmarketingmarketingEvents202603participationscontactsContactIdentifierbreakdownGetParticipationsBreakdownByContactIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetmarketingmarketingEvents202603participationscontactsContactIdentifierbreakdownGetParticipationsBreakdownByContactIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CollectionResponseWithTotalParticipationBreakdown
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetmarketingmarketingEvents202603participationsExternalAccountIdExternalEventIdGetParticipationsCountersByEventExternalIdResponse parses an HTTP response from a GetmarketingmarketingEvents202603participationsExternalAccountIdExternalEventIdGetParticipationsCountersByEventExternalIdWithResponse call
-func ParseGetmarketingmarketingEvents202603participationsExternalAccountIdExternalEventIdGetParticipationsCountersByEventExternalIdResponse(rsp *http.Response) (*GetmarketingmarketingEvents202603participationsExternalAccountIdExternalEventIdGetParticipationsCountersByEventExternalIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetmarketingmarketingEvents202603participationsExternalAccountIdExternalEventIdGetParticipationsCountersByEventExternalIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest AttendanceCounters
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetmarketingmarketingEvents202603participationsExternalAccountIdExternalEventIdbreakdownGetParticipationsBreakdownByExternalEventIdResponse parses an HTTP response from a GetmarketingmarketingEvents202603participationsExternalAccountIdExternalEventIdbreakdownGetParticipationsBreakdownByExternalEventIdWithResponse call
-func ParseGetmarketingmarketingEvents202603participationsExternalAccountIdExternalEventIdbreakdownGetParticipationsBreakdownByExternalEventIdResponse(rsp *http.Response) (*GetmarketingmarketingEvents202603participationsExternalAccountIdExternalEventIdbreakdownGetParticipationsBreakdownByExternalEventIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetmarketingmarketingEvents202603participationsExternalAccountIdExternalEventIdbreakdownGetParticipationsBreakdownByExternalEventIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CollectionResponseWithTotalParticipationBreakdown
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetmarketingmarketingEvents202603participationsMarketingEventIdGetParticipationsCountersByMarketingEventIdResponse parses an HTTP response from a GetmarketingmarketingEvents202603participationsMarketingEventIdGetParticipationsCountersByMarketingEventIdWithResponse call
-func ParseGetmarketingmarketingEvents202603participationsMarketingEventIdGetParticipationsCountersByMarketingEventIdResponse(rsp *http.Response) (*GetmarketingmarketingEvents202603participationsMarketingEventIdGetParticipationsCountersByMarketingEventIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetmarketingmarketingEvents202603participationsMarketingEventIdGetParticipationsCountersByMarketingEventIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest AttendanceCounters
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetmarketingmarketingEvents202603participationsMarketingEventIdbreakdownGetParticipationsBreakdownByMarketingEventIdResponse parses an HTTP response from a GetmarketingmarketingEvents202603participationsMarketingEventIdbreakdownGetParticipationsBreakdownByMarketingEventIdWithResponse call
-func ParseGetmarketingmarketingEvents202603participationsMarketingEventIdbreakdownGetParticipationsBreakdownByMarketingEventIdResponse(rsp *http.Response) (*GetmarketingmarketingEvents202603participationsMarketingEventIdbreakdownGetParticipationsBreakdownByMarketingEventIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetmarketingmarketingEvents202603participationsMarketingEventIdbreakdownGetParticipationsBreakdownByMarketingEventIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CollectionResponseWithTotalParticipationBreakdown
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetmarketingmarketingEvents202603AppIdsettingsGetAllResponse parses an HTTP response from a GetmarketingmarketingEvents202603AppIdsettingsGetAllWithResponse call
-func ParseGetmarketingmarketingEvents202603AppIdsettingsGetAllResponse(rsp *http.Response) (*GetmarketingmarketingEvents202603AppIdsettingsGetAllResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetmarketingmarketingEvents202603AppIdsettingsGetAllResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest EventDetailSettings
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostmarketingmarketingEvents202603AppIdsettingsUpdateResponse parses an HTTP response from a PostmarketingmarketingEvents202603AppIdsettingsUpdateWithResponse call
-func ParsePostmarketingmarketingEvents202603AppIdsettingsUpdateResponse(rsp *http.Response) (*PostmarketingmarketingEvents202603AppIdsettingsUpdateResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostmarketingmarketingEvents202603AppIdsettingsUpdateResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest EventDetailSettings
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetmarketingmarketingEvents202603ExternalEventIdidentifiersSearchPortalEventsResponse parses an HTTP response from a GetmarketingmarketingEvents202603ExternalEventIdidentifiersSearchPortalEventsWithResponse call
-func ParseGetmarketingmarketingEvents202603ExternalEventIdidentifiersSearchPortalEventsResponse(rsp *http.Response) (*GetmarketingmarketingEvents202603ExternalEventIdidentifiersSearchPortalEventsResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetmarketingmarketingEvents202603ExternalEventIdidentifiersSearchPortalEventsResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CollectionResponseWithTotalMarketingEventIdentifiersResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseDeletemarketingmarketingEvents202603ObjectIdArchiveByObjectIdResponse parses an HTTP response from a DeletemarketingmarketingEvents202603ObjectIdArchiveByObjectIdWithResponse call
-func ParseDeletemarketingmarketingEvents202603ObjectIdArchiveByObjectIdResponse(rsp *http.Response) (*DeletemarketingmarketingEvents202603ObjectIdArchiveByObjectIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &DeletemarketingmarketingEvents202603ObjectIdArchiveByObjectIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParseGetmarketingmarketingEvents202603ObjectIdGetByObjectIdResponse parses an HTTP response from a GetmarketingmarketingEvents202603ObjectIdGetByObjectIdWithResponse call
-func ParseGetmarketingmarketingEvents202603ObjectIdGetByObjectIdResponse(rsp *http.Response) (*GetmarketingmarketingEvents202603ObjectIdGetByObjectIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetmarketingmarketingEvents202603ObjectIdGetByObjectIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingEventPublicReadResponseV2
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePatchmarketingmarketingEvents202603ObjectIdUpdateByObjectIdResponse parses an HTTP response from a PatchmarketingmarketingEvents202603ObjectIdUpdateByObjectIdWithResponse call
-func ParsePatchmarketingmarketingEvents202603ObjectIdUpdateByObjectIdResponse(rsp *http.Response) (*PatchmarketingmarketingEvents202603ObjectIdUpdateByObjectIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PatchmarketingmarketingEvents202603ObjectIdUpdateByObjectIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MarketingEventPublicDefaultResponseV2
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostmarketingmarketingEvents202603ObjectIdattendanceSubscriberStatecreateRecordByContactIdResponse parses an HTTP response from a PostmarketingmarketingEvents202603ObjectIdattendanceSubscriberStatecreateRecordByContactIdWithResponse call
-func ParsePostmarketingmarketingEvents202603ObjectIdattendanceSubscriberStatecreateRecordByContactIdResponse(rsp *http.Response) (*PostmarketingmarketingEvents202603ObjectIdattendanceSubscriberStatecreateRecordByContactIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostmarketingmarketingEvents202603ObjectIdattendanceSubscriberStatecreateRecordByContactIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest BatchResponseSubscriberVidResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostmarketingmarketingEvents202603ObjectIdattendanceSubscriberStateemailCreateRecordByEmailResponse parses an HTTP response from a PostmarketingmarketingEvents202603ObjectIdattendanceSubscriberStateemailCreateRecordByEmailWithResponse call
-func ParsePostmarketingmarketingEvents202603ObjectIdattendanceSubscriberStateemailCreateRecordByEmailResponse(rsp *http.Response) (*PostmarketingmarketingEvents202603ObjectIdattendanceSubscriberStateemailCreateRecordByEmailResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostmarketingmarketingEvents202603ObjectIdattendanceSubscriberStateemailCreateRecordByEmailResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest BatchResponseSubscriberEmailResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostmarketingtransactional202603singleEmailsendSendEmailResponse parses an HTTP response from a Postmarketingtransactional202603singleEmailsendSendEmailWithResponse call
-func ParsePostmarketingtransactional202603singleEmailsendSendEmailResponse(rsp *http.Response) (*Postmarketingtransactional202603singleEmailsendSendEmailResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postmarketingtransactional202603singleEmailsendSendEmailResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest EmailSendStatusView
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetmarketingtransactional202603smtpTokensGetTokensPageResponse parses an HTTP response from a Getmarketingtransactional202603smtpTokensGetTokensPageWithResponse call
-func ParseGetmarketingtransactional202603smtpTokensGetTokensPageResponse(rsp *http.Response) (*Getmarketingtransactional202603smtpTokensGetTokensPageResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getmarketingtransactional202603smtpTokensGetTokensPageResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CollectionResponseSmtpApiTokenViewForwardPaging
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostmarketingtransactional202603smtpTokensCreateTokenResponse parses an HTTP response from a Postmarketingtransactional202603smtpTokensCreateTokenWithResponse call
-func ParsePostmarketingtransactional202603smtpTokensCreateTokenResponse(rsp *http.Response) (*Postmarketingtransactional202603smtpTokensCreateTokenResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postmarketingtransactional202603smtpTokensCreateTokenResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest SmtpApiTokenView
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON201 = &dest
-
-	}
-
-	switch {
-	case rsp.StatusCode == 201:
-		var headers Postmarketingtransactional202603smtpTokensCreateTokenResponse201Headers
-		if values := rsp.Header.Values("Location"); len(values) > 0 {
-			var value string
-			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
-				return nil, err
-			}
-			headers.Location = &value
-		}
-		response.Headers201 = &headers
-	}
-
-	return response, nil
-}
-
-// ParseDeletemarketingtransactional202603smtpTokensTokenIdArchiveTokenResponse parses an HTTP response from a Deletemarketingtransactional202603smtpTokensTokenIdArchiveTokenWithResponse call
-func ParseDeletemarketingtransactional202603smtpTokensTokenIdArchiveTokenResponse(rsp *http.Response) (*Deletemarketingtransactional202603smtpTokensTokenIdArchiveTokenResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Deletemarketingtransactional202603smtpTokensTokenIdArchiveTokenResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParseGetmarketingtransactional202603smtpTokensTokenIdGetTokenByIdResponse parses an HTTP response from a Getmarketingtransactional202603smtpTokensTokenIdGetTokenByIdWithResponse call
-func ParseGetmarketingtransactional202603smtpTokensTokenIdGetTokenByIdResponse(rsp *http.Response) (*Getmarketingtransactional202603smtpTokensTokenIdGetTokenByIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getmarketingtransactional202603smtpTokensTokenIdGetTokenByIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest SmtpApiTokenView
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostmarketingtransactional202603smtpTokensTokenIdpasswordResetResetPasswordResponse parses an HTTP response from a Postmarketingtransactional202603smtpTokensTokenIdpasswordResetResetPasswordWithResponse call
-func ParsePostmarketingtransactional202603smtpTokensTokenIdpasswordResetResetPasswordResponse(rsp *http.Response) (*Postmarketingtransactional202603smtpTokensTokenIdpasswordResetResetPasswordResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postmarketingtransactional202603smtpTokensTokenIdpasswordResetResetPasswordResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest SmtpApiTokenView
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostmediaBridge202603eventsattentionSpanResponse parses an HTTP response from a PostmediaBridge202603eventsattentionSpanWithResponse call
-func ParsePostmediaBridge202603eventsattentionSpanResponse(rsp *http.Response) (*PostmediaBridge202603eventsattentionSpanResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostmediaBridge202603eventsattentionSpanResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest AttentionSpanEvent
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostmediaBridge202603eventsmediaPlayedResponse parses an HTTP response from a PostmediaBridge202603eventsmediaPlayedWithResponse call
-func ParsePostmediaBridge202603eventsmediaPlayedResponse(rsp *http.Response) (*PostmediaBridge202603eventsmediaPlayedResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostmediaBridge202603eventsmediaPlayedResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MediaPlayedEvent
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostmediaBridge202603eventsmediaPlayedPercentResponse parses an HTTP response from a PostmediaBridge202603eventsmediaPlayedPercentWithResponse call
-func ParsePostmediaBridge202603eventsmediaPlayedPercentResponse(rsp *http.Response) (*PostmediaBridge202603eventsmediaPlayedPercentResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostmediaBridge202603eventsmediaPlayedPercentResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MediaPlayedPercentageEvent
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetmediaBridge202603AppIdpropertiesObjectTypeResponse parses an HTTP response from a GetmediaBridge202603AppIdpropertiesObjectTypeWithResponse call
-func ParseGetmediaBridge202603AppIdpropertiesObjectTypeResponse(rsp *http.Response) (*GetmediaBridge202603AppIdpropertiesObjectTypeResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetmediaBridge202603AppIdpropertiesObjectTypeResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CollectionResponsePropertyNoPaging
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostmediaBridge202603AppIdpropertiesObjectTypeResponse parses an HTTP response from a PostmediaBridge202603AppIdpropertiesObjectTypeWithResponse call
-func ParsePostmediaBridge202603AppIdpropertiesObjectTypeResponse(rsp *http.Response) (*PostmediaBridge202603AppIdpropertiesObjectTypeResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostmediaBridge202603AppIdpropertiesObjectTypeResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest CMSMediaBridgeProperty
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON201 = &dest
-
-	}
-
-	switch {
-	case rsp.StatusCode == 201:
-		var headers PostmediaBridge202603AppIdpropertiesObjectTypeResponse201Headers
-		if values := rsp.Header.Values("Location"); len(values) > 0 {
-			var value string
-			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
-				return nil, err
-			}
-			headers.Location = &value
-		}
-		response.Headers201 = &headers
-	}
-
-	return response, nil
-}
-
-// ParsePostmediaBridge202603AppIdpropertiesObjectTypebatcharchiveResponse parses an HTTP response from a PostmediaBridge202603AppIdpropertiesObjectTypebatcharchiveWithResponse call
-func ParsePostmediaBridge202603AppIdpropertiesObjectTypebatcharchiveResponse(rsp *http.Response) (*PostmediaBridge202603AppIdpropertiesObjectTypebatcharchiveResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostmediaBridge202603AppIdpropertiesObjectTypebatcharchiveResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParsePostmediaBridge202603AppIdpropertiesObjectTypebatchcreateResponse parses an HTTP response from a PostmediaBridge202603AppIdpropertiesObjectTypebatchcreateWithResponse call
-func ParsePostmediaBridge202603AppIdpropertiesObjectTypebatchcreateResponse(rsp *http.Response) (*PostmediaBridge202603AppIdpropertiesObjectTypebatchcreateResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostmediaBridge202603AppIdpropertiesObjectTypebatchcreateResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest BatchResponseProperty
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON201 = &dest
-
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest BatchResponsePropertyWithErrors
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON207 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostmediaBridge202603AppIdpropertiesObjectTypebatchreadResponse parses an HTTP response from a PostmediaBridge202603AppIdpropertiesObjectTypebatchreadWithResponse call
-func ParsePostmediaBridge202603AppIdpropertiesObjectTypebatchreadResponse(rsp *http.Response) (*PostmediaBridge202603AppIdpropertiesObjectTypebatchreadResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostmediaBridge202603AppIdpropertiesObjectTypebatchreadResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest BatchResponseProperty
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest BatchResponsePropertyWithErrors
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON207 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetmediaBridge202603AppIdpropertiesObjectTypegroupsResponse parses an HTTP response from a GetmediaBridge202603AppIdpropertiesObjectTypegroupsWithResponse call
-func ParseGetmediaBridge202603AppIdpropertiesObjectTypegroupsResponse(rsp *http.Response) (*GetmediaBridge202603AppIdpropertiesObjectTypegroupsResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetmediaBridge202603AppIdpropertiesObjectTypegroupsResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CollectionResponsePropertyGroupNoPaging
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostmediaBridge202603AppIdpropertiesObjectTypegroupsResponse parses an HTTP response from a PostmediaBridge202603AppIdpropertiesObjectTypegroupsWithResponse call
-func ParsePostmediaBridge202603AppIdpropertiesObjectTypegroupsResponse(rsp *http.Response) (*PostmediaBridge202603AppIdpropertiesObjectTypegroupsResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostmediaBridge202603AppIdpropertiesObjectTypegroupsResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest PropertyGroup
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON201 = &dest
-
-	}
-
-	switch {
-	case rsp.StatusCode == 201:
-		var headers PostmediaBridge202603AppIdpropertiesObjectTypegroupsResponse201Headers
-		if values := rsp.Header.Values("Location"); len(values) > 0 {
-			var value string
-			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
-				return nil, err
-			}
-			headers.Location = &value
-		}
-		response.Headers201 = &headers
-	}
-
-	return response, nil
-}
-
-// ParseDeletemediaBridge202603AppIdpropertiesObjectTypegroupsGroupNameResponse parses an HTTP response from a DeletemediaBridge202603AppIdpropertiesObjectTypegroupsGroupNameWithResponse call
-func ParseDeletemediaBridge202603AppIdpropertiesObjectTypegroupsGroupNameResponse(rsp *http.Response) (*DeletemediaBridge202603AppIdpropertiesObjectTypegroupsGroupNameResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &DeletemediaBridge202603AppIdpropertiesObjectTypegroupsGroupNameResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParseGetmediaBridge202603AppIdpropertiesObjectTypegroupsGroupNameResponse parses an HTTP response from a GetmediaBridge202603AppIdpropertiesObjectTypegroupsGroupNameWithResponse call
-func ParseGetmediaBridge202603AppIdpropertiesObjectTypegroupsGroupNameResponse(rsp *http.Response) (*GetmediaBridge202603AppIdpropertiesObjectTypegroupsGroupNameResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetmediaBridge202603AppIdpropertiesObjectTypegroupsGroupNameResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest PropertyGroup
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePatchmediaBridge202603AppIdpropertiesObjectTypegroupsGroupNameResponse parses an HTTP response from a PatchmediaBridge202603AppIdpropertiesObjectTypegroupsGroupNameWithResponse call
-func ParsePatchmediaBridge202603AppIdpropertiesObjectTypegroupsGroupNameResponse(rsp *http.Response) (*PatchmediaBridge202603AppIdpropertiesObjectTypegroupsGroupNameResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PatchmediaBridge202603AppIdpropertiesObjectTypegroupsGroupNameResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest PropertyGroup
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseDeletemediaBridge202603AppIdpropertiesObjectTypePropertyNameResponse parses an HTTP response from a DeletemediaBridge202603AppIdpropertiesObjectTypePropertyNameWithResponse call
-func ParseDeletemediaBridge202603AppIdpropertiesObjectTypePropertyNameResponse(rsp *http.Response) (*DeletemediaBridge202603AppIdpropertiesObjectTypePropertyNameResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &DeletemediaBridge202603AppIdpropertiesObjectTypePropertyNameResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParseGetmediaBridge202603AppIdpropertiesObjectTypePropertyNameResponse parses an HTTP response from a GetmediaBridge202603AppIdpropertiesObjectTypePropertyNameWithResponse call
-func ParseGetmediaBridge202603AppIdpropertiesObjectTypePropertyNameResponse(rsp *http.Response) (*GetmediaBridge202603AppIdpropertiesObjectTypePropertyNameResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetmediaBridge202603AppIdpropertiesObjectTypePropertyNameResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CMSMediaBridgeProperty
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePatchmediaBridge202603AppIdpropertiesObjectTypePropertyNameResponse parses an HTTP response from a PatchmediaBridge202603AppIdpropertiesObjectTypePropertyNameWithResponse call
-func ParsePatchmediaBridge202603AppIdpropertiesObjectTypePropertyNameResponse(rsp *http.Response) (*PatchmediaBridge202603AppIdpropertiesObjectTypePropertyNameResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PatchmediaBridge202603AppIdpropertiesObjectTypePropertyNameResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CMSMediaBridgeProperty
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetmediaBridge202603AppIdschemasResponse parses an HTTP response from a GetmediaBridge202603AppIdschemasWithResponse call
-func ParseGetmediaBridge202603AppIdschemasResponse(rsp *http.Response) (*GetmediaBridge202603AppIdschemasResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetmediaBridge202603AppIdschemasResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CollectionResponseObjectSchemaNoPaging
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetmediaBridge202603AppIdschemasObjectTypeResponse parses an HTTP response from a GetmediaBridge202603AppIdschemasObjectTypeWithResponse call
-func ParseGetmediaBridge202603AppIdschemasObjectTypeResponse(rsp *http.Response) (*GetmediaBridge202603AppIdschemasObjectTypeResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetmediaBridge202603AppIdschemasObjectTypeResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest ObjectSchema
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePatchmediaBridge202603AppIdschemasObjectTypeResponse parses an HTTP response from a PatchmediaBridge202603AppIdschemasObjectTypeWithResponse call
-func ParsePatchmediaBridge202603AppIdschemasObjectTypeResponse(rsp *http.Response) (*PatchmediaBridge202603AppIdschemasObjectTypeResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PatchmediaBridge202603AppIdschemasObjectTypeResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest ObjectTypeDefinition
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostmediaBridge202603AppIdschemasObjectTypeassociationsResponse parses an HTTP response from a PostmediaBridge202603AppIdschemasObjectTypeassociationsWithResponse call
-func ParsePostmediaBridge202603AppIdschemasObjectTypeassociationsResponse(rsp *http.Response) (*PostmediaBridge202603AppIdschemasObjectTypeassociationsResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostmediaBridge202603AppIdschemasObjectTypeassociationsResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest AssociationDefinition
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON201 = &dest
-
-	}
-
-	switch {
-	case rsp.StatusCode == 201:
-		var headers PostmediaBridge202603AppIdschemasObjectTypeassociationsResponse201Headers
-		if values := rsp.Header.Values("Location"); len(values) > 0 {
-			var value string
-			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
-				return nil, err
-			}
-			headers.Location = &value
-		}
-		response.Headers201 = &headers
-	}
-
-	return response, nil
-}
-
-// ParseDeletemediaBridge202603AppIdschemasObjectTypeassociationsAssociationIdResponse parses an HTTP response from a DeletemediaBridge202603AppIdschemasObjectTypeassociationsAssociationIdWithResponse call
-func ParseDeletemediaBridge202603AppIdschemasObjectTypeassociationsAssociationIdResponse(rsp *http.Response) (*DeletemediaBridge202603AppIdschemasObjectTypeassociationsAssociationIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &DeletemediaBridge202603AppIdschemasObjectTypeassociationsAssociationIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParsePutmediaBridge202603AppIdsettingsResponse parses an HTTP response from a PutmediaBridge202603AppIdsettingsWithResponse call
-func ParsePutmediaBridge202603AppIdsettingsResponse(rsp *http.Response) (*PutmediaBridge202603AppIdsettingsResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PutmediaBridge202603AppIdsettingsResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MediaBridgeProviderRegistrationResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetmediaBridge202603AppIdsettingseventVisibilityResponse parses an HTTP response from a GetmediaBridge202603AppIdsettingseventVisibilityWithResponse call
-func ParseGetmediaBridge202603AppIdsettingseventVisibilityResponse(rsp *http.Response) (*GetmediaBridge202603AppIdsettingseventVisibilityResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetmediaBridge202603AppIdsettingseventVisibilityResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest EventVisibilityResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePatchmediaBridge202603AppIdsettingseventVisibilityResponse parses an HTTP response from a PatchmediaBridge202603AppIdsettingseventVisibilityWithResponse call
-func ParsePatchmediaBridge202603AppIdsettingseventVisibilityResponse(rsp *http.Response) (*PatchmediaBridge202603AppIdsettingseventVisibilityResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PatchmediaBridge202603AppIdsettingseventVisibilityResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest EventVisibilityChange
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostmediaBridge202603AppIdsettingsobjectDefinitionsResponse parses an HTTP response from a PostmediaBridge202603AppIdsettingsobjectDefinitionsWithResponse call
-func ParsePostmediaBridge202603AppIdsettingsobjectDefinitionsResponse(rsp *http.Response) (*PostmediaBridge202603AppIdsettingsobjectDefinitionsResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostmediaBridge202603AppIdsettingsobjectDefinitionsResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest BulkIntegratorObjectCreationResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetmediaBridge202603AppIdsettingsobjectDefinitionsMediaTypeResponse parses an HTTP response from a GetmediaBridge202603AppIdsettingsobjectDefinitionsMediaTypeWithResponse call
-func ParseGetmediaBridge202603AppIdsettingsobjectDefinitionsMediaTypeResponse(rsp *http.Response) (*GetmediaBridge202603AppIdsettingsobjectDefinitionsMediaTypeResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetmediaBridge202603AppIdsettingsobjectDefinitionsMediaTypeResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest ObjectDefinitionResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseDeletemediaBridge202603AppIdsettingsoembedDomainsResponse parses an HTTP response from a DeletemediaBridge202603AppIdsettingsoembedDomainsWithResponse call
-func ParseDeletemediaBridge202603AppIdsettingsoembedDomainsResponse(rsp *http.Response) (*DeletemediaBridge202603AppIdsettingsoembedDomainsResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &DeletemediaBridge202603AppIdsettingsoembedDomainsResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParseGetmediaBridge202603AppIdsettingsoembedDomainsResponse parses an HTTP response from a GetmediaBridge202603AppIdsettingsoembedDomainsWithResponse call
-func ParseGetmediaBridge202603AppIdsettingsoembedDomainsResponse(rsp *http.Response) (*GetmediaBridge202603AppIdsettingsoembedDomainsResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetmediaBridge202603AppIdsettingsoembedDomainsResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest OEmbedDomainsCollectionResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostmediaBridge202603AppIdsettingsoembedDomainsResponse parses an HTTP response from a PostmediaBridge202603AppIdsettingsoembedDomainsWithResponse call
-func ParsePostmediaBridge202603AppIdsettingsoembedDomainsResponse(rsp *http.Response) (*PostmediaBridge202603AppIdsettingsoembedDomainsResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostmediaBridge202603AppIdsettingsoembedDomainsResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest IntegratorOEmbedDomainModel
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainIdResponse parses an HTTP response from a GetmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainIdWithResponse call
-func ParseGetmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainIdResponse(rsp *http.Response) (*GetmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest IntegratorOEmbedDomainModel
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePatchmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainIdResponse parses an HTTP response from a PatchmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainIdWithResponse call
-func ParsePatchmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainIdResponse(rsp *http.Response) (*PatchmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PatchmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest IntegratorOEmbedDomainModel
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostmediaBridge202603AppIdsettingsregisterResponse parses an HTTP response from a PostmediaBridge202603AppIdsettingsregisterWithResponse call
-func ParsePostmediaBridge202603AppIdsettingsregisterResponse(rsp *http.Response) (*PostmediaBridge202603AppIdsettingsregisterResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostmediaBridge202603AppIdsettingsregisterResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MediaBridgeProviderRegistrationResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostmediaBridge202603AppIdsettingsvideoAssociationDefinitionmediaBridgev1AppIdsettingsvideoAssociationDefinitionResponse parses an HTTP response from a PostmediaBridge202603AppIdsettingsvideoAssociationDefinitionmediaBridgev1AppIdsettingsvideoAssociationDefinitionWithResponse call
-func ParsePostmediaBridge202603AppIdsettingsvideoAssociationDefinitionmediaBridgev1AppIdsettingsvideoAssociationDefinitionResponse(rsp *http.Response) (*PostmediaBridge202603AppIdsettingsvideoAssociationDefinitionmediaBridgev1AppIdsettingsvideoAssociationDefinitionResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostmediaBridge202603AppIdsettingsvideoAssociationDefinitionmediaBridgev1AppIdsettingsvideoAssociationDefinitionResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest AssociationDefinition
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetmetanetworkOrigins202603ipRangesmetanetworkOrigins202509ipRangesResponse parses an HTTP response from a GetmetanetworkOrigins202603ipRangesmetanetworkOrigins202509ipRangesWithResponse call
-func ParseGetmetanetworkOrigins202603ipRangesmetanetworkOrigins202509ipRangesResponse(rsp *http.Response) (*GetmetanetworkOrigins202603ipRangesmetanetworkOrigins202509ipRangesResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetmetanetworkOrigins202603ipRangesmetanetworkOrigins202509ipRangesResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CollectionResponseIpRangeNoPaging
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetmetanetworkOrigins202603ipRangessimplemetanetworkOrigins202509ipRangessimpleResponse parses an HTTP response from a GetmetanetworkOrigins202603ipRangessimplemetanetworkOrigins202509ipRangessimpleWithResponse call
-func ParseGetmetanetworkOrigins202603ipRangessimplemetanetworkOrigins202509ipRangessimpleResponse(rsp *http.Response) (*GetmetanetworkOrigins202603ipRangessimplemetanetworkOrigins202509ipRangessimpleResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetmetanetworkOrigins202603ipRangessimplemetanetworkOrigins202509ipRangessimpleResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParsePostoauth202603tokenoauthv3tokenResponse parses an HTTP response from a Postoauth202603tokenoauthv3tokenWithResponse call
-func ParsePostoauth202603tokenoauthv3tokenResponse(rsp *http.Response) (*Postoauth202603tokenoauthv3tokenResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postoauth202603tokenoauthv3tokenResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest TokenResponseIF
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostoauth202603tokenintrospectoauthv3tokenintrospectResponse parses an HTTP response from a Postoauth202603tokenintrospectoauthv3tokenintrospectWithResponse call
-func ParsePostoauth202603tokenintrospectoauthv3tokenintrospectResponse(rsp *http.Response) (*Postoauth202603tokenintrospectoauthv3tokenintrospectResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postoauth202603tokenintrospectoauthv3tokenintrospectResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest TokenInfoResponseBaseIF
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostoauth202603tokenrevokeoauthv3tokenrevokeResponse parses an HTTP response from a Postoauth202603tokenrevokeoauthv3tokenrevokeWithResponse call
-func ParsePostoauth202603tokenrevokeoauthv3tokenrevokeResponse(rsp *http.Response) (*Postoauth202603tokenrevokeoauthv3tokenrevokeResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postoauth202603tokenrevokeoauthv3tokenrevokeResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParsePostscheduler202603meetingscalendarResponse parses an HTTP response from a Postscheduler202603meetingscalendarWithResponse call
-func ParsePostscheduler202603meetingscalendarResponse(rsp *http.Response) (*Postscheduler202603meetingscalendarResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postscheduler202603meetingscalendarResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest ExternalCalenderMeetingEventResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetscheduler202603meetingsmeetingLinksResponse parses an HTTP response from a Getscheduler202603meetingsmeetingLinksWithResponse call
-func ParseGetscheduler202603meetingsmeetingLinksResponse(rsp *http.Response) (*Getscheduler202603meetingsmeetingLinksResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getscheduler202603meetingsmeetingLinksResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CollectionResponseWithTotalExternalLinkMetadata
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostscheduler202603meetingsmeetingLinksbookResponse parses an HTTP response from a Postscheduler202603meetingsmeetingLinksbookWithResponse call
-func ParsePostscheduler202603meetingsmeetingLinksbookResponse(rsp *http.Response) (*Postscheduler202603meetingsmeetingLinksbookResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postscheduler202603meetingsmeetingLinksbookResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest ExternalMeetingBookingResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetscheduler202603meetingsmeetingLinksbookavailabilityPageSlugResponse parses an HTTP response from a Getscheduler202603meetingsmeetingLinksbookavailabilityPageSlugWithResponse call
-func ParseGetscheduler202603meetingsmeetingLinksbookavailabilityPageSlugResponse(rsp *http.Response) (*Getscheduler202603meetingsmeetingLinksbookavailabilityPageSlugResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getscheduler202603meetingsmeetingLinksbookavailabilityPageSlugResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest ExternalLinkAvailabilityAndBusyTimes
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetscheduler202603meetingsmeetingLinksbookSlugResponse parses an HTTP response from a Getscheduler202603meetingsmeetingLinksbookSlugWithResponse call
-func ParseGetscheduler202603meetingsmeetingLinksbookSlugResponse(rsp *http.Response) (*Getscheduler202603meetingsmeetingLinksbookSlugResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getscheduler202603meetingsmeetingLinksbookSlugResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest ExternalBookingInfo
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostsettingscurrencies202603centralFxRatesaddCurrencysettingsv3currenciescentralFxRatesaddCurrencyResponse parses an HTTP response from a Postsettingscurrencies202603centralFxRatesaddCurrencysettingsv3currenciescentralFxRatesaddCurrencyWithResponse call
-func ParsePostsettingscurrencies202603centralFxRatesaddCurrencysettingsv3currenciescentralFxRatesaddCurrencyResponse(rsp *http.Response) (*Postsettingscurrencies202603centralFxRatesaddCurrencysettingsv3currenciescentralFxRatesaddCurrencyResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postsettingscurrencies202603centralFxRatesaddCurrencysettingsv3currenciescentralFxRatesaddCurrencyResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest ExchangeRate
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetsettingscurrencies202603centralFxRatesinformationsettingsv3currenciescentralFxRatesinformationResponse parses an HTTP response from a Getsettingscurrencies202603centralFxRatesinformationsettingsv3currenciescentralFxRatesinformationWithResponse call
-func ParseGetsettingscurrencies202603centralFxRatesinformationsettingsv3currenciescentralFxRatesinformationResponse(rsp *http.Response) (*Getsettingscurrencies202603centralFxRatesinformationsettingsv3currenciescentralFxRatesinformationResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getsettingscurrencies202603centralFxRatesinformationsettingsv3currenciescentralFxRatesinformationResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CentralExchangeRatesInformation
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetsettingscurrencies202603centralFxRatesunsupportedCurrenciessettingsv3currenciescentralFxRatesunsupportedCurrenciesResponse parses an HTTP response from a Getsettingscurrencies202603centralFxRatesunsupportedCurrenciessettingsv3currenciescentralFxRatesunsupportedCurrenciesWithResponse call
-func ParseGetsettingscurrencies202603centralFxRatesunsupportedCurrenciessettingsv3currenciescentralFxRatesunsupportedCurrenciesResponse(rsp *http.Response) (*Getsettingscurrencies202603centralFxRatesunsupportedCurrenciessettingsv3currenciescentralFxRatesunsupportedCurrenciesResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getsettingscurrencies202603centralFxRatesunsupportedCurrenciessettingsv3currenciescentralFxRatesunsupportedCurrenciesResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CollectionResponseCurrencyCodeInfoNoPaging
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetsettingscurrencies202603codesResponse parses an HTTP response from a Getsettingscurrencies202603codesWithResponse call
-func ParseGetsettingscurrencies202603codesResponse(rsp *http.Response) (*Getsettingscurrencies202603codesResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getsettingscurrencies202603codesResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CollectionResponseCurrencyCodeInfoNoPaging
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetsettingscurrencies202603companyCurrencyResponse parses an HTTP response from a Getsettingscurrencies202603companyCurrencyWithResponse call
-func ParseGetsettingscurrencies202603companyCurrencyResponse(rsp *http.Response) (*Getsettingscurrencies202603companyCurrencyResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getsettingscurrencies202603companyCurrencyResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CompanyCurrency
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePutsettingscurrencies202603companyCurrencyResponse parses an HTTP response from a Putsettingscurrencies202603companyCurrencyWithResponse call
-func ParsePutsettingscurrencies202603companyCurrencyResponse(rsp *http.Response) (*Putsettingscurrencies202603companyCurrencyResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Putsettingscurrencies202603companyCurrencyResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CompanyCurrency
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetsettingscurrencies202603exchangeRatesResponse parses an HTTP response from a Getsettingscurrencies202603exchangeRatesWithResponse call
-func ParseGetsettingscurrencies202603exchangeRatesResponse(rsp *http.Response) (*Getsettingscurrencies202603exchangeRatesResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getsettingscurrencies202603exchangeRatesResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CollectionResponseExchangeRateForwardPaging
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostsettingscurrencies202603exchangeRatesResponse parses an HTTP response from a Postsettingscurrencies202603exchangeRatesWithResponse call
-func ParsePostsettingscurrencies202603exchangeRatesResponse(rsp *http.Response) (*Postsettingscurrencies202603exchangeRatesResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postsettingscurrencies202603exchangeRatesResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest ExchangeRate
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostsettingscurrencies202603exchangeRatesbatchcreateResponse parses an HTTP response from a Postsettingscurrencies202603exchangeRatesbatchcreateWithResponse call
-func ParsePostsettingscurrencies202603exchangeRatesbatchcreateResponse(rsp *http.Response) (*Postsettingscurrencies202603exchangeRatesbatchcreateResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postsettingscurrencies202603exchangeRatesbatchcreateResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest BatchResponseExchangeRate
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON201 = &dest
-
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest BatchResponseExchangeRateWithErrors
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON207 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostsettingscurrencies202603exchangeRatesbatchreadResponse parses an HTTP response from a Postsettingscurrencies202603exchangeRatesbatchreadWithResponse call
-func ParsePostsettingscurrencies202603exchangeRatesbatchreadResponse(rsp *http.Response) (*Postsettingscurrencies202603exchangeRatesbatchreadResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postsettingscurrencies202603exchangeRatesbatchreadResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest BatchResponseExchangeRate
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest BatchResponseExchangeRateWithErrors
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON207 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostsettingscurrencies202603exchangeRatesbatchupdateResponse parses an HTTP response from a Postsettingscurrencies202603exchangeRatesbatchupdateWithResponse call
-func ParsePostsettingscurrencies202603exchangeRatesbatchupdateResponse(rsp *http.Response) (*Postsettingscurrencies202603exchangeRatesbatchupdateResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postsettingscurrencies202603exchangeRatesbatchupdateResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest BatchResponseExchangeRate
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest BatchResponseExchangeRateWithErrors
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON207 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetsettingscurrencies202603exchangeRatescurrentResponse parses an HTTP response from a Getsettingscurrencies202603exchangeRatescurrentWithResponse call
-func ParseGetsettingscurrencies202603exchangeRatescurrentResponse(rsp *http.Response) (*Getsettingscurrencies202603exchangeRatescurrentResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getsettingscurrencies202603exchangeRatescurrentResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CollectionResponseExchangeRateNoPaging
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostsettingscurrencies202603exchangeRatesupdateVisibilityResponse parses an HTTP response from a Postsettingscurrencies202603exchangeRatesupdateVisibilityWithResponse call
-func ParsePostsettingscurrencies202603exchangeRatesupdateVisibilityResponse(rsp *http.Response) (*Postsettingscurrencies202603exchangeRatesupdateVisibilityResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postsettingscurrencies202603exchangeRatesupdateVisibilityResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParseGetsettingscurrencies202603exchangeRatesExchangeRateIdResponse parses an HTTP response from a Getsettingscurrencies202603exchangeRatesExchangeRateIdWithResponse call
-func ParseGetsettingscurrencies202603exchangeRatesExchangeRateIdResponse(rsp *http.Response) (*Getsettingscurrencies202603exchangeRatesExchangeRateIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getsettingscurrencies202603exchangeRatesExchangeRateIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest ExchangeRate
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePatchsettingscurrencies202603exchangeRatesExchangeRateIdResponse parses an HTTP response from a Patchsettingscurrencies202603exchangeRatesExchangeRateIdWithResponse call
-func ParsePatchsettingscurrencies202603exchangeRatesExchangeRateIdResponse(rsp *http.Response) (*Patchsettingscurrencies202603exchangeRatesExchangeRateIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Patchsettingscurrencies202603exchangeRatesExchangeRateIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest ExchangeRate
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetsettingsusers202603settingsusersv3Response parses an HTTP response from a Getsettingsusers202603settingsusersv3WithResponse call
-func ParseGetsettingsusers202603settingsusersv3Response(rsp *http.Response) (*Getsettingsusers202603settingsusersv3Response, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getsettingsusers202603settingsusersv3Response{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CollectionResponsePublicUserForwardPaging
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostsettingsusers202603settingsusersv3Response parses an HTTP response from a Postsettingsusers202603settingsusersv3WithResponse call
-func ParsePostsettingsusers202603settingsusersv3Response(rsp *http.Response) (*Postsettingsusers202603settingsusersv3Response, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Postsettingsusers202603settingsusersv3Response{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest PublicUser
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON201 = &dest
-
-	}
-
-	switch {
-	case rsp.StatusCode == 201:
-		var headers Postsettingsusers202603settingsusersv3Response201Headers
-		if values := rsp.Header.Values("Location"); len(values) > 0 {
-			var value string
-			if err := runtime.BindStyledParameterWithOptions("simple", "Location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
-				return nil, err
-			}
-			headers.Location = &value
-		}
-		response.Headers201 = &headers
-	}
-
-	return response, nil
-}
-
-// ParseGetsettingsusers202603rolesGetAllResponse parses an HTTP response from a Getsettingsusers202603rolesGetAllWithResponse call
-func ParseGetsettingsusers202603rolesGetAllResponse(rsp *http.Response) (*Getsettingsusers202603rolesGetAllResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getsettingsusers202603rolesGetAllResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CollectionResponsePublicPermissionSetNoPaging
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetsettingsusers202603teamsGetAllResponse parses an HTTP response from a Getsettingsusers202603teamsGetAllWithResponse call
-func ParseGetsettingsusers202603teamsGetAllResponse(rsp *http.Response) (*Getsettingsusers202603teamsGetAllResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getsettingsusers202603teamsGetAllResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CollectionResponsePublicTeamNoPaging
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseDeletesettingsusers202603UserIdArchiveResponse parses an HTTP response from a Deletesettingsusers202603UserIdArchiveWithResponse call
-func ParseDeletesettingsusers202603UserIdArchiveResponse(rsp *http.Response) (*Deletesettingsusers202603UserIdArchiveResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Deletesettingsusers202603UserIdArchiveResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParseGetsettingsusers202603UserIdGetByIdResponse parses an HTTP response from a Getsettingsusers202603UserIdGetByIdWithResponse call
-func ParseGetsettingsusers202603UserIdGetByIdResponse(rsp *http.Response) (*Getsettingsusers202603UserIdGetByIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Getsettingsusers202603UserIdGetByIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest PublicUserMarch2026
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePutsettingsusers202603UserIdUpdateResponse parses an HTTP response from a Putsettingsusers202603UserIdUpdateWithResponse call
-func ParsePutsettingsusers202603UserIdUpdateResponse(rsp *http.Response) (*Putsettingsusers202603UserIdUpdateResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &Putsettingsusers202603UserIdUpdateResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest PublicUserMarch2026
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGettaxRates202603taxRatesResponse parses an HTTP response from a GettaxRates202603taxRatesWithResponse call
-func ParseGettaxRates202603taxRatesResponse(rsp *http.Response) (*GettaxRates202603taxRatesResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GettaxRates202603taxRatesResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CollectionResponsePublicTaxRateGroupForwardPaging
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGettaxRates202603taxRatesTaxRateGroupIdResponse parses an HTTP response from a GettaxRates202603taxRatesTaxRateGroupIdWithResponse call
-func ParseGettaxRates202603taxRatesTaxRateGroupIdResponse(rsp *http.Response) (*GettaxRates202603taxRatesTaxRateGroupIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GettaxRates202603taxRatesTaxRateGroupIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest PublicTaxRateGroup
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGeturlMappings202603urlMappingsurlMappingsv3urlMappingsResponse parses an HTTP response from a GeturlMappings202603urlMappingsurlMappingsv3urlMappingsWithResponse call
-func ParseGeturlMappings202603urlMappingsurlMappingsv3urlMappingsResponse(rsp *http.Response) (*GeturlMappings202603urlMappingsurlMappingsv3urlMappingsResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GeturlMappings202603urlMappingsurlMappingsv3urlMappingsResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParsePosturlMappings202603urlMappingsurlMappingsv3urlMappingsResponse parses an HTTP response from a PosturlMappings202603urlMappingsurlMappingsv3urlMappingsWithResponse call
-func ParsePosturlMappings202603urlMappingsurlMappingsv3urlMappingsResponse(rsp *http.Response) (*PosturlMappings202603urlMappingsurlMappingsv3urlMappingsResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PosturlMappings202603urlMappingsurlMappingsv3urlMappingsResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParseDeleteurlMappings202603urlMappingsIdurlMappingsv3urlMappingsIdResponse parses an HTTP response from a DeleteurlMappings202603urlMappingsIdurlMappingsv3urlMappingsIdWithResponse call
-func ParseDeleteurlMappings202603urlMappingsIdurlMappingsv3urlMappingsIdResponse(rsp *http.Response) (*DeleteurlMappings202603urlMappingsIdurlMappingsv3urlMappingsIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &DeleteurlMappings202603urlMappingsIdurlMappingsv3urlMappingsIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParseGeturlMappings202603urlMappingsIdurlMappingsv3urlMappingsIdResponse parses an HTTP response from a GeturlMappings202603urlMappingsIdurlMappingsv3urlMappingsIdWithResponse call
-func ParseGeturlMappings202603urlMappingsIdurlMappingsv3urlMappingsIdResponse(rsp *http.Response) (*GeturlMappings202603urlMappingsIdurlMappingsv3urlMappingsIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GeturlMappings202603urlMappingsIdurlMappingsv3urlMappingsIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	return response, nil
-}
-
-// ParsePostvisitorIdentification202603tokenscreateGenerateTokenResponse parses an HTTP response from a PostvisitorIdentification202603tokenscreateGenerateTokenWithResponse call
-func ParsePostvisitorIdentification202603tokenscreateGenerateTokenResponse(rsp *http.Response) (*PostvisitorIdentification202603tokenscreateGenerateTokenResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostvisitorIdentification202603tokenscreateGenerateTokenResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest IdentificationTokenResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetwebhooksJournaljournalLocal202603batchearliestCountResponse parses an HTTP response from a GetwebhooksJournaljournalLocal202603batchearliestCountWithResponse call
-func ParseGetwebhooksJournaljournalLocal202603batchearliestCountResponse(rsp *http.Response) (*GetwebhooksJournaljournalLocal202603batchearliestCountResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetwebhooksJournaljournalLocal202603batchearliestCountResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest BatchResponseJournalFetchResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetwebhooksJournaljournalLocal202603batchlatestCountResponse parses an HTTP response from a GetwebhooksJournaljournalLocal202603batchlatestCountWithResponse call
-func ParseGetwebhooksJournaljournalLocal202603batchlatestCountResponse(rsp *http.Response) (*GetwebhooksJournaljournalLocal202603batchlatestCountResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetwebhooksJournaljournalLocal202603batchlatestCountResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest BatchResponseJournalFetchResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePostwebhooksJournaljournalLocal202603batchreadResponse parses an HTTP response from a PostwebhooksJournaljournalLocal202603batchreadWithResponse call
-func ParsePostwebhooksJournaljournalLocal202603batchreadResponse(rsp *http.Response) (*PostwebhooksJournaljournalLocal202603batchreadResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PostwebhooksJournaljournalLocal202603batchreadResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest BatchResponseJournalFetchResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 207:
-		var dest BatchResponseJournalFetchResponseWithErrors
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON207 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetwebhooksJournaljournalLocal202603batchOffsetnextCountResponse parses an HTTP response from a GetwebhooksJournaljournalLocal202603batchOffsetnextCountWithResponse call
-func ParseGetwebhooksJournaljournalLocal202603batchOffsetnextCountResponse(rsp *http.Response) (*GetwebhooksJournaljournalLocal202603batchOffsetnextCountResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetwebhooksJournaljournalLocal202603batchOffsetnextCountResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest BatchResponseJournalFetchResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetwebhooksJournaljournalLocal202603earliestResponse parses an HTTP response from a GetwebhooksJournaljournalLocal202603earliestWithResponse call
-func ParseGetwebhooksJournaljournalLocal202603earliestResponse(rsp *http.Response) (*GetwebhooksJournaljournalLocal202603earliestResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetwebhooksJournaljournalLocal202603earliestResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest JournalFetchResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	case rsp.StatusCode == 204:
-		break // No content-type
-
-	}
-
-	return response, nil
-}
-
-// ParseGetwebhooksJournaljournalLocal202603latestResponse parses an HTTP response from a GetwebhooksJournaljournalLocal202603latestWithResponse call
-func ParseGetwebhooksJournaljournalLocal202603latestResponse(rsp *http.Response) (*GetwebhooksJournaljournalLocal202603latestResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetwebhooksJournaljournalLocal202603latestResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest JournalFetchResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	case rsp.StatusCode == 204:
-		break // No content-type
-
-	}
-
-	return response, nil
-}
-
-// ParseGetwebhooksJournaljournalLocal202603offsetOffsetnextResponse parses an HTTP response from a GetwebhooksJournaljournalLocal202603offsetOffsetnextWithResponse call
-func ParseGetwebhooksJournaljournalLocal202603offsetOffsetnextResponse(rsp *http.Response) (*GetwebhooksJournaljournalLocal202603offsetOffsetnextResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetwebhooksJournaljournalLocal202603offsetOffsetnextResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest JournalFetchResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	case rsp.StatusCode == 204:
-		break // No content-type
-
-	}
-
-	return response, nil
-}
-
-// ParseGetwebhooksJournaljournalLocal202603statusStatusIdResponse parses an HTTP response from a GetwebhooksJournaljournalLocal202603statusStatusIdWithResponse call
-func ParseGetwebhooksJournaljournalLocal202603statusStatusIdResponse(rsp *http.Response) (*GetwebhooksJournaljournalLocal202603statusStatusIdResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetwebhooksJournaljournalLocal202603statusStatusIdResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest SnapshotStatusResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetwebhooksJournaljournal202603batchearliestCountResponse parses an HTTP response from a GetwebhooksJournaljournal202603batchearliestCountWithResponse call
-func ParseGetwebhooksJournaljournal202603batchearliestCountResponse(rsp *http.Response) (*GetwebhooksJournaljournal202603batchearliestCountResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetwebhooksJournaljournal202603batchearliestCountResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest BatchResponseJournalFetchResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetwebhooksJournaljournal202603batchlatestCountResponse parses an HTTP response from a GetwebhooksJournaljournal202603batchlatestCountWithResponse call
-func ParseGetwebhooksJournaljournal202603batchlatestCountResponse(rsp *http.Response) (*GetwebhooksJournaljournal202603batchlatestCountResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetwebhooksJournaljournal202603batchlatestCountResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest BatchResponseJournalFetchResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
