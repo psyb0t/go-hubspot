@@ -17,6 +17,25 @@ import (
 	openapi_types "github.com/oapi-codegen/runtime/types"
 )
 
+// Postcrmobjects202603usersbatchreadWithBody Read a batch of users by internal ID, or unique property values
+//
+// Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /crm/objects/2026-03/users/batch/read (the `Postcrmobjects202603usersbatchread` operationId).
+func (c *Client) Postcrmobjects202603usersbatchreadWithBody(ctx context.Context, params *Postcrmobjects202603usersbatchreadParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostcrmobjects202603usersbatchreadRequestWithBody(c.Server, params, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // Postcrmobjects202603usersbatchread Read a batch of users by internal ID, or unique property values
 //
 // Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
@@ -6883,6 +6902,25 @@ func (c *Client) GeturlMappings202603urlMappingsurlMappingsv3urlMappings(ctx con
 // Corresponds with POST /url-mappings/2026-03/url-mappings (the `PosturlMappings202603urlMappingsurlMappingsv3urlMappings` operationId).
 func (c *Client) PosturlMappings202603urlMappingsurlMappingsv3urlMappingsWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPosturlMappings202603urlMappingsurlMappingsv3urlMappingsRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// PosturlMappings202603urlMappingsurlMappingsv3urlMappings Create URL mapping
+//
+// Create a new URL mapping in your HubSpot account. This endpoint allows you to define URL redirections and mappings, which can be useful for managing site navigation and SEO. The request body must include all required properties of the UrlMapping schema.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /url-mappings/2026-03/url-mappings (the `PosturlMappings202603urlMappingsurlMappingsv3urlMappings` operationId).
+func (c *Client) PosturlMappings202603urlMappingsurlMappingsv3urlMappings(ctx context.Context, body PosturlMappings202603urlMappingsurlMappingsv3urlMappingsJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPosturlMappings202603urlMappingsurlMappingsv3urlMappingsRequest(c.Server, body)
 	if err != nil {
 		return nil, err
 	}

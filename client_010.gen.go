@@ -17,6 +17,219 @@ import (
 	openapi_types "github.com/oapi-codegen/runtime/types"
 )
 
+// NewPostmediaBridge202603AppIdsettingsregisterRequest calls the generic PostmediaBridge202603AppIdsettingsregister builder with application/json body
+func NewPostmediaBridge202603AppIdsettingsregisterRequest(server string, appId int32, body PostmediaBridge202603AppIdsettingsregisterJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostmediaBridge202603AppIdsettingsregisterRequestWithBody(server, appId, "application/json", bodyReader)
+}
+
+// NewPostmediaBridge202603AppIdsettingsregisterRequestWithBody constructs an http.Request for the PostmediaBridge202603AppIdsettingsregister method, with any body, and a specified content type
+func NewPostmediaBridge202603AppIdsettingsregisterRequestWithBody(server string, appId int32, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "appId", appId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: "int32"})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/media-bridge/2026-03/%s/settings/register", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewPostmediaBridge202603AppIdsettingsvideoAssociationDefinitionmediaBridgev1AppIdsettingsvideoAssociationDefinitionRequest constructs an http.Request for the PostmediaBridge202603AppIdsettingsvideoAssociationDefinitionmediaBridgev1AppIdsettingsvideoAssociationDefinition method
+func NewPostmediaBridge202603AppIdsettingsvideoAssociationDefinitionmediaBridgev1AppIdsettingsvideoAssociationDefinitionRequest(server string, appId int32) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "appId", appId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: "int32"})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/media-bridge/2026-03/%s/settings/video-association-definition", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGetmetanetworkOrigins202603ipRangesmetanetworkOrigins202509ipRangesRequest constructs an http.Request for the GetmetanetworkOrigins202603ipRangesmetanetworkOrigins202509ipRanges method
+func NewGetmetanetworkOrigins202603ipRangesmetanetworkOrigins202509ipRangesRequest(server string, params *GetmetanetworkOrigins202603ipRangesmetanetworkOrigins202509ipRangesParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/meta/network-origins/2026-03/ip-ranges")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.Direction != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "direction", *params.Direction, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Service != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "service", *params.Service, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGetmetanetworkOrigins202603ipRangessimplemetanetworkOrigins202509ipRangessimpleRequest constructs an http.Request for the GetmetanetworkOrigins202603ipRangessimplemetanetworkOrigins202509ipRangessimple method
+func NewGetmetanetworkOrigins202603ipRangessimplemetanetworkOrigins202509ipRangessimpleRequest(server string, params *GetmetanetworkOrigins202603ipRangessimplemetanetworkOrigins202509ipRangessimpleParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/meta/network-origins/2026-03/ip-ranges/simple")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.Direction != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "direction", *params.Direction, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Service != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "service", *params.Service, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
 // NewPostoauth202603tokenoauthv3tokenRequestWithFormdataBody calls the generic Postoauth202603tokenoauthv3token builder with application/x-www-form-urlencoded body
 func NewPostoauth202603tokenoauthv3tokenRequestWithFormdataBody(server string, body Postoauth202603tokenoauthv3tokenFormdataRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
@@ -1547,6 +1760,17 @@ func NewGeturlMappings202603urlMappingsurlMappingsv3urlMappingsRequest(server st
 	}
 
 	return req, nil
+}
+
+// NewPosturlMappings202603urlMappingsurlMappingsv3urlMappingsRequest calls the generic PosturlMappings202603urlMappingsurlMappingsv3urlMappings builder with application/json body
+func NewPosturlMappings202603urlMappingsurlMappingsv3urlMappingsRequest(server string, body PosturlMappings202603urlMappingsurlMappingsv3urlMappingsJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPosturlMappings202603urlMappingsurlMappingsv3urlMappingsRequestWithBody(server, "application/json", bodyReader)
 }
 
 // NewPosturlMappings202603urlMappingsurlMappingsv3urlMappingsRequestWithBody constructs an http.Request for the PosturlMappings202603urlMappingsurlMappingsv3urlMappings method, with any body, and a specified content type
@@ -6107,6 +6331,15 @@ type ClientWithResponsesInterface interface {
 	//
 	// Corresponds with GET /cms/site-search/2026-03/indexed-data/{contentId} (the `GetcmssiteSearch202603indexedDataContentIdGetById` operationId).
 	GetcmssiteSearch202603indexedDataContentIdGetByIdWithResponse(ctx context.Context, contentId string, params *GetcmssiteSearch202603indexedDataContentIdGetByIdParams, reqEditors ...RequestEditorFn) (*GetcmssiteSearch202603indexedDataContentIdGetByIdResponse, error)
+
+	// GetcmssiteSearch202603searchcmssiteSearch202603searchWithResponse Search your site
+	//
+	// Returns any website content matching the given search criteria for a given HubSpot account. Searches can be filtered by content type, domain, or URL path. Includes options for weighing results by recency and popularity, along with language support.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /cms/site-search/2026-03/search (the `GetcmssiteSearch202603searchcmssiteSearch202603search` operationId).
+	GetcmssiteSearch202603searchcmssiteSearch202603searchWithResponse(ctx context.Context, params *GetcmssiteSearch202603searchcmssiteSearch202603searchParams, reqEditors ...RequestEditorFn) (*GetcmssiteSearch202603searchcmssiteSearch202603searchResponse, error)
 
 	// PostcmssourceCode202603extractasyncDoAsyncWithBodyWithResponse Extract a zip file
 	//
@@ -16522,6 +16755,15 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /url-mappings/2026-03/url-mappings (the `PosturlMappings202603urlMappingsurlMappingsv3urlMappings` operationId).
 	PosturlMappings202603urlMappingsurlMappingsv3urlMappingsWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*PosturlMappings202603urlMappingsurlMappingsv3urlMappingsResponse, error)
 
+	// PosturlMappings202603urlMappingsurlMappingsv3urlMappingsWithResponse Create URL mapping
+	//
+	// Create a new URL mapping in your HubSpot account. This endpoint allows you to define URL redirections and mappings, which can be useful for managing site navigation and SEO. The request body must include all required properties of the UrlMapping schema.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /url-mappings/2026-03/url-mappings (the `PosturlMappings202603urlMappingsurlMappingsv3urlMappings` operationId).
+	PosturlMappings202603urlMappingsurlMappingsv3urlMappingsWithResponse(ctx context.Context, body PosturlMappings202603urlMappingsurlMappingsv3urlMappingsJSONRequestBody, reqEditors ...RequestEditorFn) (*PosturlMappings202603urlMappingsurlMappingsv3urlMappingsResponse, error)
+
 	// DeleteurlMappings202603urlMappingsIdurlMappingsv3urlMappingsIdWithResponse Delete URL mapping
 	//
 	// Delete a specific URL mapping in your HubSpot account using its unique identifier. This operation will remove the URL mapping permanently, and it requires appropriate write and delete permissions.
@@ -19773,246 +20015,4 @@ func (r Postcmsblogs202603postsscheduleScheduleResponse) ContentType() string {
 		return r.HTTPResponse.Header.Get("Content-Type")
 	}
 	return ""
-}
-
-type Deletecmsblogs202603postsObjectIdArchiveResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Deletecmsblogs202603postsObjectIdArchiveResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Deletecmsblogs202603postsObjectIdArchiveResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Deletecmsblogs202603postsObjectIdArchiveResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Deletecmsblogs202603postsObjectIdArchiveResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcmsblogs202603postsObjectIdGetByIdResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *BlogPost
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcmsblogs202603postsObjectIdGetByIdResponse) GetJSON200() *BlogPost {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcmsblogs202603postsObjectIdGetByIdResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcmsblogs202603postsObjectIdGetByIdResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcmsblogs202603postsObjectIdGetByIdResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcmsblogs202603postsObjectIdGetByIdResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Patchcmsblogs202603postsObjectIdUpdateResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *BlogPost
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Patchcmsblogs202603postsObjectIdUpdateResponse) GetJSON200() *BlogPost {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Patchcmsblogs202603postsObjectIdUpdateResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Patchcmsblogs202603postsObjectIdUpdateResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Patchcmsblogs202603postsObjectIdUpdateResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Patchcmsblogs202603postsObjectIdUpdateResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Getcmsblogs202603postsObjectIddraftGetDraftByIdResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *BlogPost
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Getcmsblogs202603postsObjectIddraftGetDraftByIdResponse) GetJSON200() *BlogPost {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Getcmsblogs202603postsObjectIddraftGetDraftByIdResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Getcmsblogs202603postsObjectIddraftGetDraftByIdResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Getcmsblogs202603postsObjectIddraftGetDraftByIdResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Getcmsblogs202603postsObjectIddraftGetDraftByIdResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Patchcmsblogs202603postsObjectIddraftUpdateDraftResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *BlogPost
-}
-
-// GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r Patchcmsblogs202603postsObjectIddraftUpdateDraftResponse) GetJSON200() *BlogPost {
-	return r.JSON200
-}
-
-// GetBody returns the raw response body bytes
-func (r Patchcmsblogs202603postsObjectIddraftUpdateDraftResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Patchcmsblogs202603postsObjectIddraftUpdateDraftResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Patchcmsblogs202603postsObjectIddraftUpdateDraftResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Patchcmsblogs202603postsObjectIddraftUpdateDraftResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmsblogs202603postsObjectIddraftpushLivePushLiveResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmsblogs202603postsObjectIddraftpushLivePushLiveResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmsblogs202603postsObjectIddraftpushLivePushLiveResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmsblogs202603postsObjectIddraftpushLivePushLiveResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmsblogs202603postsObjectIddraftpushLivePushLiveResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmsblogs202603postsObjectIddraftresetResetDraftResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmsblogs202603postsObjectIddraftresetResetDraftResponse) GetBody() []byte {
-	return r.Body
 }

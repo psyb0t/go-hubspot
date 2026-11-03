@@ -9,6 +9,284 @@ import (
 	"net/http"
 )
 
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcrmobjects202603notesbatchupdateUpdateResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcrmobjects202603notesbatchupsertUpsertResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *BatchResponseSimplePublicUpsertObject
+	// JSON207 the response for an HTTP 207 `application/json` response
+	JSON207 *BatchResponseSimplePublicUpsertObjectWithErrors
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Postcrmobjects202603notesbatchupsertUpsertResponse) GetJSON200() *BatchResponseSimplePublicUpsertObject {
+	return r.JSON200
+}
+
+// GetJSON207 returns the response for an HTTP 207 `application/json` response
+func (r Postcrmobjects202603notesbatchupsertUpsertResponse) GetJSON207() *BatchResponseSimplePublicUpsertObjectWithErrors {
+	return r.JSON207
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcrmobjects202603notesbatchupsertUpsertResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcrmobjects202603notesbatchupsertUpsertResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcrmobjects202603notesbatchupsertUpsertResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcrmobjects202603notesbatchupsertUpsertResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcrmobjects202603notessearchDoSearchResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *CollectionResponseWithTotalSimplePublicObject
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Postcrmobjects202603notessearchDoSearchResponse) GetJSON200() *CollectionResponseWithTotalSimplePublicObject {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcrmobjects202603notessearchDoSearchResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcrmobjects202603notessearchDoSearchResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcrmobjects202603notessearchDoSearchResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcrmobjects202603notessearchDoSearchResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Deletecrmobjects202603notesNoteIdArchiveResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+}
+
+// GetBody returns the raw response body bytes
+func (r Deletecrmobjects202603notesNoteIdArchiveResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Deletecrmobjects202603notesNoteIdArchiveResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Deletecrmobjects202603notesNoteIdArchiveResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Deletecrmobjects202603notesNoteIdArchiveResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Getcrmobjects202603notesNoteIdGetByIdResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *SimplePublicObjectWithAssociations
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Getcrmobjects202603notesNoteIdGetByIdResponse) GetJSON200() *SimplePublicObjectWithAssociations {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Getcrmobjects202603notesNoteIdGetByIdResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Getcrmobjects202603notesNoteIdGetByIdResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Getcrmobjects202603notesNoteIdGetByIdResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Getcrmobjects202603notesNoteIdGetByIdResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Patchcrmobjects202603notesNoteIdUpdateResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *SimplePublicObject
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Patchcrmobjects202603notesNoteIdUpdateResponse) GetJSON200() *SimplePublicObject {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Patchcrmobjects202603notesNoteIdUpdateResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Patchcrmobjects202603notesNoteIdUpdateResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Patchcrmobjects202603notesNoteIdUpdateResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Patchcrmobjects202603notesNoteIdUpdateResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Getcrmobjects202603ordersResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Getcrmobjects202603ordersResponse) GetJSON200() *CollectionResponseSimplePublicObjectWithAssociationsForwardPaging {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r Getcrmobjects202603ordersResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Getcrmobjects202603ordersResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Getcrmobjects202603ordersResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Getcrmobjects202603ordersResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+// Postcrmobjects202603ordersResponse201Headers the declared response headers of an HTTP 201 response for Postcrmobjects202603orders
+type Postcrmobjects202603ordersResponse201Headers struct {
+	Location *string
+}
+
+type Postcrmobjects202603ordersResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON201 the response for an HTTP 201 `application/json` response
+	JSON201 *SimplePublicObject
+	// Headers201 the parsed response headers for an HTTP 201 response
+	Headers201 *Postcrmobjects202603ordersResponse201Headers
+}
+
+// GetJSON201 returns the response for an HTTP 201 `application/json` response
+func (r Postcrmobjects202603ordersResponse) GetJSON201() *SimplePublicObject {
+	return r.JSON201
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcrmobjects202603ordersResponse) GetBody() []byte {
+	return r.Body
+}
+
 // Status returns HTTPResponse.Status
 func (r Postcrmobjects202603ordersResponse) Status() string {
 	if r.HTTPResponse != nil {
@@ -15579,6 +15857,13 @@ func (r GettaxRates202603taxRatesTaxRateGroupIdResponse) ContentType() string {
 type GeturlMappings202603urlMappingsurlMappingsv3urlMappingsResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *[]UrlMapping
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r GeturlMappings202603urlMappingsurlMappingsv3urlMappingsResponse) GetJSON200() *[]UrlMapping {
+	return r.JSON200
 }
 
 // GetBody returns the raw response body bytes
@@ -15681,6 +15966,13 @@ func (r DeleteurlMappings202603urlMappingsIdurlMappingsv3urlMappingsIdResponse) 
 type GeturlMappings202603urlMappingsIdurlMappingsv3urlMappingsIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *UrlMapping
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r GeturlMappings202603urlMappingsIdurlMappingsv3urlMappingsIdResponse) GetJSON200() *UrlMapping {
+	return r.JSON200
 }
 
 // GetBody returns the raw response body bytes
@@ -19722,294 +20014,4 @@ func (c *ClientWithResponses) Postcmshubdb202603tablesTableIdOrNamerowsCreateTab
 		return nil, err
 	}
 	return ParsePostcmshubdb202603tablesTableIdOrNamerowsCreateTableRowResponse(rsp)
-}
-
-// Postcmshubdb202603tablesTableIdOrNamerowsbatchreadReadTableRowsWithBodyWithResponse Get a set of rows
-//
-// Returns rows in the published version of the specified table, given a set of row IDs.
-// **Note:** This endpoint can be accessed without any authentication if the table is set to be allowed for public access.
-//
-// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
-//
-// Corresponds with POST /cms/hubdb/2026-03/tables/{tableIdOrName}/rows/batch/read (the `Postcmshubdb202603tablesTableIdOrNamerowsbatchreadReadTableRows` operationId).
-func (c *ClientWithResponses) Postcmshubdb202603tablesTableIdOrNamerowsbatchreadReadTableRowsWithBodyWithResponse(ctx context.Context, tableIdOrName string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmshubdb202603tablesTableIdOrNamerowsbatchreadReadTableRowsResponse, error) {
-	rsp, err := c.Postcmshubdb202603tablesTableIdOrNamerowsbatchreadReadTableRowsWithBody(ctx, tableIdOrName, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParsePostcmshubdb202603tablesTableIdOrNamerowsbatchreadReadTableRowsResponse(rsp)
-}
-
-// Postcmshubdb202603tablesTableIdOrNamerowsbatchreadReadTableRowsWithResponse Get a set of rows
-//
-// Returns rows in the published version of the specified table, given a set of row IDs.
-// **Note:** This endpoint can be accessed without any authentication if the table is set to be allowed for public access.
-//
-// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
-//
-// Corresponds with POST /cms/hubdb/2026-03/tables/{tableIdOrName}/rows/batch/read (the `Postcmshubdb202603tablesTableIdOrNamerowsbatchreadReadTableRows` operationId).
-func (c *ClientWithResponses) Postcmshubdb202603tablesTableIdOrNamerowsbatchreadReadTableRowsWithResponse(ctx context.Context, tableIdOrName string, body Postcmshubdb202603tablesTableIdOrNamerowsbatchreadReadTableRowsJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmshubdb202603tablesTableIdOrNamerowsbatchreadReadTableRowsResponse, error) {
-	rsp, err := c.Postcmshubdb202603tablesTableIdOrNamerowsbatchreadReadTableRows(ctx, tableIdOrName, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParsePostcmshubdb202603tablesTableIdOrNamerowsbatchreadReadTableRowsResponse(rsp)
-}
-
-// Getcmshubdb202603tablesTableIdOrNamerowsdraftReadDraftTableRowsWithResponse Get rows from draft table
-//
-// Returns rows in the draft version of the specified table. Row results can be filtered and sorted. Filtering and sorting options will be sent as query parameters to the API request. For example, by adding the query parameters `column1__gt=5&sort=-column1`, API returns the rows with values for column `column1` greater than 5 and in the descending order of `column1` values. Refer to the [overview section](https://developers.hubspot.com/docs/api/cms/hubdb#filtering-and-sorting-table-rows) for detailed filtering and sorting options.
-//
-// Returns a wrapper object for the known response body format(s).
-//
-// Corresponds with GET /cms/hubdb/2026-03/tables/{tableIdOrName}/rows/draft (the `Getcmshubdb202603tablesTableIdOrNamerowsdraftReadDraftTableRows` operationId).
-func (c *ClientWithResponses) Getcmshubdb202603tablesTableIdOrNamerowsdraftReadDraftTableRowsWithResponse(ctx context.Context, tableIdOrName string, params *Getcmshubdb202603tablesTableIdOrNamerowsdraftReadDraftTableRowsParams, reqEditors ...RequestEditorFn) (*Getcmshubdb202603tablesTableIdOrNamerowsdraftReadDraftTableRowsResponse, error) {
-	rsp, err := c.Getcmshubdb202603tablesTableIdOrNamerowsdraftReadDraftTableRows(ctx, tableIdOrName, params, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseGetcmshubdb202603tablesTableIdOrNamerowsdraftReadDraftTableRowsResponse(rsp)
-}
-
-// Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcloneCloneDraftTableRowsWithBodyWithResponse Clone rows in batch
-//
-// Clones rows in the draft version of the specified table, given a set of row ids. Maximum of 100 row ids per call.
-//
-// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
-//
-// Corresponds with POST /cms/hubdb/2026-03/tables/{tableIdOrName}/rows/draft/batch/clone (the `Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcloneCloneDraftTableRows` operationId).
-func (c *ClientWithResponses) Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcloneCloneDraftTableRowsWithBodyWithResponse(ctx context.Context, tableIdOrName string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcloneCloneDraftTableRowsResponse, error) {
-	rsp, err := c.Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcloneCloneDraftTableRowsWithBody(ctx, tableIdOrName, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParsePostcmshubdb202603tablesTableIdOrNamerowsdraftbatchcloneCloneDraftTableRowsResponse(rsp)
-}
-
-// Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcloneCloneDraftTableRowsWithResponse Clone rows in batch
-//
-// Clones rows in the draft version of the specified table, given a set of row ids. Maximum of 100 row ids per call.
-//
-// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
-//
-// Corresponds with POST /cms/hubdb/2026-03/tables/{tableIdOrName}/rows/draft/batch/clone (the `Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcloneCloneDraftTableRows` operationId).
-func (c *ClientWithResponses) Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcloneCloneDraftTableRowsWithResponse(ctx context.Context, tableIdOrName string, body Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcloneCloneDraftTableRowsJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcloneCloneDraftTableRowsResponse, error) {
-	rsp, err := c.Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcloneCloneDraftTableRows(ctx, tableIdOrName, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParsePostcmshubdb202603tablesTableIdOrNamerowsdraftbatchcloneCloneDraftTableRowsResponse(rsp)
-}
-
-// Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcreateCreateDraftTableRowsWithBodyWithResponse Create rows in batch
-//
-// Creates rows in the draft version of the specified table, given an array of row objects. Maximum of 100 row object per call. See the overview section for more details with an example.
-//
-// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
-//
-// Corresponds with POST /cms/hubdb/2026-03/tables/{tableIdOrName}/rows/draft/batch/create (the `Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcreateCreateDraftTableRows` operationId).
-func (c *ClientWithResponses) Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcreateCreateDraftTableRowsWithBodyWithResponse(ctx context.Context, tableIdOrName string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcreateCreateDraftTableRowsResponse, error) {
-	rsp, err := c.Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcreateCreateDraftTableRowsWithBody(ctx, tableIdOrName, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParsePostcmshubdb202603tablesTableIdOrNamerowsdraftbatchcreateCreateDraftTableRowsResponse(rsp)
-}
-
-// Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcreateCreateDraftTableRowsWithResponse Create rows in batch
-//
-// Creates rows in the draft version of the specified table, given an array of row objects. Maximum of 100 row object per call. See the overview section for more details with an example.
-//
-// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
-//
-// Corresponds with POST /cms/hubdb/2026-03/tables/{tableIdOrName}/rows/draft/batch/create (the `Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcreateCreateDraftTableRows` operationId).
-func (c *ClientWithResponses) Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcreateCreateDraftTableRowsWithResponse(ctx context.Context, tableIdOrName string, body Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcreateCreateDraftTableRowsJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcreateCreateDraftTableRowsResponse, error) {
-	rsp, err := c.Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchcreateCreateDraftTableRows(ctx, tableIdOrName, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParsePostcmshubdb202603tablesTableIdOrNamerowsdraftbatchcreateCreateDraftTableRowsResponse(rsp)
-}
-
-// Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchpurgePurgeDraftTableRowsWithBodyWithResponse Permanently deletes rows
-//
-// Permanently deletes rows from the draft version of the table, given a set of row IDs. Maximum of 100 row IDs per call.
-//
-// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
-//
-// Corresponds with POST /cms/hubdb/2026-03/tables/{tableIdOrName}/rows/draft/batch/purge (the `Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchpurgePurgeDraftTableRows` operationId).
-func (c *ClientWithResponses) Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchpurgePurgeDraftTableRowsWithBodyWithResponse(ctx context.Context, tableIdOrName string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchpurgePurgeDraftTableRowsResponse, error) {
-	rsp, err := c.Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchpurgePurgeDraftTableRowsWithBody(ctx, tableIdOrName, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParsePostcmshubdb202603tablesTableIdOrNamerowsdraftbatchpurgePurgeDraftTableRowsResponse(rsp)
-}
-
-// Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchpurgePurgeDraftTableRowsWithResponse Permanently deletes rows
-//
-// Permanently deletes rows from the draft version of the table, given a set of row IDs. Maximum of 100 row IDs per call.
-//
-// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
-//
-// Corresponds with POST /cms/hubdb/2026-03/tables/{tableIdOrName}/rows/draft/batch/purge (the `Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchpurgePurgeDraftTableRows` operationId).
-func (c *ClientWithResponses) Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchpurgePurgeDraftTableRowsWithResponse(ctx context.Context, tableIdOrName string, body Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchpurgePurgeDraftTableRowsJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchpurgePurgeDraftTableRowsResponse, error) {
-	rsp, err := c.Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchpurgePurgeDraftTableRows(ctx, tableIdOrName, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParsePostcmshubdb202603tablesTableIdOrNamerowsdraftbatchpurgePurgeDraftTableRowsResponse(rsp)
-}
-
-// Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreadReadDraftTableRowsWithBodyWithResponse Get a set of rows from draft table
-//
-// Returns rows in the draft version of the specified table, given a set of row IDs.
-//
-// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
-//
-// Corresponds with POST /cms/hubdb/2026-03/tables/{tableIdOrName}/rows/draft/batch/read (the `Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreadReadDraftTableRows` operationId).
-func (c *ClientWithResponses) Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreadReadDraftTableRowsWithBodyWithResponse(ctx context.Context, tableIdOrName string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreadReadDraftTableRowsResponse, error) {
-	rsp, err := c.Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreadReadDraftTableRowsWithBody(ctx, tableIdOrName, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParsePostcmshubdb202603tablesTableIdOrNamerowsdraftbatchreadReadDraftTableRowsResponse(rsp)
-}
-
-// Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreadReadDraftTableRowsWithResponse Get a set of rows from draft table
-//
-// Returns rows in the draft version of the specified table, given a set of row IDs.
-//
-// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
-//
-// Corresponds with POST /cms/hubdb/2026-03/tables/{tableIdOrName}/rows/draft/batch/read (the `Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreadReadDraftTableRows` operationId).
-func (c *ClientWithResponses) Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreadReadDraftTableRowsWithResponse(ctx context.Context, tableIdOrName string, body Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreadReadDraftTableRowsJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreadReadDraftTableRowsResponse, error) {
-	rsp, err := c.Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreadReadDraftTableRows(ctx, tableIdOrName, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParsePostcmshubdb202603tablesTableIdOrNamerowsdraftbatchreadReadDraftTableRowsResponse(rsp)
-}
-
-// Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreplaceReplaceDraftTableRowsWithBodyWithResponse Replace rows in batch in draft table
-//
-// Replaces multiple rows as a batch in the draft version of the table, with a maximum of 100 rows per call. See the endpoint `PUT /tables/{tableIdOrName}/rows/{rowId}/draft` for details on updating a single row.
-//
-// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
-//
-// Corresponds with POST /cms/hubdb/2026-03/tables/{tableIdOrName}/rows/draft/batch/replace (the `Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreplaceReplaceDraftTableRows` operationId).
-func (c *ClientWithResponses) Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreplaceReplaceDraftTableRowsWithBodyWithResponse(ctx context.Context, tableIdOrName string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreplaceReplaceDraftTableRowsResponse, error) {
-	rsp, err := c.Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreplaceReplaceDraftTableRowsWithBody(ctx, tableIdOrName, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParsePostcmshubdb202603tablesTableIdOrNamerowsdraftbatchreplaceReplaceDraftTableRowsResponse(rsp)
-}
-
-// Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreplaceReplaceDraftTableRowsWithResponse Replace rows in batch in draft table
-//
-// Replaces multiple rows as a batch in the draft version of the table, with a maximum of 100 rows per call. See the endpoint `PUT /tables/{tableIdOrName}/rows/{rowId}/draft` for details on updating a single row.
-//
-// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
-//
-// Corresponds with POST /cms/hubdb/2026-03/tables/{tableIdOrName}/rows/draft/batch/replace (the `Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreplaceReplaceDraftTableRows` operationId).
-func (c *ClientWithResponses) Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreplaceReplaceDraftTableRowsWithResponse(ctx context.Context, tableIdOrName string, body Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreplaceReplaceDraftTableRowsJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreplaceReplaceDraftTableRowsResponse, error) {
-	rsp, err := c.Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchreplaceReplaceDraftTableRows(ctx, tableIdOrName, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParsePostcmshubdb202603tablesTableIdOrNamerowsdraftbatchreplaceReplaceDraftTableRowsResponse(rsp)
-}
-
-// Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchupdateUpdateDraftTableRowsWithBodyWithResponse Update rows in batch in draft table
-//
-// Updates multiple rows as a batch in the draft version of the table, with a maximum of 100 rows per call. See the endpoint `PATCH /tables/{tableIdOrName}/rows/{rowId}/draft` for details on updating a single row.
-//
-// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
-//
-// Corresponds with POST /cms/hubdb/2026-03/tables/{tableIdOrName}/rows/draft/batch/update (the `Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchupdateUpdateDraftTableRows` operationId).
-func (c *ClientWithResponses) Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchupdateUpdateDraftTableRowsWithBodyWithResponse(ctx context.Context, tableIdOrName string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchupdateUpdateDraftTableRowsResponse, error) {
-	rsp, err := c.Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchupdateUpdateDraftTableRowsWithBody(ctx, tableIdOrName, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParsePostcmshubdb202603tablesTableIdOrNamerowsdraftbatchupdateUpdateDraftTableRowsResponse(rsp)
-}
-
-// Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchupdateUpdateDraftTableRowsWithResponse Update rows in batch in draft table
-//
-// Updates multiple rows as a batch in the draft version of the table, with a maximum of 100 rows per call. See the endpoint `PATCH /tables/{tableIdOrName}/rows/{rowId}/draft` for details on updating a single row.
-//
-// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
-//
-// Corresponds with POST /cms/hubdb/2026-03/tables/{tableIdOrName}/rows/draft/batch/update (the `Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchupdateUpdateDraftTableRows` operationId).
-func (c *ClientWithResponses) Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchupdateUpdateDraftTableRowsWithResponse(ctx context.Context, tableIdOrName string, body Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchupdateUpdateDraftTableRowsJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchupdateUpdateDraftTableRowsResponse, error) {
-	rsp, err := c.Postcmshubdb202603tablesTableIdOrNamerowsdraftbatchupdateUpdateDraftTableRows(ctx, tableIdOrName, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParsePostcmshubdb202603tablesTableIdOrNamerowsdraftbatchupdateUpdateDraftTableRowsResponse(rsp)
-}
-
-// Getcmshubdb202603tablesTableIdOrNamerowsRowIdGetTableRowWithResponse Get a table row
-//
-// Get a single row by ID from the published version of a table.
-// **Note:** This endpoint can be accessed without any authentication, if the table is set to be allowed for public access.
-//
-// Returns a wrapper object for the known response body format(s).
-//
-// Corresponds with GET /cms/hubdb/2026-03/tables/{tableIdOrName}/rows/{rowId} (the `Getcmshubdb202603tablesTableIdOrNamerowsRowIdGetTableRow` operationId).
-func (c *ClientWithResponses) Getcmshubdb202603tablesTableIdOrNamerowsRowIdGetTableRowWithResponse(ctx context.Context, tableIdOrName string, rowId string, params *Getcmshubdb202603tablesTableIdOrNamerowsRowIdGetTableRowParams, reqEditors ...RequestEditorFn) (*Getcmshubdb202603tablesTableIdOrNamerowsRowIdGetTableRowResponse, error) {
-	rsp, err := c.Getcmshubdb202603tablesTableIdOrNamerowsRowIdGetTableRow(ctx, tableIdOrName, rowId, params, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseGetcmshubdb202603tablesTableIdOrNamerowsRowIdGetTableRowResponse(rsp)
-}
-
-// Deletecmshubdb202603tablesTableIdOrNamerowsRowIddraftPurgeDraftTableRowWithResponse Permanently deletes a row
-//
-// Permanently deletes a row from a table's draft version.
-//
-// Returns a wrapper object for the known response body format(s).
-//
-// Corresponds with DELETE /cms/hubdb/2026-03/tables/{tableIdOrName}/rows/{rowId}/draft (the `Deletecmshubdb202603tablesTableIdOrNamerowsRowIddraftPurgeDraftTableRow` operationId).
-func (c *ClientWithResponses) Deletecmshubdb202603tablesTableIdOrNamerowsRowIddraftPurgeDraftTableRowWithResponse(ctx context.Context, tableIdOrName string, rowId string, reqEditors ...RequestEditorFn) (*Deletecmshubdb202603tablesTableIdOrNamerowsRowIddraftPurgeDraftTableRowResponse, error) {
-	rsp, err := c.Deletecmshubdb202603tablesTableIdOrNamerowsRowIddraftPurgeDraftTableRow(ctx, tableIdOrName, rowId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseDeletecmshubdb202603tablesTableIdOrNamerowsRowIddraftPurgeDraftTableRowResponse(rsp)
-}
-
-// Getcmshubdb202603tablesTableIdOrNamerowsRowIddraftGetDraftTableRowByIdWithResponse Get a row from the draft table
-//
-// Get a single row by ID from a table's draft version.
-//
-// Returns a wrapper object for the known response body format(s).
-//
-// Corresponds with GET /cms/hubdb/2026-03/tables/{tableIdOrName}/rows/{rowId}/draft (the `Getcmshubdb202603tablesTableIdOrNamerowsRowIddraftGetDraftTableRowById` operationId).
-func (c *ClientWithResponses) Getcmshubdb202603tablesTableIdOrNamerowsRowIddraftGetDraftTableRowByIdWithResponse(ctx context.Context, tableIdOrName string, rowId string, params *Getcmshubdb202603tablesTableIdOrNamerowsRowIddraftGetDraftTableRowByIdParams, reqEditors ...RequestEditorFn) (*Getcmshubdb202603tablesTableIdOrNamerowsRowIddraftGetDraftTableRowByIdResponse, error) {
-	rsp, err := c.Getcmshubdb202603tablesTableIdOrNamerowsRowIddraftGetDraftTableRowById(ctx, tableIdOrName, rowId, params, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseGetcmshubdb202603tablesTableIdOrNamerowsRowIddraftGetDraftTableRowByIdResponse(rsp)
-}
-
-// Patchcmshubdb202603tablesTableIdOrNamerowsRowIddraftUpdateDraftTableRowWithBodyWithResponse Updates an existing row
-//
-// Partially update a single row in the table's draft version.
-// All the column values need not be specified. Only the columns or fields that needs to be modified can be specified.
-// See the "Create a row" endpoint for instructions on how to format the JSON row definitions.
-//
-// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
-//
-// Corresponds with PATCH /cms/hubdb/2026-03/tables/{tableIdOrName}/rows/{rowId}/draft (the `Patchcmshubdb202603tablesTableIdOrNamerowsRowIddraftUpdateDraftTableRow` operationId).
-func (c *ClientWithResponses) Patchcmshubdb202603tablesTableIdOrNamerowsRowIddraftUpdateDraftTableRowWithBodyWithResponse(ctx context.Context, tableIdOrName string, rowId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Patchcmshubdb202603tablesTableIdOrNamerowsRowIddraftUpdateDraftTableRowResponse, error) {
-	rsp, err := c.Patchcmshubdb202603tablesTableIdOrNamerowsRowIddraftUpdateDraftTableRowWithBody(ctx, tableIdOrName, rowId, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParsePatchcmshubdb202603tablesTableIdOrNamerowsRowIddraftUpdateDraftTableRowResponse(rsp)
 }

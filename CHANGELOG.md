@@ -2,6 +2,16 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.4.1, 2026-11-03
+
+- Added the CMS site search operation for spec version 2026-03 back, under a longer name: `GetcmssiteSearch202603searchcmssiteSearch202603search` and `GetcmssiteSearch202603searchcmssiteSearch202603searchWithResponse` on `Client` and `ClientWithResponses`, and the matching methods on `ClientInterface` and `ClientWithResponsesInterface`. The request builder is `NewGetcmssiteSearch202603searchcmssiteSearch202603searchRequest` and the response parser is `ParseGetcmssiteSearch202603searchcmssiteSearch202603searchResponse`.
+- Added the types for that operation: `GetcmssiteSearch202603searchcmssiteSearch202603searchParams`, `GetcmssiteSearch202603searchcmssiteSearch202603searchResponse`, the `...ParamsLanguage` enum (one constant per language code), `...ParamsLength` (`SHORT`, `LONG`) and `...ParamsTypes` (`BLOGPOST`, `KNOWLEDGEARTICLE`, `LANDINGPAGE`, `LISTINGPAGE`, `SITEPAGE`, `STRUCTUREDCONTENT`).
+- Added the result types `PublicSearchResults`, `ContentSearchResult`, `ContentSearchResultLanguage` and `ContentSearchResultType`, with their constants. The regeneration removes no exported identifier.
+- Added the URL mappings create operation: `PosturlMappings202603urlMappingsurlMappingsv3urlMappings` and `PosturlMappings202603urlMappingsurlMappingsv3urlMappingsWithResponse`, with `NewPosturlMappings202603urlMappingsurlMappingsv3urlMappingsRequest` and the request body type `PosturlMappings202603urlMappingsurlMappingsv3urlMappingsJSONRequestBody`.
+- Added the field `JSON200` and the method `GetJSON200` on `GeturlMappings202603urlMappingsurlMappingsv3urlMappingsResponse` and `GeturlMappings202603urlMappingsIdurlMappingsv3urlMappingsIdResponse`.
+- Types that implement `ClientInterface` or `ClientWithResponsesInterface`, such as test mocks, need the four new methods.
+- Generated code moved between `client_NNN.gen.go` files, and a new `client_005.gen.go` file was added. This has no effect on callers.
+
 ## v0.4.0, 2026-11-02
 
 - Breaking: removed the CMS site search operation for spec version 2026-03: `GetcmssiteSearch202603search` on `Client`, `GetcmssiteSearch202603searchWithResponse` on `ClientWithResponses`, and the matching methods on `ClientInterface` and `ClientWithResponsesInterface`. The spec no longer has this endpoint.

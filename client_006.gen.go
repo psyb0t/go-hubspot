@@ -5559,6 +5559,23 @@ func (c *Client) GetcmssiteSearch202603indexedDataContentIdGetById(ctx context.C
 	return c.Client.Do(req)
 }
 
+// GetcmssiteSearch202603searchcmssiteSearch202603search Search your site
+//
+// Returns any website content matching the given search criteria for a given HubSpot account. Searches can be filtered by content type, domain, or URL path. Includes options for weighing results by recency and popularity, along with language support.
+//
+// Corresponds with GET /cms/site-search/2026-03/search (the `GetcmssiteSearch202603searchcmssiteSearch202603search` operationId).
+func (c *Client) GetcmssiteSearch202603searchcmssiteSearch202603search(ctx context.Context, params *GetcmssiteSearch202603searchcmssiteSearch202603searchParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetcmssiteSearch202603searchcmssiteSearch202603searchRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // PostcmssourceCode202603extractasyncDoAsyncWithBody Extract a zip file
 //
 // Extract a zip file in the developer file system. Extraction status can be checked with the `/extract/async/tasks/taskId/status` endpoint below.
@@ -19993,25 +20010,6 @@ func (c *Client) Postcrmobjects202603usersbatchcreateWithBody(ctx context.Contex
 // Corresponds with POST /crm/objects/2026-03/users/batch/create (the `Postcrmobjects202603usersbatchcreate` operationId).
 func (c *Client) Postcrmobjects202603usersbatchcreate(ctx context.Context, body Postcrmobjects202603usersbatchcreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostcrmobjects202603usersbatchcreateRequest(c.Server, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-// Postcrmobjects202603usersbatchreadWithBody Read a batch of users by internal ID, or unique property values
-//
-// Retrieve records by record ID or include the `idProperty` parameter to retrieve records by a custom unique value property.
-//
-// Takes any type of body and a specified content type.
-//
-// Corresponds with POST /crm/objects/2026-03/users/batch/read (the `Postcrmobjects202603usersbatchread` operationId).
-func (c *Client) Postcrmobjects202603usersbatchreadWithBody(ctx context.Context, params *Postcrmobjects202603usersbatchreadParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewPostcrmobjects202603usersbatchreadRequestWithBody(c.Server, params, contentType, body)
 	if err != nil {
 		return nil, err
 	}
