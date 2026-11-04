@@ -2,6 +2,15 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.5.0, 2026-11-04
+
+- Breaking: renamed the webhooks journal subscription response type `SubscriptionResponseMarch2027` to `SubscriptionResponse1`. The spec dropped the `March2027` suffix and the name `SubscriptionResponse` is already taken, so the generator added `1`.
+- Breaking: renamed the matching enum types and constants. `SubscriptionResponseMarch2027Actions` and `SubscriptionResponseMarch2027SubscriptionType` are now `SubscriptionResponse1Actions` and `SubscriptionResponse1SubscriptionType`, and each constant such as `SubscriptionResponseMarch2027ActionsCREATE` is now `SubscriptionResponse1ActionsCREATE`.
+- Breaking: renamed `CollectionResponseSubscriptionResponseMarch2027NoPaging` to `CollectionResponseSubscriptionResponseNoPaging`. This changes the type of `JSON200` and the return type of `GetJSON200` on `GetwebhooksJournalsubscriptions202603Response`.
+- Breaking: removed the field `IncludeSensitivePropertiesChanged` from the subscription response type, now `SubscriptionResponse1`.
+- The fields of `SubscriptionResponse1` now carry doc comments from the spec.
+- Generated code moved between `client_NNN.gen.go` files. This has no effect on callers.
+
 ## v0.4.1, 2026-11-03
 
 - Added the CMS site search operation for spec version 2026-03 back, under a longer name: `GetcmssiteSearch202603searchcmssiteSearch202603search` and `GetcmssiteSearch202603searchcmssiteSearch202603searchWithResponse` on `Client` and `ClientWithResponses`, and the matching methods on `ClientInterface` and `ClientWithResponsesInterface`. The request builder is `NewGetcmssiteSearch202603searchcmssiteSearch202603searchRequest` and the response parser is `ParseGetcmssiteSearch202603searchcmssiteSearch202603searchResponse`.

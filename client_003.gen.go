@@ -9079,81 +9079,81 @@ func (e SubscriptionResponseEventType) Valid() bool {
 	}
 }
 
-// Defines values for SubscriptionResponseMarch2027Actions.
+// Defines values for SubscriptionResponse1Actions.
 const (
-	SubscriptionResponseMarch2027ActionsADDEDTOLIST        SubscriptionResponseMarch2027Actions = "ADDED_TO_LIST"
-	SubscriptionResponseMarch2027ActionsAPPINSTALL         SubscriptionResponseMarch2027Actions = "APP_INSTALL"
-	SubscriptionResponseMarch2027ActionsAPPUNINSTALL       SubscriptionResponseMarch2027Actions = "APP_UNINSTALL"
-	SubscriptionResponseMarch2027ActionsASSOCIATIONADDED   SubscriptionResponseMarch2027Actions = "ASSOCIATION_ADDED"
-	SubscriptionResponseMarch2027ActionsASSOCIATIONREMOVED SubscriptionResponseMarch2027Actions = "ASSOCIATION_REMOVED"
-	SubscriptionResponseMarch2027ActionsCREATE             SubscriptionResponseMarch2027Actions = "CREATE"
-	SubscriptionResponseMarch2027ActionsDELETE             SubscriptionResponseMarch2027Actions = "DELETE"
-	SubscriptionResponseMarch2027ActionsGDPRDELETE         SubscriptionResponseMarch2027Actions = "GDPR_DELETE"
-	SubscriptionResponseMarch2027ActionsMERGE              SubscriptionResponseMarch2027Actions = "MERGE"
-	SubscriptionResponseMarch2027ActionsREMOVEDFROMLIST    SubscriptionResponseMarch2027Actions = "REMOVED_FROM_LIST"
-	SubscriptionResponseMarch2027ActionsRESTORE            SubscriptionResponseMarch2027Actions = "RESTORE"
-	SubscriptionResponseMarch2027ActionsSNAPSHOT           SubscriptionResponseMarch2027Actions = "SNAPSHOT"
-	SubscriptionResponseMarch2027ActionsUPDATE             SubscriptionResponseMarch2027Actions = "UPDATE"
+	SubscriptionResponse1ActionsADDEDTOLIST        SubscriptionResponse1Actions = "ADDED_TO_LIST"
+	SubscriptionResponse1ActionsAPPINSTALL         SubscriptionResponse1Actions = "APP_INSTALL"
+	SubscriptionResponse1ActionsAPPUNINSTALL       SubscriptionResponse1Actions = "APP_UNINSTALL"
+	SubscriptionResponse1ActionsASSOCIATIONADDED   SubscriptionResponse1Actions = "ASSOCIATION_ADDED"
+	SubscriptionResponse1ActionsASSOCIATIONREMOVED SubscriptionResponse1Actions = "ASSOCIATION_REMOVED"
+	SubscriptionResponse1ActionsCREATE             SubscriptionResponse1Actions = "CREATE"
+	SubscriptionResponse1ActionsDELETE             SubscriptionResponse1Actions = "DELETE"
+	SubscriptionResponse1ActionsGDPRDELETE         SubscriptionResponse1Actions = "GDPR_DELETE"
+	SubscriptionResponse1ActionsMERGE              SubscriptionResponse1Actions = "MERGE"
+	SubscriptionResponse1ActionsREMOVEDFROMLIST    SubscriptionResponse1Actions = "REMOVED_FROM_LIST"
+	SubscriptionResponse1ActionsRESTORE            SubscriptionResponse1Actions = "RESTORE"
+	SubscriptionResponse1ActionsSNAPSHOT           SubscriptionResponse1Actions = "SNAPSHOT"
+	SubscriptionResponse1ActionsUPDATE             SubscriptionResponse1Actions = "UPDATE"
 )
 
-// Valid indicates whether the value is a known member of the SubscriptionResponseMarch2027Actions enum.
-func (e SubscriptionResponseMarch2027Actions) Valid() bool {
+// Valid indicates whether the value is a known member of the SubscriptionResponse1Actions enum.
+func (e SubscriptionResponse1Actions) Valid() bool {
 	switch e {
-	case SubscriptionResponseMarch2027ActionsADDEDTOLIST:
+	case SubscriptionResponse1ActionsADDEDTOLIST:
 		return true
-	case SubscriptionResponseMarch2027ActionsAPPINSTALL:
+	case SubscriptionResponse1ActionsAPPINSTALL:
 		return true
-	case SubscriptionResponseMarch2027ActionsAPPUNINSTALL:
+	case SubscriptionResponse1ActionsAPPUNINSTALL:
 		return true
-	case SubscriptionResponseMarch2027ActionsASSOCIATIONADDED:
+	case SubscriptionResponse1ActionsASSOCIATIONADDED:
 		return true
-	case SubscriptionResponseMarch2027ActionsASSOCIATIONREMOVED:
+	case SubscriptionResponse1ActionsASSOCIATIONREMOVED:
 		return true
-	case SubscriptionResponseMarch2027ActionsCREATE:
+	case SubscriptionResponse1ActionsCREATE:
 		return true
-	case SubscriptionResponseMarch2027ActionsDELETE:
+	case SubscriptionResponse1ActionsDELETE:
 		return true
-	case SubscriptionResponseMarch2027ActionsGDPRDELETE:
+	case SubscriptionResponse1ActionsGDPRDELETE:
 		return true
-	case SubscriptionResponseMarch2027ActionsMERGE:
+	case SubscriptionResponse1ActionsMERGE:
 		return true
-	case SubscriptionResponseMarch2027ActionsREMOVEDFROMLIST:
+	case SubscriptionResponse1ActionsREMOVEDFROMLIST:
 		return true
-	case SubscriptionResponseMarch2027ActionsRESTORE:
+	case SubscriptionResponse1ActionsRESTORE:
 		return true
-	case SubscriptionResponseMarch2027ActionsSNAPSHOT:
+	case SubscriptionResponse1ActionsSNAPSHOT:
 		return true
-	case SubscriptionResponseMarch2027ActionsUPDATE:
+	case SubscriptionResponse1ActionsUPDATE:
 		return true
 	default:
 		return false
 	}
 }
 
-// Defines values for SubscriptionResponseMarch2027SubscriptionType.
+// Defines values for SubscriptionResponse1SubscriptionType.
 const (
-	SubscriptionResponseMarch2027SubscriptionTypeAPPLIFECYCLEEVENT   SubscriptionResponseMarch2027SubscriptionType = "APP_LIFECYCLE_EVENT"
-	SubscriptionResponseMarch2027SubscriptionTypeASSOCIATION         SubscriptionResponseMarch2027SubscriptionType = "ASSOCIATION"
-	SubscriptionResponseMarch2027SubscriptionTypeEVENT               SubscriptionResponseMarch2027SubscriptionType = "EVENT"
-	SubscriptionResponseMarch2027SubscriptionTypeGDPRPRIVACYDELETION SubscriptionResponseMarch2027SubscriptionType = "GDPR_PRIVACY_DELETION"
-	SubscriptionResponseMarch2027SubscriptionTypeLISTMEMBERSHIP      SubscriptionResponseMarch2027SubscriptionType = "LIST_MEMBERSHIP"
-	SubscriptionResponseMarch2027SubscriptionTypeOBJECT              SubscriptionResponseMarch2027SubscriptionType = "OBJECT"
+	SubscriptionResponse1SubscriptionTypeAPPLIFECYCLEEVENT   SubscriptionResponse1SubscriptionType = "APP_LIFECYCLE_EVENT"
+	SubscriptionResponse1SubscriptionTypeASSOCIATION         SubscriptionResponse1SubscriptionType = "ASSOCIATION"
+	SubscriptionResponse1SubscriptionTypeEVENT               SubscriptionResponse1SubscriptionType = "EVENT"
+	SubscriptionResponse1SubscriptionTypeGDPRPRIVACYDELETION SubscriptionResponse1SubscriptionType = "GDPR_PRIVACY_DELETION"
+	SubscriptionResponse1SubscriptionTypeLISTMEMBERSHIP      SubscriptionResponse1SubscriptionType = "LIST_MEMBERSHIP"
+	SubscriptionResponse1SubscriptionTypeOBJECT              SubscriptionResponse1SubscriptionType = "OBJECT"
 )
 
-// Valid indicates whether the value is a known member of the SubscriptionResponseMarch2027SubscriptionType enum.
-func (e SubscriptionResponseMarch2027SubscriptionType) Valid() bool {
+// Valid indicates whether the value is a known member of the SubscriptionResponse1SubscriptionType enum.
+func (e SubscriptionResponse1SubscriptionType) Valid() bool {
 	switch e {
-	case SubscriptionResponseMarch2027SubscriptionTypeAPPLIFECYCLEEVENT:
+	case SubscriptionResponse1SubscriptionTypeAPPLIFECYCLEEVENT:
 		return true
-	case SubscriptionResponseMarch2027SubscriptionTypeASSOCIATION:
+	case SubscriptionResponse1SubscriptionTypeASSOCIATION:
 		return true
-	case SubscriptionResponseMarch2027SubscriptionTypeEVENT:
+	case SubscriptionResponse1SubscriptionTypeEVENT:
 		return true
-	case SubscriptionResponseMarch2027SubscriptionTypeGDPRPRIVACYDELETION:
+	case SubscriptionResponse1SubscriptionTypeGDPRPRIVACYDELETION:
 		return true
-	case SubscriptionResponseMarch2027SubscriptionTypeLISTMEMBERSHIP:
+	case SubscriptionResponse1SubscriptionTypeLISTMEMBERSHIP:
 		return true
-	case SubscriptionResponseMarch2027SubscriptionTypeOBJECT:
+	case SubscriptionResponse1SubscriptionTypeOBJECT:
 		return true
 	default:
 		return false

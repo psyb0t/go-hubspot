@@ -16760,11 +16760,11 @@ type GetwebhooksJournalsubscriptions202603Response struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *CollectionResponseSubscriptionResponseMarch2027NoPaging
+	JSON200 *CollectionResponseSubscriptionResponseNoPaging
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r GetwebhooksJournalsubscriptions202603Response) GetJSON200() *CollectionResponseSubscriptionResponseMarch2027NoPaging {
+func (r GetwebhooksJournalsubscriptions202603Response) GetJSON200() *CollectionResponseSubscriptionResponseNoPaging {
 	return r.JSON200
 }
 

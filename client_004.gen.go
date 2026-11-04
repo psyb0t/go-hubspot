@@ -3787,9 +3787,10 @@ type CollectionResponseSmtpApiTokenViewForwardPaging struct {
 	Results []SmtpApiTokenView `json:"results"`
 }
 
-// CollectionResponseSubscriptionResponseMarch2027NoPaging defines model for CollectionResponseSubscriptionResponseMarch2027NoPaging.
-type CollectionResponseSubscriptionResponseMarch2027NoPaging struct {
-	Results []SubscriptionResponseMarch2027 `json:"results"`
+// CollectionResponseSubscriptionResponseNoPaging defines model for CollectionResponseSubscriptionResponseNoPaging.
+type CollectionResponseSubscriptionResponseNoPaging struct {
+	// Results An array of SubscriptionResponse objects, each representing a subscription's details such as actions, appId, createdAt, and other relevant properties.
+	Results []SubscriptionResponse1 `json:"results"`
 }
 
 // CollectionResponseWithTotalBlog defines model for CollectionResponseWithTotalBlog.
@@ -17038,31 +17039,59 @@ type SubscriptionResponse struct {
 // SubscriptionResponseEventType The type of event that triggers the subscription. Valid values include various property changes, creations, deletions, merges, restores, and association changes for different HubSpot objects.
 type SubscriptionResponseEventType string
 
-// SubscriptionResponseMarch2027 defines model for SubscriptionResponseMarch2027.
-type SubscriptionResponseMarch2027 struct {
-	ActionOverrides                   *map[string]ActionOverrideRequest             `json:"actionOverrides,omitempty"`
-	Actions                           []SubscriptionResponseMarch2027Actions        `json:"actions"`
-	AppId                             int64                                         `json:"appId"`
-	AssociatedObjectTypeIds           *[]string                                     `json:"associatedObjectTypeIds,omitempty"`
-	CreatedAt                         time.Time                                     `json:"createdAt"`
-	CreatedBy                         *int64                                        `json:"createdBy,omitempty"`
-	DeletedAt                         *time.Time                                    `json:"deletedAt,omitempty"`
-	Id                                int64                                         `json:"id"`
-	IncludeSensitivePropertiesChanged *bool                                         `json:"includeSensitivePropertiesChanged,omitempty"`
-	ListIds                           *[]int64                                      `json:"listIds,omitempty"`
-	ObjectIds                         *[]int64                                      `json:"objectIds,omitempty"`
-	ObjectTypeId                      string                                        `json:"objectTypeId"`
-	PortalId                          *int64                                        `json:"portalId,omitempty"`
-	Properties                        *[]string                                     `json:"properties,omitempty"`
-	SubscriptionType                  SubscriptionResponseMarch2027SubscriptionType `json:"subscriptionType"`
-	UpdatedAt                         time.Time                                     `json:"updatedAt"`
+// SubscriptionResponse1 defines model for SubscriptionResponse_1.
+type SubscriptionResponse1 struct {
+	// ActionOverrides An object containing action overrides, where each key is an action and the value is an ActionOverrideRequest object.
+	ActionOverrides *map[string]ActionOverrideRequest `json:"actionOverrides,omitempty"`
+
+	// Actions A list of actions that trigger the subscription. Possible values include 'CREATE', 'UPDATE', 'DELETE', 'MERGE', 'RESTORE', 'ASSOCIATION_ADDED', 'ASSOCIATION_REMOVED', 'SNAPSHOT', 'APP_INSTALL', 'APP_UNINSTALL', 'ADDED_TO_LIST', 'REMOVED_FROM_LIST', and 'GDPR_DELETE'.
+	Actions []SubscriptionResponse1Actions `json:"actions"`
+
+	// AppId The unique identifier for the app associated with the subscription. It is an integer formatted as int64.
+	AppId int64 `json:"appId"`
+
+	// AssociatedObjectTypeIds A list of associated object type IDs. Each ID is a string.
+	AssociatedObjectTypeIds *[]string `json:"associatedObjectTypeIds,omitempty"`
+
+	// CreatedAt The date and time when the subscription was created, in ISO 8601 format.
+	CreatedAt time.Time `json:"createdAt"`
+
+	// CreatedBy The ID of the user who created the subscription. It is an integer formatted as int64.
+	CreatedBy *int64 `json:"createdBy,omitempty"`
+
+	// DeletedAt The date and time when the subscription was deleted, in ISO 8601 format, if applicable.
+	DeletedAt *time.Time `json:"deletedAt,omitempty"`
+
+	// Id The unique identifier for the subscription. It is an integer formatted as int64.
+	Id int64 `json:"id"`
+
+	// ListIds A list of list IDs associated with the subscription. Each ID is an integer formatted as int64.
+	ListIds *[]int64 `json:"listIds,omitempty"`
+
+	// ObjectIds A list of object IDs associated with the subscription. Each ID is an integer formatted as int64.
+	ObjectIds *[]int64 `json:"objectIds,omitempty"`
+
+	// ObjectTypeId The identifier for the object type associated with the subscription. It is a string.
+	ObjectTypeId string `json:"objectTypeId"`
+
+	// PortalId The unique identifier for the portal associated with the subscription. It is an integer formatted as int64.
+	PortalId *int64 `json:"portalId,omitempty"`
+
+	// Properties A list of property names associated with the subscription. Each property is a string.
+	Properties *[]string `json:"properties,omitempty"`
+
+	// SubscriptionType The type of subscription, which can be one of the following: 'OBJECT', 'ASSOCIATION', 'EVENT', 'APP_LIFECYCLE_EVENT', 'LIST_MEMBERSHIP', or 'GDPR_PRIVACY_DELETION'.
+	SubscriptionType SubscriptionResponse1SubscriptionType `json:"subscriptionType"`
+
+	// UpdatedAt The date and time when the subscription was last updated, in ISO 8601 format.
+	UpdatedAt time.Time `json:"updatedAt"`
 }
 
-// SubscriptionResponseMarch2027Actions defines model for SubscriptionResponseMarch2027.Actions.
-type SubscriptionResponseMarch2027Actions string
+// SubscriptionResponse1Actions defines model for SubscriptionResponse1.Actions.
+type SubscriptionResponse1Actions string
 
-// SubscriptionResponseMarch2027SubscriptionType defines model for SubscriptionResponseMarch2027.SubscriptionType.
-type SubscriptionResponseMarch2027SubscriptionType string
+// SubscriptionResponse1SubscriptionType The type of subscription, which can be one of the following: 'OBJECT', 'ASSOCIATION', 'EVENT', 'APP_LIFECYCLE_EVENT', 'LIST_MEMBERSHIP', or 'GDPR_PRIVACY_DELETION'.
+type SubscriptionResponse1SubscriptionType string
 
 // SubscriptionUpsertRequest defines model for SubscriptionUpsertRequest.
 type SubscriptionUpsertRequest struct {
@@ -19981,31 +20010,4 @@ type Getcrmobjects202603emailsEmailIdGetByIdParams struct {
 type Patchcrmobjects202603emailsEmailIdUpdateParams struct {
 	// IdProperty The name of a property whose values are unique for this object type
 	IdProperty *string `form:"idProperty,omitempty" json:"idProperty,omitempty"`
-}
-
-// Getcrmobjects202603feedbackSubmissionsGetPageParams defines parameters for Getcrmobjects202603feedbackSubmissionsGetPage.
-type Getcrmobjects202603feedbackSubmissionsGetPageParams struct {
-	// After The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.
-	After *string `form:"after,omitempty" json:"after,omitempty"`
-
-	// Archived Whether to return only results that have been archived.
-	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
-
-	// Associations A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored.
-	Associations *[]string `form:"associations,omitempty" json:"associations,omitempty"`
-
-	// Limit The maximum number of results to display per page.
-	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
-
-	// Properties A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored.
-	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
-
-	// PropertiesWithHistory A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored. Usage of this parameter will reduce the maximum number of objects that can be read by a single request.
-	PropertiesWithHistory *[]string `form:"propertiesWithHistory,omitempty" json:"propertiesWithHistory,omitempty"`
-}
-
-// Postcrmobjects202603feedbackSubmissionsbatchreadReadParams defines parameters for Postcrmobjects202603feedbackSubmissionsbatchreadRead.
-type Postcrmobjects202603feedbackSubmissionsbatchreadReadParams struct {
-	// Archived Whether to return only results that have been archived.
-	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
 }

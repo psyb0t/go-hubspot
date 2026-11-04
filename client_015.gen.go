@@ -5217,7 +5217,7 @@ func ParseGetwebhooksJournalsubscriptions202603Response(rsp *http.Response) (*Ge
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CollectionResponseSubscriptionResponseMarch2027NoPaging
+		var dest CollectionResponseSubscriptionResponseNoPaging
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}

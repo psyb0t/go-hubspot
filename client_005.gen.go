@@ -15,6 +15,33 @@ import (
 	openapi_types "github.com/oapi-codegen/runtime/types"
 )
 
+// Getcrmobjects202603feedbackSubmissionsGetPageParams defines parameters for Getcrmobjects202603feedbackSubmissionsGetPage.
+type Getcrmobjects202603feedbackSubmissionsGetPageParams struct {
+	// After The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.
+	After *string `form:"after,omitempty" json:"after,omitempty"`
+
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+
+	// Associations A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored.
+	Associations *[]string `form:"associations,omitempty" json:"associations,omitempty"`
+
+	// Limit The maximum number of results to display per page.
+	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// Properties A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
+
+	// PropertiesWithHistory A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored. Usage of this parameter will reduce the maximum number of objects that can be read by a single request.
+	PropertiesWithHistory *[]string `form:"propertiesWithHistory,omitempty" json:"propertiesWithHistory,omitempty"`
+}
+
+// Postcrmobjects202603feedbackSubmissionsbatchreadReadParams defines parameters for Postcrmobjects202603feedbackSubmissionsbatchreadRead.
+type Postcrmobjects202603feedbackSubmissionsbatchreadReadParams struct {
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+}
+
 // Getcrmobjects202603feedbackSubmissionsFeedbackSubmissionIdGetByIdParams defines parameters for Getcrmobjects202603feedbackSubmissionsFeedbackSubmissionIdGetById.
 type Getcrmobjects202603feedbackSubmissionsFeedbackSubmissionIdGetByIdParams struct {
 	// Archived Whether to return only results that have been archived.
