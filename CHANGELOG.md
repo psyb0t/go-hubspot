@@ -2,6 +2,13 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.5.1, 2026-11-05
+
+- Rewrote the doc comments on the webhooks journal operations for API version 2026-03, both the `GetwebhooksJournaljournal202603...` and `GetwebhooksJournaljournalLocal202603...` variants. They now describe `count`, offsets and `currentOffset` paging, `errors` and `numErrors` in batch reads, and snapshot status lookups.
+- Rewrote the doc comment on the `InstallPortalId` field of the journal parameter types, such as `GetwebhooksJournaljournalLocal202603batchlatestCountParams`. It now says the field limits results to one account that has installed the app.
+- The title in the comment for `GetwebhooksJournaljournal202603batchlatestCount` is now "Retrieve latest batch".
+- Generated code changed only in comments. No exported identifier or signature changed.
+
 ## v0.5.0, 2026-11-04
 
 - Breaking: renamed the webhooks journal subscription response type `SubscriptionResponseMarch2027` to `SubscriptionResponse1`. The spec dropped the `March2027` suffix and the name `SubscriptionResponse` is already taken, so the generator added `1`.

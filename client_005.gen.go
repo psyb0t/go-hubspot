@@ -1992,19 +1992,19 @@ type GetwebhooksJournaljournalLocal202603batchearliestCountParams struct {
 
 // GetwebhooksJournaljournalLocal202603batchlatestCountParams defines parameters for GetwebhooksJournaljournalLocal202603batchlatestCount.
 type GetwebhooksJournaljournalLocal202603batchlatestCountParams struct {
-	// InstallPortalId The ID of the portal installation. This parameter is optional and can be used to filter results by a specific portal.
+	// InstallPortalId The ID of an account that has installed your app. When set, only entries for that account are returned.
 	InstallPortalId *int32 `form:"installPortalId,omitempty" json:"installPortalId,omitempty"`
 }
 
 // PostwebhooksJournaljournalLocal202603batchreadParams defines parameters for PostwebhooksJournaljournalLocal202603batchread.
 type PostwebhooksJournaljournalLocal202603batchreadParams struct {
-	// InstallPortalId An integer representing the ID of the portal where the installation occurred. This parameter is optional.
+	// InstallPortalId The ID of an account that has installed your app. When set, only entries for that account are returned.
 	InstallPortalId *int32 `form:"installPortalId,omitempty" json:"installPortalId,omitempty"`
 }
 
 // GetwebhooksJournaljournalLocal202603batchOffsetnextCountParams defines parameters for GetwebhooksJournaljournalLocal202603batchOffsetnextCount.
 type GetwebhooksJournaljournalLocal202603batchOffsetnextCountParams struct {
-	// InstallPortalId An integer representing the ID of the portal installation to filter the webhook journal entries.
+	// InstallPortalId The ID of an account that has installed your app. When set, only entries for that account are returned.
 	InstallPortalId *int32 `form:"installPortalId,omitempty" json:"installPortalId,omitempty"`
 }
 
@@ -2034,7 +2034,7 @@ type GetwebhooksJournaljournal202603batchearliestCountParams struct {
 
 // GetwebhooksJournaljournal202603batchlatestCountParams defines parameters for GetwebhooksJournaljournal202603batchlatestCount.
 type GetwebhooksJournaljournal202603batchlatestCountParams struct {
-	// InstallPortalId The ID of the portal installation. This parameter is optional and used to filter the results by a specific portal.
+	// InstallPortalId The ID of an account that has installed your app. When set, only entries for that account are returned.
 	InstallPortalId *int32 `form:"installPortalId,omitempty" json:"installPortalId,omitempty"`
 }
 
@@ -2046,7 +2046,7 @@ type PostwebhooksJournaljournal202603batchreadParams struct {
 
 // GetwebhooksJournaljournal202603batchOffsetnextCountParams defines parameters for GetwebhooksJournaljournal202603batchOffsetnextCount.
 type GetwebhooksJournaljournal202603batchOffsetnextCountParams struct {
-	// InstallPortalId The ID of the portal where the webhook is installed. This is an integer value.
+	// InstallPortalId The ID of an account that has installed your app. When set, only entries for that account are returned.
 	InstallPortalId *int32 `form:"installPortalId,omitempty" json:"installPortalId,omitempty"`
 }
 
@@ -2064,7 +2064,7 @@ type GetwebhooksJournaljournal202603latestParams struct {
 
 // GetwebhooksJournaljournal202603offsetOffsetnextParams defines parameters for GetwebhooksJournaljournal202603offsetOffsetnext.
 type GetwebhooksJournaljournal202603offsetOffsetnextParams struct {
-	// InstallPortalId The ID of the portal where the webhook is installed. This is an integer value.
+	// InstallPortalId The ID of an account that has installed your app. When set, only entries for that account are returned.
 	InstallPortalId *int32 `form:"installPortalId,omitempty" json:"installPortalId,omitempty"`
 }
 
@@ -31238,21 +31238,21 @@ type ClientInterface interface {
 
 	// GetwebhooksJournaljournalLocal202603batchearliestCount Fetch earliest batch
 	//
-	// Retrieve the earliest batch of webhook journal entries. This endpoint is useful for accessing the oldest available data in the webhook journal, allowing users to process or analyze historical webhook events. The number of entries to fetch is specified by the 'count' path parameter.
+	// Retrieve the oldest entries still available in your app's journal, up to `count`.
 	//
 	// Corresponds with GET /webhooks-journal/journal-local/2026-03/batch/earliest/{count} (the `GetwebhooksJournaljournalLocal202603batchearliestCount` operationId).
 	GetwebhooksJournaljournalLocal202603batchearliestCount(ctx context.Context, count int32, params *GetwebhooksJournaljournalLocal202603batchearliestCountParams, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// GetwebhooksJournaljournalLocal202603batchlatestCount Retrieve Latest Batch
 	//
-	// Retrieve the latest batch of webhook journal entries. This endpoint allows you to specify the number of entries to fetch, providing a way to access the most recent webhook events processed by your HubSpot account.
+	// Retrieve the most recent entries in your app's journal, up to `count`. Entries are returned oldest first.
 	//
 	// Corresponds with GET /webhooks-journal/journal-local/2026-03/batch/latest/{count} (the `GetwebhooksJournaljournalLocal202603batchlatestCount` operationId).
 	GetwebhooksJournaljournalLocal202603batchlatestCount(ctx context.Context, count int32, params *GetwebhooksJournaljournalLocal202603batchlatestCountParams, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// PostwebhooksJournaljournalLocal202603batchreadWithBody Batch read
 	//
-	// Execute a batch read operation on the webhooks journal. This endpoint allows you to retrieve a batch of webhook journal entries by providing the necessary input data. It is useful for processing multiple records in a single request, streamlining data retrieval tasks.
+	// Fetch up to 100 journal entries by offset in a single request. Offsets that can't be fetched don't fail the request; they're listed in `errors` and counted in `numErrors`.
 	//
 	// Takes any type of body and a specified content type.
 	//
@@ -31261,7 +31261,7 @@ type ClientInterface interface {
 
 	// PostwebhooksJournaljournalLocal202603batchread Batch read
 	//
-	// Execute a batch read operation on the webhooks journal. This endpoint allows you to retrieve a batch of webhook journal entries by providing the necessary input data. It is useful for processing multiple records in a single request, streamlining data retrieval tasks.
+	// Fetch up to 100 journal entries by offset in a single request. Offsets that can't be fetched don't fail the request; they're listed in `errors` and counted in `numErrors`.
 	//
 	// Takes a body of the `application/json` content type.
 	//
@@ -31270,56 +31270,56 @@ type ClientInterface interface {
 
 	// GetwebhooksJournaljournalLocal202603batchOffsetnextCount Fetch Batch
 	//
-	// Retrieve a batch of webhook journal entries starting from a specified offset. This endpoint is useful for paginating through large sets of webhook data. The number of entries returned is determined by the 'count' parameter.
+	// Retrieve up to `count` entries that follow the given offset. Pass the last entry's `currentOffset` to fetch the next page.
 	//
 	// Corresponds with GET /webhooks-journal/journal-local/2026-03/batch/{offset}/next/{count} (the `GetwebhooksJournaljournalLocal202603batchOffsetnextCount` operationId).
 	GetwebhooksJournaljournalLocal202603batchOffsetnextCount(ctx context.Context, offset string, count int32, params *GetwebhooksJournaljournalLocal202603batchOffsetnextCountParams, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// GetwebhooksJournaljournalLocal202603earliest Retrieve earliest
 	//
-	// Retrieve the earliest webhook journal entries for the specified portal. This endpoint can be used to access the oldest records available in the webhook journal, which may be useful for auditing or historical analysis.
+	// Retrieve the oldest entry still available in your app's journal. Use `installPortalId` to limit it to one account.
 	//
 	// Corresponds with GET /webhooks-journal/journal-local/2026-03/earliest (the `GetwebhooksJournaljournalLocal202603earliest` operationId).
 	GetwebhooksJournaljournalLocal202603earliest(ctx context.Context, params *GetwebhooksJournaljournalLocal202603earliestParams, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// GetwebhooksJournaljournalLocal202603latest Retrieve latest
 	//
-	// Retrieve the latest entries from the webhooks journal for the specified portal. This endpoint is useful for accessing the most recent webhook events that have been logged, allowing for real-time monitoring or debugging of webhook activities.
+	// Retrieve the most recent entry in your app's journal. Use `installPortalId` to limit it to one account.
 	//
 	// Corresponds with GET /webhooks-journal/journal-local/2026-03/latest (the `GetwebhooksJournaljournalLocal202603latest` operationId).
 	GetwebhooksJournaljournalLocal202603latest(ctx context.Context, params *GetwebhooksJournaljournalLocal202603latestParams, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// GetwebhooksJournaljournalLocal202603offsetOffsetnext Retrieve Next Batch
 	//
-	// Retrieve the next set of webhook journal entries starting from a specified offset. This endpoint is useful for paginating through large sets of webhook data, allowing you to continue from where a previous request left off.
+	// Retrieve the entry that follows the given offset. Fails with a `404` if the offset has expired or doesn't exist.
 	//
 	// Corresponds with GET /webhooks-journal/journal-local/2026-03/offset/{offset}/next (the `GetwebhooksJournaljournalLocal202603offsetOffsetnext` operationId).
 	GetwebhooksJournaljournalLocal202603offsetOffsetnext(ctx context.Context, offset string, params *GetwebhooksJournaljournalLocal202603offsetOffsetnextParams, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// GetwebhooksJournaljournalLocal202603statusStatusId Retrieve status
 	//
-	// Retrieve the status of a specific webhook journal entry using its unique status ID. This endpoint is useful for monitoring the progress or outcome of webhook journal entries, allowing you to check if an entry is pending, in progress, completed, failed, or expired.
+	// Retrieve the status of a snapshot request. Use the `snapshotStatusId` returned when the snapshot was requested.
 	//
 	// Corresponds with GET /webhooks-journal/journal-local/2026-03/status/{statusId} (the `GetwebhooksJournaljournalLocal202603statusStatusId` operationId).
 	GetwebhooksJournaljournalLocal202603statusStatusId(ctx context.Context, statusId openapi_types.UUID, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// GetwebhooksJournaljournal202603batchearliestCount Fetch Earliest Batch
 	//
-	// Retrieve the earliest batch of webhook journal entries for a specified count. This endpoint is useful for accessing historical webhook data in batches, allowing you to process or analyze older entries. The number of entries retrieved is determined by the count parameter.
+	// Retrieve the oldest entries still available in your app's journal, up to `count`.
 	//
 	// Corresponds with GET /webhooks-journal/journal/2026-03/batch/earliest/{count} (the `GetwebhooksJournaljournal202603batchearliestCount` operationId).
 	GetwebhooksJournaljournal202603batchearliestCount(ctx context.Context, count int32, params *GetwebhooksJournaljournal202603batchearliestCountParams, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// GetwebhooksJournaljournal202603batchlatestCount Retrieve batch
+	// GetwebhooksJournaljournal202603batchlatestCount Retrieve latest batch
 	//
-	// Retrieve the latest batch of webhook journal entries up to the specified count. This endpoint is useful for fetching recent webhook data for analysis or processing. The count parameter determines the maximum number of entries to return.
+	// Retrieve the most recent entries in your app's journal, up to `count`. Entries are returned oldest first.
 	//
 	// Corresponds with GET /webhooks-journal/journal/2026-03/batch/latest/{count} (the `GetwebhooksJournaljournal202603batchlatestCount` operationId).
 	GetwebhooksJournaljournal202603batchlatestCount(ctx context.Context, count int32, params *GetwebhooksJournaljournal202603batchlatestCountParams, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// PostwebhooksJournaljournal202603batchreadWithBody Batch read
 	//
-	// Execute a batch read operation on the webhooks journal for the specified date, 2026-03. This endpoint allows you to retrieve multiple entries from the webhooks journal in a single request, which can be useful for processing large amounts of data efficiently. Ensure that the request body is provided in the required format.
+	// Fetch up to 100 journal entries by offset in a single request. Offsets that can't be fetched don't fail the request; they're listed in `errors` and counted in `numErrors`.
 	//
 	// Takes any type of body and a specified content type.
 	//
@@ -31328,7 +31328,7 @@ type ClientInterface interface {
 
 	// PostwebhooksJournaljournal202603batchread Batch read
 	//
-	// Execute a batch read operation on the webhooks journal for the specified date, 2026-03. This endpoint allows you to retrieve multiple entries from the webhooks journal in a single request, which can be useful for processing large amounts of data efficiently. Ensure that the request body is provided in the required format.
+	// Fetch up to 100 journal entries by offset in a single request. Offsets that can't be fetched don't fail the request; they're listed in `errors` and counted in `numErrors`.
 	//
 	// Takes a body of the `application/json` content type.
 	//
@@ -31337,42 +31337,42 @@ type ClientInterface interface {
 
 	// GetwebhooksJournaljournal202603batchOffsetnextCount Fetch Batch
 	//
-	// Retrieve a batch of webhook journal entries starting from a specified offset. This endpoint allows you to fetch a defined number of entries, which can be useful for processing large datasets in manageable chunks.
+	// Retrieve up to `count` entries that follow the given offset. Pass the last entry's `currentOffset` to fetch the next page.
 	//
 	// Corresponds with GET /webhooks-journal/journal/2026-03/batch/{offset}/next/{count} (the `GetwebhooksJournaljournal202603batchOffsetnextCount` operationId).
 	GetwebhooksJournaljournal202603batchOffsetnextCount(ctx context.Context, offset string, count int32, params *GetwebhooksJournaljournal202603batchOffsetnextCountParams, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// GetwebhooksJournaljournal202603earliest Retrieve earliest entry
 	//
-	// Retrieve the earliest entry from the webhooks journal for the specified portal. This endpoint is useful for accessing the first recorded webhook event in the journal, which can be helpful for auditing or debugging purposes.
+	// Retrieve the oldest entry still available in your app's journal. Use `installPortalId` to limit it to one account.
 	//
 	// Corresponds with GET /webhooks-journal/journal/2026-03/earliest (the `GetwebhooksJournaljournal202603earliest` operationId).
 	GetwebhooksJournaljournal202603earliest(ctx context.Context, params *GetwebhooksJournaljournal202603earliestParams, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// GetwebhooksJournaljournal202603latest Retrieve latest journal
 	//
-	// Retrieve the latest entries from the webhooks journal for the specified portal. This endpoint is useful for accessing the most recent webhook events and their statuses, allowing you to monitor and debug webhook activity effectively.
+	// Retrieve the most recent entry in your app's journal. Use `installPortalId` to limit it to one account.
 	//
 	// Corresponds with GET /webhooks-journal/journal/2026-03/latest (the `GetwebhooksJournaljournal202603latest` operationId).
 	GetwebhooksJournaljournal202603latest(ctx context.Context, params *GetwebhooksJournaljournal202603latestParams, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// GetwebhooksJournaljournal202603offsetOffsetnext Retrieve Next Entries
 	//
-	// Retrieve the next set of entries from the webhooks journal starting from a specified offset. This endpoint is useful for paginating through journal entries to process or analyze webhook events sequentially.
+	// Retrieve the entry that follows the given offset. Fails with a `404` if the offset has expired or doesn't exist.
 	//
 	// Corresponds with GET /webhooks-journal/journal/2026-03/offset/{offset}/next (the `GetwebhooksJournaljournal202603offsetOffsetnext` operationId).
 	GetwebhooksJournaljournal202603offsetOffsetnext(ctx context.Context, offset string, params *GetwebhooksJournaljournal202603offsetOffsetnextParams, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// GetwebhooksJournaljournal202603statusStatusId Retrieve status
 	//
-	// Retrieve the status of a specific webhook journal entry using its unique status ID. This endpoint provides detailed information about the status, including whether it is pending, in progress, completed, failed, or expired. It is useful for monitoring and managing the state of webhook journal entries.
+	// Retrieve the status of a snapshot request. Use the `snapshotStatusId` returned when the snapshot was requested.
 	//
 	// Corresponds with GET /webhooks-journal/journal/2026-03/status/{statusId} (the `GetwebhooksJournaljournal202603statusStatusId` operationId).
 	GetwebhooksJournaljournal202603statusStatusId(ctx context.Context, statusId openapi_types.UUID, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// PostwebhooksJournalsnapshots202603crmWithBody Create Snapshot
 	//
-	// Create a batch of CRM object snapshots in HubSpot. This endpoint is used to capture the current state of specified CRM objects for later reference or analysis. It requires a JSON payload containing the details of the CRM objects to snapshot. This operation is exempt from daily and ten-secondly rate limits.
+	// Capture the current state of up to 200 CRM objects. Each snapshot is written to your journal as a `SNAPSHOT` entry, and its progress can be checked with the status endpoint using the returned `snapshotStatusId`. This operation is exempt from daily and ten-secondly rate limits.
 	//
 	// Takes any type of body and a specified content type.
 	//
@@ -31381,7 +31381,7 @@ type ClientInterface interface {
 
 	// PostwebhooksJournalsnapshots202603crm Create Snapshot
 	//
-	// Create a batch of CRM object snapshots in HubSpot. This endpoint is used to capture the current state of specified CRM objects for later reference or analysis. It requires a JSON payload containing the details of the CRM objects to snapshot. This operation is exempt from daily and ten-secondly rate limits.
+	// Capture the current state of up to 200 CRM objects. Each snapshot is written to your journal as a `SNAPSHOT` entry, and its progress can be checked with the status endpoint using the returned `snapshotStatusId`. This operation is exempt from daily and ten-secondly rate limits.
 	//
 	// Takes a body of the `application/json` content type.
 	//
@@ -31390,14 +31390,14 @@ type ClientInterface interface {
 
 	// GetwebhooksJournalsubscriptions202603 List subscriptions
 	//
-	// Retrieve a list of webhook journal subscriptions. This endpoint provides access to subscription details without pagination, allowing you to view all current subscriptions in a single request. It is useful for managing and reviewing webhook subscriptions for your app.
+	// Retrieve all of your app's subscriptions.
 	//
 	// Corresponds with GET /webhooks-journal/subscriptions/2026-03 (the `GetwebhooksJournalsubscriptions202603` operationId).
 	GetwebhooksJournalsubscriptions202603(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// PostwebhooksJournalsubscriptions202603WithBody Upsert subscription
 	//
-	// Create a new webhook journal subscription for the specified portal. This endpoint allows you to define the actions and object types that the subscription will monitor. It requires a request body with the subscription details.
+	// Create a subscription, or update the existing one with the same subscription type, object type, and account. The request body sets which actions and objects are recorded in your journal.
 	//
 	// Takes any type of body and a specified content type.
 	//
@@ -31406,7 +31406,7 @@ type ClientInterface interface {
 
 	// PostwebhooksJournalsubscriptions202603 Upsert subscription
 	//
-	// Create a new webhook journal subscription for the specified portal. This endpoint allows you to define the actions and object types that the subscription will monitor. It requires a request body with the subscription details.
+	// Create a subscription, or update the existing one with the same subscription type, object type, and account. The request body sets which actions and objects are recorded in your journal.
 	//
 	// Takes a body of the `application/json` content type.
 	//
@@ -31415,7 +31415,7 @@ type ClientInterface interface {
 
 	// PostwebhooksJournalsubscriptions202603filtersWithBody Create Filter
 	//
-	// Create a new filter for a specific webhook subscription in the HubSpot account. This endpoint allows you to define conditions that determine when a webhook should be triggered. The filter is associated with a subscription identified by its ID, and the request must include the filter details.
+	// Add a filter to a subscription. When a subscription has filters, only events that match at least one of them are recorded in your journal.
 	//
 	// Takes any type of body and a specified content type.
 	//
@@ -31424,7 +31424,7 @@ type ClientInterface interface {
 
 	// PostwebhooksJournalsubscriptions202603filters Create Filter
 	//
-	// Create a new filter for a specific webhook subscription in the HubSpot account. This endpoint allows you to define conditions that determine when a webhook should be triggered. The filter is associated with a subscription identified by its ID, and the request must include the filter details.
+	// Add a filter to a subscription. When a subscription has filters, only events that match at least one of them are recorded in your journal.
 	//
 	// Takes a body of the `application/json` content type.
 	//
@@ -31433,42 +31433,42 @@ type ClientInterface interface {
 
 	// GetwebhooksJournalsubscriptions202603filterssubscriptionSubscriptionId Retrieve filters
 	//
-	// Retrieve the filters associated with a specific webhook subscription. This endpoint allows you to view the filters applied to a subscription, which can help in managing and understanding the conditions set for webhook events.
+	// Retrieve all filters attached to a subscription.
 	//
 	// Corresponds with GET /webhooks-journal/subscriptions/2026-03/filters/subscription/{subscriptionId} (the `GetwebhooksJournalsubscriptions202603filterssubscriptionSubscriptionId` operationId).
 	GetwebhooksJournalsubscriptions202603filterssubscriptionSubscriptionId(ctx context.Context, subscriptionId int64, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// DeletewebhooksJournalsubscriptions202603filtersFilterId Delete filter
 	//
-	// Remove a specific filter from the webhooks journal subscriptions. This operation is useful for managing and cleaning up filters that are no longer needed. Once deleted, the filter cannot be recovered.
+	// Delete a filter from its subscription. This can't be undone.
 	//
 	// Corresponds with DELETE /webhooks-journal/subscriptions/2026-03/filters/{filterId} (the `DeletewebhooksJournalsubscriptions202603filtersFilterId` operationId).
 	DeletewebhooksJournalsubscriptions202603filtersFilterId(ctx context.Context, filterId int64, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// GetwebhooksJournalsubscriptions202603filtersFilterId Retrieve filter
 	//
-	// Retrieve a specific filter associated with a webhook journal subscription. This endpoint allows you to access the details of the filter identified by the filterId, which is useful for managing and understanding the conditions applied to webhook events.
+	// Retrieve a filter by its ID.
 	//
 	// Corresponds with GET /webhooks-journal/subscriptions/2026-03/filters/{filterId} (the `GetwebhooksJournalsubscriptions202603filtersFilterId` operationId).
 	GetwebhooksJournalsubscriptions202603filtersFilterId(ctx context.Context, filterId int64, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// DeletewebhooksJournalsubscriptions202603portalsPortalId Delete Subscription
 	//
-	// Delete a webhook journal subscription for a specific portal. This operation removes the subscription associated with the given portalId, ensuring that no further webhook events are sent for this portal. Use this endpoint to manage and clean up subscriptions that are no longer needed.
+	// Delete all of your app's subscriptions for an account, along with their filters. Changes in that account are no longer recorded in your journal.
 	//
 	// Corresponds with DELETE /webhooks-journal/subscriptions/2026-03/portals/{portalId} (the `DeletewebhooksJournalsubscriptions202603portalsPortalId` operationId).
 	DeletewebhooksJournalsubscriptions202603portalsPortalId(ctx context.Context, portalId int64, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// DeletewebhooksJournalsubscriptions202603SubscriptionId Delete subscription
 	//
-	// Delete a specific webhook journal subscription using its unique identifier. This operation is useful for managing and cleaning up subscriptions that are no longer needed in your HubSpot account.
+	// Delete a subscription by its ID.
 	//
 	// Corresponds with DELETE /webhooks-journal/subscriptions/2026-03/{subscriptionId} (the `DeletewebhooksJournalsubscriptions202603SubscriptionId` operationId).
 	DeletewebhooksJournalsubscriptions202603SubscriptionId(ctx context.Context, subscriptionId int64, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// GetwebhooksJournalsubscriptions202603SubscriptionId Retrieve subscription
 	//
-	// Retrieve details of a specific webhook subscription using its unique identifier. This endpoint is useful for obtaining information about a particular subscription, such as its actions, object type, and associated properties.
+	// Retrieve a subscription by its ID.
 	//
 	// Corresponds with GET /webhooks-journal/subscriptions/2026-03/{subscriptionId} (the `GetwebhooksJournalsubscriptions202603SubscriptionId` operationId).
 	GetwebhooksJournalsubscriptions202603SubscriptionId(ctx context.Context, subscriptionId int64, reqEditors ...RequestEditorFn) (*http.Response, error)
