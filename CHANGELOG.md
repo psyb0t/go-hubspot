@@ -2,6 +2,12 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.5.2, 2026-11-10
+
+- Rewrote doc comments on many `Public...` filter types from the spec for API version 2026-03, such as `PublicAbsoluteComparativeTimestampRefineBy`, `PublicAbsoluteRangedTimestampRefineBy`, `PublicAdsSearchFilter`, `PublicAdsTimeFilter`, `PublicAllHistoryRefineBy`, `PublicAllPropertyTypesOperation` and `PublicAndFilterBranch`. They replace "defines model for" with a description of what the type filters.
+- Added doc comments on fields that had none, such as `SearchTerms` on `PublicAdsSearchFilter` and `FilterBranches` on `PublicAndFilterBranch`.
+- Generated code changed only in comments and file placement. The parameter types `Patchcrmobjects202603discountsDiscountIdParams`, `Getcrmobjects202603emailsGetPageParams` and the other `...202603emails...Params` types moved from `client_004.gen.go` to `client_005.gen.go`. No exported identifier or signature changed.
+
 ## v0.5.1, 2026-11-05
 
 - Rewrote the doc comments on the webhooks journal operations for API version 2026-03, both the `GetwebhooksJournaljournal202603...` and `GetwebhooksJournaljournalLocal202603...` variants. They now describe `count`, offsets and `currentOffset` paging, `errors` and `numErrors` in batch reads, and snapshot status lookups.

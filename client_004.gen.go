@@ -11128,7 +11128,7 @@ type Property1NumberDisplayHint string
 // Property1TextDisplayHint A hint for displaying text properties, which can be 'unformatted_single_line', 'multi_line', 'email', 'phone_number', 'domain_name', 'ip_address', 'physical_address', or 'postal_code'.
 type Property1TextDisplayHint string
 
-// PublicAbsoluteComparativeTimestampRefineBy defines model for PublicAbsoluteComparativeTimestampRefineBy.
+// PublicAbsoluteComparativeTimestampRefineBy The PublicAbsoluteComparativeTimestampRefineBy component is used to refine timestamp-based filters in HubSpot's ListAppService API. It specifies an absolute timestamp and a comparison type to filter data based on specific time criteria.
 type PublicAbsoluteComparativeTimestampRefineBy struct {
 	// Comparison Timestamp comparison options (BEFORE, AFTER)
 	Comparison string `json:"comparison"`
@@ -11143,7 +11143,7 @@ type PublicAbsoluteComparativeTimestampRefineBy struct {
 // PublicAbsoluteComparativeTimestampRefineByType type of refine by criteria (ABSOLUTE_COMPARATIVE)
 type PublicAbsoluteComparativeTimestampRefineByType string
 
-// PublicAbsoluteRangedTimestampRefineBy defines model for PublicAbsoluteRangedTimestampRefineBy.
+// PublicAbsoluteRangedTimestampRefineBy The PublicAbsoluteRangedTimestampRefineBy component is used to define a filter based on an absolute time range. It specifies a fixed lower and upper timestamp to refine results in API requests, particularly for filtering data within a specific time period.
 type PublicAbsoluteRangedTimestampRefineBy struct {
 	// LowerTimestamp Lower range timestamp of refinement criteria
 	LowerTimestamp int64 `json:"lowerTimestamp"`
@@ -11409,7 +11409,7 @@ type PublicActionRevision struct {
 	RevisionId string `json:"revisionId"`
 }
 
-// PublicAdsSearchFilter defines model for PublicAdsSearchFilter.
+// PublicAdsSearchFilter The PublicAdsSearchFilter component is used to define filters for searching advertisements within the HubSpot API. It specifies the criteria for filtering ads based on various parameters such as filter type, entity type, search term type, and more.
 type PublicAdsSearchFilter struct {
 	// AdNetwork Ad network  (ADWORDS, FACEBOOK, LINKEDIN, ALL)
 	AdNetwork string `json:"adNetwork"`
@@ -11424,14 +11424,16 @@ type PublicAdsSearchFilter struct {
 	Operator string `json:"operator"`
 
 	// SearchTermType Search term to match an ad
-	SearchTermType string   `json:"searchTermType"`
-	SearchTerms    []string `json:"searchTerms"`
+	SearchTermType string `json:"searchTermType"`
+
+	// SearchTerms An array of strings representing the search terms used in the filter.
+	SearchTerms []string `json:"searchTerms"`
 }
 
 // PublicAdsSearchFilterFilterType Type of the filter (ADS_SEARCH)
 type PublicAdsSearchFilterFilterType string
 
-// PublicAdsTimeFilter defines model for PublicAdsTimeFilter.
+// PublicAdsTimeFilter The PublicAdsTimeFilter component is used to define a filter for advertisements based on time-related criteria. It is typically utilized in scenarios where time-based filtering of ad data is required.
 type PublicAdsTimeFilter struct {
 	// FilterType Filter type (ADS_TIME)
 	FilterType PublicAdsTimeFilterFilterType `json:"filterType"`
@@ -11448,7 +11450,7 @@ type PublicAdsTimeFilter_PruningRefineBy struct {
 	union json.RawMessage
 }
 
-// PublicAllHistoryRefineBy defines model for PublicAllHistoryRefineBy.
+// PublicAllHistoryRefineBy The PublicAllHistoryRefineBy component is used to specify a refinement criterion that considers all historical data. It is typically used within filter operations to ensure that all past occurrences are taken into account.
 type PublicAllHistoryRefineBy struct {
 	// Type Type of refine by (ALL_HISTORY)
 	Type PublicAllHistoryRefineByType `json:"type"`
@@ -11457,7 +11459,7 @@ type PublicAllHistoryRefineBy struct {
 // PublicAllHistoryRefineByType Type of refine by (ALL_HISTORY)
 type PublicAllHistoryRefineByType string
 
-// PublicAllPropertyTypesOperation defines model for PublicAllPropertyTypesOperation.
+// PublicAllPropertyTypesOperation The PublicAllPropertyTypesOperation component represents a filter operation that can handle various property types within the HubSpot API. It is used to specify conditions for filtering objects based on their properties, and it is typically utilized in search or filter operations.
 type PublicAllPropertyTypesOperation struct {
 	// IncludeObjectsWithNoValueSet Indication of whether objects with no value should be included
 	IncludeObjectsWithNoValueSet bool `json:"includeObjectsWithNoValueSet"`
@@ -11472,15 +11474,19 @@ type PublicAllPropertyTypesOperation struct {
 // PublicAllPropertyTypesOperationOperationType Type of operation (ALL_PROPERTY)
 type PublicAllPropertyTypesOperationOperationType string
 
-// PublicAndFilterBranch defines model for PublicAndFilterBranch.
+// PublicAndFilterBranch Represents a logical 'AND' filter branch used in constructing complex filter criteria for lists in the HubSpot ListAppService API. This component is utilized to group multiple filters and sub-branches that must all be true for the branch to be considered true.
 type PublicAndFilterBranch struct {
 	// FilterBranchOperator Filter branch operator (AND)
 	FilterBranchOperator string `json:"filterBranchOperator"`
 
 	// FilterBranchType Type of filter branch (AND)
-	FilterBranchType PublicAndFilterBranchFilterBranchType       `json:"filterBranchType"`
-	FilterBranches   []PublicAndFilterBranch_FilterBranches_Item `json:"filterBranches"`
-	Filters          []PublicAndFilterBranch_Filters_Item        `json:"filters"`
+	FilterBranchType PublicAndFilterBranchFilterBranchType `json:"filterBranchType"`
+
+	// FilterBranches An array of nested filter branches. Each item can be a branch of various types, such as 'OR', 'AND', 'NOT_ALL', etc.
+	FilterBranches []PublicAndFilterBranch_FilterBranches_Item `json:"filterBranches"`
+
+	// Filters An array of filters that apply to this branch. Each filter can be of various types, such as property filters, event filters, or subscription filters.
+	Filters []PublicAndFilterBranch_Filters_Item `json:"filters"`
 }
 
 // PublicAndFilterBranchFilterBranchType Type of filter branch (AND)
@@ -11606,7 +11612,7 @@ type PublicAssociationDefinitionUserConfiguration struct {
 // PublicAssociationDefinitionUserConfigurationCategory The category of the association, which can be HUBSPOT_DEFINED, INTEGRATOR_DEFINED, or USER_DEFINED.
 type PublicAssociationDefinitionUserConfigurationCategory string
 
-// PublicAssociationFilterBranch defines model for PublicAssociationFilterBranch.
+// PublicAssociationFilterBranch Represents a branch of filters specifically for associations in the HubSpot API. This component is used to define complex filtering logic involving associations between objects, typically in the context of search or list operations.
 type PublicAssociationFilterBranch struct {
 	// AssociationCategory Specifies the category of the association for the filter branch (HUBSPOT_DEFINED, USER_DEFINED, INTEGRATOR_DEFINED, WORK).
 	AssociationCategory string `json:"associationCategory"`
@@ -11618,9 +11624,13 @@ type PublicAssociationFilterBranch struct {
 	FilterBranchOperator string `json:"filterBranchOperator"`
 
 	// FilterBranchType Type of the filter branch (ASSOCIATION)
-	FilterBranchType PublicAssociationFilterBranchFilterBranchType       `json:"filterBranchType"`
-	FilterBranches   []PublicAssociationFilterBranch_FilterBranches_Item `json:"filterBranches"`
-	Filters          []PublicAssociationFilterBranch_Filters_Item        `json:"filters"`
+	FilterBranchType PublicAssociationFilterBranchFilterBranchType `json:"filterBranchType"`
+
+	// FilterBranches An array of nested filter branches, allowing for complex logical groupings of filters.
+	FilterBranches []PublicAssociationFilterBranch_FilterBranches_Item `json:"filterBranches"`
+
+	// Filters An array of filters applied within this branch, each defining specific criteria for filtering associations.
+	Filters []PublicAssociationFilterBranch_Filters_Item `json:"filters"`
 
 	// ObjectTypeId The ID representing the type of object associated with the filter branch.
 	ObjectTypeId string `json:"objectTypeId"`
@@ -11642,7 +11652,7 @@ type PublicAssociationFilterBranch_Filters_Item struct {
 	union json.RawMessage
 }
 
-// PublicAssociationInListFilter defines model for PublicAssociationInListFilter.
+// PublicAssociationInListFilter The PublicAssociationInListFilter component is used to define a filter that applies to associations within a list. It specifies the criteria for filtering associations based on their type, category, and related object types. This component is typically used as part of a request to filter results in list-related operations.
 type PublicAssociationInListFilter struct {
 	// AssociationCategory Defines the category of the association, such as (HUBSPOT_DEFINED, USER_DEFINED, INTEGRATOR_DEFINED, WORK).
 	AssociationCategory string `json:"associationCategory"`
@@ -11787,7 +11797,7 @@ type PublicBatchMigrationMapping struct {
 	MissingLegacyListIds []string `json:"missingLegacyListIds"`
 }
 
-// PublicBoolPropertyOperation defines model for PublicBoolPropertyOperation.
+// PublicBoolPropertyOperation Represents an operation for boolean properties in a HubSpot account. This component is used to define how boolean properties should be evaluated in various operations, such as filtering or searching.
 type PublicBoolPropertyOperation struct {
 	// IncludeObjectsWithNoValueSet Indicates whether objects with no value set for the property should be included in the operation.
 	IncludeObjectsWithNoValueSet bool `json:"includeObjectsWithNoValueSet"`
@@ -11909,7 +11919,7 @@ type PublicButtonStyleSettings struct {
 	FontStyle    *PublicFontStyle `json:"fontStyle,omitempty"`
 }
 
-// PublicCalendarDatePropertyOperation defines model for PublicCalendarDatePropertyOperation.
+// PublicCalendarDatePropertyOperation The PublicCalendarDatePropertyOperation component represents an operation that can be performed on calendar date properties within the HubSpot API. It is used to define operations that involve calendar dates, such as filtering or manipulating date-based data.
 type PublicCalendarDatePropertyOperation struct {
 	// FiscalYearStart The month in which the fiscal year starts.
 	FiscalYearStart *PublicCalendarDatePropertyOperationFiscalYearStart `json:"fiscalYearStart,omitempty"`
@@ -12229,8 +12239,9 @@ type PublicClient struct {
 // PublicClientClientType The type of client interacting with the API. Valid values include 'HUBSPOT', 'SYSTEM', 'INTEGRATION', and 'UNKNOWN'.
 type PublicClientClientType string
 
-// PublicCommunicationSubscriptionFilter defines model for PublicCommunicationSubscriptionFilter.
+// PublicCommunicationSubscriptionFilter Represents a filter for communication subscriptions in the HubSpot API, used to specify criteria for filtering communication subscriptions based on various parameters.
 type PublicCommunicationSubscriptionFilter struct {
+	// AcceptedOptStates An array of strings representing the opt-in states that are accepted for the subscription.
 	AcceptedOptStates []string `json:"acceptedOptStates"`
 
 	// BusinessUnitId The ID of the business unit associated with the subscription filter.
@@ -12240,8 +12251,10 @@ type PublicCommunicationSubscriptionFilter struct {
 	Channel string `json:"channel"`
 
 	// FilterType Indicates the type of filter, which is (COMMUNICATION_SUBSCRIPTION)
-	FilterType      PublicCommunicationSubscriptionFilterFilterType `json:"filterType"`
-	SubscriptionIds []string                                        `json:"subscriptionIds"`
+	FilterType PublicCommunicationSubscriptionFilterFilterType `json:"filterType"`
+
+	// SubscriptionIds An array of strings representing the IDs of the subscriptions to be filtered.
+	SubscriptionIds []string `json:"subscriptionIds"`
 
 	// SubscriptionType Defines the type of subscription related to the filter (PORTAL_WIDE, BUSINESS_UNIT_WIDE, INDIVIDUAL_SUBSCRIPTION)
 	SubscriptionType string `json:"subscriptionType"`
@@ -12250,7 +12263,7 @@ type PublicCommunicationSubscriptionFilter struct {
 // PublicCommunicationSubscriptionFilterFilterType Indicates the type of filter, which is (COMMUNICATION_SUBSCRIPTION)
 type PublicCommunicationSubscriptionFilterFilterType string
 
-// PublicComparativeDatePropertyOperation defines model for PublicComparativeDatePropertyOperation.
+// PublicComparativeDatePropertyOperation The PublicComparativeDatePropertyOperation component represents an operation used to compare date properties within a HubSpot account. It is typically used in contexts where date-based comparisons are necessary, such as filtering or querying records based on specific date criteria.
 type PublicComparativeDatePropertyOperation struct {
 	// ComparisonPropertyName The name of the property to compare against in the operation.
 	ComparisonPropertyName string `json:"comparisonPropertyName"`
@@ -12283,7 +12296,7 @@ type PublicComparativeNumberPropertyOperation struct {
 // PublicComparativeNumberPropertyOperationOperationType defines model for PublicComparativeNumberPropertyOperation.OperationType.
 type PublicComparativeNumberPropertyOperationOperationType string
 
-// PublicComparativePropertyUpdatedOperation defines model for PublicComparativePropertyUpdatedOperation.
+// PublicComparativePropertyUpdatedOperation Represents an operation for updating comparative properties in a list within the HubSpot ListAppService API. This component is used to define the criteria for comparing and updating properties based on specified conditions.
 type PublicComparativePropertyUpdatedOperation struct {
 	// ComparisonPropertyName The name of the property to compare against in the operation.
 	ComparisonPropertyName string `json:"comparisonPropertyName"`
@@ -12304,16 +12317,25 @@ type PublicComparativePropertyUpdatedOperation struct {
 // PublicComparativePropertyUpdatedOperationOperationType Specifies the type of operation (COMPARATIVE_PROPERTY_UPDATED).
 type PublicComparativePropertyUpdatedOperationOperationType string
 
-// PublicComparativeStringPropertyOperation defines model for PublicComparativeStringPropertyOperation.
+// PublicComparativeStringPropertyOperation Represents a comparative string property operation used in filtering or querying within the HubSpot API. This component is typically used to compare string properties of objects, allowing for operations based on the comparison results.
 type PublicComparativeStringPropertyOperation struct {
-	ComparisonPropertyName       string                                                `json:"comparisonPropertyName"`
-	DefaultComparisonValue       *string                                               `json:"defaultComparisonValue,omitempty"`
-	IncludeObjectsWithNoValueSet bool                                                  `json:"includeObjectsWithNoValueSet"`
-	OperationType                PublicComparativeStringPropertyOperationOperationType `json:"operationType"`
-	Operator                     string                                                `json:"operator"`
+	// ComparisonPropertyName A string specifying the name of the property to be compared.
+	ComparisonPropertyName string `json:"comparisonPropertyName"`
+
+	// DefaultComparisonValue A string representing the default value to use in the comparison if the property value is not set.
+	DefaultComparisonValue *string `json:"defaultComparisonValue,omitempty"`
+
+	// IncludeObjectsWithNoValueSet A boolean indicating whether to include objects that have no value set for the property being compared.
+	IncludeObjectsWithNoValueSet bool `json:"includeObjectsWithNoValueSet"`
+
+	// OperationType A string indicating the type of operation. Defaults to 'COMPARATIVE_STRING'.
+	OperationType PublicComparativeStringPropertyOperationOperationType `json:"operationType"`
+
+	// Operator A string representing the operator used in the comparison.
+	Operator string `json:"operator"`
 }
 
-// PublicComparativeStringPropertyOperationOperationType defines model for PublicComparativeStringPropertyOperation.OperationType.
+// PublicComparativeStringPropertyOperationOperationType A string indicating the type of operation. Defaults to 'COMPARATIVE_STRING'.
 type PublicComparativeStringPropertyOperationOperationType string
 
 // PublicConditionalSingleFieldDependency defines model for PublicConditionalSingleFieldDependency.
@@ -12334,7 +12356,7 @@ type PublicConditionalSingleFieldDependency struct {
 // PublicConditionalSingleFieldDependencyDependencyType The type of dependency, with the default value being CONDITIONAL_SINGLE_FIELD.
 type PublicConditionalSingleFieldDependencyDependencyType string
 
-// PublicConstantFilter defines model for PublicConstantFilter.
+// PublicConstantFilter The PublicConstantFilter component represents a filter used in the HubSpot ListAppService API to apply constant conditions to lists. It is typically used as part of filter branches to define static criteria that do not change over time.
 type PublicConstantFilter struct {
 	// FilterType Specifies the type of filter, which is (CONSTANT).
 	FilterType PublicConstantFilterFilterType `json:"filterType"`
@@ -12448,7 +12470,7 @@ type PublicCrmSearchRequest struct {
 	Sorts []string `json:"sorts"`
 }
 
-// PublicCtaAnalyticsFilter defines model for PublicCtaAnalyticsFilter.
+// PublicCtaAnalyticsFilter Represents a filter for analyzing Call-To-Action (CTA) interactions in HubSpot. This component is used to specify criteria for filtering CTA analytics data, such as the type of filter, operator, and specific CTA name.
 type PublicCtaAnalyticsFilter struct {
 	// CoalescingRefineBy Specifies the criteria for refining the filter by coalescing.
 	CoalescingRefineBy *PublicCtaAnalyticsFilter_CoalescingRefineBy `json:"coalescingRefineBy,omitempty"`
@@ -12479,7 +12501,7 @@ type PublicCtaAnalyticsFilter_PruningRefineBy struct {
 	union json.RawMessage
 }
 
-// PublicDatePoint defines model for PublicDatePoint.
+// PublicDatePoint The PublicDatePoint component represents a specific point in time, defined by various time-related properties. It is used within the API to specify or reference exact dates and times, potentially for operations that require precise time points.
 type PublicDatePoint struct {
 	// Day The day component of the date.
 	Day int32 `json:"day"`
@@ -12515,7 +12537,7 @@ type PublicDatePoint struct {
 // PublicDatePointTimeType Specifies the type of time (DATE).
 type PublicDatePointTimeType string
 
-// PublicDatePropertyOperation defines model for PublicDatePropertyOperation.
+// PublicDatePropertyOperation The PublicDatePropertyOperation component represents a date-based operation used within the ListAppService API. It is utilized to specify date-related criteria for filtering or processing data, often as part of a request or response object.
 type PublicDatePropertyOperation struct {
 	// Day The day of the month for the date operation.
 	Day int32 `json:"day"`
@@ -12539,7 +12561,7 @@ type PublicDatePropertyOperation struct {
 // PublicDatePropertyOperationOperationType Specifies the type of operation (DATE).
 type PublicDatePropertyOperationOperationType string
 
-// PublicDateTimePropertyOperation defines model for PublicDateTimePropertyOperation.
+// PublicDateTimePropertyOperation Represents an operation on a date-time property within the HubSpot ListAppService API. This component is used to define operations involving date-time properties, such as filtering or querying data based on specific date-time criteria.
 type PublicDateTimePropertyOperation struct {
 	// IncludeObjectsWithNoValueSet Specifies whether objects without a set value should be included in the operation.
 	IncludeObjectsWithNoValueSet bool `json:"includeObjectsWithNoValueSet"`
@@ -12800,7 +12822,7 @@ type PublicEmailContent struct {
 	Widgets *map[string]map[string]interface{} `json:"widgets,omitempty"`
 }
 
-// PublicEmailEventFilter defines model for PublicEmailEventFilter.
+// PublicEmailEventFilter The PublicEmailEventFilter component is used to define filters for email events within the HubSpot API. It specifies criteria for filtering email events based on various properties such as filter type, level, email ID, and more. This component is typically used in scenarios where email event data needs to be filtered or refined according to specific conditions.
 type PublicEmailEventFilter struct {
 	// AppId The ID of the application associated with the email event filter.
 	AppId string `json:"appId"`
@@ -12975,13 +12997,16 @@ type PublicEmailSubscriptionDetails struct {
 	SubscriptionName *string `json:"subscriptionName,omitempty"`
 }
 
-// PublicEmailSubscriptionFilter defines model for PublicEmailSubscriptionFilter.
+// PublicEmailSubscriptionFilter Represents a filter for email subscriptions in a HubSpot account, used to specify criteria for filtering email subscription data. This component is typically used within filter branches to refine search or list operations based on email subscription status and type.
 type PublicEmailSubscriptionFilter struct {
+	// AcceptedStatuses An array of strings indicating the statuses that are accepted for the filter.
 	AcceptedStatuses []string `json:"acceptedStatuses"`
 
 	// FilterType Indicates the type of filter (EMAIL_SUBSCRIPTION).
-	FilterType      PublicEmailSubscriptionFilterFilterType `json:"filterType"`
-	SubscriptionIds []string                                `json:"subscriptionIds"`
+	FilterType PublicEmailSubscriptionFilterFilterType `json:"filterType"`
+
+	// SubscriptionIds An array of strings representing the IDs of the subscriptions to filter by.
+	SubscriptionIds []string `json:"subscriptionIds"`
 
 	// SubscriptionType The type of subscription related to the filter (PORTAL, BRAND, SUBSCRIPTION, HARDBOUNCE, SPAMREPORT).
 	SubscriptionType *string `json:"subscriptionType,omitempty"`
@@ -13053,7 +13078,7 @@ type PublicEmailVersion struct {
 	User      VersionUser `json:"user"`
 }
 
-// PublicEnumerationPropertyOperation defines model for PublicEnumerationPropertyOperation.
+// PublicEnumerationPropertyOperation Represents an operation for handling enumeration properties within the API. This component is used to define operations that involve enumeration types, specifying how they should be processed or filtered.
 type PublicEnumerationPropertyOperation struct {
 	// IncludeObjectsWithNoValueSet Indicates whether objects with no value set for the property should be included in the operation.
 	IncludeObjectsWithNoValueSet bool `json:"includeObjectsWithNoValueSet"`
@@ -13062,14 +13087,16 @@ type PublicEnumerationPropertyOperation struct {
 	OperationType PublicEnumerationPropertyOperationOperationType `json:"operationType"`
 
 	// Operator Defines the operation to be applied in the enumeration property operation (IS_ANY_OF, IS_NONE_OF, IS_EXACTLY, IS_NOT_EXACTLY, CONTAINS_ALL, DOES_NOT_CONTAIN_ALL, HAS_EVER_BEEN_ANY_OF, HAS_NEVER_BEEN_ANY_OF, HAS_EVER_BEEN_EXACTLY, HAS_NEVER_BEEN_EXACTLY, HAS_EVER_CONTAINED_ALL, HAS_NEVER_CONTAINED_ALL).
-	Operator string   `json:"operator"`
-	Values   []string `json:"values"`
+	Operator string `json:"operator"`
+
+	// Values An array of strings representing the enumeration values involved in the operation.
+	Values []string `json:"values"`
 }
 
 // PublicEnumerationPropertyOperationOperationType Specifies the type of operation (ENUMERATION).
 type PublicEnumerationPropertyOperationOperationType string
 
-// PublicEventAnalyticsFilter defines model for PublicEventAnalyticsFilter.
+// PublicEventAnalyticsFilter The PublicEventAnalyticsFilter is a schema used to define filters for event analytics within the HubSpot API. It is used to specify criteria for filtering event data based on various parameters and is typically utilized in analytics and reporting contexts.
 type PublicEventAnalyticsFilter struct {
 	// CoalescingRefineBy Specifies the criteria for refining the event filter by coalescing.
 	CoalescingRefineBy *PublicEventAnalyticsFilter_CoalescingRefineBy `json:"coalescingRefineBy,omitempty"`
@@ -13100,7 +13127,7 @@ type PublicEventAnalyticsFilter_PruningRefineBy struct {
 	union json.RawMessage
 }
 
-// PublicEventFilterMetadata defines model for PublicEventFilterMetadata.
+// PublicEventFilterMetadata PublicEventFilterMetadata is a schema used within the ListAppService API to define metadata for event filters. It is utilized to specify the criteria for filtering events based on certain properties and operations.
 type PublicEventFilterMetadata struct {
 	// Operation Defines the operation to be performed on the property
 	Operation PublicEventFilterMetadata_Operation `json:"operation"`
@@ -13336,7 +13363,7 @@ type PublicFileFileUsageType string
 // PublicFileType A string indicating the type of the attachment, which is always 'FILE'.
 type PublicFileType string
 
-// PublicFiscalQuarterReference defines model for PublicFiscalQuarterReference.
+// PublicFiscalQuarterReference Represents a reference to a specific fiscal quarter, including details such as the time and date components. This component is used to specify or interpret a point in time within a fiscal quarter context.
 type PublicFiscalQuarterReference struct {
 	// Day The day component of the fiscal quarter reference.
 	Day int32 `json:"day"`
@@ -13363,7 +13390,7 @@ type PublicFiscalQuarterReference struct {
 // PublicFiscalQuarterReferenceReferenceType Indicates the type of reference (FISCAL_QUARTER).
 type PublicFiscalQuarterReferenceReferenceType string
 
-// PublicFiscalYearReference defines model for PublicFiscalYearReference.
+// PublicFiscalYearReference Represents a reference to a fiscal year in the context of the ListAppService API. It is used to specify a particular time point within a fiscal year, including details such as the month, day, and time components.
 type PublicFiscalYearReference struct {
 	// Day The day component of the fiscal year reference.
 	Day int32 `json:"day"`
@@ -13411,7 +13438,7 @@ type PublicFontStyle struct {
 	Underline *bool `json:"underline,omitempty"`
 }
 
-// PublicFormSubmissionFilter defines model for PublicFormSubmissionFilter.
+// PublicFormSubmissionFilter The PublicFormSubmissionFilter component is used to define criteria for filtering form submissions in HubSpot. It specifies the conditions under which a form submission is considered relevant, such as whether a form was filled out or not. This component is typically used in list filtering operations within the API.
 type PublicFormSubmissionFilter struct {
 	// CoalescingRefineBy Specifies the criteria for refining the filter by coalescing.
 	CoalescingRefineBy *PublicFormSubmissionFilter_CoalescingRefineBy `json:"coalescingRefineBy,omitempty"`
@@ -13445,7 +13472,7 @@ type PublicFormSubmissionFilter_PruningRefineBy struct {
 	union json.RawMessage
 }
 
-// PublicFormSubmissionOnPageFilter defines model for PublicFormSubmissionOnPageFilter.
+// PublicFormSubmissionOnPageFilter Represents a filter used to determine form submissions on specific pages in the HubSpot ListAppService API. This component is utilized to filter form submissions based on specific criteria such as form ID and page ID, and is typically used in search or filtering operations.
 type PublicFormSubmissionOnPageFilter struct {
 	// CoalescingRefineBy Defines the criteria for refining the filter by coalescing.
 	CoalescingRefineBy *PublicFormSubmissionOnPageFilter_CoalescingRefineBy `json:"coalescingRefineBy,omitempty"`
@@ -13584,13 +13611,15 @@ type PublicImportResponseImportSource string
 // PublicImportResponseState The status of the import.
 type PublicImportResponseState string
 
-// PublicInListFilter defines model for PublicInListFilter.
+// PublicInListFilter Represents a filter used to determine if an item is part of a specified list in HubSpot. This component is used in filtering operations where inclusion in a list is a criterion.
 type PublicInListFilter struct {
 	// FilterType Indicates the type of filter being applied (IN_LIST).
 	FilterType PublicInListFilterFilterType `json:"filterType"`
 
 	// ListId The ID of the list used in the association filter.
-	ListId   string                      `json:"listId"`
+	ListId string `json:"listId"`
+
+	// Metadata The PublicInListFilterMetadata component represents metadata information for a filter that checks if an item is part of a list. This component is used within the context of filtering operations in the ListAppService API.
 	Metadata *PublicInListFilterMetadata `json:"metadata,omitempty"`
 
 	// Operator Specifies the operation to be performed by the filter (IN_LIST, NOT_IN_LIST).
@@ -13600,7 +13629,7 @@ type PublicInListFilter struct {
 // PublicInListFilterFilterType Indicates the type of filter being applied (IN_LIST).
 type PublicInListFilterFilterType string
 
-// PublicInListFilterMetadata defines model for PublicInListFilterMetadata.
+// PublicInListFilterMetadata The PublicInListFilterMetadata component represents metadata information for a filter that checks if an item is part of a list. This component is used within the context of filtering operations in the ListAppService API.
 type PublicInListFilterMetadata struct {
 	// Id The identifier for the filter metadata.
 	Id string `json:"id"`
@@ -13609,7 +13638,7 @@ type PublicInListFilterMetadata struct {
 	InListType string `json:"inListType"`
 }
 
-// PublicIndexOffset defines model for PublicIndexOffset.
+// PublicIndexOffset The PublicIndexOffset component represents a set of time offsets used in various time-related operations within the API. It is utilized to specify adjustments in time units such as years, months, days, etc., and can be used in contexts where time manipulation is required.
 type PublicIndexOffset struct {
 	// Days The number of days to offset.
 	Days *int32 `json:"days,omitempty"`
@@ -13639,11 +13668,13 @@ type PublicIndexOffset struct {
 	Years *int32 `json:"years,omitempty"`
 }
 
-// PublicIndexedTimePoint defines model for PublicIndexedTimePoint.
+// PublicIndexedTimePoint Represents a specific point in time indexed by a reference, used within the API to define time-related operations or filters. It is utilized in contexts where a time point needs to be specified relative to a known index, such as 'now' or 'today'.
 type PublicIndexedTimePoint struct {
 	// IndexReference Specifies the reference point in time for the indexed time point.
 	IndexReference PublicIndexedTimePoint_IndexReference `json:"indexReference"`
-	Offset         *PublicIndexOffset                    `json:"offset,omitempty"`
+
+	// Offset The PublicIndexOffset component represents a set of time offsets used in various time-related operations within the API. It is utilized to specify adjustments in time units such as years, months, days, etc., and can be used in contexts where time manipulation is required.
+	Offset *PublicIndexOffset `json:"offset,omitempty"`
 
 	// TimeType Defines the type of time (INDEXED).
 	TimeType PublicIndexedTimePointTimeType `json:"timeType"`
@@ -13676,10 +13707,12 @@ type PublicInputFieldDefinition struct {
 // PublicInputFieldDefinitionSupportedValueTypes defines model for PublicInputFieldDefinition.SupportedValueTypes.
 type PublicInputFieldDefinitionSupportedValueTypes string
 
-// PublicIntegrationEventFilter defines model for PublicIntegrationEventFilter.
+// PublicIntegrationEventFilter The PublicIntegrationEventFilter component is used to define filters for integration events within the HubSpot API. It specifies the criteria for filtering events based on their type and associated filter lines. This component is typically used in contexts where integration event filtering is required, such as in list operations or event processing.
 type PublicIntegrationEventFilter struct {
 	// EventTypeId The ID representing the type of event for the integration event filter.
-	EventTypeId int32                       `json:"eventTypeId"`
+	EventTypeId int32 `json:"eventTypeId"`
+
+	// FilterLines An array of filter lines that define additional filtering criteria. Each filter line is an object that specifies conditions for filtering events.
 	FilterLines []PublicEventFilterMetadata `json:"filterLines"`
 
 	// FilterType Indicates the type of filter (INTEGRATION_EVENT).
@@ -13942,7 +13975,7 @@ type PublicMigrationMapping struct {
 	ListId string `json:"listId"`
 }
 
-// PublicMonthReference defines model for PublicMonthReference.
+// PublicMonthReference Represents a reference to a specific month, including detailed time components. This component is used within the API to specify or manipulate date and time information at the month level.
 type PublicMonthReference struct {
 	// Day The day component of the month reference.
 	Day int32 `json:"day"`
@@ -13966,7 +13999,7 @@ type PublicMonthReference struct {
 // PublicMonthReferenceReferenceType Indicates the type of reference, (MONTH).
 type PublicMonthReferenceReferenceType string
 
-// PublicMultiStringPropertyOperation defines model for PublicMultiStringPropertyOperation.
+// PublicMultiStringPropertyOperation The PublicMultiStringPropertyOperation component represents an operation that involves multiple string properties. It is used in the context of filtering or processing data where multiple string values need to be considered. This component is typically used as part of a request or response in APIs that handle complex data operations.
 type PublicMultiStringPropertyOperation struct {
 	// IncludeObjectsWithNoValueSet Indicates whether objects with no value set for the property should be included in the operation.
 	IncludeObjectsWithNoValueSet bool `json:"includeObjectsWithNoValueSet"`
@@ -13975,22 +14008,28 @@ type PublicMultiStringPropertyOperation struct {
 	OperationType PublicMultiStringPropertyOperationOperationType `json:"operationType"`
 
 	// Operator Defines the operation to be applied in the multi-string property operation (IS_EQUAL_TO, IS_NOT_EQUAL_TO, CONTAINS, CONTAINS_EXACTLY, DOES_NOT_CONTAIN, DOES_NOT_CONTAIN_EXACTLY, STARTS_WITH, ENDS_WITH).
-	Operator string   `json:"operator"`
-	Values   []string `json:"values"`
+	Operator string `json:"operator"`
+
+	// Values An array of strings representing the values involved in the operation.
+	Values []string `json:"values"`
 }
 
 // PublicMultiStringPropertyOperationOperationType Specifies the type of operation (MULTISTRING).
 type PublicMultiStringPropertyOperationOperationType string
 
-// PublicNotAllFilterBranch defines model for PublicNotAllFilterBranch.
+// PublicNotAllFilterBranch The PublicNotAllFilterBranch component represents a filter branch used in HubSpot's ListAppService API to define complex filtering logic where not all conditions need to be met. It is typically used in scenarios where a combination of filters and filter branches are applied to refine data retrieval.
 type PublicNotAllFilterBranch struct {
 	// FilterBranchOperator The operator used to combine filters within the branch (NOT_ALL).
 	FilterBranchOperator string `json:"filterBranchOperator"`
 
 	// FilterBranchType The type of the filter branch (NOT_ALL).
-	FilterBranchType PublicNotAllFilterBranchFilterBranchType       `json:"filterBranchType"`
-	FilterBranches   []PublicNotAllFilterBranch_FilterBranches_Item `json:"filterBranches"`
-	Filters          []PublicNotAllFilterBranch_Filters_Item        `json:"filters"`
+	FilterBranchType PublicNotAllFilterBranchFilterBranchType `json:"filterBranchType"`
+
+	// FilterBranches An array of filter branches that can include various types such as PublicOrFilterBranch, PublicAndFilterBranch, and others, allowing for nested filtering logic.
+	FilterBranches []PublicNotAllFilterBranch_FilterBranches_Item `json:"filterBranches"`
+
+	// Filters An array of filters that can include various types such as PublicPropertyFilter, PublicAssociationInListFilter, and others, used to apply specific conditions to the data.
+	Filters []PublicNotAllFilterBranch_Filters_Item `json:"filters"`
 }
 
 // PublicNotAllFilterBranchFilterBranchType The type of the filter branch (NOT_ALL).
@@ -14006,15 +14045,19 @@ type PublicNotAllFilterBranch_Filters_Item struct {
 	union json.RawMessage
 }
 
-// PublicNotAnyFilterBranch defines model for PublicNotAnyFilterBranch.
+// PublicNotAnyFilterBranch Represents a filter branch in a list operation that excludes any filters or branches that match the specified criteria. It is used within the context of defining complex filter logic for lists in the ListAppService API.
 type PublicNotAnyFilterBranch struct {
 	// FilterBranchOperator Specifies the logical operator used to combine filters within the branch (NOT_ANY).
 	FilterBranchOperator string `json:"filterBranchOperator"`
 
 	// FilterBranchType Indicates the type of filter branch (NOT_ANY).
-	FilterBranchType PublicNotAnyFilterBranchFilterBranchType       `json:"filterBranchType"`
-	FilterBranches   []PublicNotAnyFilterBranch_FilterBranches_Item `json:"filterBranches"`
-	Filters          []PublicNotAnyFilterBranch_Filters_Item        `json:"filters"`
+	FilterBranchType PublicNotAnyFilterBranchFilterBranchType `json:"filterBranchType"`
+
+	// FilterBranches An array of filter branches that can include various types such as 'PublicOrFilterBranch', 'PublicAndFilterBranch', 'PublicNotAllFilterBranch', 'PublicNotAnyFilterBranch', 'PublicRestrictedFilterBranch', 'PublicUnifiedEventsFilterBranch', and 'PublicAssociationFilterBranch'.
+	FilterBranches []PublicNotAnyFilterBranch_FilterBranches_Item `json:"filterBranches"`
+
+	// Filters An array of filters that can include types like 'PublicPropertyFilter', 'PublicAssociationInListFilter', 'PublicPageViewAnalyticsFilter', 'PublicCtaAnalyticsFilter', 'PublicEventAnalyticsFilter', 'PublicFormSubmissionFilter', 'PublicFormSubmissionOnPageFilter', 'PublicIntegrationEventFilter', 'PublicEmailSubscriptionFilter', 'PublicCommunicationSubscriptionFilter', 'PublicSurveyMonkeyFilter', 'PublicSurveyMonkeyValueFilter', 'PublicWebinarFilter', 'PublicEmailEventFilter', 'PublicPrivacyAnalyticsFilter', 'PublicAdsSearchFilter', 'PublicAdsTimeFilter', 'PublicInListFilter', 'PublicUnifiedEventsFilter', and 'PublicConstantFilter'.
+	Filters []PublicNotAnyFilterBranch_Filters_Item `json:"filters"`
 }
 
 // PublicNotAnyFilterBranchFilterBranchType Indicates the type of filter branch (NOT_ANY).
@@ -14030,7 +14073,7 @@ type PublicNotAnyFilterBranch_Filters_Item struct {
 	union json.RawMessage
 }
 
-// PublicNowReference defines model for PublicNowReference.
+// PublicNowReference The PublicNowReference component represents a reference to the current time, used within the API to specify or manipulate time-related data. It is utilized in scenarios where the current time is needed as a reference point, such as in time-based operations or calculations.
 type PublicNowReference struct {
 	// Hour The hour component of the current time reference.
 	Hour *int32 `json:"hour,omitempty"`
@@ -14051,7 +14094,7 @@ type PublicNowReference struct {
 // PublicNowReferenceReferenceType Indicates the type of reference (NOW).
 type PublicNowReferenceReferenceType string
 
-// PublicNumOccurrencesRefineBy defines model for PublicNumOccurrencesRefineBy.
+// PublicNumOccurrencesRefineBy Represents a refinement criterion based on the number of occurrences, used in filtering operations within the ListAppService API. This component is typically used to specify the minimum and maximum number of times an event or condition should occur.
 type PublicNumOccurrencesRefineBy struct {
 	// MaxOccurrences The maximum number of occurrences allowed.
 	MaxOccurrences *int32 `json:"maxOccurrences,omitempty"`
@@ -14066,7 +14109,7 @@ type PublicNumOccurrencesRefineBy struct {
 // PublicNumOccurrencesRefineByType The type of refinement (NUM_OCCURRENCES).
 type PublicNumOccurrencesRefineByType string
 
-// PublicNumberPropertyOperation defines model for PublicNumberPropertyOperation.
+// PublicNumberPropertyOperation Represents an operation for handling number properties in a list within the HubSpot ListAppService API. This component is used to define operations that involve number-based criteria, such as filtering or evaluating list items based on numerical values.
 type PublicNumberPropertyOperation struct {
 	// IncludeObjectsWithNoValueSet Indicates whether objects with no value set for the property should be included in the operation.
 	IncludeObjectsWithNoValueSet bool `json:"includeObjectsWithNoValueSet"`
@@ -14247,15 +14290,19 @@ type PublicOption struct {
 	Value string `json:"value"`
 }
 
-// PublicOrFilterBranch defines model for PublicOrFilterBranch.
+// PublicOrFilterBranch The PublicOrFilterBranch component represents a logical 'OR' filter branch used in constructing complex filter criteria within the ListAppService API. It is used to group multiple filters or filter branches, where any of the conditions can be true for the branch to be satisfied.
 type PublicOrFilterBranch struct {
 	// FilterBranchOperator The logical operator used to combine the filters within the branch (OR).
 	FilterBranchOperator string `json:"filterBranchOperator"`
 
 	// FilterBranchType The type of the filter branch (OR).
-	FilterBranchType PublicOrFilterBranchFilterBranchType       `json:"filterBranchType"`
-	FilterBranches   []PublicOrFilterBranch_FilterBranches_Item `json:"filterBranches"`
-	Filters          []PublicOrFilterBranch_Filters_Item        `json:"filters"`
+	FilterBranchType PublicOrFilterBranchFilterBranchType `json:"filterBranchType"`
+
+	// FilterBranches An array of nested filter branches, allowing for the combination of multiple logical conditions within the 'OR' branch.
+	FilterBranches []PublicOrFilterBranch_FilterBranches_Item `json:"filterBranches"`
+
+	// Filters An array of individual filters that are part of the 'OR' branch. Each filter represents a specific condition that can be evaluated.
+	Filters []PublicOrFilterBranch_Filters_Item `json:"filters"`
 }
 
 // PublicOrFilterBranchFilterBranchType The type of the filter branch (OR).
@@ -14310,7 +14357,7 @@ type PublicOwner struct {
 // PublicOwnerType The type of the owner, which can be either PERSON or QUEUE.
 type PublicOwnerType string
 
-// PublicPageViewAnalyticsFilter defines model for PublicPageViewAnalyticsFilter.
+// PublicPageViewAnalyticsFilter The PublicPageViewAnalyticsFilter component is used to define filters for page view analytics within the HubSpot API. It specifies the criteria for tracking and analyzing page views, including the type of filter, operator, and specific page URL. This component is typically used in contexts where page view data needs to be filtered or refined for analytics purposes.
 type PublicPageViewAnalyticsFilter struct {
 	// CoalescingRefineBy Specifies the criteria for refining the filter by coalescing.
 	CoalescingRefineBy *PublicPageViewAnalyticsFilter_CoalescingRefineBy `json:"coalescingRefineBy,omitempty"`
@@ -14356,7 +14403,7 @@ type PublicPermissionSet struct {
 	RequiresBillingWrite bool `json:"requiresBillingWrite"`
 }
 
-// PublicPrivacyAnalyticsFilter defines model for PublicPrivacyAnalyticsFilter.
+// PublicPrivacyAnalyticsFilter The PublicPrivacyAnalyticsFilter is a schema used to define filters related to privacy analytics in the HubSpot API. It is typically used within filter branches to specify conditions based on privacy-related data.
 type PublicPrivacyAnalyticsFilter struct {
 	// FilterType Specifies the type of filter (PRIVACY).
 	FilterType PublicPrivacyAnalyticsFilterFilterType `json:"filterType"`
@@ -14371,7 +14418,7 @@ type PublicPrivacyAnalyticsFilter struct {
 // PublicPrivacyAnalyticsFilterFilterType Specifies the type of filter (PRIVACY).
 type PublicPrivacyAnalyticsFilterFilterType string
 
-// PublicPropertyFilter defines model for PublicPropertyFilter.
+// PublicPropertyFilter Represents a filter applied to a property within a list in the HubSpot ListAppService API. This component is used to define criteria for filtering list items based on property values.
 type PublicPropertyFilter struct {
 	// FilterType Indicates that the filter (PROPERTY).
 	FilterType PublicPropertyFilterFilterType `json:"filterType"`
@@ -14391,7 +14438,7 @@ type PublicPropertyFilter_Operation struct {
 	union json.RawMessage
 }
 
-// PublicPropertyReferencedTime defines model for PublicPropertyReferencedTime.
+// PublicPropertyReferencedTime The PublicPropertyReferencedTime component represents a specific point in time that is determined by a property value. It is used within the API to specify time-related operations or filters that are based on property values.
 type PublicPropertyReferencedTime struct {
 	// Property Specifies the name of the property that the time reference is applied to.
 	Property string `json:"property"`
@@ -14445,7 +14492,7 @@ type PublicPropertyValidationRuleUpdate struct {
 	ShouldApplyNormalization *bool `json:"shouldApplyNormalization,omitempty"`
 }
 
-// PublicQuarterReference defines model for PublicQuarterReference.
+// PublicQuarterReference Represents a reference to a specific quarter, including details such as the day, month, and time components. This component is used in the API to specify or retrieve information related to a particular quarter.
 type PublicQuarterReference struct {
 	// Day The day component of the quarter reference.
 	Day int32 `json:"day"`
@@ -14490,7 +14537,7 @@ type PublicQuickReplies struct {
 // PublicQuickRepliesType A string indicating the type of the component, which is 'QUICK_REPLIES'.
 type PublicQuickRepliesType string
 
-// PublicRangedDatePropertyOperation defines model for PublicRangedDatePropertyOperation.
+// PublicRangedDatePropertyOperation Represents an operation for filtering objects based on a date range property, used in contexts where date-based filtering is required. This component is typically used in request bodies to specify criteria for ranged date operations.
 type PublicRangedDatePropertyOperation struct {
 	// IncludeObjectsWithNoValueSet Specifies whether objects without a set value should be included in the operation.
 	IncludeObjectsWithNoValueSet bool `json:"includeObjectsWithNoValueSet"`
@@ -14514,7 +14561,7 @@ type PublicRangedDatePropertyOperation struct {
 // PublicRangedDatePropertyOperationOperationType Specifies the type of operation (RANGED_DATE).
 type PublicRangedDatePropertyOperationOperationType string
 
-// PublicRangedNumberPropertyOperation defines model for PublicRangedNumberPropertyOperation.
+// PublicRangedNumberPropertyOperation Represents a ranged number property operation used in the ListAppService API. This component is utilized to define operations that involve numerical properties with specified upper and lower bounds.
 type PublicRangedNumberPropertyOperation struct {
 	// IncludeObjectsWithNoValueSet Indicates whether objects with no value set for the property should be included in the operation.
 	IncludeObjectsWithNoValueSet bool `json:"includeObjectsWithNoValueSet"`
@@ -14535,7 +14582,7 @@ type PublicRangedNumberPropertyOperation struct {
 // PublicRangedNumberPropertyOperationOperationType Specifies the type of operation (NUMBER_RANGED).
 type PublicRangedNumberPropertyOperationOperationType string
 
-// PublicRangedTimeOperation defines model for PublicRangedTimeOperation.
+// PublicRangedTimeOperation Represents a time-based range operation used within the ListAppService API to filter or manipulate data based on time constraints. This component is utilized in scenarios where operations need to consider a range of time points, such as filtering records within a specific time frame.
 type PublicRangedTimeOperation struct {
 	// IncludeObjectsWithNoValueSet Indicates whether objects with no value set for the property should be included in the operation.
 	IncludeObjectsWithNoValueSet bool `json:"includeObjectsWithNoValueSet"`
@@ -14630,10 +14677,12 @@ type PublicRefreshTokenInfoResponse struct {
 // PublicRefreshTokenInfoResponseTokenUse Indicates the use of the token, which is 'refresh_token' by default.
 type PublicRefreshTokenInfoResponseTokenUse string
 
-// PublicRelativeComparativeTimestampRefineBy defines model for PublicRelativeComparativeTimestampRefineBy.
+// PublicRelativeComparativeTimestampRefineBy Represents a refinement criterion for timestamp-based filters in a relative comparative manner. This component is used to specify conditions for filtering data based on relative time comparisons.
 type PublicRelativeComparativeTimestampRefineBy struct {
 	// Comparison Defines the comparison operation to be used in the refinement (BEFORE, AFTER).
-	Comparison string           `json:"comparison"`
+	Comparison string `json:"comparison"`
+
+	// TimeOffset The PublicTimeOffset component represents a time offset used in various operations within the API. It is used to specify a direction, unit, and amount of time to offset, typically in contexts where relative time calculations are needed.
 	TimeOffset PublicTimeOffset `json:"timeOffset"`
 
 	// Type Specifies the type of refinement, (RELATIVE_COMPARATIVE).
@@ -14643,30 +14692,37 @@ type PublicRelativeComparativeTimestampRefineBy struct {
 // PublicRelativeComparativeTimestampRefineByType Specifies the type of refinement, (RELATIVE_COMPARATIVE).
 type PublicRelativeComparativeTimestampRefineByType string
 
-// PublicRelativeRangedTimestampRefineBy defines model for PublicRelativeRangedTimestampRefineBy.
+// PublicRelativeRangedTimestampRefineBy Represents a refinement filter for timestamp-based criteria within a relative range. It is used in scenarios where filtering by a time range relative to the current time is necessary.
 type PublicRelativeRangedTimestampRefineBy struct {
+	// LowerBoundOffset The PublicTimeOffset component represents a time offset used in various operations within the API. It is used to specify a direction, unit, and amount of time to offset, typically in contexts where relative time calculations are needed.
 	LowerBoundOffset PublicTimeOffset `json:"lowerBoundOffset"`
 
 	// RangeType Specifies the type of range for the refinement criteria (BETWEEN, NOT_BETWEEN).
 	RangeType string `json:"rangeType"`
 
 	// Type Indicates the type of refinement (RELATIVE_RANGED).
-	Type             PublicRelativeRangedTimestampRefineByType `json:"type"`
-	UpperBoundOffset PublicTimeOffset                          `json:"upperBoundOffset"`
+	Type PublicRelativeRangedTimestampRefineByType `json:"type"`
+
+	// UpperBoundOffset The PublicTimeOffset component represents a time offset used in various operations within the API. It is used to specify a direction, unit, and amount of time to offset, typically in contexts where relative time calculations are needed.
+	UpperBoundOffset PublicTimeOffset `json:"upperBoundOffset"`
 }
 
 // PublicRelativeRangedTimestampRefineByType Indicates the type of refinement (RELATIVE_RANGED).
 type PublicRelativeRangedTimestampRefineByType string
 
-// PublicRestrictedFilterBranch defines model for PublicRestrictedFilterBranch.
+// PublicRestrictedFilterBranch The PublicRestrictedFilterBranch component represents a specific type of filter branch used within the ListAppService API. It is utilized to apply restrictions on filter branches and filters, allowing for complex query operations within lists.
 type PublicRestrictedFilterBranch struct {
 	// FilterBranchOperator The logical operator used to combine filters within the restricted filter branch.
 	FilterBranchOperator string `json:"filterBranchOperator"`
 
 	// FilterBranchType Specifies the type of the filter branch (RESTRICTED).
-	FilterBranchType PublicRestrictedFilterBranchFilterBranchType       `json:"filterBranchType"`
-	FilterBranches   []PublicRestrictedFilterBranch_FilterBranches_Item `json:"filterBranches"`
-	Filters          []PublicRestrictedFilterBranch_Filters_Item        `json:"filters"`
+	FilterBranchType PublicRestrictedFilterBranchFilterBranchType `json:"filterBranchType"`
+
+	// FilterBranches An array of nested filter branches, which can include various types such as 'PublicOrFilterBranch', 'PublicAndFilterBranch', and others.
+	FilterBranches []PublicRestrictedFilterBranch_FilterBranches_Item `json:"filterBranches"`
+
+	// Filters An array of filters applied within the branch, which can include different filter types like 'PublicPropertyFilter', 'PublicAssociationInListFilter', and more.
+	Filters []PublicRestrictedFilterBranch_Filters_Item `json:"filters"`
 }
 
 // PublicRestrictedFilterBranchFilterBranchType Specifies the type of the filter branch (RESTRICTED).
@@ -14682,7 +14738,7 @@ type PublicRestrictedFilterBranch_Filters_Item struct {
 	union json.RawMessage
 }
 
-// PublicRollingDateRangePropertyOperation defines model for PublicRollingDateRangePropertyOperation.
+// PublicRollingDateRangePropertyOperation The PublicRollingDateRangePropertyOperation component represents a filter operation for properties that involve a rolling date range. It is used in scenarios where you need to filter data based on a dynamic date range, such as the last 'n' days. This component is typically used in request bodies for filtering operations within the API.
 type PublicRollingDateRangePropertyOperation struct {
 	// IncludeObjectsWithNoValueSet Indicates whether objects with no value set for the property should be included in the operation.
 	IncludeObjectsWithNoValueSet bool `json:"includeObjectsWithNoValueSet"`
@@ -14703,7 +14759,7 @@ type PublicRollingDateRangePropertyOperation struct {
 // PublicRollingDateRangePropertyOperationOperationType Specifies the type of operation (ROLLING_DATE_RANGE).
 type PublicRollingDateRangePropertyOperationOperationType string
 
-// PublicRollingPropertyUpdatedOperation defines model for PublicRollingPropertyUpdatedOperation.
+// PublicRollingPropertyUpdatedOperation Represents an operation that updates a property based on a rolling time window. It is used in scenarios where properties need to be updated dynamically over a specified number of days.
 type PublicRollingPropertyUpdatedOperation struct {
 	// IncludeObjectsWithNoValueSet Indicates whether objects with no value set for the property should be included in the operation.
 	IncludeObjectsWithNoValueSet bool `json:"includeObjectsWithNoValueSet"`
@@ -14986,7 +15042,7 @@ type PublicSequenceStepResponse struct {
 // PublicSequenceStepResponseActionType The type of action to be performed in the sequence step.
 type PublicSequenceStepResponseActionType string
 
-// PublicSetOccurrencesRefineBy defines model for PublicSetOccurrencesRefineBy.
+// PublicSetOccurrencesRefineBy Represents a refinement criterion for filtering based on a set number of occurrences. This component is used within filter operations to specify how occurrences should be refined.
 type PublicSetOccurrencesRefineBy struct {
 	// SetType Indicates the specific set type used in the refinement (ALL, ALL_INCLUDE_EMPTY, ANY, NONE, NONE_EXCLUDE_EMPTY, ANY_INCLUDE_EMPTY).
 	SetType string `json:"setType"`
@@ -15185,7 +15241,7 @@ type PublicStatusRequestLegalBasis string
 // PublicStatusRequestStatusState The status of the contact's subscription.
 type PublicStatusRequestStatusState string
 
-// PublicStringPropertyOperation defines model for PublicStringPropertyOperation.
+// PublicStringPropertyOperation Represents an operation for handling string properties in the context of HubSpot's ListAppService API. This component is used to define operations on string properties, including specifying the type of operation, the operator to use, and any values involved.
 type PublicStringPropertyOperation struct {
 	// IncludeObjectsWithNoValueSet Indicates whether objects with no value set for the property should be included in the operation.
 	IncludeObjectsWithNoValueSet bool `json:"includeObjectsWithNoValueSet"`
@@ -15224,7 +15280,7 @@ type PublicSubscriptionTranslation struct {
 	UpdatedAt int64 `json:"updatedAt"`
 }
 
-// PublicSurveyMonkeyFilter defines model for PublicSurveyMonkeyFilter.
+// PublicSurveyMonkeyFilter Represents a filter used in the ListAppService API to apply conditions based on SurveyMonkey data. This component is utilized when filtering lists by specific survey responses.
 type PublicSurveyMonkeyFilter struct {
 	// FilterType Indicates the type of filter being applied (SURVEY_MONKEY).
 	FilterType PublicSurveyMonkeyFilterFilterType `json:"filterType"`
@@ -15239,7 +15295,7 @@ type PublicSurveyMonkeyFilter struct {
 // PublicSurveyMonkeyFilterFilterType Indicates the type of filter being applied (SURVEY_MONKEY).
 type PublicSurveyMonkeyFilterFilterType string
 
-// PublicSurveyMonkeyValueFilter defines model for PublicSurveyMonkeyValueFilter.
+// PublicSurveyMonkeyValueFilter Represents a filter used to evaluate SurveyMonkey responses within the HubSpot ListAppService API. This component is used to specify criteria for filtering SurveyMonkey survey data based on specific questions and answers.
 type PublicSurveyMonkeyValueFilter struct {
 	// FilterType Defines the type of filter (SURVEY_MONKEY_VALUE).
 	FilterType PublicSurveyMonkeyValueFilterFilterType `json:"filterType"`
@@ -15346,7 +15402,7 @@ type PublicTeam struct {
 	Primary bool `json:"primary"`
 }
 
-// PublicTimeOffset defines model for PublicTimeOffset.
+// PublicTimeOffset The PublicTimeOffset component represents a time offset used in various operations within the API. It is used to specify a direction, unit, and amount of time to offset, typically in contexts where relative time calculations are needed.
 type PublicTimeOffset struct {
 	// Amount The numerical value representing the quantity of the time offset.
 	Amount int64 `json:"amount"`
@@ -15358,7 +15414,7 @@ type PublicTimeOffset struct {
 	TimeUnit string `json:"timeUnit"`
 }
 
-// PublicTimePointOperation defines model for PublicTimePointOperation.
+// PublicTimePointOperation Represents a time point operation used in filtering or querying data based on specific time-related criteria. This component is typically used in scenarios where time-based operations are required, such as filtering records by a specific date or time point.
 type PublicTimePointOperation struct {
 	// EndpointBehavior Describes the behavior at the endpoint of the time point operation.
 	EndpointBehavior *string `json:"endpointBehavior,omitempty"`
@@ -15390,7 +15446,7 @@ type PublicTimePointOperation_TimePoint struct {
 	union json.RawMessage
 }
 
-// PublicTodayReference defines model for PublicTodayReference.
+// PublicTodayReference Represents a reference to the current day, used in time-related operations within the API. This component is typically utilized when specifying or manipulating time points relative to today's date.
 type PublicTodayReference struct {
 	// Hour The hour component of the current day reference.
 	Hour *int32 `json:"hour,omitempty"`
@@ -15411,13 +15467,15 @@ type PublicTodayReference struct {
 // PublicTodayReferenceReferenceType Indicates the type of reference (TODAY).
 type PublicTodayReferenceReferenceType string
 
-// PublicUnifiedEventsFilter defines model for PublicUnifiedEventsFilter.
+// PublicUnifiedEventsFilter The PublicUnifiedEventsFilter component is used to define a filter for unified events in the HubSpot API. It specifies the criteria for filtering events based on their type and other refining conditions. This component is typically used within filter branches to refine event data based on specific conditions.
 type PublicUnifiedEventsFilter struct {
 	// CoalescingRefineBy Specifies the criteria for refining the filter by coalescing.
 	CoalescingRefineBy *PublicUnifiedEventsFilter_CoalescingRefineBy `json:"coalescingRefineBy,omitempty"`
 
 	// EventTypeId The identifier for the type of event in the unified events filter.
-	EventTypeId *string                     `json:"eventTypeId,omitempty"`
+	EventTypeId *string `json:"eventTypeId,omitempty"`
+
+	// FilterLines An array of filters that are applied to the events. Each filter specifies additional criteria for refining the event data.
 	FilterLines []PublicEventFilterMetadata `json:"filterLines"`
 
 	// FilterType Indicates the type of filter being applied (UNIFIED_EVENTS).
@@ -15440,7 +15498,7 @@ type PublicUnifiedEventsFilter_PruningRefineBy struct {
 	union json.RawMessage
 }
 
-// PublicUnifiedEventsFilterBranch defines model for PublicUnifiedEventsFilterBranch.
+// PublicUnifiedEventsFilterBranch The PublicUnifiedEventsFilterBranch component represents a filter branch specifically for unified events within HubSpot's API. It is used to define criteria for filtering events based on specific conditions and is typically utilized in constructing complex filter logic for event data.
 type PublicUnifiedEventsFilterBranch struct {
 	// CoalescingRefineBy Specifies the criteria for refining the filter by coalescing.
 	CoalescingRefineBy *PublicUnifiedEventsFilterBranch_CoalescingRefineBy `json:"coalescingRefineBy,omitempty"`
@@ -15452,12 +15510,18 @@ type PublicUnifiedEventsFilterBranch struct {
 	FilterBranchOperator string `json:"filterBranchOperator"`
 
 	// FilterBranchType The type of the filter branch (UNIFIED_EVENTS).
-	FilterBranchType PublicUnifiedEventsFilterBranchFilterBranchType       `json:"filterBranchType"`
-	FilterBranches   []PublicUnifiedEventsFilterBranch_FilterBranches_Item `json:"filterBranches"`
-	Filters          []PublicUnifiedEventsFilterBranch_Filters_Item        `json:"filters"`
+	FilterBranchType PublicUnifiedEventsFilterBranchFilterBranchType `json:"filterBranchType"`
+
+	// FilterBranches An array of nested filter branches, allowing for complex filter logic. Each item can be one of several filter branch types.
+	FilterBranches []PublicUnifiedEventsFilterBranch_FilterBranches_Item `json:"filterBranches"`
+
+	// Filters An array of filters applied to the events. Each filter can be one of several predefined filter types.
+	Filters []PublicUnifiedEventsFilterBranch_Filters_Item `json:"filters"`
 
 	// Operator Defines the operation to be applied within the filter branch (HAS_COMPLETED, HAS_NOT_COMPLETED).
-	Operator        PublicUnifiedEventsFilterBranchOperator          `json:"operator"`
+	Operator PublicUnifiedEventsFilterBranchOperator `json:"operator"`
+
+	// PruningRefineBy An optional refinement criterion used to prune event data. It can be one of several predefined refinement types.
 	PruningRefineBy *PublicUnifiedEventsFilterBranch_PruningRefineBy `json:"pruningRefineBy,omitempty"`
 }
 
@@ -15482,7 +15546,7 @@ type PublicUnifiedEventsFilterBranch_Filters_Item struct {
 // PublicUnifiedEventsFilterBranchOperator Defines the operation to be applied within the filter branch (HAS_COMPLETED, HAS_NOT_COMPLETED).
 type PublicUnifiedEventsFilterBranchOperator string
 
-// PublicUnifiedEventsFilterBranch_PruningRefineBy defines model for PublicUnifiedEventsFilterBranch.PruningRefineBy.
+// PublicUnifiedEventsFilterBranch_PruningRefineBy An optional refinement criterion used to prune event data. It can be one of several predefined refinement types.
 type PublicUnifiedEventsFilterBranch_PruningRefineBy struct {
 	union json.RawMessage
 }
@@ -15553,7 +15617,7 @@ type PublicUserUpdateMarch2026 struct {
 	SecondaryTeamIds *[]string `json:"secondaryTeamIds,omitempty"`
 }
 
-// PublicWebinarFilter defines model for PublicWebinarFilter.
+// PublicWebinarFilter Represents a filter used in the context of webinars, specifying the type of filter and its criteria. This component is used to filter webinar-related data based on specific conditions.
 type PublicWebinarFilter struct {
 	// FilterType Indicates the type of filter, (WEBINAR).
 	FilterType PublicWebinarFilterFilterType `json:"filterType"`
@@ -15604,7 +15668,7 @@ type PublicWebversionDetails struct {
 	Url *string `json:"url,omitempty"`
 }
 
-// PublicWeekReference defines model for PublicWeekReference.
+// PublicWeekReference Represents a reference to a specific week, including detailed time components. This component is used to specify a particular week and time within that week in various API operations.
 type PublicWeekReference struct {
 	// DayOfWeek The day of the week (SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY).
 	DayOfWeek PublicWeekReferenceDayOfWeek `json:"dayOfWeek"`
@@ -15694,7 +15758,7 @@ type PublicWideStatusBulkResponse struct {
 	WideStatuses []PublicWideStatus `json:"wideStatuses"`
 }
 
-// PublicYearReference defines model for PublicYearReference.
+// PublicYearReference The PublicYearReference component represents a reference to a specific year within the API. It is used to define a point in time with detailed granularity, including the year, month, day, and optional time components such as hour, minute, second, and millisecond.
 type PublicYearReference struct {
 	// Day The day component of the year reference.
 	Day int32 `json:"day"`
@@ -19953,61 +20017,4 @@ type Getcrmobjects202603discountsDiscountIdParams struct {
 
 	// PropertiesWithHistory A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored.
 	PropertiesWithHistory *[]string `form:"propertiesWithHistory,omitempty" json:"propertiesWithHistory,omitempty"`
-}
-
-// Patchcrmobjects202603discountsDiscountIdParams defines parameters for Patchcrmobjects202603discountsDiscountId.
-type Patchcrmobjects202603discountsDiscountIdParams struct {
-	// IdProperty The name of a property whose values are unique for this object type
-	IdProperty *string `form:"idProperty,omitempty" json:"idProperty,omitempty"`
-}
-
-// Getcrmobjects202603emailsGetPageParams defines parameters for Getcrmobjects202603emailsGetPage.
-type Getcrmobjects202603emailsGetPageParams struct {
-	// After The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.
-	After *string `form:"after,omitempty" json:"after,omitempty"`
-
-	// Archived Whether to return only results that have been archived.
-	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
-
-	// Associations A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored.
-	Associations *[]string `form:"associations,omitempty" json:"associations,omitempty"`
-
-	// Limit The maximum number of results to display per page.
-	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
-
-	// Properties A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored.
-	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
-
-	// PropertiesWithHistory A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored. Usage of this parameter will reduce the maximum number of objects that can be read by a single request.
-	PropertiesWithHistory *[]string `form:"propertiesWithHistory,omitempty" json:"propertiesWithHistory,omitempty"`
-}
-
-// Postcrmobjects202603emailsbatchreadReadParams defines parameters for Postcrmobjects202603emailsbatchreadRead.
-type Postcrmobjects202603emailsbatchreadReadParams struct {
-	// Archived Whether to return only results that have been archived.
-	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
-}
-
-// Getcrmobjects202603emailsEmailIdGetByIdParams defines parameters for Getcrmobjects202603emailsEmailIdGetById.
-type Getcrmobjects202603emailsEmailIdGetByIdParams struct {
-	// Archived Whether to return only results that have been archived.
-	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
-
-	// Associations A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored.
-	Associations *[]string `form:"associations,omitempty" json:"associations,omitempty"`
-
-	// IdProperty The name of a property whose values are unique for this object type
-	IdProperty *string `form:"idProperty,omitempty" json:"idProperty,omitempty"`
-
-	// Properties A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored.
-	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
-
-	// PropertiesWithHistory A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored.
-	PropertiesWithHistory *[]string `form:"propertiesWithHistory,omitempty" json:"propertiesWithHistory,omitempty"`
-}
-
-// Patchcrmobjects202603emailsEmailIdUpdateParams defines parameters for Patchcrmobjects202603emailsEmailIdUpdate.
-type Patchcrmobjects202603emailsEmailIdUpdateParams struct {
-	// IdProperty The name of a property whose values are unique for this object type
-	IdProperty *string `form:"idProperty,omitempty" json:"idProperty,omitempty"`
 }
