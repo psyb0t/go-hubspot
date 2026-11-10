@@ -16902,6 +16902,8 @@ type StreamingCollectionResponseWithTotalHubDbTableRowV3Type string
 
 // StringFieldSchema defines model for StringFieldSchema.
 type StringFieldSchema struct {
+	AllowedObjectTypeIds *[]string `json:"allowedObjectTypeIds,omitempty"`
+
 	// Format Specifies the format of the string, with accepted values: DATE, DATE_TIME, OBJECT_COORDINATE, TIME, URI.
 	Format *StringFieldSchemaFormat `json:"format,omitempty"`
 

@@ -2,6 +2,10 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.5.3, 2026-11-10
+
+- Added the optional field `AllowedObjectTypeIds` (`*[]string`, JSON name `allowedObjectTypeIds`) on `StringFieldSchema`. Existing callers compile and behave the same.
+
 ## v0.5.2, 2026-11-10
 
 - Rewrote doc comments on many `Public...` filter types from the spec for API version 2026-03, such as `PublicAbsoluteComparativeTimestampRefineBy`, `PublicAbsoluteRangedTimestampRefineBy`, `PublicAdsSearchFilter`, `PublicAdsTimeFilter`, `PublicAllHistoryRefineBy`, `PublicAllPropertyTypesOperation` and `PublicAndFilterBranch`. They replace "defines model for" with a description of what the type filters.
