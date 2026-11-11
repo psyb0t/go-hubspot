@@ -17814,6 +17814,7 @@ const (
 	PreResolvedContactContactPropertiesLeadingToMatchHsFirstOutreachDate                                PreResolvedContactContactPropertiesLeadingToMatch = "hs_first_outreach_date"
 	PreResolvedContactContactPropertiesLeadingToMatchHsFirstSubscriptionCreateDate                      PreResolvedContactContactPropertiesLeadingToMatch = "hs_first_subscription_create_date"
 	PreResolvedContactContactPropertiesLeadingToMatchHsFullNameOrEmail                                  PreResolvedContactContactPropertiesLeadingToMatch = "hs_full_name_or_email"
+	PreResolvedContactContactPropertiesLeadingToMatchHsGeocodeMappingId                                 PreResolvedContactContactPropertiesLeadingToMatch = "hs_geocode_mapping_id"
 	PreResolvedContactContactPropertiesLeadingToMatchHsGeohash1                                         PreResolvedContactContactPropertiesLeadingToMatch = "hs_geohash_1"
 	PreResolvedContactContactPropertiesLeadingToMatchHsGeohash2                                         PreResolvedContactContactPropertiesLeadingToMatch = "hs_geohash_2"
 	PreResolvedContactContactPropertiesLeadingToMatchHsGeohash3                                         PreResolvedContactContactPropertiesLeadingToMatch = "hs_geohash_3"
@@ -18407,6 +18408,8 @@ func (e PreResolvedContactContactPropertiesLeadingToMatch) Valid() bool {
 	case PreResolvedContactContactPropertiesLeadingToMatchHsFirstSubscriptionCreateDate:
 		return true
 	case PreResolvedContactContactPropertiesLeadingToMatchHsFullNameOrEmail:
+		return true
+	case PreResolvedContactContactPropertiesLeadingToMatchHsGeocodeMappingId:
 		return true
 	case PreResolvedContactContactPropertiesLeadingToMatchHsGeohash1:
 		return true

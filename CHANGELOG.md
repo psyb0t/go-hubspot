@@ -2,6 +2,11 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.5.4, 2026-11-11
+
+- Added the constant `PreResolvedContactContactPropertiesLeadingToMatchHsGeocodeMappingId` for the contact property `hs_geocode_mapping_id`. The `Valid` method of `PreResolvedContactContactPropertiesLeadingToMatch` accepts it.
+- Raised the minimum Go version in `go.mod` from 1.26.10 to 1.26.11, to pick up the `net/http` fix for GO-2026-6859 that `govulncheck` reported. The development image `Dockerfile.dev` and the setup notes use the same version.
+
 ## v0.5.3, 2026-11-10
 
 - Added the optional field `AllowedObjectTypeIds` (`*[]string`, JSON name `allowedObjectTypeIds`) on `StringFieldSchema`. Existing callers compile and behave the same.
