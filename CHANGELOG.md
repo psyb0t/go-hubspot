@@ -2,6 +2,11 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.5.5, 2026-11-12
+
+- Added doc comments from the spec for API version 2026-03 on `PublicComparativeNumberPropertyOperation`, its fields `ComparisonPropertyName`, `DefaultComparisonValue`, `IncludeObjectsWithNoValueSet`, `OperationType` and `Operator`, and the type `PublicComparativeNumberPropertyOperationOperationType`. They replace "defines model for".
+- Generated code changed only in comments and file placement. The parameter type `Getcrmobjects202603discountsDiscountIdParams` moved from `client_004.gen.go` to `client_005.gen.go`. No exported identifier or signature changed.
+
 ## v0.5.4, 2026-11-11
 
 - Added the constant `PreResolvedContactContactPropertiesLeadingToMatchHsGeocodeMappingId` for the contact property `hs_geocode_mapping_id`. The `Valid` method of `PreResolvedContactContactPropertiesLeadingToMatch` accepts it.

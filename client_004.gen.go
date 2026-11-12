@@ -12284,16 +12284,25 @@ type PublicComparativeDatePropertyOperation struct {
 // PublicComparativeDatePropertyOperationOperationType The type of operation (COMPARATIVE_DATE).
 type PublicComparativeDatePropertyOperationOperationType string
 
-// PublicComparativeNumberPropertyOperation defines model for PublicComparativeNumberPropertyOperation.
+// PublicComparativeNumberPropertyOperation The PublicComparativeNumberPropertyOperation component is used to define operations that compare numerical properties within HubSpot. It is typically used in scenarios where numerical comparisons are needed to filter or evaluate data.
 type PublicComparativeNumberPropertyOperation struct {
-	ComparisonPropertyName       string                                                `json:"comparisonPropertyName"`
-	DefaultComparisonValue       *string                                               `json:"defaultComparisonValue,omitempty"`
-	IncludeObjectsWithNoValueSet bool                                                  `json:"includeObjectsWithNoValueSet"`
-	OperationType                PublicComparativeNumberPropertyOperationOperationType `json:"operationType"`
-	Operator                     string                                                `json:"operator"`
+	// ComparisonPropertyName The name of the property to be compared, represented as a string. This property is required.
+	ComparisonPropertyName string `json:"comparisonPropertyName"`
+
+	// DefaultComparisonValue The default value used for comparison if no specific value is provided. This is an optional string value.
+	DefaultComparisonValue *string `json:"defaultComparisonValue,omitempty"`
+
+	// IncludeObjectsWithNoValueSet A required boolean that determines whether objects without a set value for the comparison property should be included in the operation.
+	IncludeObjectsWithNoValueSet bool `json:"includeObjectsWithNoValueSet"`
+
+	// OperationType A required string that defines the type of operation being performed.
+	OperationType PublicComparativeNumberPropertyOperationOperationType `json:"operationType"`
+
+	// Operator A required string that specifies the comparison operator to be used, such as 'greater than' or 'less than'.
+	Operator string `json:"operator"`
 }
 
-// PublicComparativeNumberPropertyOperationOperationType defines model for PublicComparativeNumberPropertyOperation.OperationType.
+// PublicComparativeNumberPropertyOperationOperationType A required string that defines the type of operation being performed.
 type PublicComparativeNumberPropertyOperationOperationType string
 
 // PublicComparativePropertyUpdatedOperation Represents an operation for updating comparative properties in a list within the HubSpot ListAppService API. This component is used to define the criteria for comparing and updating properties based on specified conditions.
@@ -20001,22 +20010,4 @@ type Getcrmobjects202603discountsParams struct {
 type Postcrmobjects202603discountsbatchreadParams struct {
 	// Archived Whether to return only results that have been archived.
 	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
-}
-
-// Getcrmobjects202603discountsDiscountIdParams defines parameters for Getcrmobjects202603discountsDiscountId.
-type Getcrmobjects202603discountsDiscountIdParams struct {
-	// Archived Whether to return only results that have been archived.
-	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
-
-	// Associations A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored.
-	Associations *[]string `form:"associations,omitempty" json:"associations,omitempty"`
-
-	// IdProperty The name of a property whose values are unique for this object type
-	IdProperty *string `form:"idProperty,omitempty" json:"idProperty,omitempty"`
-
-	// Properties A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored.
-	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
-
-	// PropertiesWithHistory A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored.
-	PropertiesWithHistory *[]string `form:"propertiesWithHistory,omitempty" json:"propertiesWithHistory,omitempty"`
 }

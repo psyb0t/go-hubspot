@@ -15,6 +15,24 @@ import (
 	openapi_types "github.com/oapi-codegen/runtime/types"
 )
 
+// Getcrmobjects202603discountsDiscountIdParams defines parameters for Getcrmobjects202603discountsDiscountId.
+type Getcrmobjects202603discountsDiscountIdParams struct {
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+
+	// Associations A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored.
+	Associations *[]string `form:"associations,omitempty" json:"associations,omitempty"`
+
+	// IdProperty The name of a property whose values are unique for this object type
+	IdProperty *string `form:"idProperty,omitempty" json:"idProperty,omitempty"`
+
+	// Properties A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
+
+	// PropertiesWithHistory A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored.
+	PropertiesWithHistory *[]string `form:"propertiesWithHistory,omitempty" json:"propertiesWithHistory,omitempty"`
+}
+
 // Patchcrmobjects202603discountsDiscountIdParams defines parameters for Patchcrmobjects202603discountsDiscountId.
 type Patchcrmobjects202603discountsDiscountIdParams struct {
 	// IdProperty The name of a property whose values are unique for this object type
