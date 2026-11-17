@@ -9,6 +9,118 @@ import (
 	"net/http"
 )
 
+// Status returns HTTPResponse.Status
+func (r Postcrmobjects202603notesbatchcreateCreateResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcrmobjects202603notesbatchcreateCreateResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcrmobjects202603notesbatchcreateCreateResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcrmobjects202603notesbatchreadReadResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *BatchResponseSimplePublicObject
+	// JSON207 the response for an HTTP 207 `application/json` response
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Postcrmobjects202603notesbatchreadReadResponse) GetJSON200() *BatchResponseSimplePublicObject {
+	return r.JSON200
+}
+
+// GetJSON207 returns the response for an HTTP 207 `application/json` response
+func (r Postcrmobjects202603notesbatchreadReadResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
+	return r.JSON207
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcrmobjects202603notesbatchreadReadResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcrmobjects202603notesbatchreadReadResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcrmobjects202603notesbatchreadReadResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r Postcrmobjects202603notesbatchreadReadResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type Postcrmobjects202603notesbatchupdateUpdateResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *BatchResponseSimplePublicObject
+	// JSON207 the response for an HTTP 207 `application/json` response
+	JSON207 *BatchResponseSimplePublicObjectWithErrors
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r Postcrmobjects202603notesbatchupdateUpdateResponse) GetJSON200() *BatchResponseSimplePublicObject {
+	return r.JSON200
+}
+
+// GetJSON207 returns the response for an HTTP 207 `application/json` response
+func (r Postcrmobjects202603notesbatchupdateUpdateResponse) GetJSON207() *BatchResponseSimplePublicObjectWithErrors {
+	return r.JSON207
+}
+
+// GetBody returns the raw response body bytes
+func (r Postcrmobjects202603notesbatchupdateUpdateResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r Postcrmobjects202603notesbatchupdateUpdateResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r Postcrmobjects202603notesbatchupdateUpdateResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 // ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
 func (r Postcrmobjects202603notesbatchupdateUpdateResponse) ContentType() string {
 	if r.HTTPResponse != nil {
@@ -17938,9 +18050,13 @@ func (c *ClientWithResponses) Postautomationactionscallbacks202603CallbackIdcomp
 	return ParsePostautomationactionscallbacks202603CallbackIdcompleteCompleteResponse(rsp)
 }
 
-// Getautomationsequences202603automationsequences202603WithResponse performs a GET /automation/sequences/2026-03 (the `Getautomationsequences202603automationsequences202603` operationId) request.
+// Getautomationsequences202603automationsequences202603WithResponse Retrieve sequences
+//
+// Retrieve a list of sequences available in your HubSpot account. This endpoint allows you to filter sequences by user ID and name, and supports pagination for large result sets. Use this endpoint to manage and review your sequences effectively.
 //
 // Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /automation/sequences/2026-03 (the `Getautomationsequences202603automationsequences202603` operationId).
 func (c *ClientWithResponses) Getautomationsequences202603automationsequences202603WithResponse(ctx context.Context, params *Getautomationsequences202603automationsequences202603Params, reqEditors ...RequestEditorFn) (*Getautomationsequences202603automationsequences202603Response, error) {
 	rsp, err := c.Getautomationsequences202603automationsequences202603(ctx, params, reqEditors...)
 	if err != nil {
@@ -19892,126 +20008,4 @@ func (c *ClientWithResponses) Postcmshubdb202603tablesTableIdOrNamedraftcloneClo
 		return nil, err
 	}
 	return ParsePostcmshubdb202603tablesTableIdOrNamedraftcloneCloneDraftTableResponse(rsp)
-}
-
-// Getcmshubdb202603tablesTableIdOrNamedraftexportExportDraftTableWithResponse Export a draft table
-//
-// Exports the draft version of a table to CSV / EXCEL format.
-//
-// Returns a wrapper object for the known response body format(s).
-//
-// Corresponds with GET /cms/hubdb/2026-03/tables/{tableIdOrName}/draft/export (the `Getcmshubdb202603tablesTableIdOrNamedraftexportExportDraftTable` operationId).
-func (c *ClientWithResponses) Getcmshubdb202603tablesTableIdOrNamedraftexportExportDraftTableWithResponse(ctx context.Context, tableIdOrName string, params *Getcmshubdb202603tablesTableIdOrNamedraftexportExportDraftTableParams, reqEditors ...RequestEditorFn) (*Getcmshubdb202603tablesTableIdOrNamedraftexportExportDraftTableResponse, error) {
-	rsp, err := c.Getcmshubdb202603tablesTableIdOrNamedraftexportExportDraftTable(ctx, tableIdOrName, params, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseGetcmshubdb202603tablesTableIdOrNamedraftexportExportDraftTableResponse(rsp)
-}
-
-// Postcmshubdb202603tablesTableIdOrNamedraftimportImportDraftTableWithBodyWithResponse Import data into draft table
-//
-// Import the contents of a CSV file into an existing HubDB table. The data will always be imported into the draft version of the table. Use the `/publish` endpoint to push these changes to the published version.
-// This endpoint takes a multi-part POST request. The first part will be a set of JSON-formatted options for the import and you can specify this with the name as `config`.  The second part will be the CSV file you want to import and you can specify this with the name as `file`. Refer the [overview section](https://developers.hubspot.com/docs/api/cms/hubdb#importing-tables) to check the details and format of the JSON-formatted options for the import.
-//
-// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
-//
-// Corresponds with POST /cms/hubdb/2026-03/tables/{tableIdOrName}/draft/import (the `Postcmshubdb202603tablesTableIdOrNamedraftimportImportDraftTable` operationId).
-func (c *ClientWithResponses) Postcmshubdb202603tablesTableIdOrNamedraftimportImportDraftTableWithBodyWithResponse(ctx context.Context, tableIdOrName string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmshubdb202603tablesTableIdOrNamedraftimportImportDraftTableResponse, error) {
-	rsp, err := c.Postcmshubdb202603tablesTableIdOrNamedraftimportImportDraftTableWithBody(ctx, tableIdOrName, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParsePostcmshubdb202603tablesTableIdOrNamedraftimportImportDraftTableResponse(rsp)
-}
-
-// Postcmshubdb202603tablesTableIdOrNamedraftpublishPublishDraftTableWithResponse Publish a table from draft
-//
-// Publishes the table by copying the data and table schema changes from draft version to the published version, meaning any website pages using data from the table will be updated.
-//
-// Returns a wrapper object for the known response body format(s).
-//
-// Corresponds with POST /cms/hubdb/2026-03/tables/{tableIdOrName}/draft/publish (the `Postcmshubdb202603tablesTableIdOrNamedraftpublishPublishDraftTable` operationId).
-func (c *ClientWithResponses) Postcmshubdb202603tablesTableIdOrNamedraftpublishPublishDraftTableWithResponse(ctx context.Context, tableIdOrName string, params *Postcmshubdb202603tablesTableIdOrNamedraftpublishPublishDraftTableParams, reqEditors ...RequestEditorFn) (*Postcmshubdb202603tablesTableIdOrNamedraftpublishPublishDraftTableResponse, error) {
-	rsp, err := c.Postcmshubdb202603tablesTableIdOrNamedraftpublishPublishDraftTable(ctx, tableIdOrName, params, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParsePostcmshubdb202603tablesTableIdOrNamedraftpublishPublishDraftTableResponse(rsp)
-}
-
-// Postcmshubdb202603tablesTableIdOrNamedraftresetResetDraftTableWithResponse Reset a draft table
-//
-// Replaces the data in the draft version of the table with values from the published version. Any unpublished changes in the draft will be lost after this call is made.
-//
-// Returns a wrapper object for the known response body format(s).
-//
-// Corresponds with POST /cms/hubdb/2026-03/tables/{tableIdOrName}/draft/reset (the `Postcmshubdb202603tablesTableIdOrNamedraftresetResetDraftTable` operationId).
-func (c *ClientWithResponses) Postcmshubdb202603tablesTableIdOrNamedraftresetResetDraftTableWithResponse(ctx context.Context, tableIdOrName string, params *Postcmshubdb202603tablesTableIdOrNamedraftresetResetDraftTableParams, reqEditors ...RequestEditorFn) (*Postcmshubdb202603tablesTableIdOrNamedraftresetResetDraftTableResponse, error) {
-	rsp, err := c.Postcmshubdb202603tablesTableIdOrNamedraftresetResetDraftTable(ctx, tableIdOrName, params, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParsePostcmshubdb202603tablesTableIdOrNamedraftresetResetDraftTableResponse(rsp)
-}
-
-// Getcmshubdb202603tablesTableIdOrNameexportExportTableWithResponse Export a published version of a table
-//
-// Exports the published version of a table in a specified format.
-//
-// Returns a wrapper object for the known response body format(s).
-//
-// Corresponds with GET /cms/hubdb/2026-03/tables/{tableIdOrName}/export (the `Getcmshubdb202603tablesTableIdOrNameexportExportTable` operationId).
-func (c *ClientWithResponses) Getcmshubdb202603tablesTableIdOrNameexportExportTableWithResponse(ctx context.Context, tableIdOrName string, params *Getcmshubdb202603tablesTableIdOrNameexportExportTableParams, reqEditors ...RequestEditorFn) (*Getcmshubdb202603tablesTableIdOrNameexportExportTableResponse, error) {
-	rsp, err := c.Getcmshubdb202603tablesTableIdOrNameexportExportTable(ctx, tableIdOrName, params, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseGetcmshubdb202603tablesTableIdOrNameexportExportTableResponse(rsp)
-}
-
-// Getcmshubdb202603tablesTableIdOrNamerowsGetTableRowsWithResponse Get rows for a table
-//
-// Returns a set of rows in the published version of the specified table. Row results can be filtered and sorted. Filtering and sorting options will be sent as query parameters to the API request. For example, by adding the query parameters `column1__gt=5&sort=-column1`, API returns the rows with values for column `column1` greater than 5 and in the descending order of `column1` values. Refer to the [overview section](https://developers.hubspot.com/docs/api/cms/hubdb#filtering-and-sorting-table-rows) for detailed filtering and sorting options.
-// **Note:** This endpoint can be accessed without any authentication, if the table is set to be allowed for public access.
-//
-// Returns a wrapper object for the known response body format(s).
-//
-// Corresponds with GET /cms/hubdb/2026-03/tables/{tableIdOrName}/rows (the `Getcmshubdb202603tablesTableIdOrNamerowsGetTableRows` operationId).
-func (c *ClientWithResponses) Getcmshubdb202603tablesTableIdOrNamerowsGetTableRowsWithResponse(ctx context.Context, tableIdOrName string, params *Getcmshubdb202603tablesTableIdOrNamerowsGetTableRowsParams, reqEditors ...RequestEditorFn) (*Getcmshubdb202603tablesTableIdOrNamerowsGetTableRowsResponse, error) {
-	rsp, err := c.Getcmshubdb202603tablesTableIdOrNamerowsGetTableRows(ctx, tableIdOrName, params, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseGetcmshubdb202603tablesTableIdOrNamerowsGetTableRowsResponse(rsp)
-}
-
-// Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowWithBodyWithResponse Add a new row to a table
-//
-// Add a new row to a HubDB table. New rows will be added to the draft version of the table. Use the `/publish` endpoint to push these changes to published version.
-//
-// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
-//
-// Corresponds with POST /cms/hubdb/2026-03/tables/{tableIdOrName}/rows (the `Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRow` operationId).
-func (c *ClientWithResponses) Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowWithBodyWithResponse(ctx context.Context, tableIdOrName string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowResponse, error) {
-	rsp, err := c.Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowWithBody(ctx, tableIdOrName, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParsePostcmshubdb202603tablesTableIdOrNamerowsCreateTableRowResponse(rsp)
-}
-
-// Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowWithResponse Add a new row to a table
-//
-// Add a new row to a HubDB table. New rows will be added to the draft version of the table. Use the `/publish` endpoint to push these changes to published version.
-//
-// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
-//
-// Corresponds with POST /cms/hubdb/2026-03/tables/{tableIdOrName}/rows (the `Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRow` operationId).
-func (c *ClientWithResponses) Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowWithResponse(ctx context.Context, tableIdOrName string, body Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowResponse, error) {
-	rsp, err := c.Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRow(ctx, tableIdOrName, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParsePostcmshubdb202603tablesTableIdOrNamerowsCreateTableRowResponse(rsp)
 }

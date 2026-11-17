@@ -564,7 +564,11 @@ func (c *Client) Postautomationactionscallbacks202603CallbackIdcompleteComplete(
 	return c.Client.Do(req)
 }
 
-// Getautomationsequences202603automationsequences202603 performs a GET /automation/sequences/2026-03 (the `Getautomationsequences202603automationsequences202603` operationId) request.
+// Getautomationsequences202603automationsequences202603 Retrieve sequences
+//
+// Retrieve a list of sequences available in your HubSpot account. This endpoint allows you to filter sequences by user ID and name, and supports pagination for large result sets. Use this endpoint to manage and review your sequences effectively.
+//
+// Corresponds with GET /automation/sequences/2026-03 (the `Getautomationsequences202603automationsequences202603` operationId).
 func (c *Client) Getautomationsequences202603automationsequences202603(ctx context.Context, params *Getautomationsequences202603automationsequences202603Params, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewGetautomationsequences202603automationsequences202603Request(c.Server, params)
 	if err != nil {

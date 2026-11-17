@@ -17998,10 +17998,14 @@ type Getautomationactions202603AppIdDefinitionIdrevisionsGetPageParams struct {
 
 // Getautomationsequences202603automationsequences202603Params defines parameters for Getautomationsequences202603automationsequences202603.
 type Getautomationsequences202603automationsequences202603Params struct {
-	UserId string  `form:"userId" json:"userId"`
-	After  *string `form:"after,omitempty" json:"after,omitempty"`
-	Limit  *int32  `form:"limit,omitempty" json:"limit,omitempty"`
-	Name   *string `form:"name,omitempty" json:"name,omitempty"`
+	UserId string `form:"userId" json:"userId"`
+
+	// After The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.
+	After *string `form:"after,omitempty" json:"after,omitempty"`
+
+	// Limit The maximum number of results to display per page.
+	Limit *int32  `form:"limit,omitempty" json:"limit,omitempty"`
+	Name  *string `form:"name,omitempty" json:"name,omitempty"`
 }
 
 // Postautomationsequences202603enrollmentsParams defines parameters for Postautomationsequences202603enrollments.
@@ -20004,10 +20008,4 @@ type Getcrmobjects202603discountsParams struct {
 
 	// PropertiesWithHistory A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored. Usage of this parameter will reduce the maximum number of objects that can be read by a single request.
 	PropertiesWithHistory *[]string `form:"propertiesWithHistory,omitempty" json:"propertiesWithHistory,omitempty"`
-}
-
-// Postcrmobjects202603discountsbatchreadParams defines parameters for Postcrmobjects202603discountsbatchread.
-type Postcrmobjects202603discountsbatchreadParams struct {
-	// Archived Whether to return only results that have been archived.
-	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
 }

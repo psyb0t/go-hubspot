@@ -12,6 +12,136 @@ import (
 	"github.com/oapi-codegen/runtime"
 )
 
+// ParseGetfeatureFlags202603AppIdflagsallfeatureFlagsv3AppIdflagsallResponse parses an HTTP response from a GetfeatureFlags202603AppIdflagsallfeatureFlagsv3AppIdflagsallWithResponse call
+func ParseGetfeatureFlags202603AppIdflagsallfeatureFlagsv3AppIdflagsallResponse(rsp *http.Response) (*GetfeatureFlags202603AppIdflagsallfeatureFlagsv3AppIdflagsallResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetfeatureFlags202603AppIdflagsallfeatureFlagsv3AppIdflagsallResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest FlagsForAppResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseDeletefeatureFlags202603AppIdflagsFlagNameResponse parses an HTTP response from a DeletefeatureFlags202603AppIdflagsFlagNameWithResponse call
+func ParseDeletefeatureFlags202603AppIdflagsFlagNameResponse(rsp *http.Response) (*DeletefeatureFlags202603AppIdflagsFlagNameResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &DeletefeatureFlags202603AppIdflagsFlagNameResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest FlagResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetfeatureFlags202603AppIdflagsFlagNameResponse parses an HTTP response from a GetfeatureFlags202603AppIdflagsFlagNameWithResponse call
+func ParseGetfeatureFlags202603AppIdflagsFlagNameResponse(rsp *http.Response) (*GetfeatureFlags202603AppIdflagsFlagNameResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetfeatureFlags202603AppIdflagsFlagNameResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest FlagResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePutfeatureFlags202603AppIdflagsFlagNameResponse parses an HTTP response from a PutfeatureFlags202603AppIdflagsFlagNameWithResponse call
+func ParsePutfeatureFlags202603AppIdflagsFlagNameResponse(rsp *http.Response) (*PutfeatureFlags202603AppIdflagsFlagNameResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &PutfeatureFlags202603AppIdflagsFlagNameResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest FlagResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetfeatureFlags202603AppIdflagsFlagNameportalsResponse parses an HTTP response from a GetfeatureFlags202603AppIdflagsFlagNameportalsWithResponse call
+func ParseGetfeatureFlags202603AppIdflagsFlagNameportalsResponse(rsp *http.Response) (*GetfeatureFlags202603AppIdflagsFlagNameportalsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetfeatureFlags202603AppIdflagsFlagNameportalsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest PortalFlagStateBatchResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
 // ParsePostfeatureFlags202603AppIdflagsFlagNameportalsbatchdeleteResponse parses an HTTP response from a PostfeatureFlags202603AppIdflagsFlagNameportalsbatchdeleteWithResponse call
 func ParsePostfeatureFlags202603AppIdflagsFlagNameportalsbatchdeleteResponse(rsp *http.Response) (*PostfeatureFlags202603AppIdflagsFlagNameportalsbatchdeleteResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)

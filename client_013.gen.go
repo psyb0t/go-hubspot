@@ -10,6 +10,128 @@ import (
 	openapi_types "github.com/oapi-codegen/runtime/types"
 )
 
+// Getcmshubdb202603tablesTableIdOrNamedraftexportExportDraftTableWithResponse Export a draft table
+//
+// Exports the draft version of a table to CSV / EXCEL format.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /cms/hubdb/2026-03/tables/{tableIdOrName}/draft/export (the `Getcmshubdb202603tablesTableIdOrNamedraftexportExportDraftTable` operationId).
+func (c *ClientWithResponses) Getcmshubdb202603tablesTableIdOrNamedraftexportExportDraftTableWithResponse(ctx context.Context, tableIdOrName string, params *Getcmshubdb202603tablesTableIdOrNamedraftexportExportDraftTableParams, reqEditors ...RequestEditorFn) (*Getcmshubdb202603tablesTableIdOrNamedraftexportExportDraftTableResponse, error) {
+	rsp, err := c.Getcmshubdb202603tablesTableIdOrNamedraftexportExportDraftTable(ctx, tableIdOrName, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetcmshubdb202603tablesTableIdOrNamedraftexportExportDraftTableResponse(rsp)
+}
+
+// Postcmshubdb202603tablesTableIdOrNamedraftimportImportDraftTableWithBodyWithResponse Import data into draft table
+//
+// Import the contents of a CSV file into an existing HubDB table. The data will always be imported into the draft version of the table. Use the `/publish` endpoint to push these changes to the published version.
+// This endpoint takes a multi-part POST request. The first part will be a set of JSON-formatted options for the import and you can specify this with the name as `config`.  The second part will be the CSV file you want to import and you can specify this with the name as `file`. Refer the [overview section](https://developers.hubspot.com/docs/api/cms/hubdb#importing-tables) to check the details and format of the JSON-formatted options for the import.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /cms/hubdb/2026-03/tables/{tableIdOrName}/draft/import (the `Postcmshubdb202603tablesTableIdOrNamedraftimportImportDraftTable` operationId).
+func (c *ClientWithResponses) Postcmshubdb202603tablesTableIdOrNamedraftimportImportDraftTableWithBodyWithResponse(ctx context.Context, tableIdOrName string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmshubdb202603tablesTableIdOrNamedraftimportImportDraftTableResponse, error) {
+	rsp, err := c.Postcmshubdb202603tablesTableIdOrNamedraftimportImportDraftTableWithBody(ctx, tableIdOrName, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcmshubdb202603tablesTableIdOrNamedraftimportImportDraftTableResponse(rsp)
+}
+
+// Postcmshubdb202603tablesTableIdOrNamedraftpublishPublishDraftTableWithResponse Publish a table from draft
+//
+// Publishes the table by copying the data and table schema changes from draft version to the published version, meaning any website pages using data from the table will be updated.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /cms/hubdb/2026-03/tables/{tableIdOrName}/draft/publish (the `Postcmshubdb202603tablesTableIdOrNamedraftpublishPublishDraftTable` operationId).
+func (c *ClientWithResponses) Postcmshubdb202603tablesTableIdOrNamedraftpublishPublishDraftTableWithResponse(ctx context.Context, tableIdOrName string, params *Postcmshubdb202603tablesTableIdOrNamedraftpublishPublishDraftTableParams, reqEditors ...RequestEditorFn) (*Postcmshubdb202603tablesTableIdOrNamedraftpublishPublishDraftTableResponse, error) {
+	rsp, err := c.Postcmshubdb202603tablesTableIdOrNamedraftpublishPublishDraftTable(ctx, tableIdOrName, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcmshubdb202603tablesTableIdOrNamedraftpublishPublishDraftTableResponse(rsp)
+}
+
+// Postcmshubdb202603tablesTableIdOrNamedraftresetResetDraftTableWithResponse Reset a draft table
+//
+// Replaces the data in the draft version of the table with values from the published version. Any unpublished changes in the draft will be lost after this call is made.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /cms/hubdb/2026-03/tables/{tableIdOrName}/draft/reset (the `Postcmshubdb202603tablesTableIdOrNamedraftresetResetDraftTable` operationId).
+func (c *ClientWithResponses) Postcmshubdb202603tablesTableIdOrNamedraftresetResetDraftTableWithResponse(ctx context.Context, tableIdOrName string, params *Postcmshubdb202603tablesTableIdOrNamedraftresetResetDraftTableParams, reqEditors ...RequestEditorFn) (*Postcmshubdb202603tablesTableIdOrNamedraftresetResetDraftTableResponse, error) {
+	rsp, err := c.Postcmshubdb202603tablesTableIdOrNamedraftresetResetDraftTable(ctx, tableIdOrName, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcmshubdb202603tablesTableIdOrNamedraftresetResetDraftTableResponse(rsp)
+}
+
+// Getcmshubdb202603tablesTableIdOrNameexportExportTableWithResponse Export a published version of a table
+//
+// Exports the published version of a table in a specified format.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /cms/hubdb/2026-03/tables/{tableIdOrName}/export (the `Getcmshubdb202603tablesTableIdOrNameexportExportTable` operationId).
+func (c *ClientWithResponses) Getcmshubdb202603tablesTableIdOrNameexportExportTableWithResponse(ctx context.Context, tableIdOrName string, params *Getcmshubdb202603tablesTableIdOrNameexportExportTableParams, reqEditors ...RequestEditorFn) (*Getcmshubdb202603tablesTableIdOrNameexportExportTableResponse, error) {
+	rsp, err := c.Getcmshubdb202603tablesTableIdOrNameexportExportTable(ctx, tableIdOrName, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetcmshubdb202603tablesTableIdOrNameexportExportTableResponse(rsp)
+}
+
+// Getcmshubdb202603tablesTableIdOrNamerowsGetTableRowsWithResponse Get rows for a table
+//
+// Returns a set of rows in the published version of the specified table. Row results can be filtered and sorted. Filtering and sorting options will be sent as query parameters to the API request. For example, by adding the query parameters `column1__gt=5&sort=-column1`, API returns the rows with values for column `column1` greater than 5 and in the descending order of `column1` values. Refer to the [overview section](https://developers.hubspot.com/docs/api/cms/hubdb#filtering-and-sorting-table-rows) for detailed filtering and sorting options.
+// **Note:** This endpoint can be accessed without any authentication, if the table is set to be allowed for public access.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /cms/hubdb/2026-03/tables/{tableIdOrName}/rows (the `Getcmshubdb202603tablesTableIdOrNamerowsGetTableRows` operationId).
+func (c *ClientWithResponses) Getcmshubdb202603tablesTableIdOrNamerowsGetTableRowsWithResponse(ctx context.Context, tableIdOrName string, params *Getcmshubdb202603tablesTableIdOrNamerowsGetTableRowsParams, reqEditors ...RequestEditorFn) (*Getcmshubdb202603tablesTableIdOrNamerowsGetTableRowsResponse, error) {
+	rsp, err := c.Getcmshubdb202603tablesTableIdOrNamerowsGetTableRows(ctx, tableIdOrName, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetcmshubdb202603tablesTableIdOrNamerowsGetTableRowsResponse(rsp)
+}
+
+// Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowWithBodyWithResponse Add a new row to a table
+//
+// Add a new row to a HubDB table. New rows will be added to the draft version of the table. Use the `/publish` endpoint to push these changes to published version.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /cms/hubdb/2026-03/tables/{tableIdOrName}/rows (the `Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRow` operationId).
+func (c *ClientWithResponses) Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowWithBodyWithResponse(ctx context.Context, tableIdOrName string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowResponse, error) {
+	rsp, err := c.Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowWithBody(ctx, tableIdOrName, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcmshubdb202603tablesTableIdOrNamerowsCreateTableRowResponse(rsp)
+}
+
+// Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowWithResponse Add a new row to a table
+//
+// Add a new row to a HubDB table. New rows will be added to the draft version of the table. Use the `/publish` endpoint to push these changes to published version.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /cms/hubdb/2026-03/tables/{tableIdOrName}/rows (the `Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRow` operationId).
+func (c *ClientWithResponses) Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowWithResponse(ctx context.Context, tableIdOrName string, body Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowJSONRequestBody, reqEditors ...RequestEditorFn) (*Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRowResponse, error) {
+	rsp, err := c.Postcmshubdb202603tablesTableIdOrNamerowsCreateTableRow(ctx, tableIdOrName, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostcmshubdb202603tablesTableIdOrNamerowsCreateTableRowResponse(rsp)
+}
+
 // Postcmshubdb202603tablesTableIdOrNamerowsbatchreadReadTableRowsWithBodyWithResponse Get a set of rows
 //
 // Returns rows in the published version of the specified table, given a set of row IDs.
@@ -15947,9 +16069,13 @@ func (c *ClientWithResponses) Postintegratorstimeline202603typesprojectsintegrat
 	return ParsePostintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojectsResponse(rsp)
 }
 
-// Getmarketingcampaigns202603marketingcampaignsv3WithResponse performs a GET /marketing/campaigns/2026-03 (the `Getmarketingcampaigns202603marketingcampaignsv3` operationId) request.
+// Getmarketingcampaigns202603marketingcampaignsv3WithResponse Retrieve campaigns
+//
+// Retrieve a paginated list of campaigns from your HubSpot account. This endpoint allows you to specify sorting, pagination, and filtering options to tailor the results to your needs.
 //
 // Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /marketing/campaigns/2026-03 (the `Getmarketingcampaigns202603marketingcampaignsv3` operationId).
 func (c *ClientWithResponses) Getmarketingcampaigns202603marketingcampaignsv3WithResponse(ctx context.Context, params *Getmarketingcampaigns202603marketingcampaignsv3Params, reqEditors ...RequestEditorFn) (*Getmarketingcampaigns202603marketingcampaignsv3Response, error) {
 	rsp, err := c.Getmarketingcampaigns202603marketingcampaignsv3(ctx, params, reqEditors...)
 	if err != nil {
@@ -15958,10 +16084,13 @@ func (c *ClientWithResponses) Getmarketingcampaigns202603marketingcampaignsv3Wit
 	return ParseGetmarketingcampaigns202603marketingcampaignsv3Response(rsp)
 }
 
-// Postmarketingcampaigns202603marketingcampaignsv3WithBodyWithResponse performs a POST /marketing/campaigns/2026-03 (the `Postmarketingcampaigns202603marketingcampaignsv3` operationId) request,
-// with any type of body and a specified content type.
+// Postmarketingcampaigns202603marketingcampaignsv3WithBodyWithResponse Create a campaign
 //
-// Returns a wrapper object for the known response body format(s).
+// Create a campaign with the specified properties and receive a copy of the campaign object, including its ID. Note that the 'hs_goal' property is deprecated and will be ignored if provided.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /marketing/campaigns/2026-03 (the `Postmarketingcampaigns202603marketingcampaignsv3` operationId).
 func (c *ClientWithResponses) Postmarketingcampaigns202603marketingcampaignsv3WithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postmarketingcampaigns202603marketingcampaignsv3Response, error) {
 	rsp, err := c.Postmarketingcampaigns202603marketingcampaignsv3WithBody(ctx, contentType, body, reqEditors...)
 	if err != nil {
@@ -15970,8 +16099,13 @@ func (c *ClientWithResponses) Postmarketingcampaigns202603marketingcampaignsv3Wi
 	return ParsePostmarketingcampaigns202603marketingcampaignsv3Response(rsp)
 }
 
-// Postmarketingcampaigns202603marketingcampaignsv3WithResponse performs a POST /marketing/campaigns/2026-03 (the `Postmarketingcampaigns202603marketingcampaignsv3` operationId) request.
+// Postmarketingcampaigns202603marketingcampaignsv3WithResponse Create a campaign
+//
+// Create a campaign with the specified properties and receive a copy of the campaign object, including its ID. Note that the 'hs_goal' property is deprecated and will be ignored if provided.
+//
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /marketing/campaigns/2026-03 (the `Postmarketingcampaigns202603marketingcampaignsv3` operationId).
 func (c *ClientWithResponses) Postmarketingcampaigns202603marketingcampaignsv3WithResponse(ctx context.Context, body Postmarketingcampaigns202603marketingcampaignsv3JSONRequestBody, reqEditors ...RequestEditorFn) (*Postmarketingcampaigns202603marketingcampaignsv3Response, error) {
 	rsp, err := c.Postmarketingcampaigns202603marketingcampaignsv3(ctx, body, reqEditors...)
 	if err != nil {
@@ -19879,139 +20013,4 @@ func (c *ClientWithResponses) DeletewebhooksJournalsubscriptions202603portalsPor
 		return nil, err
 	}
 	return ParseDeletewebhooksJournalsubscriptions202603portalsPortalIdResponse(rsp)
-}
-
-// DeletewebhooksJournalsubscriptions202603SubscriptionIdWithResponse Delete subscription
-//
-// Delete a subscription by its ID.
-//
-// Returns a wrapper object for the known response body format(s).
-//
-// Corresponds with DELETE /webhooks-journal/subscriptions/2026-03/{subscriptionId} (the `DeletewebhooksJournalsubscriptions202603SubscriptionId` operationId).
-func (c *ClientWithResponses) DeletewebhooksJournalsubscriptions202603SubscriptionIdWithResponse(ctx context.Context, subscriptionId int64, reqEditors ...RequestEditorFn) (*DeletewebhooksJournalsubscriptions202603SubscriptionIdResponse, error) {
-	rsp, err := c.DeletewebhooksJournalsubscriptions202603SubscriptionId(ctx, subscriptionId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseDeletewebhooksJournalsubscriptions202603SubscriptionIdResponse(rsp)
-}
-
-// GetwebhooksJournalsubscriptions202603SubscriptionIdWithResponse Retrieve subscription
-//
-// Retrieve a subscription by its ID.
-//
-// Returns a wrapper object for the known response body format(s).
-//
-// Corresponds with GET /webhooks-journal/subscriptions/2026-03/{subscriptionId} (the `GetwebhooksJournalsubscriptions202603SubscriptionId` operationId).
-func (c *ClientWithResponses) GetwebhooksJournalsubscriptions202603SubscriptionIdWithResponse(ctx context.Context, subscriptionId int64, reqEditors ...RequestEditorFn) (*GetwebhooksJournalsubscriptions202603SubscriptionIdResponse, error) {
-	rsp, err := c.GetwebhooksJournalsubscriptions202603SubscriptionId(ctx, subscriptionId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseGetwebhooksJournalsubscriptions202603SubscriptionIdResponse(rsp)
-}
-
-// Deletewebhooks202603AppIdsettingsClearWithResponse Delete webhook settings
-//
-// Delete the webhook settings for the specified app. Event subscriptions will not be deleted, but will be paused until another webhook is created.
-//
-// Returns a wrapper object for the known response body format(s).
-//
-// Corresponds with DELETE /webhooks/2026-03/{appId}/settings (the `Deletewebhooks202603AppIdsettingsClear` operationId).
-func (c *ClientWithResponses) Deletewebhooks202603AppIdsettingsClearWithResponse(ctx context.Context, appId int32, reqEditors ...RequestEditorFn) (*Deletewebhooks202603AppIdsettingsClearResponse, error) {
-	rsp, err := c.Deletewebhooks202603AppIdsettingsClear(ctx, appId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseDeletewebhooks202603AppIdsettingsClearResponse(rsp)
-}
-
-// Getwebhooks202603AppIdsettingsGetAllWithResponse Read webhook settings
-//
-// Retrieve the webhook settings for the specified app, including the webhook’s target URL, throttle configuration, and create/update date.
-//
-// Returns a wrapper object for the known response body format(s).
-//
-// Corresponds with GET /webhooks/2026-03/{appId}/settings (the `Getwebhooks202603AppIdsettingsGetAll` operationId).
-func (c *ClientWithResponses) Getwebhooks202603AppIdsettingsGetAllWithResponse(ctx context.Context, appId int32, reqEditors ...RequestEditorFn) (*Getwebhooks202603AppIdsettingsGetAllResponse, error) {
-	rsp, err := c.Getwebhooks202603AppIdsettingsGetAll(ctx, appId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseGetwebhooks202603AppIdsettingsGetAllResponse(rsp)
-}
-
-// Putwebhooks202603AppIdsettingsConfigureWithBodyWithResponse Update webhook settings
-//
-// Update webhook settings for the specified app.
-//
-// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
-//
-// Corresponds with PUT /webhooks/2026-03/{appId}/settings (the `Putwebhooks202603AppIdsettingsConfigure` operationId).
-func (c *ClientWithResponses) Putwebhooks202603AppIdsettingsConfigureWithBodyWithResponse(ctx context.Context, appId int32, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Putwebhooks202603AppIdsettingsConfigureResponse, error) {
-	rsp, err := c.Putwebhooks202603AppIdsettingsConfigureWithBody(ctx, appId, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParsePutwebhooks202603AppIdsettingsConfigureResponse(rsp)
-}
-
-// Putwebhooks202603AppIdsettingsConfigureWithResponse Update webhook settings
-//
-// Update webhook settings for the specified app.
-//
-// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
-//
-// Corresponds with PUT /webhooks/2026-03/{appId}/settings (the `Putwebhooks202603AppIdsettingsConfigure` operationId).
-func (c *ClientWithResponses) Putwebhooks202603AppIdsettingsConfigureWithResponse(ctx context.Context, appId int32, body Putwebhooks202603AppIdsettingsConfigureJSONRequestBody, reqEditors ...RequestEditorFn) (*Putwebhooks202603AppIdsettingsConfigureResponse, error) {
-	rsp, err := c.Putwebhooks202603AppIdsettingsConfigure(ctx, appId, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParsePutwebhooks202603AppIdsettingsConfigureResponse(rsp)
-}
-
-// Getwebhooks202603AppIdsubscriptionsGetAllWithResponse Read event subscriptions
-//
-// Retrieve event subscriptions for the specified app.
-//
-// Returns a wrapper object for the known response body format(s).
-//
-// Corresponds with GET /webhooks/2026-03/{appId}/subscriptions (the `Getwebhooks202603AppIdsubscriptionsGetAll` operationId).
-func (c *ClientWithResponses) Getwebhooks202603AppIdsubscriptionsGetAllWithResponse(ctx context.Context, appId int32, reqEditors ...RequestEditorFn) (*Getwebhooks202603AppIdsubscriptionsGetAllResponse, error) {
-	rsp, err := c.Getwebhooks202603AppIdsubscriptionsGetAll(ctx, appId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseGetwebhooks202603AppIdsubscriptionsGetAllResponse(rsp)
-}
-
-// Postwebhooks202603AppIdsubscriptionsCreateWithBodyWithResponse Create an event subscription
-//
-// Create new event subscription for the specified app.
-//
-// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
-//
-// Corresponds with POST /webhooks/2026-03/{appId}/subscriptions (the `Postwebhooks202603AppIdsubscriptionsCreate` operationId).
-func (c *ClientWithResponses) Postwebhooks202603AppIdsubscriptionsCreateWithBodyWithResponse(ctx context.Context, appId int32, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postwebhooks202603AppIdsubscriptionsCreateResponse, error) {
-	rsp, err := c.Postwebhooks202603AppIdsubscriptionsCreateWithBody(ctx, appId, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParsePostwebhooks202603AppIdsubscriptionsCreateResponse(rsp)
-}
-
-// Postwebhooks202603AppIdsubscriptionsCreateWithResponse Create an event subscription
-//
-// Create new event subscription for the specified app.
-//
-// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
-//
-// Corresponds with POST /webhooks/2026-03/{appId}/subscriptions (the `Postwebhooks202603AppIdsubscriptionsCreate` operationId).
-func (c *ClientWithResponses) Postwebhooks202603AppIdsubscriptionsCreateWithResponse(ctx context.Context, appId int32, body Postwebhooks202603AppIdsubscriptionsCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postwebhooks202603AppIdsubscriptionsCreateResponse, error) {
-	rsp, err := c.Postwebhooks202603AppIdsubscriptionsCreate(ctx, appId, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParsePostwebhooks202603AppIdsubscriptionsCreateResponse(rsp)
 }

@@ -2779,7 +2779,11 @@ func (c *Client) Postintegratorstimeline202603typesprojectsintegratorstimeline20
 	return c.Client.Do(req)
 }
 
-// Getmarketingcampaigns202603marketingcampaignsv3 performs a GET /marketing/campaigns/2026-03 (the `Getmarketingcampaigns202603marketingcampaignsv3` operationId) request.
+// Getmarketingcampaigns202603marketingcampaignsv3 Retrieve campaigns
+//
+// Retrieve a paginated list of campaigns from your HubSpot account. This endpoint allows you to specify sorting, pagination, and filtering options to tailor the results to your needs.
+//
+// Corresponds with GET /marketing/campaigns/2026-03 (the `Getmarketingcampaigns202603marketingcampaignsv3` operationId).
 func (c *Client) Getmarketingcampaigns202603marketingcampaignsv3(ctx context.Context, params *Getmarketingcampaigns202603marketingcampaignsv3Params, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewGetmarketingcampaigns202603marketingcampaignsv3Request(c.Server, params)
 	if err != nil {
@@ -2792,8 +2796,13 @@ func (c *Client) Getmarketingcampaigns202603marketingcampaignsv3(ctx context.Con
 	return c.Client.Do(req)
 }
 
-// Postmarketingcampaigns202603marketingcampaignsv3WithBody performs a POST /marketing/campaigns/2026-03 (the `Postmarketingcampaigns202603marketingcampaignsv3` operationId) request,
-// with any type of body and a specified content type.
+// Postmarketingcampaigns202603marketingcampaignsv3WithBody Create a campaign
+//
+// Create a campaign with the specified properties and receive a copy of the campaign object, including its ID. Note that the 'hs_goal' property is deprecated and will be ignored if provided.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /marketing/campaigns/2026-03 (the `Postmarketingcampaigns202603marketingcampaignsv3` operationId).
 func (c *Client) Postmarketingcampaigns202603marketingcampaignsv3WithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostmarketingcampaigns202603marketingcampaignsv3RequestWithBody(c.Server, contentType, body)
 	if err != nil {
@@ -2806,8 +2815,13 @@ func (c *Client) Postmarketingcampaigns202603marketingcampaignsv3WithBody(ctx co
 	return c.Client.Do(req)
 }
 
-// Postmarketingcampaigns202603marketingcampaignsv3 performs a POST /marketing/campaigns/2026-03 (the `Postmarketingcampaigns202603marketingcampaignsv3` operationId) request.
+// Postmarketingcampaigns202603marketingcampaignsv3 Create a campaign
+//
+// Create a campaign with the specified properties and receive a copy of the campaign object, including its ID. Note that the 'hs_goal' property is deprecated and will be ignored if provided.
+//
 // Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /marketing/campaigns/2026-03 (the `Postmarketingcampaigns202603marketingcampaignsv3` operationId).
 func (c *Client) Postmarketingcampaigns202603marketingcampaignsv3(ctx context.Context, body Postmarketingcampaigns202603marketingcampaignsv3JSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPostmarketingcampaigns202603marketingcampaignsv3Request(c.Server, body)
 	if err != nil {
@@ -19998,47 +20012,6 @@ func NewPostcmspages202603sitePagesObjectIdrevisionsRevisionIdrestoreRestorePrev
 	}
 
 	operationPath := fmt.Sprintf("/cms/pages/2026-03/site-pages/%s/revisions/%s/restore", pathParam0, pathParam1)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest(http.MethodPost, queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
-}
-
-// NewPostcmspages202603sitePagesObjectIdrevisionsRevisionIdrestoreToDraftRestorePreviousVersionToDraftRequest constructs an http.Request for the Postcmspages202603sitePagesObjectIdrevisionsRevisionIdrestoreToDraftRestorePreviousVersionToDraft method
-func NewPostcmspages202603sitePagesObjectIdrevisionsRevisionIdrestoreToDraftRestorePreviousVersionToDraftRequest(server string, objectId string, revisionId int64) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "objectId", objectId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
-	if err != nil {
-		return nil, err
-	}
-
-	var pathParam1 string
-
-	pathParam1, err = runtime.StyleParamWithOptions("simple", false, "revisionId", revisionId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: "int64"})
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/cms/pages/2026-03/site-pages/%s/revisions/%s/restore-to-draft", pathParam0, pathParam1)
 	if operationPath[0] == '/' {
 		operationPath = "." + operationPath
 	}

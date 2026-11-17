@@ -13,6 +13,141 @@ import (
 	"github.com/oapi-codegen/runtime"
 )
 
+// DeletewebhooksJournalsubscriptions202603SubscriptionIdWithResponse Delete subscription
+//
+// Delete a subscription by its ID.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with DELETE /webhooks-journal/subscriptions/2026-03/{subscriptionId} (the `DeletewebhooksJournalsubscriptions202603SubscriptionId` operationId).
+func (c *ClientWithResponses) DeletewebhooksJournalsubscriptions202603SubscriptionIdWithResponse(ctx context.Context, subscriptionId int64, reqEditors ...RequestEditorFn) (*DeletewebhooksJournalsubscriptions202603SubscriptionIdResponse, error) {
+	rsp, err := c.DeletewebhooksJournalsubscriptions202603SubscriptionId(ctx, subscriptionId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDeletewebhooksJournalsubscriptions202603SubscriptionIdResponse(rsp)
+}
+
+// GetwebhooksJournalsubscriptions202603SubscriptionIdWithResponse Retrieve subscription
+//
+// Retrieve a subscription by its ID.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /webhooks-journal/subscriptions/2026-03/{subscriptionId} (the `GetwebhooksJournalsubscriptions202603SubscriptionId` operationId).
+func (c *ClientWithResponses) GetwebhooksJournalsubscriptions202603SubscriptionIdWithResponse(ctx context.Context, subscriptionId int64, reqEditors ...RequestEditorFn) (*GetwebhooksJournalsubscriptions202603SubscriptionIdResponse, error) {
+	rsp, err := c.GetwebhooksJournalsubscriptions202603SubscriptionId(ctx, subscriptionId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetwebhooksJournalsubscriptions202603SubscriptionIdResponse(rsp)
+}
+
+// Deletewebhooks202603AppIdsettingsClearWithResponse Delete webhook settings
+//
+// Delete the webhook settings for the specified app. Event subscriptions will not be deleted, but will be paused until another webhook is created.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with DELETE /webhooks/2026-03/{appId}/settings (the `Deletewebhooks202603AppIdsettingsClear` operationId).
+func (c *ClientWithResponses) Deletewebhooks202603AppIdsettingsClearWithResponse(ctx context.Context, appId int32, reqEditors ...RequestEditorFn) (*Deletewebhooks202603AppIdsettingsClearResponse, error) {
+	rsp, err := c.Deletewebhooks202603AppIdsettingsClear(ctx, appId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDeletewebhooks202603AppIdsettingsClearResponse(rsp)
+}
+
+// Getwebhooks202603AppIdsettingsGetAllWithResponse Read webhook settings
+//
+// Retrieve the webhook settings for the specified app, including the webhook’s target URL, throttle configuration, and create/update date.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /webhooks/2026-03/{appId}/settings (the `Getwebhooks202603AppIdsettingsGetAll` operationId).
+func (c *ClientWithResponses) Getwebhooks202603AppIdsettingsGetAllWithResponse(ctx context.Context, appId int32, reqEditors ...RequestEditorFn) (*Getwebhooks202603AppIdsettingsGetAllResponse, error) {
+	rsp, err := c.Getwebhooks202603AppIdsettingsGetAll(ctx, appId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetwebhooks202603AppIdsettingsGetAllResponse(rsp)
+}
+
+// Putwebhooks202603AppIdsettingsConfigureWithBodyWithResponse Update webhook settings
+//
+// Update webhook settings for the specified app.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PUT /webhooks/2026-03/{appId}/settings (the `Putwebhooks202603AppIdsettingsConfigure` operationId).
+func (c *ClientWithResponses) Putwebhooks202603AppIdsettingsConfigureWithBodyWithResponse(ctx context.Context, appId int32, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Putwebhooks202603AppIdsettingsConfigureResponse, error) {
+	rsp, err := c.Putwebhooks202603AppIdsettingsConfigureWithBody(ctx, appId, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePutwebhooks202603AppIdsettingsConfigureResponse(rsp)
+}
+
+// Putwebhooks202603AppIdsettingsConfigureWithResponse Update webhook settings
+//
+// Update webhook settings for the specified app.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PUT /webhooks/2026-03/{appId}/settings (the `Putwebhooks202603AppIdsettingsConfigure` operationId).
+func (c *ClientWithResponses) Putwebhooks202603AppIdsettingsConfigureWithResponse(ctx context.Context, appId int32, body Putwebhooks202603AppIdsettingsConfigureJSONRequestBody, reqEditors ...RequestEditorFn) (*Putwebhooks202603AppIdsettingsConfigureResponse, error) {
+	rsp, err := c.Putwebhooks202603AppIdsettingsConfigure(ctx, appId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePutwebhooks202603AppIdsettingsConfigureResponse(rsp)
+}
+
+// Getwebhooks202603AppIdsubscriptionsGetAllWithResponse Read event subscriptions
+//
+// Retrieve event subscriptions for the specified app.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /webhooks/2026-03/{appId}/subscriptions (the `Getwebhooks202603AppIdsubscriptionsGetAll` operationId).
+func (c *ClientWithResponses) Getwebhooks202603AppIdsubscriptionsGetAllWithResponse(ctx context.Context, appId int32, reqEditors ...RequestEditorFn) (*Getwebhooks202603AppIdsubscriptionsGetAllResponse, error) {
+	rsp, err := c.Getwebhooks202603AppIdsubscriptionsGetAll(ctx, appId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetwebhooks202603AppIdsubscriptionsGetAllResponse(rsp)
+}
+
+// Postwebhooks202603AppIdsubscriptionsCreateWithBodyWithResponse Create an event subscription
+//
+// Create new event subscription for the specified app.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /webhooks/2026-03/{appId}/subscriptions (the `Postwebhooks202603AppIdsubscriptionsCreate` operationId).
+func (c *ClientWithResponses) Postwebhooks202603AppIdsubscriptionsCreateWithBodyWithResponse(ctx context.Context, appId int32, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postwebhooks202603AppIdsubscriptionsCreateResponse, error) {
+	rsp, err := c.Postwebhooks202603AppIdsubscriptionsCreateWithBody(ctx, appId, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostwebhooks202603AppIdsubscriptionsCreateResponse(rsp)
+}
+
+// Postwebhooks202603AppIdsubscriptionsCreateWithResponse Create an event subscription
+//
+// Create new event subscription for the specified app.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /webhooks/2026-03/{appId}/subscriptions (the `Postwebhooks202603AppIdsubscriptionsCreate` operationId).
+func (c *ClientWithResponses) Postwebhooks202603AppIdsubscriptionsCreateWithResponse(ctx context.Context, appId int32, body Postwebhooks202603AppIdsubscriptionsCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*Postwebhooks202603AppIdsubscriptionsCreateResponse, error) {
+	rsp, err := c.Postwebhooks202603AppIdsubscriptionsCreate(ctx, appId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostwebhooks202603AppIdsubscriptionsCreateResponse(rsp)
+}
+
 // Postwebhooks202603AppIdsubscriptionsbatchupdateUpdateBatchWithBodyWithResponse Batch create event subscriptions
 //
 // Batch create event subscriptions for the specified app.
@@ -19886,136 +20021,6 @@ func ParseGeteventseventOccurrences202603eventTypeseventseventOccurrences202603e
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
 		var dest VisibleExternalEventTypeNames
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetfeatureFlags202603AppIdflagsallfeatureFlagsv3AppIdflagsallResponse parses an HTTP response from a GetfeatureFlags202603AppIdflagsallfeatureFlagsv3AppIdflagsallWithResponse call
-func ParseGetfeatureFlags202603AppIdflagsallfeatureFlagsv3AppIdflagsallResponse(rsp *http.Response) (*GetfeatureFlags202603AppIdflagsallfeatureFlagsv3AppIdflagsallResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetfeatureFlags202603AppIdflagsallfeatureFlagsv3AppIdflagsallResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest FlagsForAppResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseDeletefeatureFlags202603AppIdflagsFlagNameResponse parses an HTTP response from a DeletefeatureFlags202603AppIdflagsFlagNameWithResponse call
-func ParseDeletefeatureFlags202603AppIdflagsFlagNameResponse(rsp *http.Response) (*DeletefeatureFlags202603AppIdflagsFlagNameResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &DeletefeatureFlags202603AppIdflagsFlagNameResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest FlagResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetfeatureFlags202603AppIdflagsFlagNameResponse parses an HTTP response from a GetfeatureFlags202603AppIdflagsFlagNameWithResponse call
-func ParseGetfeatureFlags202603AppIdflagsFlagNameResponse(rsp *http.Response) (*GetfeatureFlags202603AppIdflagsFlagNameResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetfeatureFlags202603AppIdflagsFlagNameResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest FlagResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParsePutfeatureFlags202603AppIdflagsFlagNameResponse parses an HTTP response from a PutfeatureFlags202603AppIdflagsFlagNameWithResponse call
-func ParsePutfeatureFlags202603AppIdflagsFlagNameResponse(rsp *http.Response) (*PutfeatureFlags202603AppIdflagsFlagNameResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &PutfeatureFlags202603AppIdflagsFlagNameResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest FlagResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseGetfeatureFlags202603AppIdflagsFlagNameportalsResponse parses an HTTP response from a GetfeatureFlags202603AppIdflagsFlagNameportalsWithResponse call
-func ParseGetfeatureFlags202603AppIdflagsFlagNameportalsResponse(rsp *http.Response) (*GetfeatureFlags202603AppIdflagsFlagNameportalsResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetfeatureFlags202603AppIdflagsFlagNameportalsResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest PortalFlagStateBatchResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}

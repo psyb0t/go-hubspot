@@ -2,6 +2,13 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.5.6, 2026-11-17
+
+- Added doc comments from the spec for API version 2026-03 on the query parameter fields `After` and `Limit` of `Getautomationsequences202603automationsequences202603Params`, `Getmarketingcampaigns202603marketingcampaignsv3Params` and `Getsettingsusers202603settingsusersv3Params`.
+- Added doc comments on the fields `Name`, `Properties` and `Sort` of `Getmarketingcampaigns202603marketingcampaignsv3Params`.
+- Rewrote doc comments on `ClientInterface` methods such as `Getautomationsequences202603automationsequences202603`, taking the text from the spec.
+- Generated code changed only in comments and file placement. The parameter type `Postcrmobjects202603discountsbatchreadParams` moved from `client_004.gen.go` to `client_005.gen.go`, and some functions moved between `client_NNN.gen.go` files. No exported identifier or signature changed.
+
 ## v0.5.5, 2026-11-12
 
 - Added doc comments from the spec for API version 2026-03 on `PublicComparativeNumberPropertyOperation`, its fields `ComparisonPropertyName`, `DefaultComparisonValue`, `IncludeObjectsWithNoValueSet`, `OperationType` and `Operator`, and the type `PublicComparativeNumberPropertyOperationOperationType`. They replace "defines model for".

@@ -15,6 +15,12 @@ import (
 	openapi_types "github.com/oapi-codegen/runtime/types"
 )
 
+// Postcrmobjects202603discountsbatchreadParams defines parameters for Postcrmobjects202603discountsbatchread.
+type Postcrmobjects202603discountsbatchreadParams struct {
+	// Archived Whether to return only results that have been archived.
+	Archived *bool `form:"archived,omitempty" json:"archived,omitempty"`
+}
+
 // Getcrmobjects202603discountsDiscountIdParams defines parameters for Getcrmobjects202603discountsDiscountId.
 type Getcrmobjects202603discountsDiscountIdParams struct {
 	// Archived Whether to return only results that have been archived.
@@ -1471,11 +1477,22 @@ type Getfiles202603foldersFolderPathGetByPathParams struct {
 
 // Getmarketingcampaigns202603marketingcampaignsv3Params defines parameters for Getmarketingcampaigns202603marketingcampaignsv3.
 type Getmarketingcampaigns202603marketingcampaignsv3Params struct {
-	After      *string   `form:"after,omitempty" json:"after,omitempty"`
-	Limit      *int32    `form:"limit,omitempty" json:"limit,omitempty"`
-	Name       *string   `form:"name,omitempty" json:"name,omitempty"`
+	// After The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.
+	After *string `form:"after,omitempty" json:"after,omitempty"`
+
+	// Limit The maximum number of results to display per page.
+	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// Name Filter campaigns by name. Optional.
+	Name *string `form:"name,omitempty" json:"name,omitempty"`
+
+	// Properties A comma-separated list of properties to include in the response.
+	//   Unrecognized properties are ignored. Optional. Example:
+	//   hs_name, hs_budget,hs_notes
 	Properties *[]string `form:"properties,omitempty" json:"properties,omitempty"`
-	Sort       *string   `form:"sort,omitempty" json:"sort,omitempty"`
+
+	// Sort The property to sort results by. Optional.
+	Sort *string `form:"sort,omitempty" json:"sort,omitempty"`
 }
 
 // Postmarketingcampaigns202603batchreadParams defines parameters for Postmarketingcampaigns202603batchread.
@@ -2019,8 +2036,11 @@ type Getsettingscurrencies202603exchangeRatesParamsToCurrencyCode string
 
 // Getsettingsusers202603settingsusersv3Params defines parameters for Getsettingsusers202603settingsusersv3.
 type Getsettingsusers202603settingsusersv3Params struct {
+	// After The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.
 	After *string `form:"after,omitempty" json:"after,omitempty"`
-	Limit *int32  `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// Limit The maximum number of results to display per page.
+	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
 }
 
 // Deletesettingsusers202603UserIdArchiveParams defines parameters for Deletesettingsusers202603UserIdArchive.
@@ -19196,7 +19216,11 @@ type ClientInterface interface {
 	// Corresponds with POST /automation/actions/callbacks/2026-03/{callbackId}/complete (the `Postautomationactionscallbacks202603CallbackIdcompleteComplete` operationId).
 	Postautomationactionscallbacks202603CallbackIdcompleteComplete(ctx context.Context, callbackId string, body Postautomationactionscallbacks202603CallbackIdcompleteCompleteJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// Getautomationsequences202603automationsequences202603 performs a GET /automation/sequences/2026-03 (the `Getautomationsequences202603automationsequences202603` operationId) request.
+	// Getautomationsequences202603automationsequences202603 Retrieve sequences
+	//
+	// Retrieve a list of sequences available in your HubSpot account. This endpoint allows you to filter sequences by user ID and name, and supports pagination for large result sets. Use this endpoint to manage and review your sequences effectively.
+	//
+	// Corresponds with GET /automation/sequences/2026-03 (the `Getautomationsequences202603automationsequences202603` operationId).
 	Getautomationsequences202603automationsequences202603(ctx context.Context, params *Getautomationsequences202603automationsequences202603Params, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// Postautomationsequences202603enrollmentsWithBody Enroll a contact in a sequence
@@ -29355,15 +29379,29 @@ type ClientInterface interface {
 	// Corresponds with POST /integrators/timeline/2026-03/types/projects (the `Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojects` operationId).
 	Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojects(ctx context.Context, body Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojectsJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// Getmarketingcampaigns202603marketingcampaignsv3 performs a GET /marketing/campaigns/2026-03 (the `Getmarketingcampaigns202603marketingcampaignsv3` operationId) request.
+	// Getmarketingcampaigns202603marketingcampaignsv3 Retrieve campaigns
+	//
+	// Retrieve a paginated list of campaigns from your HubSpot account. This endpoint allows you to specify sorting, pagination, and filtering options to tailor the results to your needs.
+	//
+	// Corresponds with GET /marketing/campaigns/2026-03 (the `Getmarketingcampaigns202603marketingcampaignsv3` operationId).
 	Getmarketingcampaigns202603marketingcampaignsv3(ctx context.Context, params *Getmarketingcampaigns202603marketingcampaignsv3Params, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// Postmarketingcampaigns202603marketingcampaignsv3WithBody performs a POST /marketing/campaigns/2026-03 (the `Postmarketingcampaigns202603marketingcampaignsv3` operationId) request,
-	// with any type of body and a specified content type.
+	// Postmarketingcampaigns202603marketingcampaignsv3WithBody Create a campaign
+	//
+	// Create a campaign with the specified properties and receive a copy of the campaign object, including its ID. Note that the 'hs_goal' property is deprecated and will be ignored if provided.
+	//
+	// Takes any type of body and a specified content type.
+	//
+	// Corresponds with POST /marketing/campaigns/2026-03 (the `Postmarketingcampaigns202603marketingcampaignsv3` operationId).
 	Postmarketingcampaigns202603marketingcampaignsv3WithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// Postmarketingcampaigns202603marketingcampaignsv3 performs a POST /marketing/campaigns/2026-03 (the `Postmarketingcampaigns202603marketingcampaignsv3` operationId) request.
+	// Postmarketingcampaigns202603marketingcampaignsv3 Create a campaign
+	//
+	// Create a campaign with the specified properties and receive a copy of the campaign object, including its ID. Note that the 'hs_goal' property is deprecated and will be ignored if provided.
+	//
 	// Takes a body of the `application/json` content type.
+	//
+	// Corresponds with POST /marketing/campaigns/2026-03 (the `Postmarketingcampaigns202603marketingcampaignsv3` operationId).
 	Postmarketingcampaigns202603marketingcampaignsv3(ctx context.Context, body Postmarketingcampaigns202603marketingcampaignsv3JSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// Postmarketingcampaigns202603batcharchiveWithBody Delete a batch of campaigns

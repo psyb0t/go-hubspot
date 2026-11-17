@@ -17,6 +17,101 @@ import (
 	openapi_types "github.com/oapi-codegen/runtime/types"
 )
 
+// NewGetmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainIdRequest constructs an http.Request for the GetmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainId method
+func NewGetmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainIdRequest(server string, appId int32, oEmbedDomainId string) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "appId", appId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: "int32"})
+	if err != nil {
+		return nil, err
+	}
+
+	var pathParam1 string
+
+	pathParam1, err = runtime.StyleParamWithOptions("simple", false, "oEmbedDomainId", oEmbedDomainId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/media-bridge/2026-03/%s/settings/oembed-domains/%s", pathParam0, pathParam1)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewPatchmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainIdRequest calls the generic PatchmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainId builder with application/json body
+func NewPatchmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainIdRequest(server string, appId int32, oEmbedDomainId string, body PatchmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainIdJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPatchmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainIdRequestWithBody(server, appId, oEmbedDomainId, "application/json", bodyReader)
+}
+
+// NewPatchmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainIdRequestWithBody constructs an http.Request for the PatchmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainId method, with any body, and a specified content type
+func NewPatchmediaBridge202603AppIdsettingsoembedDomainsOEmbedDomainIdRequestWithBody(server string, appId int32, oEmbedDomainId string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "appId", appId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: "int32"})
+	if err != nil {
+		return nil, err
+	}
+
+	var pathParam1 string
+
+	pathParam1, err = runtime.StyleParamWithOptions("simple", false, "oEmbedDomainId", oEmbedDomainId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/media-bridge/2026-03/%s/settings/oembed-domains/%s", pathParam0, pathParam1)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPatch, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
 // NewPostmediaBridge202603AppIdsettingsregisterRequest calls the generic PostmediaBridge202603AppIdsettingsregister builder with application/json body
 func NewPostmediaBridge202603AppIdsettingsregisterRequest(server string, appId int32, body PostmediaBridge202603AppIdsettingsregisterJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
@@ -3883,9 +3978,13 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /automation/actions/callbacks/2026-03/{callbackId}/complete (the `Postautomationactionscallbacks202603CallbackIdcompleteComplete` operationId).
 	Postautomationactionscallbacks202603CallbackIdcompleteCompleteWithResponse(ctx context.Context, callbackId string, body Postautomationactionscallbacks202603CallbackIdcompleteCompleteJSONRequestBody, reqEditors ...RequestEditorFn) (*Postautomationactionscallbacks202603CallbackIdcompleteCompleteResponse, error)
 
-	// Getautomationsequences202603automationsequences202603WithResponse performs a GET /automation/sequences/2026-03 (the `Getautomationsequences202603automationsequences202603` operationId) request.
+	// Getautomationsequences202603automationsequences202603WithResponse Retrieve sequences
+	//
+	// Retrieve a list of sequences available in your HubSpot account. This endpoint allows you to filter sequences by user ID and name, and supports pagination for large result sets. Use this endpoint to manage and review your sequences effectively.
 	//
 	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /automation/sequences/2026-03 (the `Getautomationsequences202603automationsequences202603` operationId).
 	Getautomationsequences202603automationsequences202603WithResponse(ctx context.Context, params *Getautomationsequences202603automationsequences202603Params, reqEditors ...RequestEditorFn) (*Getautomationsequences202603automationsequences202603Response, error)
 
 	// Postautomationsequences202603enrollmentsWithBodyWithResponse Enroll a contact in a sequence
@@ -14662,19 +14761,31 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /integrators/timeline/2026-03/types/projects (the `Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojects` operationId).
 	Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojectsWithResponse(ctx context.Context, body Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojectsJSONRequestBody, reqEditors ...RequestEditorFn) (*Postintegratorstimeline202603typesprojectsintegratorstimeline202603typesprojectsResponse, error)
 
-	// Getmarketingcampaigns202603marketingcampaignsv3WithResponse performs a GET /marketing/campaigns/2026-03 (the `Getmarketingcampaigns202603marketingcampaignsv3` operationId) request.
+	// Getmarketingcampaigns202603marketingcampaignsv3WithResponse Retrieve campaigns
+	//
+	// Retrieve a paginated list of campaigns from your HubSpot account. This endpoint allows you to specify sorting, pagination, and filtering options to tailor the results to your needs.
 	//
 	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /marketing/campaigns/2026-03 (the `Getmarketingcampaigns202603marketingcampaignsv3` operationId).
 	Getmarketingcampaigns202603marketingcampaignsv3WithResponse(ctx context.Context, params *Getmarketingcampaigns202603marketingcampaignsv3Params, reqEditors ...RequestEditorFn) (*Getmarketingcampaigns202603marketingcampaignsv3Response, error)
 
-	// Postmarketingcampaigns202603marketingcampaignsv3WithBodyWithResponse performs a POST /marketing/campaigns/2026-03 (the `Postmarketingcampaigns202603marketingcampaignsv3` operationId) request,
-	// with any type of body and a specified content type.
+	// Postmarketingcampaigns202603marketingcampaignsv3WithBodyWithResponse Create a campaign
 	//
-	// Returns a wrapper object for the known response body format(s).
+	// Create a campaign with the specified properties and receive a copy of the campaign object, including its ID. Note that the 'hs_goal' property is deprecated and will be ignored if provided.
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /marketing/campaigns/2026-03 (the `Postmarketingcampaigns202603marketingcampaignsv3` operationId).
 	Postmarketingcampaigns202603marketingcampaignsv3WithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*Postmarketingcampaigns202603marketingcampaignsv3Response, error)
 
-	// Postmarketingcampaigns202603marketingcampaignsv3WithResponse performs a POST /marketing/campaigns/2026-03 (the `Postmarketingcampaigns202603marketingcampaignsv3` operationId) request.
+	// Postmarketingcampaigns202603marketingcampaignsv3WithResponse Create a campaign
+	//
+	// Create a campaign with the specified properties and receive a copy of the campaign object, including its ID. Note that the 'hs_goal' property is deprecated and will be ignored if provided.
+	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /marketing/campaigns/2026-03 (the `Postmarketingcampaigns202603marketingcampaignsv3` operationId).
 	Postmarketingcampaigns202603marketingcampaignsv3WithResponse(ctx context.Context, body Postmarketingcampaigns202603marketingcampaignsv3JSONRequestBody, reqEditors ...RequestEditorFn) (*Postmarketingcampaigns202603marketingcampaignsv3Response, error)
 
 	// Postmarketingcampaigns202603batcharchiveWithBodyWithResponse Delete a batch of campaigns
@@ -19905,114 +20016,4 @@ func (r Postcmsblogs202603postsmultiLanguagedetachFromLangGroupDetachFromLangGro
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmsblogs202603postsmultiLanguagedetachFromLangGroupDetachFromLangGroupResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Putcmsblogs202603postsmultiLanguagesetNewLangPrimarySetLangPrimaryResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Putcmsblogs202603postsmultiLanguagesetNewLangPrimarySetLangPrimaryResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Putcmsblogs202603postsmultiLanguagesetNewLangPrimarySetLangPrimaryResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Putcmsblogs202603postsmultiLanguagesetNewLangPrimarySetLangPrimaryResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Putcmsblogs202603postsmultiLanguagesetNewLangPrimarySetLangPrimaryResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmsblogs202603postsmultiLanguageupdateLanguagesUpdateLangsResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmsblogs202603postsmultiLanguageupdateLanguagesUpdateLangsResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmsblogs202603postsmultiLanguageupdateLanguagesUpdateLangsResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmsblogs202603postsmultiLanguageupdateLanguagesUpdateLangsResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmsblogs202603postsmultiLanguageupdateLanguagesUpdateLangsResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
-}
-
-type Postcmsblogs202603postsscheduleScheduleResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// GetBody returns the raw response body bytes
-func (r Postcmsblogs202603postsscheduleScheduleResponse) GetBody() []byte {
-	return r.Body
-}
-
-// Status returns HTTPResponse.Status
-func (r Postcmsblogs202603postsscheduleScheduleResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r Postcmsblogs202603postsscheduleScheduleResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
-func (r Postcmsblogs202603postsscheduleScheduleResponse) ContentType() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Header.Get("Content-Type")
-	}
-	return ""
 }
