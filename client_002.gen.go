@@ -17834,6 +17834,7 @@ const (
 	PreResolvedContactContactPropertiesLeadingToMatchHsInferredLanguageCodes                            PreResolvedContactContactPropertiesLeadingToMatch = "hs_inferred_language_codes"
 	PreResolvedContactContactPropertiesLeadingToMatchHsIntentPaidUpToDate                               PreResolvedContactContactPropertiesLeadingToMatch = "hs_intent_paid_up_to_date"
 	PreResolvedContactContactPropertiesLeadingToMatchHsIntentSignalsEnabled                             PreResolvedContactContactPropertiesLeadingToMatch = "hs_intent_signals_enabled"
+	PreResolvedContactContactPropertiesLeadingToMatchHsInternalNormalizedEmail                          PreResolvedContactContactPropertiesLeadingToMatch = "hs_internal_normalized_email"
 	PreResolvedContactContactPropertiesLeadingToMatchHsIpTimezone                                       PreResolvedContactContactPropertiesLeadingToMatch = "hs_ip_timezone"
 	PreResolvedContactContactPropertiesLeadingToMatchHsIsContact                                        PreResolvedContactContactPropertiesLeadingToMatch = "hs_is_contact"
 	PreResolvedContactContactPropertiesLeadingToMatchHsIsEnriched                                       PreResolvedContactContactPropertiesLeadingToMatch = "hs_is_enriched"
@@ -18448,6 +18449,8 @@ func (e PreResolvedContactContactPropertiesLeadingToMatch) Valid() bool {
 	case PreResolvedContactContactPropertiesLeadingToMatchHsIntentPaidUpToDate:
 		return true
 	case PreResolvedContactContactPropertiesLeadingToMatchHsIntentSignalsEnabled:
+		return true
+	case PreResolvedContactContactPropertiesLeadingToMatchHsInternalNormalizedEmail:
 		return true
 	case PreResolvedContactContactPropertiesLeadingToMatchHsIpTimezone:
 		return true

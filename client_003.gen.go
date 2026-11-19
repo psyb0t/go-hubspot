@@ -8608,6 +8608,7 @@ const (
 	StringFieldSchemaFormatDATETIME         StringFieldSchemaFormat = "DATE_TIME"
 	StringFieldSchemaFormatMONTHANDDAY      StringFieldSchemaFormat = "MONTH_AND_DAY"
 	StringFieldSchemaFormatOBJECTCOORDINATE StringFieldSchemaFormat = "OBJECT_COORDINATE"
+	StringFieldSchemaFormatOBJECTPROPERTY   StringFieldSchemaFormat = "OBJECT_PROPERTY"
 	StringFieldSchemaFormatOBJECTTYPE       StringFieldSchemaFormat = "OBJECT_TYPE"
 	StringFieldSchemaFormatTIME             StringFieldSchemaFormat = "TIME"
 	StringFieldSchemaFormatURI              StringFieldSchemaFormat = "URI"
@@ -8623,6 +8624,8 @@ func (e StringFieldSchemaFormat) Valid() bool {
 	case StringFieldSchemaFormatMONTHANDDAY:
 		return true
 	case StringFieldSchemaFormatOBJECTCOORDINATE:
+		return true
+	case StringFieldSchemaFormatOBJECTPROPERTY:
 		return true
 	case StringFieldSchemaFormatOBJECTTYPE:
 		return true

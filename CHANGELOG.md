@@ -2,6 +2,11 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.5.7, 2026-11-19
+
+- Added the constant `PreResolvedContactContactPropertiesLeadingToMatchHsInternalNormalizedEmail` for the contact property `hs_internal_normalized_email`. The `Valid` method of `PreResolvedContactContactPropertiesLeadingToMatch` accepts it.
+- Added the constant `StringFieldSchemaFormatOBJECTPROPERTY` for the format `OBJECT_PROPERTY`. The `Valid` method of `StringFieldSchemaFormat` accepts it.
+
 ## v0.5.6, 2026-11-17
 
 - Added doc comments from the spec for API version 2026-03 on the query parameter fields `After` and `Limit` of `Getautomationsequences202603automationsequences202603Params`, `Getmarketingcampaigns202603marketingcampaignsv3Params` and `Getsettingsusers202603settingsusersv3Params`.
