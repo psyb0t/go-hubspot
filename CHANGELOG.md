@@ -2,6 +2,11 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.5.8, 2026-11-24
+
+- Added the constants `HydratedCriticalActionTypeLIVECHATSENSITIVEDATADISABLED` and `HydratedCriticalActionTypeLIVECHATSENSITIVEDATAENABLED` for the values `LIVE_CHAT_SENSITIVE_DATA_DISABLED` and `LIVE_CHAT_SENSITIVE_DATA_ENABLED`. The `Valid` method of `HydratedCriticalActionType` accepts both.
+- Added the constant `PreResolvedContactContactPropertiesLeadingToMatchHsNormalizedEmail` for the contact property `hs_normalized_email`. The `Valid` method of `PreResolvedContactContactPropertiesLeadingToMatch` accepts it.
+
 ## v0.5.7, 2026-11-19
 
 - Added the constant `PreResolvedContactContactPropertiesLeadingToMatchHsInternalNormalizedEmail` for the contact property `hs_internal_normalized_email`. The `Valid` method of `PreResolvedContactContactPropertiesLeadingToMatch` accepts it.

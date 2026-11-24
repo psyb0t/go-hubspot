@@ -12771,6 +12771,8 @@ const (
 	HydratedCriticalActionTypeJOINEDPORTALVIADOMAINBASEDINVITE           HydratedCriticalActionType = "JOINED_PORTAL_VIA_DOMAIN_BASED_INVITE"
 	HydratedCriticalActionTypeLEGALBASISREQUIREMENTDISABLED              HydratedCriticalActionType = "LEGAL_BASIS_REQUIREMENT_DISABLED"
 	HydratedCriticalActionTypeLEGALBASISREQUIREMENTENABLED               HydratedCriticalActionType = "LEGAL_BASIS_REQUIREMENT_ENABLED"
+	HydratedCriticalActionTypeLIVECHATSENSITIVEDATADISABLED              HydratedCriticalActionType = "LIVE_CHAT_SENSITIVE_DATA_DISABLED"
+	HydratedCriticalActionTypeLIVECHATSENSITIVEDATAENABLED               HydratedCriticalActionType = "LIVE_CHAT_SENSITIVE_DATA_ENABLED"
 	HydratedCriticalActionTypeMANUALPASSWORDRESETEMAILSEND               HydratedCriticalActionType = "MANUAL_PASSWORD_RESET_EMAIL_SEND"
 	HydratedCriticalActionTypeMANUALREGISTRATIONEMAILSEND                HydratedCriticalActionType = "MANUAL_REGISTRATION_EMAIL_SEND"
 	HydratedCriticalActionTypeMARKETINGCONTACTSAPPSETTINGSDISABLED       HydratedCriticalActionType = "MARKETING_CONTACTS_APP_SETTINGS_DISABLED"
@@ -12998,6 +13000,10 @@ func (e HydratedCriticalActionType) Valid() bool {
 	case HydratedCriticalActionTypeLEGALBASISREQUIREMENTDISABLED:
 		return true
 	case HydratedCriticalActionTypeLEGALBASISREQUIREMENTENABLED:
+		return true
+	case HydratedCriticalActionTypeLIVECHATSENSITIVEDATADISABLED:
+		return true
+	case HydratedCriticalActionTypeLIVECHATSENSITIVEDATAENABLED:
 		return true
 	case HydratedCriticalActionTypeMANUALPASSWORDRESETEMAILSEND:
 		return true
@@ -17892,6 +17898,7 @@ const (
 	PreResolvedContactContactPropertiesLeadingToMatchHsMessagingEngagementScore                         PreResolvedContactContactPropertiesLeadingToMatch = "hs_messaging_engagement_score"
 	PreResolvedContactContactPropertiesLeadingToMatchHsMobileSdkPushTokens                              PreResolvedContactContactPropertiesLeadingToMatch = "hs_mobile_sdk_push_tokens"
 	PreResolvedContactContactPropertiesLeadingToMatchHsNextRenewalDate                                  PreResolvedContactContactPropertiesLeadingToMatch = "hs_next_renewal_date"
+	PreResolvedContactContactPropertiesLeadingToMatchHsNormalizedEmail                                  PreResolvedContactContactPropertiesLeadingToMatch = "hs_normalized_email"
 	PreResolvedContactContactPropertiesLeadingToMatchHsNotesLastActivity                                PreResolvedContactContactPropertiesLeadingToMatch = "hs_notes_last_activity"
 	PreResolvedContactContactPropertiesLeadingToMatchHsNotesNextActivity                                PreResolvedContactContactPropertiesLeadingToMatch = "hs_notes_next_activity"
 	PreResolvedContactContactPropertiesLeadingToMatchHsNotesNextActivityType                            PreResolvedContactContactPropertiesLeadingToMatch = "hs_notes_next_activity_type"
@@ -18565,6 +18572,8 @@ func (e PreResolvedContactContactPropertiesLeadingToMatch) Valid() bool {
 	case PreResolvedContactContactPropertiesLeadingToMatchHsMobileSdkPushTokens:
 		return true
 	case PreResolvedContactContactPropertiesLeadingToMatchHsNextRenewalDate:
+		return true
+	case PreResolvedContactContactPropertiesLeadingToMatchHsNormalizedEmail:
 		return true
 	case PreResolvedContactContactPropertiesLeadingToMatchHsNotesLastActivity:
 		return true
