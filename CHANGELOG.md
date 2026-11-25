@@ -2,6 +2,10 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.5.9, 2026-11-25
+
+- Added the field `Enabled` (`*bool`, JSON key `enabled`) to `SubscriptionPatchRequest`. Existing callers compile and behave the same.
+
 ## v0.5.8, 2026-11-24
 
 - Added the constants `HydratedCriticalActionTypeLIVECHATSENSITIVEDATADISABLED` and `HydratedCriticalActionTypeLIVECHATSENSITIVEDATAENABLED` for the values `LIVE_CHAT_SENSITIVE_DATA_DISABLED` and `LIVE_CHAT_SENSITIVE_DATA_ENABLED`. The `Valid` method of `HydratedCriticalActionType` accepts both.

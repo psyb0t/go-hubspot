@@ -17081,7 +17081,8 @@ type SubscriptionListResponse struct {
 // SubscriptionPatchRequest defines model for SubscriptionPatchRequest.
 type SubscriptionPatchRequest struct {
 	// Active A boolean indicating whether the subscription is active. If true, the subscription is active; if false, it is inactive.
-	Active *bool `json:"active,omitempty"`
+	Active  *bool `json:"active,omitempty"`
+	Enabled *bool `json:"enabled,omitempty"`
 }
 
 // SubscriptionResponse defines model for SubscriptionResponse.
