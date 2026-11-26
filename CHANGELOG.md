@@ -2,6 +2,10 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.5.10, 2026-11-26
+
+- Added the constants `PublicImportErrorErrorTypeDEPENDENTRECORDDUPLICATEPARENTIDENTIFIER` and `PublicImportErrorErrorTypeDEPENDENTRECORDMISSINGPARENT` for the values `DEPENDENT_RECORD_DUPLICATE_PARENT_IDENTIFIER` and `DEPENDENT_RECORD_MISSING_PARENT`. The `Valid` method of `PublicImportErrorErrorType` accepts both.
+
 ## v0.5.9, 2026-11-25
 
 - Added the field `Enabled` (`*bool`, JSON key `enabled`) to `SubscriptionPatchRequest`. Existing callers compile and behave the same.

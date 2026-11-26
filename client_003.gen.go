@@ -5229,6 +5229,8 @@ const (
 	PublicImportErrorErrorTypeCOULDNOTPARSEROW                             PublicImportErrorErrorType = "COULD_NOT_PARSE_ROW"
 	PublicImportErrorErrorTypeCOULDNOTPARSETERM                            PublicImportErrorErrorType = "COULD_NOT_PARSE_TERM"
 	PublicImportErrorErrorTypeCREATEONLYIMPORT                             PublicImportErrorErrorType = "CREATE_ONLY_IMPORT"
+	PublicImportErrorErrorTypeDEPENDENTRECORDDUPLICATEPARENTIDENTIFIER     PublicImportErrorErrorType = "DEPENDENT_RECORD_DUPLICATE_PARENT_IDENTIFIER"
+	PublicImportErrorErrorTypeDEPENDENTRECORDMISSINGPARENT                 PublicImportErrorErrorType = "DEPENDENT_RECORD_MISSING_PARENT"
 	PublicImportErrorErrorTypeDUPLICATEALTERNATEID                         PublicImportErrorErrorType = "DUPLICATE_ALTERNATE_ID"
 	PublicImportErrorErrorTypeDUPLICATEASSOCIATIONID                       PublicImportErrorErrorType = "DUPLICATE_ASSOCIATION_ID"
 	PublicImportErrorErrorTypeDUPLICATEEVENT                               PublicImportErrorErrorType = "DUPLICATE_EVENT"
@@ -5314,6 +5316,10 @@ func (e PublicImportErrorErrorType) Valid() bool {
 	case PublicImportErrorErrorTypeCOULDNOTPARSETERM:
 		return true
 	case PublicImportErrorErrorTypeCREATEONLYIMPORT:
+		return true
+	case PublicImportErrorErrorTypeDEPENDENTRECORDDUPLICATEPARENTIDENTIFIER:
+		return true
+	case PublicImportErrorErrorTypeDEPENDENTRECORDMISSINGPARENT:
 		return true
 	case PublicImportErrorErrorTypeDUPLICATEALTERNATEID:
 		return true
